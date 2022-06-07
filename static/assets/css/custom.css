@@ -1,0 +1,105 @@
+.scrolling-wrapper{
+	overflow-x: auto;
+    background-color: rgb(240, 234, 234);
+}
+
+.block-div{
+    border: 1px solid silver;
+    background-color: white;
+    border-left: 2px solid black;
+}
+
+a:link {
+    text-decoration: none;
+  }
+  .icon-space{
+      margin-right: 5%;
+  }
+
+
+.category {
+    display: inline-block;
+    width: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: black;
+    font-size: 110%;
+    font-weight: bold;
+    color: #cccccc;
+}
+
+
+
+
+
+/** 	
+	search input @ "/blog" 
+**/
+
+.inputT{
+
+    /** position: relative; **/
+    display: flex;
+    min-width: 100px;
+
+}
+
+  
+/** 
+.clear-icon {
+    position: absolute;
+    top: 11px;
+    right: 100px;
+    width: 13px;
+    cursor: pointer;
+    background-color: white;
+  }
+**/
+
+ 
+#search-input {
+	
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 30px;
+    width: 70%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: black;
+    color: #dddee1;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    
+}
+
+#search-input:hover, #search-input:focus {
+    border: 1.5px solid #dddee1;
+    background-color: black;
+  }
+  
+  
+/** 	
+	End of search input @ "/blog" 
+**/
+
+
+
+
+
+/** SEARCH RESULT **/
+
+li.Scontain {
+	
+	list-style: none;
+	margin: 12px;
+  	padding: 0;
+  	font-size: 22px;
+}
+
+.time{
+
+	font-size: 15px;
+}
