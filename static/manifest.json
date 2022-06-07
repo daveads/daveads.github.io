@@ -5,7 +5,7 @@
   "short_name": "Daveads",
   "icons": [
     {
-      "src": "\/images\/daveads.png",
+      "src": "\/assets\/images\/daveads.png",
       "sizes": "192x192",
       "type": "image\/png"
     }
