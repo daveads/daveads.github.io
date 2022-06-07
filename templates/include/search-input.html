@@ -1,0 +1,58 @@
+<div>
+		{% if config.build_search_index %}
+
+		<input class="search"
+			   id="search-input"
+		       type="text"
+		       placeholder="{{config.extra.search}}"/>
+
+		{% endif %}
+
+
+		<br>
+
+		<div class="result-container">
+
+				 <ul id="search-result" ></ul>
+
+		</div>
+
+</div>
+
+
+
+
+<script>
+
+ /** search indexer **/
+
+
+
+
+
+// search input button
+// const clearIcon = document.querySelector(".clear-icon");
+  const searchBar = document.querySelector(".search");
+
+  searchBar.addEventListener("keyup", () => {
+    if(searchBar.value /** && clearIcon.style.visibility != "visible" **/ ){
+      /** clearIcon.style.visibility = "visible"; **/
+      document.getElementById('search-result').style.display = 'block';
+      document.getElementById('posts').style.display = 'none';
+    } else if(!searchBar.value) {
+      /** clearIcon.style.visibility = "hidden"; **/
+      document.getElementById('posts').style.display = 'block';
+    }
+  });
+
+
+/**
+  clearIcon.addEventListener("click", () => {
+    searchBar.value = "";
+    clearIcon.style.visibility = "hidden";
+    document.getElementById('posts').style.display = 'block';
+    document.getElementById('search-result').style.display = 'none';	
+  })
+**/
+
+</script>
