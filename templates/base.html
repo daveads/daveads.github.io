@@ -2,16 +2,30 @@
 <html lang="en">
 
 <head>
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
 
+<!-- css files -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="/assets/css/tagc.css">
+<link rel="stylesheet" href="/assets/css/footer.css">
+<link rel="stylesheet" href="/assets/css/pagenav.css">
+
+
+<!-- search index -->
+{% if config.build_search_index %}
+		<script defer src="{{get_url(path="elasticlunr.min.js")}}"></script>
+		<script defer src="{{get_url(path="search_index.en.js")}}"></script>
+		<!-- <script src="{{get_url(path="js/search.js")}}"></script> -->
+{% endif %}
+
 
 <!-- Google discover -->
 <link rel="alternate" type="application/rss+xml" href="https://feeds.feedburner.com/blogspot/amDG" />
 <!-- ends -->
+
 
 <!-- PWA -->
 <script>
@@ -31,14 +45,21 @@ if (navigator.serviceWorker.controller) {
 }
 </script>
 
-<title>MyBlog</title>
+<link rel="manifest" type="application/manifest+json"   href="/manifest.json">
+
+
+<title>
+		{% block title %}
+				{{config.title}}
+		{% endblock %}
+</title>
 
 </head>
 
 
 
 		<body>
-				{% include "_include/me.html" %}
+				{% include "include/me.html" %}
 				<section class="section">
 						<div class="container">
 
