@@ -5,9 +5,13 @@
   {{ section.title }} 
 </h1>
 
-<ul>
+{% include "include/search-input.html" %}
 
-  {% for page in section.pages %}
+
+<div id="posts">
+  <ul>
+
+    {% for page in section.pages %}
 
 		<li><a href="{{ page.permalink | safe }}">{{ page.title }}</a>
 
@@ -15,9 +19,11 @@
 		  upated at {{ page.updated }} 
 		{% endif %}
 		</li>
-		
-  {% endfor %}
-		<p> Testing </p>
-</ul>
+
+   {% endfor %}
+
+  </ul>
+</div>
+
 
 {% endblock content %}
