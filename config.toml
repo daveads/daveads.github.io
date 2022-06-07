@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://dave.com"
+base_url = "https://daveads.github.io"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -10,6 +10,12 @@ build_search_index = true
 
 #Feeds
 generate_feed = true
+feed_filename = "atom.xml"
+
+taxonomies = [
+		{name = "categories", feed = true},
+		{name = "tags", feed = true},
+]
 
 [markdown]
 # Whether to do syntax highlighting
@@ -18,3 +24,28 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+language_code = "en-US"
+
+title_separator = "|"  # Separator between title and title_addition, set as |, -, _, etc
+
+author = "daveads" # Put Your Name here
+
+# SEO
+seo = true
+
+menu = [
+		{url = "/", name = "Home", slash = true},
+		{url = "/about/", name = "About", slash = true},
+		{url = "/posts/", name = "Posts", slash = true},
+		{url = "/categories/", name = "Categories", slash = true},
+		{url = "/tags/", name = "Tags", slash = true},
+]
+
+
+[extra.social]
+github = "your-user-name"
+twitter = "your-user-name"
+mail = "name@example.com"
+instagram = "your-user-name"
+youtube = "your-channel-id"
+gitlab = "your-user-name"
