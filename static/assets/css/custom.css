@@ -59,7 +59,7 @@ a:link {
 **/
 
  
-#search-input {
+#search {
 	
     border: 1px solid grey;
     border-radius: 5px;
@@ -75,7 +75,7 @@ a:link {
     
 }
 
-#search-input:hover, #search-input:focus {
+#search:hover, #search:focus {
     border: 1.5px solid #dddee1;
     background-color: black;
   }

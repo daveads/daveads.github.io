@@ -1,19 +1,22 @@
 <div>
 		{% if config.build_search_index %}
 
+		<div class="inputT">
 		<input class="search"
-			   id="search-input"
+			   id="search"
 		       type="text"
+			   autocomplete="off"
 		       placeholder="{{config.extra.search}}"/>
 
 		{% endif %}
-
+		</div>
 
 		<br>
 
-		<div class="result-container">
 
-				 <ul id="search-result" ></ul>
+		<div class="search-results">
+
+				 <ul id="search-result" class="search-results__items" ></ul>
 
 		</div>
 

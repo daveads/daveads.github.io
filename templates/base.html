@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#04070f">
 <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
 
 <!-- css files -->
@@ -18,7 +19,10 @@
 {% if config.build_search_index %}
 		<script defer src="{{get_url(path="elasticlunr.min.js")}}"></script>
 		<script defer src="{{get_url(path="search_index.en.js")}}"></script>
+
 		<!-- <script src="{{get_url(path="js/search.js")}}"></script> -->
+		<script src="{{ get_url(path="/search.js", trailing_slash=false) | safe }}"></script>
+
 {% endif %}
 
 
@@ -45,8 +49,9 @@ if (navigator.serviceWorker.controller) {
 }
 </script>
 
-<link rel="manifest" type="application/manifest+json"   href="/manifest.json">
+<!-- <link rel="manifest" type="application/manifest+json"   href="/manifest.json"> -->
 
+<link rel="manifest" type="application/manifest+json" href="{{ get_url(path="/manifest.json") }}">
 
 <title>
 		{% block title %}
