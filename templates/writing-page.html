@@ -27,6 +27,18 @@
 
 </header>
 
+		{% if page.taxonomies.tags %}
+		<p>
+		Tags :
+		{% for tags in page.taxonomies.tags %}
+		<small>
+		<a href="{{ get_taxonomy_url(kind='tags', name=tags) | safe }}">#{{ tags }}</a>
+		</small>
+		{% endfor %}
+		{% endif %}
+		</p>
+
+		<br>
 		<div class="post-content e-content" itemprop="articleBody">
 		{{ page.content | safe }}
 		</div>

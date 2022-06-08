@@ -6,7 +6,10 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{ term.name }}</h1>
+
+    <h1 style="text-align:center; color:#cccccc; padding:0; font-size: 150%">
+			<b>{{ term.name }} tag</b>
+    </h1>
 
     {% for page in term.pages %}
         {{ post_macros::page_in_list(page=page) }}

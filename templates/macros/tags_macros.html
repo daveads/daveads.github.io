@@ -1,11 +1,5 @@
 {% macro meta(page) %}
 
-		{% if page.taxonomies.tags %}
-		{% for cat in page.taxonomies.tags %}
-		 <small><a href="{{ get_taxonomy_url(kind='tags', name=cat) | safe }}">#{{ cat }}</a></small>
-		{% endfor %}
-		{% endif %}
-
     <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32"
          width="16" height="16" fill="none" stroke="currentcolor"
          stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
