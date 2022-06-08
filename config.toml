@@ -41,18 +41,24 @@ google_analytics = 'G-087FCJRFH2'
 seo = true
 
 menu = [
-		{url = "/", name = "Home", slash = true},
-		{url = "/about/", name = "About", slash = true},
-		{url = "/posts/", name = "Posts", slash = true},
-		{url = "/categories/", name = "Categories", slash = true},
-		{url = "/tags/", name = "Tags", slash = true},
+		{url = "/writing", name = "Writings", slash = true},
+		{url = "/paper", name = "Papers", slash = true},
+		{url = "/project", name = "Projects", slash = true},
+		{url = "/about", name = "About", slash = true},
 ]
 
+subs = [
+		{url = "/notes", name = "Notes", slash = true},
+		{url = "/tags", name = "Tags", slash = true},
+		{url = "/categories", name = "Categories", slash = true},
+]
 
 [extra.social]
-github = "your-user-name"
-twitter = "your-user-name"
-mail = "name@example.com"
-instagram = "your-user-name"
+github = "daveads"
+twitter = "The_Daveads"
+mail = "the.daveads@gmail.com"
+instagram = "_daveads"
+
 youtube = "your-channel-id"
 gitlab = "your-user-name"
+
