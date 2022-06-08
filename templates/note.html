@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+<small style="float:right; color: #888"><a href="/writing">writings</a></small>
+
+<p style="text-align:center; color:#cccccc; padding:0; font-size: 150%" >
+
+<b> {{ section.title }} </b></p>
+
+<br>
+<div id="posts">
+  <ul>
+
+    {% for page in section.pages %}
+
+		<li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+
+   {% endfor %}
+
+  </ul>
+</div>
+
+{% endblock content %}

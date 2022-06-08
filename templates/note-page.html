@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+<!-- keep empty -->
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<header class="post-header">
+
+		<h1 style="text-align:center;" itemprop="name headline"><b>Note ::</b> {{ page.title }}</h1>
+
+		<p class="post-meta">
+
+		<time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date }}</time>
+		{% if page.updated %}
+		 (updated: {{ page.updated }} )
+		{% endif %}
+
+		<small style="float:right; color: #888"><a href="/notes">See all notes</a></small>
+		</p>
+
+</header>
+
+		<div class="post-content e-content" itemprop="articleBody">
+		{{ page.content | safe }}
+		</div>
+
+{% endblock content %}
