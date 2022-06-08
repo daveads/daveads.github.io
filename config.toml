@@ -32,7 +32,7 @@ language_code = "en-US"
 
 title_separator = "|"  # Separator between title and title_addition, set as |, -, _, etc
 
-author = "daveads" # Put Your Name here
+author = "Adejumo David Adewale" # Put Your Name here
 search = "Search"
 
 google_analytics = 'G-087FCJRFH2'

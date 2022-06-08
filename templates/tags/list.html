@@ -1,5 +1,9 @@
 {% extends "page.html" %}
 
+{% block title %}
+		{{config.title}} - Tags
+{% endblock %}
+
 {% block content %}
     {% if terms %}
         <ul>

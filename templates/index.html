@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+
+{% block title %}
+		{{ super() }} - {{config.extra.author}}
+{% endblock %}
+
+
 {% block content %}
 <h1 class="title">
 		This is made with zola

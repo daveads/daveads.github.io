@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block title %}
+		{{config.title}} - {{section.title}}
+{% endblock %}
+
 {% block content %}
 
 <p style="text-align:center; color:#cccccc; padding:0; font-size: 150%" ><b> {{ section.title }} </b></p>

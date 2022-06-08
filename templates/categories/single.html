@@ -1,5 +1,10 @@
 {% extends "page.html" %}
 {% import "macros/tags_macros.html" as post_macros %}
+
+{% block title %}
+		{{config.title}} - {{term.name}}
+{% endblock %}
+
 {% block content %}
     <h1 style="text-align:center; color:#cccccc; padding:0; font-size: 150%"><b>Category:</b> {{ term.name }}</h1>
     {% for page in term.pages %}

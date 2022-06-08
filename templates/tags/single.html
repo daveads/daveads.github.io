@@ -1,6 +1,10 @@
 {% extends "page.html" %}
 {% import "macros/cat_macros.html" as post_macros %}
 
+{% block title %}
+	{{config.title}} - {{term.name}}	
+{% endblock %}
+
 {% block content %}
     <h1>{{ term.name }}</h1>
 
