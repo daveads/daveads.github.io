@@ -1,23 +1,18 @@
 {% extends "base.html" %}
-{% import "test_macros.html" as macros %}
 
+<article class="post">
 
-<!-- content block -->
-{% block content %}
-<!-- <div> -->
-<h1 class="title">{{ page.title }}</h1>
-<p class="tag">{{ page.date }}</p>
-{{ page.content | safe }}
-<!-- </div> -->
+    <!-- content block -->
+    {% block content %}
 
-{{ config.extra.author }}
+    <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+	</header>
 
-{{ macros::input(label="Name", type="test") }}
+    <p class="tag">{{ page.date }}</p>
+    {{ page.content | safe }}
 
-{% set my_var = 2 -%}
+	{% endblock %}
 
-
-
-{% endblock %}
-
+</article>
 

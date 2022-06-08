@@ -8,22 +8,14 @@
 <meta name="theme-color" content="#04070f">
 <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
 
+<!-- Sass-file: minima.css -->
+<link rel="stylesheet" href="/minima.css">
+
 <!-- css files -->
 <link rel="stylesheet" href="/assets/css/custom.css">
 <link rel="stylesheet" href="/assets/css/tagc.css">
 <link rel="stylesheet" href="/assets/css/footer.css">
 <link rel="stylesheet" href="/assets/css/pagenav.css">
-
-
-<!-- search index -->
-{% if config.build_search_index %}
-		<script defer src="{{get_url(path="elasticlunr.min.js")}}"></script>
-		<script defer src="{{get_url(path="search_index.en.js")}}"></script>
-
-		<!-- <script src="{{get_url(path="js/search.js")}}"></script> -->
-		<script src="{{ get_url(path="/search.js", trailing_slash=false) | safe }}"></script>
-
-{% endif %}
 
 
 <!-- Google discover -->
@@ -60,20 +52,21 @@ if (navigator.serviceWorker.controller) {
 </title>
 
 </head>
+ <body>
+		{% block header %}
+		{% include "include/header.html" %}
+		{% endblock %}
 
+		<main class="page-content" aria-label="Content">
 
-
-		<body>
-				{% include "include/me.html" %}
-				<section class="section">
-						<div class="container">
-
+				 <section class="section">
+						<div class="wrapper">
 								{% block content %} {% endblock %}
-
 						</div>
-				</section>
+				 </section>
 
-		</body>
+		</main>
 
+ </body>
 </html>
 
