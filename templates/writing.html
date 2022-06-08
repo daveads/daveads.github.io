@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p style="text-align:center; color:#cccccc; padding:0; font-size: 150%" ><b> {{ section.title }} </b></p>
+
+<div>
+
+ {% include "include/subs.html" %}
+
+</div>
+
+
+{% include "include/search-input.html" %}
+
+<div id="posts">
+  <ul>
+
+    {% for page in section.pages %}
+
+		<li class="post-link"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+
+   {% endfor %}
+
+  </ul>
+</div>
+
+
+{% if config.build_search_index %}
+
+		<script defer src="{{get_url(path="elasticlunr.min.js")}}"></script>
+		<script defer src="{{get_url(path="search_index.en.js")}}"></script>
+		<!-- <script src="{{get_url(path="js/search.js")}}"></script> -->
+		<script src="{{ get_url(path="/search.js", trailing_slash=false) | safe }}"></script>
+{% endif %}
+
+
+{% endblock content %}
