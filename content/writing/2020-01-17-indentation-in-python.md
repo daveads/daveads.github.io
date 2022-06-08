@@ -1,10 +1,10 @@
----
-layout: post
-title: 'Indentation in Python'
-date: 2020-01-17
-categories: [Language]
-tags: [python]
----
++++
+title = 'Indentation in Python'
+date = 2020-01-17
+[taxonomies]
+categories = ["Language"]
+tags = ["python"]
++++
 
 ## what is indentation:
 

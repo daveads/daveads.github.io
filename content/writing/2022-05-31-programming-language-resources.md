@@ -1,10 +1,10 @@
----
-layout: post
-title: 'Programming language resources'
-date: 2022-05-31
-categories: [Language]
-tags: resources compiler operating-system assembly emulator
----
++++
+title = 'Programming language resources'
+date = 2022-05-31
+[taxonomies]
+categories = ["Language"]
+tags = ["resources", "compiler", "operating-system", "assembly", "emulator"]
++++
 
 Resources to getting started with writing Programming languages, Emulators, Assembly and Operating system.
 PL orginal post by Max Bernstein [languages]( https://bernsteinbear.com/pl-resources/)

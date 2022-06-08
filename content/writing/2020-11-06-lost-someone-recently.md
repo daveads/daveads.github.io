@@ -1,9 +1,9 @@
----
-layout: post
-title: 'Lost someone close recently'
-date: 2020-11-06
-categories: [Self]
----
++++
+title = 'Lost someone close recently'
+date = 2020-11-06
+categories = ["Self"]
+tags = ["self"]
++++
 
 
 He was more like a Grand father, Family friend... though i don't see/view things the same way.. **Died at 78**

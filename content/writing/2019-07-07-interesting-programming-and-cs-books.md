@@ -1,11 +1,11 @@
----
-layout: post
-title: 'Interesting programming and cs books'
-date: 2019-07-07
-categories: [General]
-tags: books
-last_modified_at: 2020-10-25
----
++++
+title = 'Interesting programming and cs books'
+date = 2019-07-07
+updated = 2020-10-25
+[taxonomies]
+categories = ["General"]
+tags = ["books"]
++++
 
 
 // Books i find interesting.... Many of the textbooks are freely available online

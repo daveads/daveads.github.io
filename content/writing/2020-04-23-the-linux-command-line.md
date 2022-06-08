@@ -1,11 +1,11 @@
----
-layout: post
-title: 'The Linux Command line interface(0)'
-date: 2020-04-25
-categories: [General]
-last_modified_at: 2021-01-10
-tags: linux
----
++++
+title = 'The Linux Command line interface(0)'
+date = 2020-04-25
+updated = 2021-01-10
+[taxonomies]
+categories = ["General"]
+tags = ["linux"]
++++
 
 ![cmd](/assets/gifs/cmd(0).gif)
 

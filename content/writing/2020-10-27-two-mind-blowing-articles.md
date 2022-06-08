@@ -1,9 +1,10 @@
----
-layout: post
-title: 'Two mind blowing articles i read today'
-date: 2020-10-27
-categories: Startup
----
++++
+title = 'Two mind blowing articles i read today'
+date = 2020-10-27
+[taxonomies]
+categories = ["Startup"]
+tags = ["startup"]
++++
 
 **Articles on Startups and Success**
 

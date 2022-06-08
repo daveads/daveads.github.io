@@ -2,7 +2,6 @@
 title = "Computer Science resources -curious"
 date = 2019-07-07
 updated = 2020-01-21
-
 [taxonomies]
 categories = ["CS"]
 tags = ["resources"]

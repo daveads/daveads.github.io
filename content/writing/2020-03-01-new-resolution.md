@@ -1,10 +1,10 @@
----
-layout: post
-title: 'New resolution'
-date: 2020-03-01
-categories: [Self]
-tags: personal
----
++++
+title = 'New resolution'
+date = 2020-03-01
+[taxonomies]
+categories = ["Self"]
+tags = ["self"]
++++
 
 ## my new resolution (covid-19)
 

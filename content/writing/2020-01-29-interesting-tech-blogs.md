@@ -1,11 +1,10 @@
----
-layout: post
-title: 'Tech blogs i find interesting'
-date: 2020-01-29
-categories: [General]
-tags: blogroll
----
-
++++
+title = 'Tech blogs i find interesting'
+date = 2020-01-29
+[taxonomies]
+categories = ["General"]
+tags = ["blogroll"]
++++
 
 ### **A list of Cs/Programmers blogs i find interesting**
 

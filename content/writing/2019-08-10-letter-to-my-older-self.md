@@ -1,9 +1,10 @@
----
-layout: post
-title: 'Letter to my Older self'
-date: 2019-08-10
-categories: [Self]
----
++++
+title = 'Letter to my Older self'
+date = 2019-08-10
+[taxonomies]
+categories = ["Self"]
+tags = ["self"]
++++
 
 ### Do ! read this 
 

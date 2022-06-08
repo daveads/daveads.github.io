@@ -1,9 +1,10 @@
----
-layout: post
-title: 'Technological Innovation in developing countries'
-date: 2020-04-14
-categories: Startup
----
++++
+title = 'Technological Innovation in developing countries'
+date = 2020-04-14
+[taxonomies]
+categories = ["Startup"]
+tags = ["startup"]
++++
 
 <b>Note:</b> This are based on my views on things affecting the rate of innovation in developing countries, i might be wrong but at same time right.
 

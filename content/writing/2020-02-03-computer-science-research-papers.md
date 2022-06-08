@@ -1,10 +1,10 @@
----
-layout: post
-title: 'Computer science research papers'
-date: 2020-01-29
-categories: [CS]
-tags: research
----
++++
+title = 'Computer science research papers'
+date = 2020-01-29
+[taxonomises]
+categories = ["CS"]
+tags = ["research"]
++++
 
 
 **Easy access for my personal use**

@@ -1,11 +1,10 @@
----
-layout: post
-title: 'Knowledge worker'
-date: 2020-10-25
-lang: en
-categories: [General]
-tags: misc
----
++++
+title = 'Knowledge worker'
+date = 2020-10-25
+[taxonomies]
+categories = ["General"]
+tags = ["misc"]
++++
 
 
 Glancing through the book [Deep work](https://www.amazon.com/gp/product/1455586692/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1455586692&linkCode=as2&tag=daveads-20&linkId=383da9e80b4b22401dcdef4c58418841), the term "knowledge workers" caught my attention, this is something i do without actually knowing what kind of work it is classified as.

@@ -1,10 +1,10 @@
----
-layout: post
-title: 'A quick introduction to tmux(0)'
-date: 2020-04-30
-categories: [General]
-tags: linux tools
----
++++
+title = 'A quick introduction to tmux(0)'
+date = 2020-04-30
+[taxonomies]
+categories = ["General"]
+tags = ["linux", "tools"]
++++
 
 ![tmux(0)](/assets/images/tmux(0).png)<br>
 
