@@ -16,7 +16,7 @@ According to [wikipedia - indentation](https://en.wikipedia.org/wiki/Indentation
    In Python indentation refers to the (spaces and tabs) that are used at the beginning of a statement, it is a way of telling the interpreter this part of the code belongs to the same group,in programming language like c, c++, java, kotlin.. curly braces {} are use to indicate the start and end of a block of code.. 
 
 **indentation in java**
-{% highlight cpp %}
+```java
 public class indentation{ 
 	public static void main(String[] args)
 		{ // shows this is the body of the main method
@@ -33,7 +33,7 @@ public class indentation{
 		}
 	} //end of the main method
 } //end of the of the porgramm 
-{% endhighlight %}
+```
 
 
 **Question:** what's the whole point of indentation ?<br>
@@ -59,17 +59,17 @@ knowledge,Spring 1973; for more on Peirce, see §2.6.1.3,below.)46<br>
 
 Indentation in python is very important because with out proper indenting you will end up seeing **IndentationError:** examples as seen below
 
-{%  highlight python %}
+```python
 if True:
 print("yea true")
 else:
 print("not true")
-{% endhighlight %}
+```
 
 In python when defining statement for functions and loops you do this using four white spaces or a single tab according to python indentation rules
 
 
-{% highlight python %}
+```python
 def print_statement():
     print("indented under print_statement")
     print("same")
@@ -80,7 +80,7 @@ b = 10
 while(a <= 10):
     print_statement()
     a = a + 1
-{% endhighlight %} 
+```
 
 **Importants of indentation:**
 

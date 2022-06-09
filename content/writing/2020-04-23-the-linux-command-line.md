@@ -7,7 +7,7 @@ categories = ["General"]
 tags = ["linux"]
 +++
 
-![cmd](/assets/gifs/cmd(0).gif)
+![cmd](/assets/gifs/cmd.gif)
 
 I spend 90% of my time in the Terminal emulator (not really sure about that tho), for me it offer's great flexibility and control than the GUI, and it can be really intimidating at first but it worth your time.
 
@@ -103,7 +103,6 @@ here's are common commands
 ```cp```    | copy files
 ```mv```    | move files
 ```touch``` | create a new file
-```
 
 **Resources**
 [The Missing Semester of Your CS Education By Mit](https://missing.csail.mit.edu/)
