@@ -17,6 +17,7 @@ feed_filename = "atom.xml"
 taxonomies = [
 		{name = "categories", feed = true},
 		{name = "tags", feed = true},
+		{name = "notec", fedd = true},
 ]
 
 [markdown]
