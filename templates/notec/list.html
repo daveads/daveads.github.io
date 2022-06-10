@@ -1,0 +1,23 @@
+{% extends "page.html" %}
+
+{% block header %}
+{% endblock %}
+
+{% block title %}
+		{{config.title}} - Note Categories
+{% endblock %}
+
+{% block content %}
+<p style="text-align:center; font-size: 23px;"><a href="/notes">NOTE CATEGORIES</a>
+<small style="float:right; font-size: 18px;"><a href="/notes"> {% raw %} << back {% endraw %} </a></small>
+</p>
+    {% if terms %}
+        <ul>
+            {% for term in terms %}
+                <li class="tagsC-layout" >
+                    <a href="{{ term.permalink | safe }}">{{ term.name }}</a>({{ term.pages | length }})
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock content %}
