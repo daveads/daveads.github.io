@@ -6,7 +6,7 @@ categories = ["General"]
 tags = ["linux", "tools"]
 +++
 
-![tmux(0)](/assets/images/tmux(0).png)<br>
+![tmux(0)](/assets/images/tmux0.png)<br>
 
 Prerequisite:
 * Have a basic understanding of the linux [command line](https://daveads.github.io/tools/linux/2020/04/25/The-Linux-Command-Line.html)
@@ -28,12 +28,13 @@ For now, the major focus is to get acquainted with tmux as qucikly as possible b
 
 * Open your terminal and type ```tmux``` if available should open a default window like the pics below.
 
-![tmux(0)_a.png](/assets/images/tmux(0)_a.png)<br>
+![tmux0_a.png](/assets/images/tmux0_a.png)<br>
 
 
-* Press  ```ctrl + b``` and key at the same time and then release it and then ```shift + "``` 
+* Press  ```ctrl + b``` and key at the same time and then release it and then ```shift + "```
+ 
 **This split the screen into two top and bottom**, the splitted screens are called pane.
-![tmux(0)_a.png](/assets/images/tmux(0)_b.png)<br>
+![tmux0_a.png](/assets/images/tmux0_a.png)<br>
 
 * To navigate between the splitted screen ```ctrl + b``` which open the prefix then ```o``` key
 
