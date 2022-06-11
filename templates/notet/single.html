@@ -1,0 +1,28 @@
+{% extends "page.html" %}
+{% import "macros/notec_macros.html" as notec %}
+
+{% block header %}
+
+{% endblock header %}
+
+
+{% block title %}
+		{{config.title}} - {{term.name}}
+{% endblock %}
+
+{% block content %}
+
+<h1 style="text-align:center; color:#cccccc; padding:0; font-size: 150%">
+			<b>Note category: {{ term.name }} </b>
+
+  <small style="float:right; font-size: 18px;"><a href="/notec"> {% raw %} << back {% endraw %} </a></small>
+
+</h1>
+
+    {% for page in term.pages %}
+
+        {{ notec::page_in_list(page=page) }}
+
+    {% endfor %}
+
+{% endblock content %}
