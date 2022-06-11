@@ -21,6 +21,11 @@
 <link rel="alternate" type="application/rss+xml" href="https://feeds.feedburner.com/blogspot/amDG" />
 <!-- ends -->
 
+<!-- google_analytics -->
+{% if config.extra.google_analytics %}
+		{% include "include/gtag.html" %}
+{% endif %}
+
 
 <!-- PWA -->
 <script>
