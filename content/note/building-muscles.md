@@ -1,7 +1,7 @@
 +++
 title = "Building muscles"
 [taxonomies]
-categories = ["Workout"]
+notec = ["Workout"]
 +++
 
 * primary driver of muscle growth == MECHANICAL TENSION

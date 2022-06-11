@@ -1,7 +1,7 @@
 +++
 title = "muscle groups"
 [taxonomies]
-categories = ["Workout"]
+notec = ["Workout"]
 +++
 
 

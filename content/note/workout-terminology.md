@@ -1,7 +1,7 @@
 +++
 title = "Workout terminology"
 [taxonomies]
-categories = ["Workout"]
+notec = ["Workout"]
 +++
 
 sets ?
