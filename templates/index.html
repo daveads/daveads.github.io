@@ -7,11 +7,37 @@
 
 
 {% block content %}
-<h1 class="title">
-		This is made with zola
-</h1>
+<div style="text-align: center; font-family: Courier New; color: cyan;">
 
-<p>Click <a href="{{ get_url(path="@/writing/_index.md") }}">here</a> to see my posts.</p>
+		<p><b style="font-size: 40px; font-family: monospace;">Hello Humans!</b> 
+		Welcome to <a href="/about.html">My</a> 
+		<a href="https://en.wikipedia.org/wiki/Galaxy">Galaxy</a>
+		feel at <a href="http://daveads.github.io/">127.0.0.1</a></p>
+		
+</div>
+
+<br>
+
+{% set writing = get_section(path="writing/_index.md") %}
+		{% if section.content or writing.pages %}
+		<main>
+		{% if section.content %}
+		<div {% if writing.pages %}class="space"{% endif %}>
+		 {{ section.content | safe }}
+		</div>
+		{% endif %}
+
+		{% if writing.pages %}
+		<h2>Recent articles</h2>
+		<ul>
+				 {% for post in writing.pages | slice(end=5) %}
+				 <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+				 {% endfor %}
+		 </ul>
+		 {% endif %}
+		 </main>
+		{% endif %}
+
 
 {% endblock content %}
 

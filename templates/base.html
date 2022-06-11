@@ -14,7 +14,6 @@
 <!-- css files -->
 <link rel="stylesheet" href="/assets/css/custom.css">
 <link rel="stylesheet" href="/assets/css/tagc.css">
-<link rel="stylesheet" href="/assets/css/footer.css">
 <link rel="stylesheet" href="/assets/css/pagenav.css">
 
 
@@ -43,6 +42,12 @@ if (navigator.serviceWorker.controller) {
 
 <!-- <link rel="manifest" type="application/manifest+json"   href="/manifest.json"> -->
 
+
+{% block react %}
+<! REACT SHITS -->
+<!-- end react -->
+{% endblock react %}
+
 <link rel="manifest" type="application/manifest+json" href="{{ get_url(path="/manifest.json") }}">
 
 <title>
@@ -50,6 +55,7 @@ if (navigator.serviceWorker.controller) {
 				{{config.title}}
 		{% endblock title %}
 </title>
+
 
 </head>
  <body>
