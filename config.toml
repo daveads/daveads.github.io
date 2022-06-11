@@ -15,9 +15,13 @@ generate_feed = true
 feed_filename = "atom.xml"
 
 taxonomies = [
+		#writings || papers || project
 		{name = "categories", feed = true},
 		{name = "tags", feed = true},
-		{name = "notec", fedd = true},
+
+		#Notes
+		{name = "notec", feed = true}, #note categories
+		{name = "notet", feed = true}, #note tags
 ]
 
 [markdown]
@@ -43,13 +47,13 @@ seo = true
 
 menu = [
 		{url = "/writing", name = "Writings", slash = true},
-		{url = "/paper", name = "Papers", slash = true},
-		{url = "/project", name = "Projects", slash = true},
+		#{url = "/paper", name = "Papers", slash = true},
+		#{url = "/project", name = "Projects", slash = true},
 		{url = "/about", name = "About", slash = true},
 ]
 
 subs = [
-		{url = "/notec", name = "Notes", slash = true},
+		{url = "/notes", name = "Notes", slash = true},
 		{url = "/tags", name = "Tags", slash = true},
 		{url = "/categories", name = "Categories", slash = true},
 ]
@@ -62,4 +66,3 @@ instagram = "_daveads"
 
 youtube = "your-channel-id"
 gitlab = "your-user-name"
-
