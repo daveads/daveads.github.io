@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+		{{config.title}} - {{section.title}}
+{% endblock %}
+
+
+{% block content %}
+
+
+<p style="text-align:center; color:#cccccc; padding:0; font-size: 150%" >
+
+<b> {{ section.title }} </b></p>
+
+				{{ section.content }}
+<div id="posts">
+  <ul>
+
+    {% for page in section.pages %}
+
+		<li class="post-link"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+
+   {% endfor %}
+
+  </ul>
+</div>
+
+{% endblock content %}
