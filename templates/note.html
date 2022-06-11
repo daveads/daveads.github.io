@@ -10,15 +10,32 @@
 
 {% block content %}
 
-<small style="float:right; color: #888"><a href="/writing">writings</a></small>
+<small style="float:right; font-size: 18px;"><a href="/writing">{% raw %} << back {% endraw %} </a></small>
 
 <p style="text-align:center; color:#cccccc; padding:0; font-size: 150%" >
 
 <b> {{ section.title }} </b></p>
 
 <br>
+
+<div>
+   <ul style="text-align:center;">
+		<b style="font-size: 22px;">See >></b> <a href="/notec"><b>CATEGORIES</b></a> 
+		<b style="">||</b>
+		<a href="/notet"><b>TAGS</b></a>
+   </ul>
+ </div>
+<br>
+
 <div id="posts">
   <ul>
+
+
+{% set writing = get_section(path="notes/_index.md") %}
+
+	{{ writing.content | safe}}
+
+
 
     {% for page in section.pages %}
 

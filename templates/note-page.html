@@ -11,38 +11,53 @@
 
 {% block content %}
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post h-entry" itemscope="articleBody" itemtype="http://schema.org/BlogPosting">
 <header class="post-header">
 
 		<h1 style="text-align:center;" itemprop="name headline"><b>
-				<a href="/notes" style="color: Blue;">Note</a> ::</b> {{ page.title }}
+				<a href="/notec" style="color: grey;">Note</a> ::</b> {{ page.title }}
 		</h1>
 
 		<p class="post-meta">
 
+    {% if page.date %}
 		<time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date }}</time>
 		{% if page.updated %}
 		 (updated: {{ page.updated }} )
 		{% endif %}
+    {% endif %}
 
-		<small style="float:right; color: #888"><a href="/notes">See all notes</a></small>
+		<small style="float:right; font-size: 15px;"><a href="/notec">See all notes</a></small>
 		</p>
 
 </header>
 
-
-		{% if page.taxonomies.tags %}
-		<p>
-		Tags :
-		{% for tags in page.taxonomies.tags %}a
+		<div>
+		{% if page.taxonomies.notec %}
+		<ul>
+		Categories :
+		{% for noteC in page.taxonomies.notec %}
 		<small>
-		<a href="{{ get_taxonomy_url(kind='tags', name=tags) | safe }}">#{{ tags }}</a>
+		<a href="{{ get_taxonomy_url(kind='notec', name=noteC) | safe }}">#{{ noteC }}</a>
 		</small>
 		{% endfor %}
 		{% endif %}
-		</p>
-		<br>
+		</ul>
 
+		
+		{% if page.taxonomies.notet %}
+		<ul>
+		Tags :
+		{% for noteT in page.taxonomies.notet %}
+		<small>
+		<a href="{{ get_taxonomy_url(kind='notet', name=noteT) | safe }}">#{{ noteT }}</a>
+		</small>
+		{% endfor %}
+		{% endif %}
+		</ul>
+		</div>
+		
+		<br>
 		<div class="post-content e-content" itemprop="articleBody">
 		{{ page.content | safe }}
 		</div>
