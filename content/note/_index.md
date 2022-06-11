@@ -7,8 +7,7 @@ page_template = "note-page.html"
 
 **Needed a way keep track of all my readings** && and view them when needed
 
-I do have a **physcial notes** but they always end up some where i can't really keep track of
-
+I do have a **physcial notes** but they always end up some where i can't really keep track of.
 
 This contains unfinished notes from books, videos, articles i have read or will be reading pretty soon.
 
