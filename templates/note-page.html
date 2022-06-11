@@ -16,9 +16,11 @@
 <header class="post-header">
 
 		 {% set title = page.title %}
-		 {{ pageT::pagetitle(page=title) }}
+		 {% set title1 = "NOTE" ~ " : " ~ title %}
+		 {{ pageT::pagetitle(page=title1) }}
 
-		<p class="post-meta">
+
+<p class="post-meta">
 
     {% if page.date %}
 		<time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date }}</time>
@@ -28,7 +30,7 @@
     {% endif %}
 
 		<small style="float:right; font-size: 15px;"><a href="/note">See all notes</a></small>
-		</p>
+</p>
 
 </header>
 
