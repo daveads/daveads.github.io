@@ -27,6 +27,9 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  //font-family: Courier New;
+  font-family: 'Merriweather';
+
 }
 
 
@@ -113,7 +116,8 @@ a {
 
   &:hover {
     //color: $text-color;
-	color: #cccccc;
+	//color: #cccccc;
+	color: red;
 	text-decoration: none;
   }
 
