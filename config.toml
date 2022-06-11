@@ -49,7 +49,7 @@ menu = [
 		{url = "/writing", name = "Writings", slash = true},
 		#{url = "/paper", name = "Papers", slash = true},
 		#{url = "/project", name = "Projects", slash = true},
-		{url = "/archive/", name = "Archive", slash = true},
+		#{url = "/archive", name = "Archive", slash = true},
 		{url = "/about", name = "About", slash = true},
 ]
 
