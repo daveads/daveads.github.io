@@ -8,9 +8,14 @@
 {% endblock %}
 
 {% block content %}
-<p style="text-align:center; font-size: 23px;"><b>NOTE CATEGORIES</b>
-<small style="float:right; font-size: 18px;"><a href="/writing"> {% raw %} << back {% endraw %} </a></small>
+<p style="text-align:center; font-size: 23px;"><b>NOTE CATEGORIES</b></p>
+
+<p><small style="float:right; font-size: 20px;"><a href="/writing"> {% raw %} << back {% endraw %} </a></small>
 </p>
+
+<br>
+<br>
+<div>
     {% if terms %}
         <ul>
             {% for term in terms %}
@@ -20,4 +25,5 @@
             {% endfor %}
         </ul>
     {% endif %}
+</div>
 {% endblock content %}
