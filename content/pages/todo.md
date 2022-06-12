@@ -1,8 +1,7 @@
 +++
 title = "List of thing to do before i die or get old probably"
 template = "page.html"
-weight = 0
-sort_by = "weight"
+path = "todo"
 +++
 
 ### **Long Term**

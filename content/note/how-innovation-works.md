@@ -1,5 +1,6 @@
 +++
 title = 'How innovation works'
+date = 2022-06-11
 [taxonomies]
 notec = ['Books']
 +++

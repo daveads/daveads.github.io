@@ -1,5 +1,5 @@
 +++
 title = "archive"
 template = "archive.html"
-weight = 0
+path = "archive"
 +++

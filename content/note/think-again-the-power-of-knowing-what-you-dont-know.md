@@ -1,5 +1,6 @@
 +++
 title = "think again the power of knowing what you dont know"
+date = 2022-06-11
 [taxonomies]
 notec = ['Books']
 +++

@@ -1,8 +1,7 @@
 +++
 title = "About"
 template = "page.html"
-weight = 0
-sort_by = "weight"
+path = "about"
 +++
 
 **NAME:** <b>Adejumo David Adewale</b>, Daveads on the internet, I write [things](https://en.wikipedia.org/wiki/Computer_program) that gets executed on a [processor](https://en.wikipedia.org/wiki/Central_processing_unit) && leverages the [gpu](https://en.wikipedia.org/wiki/Graphics_processing_unit).
@@ -10,6 +9,6 @@ sort_by = "weight"
 
 **Others:**
 * [Contact](/contact)
-* [Notes](/notes/) IF interested in a raw format of what am reading or doing...
+* [Notes](/note) IF interested in a raw format of what am reading or doing...
 * [Todo](/todo)
 * [Rss Feed](/atom.xml)

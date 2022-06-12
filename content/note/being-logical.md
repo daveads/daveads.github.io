@@ -1,5 +1,6 @@
 +++
 title  = 'Being logical by D.Q. Mclnenry'
+date = 2022-06-11
 [taxonomies]
 notec = ['Books']
 +++

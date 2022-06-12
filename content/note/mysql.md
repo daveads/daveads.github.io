@@ -1,5 +1,6 @@
 +++
 title = "mysql >> mariadb write ups"
+date = 2022-06-11
 [taxonomies]
 notec = ["Learned"]
 notet = ["mysql"]

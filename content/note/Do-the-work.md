@@ -1,5 +1,6 @@
 +++
 title = "Do the Work: Overcome Resistance and Get Out of Your Own Way"
+date = 2022-06-11
 [taxonomies]
 notec = ['Books']
 +++

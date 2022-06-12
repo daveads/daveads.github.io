@@ -1,5 +1,6 @@
 +++
 title = 'Redis'
+date = 2022-06-11
 [taxonomies]
 notec = ["Learned"]
 notet = ["redis"]

@@ -1,5 +1,6 @@
 +++
 title = 'sqlite 3'
+date = 2022-06-11
 [taxonomies]
 notec = ["Learned"]
 notet = ["sqlite"]

@@ -1,5 +1,6 @@
 +++
 title = "Building an Unorthodox Guide Making Things Worth Making (Tony Fadell)"
+date = 2022-06-11
 [taxonomies]
 notec = ['Books']
 +++
