@@ -10,9 +10,9 @@
 {% block content %}
 <p style="text-align:center; font-size: 23px;"><b>NOTE TAGS</b></p>
 
-<small style="float:right; font-size: 18px;"><a href="/writing"> {% raw %} << back {% endraw %} </a></small>
+{% include "include/back.html" %}
 
-<br>
+
 <br>
     {% if terms %}
         <ul>

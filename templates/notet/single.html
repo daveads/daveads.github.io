@@ -16,8 +16,8 @@
 			<b>Note tag: {{ term.name }} </b>
 </h1>
 
-<small style="float:right; font-size: 18px;"><a href="/note"> {% raw %} << back {% endraw %} </a></small>
-<br>
+{% include "include/back.html" %}
+
 <br>
 <div>
     {% for page in term.pages %}

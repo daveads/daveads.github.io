@@ -16,9 +16,8 @@
 			<b>Note category: {{ term.name }} </b>
 </h1>
 
-<small style="float:right; font-size: 18px;"><a href="/note"> {% raw %} << back {% endraw %} </a></small>
+{% include "include/back.html" %}
 
-<br>
 <br>
 <div>
     {% for page in term.pages %}
