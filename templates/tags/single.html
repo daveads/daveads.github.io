@@ -11,7 +11,7 @@
 			<b>{{ term.name | capitalize }} Tag</b>
     </h1>
     {% include "include/back.html" %}
-    
+    <br>
     {% for page in term.pages %}
         {{ post_macros::page_in_list(page=page) }}
     {% endfor %}

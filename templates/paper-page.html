@@ -18,25 +18,21 @@
 				<a href="/paper" style="color: grey; font-size: 29px;">paper</a> ::</b> {{ page.title }}
 		</h1>
 
-		<p class="post-meta">
+		<small style="float:right; font-size: 19px;"><a href="/paper">papers</a></small>
 
+	<p class="post-meta">
     {% if page.date %}
 		<time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date }}</time>
 		{% if page.updated %}
 		 (updated: {{ page.updated }} )
 		{% endif %}
     {% endif %}
+	</p>
 
-		<small style="float:right; font-size: 19px;"><a href="/paper">all papers</a></small>
-
+		<nav>
 		{% include "include/back.html" %}
-		</p>
-
-</header>
-
 
 		{% if page.taxonomies.tags %}
-		<p>
 		Tags :
 		{% for tags in page.taxonomies.tags %}
 		<small>
@@ -44,7 +40,11 @@
 		</small>
 		{% endfor %}
 		{% endif %}
-		</p>
+		</nav>
+</header>
+
+
+		
 		<br>
 
 		<div class="post-content e-content" itemprop="articleBody">

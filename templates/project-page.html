@@ -14,28 +14,28 @@
 <article class="post h-entry" itemscope="articleBody" itemtype="http://schema.org/BlogPosting">
 <header class="post-header">
 
-		<h1 style="text-align:center;" itemprop="name headline"><b>
-				<a href="/project" style="color: grey; font-size: 29px;">project</a> ::</b> {{ page.title }}
-		</h1>
-				
-		<p class="post-meta">
+	<h1 style="text-align:center;" itemprop="name headline"><b>
+			<a href="/project" style="color: grey; font-size: 29px;">project</a> ::</b> {{ page.title }}
+	</h1>
+	
+		
+	<small style="float:right; font-size: 19px;"><a href="/project">all projects</a></small>
 
+	<p class="post-meta">
     {% if page.date %}
 		<time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date }}</time>
 		{% if page.updated %}
-		 (updated: {{ page.updated }} )
+		 (updated: {{ page.updated }})
 		{% endif %}
     {% endif %}
+	</p>
 
-		<small style="float:right; font-size: 19px;"><a href="/project">all projects</a></small>
-		{% include "include/back.html" %}
-		</p>
+	
+	<nav>
+	{% include "include/back.html" %}
 
-</header>
-
-
-		{% if page.taxonomies.tags %}
-		<p>
+	{% if page.taxonomies.tags %}
+	<p>
 		Tags :
 		{% for tags in page.taxonomies.tags %}
 		<small>
@@ -43,8 +43,10 @@
 		</small>
 		{% endfor %}
 		{% endif %}
-		</p>
-		<br>
+	</p>
+	</nav>
+
+</header>
 
 		<div class="post-content e-content" itemprop="articleBody">
 		{{ page.content | safe }}

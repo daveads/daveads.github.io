@@ -13,31 +13,27 @@
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 <header class="post-header">
 
-		{#
-
-		{{ page.title }}
-
-		#}
 
 		{% set title = page.title %}
 		{{ pageT::pagetitle(page=title) }}
 
 
+		<small style="float:right; color: #888; font-size: 15px;"><a href="/writing">See all writings</a>
+			|| <a href="/archive">Archive</a>
+		</small>
+			
 		<p class="post-meta">
 
 		<time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date }}</time>
 		{% if page.updated %}
-		 (updated: {{ page.updated }} )
+		 (updated: {{ page.updated }})
 		{% endif %}
-
-		<small style="float:right; color: #888; font-size: 15px;"><a href="/writing">See all writings</a>
-		|| <a href="/archive">Archive</a>
-		</small>
-		{% include "include/back.html" %}
 		</p>
-
-</header>
-		<br>
+		
+	<nav>
+		
+		{% include "include/back.html" %}
+		
 		{% if page.taxonomies.tags %}
 		<p>
 		Tags :
@@ -48,6 +44,11 @@
 		{% endfor %}
 		{% endif %}
 		</p>
+
+	</nav>
+		
+		
+</header>
 
 		<br>
 		<div class="post-content e-content" itemprop="articleBody">

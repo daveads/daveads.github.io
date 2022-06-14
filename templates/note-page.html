@@ -19,6 +19,8 @@
 		 {% set title1 = "NOTE" ~ " : " ~ title %}
 		 {{ pageT::pagetitle(page=title1) }}
 
+		 <small style="float:right; font-size: 15px;"><a href="/notec">See all notes</a>
+		 </small>
 
 <p class="post-meta">
 
@@ -28,41 +30,37 @@
 		 (updated: {{ page.updated }} )
 		{% endif %}
     {% endif %}
-
-
-		
-		<small style="float:right; font-size: 15px;"><a href="/notec">See all notes</a></small>
-		{% include "include/back.html" %}
 </p>
 
-</header>
-		<br>	
 		<div>
-		{% if page.taxonomies.notec %}
-		<ul>
-		Categories :
-		{% for noteC in page.taxonomies.notec %}
-		<small>
-		<a href="{{ get_taxonomy_url(kind='notec', name=noteC) | safe }}">#{{ noteC }}</a>
-		</small>
-		{% endfor %}
-		{% endif %}
-		</ul>
+			{% include "include/back.html" %}
 
+			{% if page.taxonomies.notec %}
 		
-		{% if page.taxonomies.notet %}
-		<ul>
-		Tags :
-		{% for noteT in page.taxonomies.notet %}
-		<small>
-		<a href="{{ get_taxonomy_url(kind='notet', name=noteT) | safe }}">#{{ noteT }}</a>
-		</small>
-		{% endfor %}
-		{% endif %}
-		</ul>
+			Categories :
+			{% for noteC in page.taxonomies.notec %}
+			<small >
+			<a href="{{ get_taxonomy_url(kind='notec', name=noteC) | safe }}">#{{ noteC }}</a>
+			</small>
+			{% endfor %}
+			{% endif %}
+		
+			<br>
+			
+			{% if page.taxonomies.notet %}
+	
+			Tags :
+			{% for noteT in page.taxonomies.notet %}
+			<small>
+			<a href="{{ get_taxonomy_url(kind='notet', name=noteT) | safe }}">#{{ noteT }}</a>
+			</small>
+			{% endfor %}
+			{% endif %}
 		</div>
-		
-		<br>
+
+</header>
+
+		<br>	
 		<div class="post-content e-content" itemprop="articleBody">
 		{{ page.content | safe }}
 		</div>
