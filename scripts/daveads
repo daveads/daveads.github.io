@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+#daveads='cd /home/$USER/Desktop/daveads.github.io'
+
+cd ~/Desktop/daveads.github.io/
+
+$SHELL
