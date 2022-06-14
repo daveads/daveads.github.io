@@ -14,25 +14,22 @@
 
 <b> {{ section.title }} </b></p>
 
-
-{% include "include/back.html" %}
-
-<br>
-<br>
 <div>
    <ul style="text-align:center;">
-		<b style="font-size: 22px;">See >></b> <a href="/notec"><b>CATEGORIES</b></a> 
+		<b style="font-size: 22px;"></b> <a href="/notec"><b>CATEGORIES</b></a> 
 		<b style="">||</b>
 		<a href="/notet"><b>TAGS</b></a>
    </ul>
  </div>
+
+{% include "include/back.html" %}
 <br>
 
-<div id="posts">
-  <ul class="post-link">
+<div id="post">
+  <ul class="post-list">
 
 
-{% set writing = get_section(path="note/_index.md") %}
+  {% set writing = get_section(path="note/_index.md") %}
 
 	{{ writing.content | safe}}
 
