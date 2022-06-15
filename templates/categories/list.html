@@ -12,7 +12,7 @@
         <ul>
             {% for term in terms %}
                 <li class="tagsC-layout" >
-                    <a href="{{ term.permalink | safe }}">{{ term.name }}</a>({{ term.pages | length }})
+                    <a href="{{ term.permalink | safe }}">{{ term.name }}</a> ({{ term.pages | length }})
                 </li>
             {% endfor %}
         </ul>
