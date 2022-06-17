@@ -16,6 +16,16 @@
     <ul>
     {% for post in posts %}
         <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+        
+
+        <p class="post-meta">
+        <time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date }}</time>
+            {% if post.updated %}
+             (updated: {{ post.updated }})
+            {% endif %}
+        </p>
+
+        
     {% endfor %}
     </ul>
 {% endfor %}
