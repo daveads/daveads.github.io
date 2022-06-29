@@ -1,6 +1,7 @@
 +++
 title = "Blogroll"
 date = 2022-06-11
+updated = 2022-06-18
 [taxonomies]
 notec = ["others"]
 notet = ["blogroll"]
@@ -220,7 +221,7 @@ capture-the-flag, game-development, programming, reversing, security, video-game
 * [Adam Sawicki](http://asawicki.info/)
 c++, game-development, graphics, math, programming, video-games, windows
 
-
+* []
 
 #### Others
  
