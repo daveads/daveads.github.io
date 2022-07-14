@@ -1,0 +1,22 @@
++++
+title = "Multi-threading"
+date = 2022-06-29
+[taxonomies]
+notec = ["Multithreading"]
++++
+
+multithreading :
+
+Multithreading means that you have multiple threads of execution inside the same application. A thread is like a separate CPU executing your application. Thus, a multithreaded application is like an application that has multiple CPUs executing different parts of the code at the same time.
+
+
+reasons:
+* Better utilization of a single CPU.
+* Better utilization of multiple CPUs or CPU cores.
+* Better user experience with regards to responsiveness.
+* Better user experience with regards to fairness.
+
+
+Multitasking && Multithreading
+
+multiprocessing .................??

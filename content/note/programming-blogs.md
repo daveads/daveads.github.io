@@ -3,7 +3,7 @@ title = "Blogroll"
 date = 2022-06-11
 updated = 2022-06-18
 [taxonomies]
-notec = ["others"]
+notec = ["Others"]
 notet = ["blogroll"]
 +++
 

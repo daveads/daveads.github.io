@@ -2,7 +2,7 @@
 title = "checking out martial art disciplines"
 date = 2022-06-14
 [taxonomies]
-notec = ["martial-art"]
+notec = ["Martial-art"]
 notet = ["martial-art"]
 +++
 
@@ -16,4 +16,5 @@ notet = ["martial-art"]
 
 * Krav Maga
 
-* 
+
+[python](/note/ncode/testing.py)

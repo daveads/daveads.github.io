@@ -66,4 +66,5 @@ mail = "the.daveads@gmail.com"
 instagram = "_daveads"
 reddit = "Daveads"
 youtube = "your-channel-id"
-gitlab = "your-user-name"
+codeberg = "daveads"
+mastodon = "daveads" #https://mastodon.technology/web/@
