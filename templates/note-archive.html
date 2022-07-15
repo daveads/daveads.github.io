@@ -1,0 +1,39 @@
+{% extends "note.html" %}
+
+{% block title %}
+		 {{config.title}} - {{page.title}}
+{% endblock %}
+
+{% block header %}
+		{% include "include/header.html" %}
+{% endblock %}
+
+
+{% block content %}
+<h1 style="text-align: center;">{{ page.title | capitalize }}</h1>
+
+ {% set section_item = get_section(path="note/_index.md") %}
+
+
+{% for year, posts in section_item.pages | group_by(attribute="year") %}
+    <h2>{{ year }}</h2>
+
+    <ul>
+    {% for post in posts %}
+        <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+        
+
+        <p class="post-meta">
+        <time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date }}</time>
+            {% if post.updated %}
+             (updated: {{ post.updated }})
+            {% endif %}
+        </p>
+
+        
+    {% endfor %}
+    </ul>
+{% endfor %}
+
+
+{% endblock content %}
