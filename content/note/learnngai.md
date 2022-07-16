@@ -2,7 +2,7 @@
 title = "ai related"
 date = 2022-06-29
 [taxonomies]
-notec = ["Ai"]
+notec = ["AI"]
 +++
 
 ## math:

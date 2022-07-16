@@ -2,7 +2,7 @@
 title = "Concurrency vs Multi-threading vs Asynchronous Programming"
 date = 2022-06-29
 [taxonomies]
-notec = ["Parallelism"]
+notec = ["Computer-architecture"]
 notet = ["concurrency","parallelism","threads","asynchronous"]
 +++
 

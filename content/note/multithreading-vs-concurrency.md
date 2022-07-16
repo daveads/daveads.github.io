@@ -2,7 +2,8 @@
 title = "Multi-threading"
 date = 2022-06-29
 [taxonomies]
-notec = ["Multithreading"]
+notec = ["Computer-architecture"]
+notet = ["multithreading"]
 +++
 
 multithreading :

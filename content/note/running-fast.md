@@ -2,7 +2,7 @@
 title = "running fast"
 date = 2022-06-29
 [taxonomies]
-notec = ["parallelism"]
+notec = ["Computer-architecture"]
 notet = ["concurrency","parallelism"]
 +++
 
