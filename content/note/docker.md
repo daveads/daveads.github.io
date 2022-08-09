@@ -1,6 +1,7 @@
 +++
 title = "Docker key words"
 date = 2022-06-11
+
 [taxonomies]
 notec = ["Learned"]
 +++
@@ -9,24 +10,96 @@ notec = ["Learned"]
 - ship
 - run
 
-#docker run hello-world
-
-## To show docker-images
-
----
-sudo docker images
+### **To run docker images**
 ---
 
+```docker
+docker run <image>
+```
 
-# docker pull images
-
+### **To show docker images**
 ---
-sudo docker pull jenkins
+
+```
+docker images
+```
+
+### **pull docker images**
+
+```
+docker pull <image>
+```
+
+### **Docker status**
+---
+```
+systemctl status docker
+```
+
+### **current running container**
+---
+```
+docker ps
+```
+
+### **runned container**
 ---
 
-# docker running status
+```
+docker ps -a
+```
 
->> sudo services docker status
+### **iteractive tty @container**
+---
+```
+docker run -it <image> sh
+```
+
+### **cleaning up containters**
+```
+docker rm <container id>
+
+docker rm $(docker ps -a -q -f status=exited)
+
+docker container prune
+```
+
+### **view exposed image ports**
+---
+```
+docker port <image>
+```
+
+### **To stop a detached container**
+---
+```
+docker stop <image>
+```
 
 
+#### **DOCKER IMAGES**
+
+
+- Base images : images with no parent image, usually images with an os like ubuntu, busybox && debian
+
+- Child images : images build on base images
+
+
+- offical images : made by folks at docker
+
+- user images : user/image-name by users
+
+
+```
+search for images with
+
+<docker search>
+```
+
+### Creating a docker image
+---
+
+```
+docker build -t daveads/flask_py .
+```
 
