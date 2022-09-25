@@ -20,4 +20,8 @@ reasons:
 
 Multitasking && Multithreading
 
-multiprocessing .................??
+[multiprocessing](multiprocessing) :
+multiple processors/cpu executing concurrently
+
+
+mutitasking: multiple processes running concurrently on a single cpu. the os handle this process by switching between tasks.

@@ -59,7 +59,7 @@ its smallest unit of a task that can be executed by an os
 
 PROCESS : a program is an instance of a running program. a program can have multiple processes. 
 
-a process usually starts with a single thread but down the line can execution it can create multiple threads.
+a process usually starts with a single thread but down the line of execution it can create multiple threads.
 
 
 
@@ -67,7 +67,7 @@ a process usually starts with a single thread but down the line can execution it
 
 task are executed one after the other e.g. giving a task to write a letter to your mom and a letter to your friend
 
-
+ 
 async : when one task get executed, you could switch to a diff task without waiting for the previous to get completed.
 
 
