@@ -1,6 +1,6 @@
 +++
-title = "chords"
-date = 2022-06-29
+title = "chords formation"
+date = 2022-10-16
 [taxonomies]
 notec = ["Music", "Piano"]
 notet = ["piano"]
