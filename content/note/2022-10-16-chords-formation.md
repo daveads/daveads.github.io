@@ -1,5 +1,5 @@
 +++
-title = "chords formation"
+title = "Chord formation"
 date = 2022-10-16
 [taxonomies]
 notec = ["Music", "Piano"]
