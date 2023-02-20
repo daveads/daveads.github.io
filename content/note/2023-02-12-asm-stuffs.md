@@ -1,10 +1,14 @@
++++
+title = "assembly language"
+date = 2023-02-12
+[taxonomies]
+notec = ["Learned"]
+notet = ["assembly"]
++++
 
 
 
 
-
-
-/**
  The register is built into the cpu, it is used to store temporary data that the cpu needs to access quickly in oder to perform its operation.
  
  
@@ -26,8 +30,7 @@ This register holds the address of the top of the stack, which is a region of me
 *These registers store the state of the CPU, including information about arithmetic operations, interrupt handling, and other control signals.
 *
 
-****/
-
+**
 
 
 ## registers
@@ -125,4 +128,5 @@ EQU - defines constant.
 ```asm
 one equ 1
 ```
+
 
