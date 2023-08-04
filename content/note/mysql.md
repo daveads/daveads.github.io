@@ -24,3 +24,5 @@ notet = ["mysql"]
 * `CREATE DATABASE new_database_name;` To create a new database
 
 * `source /home/ubuntu/schema.sql` To run a SQL script file like `schema.sql` in SQL shell 
+
+* `DROP DATABASE my_database;` Delete a database
