@@ -26,36 +26,27 @@ docker images
 
 ### **pull docker images**
 
-```
-docker pull <image>
-```
+```docker pull <image>```
 
 ### **Docker status**
----
-```
-systemctl status docker
-```
+
+```systemctl status docker```
 
 ### **current running container**
----
-```
-docker ps
-```
+
+```docker ps```
 
 ### **runned container**
----
 
-```
-docker ps -a
-```
+
+```docker ps -a```
 
 ### **iteractive tty @container**
----
-```
-docker run -it <image> sh
-```
+
+```docker run -it <image> sh```
 
 ### **cleaning up containters**
+
 ```
 docker rm <container id>
 
@@ -65,16 +56,12 @@ docker container prune
 ```
 
 ### **view exposed image ports**
----
-```
-docker port <image>
-```
+
+```docker port <image>```
 
 ### **To stop a detached container**
----
-```
-docker stop <image>
-```
+
+```docker stop <image>```
 
 
 #### **DOCKER IMAGES**
@@ -99,7 +86,5 @@ search for images with
 ### Creating a docker image
 ---
 
-```
-docker build -t daveads/flask_py .
-```
+```docker build -t daveads/flask_py .```
 
