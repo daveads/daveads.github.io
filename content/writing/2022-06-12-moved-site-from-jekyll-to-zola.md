@@ -6,10 +6,8 @@ categories = ["General"]
 tags = ["misc"]
 +++
 
-Moved from jekyll to zola, still using my loosely edited version of `Jekyll Minima` scss styling from the earlier version of this site.
+After transitioning from Jekyll to Zola, I have updated the website's styling by loosely adapting the `Jekyll Minima` SCSS. Zola has proven to be an excellent choice as it seamlessly resolves many of the issues I faced with Jekyll. The fact that Zola is written in `Rust` and utilizes the powerful [Tera](https://github.com/Keats/tera) template engine further enhances its appeal.
 
-Zola solves most of my issues in jekyll without breaking a sweat and it's written in `Rust` and uses [Tera](https://github.com/Keats/tera) template engine.
+The current version of Zola that I am using is v0.15.3, and it has been performing admirably. For those interested in learning more about Zola and its capabilities, the repository can be found here: [zola-repo](https://github.com/getzola/zola). Additionally, the documentation is available at [zola-doc](https://www.getzola.org/documentation/getting-started/overview/).
 
-zola version :- v0.15.3
-
-Zola: [zola-repo](https://github.com/getzola/zola) doc: [zola-doc](https://www.getzola.org/documentation/getting-started/overview/)
+With Zola, I feel confident in the future of my website, and I am excited about exploring its features and possibilities.

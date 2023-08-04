@@ -111,7 +111,7 @@ a {
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: darken($brand-color, 20%);
   }
 
   &:hover {
@@ -158,7 +158,7 @@ code {
   border: 1px solid $grey-color-light;
   border-radius: 3px;
   //background-color: #eef;
-  color: blue;
+  color: #13b7ea;
 }
 
 code {
