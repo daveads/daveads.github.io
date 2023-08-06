@@ -6,119 +6,79 @@ notec = ["Computer-architecture"]
 notet = ["concurrency","parallelism","threads","asynchronous"]
 +++
 
-* concurrency && parallelism
-* Threads(multi-threaded) && Processes, 
+* Concurrency && Parallelism
+* Threads (multi-threaded) && Processes
 * Synchronous && Asynchronous
 
+### Concurrency && Parallelism
 
-### concurrency && parallelism
-**concurrency :**  
+**Concurrency:**
 
-Imagine a task of were you have to "sing and eat"
+Imagine a task where you have to "sing and eat":
 
-sing for a time  and then
+1. Sing for a time
+2. Eat for a time
 
-eat for a time.
+This task is performed concurrently. Concurrency is executing tasks at the same time but not necessarily simultaneously.
 
+Concurrency is handled differently in various processors. In a single core, concurrency is handled via a process called **context-switching**.
 
-so this tasked is performed concurrently...
+**Parallelism:**
 
-concurrency : is executing the task at the same time but not neccessary simultaneously
+Given a task of ***cooking and speaking to a friend over the phone***, these two tasks can be done simultaneously.
 
+> "Parallelism means performing two or more tasks simultaneously. Parallel computing in computer science refers to the process of performing multiple calculations simultaneously."
 
-# concurrency is handled differently in various processor
+Concurrency and parallelism refer to computer architectures focused on how tasks or computations are performed:
 
-In a single core: concurrency is handled via a process called **context-switching**
+* In a single core, concurrency happens with tasks executing over the same time period via context switching, i.e. only one task gets executed.
+* In a multi-core environment, concurrency can be achieved via parallelism, in which multiple tasks are executed simultaneously.
 
+## Threads & Processes
 
-**PARALLELISM**
+**Threads:** These are sequences of executing code that can be executed independently of one another. A program can be single-threaded or multi-threaded. It's the smallest unit of a task that can be executed by an OS.
 
-Given a task of ***cooking and speaking to a friend over a phone*** these two task can be done simultaneously.
+**Processes:** A program is an instance of a running program. A program can have multiple processes. A process usually starts with a single thread but down the line of execution, it can create multiple threads.
 
+**Sync and Async**
 
-"""
-Parallelism means performing two or more tasks simultaneously.
+Tasks are executed one after the other, e.g. giving a task to write a letter to your mom and a letter to your friend.
 
-Parallel computing in computer science refers to the process of performing multiple calculations simultaneously.
-"""
+**Async:** When one task gets executed, you could switch to a different task without waiting for the previous one to get completed.
 
-concurrency and parallelism refer to computer architectures which is focus on how our tasks or computations are performed
+* Sync and Async are *programming models*.
 
-* in a single core concurrency happens with tasks executing over same time period via context switching i.e only a task get executed.
+### Synchronous and Asynchronous in a Single and Multi-threaded Environment
 
+**Synchronous:**
 
-* in a multi-core environment, concurrency can be achieved via parallelism in which multiple tasks are executed simultaneously
+- Single-threaded: Each task gets executed one after another. Each task waits for its previous task to get executed.
+- Multi-threaded: Tasks get executed in different threads but wait for any other executing tasks on any other thread.
 
+**Asynchronous:**
 
-## Threads & processes
+- Single-threaded: Tasks start executing without waiting for a different task to finish. At a given time, a single task gets executed.
+- Multi-threaded: Tasks get executed in different threads without waiting for any tasks and independently finish off their executions.
 
-THREADS: this are sequence of executing code which can be executed independently of one another. a program can be single threaded or multi-threaded
-
-its smallest unit of a task that can be executed by an os
-
-
-PROCESS : a program is an instance of a running program. a program can have multiple processes. 
-
-a process usually starts with a single thread but down the line of execution it can create multiple threads.
-
-
-
-**sync and async**
-
-task are executed one after the other e.g. giving a task to write a letter to your mom and a letter to your friend
-
- 
-async : when one task get executed, you could switch to a diff task without waiting for the previous to get completed.
-
-
-* sync and Async are *programming models*
-
-
-### Synchronous and Asynchronous in a single and multi-threaded environment
-
-# Synchronous
-single threads : Each task gets executed one after another. Each task waits for its previous task to get executed.
-
-multi threads: Tasks get executed in different threads but wait for any other executing tasks on any other thread.
-
-#Asynchronous
-Single Threaded: Tasks start executing without waiting for a different task to finish. At a given time a single task gets executed.
-
-Multi-Threaded: Tasks get executed in different threads without waiting for any tasks and independently finish off their executions.
-
-
-
-
-
-
-concurrency and parallelism:
-* way tasks are executed
+Concurrency and Parallelism:
+* The way tasks are executed.
 
 Synchronous and Asynchronous ->
-* Programming model.
+* Programming models.
 
-Single Threaded and Multi-Threaded ->
+Single-threaded and Multi-threaded ->
 * The environment of task execution.
 
+Async helps to achieve concurrency. Async in a multithread environment is a way to achieve parallelism.
 
-async helps to achieve concurrency.
-async in a multithread environment is a way to achieve paralleism.
+Synchronously: This is how we code normally:
 
-
-synchronously : This is how we code normally
-
-/** 
-you wait for an operation to finish before going to the next or moving over to the other one
-**/
-
+> "You wait for an operation to finish before going to the next or moving over to the other one."
 
 ----------------------------------------
-- concurrency : Threading, async io
-
-- parallelism : multiprocessing
+- Concurrency: Threading, async I/O
+- Parallelism: Multiprocessing
 ----------------------------------------
 
-
-Links
-https://medium.com/swift-india/concurrency-parallelism-threads-processes-async-and-sync-related-39fd951bc61d
-
+Links:
+[Medium Article](https://medium.com/swift-india/concurrency-parallelism-threads-processes-async-and-sync-related-39fd951bc61d)
