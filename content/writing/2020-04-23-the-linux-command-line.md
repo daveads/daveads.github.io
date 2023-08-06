@@ -1,7 +1,7 @@
 +++
 title = 'The Linux Command line interface(0)'
 date = 2020-04-25
-updated = 2021-01-10
+updated = 2023-08-06
 [taxonomies]
 categories = ["General"]
 tags = ["linux"]
