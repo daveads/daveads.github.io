@@ -1,12 +1,11 @@
 <div class="back_btn">
-    <a onclick="window.history.go(-1)" 
+    <button type="button" onclick="window.history.go(-1)" 
     
-    {% if current_path == "/" %} style="display:none;" 
+    {% if current_path == "/" %} style="display:none; background-color: black; color: #13b7ea;" 
     {% else %}
-    style="float:right; font-size: 20px;"
+    style="float:right; font-size: 15px; background-color: black; color: #13b7ea;"
     {% endif %}>
     
     {% raw %} << back {% endraw %}
-    </a>
+    </button>
 </div>
-
