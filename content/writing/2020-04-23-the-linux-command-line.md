@@ -37,72 +37,75 @@ As earlier said a Unix shell or shell is a command-line interpreter but also a p
 
 ![termainal](/assets/images/terminal.png)
 
-Before really going into what the **Terminal emulator** actually is, it important to know where it all started decades ago Computer's had no GUI for accessing or modifying data, the computer terminal was the only means of entering data display and printing of data then the terminal were actualy physical computing devices examples usIBM 3270, VT100 and many others hardware terminals. check out [computer terminal >> wiki](https://en.wikipedia.org/wiki/Computer_terminal) for more details. 
-
+Before delving into what the Terminal emulator actually is, it's important to know where it all started decades ago. Computers had no GUI for accessing or modifying data; the computer terminal was the only means of entering, displaying, and printing data. These terminals were physical computing devices like IBM 3270, VT100, and many others. For more details, check out [computer terminal >> wiki](https://en.wikipedia.org/wiki/Computer_terminal). 
 
 **What's a Terminal emulator:**
-The Terminal emulator is a software made to replicate the functions of **Computer terminal** it is the Gui application needed to access **the unix shell** environment which provides an interface to invoke commands, scripts and programs available on your system and also allows you to view and browse through the contents of directory just like you would with a **FILE MANAGER APPLICATION**. 
+The Terminal emulator is a software designed to replicate the functions of a computer terminal. It is a GUI application needed to access the Unix shell environment, providing an interface to invoke commands, scripts, and programs available on your system. It also allows you to view and browse through the contents of directories, just like you would with a FILE MANAGER APPLICATION.
 
+Every Linux distro comes with a default terminal emulator. For instance, Ubuntu and Fedora come with Gnome terminal emulator, and other Linux distros have their own defaults. The first thing you see in the terminal emulator is the "command prompt," which shows $, %, #, or >, indicating the current working directory, the current user, and the readiness of the shell to accept commands from you.
 
-**Every linux distro comes with a default termainal emulator** Ubuntu and fedora comes with Gnome terminal emulator same with other linux distros,
-the first thing you see in the terminal emulator is the **"command prompt"** which shows  $, %, # or > which also includes information about the current working directory and the current user, it also shows the readiness of the shell to accept commands from you. 
+The default shell for most Unix or Unix-like systems is the [bash shell](https://en.wikipedia.org/wiki/Bash_(Unix_shell)). Other shells include sh, zsh, csh, and more. To find out the available shells on your system, use the command:
 
-* "#" : root access (super user)
-* "$" : user access
-
-The default shell for most unix or unix like system is the [bash shell](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) 
-
-other shells includes
-
-1. sh 
-2. bash 
-3. zsh 
-4. csh [e.t.c](https://en.wikipedia.org/wiki/Shell_(computing))
-
-to find out the shells available on your system use the command 
-
-```````````````
+```
 cat /etc/shells
+```
 
-```````````````
-
-### Display content in your file directory 
-The ```ls``` command is use to print out the current directory out to the termainal emualator screen you will get the same result using the **File Manager** 
+### Display content in your file directory
+The `ls` command is used to print out the current directory on the terminal emulator screen, giving the same result as the File Manager.
 
 ![ls_cmd](/assets/gifs/ls_cmd.gif)
 
 ![file_manager](/assets/images/file_m.png)
 
-To find out what a command actually means through the command line type this
+To find out what a command means through the command line, type:
 
 ```
 whatis ls
 ```
 
-you can also make use of the system's manual pager for full doc
+You can also make use of the system's manual pager for the full documentation:
 
 ```
 man ls
 ```
 
-To print your current working directory use the command ```pwd``` 
-![pwd](/assets/images/pwd.png)<br><br>
-The pwd is a builtin command within the bash shell itself type ```help``` to find out more on builtin in commands.<br>
+To print your current working directory, use the command `pwd`.
 
- 
+![pwd](/assets/images/pwd.png)
+
+The `pwd` is a built-in command within the bash shell itself. Type `help` to find out more about built-in commands.
+
 ### Time for Experiments
-here's are common commands
+Here are some common commands:
 
-**Command** | **Meaning** 
-```clear``` | clear the termainal screen
-```cd```    | change current directory
-```mkdir``` | create a new directory **folder**
-```man```   | Manual
-```nano```  | Nano's ANother editor
-```&&```    | And
-```cp```    | copy files
-```mv```    | move files
-```touch``` | create a new file
+| Command | Meaning |
+|---|---|
+| `ls` | List files and directories in the current directory. |
+| `cd` | Change the current working directory. |
+| `pwd` | Print the current working directory. |
+| `mkdir` | Create a new directory (folder). |
+| `rmdir` | Remove a directory (folder). |
+| `cp` | Copy files or directories. |
+| `mv` | Move or rename files or directories. |
+| `rm` | Remove (delete) files or directories. |
+| `cat` | Concatenate and display file content. |
+| `more` | Display file content one screen at a time. |
+| `less` | Display file content with backward navigation. |
+| `head` | Display the beginning lines of a file. |
+| `tail` | Display the ending lines of a file. |
+| `grep` | Search for a pattern in files. |
+| `find` | Search for files and directories. |
+| `chmod` | Change file permissions. |
+| `chown` | Change file ownership. |
+| `ps` | Display information about running processes. |
+| `kill` | Terminate processes. |
+| `ssh` | Secure Shell - remote login to a server. |
+| `wget` | Download files from the web. |
+| `tar` | Archive files using tar. |
+| `zip` | Package and compress files. |
+
+
+Please note that this is not an exhaustive list, but it includes some commonly used commands and their primary meanings. Additionally, the meaning of some commands may vary based on their options and arguments. Always refer to the manual (`man` command) for a comprehensive understanding of each command.
 
 **Resources**
 [The Missing Semester of Your CS Education By Mit](https://missing.csail.mit.edu/)
