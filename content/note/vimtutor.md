@@ -6,151 +6,96 @@ notec = ["Learned"]
 notet = ["vim"]
 +++
 
-## Decided to try this out after months of using vim 
+## Decided to try this out after months of using Vim
 
-// started out vim by just googling the basic commands...
+// Started with Vim by just Googling the basic commands...
 
-**mistakes i have made in the past**
+**Mistakes I have made in the past**
 1.
 
-
-## moving 
-				 ^
-                     		 k
-  			<  h  	       l>
-					
-				 j
-				 v
-
-
-## Exiting vim
-<ESC> 
-:q! discards any changes you have made.....
-
-
-## Text editing - del
-<ESC> !inserting_mode
-
-moving to the character then press x to delete
-
-
-## Text editing - ins
-
-"i" to start inserting text...
-
-
-## Text editing - appending
-
-"a" append after the line 
-
-
-## Editing a file
-":wq" to save and exit a file
-
-"<ESC>" puts you in noraml mode or can be used to cancel unwanted and partially completed command
-
-
-## Deletion commands
-after the normal mode, move to the beginning of a word and type "dw"....
-
-
-## more deletion commands
-"d$" deletes to the end of the line....
-
-
-## on operators and motions
-
-commands involve in manupulating of text are made from an operator and a motion. 
-
-delete operator:
-	d motion
-
-d - is the delete operator.
-motion - what the operator will operate on.
-
-## Short list of motions:
-
-w - until the start fo the next word, Excluding its first character.
-
-e - to the end of the current word, Including the last character.
-
-$ - to the end of the line, Including the last character.
-
-
-de :
-
-## Using a count for a motion
-
-2w move the cursor two words forward
-
-3e movis the cursor to the end of the third word forward.
-
-0 to move to the start of a the line
-
-3w move the cursor three words forward
-
-
-
-## Using a count to delete more
-
-typing anumber with an operator repeatss it that many times. "d number motion"
-
-e.g. d2w deletes the first two words n the line
-
-## operating on lines
-
-dd - to delete a whole line
-
-2dd - deletes two line
-
-## The undo command
-
-u - to undo last commands
-
-CTRL-R - to redo commands
-
- 
-## The PUT command
-
-p - to put previously deleted text after the cursor.
-
-**back to "dd"** 
-dd deletes the line and store it in a vim register...
-
-### The replace command
-
-rx to replace the character 
-
-rx then r than the character which should be there...
-
-## The change operator
-
-ce - to change until the end of a word
-
-e.g. hello wors 
-     hello world
-
-## More changes using c
-
-"c" : the change operator can be used with the same motions as delete.
-
- c [number] motion
-
-//not  clear....... 
-
-
-## cursor location and file status
-
-CTRL-g  shows file name and position in the file.
-gg - move you to the start of the file.
-G - move you to the bottom of the file
-
-[number] G - move you the specific line
-
-## The search command
-
-@Normal_mode "/ then character..."
-
-to search the same phrase again, type "n".
-
- 
+## Moving
+```
+         ^
+         k
+   <  h       l>
+         
+         j
+         v
+```
+
+## Exiting Vim
+Press `<ESC>`
+Use `:q!` to discard any changes you have made and exit forcefully.
+
+## Text Editing - Delete
+Press `<ESC>` to enter normal mode.
+To delete a character, move to the character and press `x`.
+
+## Text Editing - Insert
+Press `i` to start inserting text at the cursor position.
+
+## Text Editing - Appending
+Press `a` to append text after the cursor position.
+
+## Editing a File
+Use `:wq` to save and exit a file.
+Press `<ESC>` to return to normal mode or to cancel unwanted and partially completed commands.
+
+## Deletion Commands
+In normal mode, move to the beginning of a word and type `dw` to delete until the start of the next word.
+
+## More Deletion Commands
+Type `d$` to delete to the end of the line, including the last character.
+
+## On Operators and Motions
+Commands involving manipulating text are made from an operator and a motion.
+- Delete Operator: `d` motion
+- `d` is the delete operator, and motion specifies what the operator will operate on.
+
+## Short List of Motions
+- `w`: Move until the start of the next word, excluding its first character.
+- `e`: Move to the end of the current word, including the last character.
+- `$`: Move to the end of the line, including the last character.
+
+## Using a Count for a Motion
+- `2w`: Move the cursor two words forward.
+- `3e`: Move the cursor to the end of the third word forward.
+- `0`: Move to the start of the line.
+- `3w`: Move the cursor three words forward.
+
+## Using a Count to Delete More
+Typing a number with an operator repeats it that many times. For example, `d2w` deletes the first two words in the line.
+
+## Operating on Lines
+- `dd`: Delete a whole line.
+- `2dd`: Delete two lines.
+
+## The Undo Command
+- `u`: Undo the last command.
+- `CTRL-R`: Redo commands.
+
+## The PUT Command
+- `p`: Put previously deleted text after the cursor.
+- `dd` deletes the line and stores it in a Vim register.
+
+### The Replace Command
+- Press `rx` to replace the character under the cursor with `x`.
+- Press `r` then the character which should be there.
+
+## The Change Operator
+- `ce`: Change until the end of a word.
+- For example, `hello wors` becomes `hello world`.
+
+## More Changes Using c
+The change operator `c` can be used with the same motions as delete.
+- `c [number] motion`
+
+## Cursor Location and File Status
+- `CTRL-g`: Shows file name and position in the file.
+- `gg`: Move you to the start of the file.
+- `G`: Move you to the bottom of the file.
+- `[number]G`: Move you to a specific line.
+
+## The Search Command
+In normal mode, type `"/"` followed by the character you want to search.
+To search the same phrase again, type `n`.

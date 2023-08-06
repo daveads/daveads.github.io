@@ -6,22 +6,21 @@ notec = ["Computer-architecture"]
 notet = ["multithreading"]
 +++
 
-multithreading :
+Multithreading:
 
-Multithreading means that you have multiple threads of execution inside the same application. A thread is like a separate CPU executing your application. Thus, a multithreaded application is like an application that has multiple CPUs executing different parts of the code at the same time.
+Multithreading means having multiple threads of execution within the same application. Each thread is like a separate CPU executing different parts of the code simultaneously.
 
+Reasons for using multithreading:
 
-reasons:
 * Better utilization of a single CPU.
 * Better utilization of multiple CPUs or CPU cores.
-* Better user experience with regards to responsiveness.
-* Better user experience with regards to fairness.
-
+* Improved user experience in terms of responsiveness.
+* Enhanced fairness in handling tasks.
 
 Multitasking && Multithreading
 
-[multiprocessing](multiprocessing) :
-multiple processors/cpu executing concurrently
+[multiprocessing](multiprocessing):
+Multiple processors/CPUs executing concurrently.
 
-
-mutitasking: multiple processes running concurrently on a single cpu. the os handle this process by switching between tasks.
+Multitasking: 
+Multiple processes running concurrently on a single CPU. The OS handles this process by switching between tasks.
