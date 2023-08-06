@@ -64,6 +64,9 @@ Our easy-to-take format ensures that stress relief is just a pill away, allowing
 Whether you are a programmer, researcher, physicist, startup founder or whatever your profession may be, `STRESSLESS` offers a comprehensive solution to help you achieve peak performance. Please remember to **FOLLOW THE RECOMMENDED DOSAGE** for the best results.
 
 <br>
-<span style="color:#082aac">RECOMMENDATION:</span><br>
 
-> **GIVE UP!**
+<span style="color:#082aac">**RECOMMENDED USAGE:**</span><br>
+
+The drug can be administered or taken by just performing one action: "Giving up!"
+
+**NOTE:** <span style="color:red">You are not required to perform any other action during this process</span>.
