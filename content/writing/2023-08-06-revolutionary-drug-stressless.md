@@ -7,7 +7,7 @@ tags = ["research"]
 +++
 
 
-**Introducing `STRESSLESS`: The Revolutionary Stress-Relief Solution**
+# **Introducing `STRESSLESS` :: The Revolutionary Stress-Relief Solution**
 
 Abilities:
 - Effectively relieves stress

@@ -1,10 +1,14 @@
 +++
-title = "List of thing to do before i die or get old probably"
+title = "Todo list"
 template = "page.html"
 path = "todo"
 +++
 
-## **Long-Term Goals**
+
+## List of thing to do before i die or get old probably ::
+<br>
+
+### **Long-Term Goals**
 
 - **Contribute to Tech Innovation:** Build and lead tech companies on a global scale, tackling challenging and impactful problems across various interdisciplinary fields.
 
@@ -20,6 +24,8 @@ path = "todo"
 
 - **Mastery of Computational Physics and Hardware:** Acquire an in-depth understanding of computational physics and hardware technologies.
 
-## **Short-Term Goals**
+<br><br>
+
+### **Short-Term Goals**
 
 * **Emulate CPU:** Create a CPU emulator, enhancing understanding of computer architecture and systems.
