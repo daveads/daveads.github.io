@@ -4,30 +4,22 @@ template = "page.html"
 path = "todo"
 +++
 
-### **Long Term**
+## **Long-Term Goals**
 
-1. build tech companies [#Global](https://en.wikipedia.org/wiki/Globe) //solving interesting && hard problems [#interdisciplinary_fields](https://en.wikipedia.org/wiki/Interdisciplinarity)❌️
+- **Contribute to Tech Innovation:** Build and lead tech companies on a global scale, tackling challenging and impactful problems across various interdisciplinary fields.
 
-2. build a personal self aware virtual assistance [artifical general intelligence](https://en.wikipedia.org/wiki/Artificial_general_intelligence)   ❌️
+- **Advance AI Development:** Develop a personal, self-aware virtual assistant powered by artificial general intelligence, contributing to the evolution of AI technologies.
 
-3. Solve a #local problem. ❌️<br>
-	**Security #virtually & #physically**<br>
-	**Health care system** 
- 
-4. <del>Get a +1 **if** (net worth) >= half a billion $</del>❌️
+- **Local Problem Solving:** Address local challenges, focusing on enhancing security both virtually and physically, as well as improving the healthcare system.
 
-5. Be fluent in one foreign language. -0.1 %
+- **Personal Wealth Goal:** ~~Achieve a net worth of half a billion dollars or more.~~
 
-6. Be physically fit. 20%
+- **Language Proficiency:** Achieve fluency in at least one foreign language, broadening communication capabilities. (-0.1%)
 
-7. a deep knowledge of computational physics(PHYSICS) && hardware.
+- **Physical Fitness:** Prioritize physical fitness to maintain a healthy lifestyle. (20%)
 
-<br>
+- **Mastery of Computational Physics and Hardware:** Acquire an in-depth understanding of computational physics and hardware technologies.
 
-### **Short Term**
+## **Short-Term Goals**
 
-1. write a CPU emulator
-
-2. Create my own programming language  (Compiler or interpreter) ❌️ 
-
-3. build weird projects.. ❌️
+* **Emulate CPU:** Create a CPU emulator, enhancing understanding of computer architecture and systems.
