@@ -13,10 +13,10 @@
 
 @keyframes changeImage {
     0%, 100% {
-        background-image: url('../images/star-lord-marvels-3840x2160-11779.jpeg');
+        background-image: url('../images/star-lord-marvels.jpeg');
     }
     25% {
-        background-image: url('../images/purple-planet-dark-background-saturn-astronomy-4042x2274-6425.jpg'); 
+        background-image: url('../images/purple-planet-dark-background-saturn-astronomy.jpg'); 
     }
 }
 
@@ -26,7 +26,7 @@
         width: 100%; 
         height: auto; 
         animation: none;
-        background-image: url('../images/purple-planet-dark-background-saturn-astronomy-4042x2274-6425.jpg'); /* default */
+        background-image: url('../images/purple-planet-dark-background-saturn-astronomy.jpg'); /* default */
     }
 }
 
