@@ -1,16 +1,23 @@
 /**
-    writing-page 
-    note-page
+    index
 **/
 
-
-
-/* Select the element you want to apply the background image to */
 .element-class {
-    background-image: url('../images/purple-planet-dark-background-saturn-astronomy-4042x2274-6425.jpg'); /* Replace with the actual path to your image */
-    background-size: cover; /* Adjust the sizing of the background image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-position: center center; /* Position the image at the center */
-  }
-  
+    width: 100vw; /* Set the width to the viewport width */
+    height: 100vh; /* Set the height to the viewport height */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: changeImage 60s infinite; 
+}
+
+@keyframes changeImage {
+    0%, 100% {
+        background-image: url('../images/star-lord-marvels-3840x2160-11779.jpeg');
+    }
+    25% {
+        background-image: url('../images/purple-planet-dark-background-saturn-astronomy-4042x2274-6425.jpg'); 
+    }
+}
+
 
