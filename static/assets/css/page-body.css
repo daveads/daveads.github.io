@@ -1,0 +1,16 @@
+/**
+    writing-page 
+    note-page
+**/
+
+
+
+/* Select the element you want to apply the background image to */
+.element-class {
+    background-image: url('../images/purple-planet-dark-background-saturn-astronomy-4042x2274-6425.jpg'); /* Replace with the actual path to your image */
+    background-size: cover; /* Adjust the sizing of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center; /* Position the image at the center */
+  }
+  
+
