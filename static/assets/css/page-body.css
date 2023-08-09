@@ -20,4 +20,14 @@
     }
 }
 
+/* Media Query for Smaller Phones */
+@media (max-width: 720px) and (max-height: 1600px) {
+    .element-class {
+        width: 100%; 
+        height: auto; 
+        animation: none; 
+        background-image: url('../images/star-lord-marvels-3840x2160-11779.jpeg'); /* default */
+    }
+}
+
 
