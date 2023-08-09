@@ -139,3 +139,36 @@ li.Scontain {
       justify-content: center;
       align-items: center;
 }
+
+
+
+
+/* identities */
+#identity {
+  font-family: 'Arial', sans-serif;
+}
+
+#identity h2 {
+  color: #333;
+}
+
+#identity ul {
+  list-style: none;
+  padding: 0;
+}
+
+#identity li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#identity span {
+  color: #999;
+}
+
+/* Additional styling for the outer div */
+#container {
+  border: 0.5px solid #333;
+  padding: 15px;
+  text-align: center;
+}

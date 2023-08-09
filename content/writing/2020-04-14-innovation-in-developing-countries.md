@@ -19,6 +19,7 @@ Secondly, the mindset (culture) and beliefs of the people are really mind-blowin
 To a point, you can't entirely blame society for this; many youths spend their time in the most unproductive ways you could ever think of, involving themselves in internet fraud and other criminal activities, etc.
 
 **There is a lot at play here:**
+
 1. Lack of knowledge, even in a major field (poor education background, mostly outdated curriculum).
 2. Lack of infrastructure, etc.
 
