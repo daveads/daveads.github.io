@@ -6,28 +6,52 @@ notec = ["Learned"]
 notet = ["postgres"]
 +++
 
-sudo service postgresql start...
+## Postgresql Local development setup
 
 
-// no users in postgresql just roles
+There are no users in PostgreSQL, only roles.
 
-***
-psql postgres
-***
+postgres account is created by default 
 
 
-## see roles create by using
+`sudo -i -u postgres` : To switch in the postgress account then `psql` to start postgresql interactive terminal  
 
-// \du
+OR
+
+`sudo -u postgres psql` : This log you directly into postgres 
+
+
+**THIS COMMANDS CAN BE RUN WITH THE POSTGRESS ACCOUNT**
+
+`\du` : List all user accounts or roles
+
 
 
 ## Creating a new role
 
-CREATE ROLE <role>;
-// this won't add login...
+`createuser --interactive`: Within the postgres account 
+
+Or
+
+`sudo -u postgres createuser --interactive` without switching in the postgres account first 
+
+
+
+
+**Within the postgresql interactive terminal**
+
+
+`SELECT datname FROM pg_database;` or  `/list` See all database in PostgreSQL
+
+
+
+`SELECT rolname FROM pg_roles;` To list all roles
+
+`DROP ROLE <role>;` : To remove  role
+
 
 ## to add login
-CREATE ROLE <role> WITH LOGIN
+`CREATE ROLE "<role>";` WITH LOGIN
 
 
 ##  quit the postgresqlq
@@ -35,9 +59,9 @@ CREATE ROLE <role> WITH LOGIN
 
 [psql postgres -U User]
 
-## remove that role using
+## 
 
-DROP ROLE <role>;
+
 
 
 ## creating role with login password
@@ -72,8 +96,6 @@ ALTER ROLE <role> WITH LOGIN;
 * REPLICATION/ NOREPLICATION : ??
 
 
-/list
-//this list the database available....
 
 
 ## switch datbase
