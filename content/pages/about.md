@@ -9,12 +9,12 @@ path = "about"
 
 
 ```
- ____                            _     
-|  _ \  __ ___   _____  __ _  __| |___ 
-| | | |/ _` \ \ / / _ \/ _` |/ _` / __|
-| |_| | (_| |\ V /  __/ (_| | (_| \__ \
-|____/ \__,_| \_/ \___|\__,_|\__,_|___/  abyss... 
-                                       
+                    ____                            _     
+                    |  _ \  __ ___   _____  __ _  __| |___ 
+                    | | | |/ _` \ \ / / _ \/ _` |/ _` / __|
+                    | |_| | (_| |\ V /  __/ (_| | (_| \__ \
+                    |____/ \__,_| \_/ \___|\__,_|\__,_|___/.
+                                                            
 ```
 
 <br>
@@ -48,7 +48,7 @@ fn main() {
 <br>
 
 **Others:**
-* [Contact](/contact)
+* <a href="/contact" class="blinking-link">Virtual Presence</a>
 * [Notes](/note) ::{ If interested in a raw format of what I am reading or doing. }
 * [Todo](/todo)
 * [RSS Feed](/atom.xml)

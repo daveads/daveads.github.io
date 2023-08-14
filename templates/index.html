@@ -8,12 +8,12 @@
 
 
 {% block content %}
-<div style="text-align: center; font-family: Courier New; color: cyan; font-size: 25px; ">
+<div style="text-align: center; font-family: Courier New; color: #02afff; font-size: 25px; ">
 
 		<p><b style="font-size: 40px; font-family: monospace;">Hello Humans!</b> 
-		Welcome to <a href="/about">My</a> 
-		<a href="https://en.wikipedia.org/wiki/Galaxy">Galaxy</a>
-		feel at <a href="/">127.0.0.1</a></p>
+		Welcome to <a href="/about" style="color:#006bf8">My</a> 
+		<a href="https://en.wikipedia.org/wiki/Galaxy" style="color:#006bf8">Galaxy</a>
+		feel at <a href="/" style="color:#006bf8">127.0.0.1</a></p>
 
 </div>
 
@@ -31,7 +31,7 @@
 		{% endif %}
 
 		{% if writing.pages %}
-		<h2>Recent articles</h2>
+		<h2 class="blinking-link" style="margin: 0;">Recent articles</h2>
 		<ul>
 				 {% for post in writing.pages | slice(end=5) %}
 				 <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
