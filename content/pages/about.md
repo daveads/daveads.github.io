@@ -6,20 +6,44 @@ path = "about"
 
 **NAME:** Adejumo David Adewale, known as Daveads on the internet. I write [things](https://en.wikipedia.org/wiki/Computer_program) that get executed on a [processor](https://en.wikipedia.org/wiki/Central_processing_unit) and leverage the [GPU](https://en.wikipedia.org/wiki/Graphics_processing_unit).
 
+
+
+```
+ ____                            _     
+|  _ \  __ ___   _____  __ _  __| |___ 
+| | | |/ _` \ \ / / _ \/ _` |/ _` / __|
+| |_| | (_| |\ V /  __/ (_| | (_| \__ \
+|____/ \__,_| \_/ \___|\__,_|\__,_|___/  abyss... 
+                                       
+```
+
 <br>
 
-<div id="container">
-        <div id="identity">
-            <h2>Current Identities</h2>
-            <ul>
-                <li>Independent Researcher</li>
-                <li>Software Engineer</li>
-                <li>Pianist <span>(jazz enthusiast)</span></li>
-                <li>Chess Player</li>
-                <li>Curiosity Voyager</li>
-            </ul>
-        </div>
-    </div>
+```rust 
+/** Daveads Identities **/
+fn print_header(header: &str) {
+    println!("\x1b[1;34m{}\x1b[0m", header);
+}
+
+fn print_identities(identities: &[&str]) {
+    for identity in identities {
+        println!("* {}", identity);
+    }
+}
+
+fn main() {
+    let identities = [
+        "Independent Researcher 🔍",
+        "Software Engineer 💻",
+        "Pianist (jazz enthusiast) 🎹",
+        "Chess Player ♟️",
+        "Curiosity Voyager 🌌"
+    ];
+
+    print_header(" { Current :: Identities } ");
+    print_identities(&identities);
+}
+```
 
 <br>
 
