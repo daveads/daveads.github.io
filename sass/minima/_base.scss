@@ -17,7 +17,7 @@ body {
   //color: $text-color;
   color: #dddee1;
   //background-color: $background-color;
-  background-color: black;
+  background-color: #080808;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -155,10 +155,18 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
+  border: 2px solid $grey-color-light;
   border-radius: 3px;
   //background-color: #eef;
   color: #13b7ea;
+
+  @include media-query($on-palm) {
+    @include relative-font-size(0.6);
+    border: 2px solid $grey-color-light;
+    border-radius: 3px;
+    color: #13b7ea;
+  }
+
 }
 
 code {

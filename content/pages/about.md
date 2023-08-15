@@ -7,13 +7,12 @@ path = "about"
 **NAME:** Adejumo David Adewale, known as Daveads on the internet. I write [things](https://en.wikipedia.org/wiki/Computer_program) that get executed on a [processor](https://en.wikipedia.org/wiki/Central_processing_unit) and leverage the [GPU](https://en.wikipedia.org/wiki/Graphics_processing_unit).
 
 
-
 ```
-                    ____                            _     
-                    |  _ \  __ ___   _____  __ _  __| |___ 
-                    | | | |/ _` \ \ / / _ \/ _` |/ _` / __|
-                    | |_| | (_| |\ V /  __/ (_| | (_| \__ \
-                    |____/ \__,_| \_/ \___|\__,_|\__,_|___/.
+        ____                            _     
+        |  _ \  __ ___   _____  __ _  __| |___ 
+        | | | |/ _` \ \ / / _ \/ _` |/ _` / __|
+        | |_| | (_| |\ V /  __/ (_| | (_| \__ \
+        |____/ \__,_| \_/ \___|\__,_|\__,_|___/.
                                                             
 ```
 

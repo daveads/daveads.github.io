@@ -19,7 +19,7 @@ a:link {
 
 .category {
     display: inline-block;
-    width: 70px;
+    width: auto;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 10px;
