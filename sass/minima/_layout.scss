@@ -221,7 +221,7 @@
   margin : 18px;
 
   @include media-query($on-palm) {
-    @include relative-font-size(1);
+    @include relative-font-size(1.01);
     margin : 18px;
     padding: 0px;
   }

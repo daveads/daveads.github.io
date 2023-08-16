@@ -1,6 +1,31 @@
 {% extends "base.html" %}
 {% import "macros/pagetitle-macro.html" as pageT %}
 
+
+{% block meta_content %}
+<meta property="og:title" content="{{page.title}}">
+<meta property="og:type" content="notes">
+<meta property="og:url" content="https://daveads.github.io{{ page.path }}">
+{% endblock meta_content %}
+
+
+{% block canonical %}
+	<link rel="canonical" href="https://daveads.github.io{{ page.path }}">
+{% endblock canonical %}
+
+
+{% block keywords %}
+		{% if page.taxonomies.notet %}
+			<meta name="keywords" content="{{ page.taxonomies.notet }}">
+		{% endif %}
+{% endblock keywords %}
+
+
+{% block desc %}
+<meta name="description" content="{{ page.summary }}">
+{% endblock desc %}
+
+
 <!-- keep empty -->
 {% block header %}
 {% endblock %}

@@ -1,5 +1,31 @@
 {% extends "base.html" %}
 
+
+{% block meta_content %}
+<meta property="og:title" content="{{page.title}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://daveads.github.io{{ page.path }}">
+{% endblock meta_content %}
+
+
+{% block canonical %}
+	<link rel="canonical" href="https://daveads.github.io{{ page.path }}">
+{% endblock canonical %}
+
+
+<!--  keyword & desc needs rewrite ig -->
+{% block keywords %}
+		{% if page.taxonomies.tags %}
+			<meta name="keywords" content="{{ page.taxonomies.tags }}">
+		{% endif %}
+{% endblock keywords %}
+
+
+{% block desc %}
+<meta name="description" content="{{ page.summary }}">
+{% endblock desc %}
+
+
 <!-- keep empty -->
 {% block header %}
 {% endblock %}

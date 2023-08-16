@@ -6,7 +6,7 @@ categories = ["Language"]
 tags = ["resources", "compiler", "operating-system", "assembly", "emulator"]
 +++
 
-Resources to getting started with writing Programming languages, Emulators, Assembly and Operating system.
+Resources to getting started with writing Programming languages, Emulators, Assembly and Operating system. <!-- more -->
 PL orginal post by [Max Bernstein]( https://bernsteinbear.com/pl-resources/)
 
 Compilers

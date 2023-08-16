@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://daveads.github.io"
 title = "Daveads"
-description = ""
+description = "Dive into the abyss of Daveads!"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -41,6 +41,8 @@ author = "Adejumo David Adewale" # Put Your Name here
 search = "Search"
 
 google_analytics = 'G-087FCJRFH2'
+
+content = "Daveads personal abyss"
 
 # SEO
 seo = true

@@ -7,12 +7,25 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#04070f">
+<meta name="theme-color" content="#080808">
+<meta name="author" content="Daveads">
+
+
+{% block meta_content %}
+<meta property="og:title" content="Daveads">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://daveads.github.io/">
+{% endblock meta_content %}
+
+
 {% block desc %}
-<meta name="description" content="Daveads personal website.">
+<meta name="description" content="{{config.description}}">
 {% endblock desc %}
 
 <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+
+<link rel="alternate" type="application/rss+xml" title="daveads" href="https://daveads.github.io/atom.xml">
+<link rel="canonical" href="https://daveads.github.io">
 
 <!-- Sass-file: minima.css -->
 <link rel="stylesheet" href="/minima.css">

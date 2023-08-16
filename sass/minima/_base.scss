@@ -161,7 +161,7 @@ code {
   color: #13b7ea;
 
   @include media-query($on-palm) {
-    @include relative-font-size(0.6);
+    @include relative-font-size(0.63);
     border: 2px solid $grey-color-light;
     border-radius: 3px;
     color: #13b7ea;
