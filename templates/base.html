@@ -3,12 +3,9 @@
 
 <head>
 
-<!-- meta data -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#080808">
-<meta name="author" content="Daveads">
+	{% block meta_data %}
+		{% include "include/meta-data.html" %}
+	{% endblock %}
 
 {% block meta_content %}
 <meta property="og:title" content="Daveads">
