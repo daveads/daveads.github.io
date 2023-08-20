@@ -1,5 +1,22 @@
 {% extends "base.html" %}
 
+{% block meta_content %}
+<meta property="og:title" content="daveads note">
+<meta property="og:type" content="note">
+<meta property="og:url" content="https://daveads.github.io/note">
+{% endblock meta_content %}
+
+{% block keywords %}
+<meta name="keywords" content="notes">
+{% endblock keywords %}
+
+
+{% block canonical %}
+	<link rel="canonical" href="https://daveads.github.io/note">
+{% endblock canonical %}
+
+
+
 {% block header %}
 {% endblock %}
 

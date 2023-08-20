@@ -9,13 +9,11 @@
     <!-- content block -->
     {% block content %}
 
-    <header class="post-header">
-   
-	</header>
 
-    <p class="tag">{{ page.date }}</p>
-    {{ page.content | safe }}
-        
+        <p class="tag">{{ page.date }}</p>
+        {{ page.content | safe }}
+    
+
 	{% endblock %}
 	
 </article>

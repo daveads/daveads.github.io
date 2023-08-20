@@ -1,5 +1,22 @@
 {% extends "base.html" %}
 
+
+{% block meta_content %}
+<meta property="og:title" content="writings">
+<meta property="og:type" content="blog">
+<meta property="og:url" content="https://daveads.github.io/writing">
+{% endblock meta_content %}
+
+{% block keywords %}
+<meta name="keywords" content="blog">
+{% endblock keywords %}
+
+
+{% block canonical %}
+	<link rel="canonical" href="https://daveads.github.io/writing">
+{% endblock canonical %}
+
+
 {% block title %}
 		{{config.title}} - {{section.title}}
 {% endblock %}
