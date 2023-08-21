@@ -1,10 +1,11 @@
 +++
 title = 'Revolutionary new drug stressless'
 date = 2023-08-06
-[taxonomises]
-categories = ["meme", "Startup"]
-tags = ["research"]
+[taxonomies]
+categories = ["Self"]
+tags = ["research", "meme"]
 +++
+
 
 
 ### **Introducing `STRESSLESS` :: The Revolutionary Stress-Relief Solution**
