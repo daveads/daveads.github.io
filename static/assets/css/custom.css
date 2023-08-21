@@ -139,3 +139,19 @@ li.Scontain {
       justify-content: center;
       align-items: center;
 }
+
+
+/* tags categories and links */
+.tag-link{
+    background-color: #80b7d926;
+    border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: .6rem .5rem;
+    padding-top: 0.2rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+}

@@ -66,19 +66,20 @@
 			Categories :
 			{% for noteC in page.taxonomies.notec %}
 			<small >
-			<a href="{{ get_taxonomy_url(kind='notec', name=noteC) | safe }}">#{{ noteC }}</a>
+			<a class="tag-link" href="{{ get_taxonomy_url(kind='notec', name=noteC) | safe }}">#{{ noteC }}</a>
 			</small>
+			<br>
+			<br>
 			{% endfor %}
 			{% endif %}
 		
-			<br>
-			
+
 			{% if page.taxonomies.notet %}
 	
 			Tags :
 			{% for noteT in page.taxonomies.notet %}
 			<small>
-			<a href="{{ get_taxonomy_url(kind='notet', name=noteT) | safe }}">#{{ noteT }}</a>
+			<a class="tag-link" href="{{ get_taxonomy_url(kind='notet', name=noteT) | safe }}">#{{ noteT }}</a>
 			</small>
 			{% endfor %}
 			{% endif %}

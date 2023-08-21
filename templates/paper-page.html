@@ -62,7 +62,7 @@
 		Tags :
 		{% for tags in page.taxonomies.tags %}
 		<small>
-		<a href="{{ get_taxonomy_url(kind='tags', name=tags) | safe }}">#{{ tags }}</a>
+		<a class="tag-link" href="{{ get_taxonomy_url(kind='tags', name=tags) | safe }}">#{{ tags }}</a>
 		</small>
 		{% endfor %}
 		{% endif %}
