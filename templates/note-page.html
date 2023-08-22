@@ -61,6 +61,7 @@
 		<div>
 			{% include "include/back.html" %}
 
+			<!--
 			{% if page.taxonomies.notec %}
 		
 			Categories :
@@ -72,7 +73,7 @@
 			<br>
 			{% endfor %}
 			{% endif %}
-		
+			-->
 
 			{% if page.taxonomies.notet %}
 	
@@ -86,8 +87,7 @@
 		</div>
 
 </header>
-
-		<br>	
+	
 		<div class="post-content e-content" itemprop="articleBody">
 		{{ page.content | safe }}
 		</div>
