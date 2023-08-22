@@ -1,6 +1,7 @@
 +++
 title = 'Lost someone close recently'
 date = 2020-11-06
+[taxonomies]
 categories = ["Self"]
 tags = ["self"]
 +++

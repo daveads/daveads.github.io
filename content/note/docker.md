@@ -13,7 +13,7 @@ notec = ["Learned"]
 ### **To run docker images**
 ---
 
-```docker
+```md
 docker run <image>
 ```
 

@@ -1,7 +1,7 @@
 +++
 title = 'Computer science research papers'
 date = 2020-01-29
-[taxonomises]
+[taxonomies]
 categories = ["CS"]
 tags = ["research"]
 +++
