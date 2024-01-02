@@ -1,6 +1,7 @@
 +++
 title = "wifi connection"
 date = 2022-06-11
+updated = 2024-01-02
 [taxonomies]
 notec = ["Learned"]
 notet = ["i3"]
@@ -19,6 +20,11 @@ nmcli device wifi list
 **Connect to a network using its UUID (replace `UUID` with the actual UUID)**
 ```sh
 nmcli c up uuid e0bda955-475c-4625-b19b-4a1f2339d9db --ask
+```
+
+**New devices**
+```sh
+nmcli device wifi connect <name ssid> --ask 
 ```
 
 **Enable Wi-Fi (if disabled)**
