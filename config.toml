@@ -56,7 +56,7 @@ menu = [
 ]
 
 subs = [
-		{url = "/notec", name = "Notes", slash = true},
+		{url = "/note", name = "Notes", slash = true},
 		{url = "/tags", name = "Tags", slash = true},
 		{url = "/categories", name = "Categories", slash = true},
 ]
