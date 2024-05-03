@@ -1,6 +1,7 @@
 +++
 title = "Docker key words"
 date = 2022-06-11
+updated = 2023-09-15
 
 [taxonomies]
 notec = ["Learned"]
@@ -83,6 +84,28 @@ search for images with
 <docker search>
 ```
 
+
+#### **Delete images**
+```
+docker rmi <image_id>
+
+// forcefully remove an image
+
+docker rmi -f <image_id>
+
+```
+
+### Interactive shell session
+```
+docker run -it ubuntu bash // exit
+
+
+// Keep running when exited 
+
+- docker run -itd ubuntu bash
+- docker attach CONTAINER_ID
+
+```
 ### Creating a docker image
 ---
 
