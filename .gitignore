@@ -7,3 +7,4 @@ static/processed_images
 note.txt
 static/node_modules/
 static/package-lock.json
+config.dev.toml

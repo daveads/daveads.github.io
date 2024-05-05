@@ -31,18 +31,21 @@
 
 <b> {{ section.title }} </b></p>
 
+{% block categories_tags %}
 <div>
    <ul style="text-align:center;">
 		<b style="font-size: 22px;"></b> <a href="/notec"><b>CATEGORIES</b></a> 
-		<b style="">||</b>
+		<b>||</b>
 		<a href="/notet"><b>TAGS</b></a>
    </ul>
  </div>
+{% endblock %}
 
 {% include "include/back.html" %}
 <br>
 
 
+{% block page_info %}
 
 <p> I needed a reliable way to organize and access my various readings, notes, thoughts e.t.c and view them when needed.</p><span id="dots"></span><div id="more">
 <p>While I do take physical notes, they often end up scattered and hard to manage. This page serves as a repository for my unfinished notes, covering books, videos, and articles I've read or plan to read soon.</p>
@@ -58,6 +61,8 @@
 </div>
 
 <button onclick="myFunction()" id="myBtn">Read more</button>
+
+
 
 
 
@@ -78,6 +83,9 @@
   }
 } 
 </script>
+
+{% endblock %}
+
 
 <div id="post">
   <ul class="post-list">

@@ -9,4 +9,12 @@ zola serve
 
 ```
 
+## Development Mode 
+
+```
+cp config.toml config.dev.toml 
+
+zola --config config.dev.toml serve
+```
+
 

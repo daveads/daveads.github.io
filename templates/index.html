@@ -34,13 +34,26 @@
 		<h2 style="margin: 0;">Recent articles</h2>
 		<ul>
 				 {% for post in writing.pages | slice(end=5) %}
-				 <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+				 <li style="font-size: 21px;"><a href="{{ post.permalink }}">{{ post.title }}</a></li>
 				 {% endfor %}
 		 </ul>
 		 {% endif %}
 		 </main>
 		{% endif %}
 		<br>
-		
+
+
+<!-- Tutorial -->
+<!--
+{% set golang = get_section(path="tutorial/go/_index.md") %}
+<h2 style="margin: 0;">Recent Tutorial</h2>
+<ul>
+	<b>Go language</b>
+	{% for post in golang.pages | slice(end=3) %}
+	<li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
+-->
+
 {% endblock content %}
 
