@@ -1,5 +1,3 @@
-<!-- Global site tag (gtag.js) - Google Analytics -->
-
 {% if config.extra.google_analytics %}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.google_analytics }}"></script>
 <script>
@@ -8,7 +6,8 @@
   gtag('js', new Date());
 
   gtag('config', '{{ config.extra.google_analytics }}', {
-    'cookie_flags': 'SameSite=Strict;Secure'
+    'cookie_flags': 'SameSite=Strict;Secure',
+    'cookie_domain': 'https://daveads.github.io/'
   });
 </script>
 {% endif %}
