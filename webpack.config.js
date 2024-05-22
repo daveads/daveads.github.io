@@ -41,5 +41,5 @@ export default {
   plugins: [
     new Dotenv(),
   ],
-  //devtool: 'source-map', // Use source-map for better debugging support
+  devtool: 'source-map', // Use source-map for better debugging support
 };

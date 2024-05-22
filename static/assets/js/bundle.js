@@ -1,11 +1,3 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -16,7 +8,2189 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   CONSTANTS: () => (/* binding */ CONSTANTS),\n/* harmony export */   DecodeBase64StringError: () => (/* binding */ DecodeBase64StringError),\n/* harmony export */   Deferred: () => (/* binding */ Deferred),\n/* harmony export */   ErrorFactory: () => (/* binding */ ErrorFactory),\n/* harmony export */   FirebaseError: () => (/* binding */ FirebaseError),\n/* harmony export */   MAX_VALUE_MILLIS: () => (/* binding */ MAX_VALUE_MILLIS),\n/* harmony export */   RANDOM_FACTOR: () => (/* binding */ RANDOM_FACTOR),\n/* harmony export */   Sha1: () => (/* binding */ Sha1),\n/* harmony export */   areCookiesEnabled: () => (/* binding */ areCookiesEnabled),\n/* harmony export */   assert: () => (/* binding */ assert),\n/* harmony export */   assertionError: () => (/* binding */ assertionError),\n/* harmony export */   async: () => (/* binding */ async),\n/* harmony export */   base64: () => (/* binding */ base64),\n/* harmony export */   base64Decode: () => (/* binding */ base64Decode),\n/* harmony export */   base64Encode: () => (/* binding */ base64Encode),\n/* harmony export */   base64urlEncodeWithoutPadding: () => (/* binding */ base64urlEncodeWithoutPadding),\n/* harmony export */   calculateBackoffMillis: () => (/* binding */ calculateBackoffMillis),\n/* harmony export */   contains: () => (/* binding */ contains),\n/* harmony export */   createMockUserToken: () => (/* binding */ createMockUserToken),\n/* harmony export */   createSubscribe: () => (/* binding */ createSubscribe),\n/* harmony export */   decode: () => (/* binding */ decode),\n/* harmony export */   deepCopy: () => (/* binding */ deepCopy),\n/* harmony export */   deepEqual: () => (/* binding */ deepEqual),\n/* harmony export */   deepExtend: () => (/* binding */ deepExtend),\n/* harmony export */   errorPrefix: () => (/* binding */ errorPrefix),\n/* harmony export */   extractQuerystring: () => (/* binding */ extractQuerystring),\n/* harmony export */   getDefaultAppConfig: () => (/* binding */ getDefaultAppConfig),\n/* harmony export */   getDefaultEmulatorHost: () => (/* binding */ getDefaultEmulatorHost),\n/* harmony export */   getDefaultEmulatorHostnameAndPort: () => (/* binding */ getDefaultEmulatorHostnameAndPort),\n/* harmony export */   getDefaults: () => (/* binding */ getDefaults),\n/* harmony export */   getExperimentalSetting: () => (/* binding */ getExperimentalSetting),\n/* harmony export */   getGlobal: () => (/* binding */ getGlobal),\n/* harmony export */   getModularInstance: () => (/* binding */ getModularInstance),\n/* harmony export */   getUA: () => (/* binding */ getUA),\n/* harmony export */   isAdmin: () => (/* binding */ isAdmin),\n/* harmony export */   isBrowser: () => (/* binding */ isBrowser),\n/* harmony export */   isBrowserExtension: () => (/* binding */ isBrowserExtension),\n/* harmony export */   isElectron: () => (/* binding */ isElectron),\n/* harmony export */   isEmpty: () => (/* binding */ isEmpty),\n/* harmony export */   isIE: () => (/* binding */ isIE),\n/* harmony export */   isIndexedDBAvailable: () => (/* binding */ isIndexedDBAvailable),\n/* harmony export */   isMobileCordova: () => (/* binding */ isMobileCordova),\n/* harmony export */   isNode: () => (/* binding */ isNode),\n/* harmony export */   isNodeSdk: () => (/* binding */ isNodeSdk),\n/* harmony export */   isReactNative: () => (/* binding */ isReactNative),\n/* harmony export */   isSafari: () => (/* binding */ isSafari),\n/* harmony export */   isUWP: () => (/* binding */ isUWP),\n/* harmony export */   isValidFormat: () => (/* binding */ isValidFormat),\n/* harmony export */   isValidTimestamp: () => (/* binding */ isValidTimestamp),\n/* harmony export */   issuedAtTime: () => (/* binding */ issuedAtTime),\n/* harmony export */   jsonEval: () => (/* binding */ jsonEval),\n/* harmony export */   map: () => (/* binding */ map),\n/* harmony export */   ordinal: () => (/* binding */ ordinal),\n/* harmony export */   promiseWithTimeout: () => (/* binding */ promiseWithTimeout),\n/* harmony export */   querystring: () => (/* binding */ querystring),\n/* harmony export */   querystringDecode: () => (/* binding */ querystringDecode),\n/* harmony export */   safeGet: () => (/* binding */ safeGet),\n/* harmony export */   stringLength: () => (/* binding */ stringLength),\n/* harmony export */   stringToByteArray: () => (/* binding */ stringToByteArray),\n/* harmony export */   stringify: () => (/* binding */ stringify),\n/* harmony export */   uuidv4: () => (/* binding */ uuidv4),\n/* harmony export */   validateArgCount: () => (/* binding */ validateArgCount),\n/* harmony export */   validateCallback: () => (/* binding */ validateCallback),\n/* harmony export */   validateContextObject: () => (/* binding */ validateContextObject),\n/* harmony export */   validateIndexedDBOpenable: () => (/* binding */ validateIndexedDBOpenable),\n/* harmony export */   validateNamespace: () => (/* binding */ validateNamespace)\n/* harmony export */ });\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * @fileoverview Firebase constants.  Some of these (@defines) can be overridden at compile-time.\r\n */\r\nconst CONSTANTS = {\r\n    /**\r\n     * @define {boolean} Whether this is the client Node.js SDK.\r\n     */\r\n    NODE_CLIENT: false,\r\n    /**\r\n     * @define {boolean} Whether this is the Admin Node.js SDK.\r\n     */\r\n    NODE_ADMIN: false,\r\n    /**\r\n     * Firebase SDK Version\r\n     */\r\n    SDK_VERSION: '${JSCORE_VERSION}'\r\n};\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Throws an error if the provided assertion is falsy\r\n */\r\nconst assert = function (assertion, message) {\r\n    if (!assertion) {\r\n        throw assertionError(message);\r\n    }\r\n};\r\n/**\r\n * Returns an Error object suitable for throwing.\r\n */\r\nconst assertionError = function (message) {\r\n    return new Error('Firebase Database (' +\r\n        CONSTANTS.SDK_VERSION +\r\n        ') INTERNAL ASSERT FAILED: ' +\r\n        message);\r\n};\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst stringToByteArray$1 = function (str) {\r\n    // TODO(user): Use native implementations if/when available\r\n    const out = [];\r\n    let p = 0;\r\n    for (let i = 0; i < str.length; i++) {\r\n        let c = str.charCodeAt(i);\r\n        if (c < 128) {\r\n            out[p++] = c;\r\n        }\r\n        else if (c < 2048) {\r\n            out[p++] = (c >> 6) | 192;\r\n            out[p++] = (c & 63) | 128;\r\n        }\r\n        else if ((c & 0xfc00) === 0xd800 &&\r\n            i + 1 < str.length &&\r\n            (str.charCodeAt(i + 1) & 0xfc00) === 0xdc00) {\r\n            // Surrogate Pair\r\n            c = 0x10000 + ((c & 0x03ff) << 10) + (str.charCodeAt(++i) & 0x03ff);\r\n            out[p++] = (c >> 18) | 240;\r\n            out[p++] = ((c >> 12) & 63) | 128;\r\n            out[p++] = ((c >> 6) & 63) | 128;\r\n            out[p++] = (c & 63) | 128;\r\n        }\r\n        else {\r\n            out[p++] = (c >> 12) | 224;\r\n            out[p++] = ((c >> 6) & 63) | 128;\r\n            out[p++] = (c & 63) | 128;\r\n        }\r\n    }\r\n    return out;\r\n};\r\n/**\r\n * Turns an array of numbers into the string given by the concatenation of the\r\n * characters to which the numbers correspond.\r\n * @param bytes Array of numbers representing characters.\r\n * @return Stringification of the array.\r\n */\r\nconst byteArrayToString = function (bytes) {\r\n    // TODO(user): Use native implementations if/when available\r\n    const out = [];\r\n    let pos = 0, c = 0;\r\n    while (pos < bytes.length) {\r\n        const c1 = bytes[pos++];\r\n        if (c1 < 128) {\r\n            out[c++] = String.fromCharCode(c1);\r\n        }\r\n        else if (c1 > 191 && c1 < 224) {\r\n            const c2 = bytes[pos++];\r\n            out[c++] = String.fromCharCode(((c1 & 31) << 6) | (c2 & 63));\r\n        }\r\n        else if (c1 > 239 && c1 < 365) {\r\n            // Surrogate Pair\r\n            const c2 = bytes[pos++];\r\n            const c3 = bytes[pos++];\r\n            const c4 = bytes[pos++];\r\n            const u = (((c1 & 7) << 18) | ((c2 & 63) << 12) | ((c3 & 63) << 6) | (c4 & 63)) -\r\n                0x10000;\r\n            out[c++] = String.fromCharCode(0xd800 + (u >> 10));\r\n            out[c++] = String.fromCharCode(0xdc00 + (u & 1023));\r\n        }\r\n        else {\r\n            const c2 = bytes[pos++];\r\n            const c3 = bytes[pos++];\r\n            out[c++] = String.fromCharCode(((c1 & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));\r\n        }\r\n    }\r\n    return out.join('');\r\n};\r\n// We define it as an object literal instead of a class because a class compiled down to es5 can't\r\n// be treeshaked. https://github.com/rollup/rollup/issues/1691\r\n// Static lookup maps, lazily populated by init_()\r\nconst base64 = {\r\n    /**\r\n     * Maps bytes to characters.\r\n     */\r\n    byteToCharMap_: null,\r\n    /**\r\n     * Maps characters to bytes.\r\n     */\r\n    charToByteMap_: null,\r\n    /**\r\n     * Maps bytes to websafe characters.\r\n     * @private\r\n     */\r\n    byteToCharMapWebSafe_: null,\r\n    /**\r\n     * Maps websafe characters to bytes.\r\n     * @private\r\n     */\r\n    charToByteMapWebSafe_: null,\r\n    /**\r\n     * Our default alphabet, shared between\r\n     * ENCODED_VALS and ENCODED_VALS_WEBSAFE\r\n     */\r\n    ENCODED_VALS_BASE: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + 'abcdefghijklmnopqrstuvwxyz' + '0123456789',\r\n    /**\r\n     * Our default alphabet. Value 64 (=) is special; it means \"nothing.\"\r\n     */\r\n    get ENCODED_VALS() {\r\n        return this.ENCODED_VALS_BASE + '+/=';\r\n    },\r\n    /**\r\n     * Our websafe alphabet.\r\n     */\r\n    get ENCODED_VALS_WEBSAFE() {\r\n        return this.ENCODED_VALS_BASE + '-_.';\r\n    },\r\n    /**\r\n     * Whether this browser supports the atob and btoa functions. This extension\r\n     * started at Mozilla but is now implemented by many browsers. We use the\r\n     * ASSUME_* variables to avoid pulling in the full useragent detection library\r\n     * but still allowing the standard per-browser compilations.\r\n     *\r\n     */\r\n    HAS_NATIVE_SUPPORT: typeof atob === 'function',\r\n    /**\r\n     * Base64-encode an array of bytes.\r\n     *\r\n     * @param input An array of bytes (numbers with\r\n     *     value in [0, 255]) to encode.\r\n     * @param webSafe Boolean indicating we should use the\r\n     *     alternative alphabet.\r\n     * @return The base64 encoded string.\r\n     */\r\n    encodeByteArray(input, webSafe) {\r\n        if (!Array.isArray(input)) {\r\n            throw Error('encodeByteArray takes an array as a parameter');\r\n        }\r\n        this.init_();\r\n        const byteToCharMap = webSafe\r\n            ? this.byteToCharMapWebSafe_\r\n            : this.byteToCharMap_;\r\n        const output = [];\r\n        for (let i = 0; i < input.length; i += 3) {\r\n            const byte1 = input[i];\r\n            const haveByte2 = i + 1 < input.length;\r\n            const byte2 = haveByte2 ? input[i + 1] : 0;\r\n            const haveByte3 = i + 2 < input.length;\r\n            const byte3 = haveByte3 ? input[i + 2] : 0;\r\n            const outByte1 = byte1 >> 2;\r\n            const outByte2 = ((byte1 & 0x03) << 4) | (byte2 >> 4);\r\n            let outByte3 = ((byte2 & 0x0f) << 2) | (byte3 >> 6);\r\n            let outByte4 = byte3 & 0x3f;\r\n            if (!haveByte3) {\r\n                outByte4 = 64;\r\n                if (!haveByte2) {\r\n                    outByte3 = 64;\r\n                }\r\n            }\r\n            output.push(byteToCharMap[outByte1], byteToCharMap[outByte2], byteToCharMap[outByte3], byteToCharMap[outByte4]);\r\n        }\r\n        return output.join('');\r\n    },\r\n    /**\r\n     * Base64-encode a string.\r\n     *\r\n     * @param input A string to encode.\r\n     * @param webSafe If true, we should use the\r\n     *     alternative alphabet.\r\n     * @return The base64 encoded string.\r\n     */\r\n    encodeString(input, webSafe) {\r\n        // Shortcut for Mozilla browsers that implement\r\n        // a native base64 encoder in the form of \"btoa/atob\"\r\n        if (this.HAS_NATIVE_SUPPORT && !webSafe) {\r\n            return btoa(input);\r\n        }\r\n        return this.encodeByteArray(stringToByteArray$1(input), webSafe);\r\n    },\r\n    /**\r\n     * Base64-decode a string.\r\n     *\r\n     * @param input to decode.\r\n     * @param webSafe True if we should use the\r\n     *     alternative alphabet.\r\n     * @return string representing the decoded value.\r\n     */\r\n    decodeString(input, webSafe) {\r\n        // Shortcut for Mozilla browsers that implement\r\n        // a native base64 encoder in the form of \"btoa/atob\"\r\n        if (this.HAS_NATIVE_SUPPORT && !webSafe) {\r\n            return atob(input);\r\n        }\r\n        return byteArrayToString(this.decodeStringToByteArray(input, webSafe));\r\n    },\r\n    /**\r\n     * Base64-decode a string.\r\n     *\r\n     * In base-64 decoding, groups of four characters are converted into three\r\n     * bytes.  If the encoder did not apply padding, the input length may not\r\n     * be a multiple of 4.\r\n     *\r\n     * In this case, the last group will have fewer than 4 characters, and\r\n     * padding will be inferred.  If the group has one or two characters, it decodes\r\n     * to one byte.  If the group has three characters, it decodes to two bytes.\r\n     *\r\n     * @param input Input to decode.\r\n     * @param webSafe True if we should use the web-safe alphabet.\r\n     * @return bytes representing the decoded value.\r\n     */\r\n    decodeStringToByteArray(input, webSafe) {\r\n        this.init_();\r\n        const charToByteMap = webSafe\r\n            ? this.charToByteMapWebSafe_\r\n            : this.charToByteMap_;\r\n        const output = [];\r\n        for (let i = 0; i < input.length;) {\r\n            const byte1 = charToByteMap[input.charAt(i++)];\r\n            const haveByte2 = i < input.length;\r\n            const byte2 = haveByte2 ? charToByteMap[input.charAt(i)] : 0;\r\n            ++i;\r\n            const haveByte3 = i < input.length;\r\n            const byte3 = haveByte3 ? charToByteMap[input.charAt(i)] : 64;\r\n            ++i;\r\n            const haveByte4 = i < input.length;\r\n            const byte4 = haveByte4 ? charToByteMap[input.charAt(i)] : 64;\r\n            ++i;\r\n            if (byte1 == null || byte2 == null || byte3 == null || byte4 == null) {\r\n                throw new DecodeBase64StringError();\r\n            }\r\n            const outByte1 = (byte1 << 2) | (byte2 >> 4);\r\n            output.push(outByte1);\r\n            if (byte3 !== 64) {\r\n                const outByte2 = ((byte2 << 4) & 0xf0) | (byte3 >> 2);\r\n                output.push(outByte2);\r\n                if (byte4 !== 64) {\r\n                    const outByte3 = ((byte3 << 6) & 0xc0) | byte4;\r\n                    output.push(outByte3);\r\n                }\r\n            }\r\n        }\r\n        return output;\r\n    },\r\n    /**\r\n     * Lazy static initialization function. Called before\r\n     * accessing any of the static map variables.\r\n     * @private\r\n     */\r\n    init_() {\r\n        if (!this.byteToCharMap_) {\r\n            this.byteToCharMap_ = {};\r\n            this.charToByteMap_ = {};\r\n            this.byteToCharMapWebSafe_ = {};\r\n            this.charToByteMapWebSafe_ = {};\r\n            // We want quick mappings back and forth, so we precompute two maps.\r\n            for (let i = 0; i < this.ENCODED_VALS.length; i++) {\r\n                this.byteToCharMap_[i] = this.ENCODED_VALS.charAt(i);\r\n                this.charToByteMap_[this.byteToCharMap_[i]] = i;\r\n                this.byteToCharMapWebSafe_[i] = this.ENCODED_VALS_WEBSAFE.charAt(i);\r\n                this.charToByteMapWebSafe_[this.byteToCharMapWebSafe_[i]] = i;\r\n                // Be forgiving when decoding and correctly decode both encodings.\r\n                if (i >= this.ENCODED_VALS_BASE.length) {\r\n                    this.charToByteMap_[this.ENCODED_VALS_WEBSAFE.charAt(i)] = i;\r\n                    this.charToByteMapWebSafe_[this.ENCODED_VALS.charAt(i)] = i;\r\n                }\r\n            }\r\n        }\r\n    }\r\n};\r\n/**\r\n * An error encountered while decoding base64 string.\r\n */\r\nclass DecodeBase64StringError extends Error {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.name = 'DecodeBase64StringError';\r\n    }\r\n}\r\n/**\r\n * URL-safe base64 encoding\r\n */\r\nconst base64Encode = function (str) {\r\n    const utf8Bytes = stringToByteArray$1(str);\r\n    return base64.encodeByteArray(utf8Bytes, true);\r\n};\r\n/**\r\n * URL-safe base64 encoding (without \".\" padding in the end).\r\n * e.g. Used in JSON Web Token (JWT) parts.\r\n */\r\nconst base64urlEncodeWithoutPadding = function (str) {\r\n    // Use base64url encoding and remove padding in the end (dot characters).\r\n    return base64Encode(str).replace(/\\./g, '');\r\n};\r\n/**\r\n * URL-safe base64 decoding\r\n *\r\n * NOTE: DO NOT use the global atob() function - it does NOT support the\r\n * base64Url variant encoding.\r\n *\r\n * @param str To be decoded\r\n * @return Decoded result, if possible\r\n */\r\nconst base64Decode = function (str) {\r\n    try {\r\n        return base64.decodeString(str, true);\r\n    }\r\n    catch (e) {\r\n        console.error('base64Decode failed: ', e);\r\n    }\r\n    return null;\r\n};\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Do a deep-copy of basic JavaScript Objects or Arrays.\r\n */\r\nfunction deepCopy(value) {\r\n    return deepExtend(undefined, value);\r\n}\r\n/**\r\n * Copy properties from source to target (recursively allows extension\r\n * of Objects and Arrays).  Scalar values in the target are over-written.\r\n * If target is undefined, an object of the appropriate type will be created\r\n * (and returned).\r\n *\r\n * We recursively copy all child properties of plain Objects in the source- so\r\n * that namespace- like dictionaries are merged.\r\n *\r\n * Note that the target can be a function, in which case the properties in\r\n * the source Object are copied onto it as static properties of the Function.\r\n *\r\n * Note: we don't merge __proto__ to prevent prototype pollution\r\n */\r\nfunction deepExtend(target, source) {\r\n    if (!(source instanceof Object)) {\r\n        return source;\r\n    }\r\n    switch (source.constructor) {\r\n        case Date:\r\n            // Treat Dates like scalars; if the target date object had any child\r\n            // properties - they will be lost!\r\n            const dateValue = source;\r\n            return new Date(dateValue.getTime());\r\n        case Object:\r\n            if (target === undefined) {\r\n                target = {};\r\n            }\r\n            break;\r\n        case Array:\r\n            // Always copy the array source and overwrite the target.\r\n            target = [];\r\n            break;\r\n        default:\r\n            // Not a plain Object - treat it as a scalar.\r\n            return source;\r\n    }\r\n    for (const prop in source) {\r\n        // use isValidKey to guard against prototype pollution. See https://snyk.io/vuln/SNYK-JS-LODASH-450202\r\n        if (!source.hasOwnProperty(prop) || !isValidKey(prop)) {\r\n            continue;\r\n        }\r\n        target[prop] = deepExtend(target[prop], source[prop]);\r\n    }\r\n    return target;\r\n}\r\nfunction isValidKey(key) {\r\n    return key !== '__proto__';\r\n}\n\n/**\r\n * @license\r\n * Copyright 2022 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Polyfill for `globalThis` object.\r\n * @returns the `globalThis` object for the given environment.\r\n * @public\r\n */\r\nfunction getGlobal() {\r\n    if (typeof self !== 'undefined') {\r\n        return self;\r\n    }\r\n    if (typeof window !== 'undefined') {\r\n        return window;\r\n    }\r\n    if (typeof __webpack_require__.g !== 'undefined') {\r\n        return __webpack_require__.g;\r\n    }\r\n    throw new Error('Unable to locate global object.');\r\n}\n\n/**\r\n * @license\r\n * Copyright 2022 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst getDefaultsFromGlobal = () => getGlobal().__FIREBASE_DEFAULTS__;\r\n/**\r\n * Attempt to read defaults from a JSON string provided to\r\n * process(.)env(.)__FIREBASE_DEFAULTS__ or a JSON file whose path is in\r\n * process(.)env(.)__FIREBASE_DEFAULTS_PATH__\r\n * The dots are in parens because certain compilers (Vite?) cannot\r\n * handle seeing that variable in comments.\r\n * See https://github.com/firebase/firebase-js-sdk/issues/6838\r\n */\r\nconst getDefaultsFromEnvVariable = () => {\r\n    if (typeof process === 'undefined' || \"string\" === 'undefined') {\r\n        return;\r\n    }\r\n    const defaultsJsonString = \"MISSING_ENV_VAR\".__FIREBASE_DEFAULTS__;\r\n    if (defaultsJsonString) {\r\n        return JSON.parse(defaultsJsonString);\r\n    }\r\n};\r\nconst getDefaultsFromCookie = () => {\r\n    if (typeof document === 'undefined') {\r\n        return;\r\n    }\r\n    let match;\r\n    try {\r\n        match = document.cookie.match(/__FIREBASE_DEFAULTS__=([^;]+)/);\r\n    }\r\n    catch (e) {\r\n        // Some environments such as Angular Universal SSR have a\r\n        // `document` object but error on accessing `document.cookie`.\r\n        return;\r\n    }\r\n    const decoded = match && base64Decode(match[1]);\r\n    return decoded && JSON.parse(decoded);\r\n};\r\n/**\r\n * Get the __FIREBASE_DEFAULTS__ object. It checks in order:\r\n * (1) if such an object exists as a property of `globalThis`\r\n * (2) if such an object was provided on a shell environment variable\r\n * (3) if such an object exists in a cookie\r\n * @public\r\n */\r\nconst getDefaults = () => {\r\n    try {\r\n        return (getDefaultsFromGlobal() ||\r\n            getDefaultsFromEnvVariable() ||\r\n            getDefaultsFromCookie());\r\n    }\r\n    catch (e) {\r\n        /**\r\n         * Catch-all for being unable to get __FIREBASE_DEFAULTS__ due\r\n         * to any environment case we have not accounted for. Log to\r\n         * info instead of swallowing so we can find these unknown cases\r\n         * and add paths for them if needed.\r\n         */\r\n        console.info(`Unable to get __FIREBASE_DEFAULTS__ due to: ${e}`);\r\n        return;\r\n    }\r\n};\r\n/**\r\n * Returns emulator host stored in the __FIREBASE_DEFAULTS__ object\r\n * for the given product.\r\n * @returns a URL host formatted like `127.0.0.1:9999` or `[::1]:4000` if available\r\n * @public\r\n */\r\nconst getDefaultEmulatorHost = (productName) => { var _a, _b; return (_b = (_a = getDefaults()) === null || _a === void 0 ? void 0 : _a.emulatorHosts) === null || _b === void 0 ? void 0 : _b[productName]; };\r\n/**\r\n * Returns emulator hostname and port stored in the __FIREBASE_DEFAULTS__ object\r\n * for the given product.\r\n * @returns a pair of hostname and port like `[\"::1\", 4000]` if available\r\n * @public\r\n */\r\nconst getDefaultEmulatorHostnameAndPort = (productName) => {\r\n    const host = getDefaultEmulatorHost(productName);\r\n    if (!host) {\r\n        return undefined;\r\n    }\r\n    const separatorIndex = host.lastIndexOf(':'); // Finding the last since IPv6 addr also has colons.\r\n    if (separatorIndex <= 0 || separatorIndex + 1 === host.length) {\r\n        throw new Error(`Invalid host ${host} with no separate hostname and port!`);\r\n    }\r\n    // eslint-disable-next-line no-restricted-globals\r\n    const port = parseInt(host.substring(separatorIndex + 1), 10);\r\n    if (host[0] === '[') {\r\n        // Bracket-quoted `[ipv6addr]:port` => return \"ipv6addr\" (without brackets).\r\n        return [host.substring(1, separatorIndex - 1), port];\r\n    }\r\n    else {\r\n        return [host.substring(0, separatorIndex), port];\r\n    }\r\n};\r\n/**\r\n * Returns Firebase app config stored in the __FIREBASE_DEFAULTS__ object.\r\n * @public\r\n */\r\nconst getDefaultAppConfig = () => { var _a; return (_a = getDefaults()) === null || _a === void 0 ? void 0 : _a.config; };\r\n/**\r\n * Returns an experimental setting on the __FIREBASE_DEFAULTS__ object (properties\r\n * prefixed by \"_\")\r\n * @public\r\n */\r\nconst getExperimentalSetting = (name) => { var _a; return (_a = getDefaults()) === null || _a === void 0 ? void 0 : _a[`_${name}`]; };\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nclass Deferred {\r\n    constructor() {\r\n        this.reject = () => { };\r\n        this.resolve = () => { };\r\n        this.promise = new Promise((resolve, reject) => {\r\n            this.resolve = resolve;\r\n            this.reject = reject;\r\n        });\r\n    }\r\n    /**\r\n     * Our API internals are not promiseified and cannot because our callback APIs have subtle expectations around\r\n     * invoking promises inline, which Promises are forbidden to do. This method accepts an optional node-style callback\r\n     * and returns a node-style callback which will resolve or reject the Deferred's promise.\r\n     */\r\n    wrapCallback(callback) {\r\n        return (error, value) => {\r\n            if (error) {\r\n                this.reject(error);\r\n            }\r\n            else {\r\n                this.resolve(value);\r\n            }\r\n            if (typeof callback === 'function') {\r\n                // Attaching noop handler just in case developer wasn't expecting\r\n                // promises\r\n                this.promise.catch(() => { });\r\n                // Some of our callbacks don't expect a value and our own tests\r\n                // assert that the parameter length is 1\r\n                if (callback.length === 1) {\r\n                    callback(error);\r\n                }\r\n                else {\r\n                    callback(error, value);\r\n                }\r\n            }\r\n        };\r\n    }\r\n}\n\n/**\r\n * @license\r\n * Copyright 2021 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nfunction createMockUserToken(token, projectId) {\r\n    if (token.uid) {\r\n        throw new Error('The \"uid\" field is no longer supported by mockUserToken. Please use \"sub\" instead for Firebase Auth User ID.');\r\n    }\r\n    // Unsecured JWTs use \"none\" as the algorithm.\r\n    const header = {\r\n        alg: 'none',\r\n        type: 'JWT'\r\n    };\r\n    const project = projectId || 'demo-project';\r\n    const iat = token.iat || 0;\r\n    const sub = token.sub || token.user_id;\r\n    if (!sub) {\r\n        throw new Error(\"mockUserToken must contain 'sub' or 'user_id' field!\");\r\n    }\r\n    const payload = Object.assign({ \r\n        // Set all required fields to decent defaults\r\n        iss: `https://securetoken.google.com/${project}`, aud: project, iat, exp: iat + 3600, auth_time: iat, sub, user_id: sub, firebase: {\r\n            sign_in_provider: 'custom',\r\n            identities: {}\r\n        } }, token);\r\n    // Unsecured JWTs use the empty string as a signature.\r\n    const signature = '';\r\n    return [\r\n        base64urlEncodeWithoutPadding(JSON.stringify(header)),\r\n        base64urlEncodeWithoutPadding(JSON.stringify(payload)),\r\n        signature\r\n    ].join('.');\r\n}\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Returns navigator.userAgent string or '' if it's not defined.\r\n * @return user agent string\r\n */\r\nfunction getUA() {\r\n    if (typeof navigator !== 'undefined' &&\r\n        typeof navigator['userAgent'] === 'string') {\r\n        return navigator['userAgent'];\r\n    }\r\n    else {\r\n        return '';\r\n    }\r\n}\r\n/**\r\n * Detect Cordova / PhoneGap / Ionic frameworks on a mobile device.\r\n *\r\n * Deliberately does not rely on checking `file://` URLs (as this fails PhoneGap\r\n * in the Ripple emulator) nor Cordova `onDeviceReady`, which would normally\r\n * wait for a callback.\r\n */\r\nfunction isMobileCordova() {\r\n    return (typeof window !== 'undefined' &&\r\n        // @ts-ignore Setting up an broadly applicable index signature for Window\r\n        // just to deal with this case would probably be a bad idea.\r\n        !!(window['cordova'] || window['phonegap'] || window['PhoneGap']) &&\r\n        /ios|iphone|ipod|ipad|android|blackberry|iemobile/i.test(getUA()));\r\n}\r\n/**\r\n * Detect Node.js.\r\n *\r\n * @return true if Node.js environment is detected or specified.\r\n */\r\n// Node detection logic from: https://github.com/iliakan/detect-node/\r\nfunction isNode() {\r\n    var _a;\r\n    const forceEnvironment = (_a = getDefaults()) === null || _a === void 0 ? void 0 : _a.forceEnvironment;\r\n    if (forceEnvironment === 'node') {\r\n        return true;\r\n    }\r\n    else if (forceEnvironment === 'browser') {\r\n        return false;\r\n    }\r\n    try {\r\n        return (Object.prototype.toString.call(__webpack_require__.g.process) === '[object process]');\r\n    }\r\n    catch (e) {\r\n        return false;\r\n    }\r\n}\r\n/**\r\n * Detect Browser Environment\r\n */\r\nfunction isBrowser() {\r\n    return typeof self === 'object' && self.self === self;\r\n}\r\nfunction isBrowserExtension() {\r\n    const runtime = typeof chrome === 'object'\r\n        ? chrome.runtime\r\n        : typeof browser === 'object'\r\n            ? browser.runtime\r\n            : undefined;\r\n    return typeof runtime === 'object' && runtime.id !== undefined;\r\n}\r\n/**\r\n * Detect React Native.\r\n *\r\n * @return true if ReactNative environment is detected.\r\n */\r\nfunction isReactNative() {\r\n    return (typeof navigator === 'object' && navigator['product'] === 'ReactNative');\r\n}\r\n/** Detects Electron apps. */\r\nfunction isElectron() {\r\n    return getUA().indexOf('Electron/') >= 0;\r\n}\r\n/** Detects Internet Explorer. */\r\nfunction isIE() {\r\n    const ua = getUA();\r\n    return ua.indexOf('MSIE ') >= 0 || ua.indexOf('Trident/') >= 0;\r\n}\r\n/** Detects Universal Windows Platform apps. */\r\nfunction isUWP() {\r\n    return getUA().indexOf('MSAppHost/') >= 0;\r\n}\r\n/**\r\n * Detect whether the current SDK build is the Node version.\r\n *\r\n * @return true if it's the Node SDK build.\r\n */\r\nfunction isNodeSdk() {\r\n    return CONSTANTS.NODE_CLIENT === true || CONSTANTS.NODE_ADMIN === true;\r\n}\r\n/** Returns true if we are running in Safari. */\r\nfunction isSafari() {\r\n    return (!isNode() &&\r\n        !!navigator.userAgent &&\r\n        navigator.userAgent.includes('Safari') &&\r\n        !navigator.userAgent.includes('Chrome'));\r\n}\r\n/**\r\n * This method checks if indexedDB is supported by current browser/service worker context\r\n * @return true if indexedDB is supported by current browser/service worker context\r\n */\r\nfunction isIndexedDBAvailable() {\r\n    try {\r\n        return typeof indexedDB === 'object';\r\n    }\r\n    catch (e) {\r\n        return false;\r\n    }\r\n}\r\n/**\r\n * This method validates browser/sw context for indexedDB by opening a dummy indexedDB database and reject\r\n * if errors occur during the database open operation.\r\n *\r\n * @throws exception if current browser/sw context can't run idb.open (ex: Safari iframe, Firefox\r\n * private browsing)\r\n */\r\nfunction validateIndexedDBOpenable() {\r\n    return new Promise((resolve, reject) => {\r\n        try {\r\n            let preExist = true;\r\n            const DB_CHECK_NAME = 'validate-browser-context-for-indexeddb-analytics-module';\r\n            const request = self.indexedDB.open(DB_CHECK_NAME);\r\n            request.onsuccess = () => {\r\n                request.result.close();\r\n                // delete database only when it doesn't pre-exist\r\n                if (!preExist) {\r\n                    self.indexedDB.deleteDatabase(DB_CHECK_NAME);\r\n                }\r\n                resolve(true);\r\n            };\r\n            request.onupgradeneeded = () => {\r\n                preExist = false;\r\n            };\r\n            request.onerror = () => {\r\n                var _a;\r\n                reject(((_a = request.error) === null || _a === void 0 ? void 0 : _a.message) || '');\r\n            };\r\n        }\r\n        catch (error) {\r\n            reject(error);\r\n        }\r\n    });\r\n}\r\n/**\r\n *\r\n * This method checks whether cookie is enabled within current browser\r\n * @return true if cookie is enabled within current browser\r\n */\r\nfunction areCookiesEnabled() {\r\n    if (typeof navigator === 'undefined' || !navigator.cookieEnabled) {\r\n        return false;\r\n    }\r\n    return true;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * @fileoverview Standardized Firebase Error.\r\n *\r\n * Usage:\r\n *\r\n *   // Typescript string literals for type-safe codes\r\n *   type Err =\r\n *     'unknown' |\r\n *     'object-not-found'\r\n *     ;\r\n *\r\n *   // Closure enum for type-safe error codes\r\n *   // at-enum {string}\r\n *   var Err = {\r\n *     UNKNOWN: 'unknown',\r\n *     OBJECT_NOT_FOUND: 'object-not-found',\r\n *   }\r\n *\r\n *   let errors: Map<Err, string> = {\r\n *     'generic-error': \"Unknown error\",\r\n *     'file-not-found': \"Could not find file: {$file}\",\r\n *   };\r\n *\r\n *   // Type-safe function - must pass a valid error code as param.\r\n *   let error = new ErrorFactory<Err>('service', 'Service', errors);\r\n *\r\n *   ...\r\n *   throw error.create(Err.GENERIC);\r\n *   ...\r\n *   throw error.create(Err.FILE_NOT_FOUND, {'file': fileName});\r\n *   ...\r\n *   // Service: Could not file file: foo.txt (service/file-not-found).\r\n *\r\n *   catch (e) {\r\n *     assert(e.message === \"Could not find file: foo.txt.\");\r\n *     if ((e as FirebaseError)?.code === 'service/file-not-found') {\r\n *       console.log(\"Could not read file: \" + e['file']);\r\n *     }\r\n *   }\r\n */\r\nconst ERROR_NAME = 'FirebaseError';\r\n// Based on code from:\r\n// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#Custom_Error_Types\r\nclass FirebaseError extends Error {\r\n    constructor(\r\n    /** The error code for this error. */\r\n    code, message, \r\n    /** Custom data for this error. */\r\n    customData) {\r\n        super(message);\r\n        this.code = code;\r\n        this.customData = customData;\r\n        /** The custom name for all FirebaseErrors. */\r\n        this.name = ERROR_NAME;\r\n        // Fix For ES5\r\n        // https://github.com/Microsoft/TypeScript-wiki/blob/master/Breaking-Changes.md#extending-built-ins-like-error-array-and-map-may-no-longer-work\r\n        Object.setPrototypeOf(this, FirebaseError.prototype);\r\n        // Maintains proper stack trace for where our error was thrown.\r\n        // Only available on V8.\r\n        if (Error.captureStackTrace) {\r\n            Error.captureStackTrace(this, ErrorFactory.prototype.create);\r\n        }\r\n    }\r\n}\r\nclass ErrorFactory {\r\n    constructor(service, serviceName, errors) {\r\n        this.service = service;\r\n        this.serviceName = serviceName;\r\n        this.errors = errors;\r\n    }\r\n    create(code, ...data) {\r\n        const customData = data[0] || {};\r\n        const fullCode = `${this.service}/${code}`;\r\n        const template = this.errors[code];\r\n        const message = template ? replaceTemplate(template, customData) : 'Error';\r\n        // Service Name: Error message (service/code).\r\n        const fullMessage = `${this.serviceName}: ${message} (${fullCode}).`;\r\n        const error = new FirebaseError(fullCode, fullMessage, customData);\r\n        return error;\r\n    }\r\n}\r\nfunction replaceTemplate(template, data) {\r\n    return template.replace(PATTERN, (_, key) => {\r\n        const value = data[key];\r\n        return value != null ? String(value) : `<${key}?>`;\r\n    });\r\n}\r\nconst PATTERN = /\\{\\$([^}]+)}/g;\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Evaluates a JSON string into a javascript object.\r\n *\r\n * @param {string} str A string containing JSON.\r\n * @return {*} The javascript object representing the specified JSON.\r\n */\r\nfunction jsonEval(str) {\r\n    return JSON.parse(str);\r\n}\r\n/**\r\n * Returns JSON representing a javascript object.\r\n * @param {*} data Javascript object to be stringified.\r\n * @return {string} The JSON contents of the object.\r\n */\r\nfunction stringify(data) {\r\n    return JSON.stringify(data);\r\n}\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Decodes a Firebase auth. token into constituent parts.\r\n *\r\n * Notes:\r\n * - May return with invalid / incomplete claims if there's no native base64 decoding support.\r\n * - Doesn't check if the token is actually valid.\r\n */\r\nconst decode = function (token) {\r\n    let header = {}, claims = {}, data = {}, signature = '';\r\n    try {\r\n        const parts = token.split('.');\r\n        header = jsonEval(base64Decode(parts[0]) || '');\r\n        claims = jsonEval(base64Decode(parts[1]) || '');\r\n        signature = parts[2];\r\n        data = claims['d'] || {};\r\n        delete claims['d'];\r\n    }\r\n    catch (e) { }\r\n    return {\r\n        header,\r\n        claims,\r\n        data,\r\n        signature\r\n    };\r\n};\r\n/**\r\n * Decodes a Firebase auth. token and checks the validity of its time-based claims. Will return true if the\r\n * token is within the time window authorized by the 'nbf' (not-before) and 'iat' (issued-at) claims.\r\n *\r\n * Notes:\r\n * - May return a false negative if there's no native base64 decoding support.\r\n * - Doesn't check if the token is actually valid.\r\n */\r\nconst isValidTimestamp = function (token) {\r\n    const claims = decode(token).claims;\r\n    const now = Math.floor(new Date().getTime() / 1000);\r\n    let validSince = 0, validUntil = 0;\r\n    if (typeof claims === 'object') {\r\n        if (claims.hasOwnProperty('nbf')) {\r\n            validSince = claims['nbf'];\r\n        }\r\n        else if (claims.hasOwnProperty('iat')) {\r\n            validSince = claims['iat'];\r\n        }\r\n        if (claims.hasOwnProperty('exp')) {\r\n            validUntil = claims['exp'];\r\n        }\r\n        else {\r\n            // token will expire after 24h by default\r\n            validUntil = validSince + 86400;\r\n        }\r\n    }\r\n    return (!!now &&\r\n        !!validSince &&\r\n        !!validUntil &&\r\n        now >= validSince &&\r\n        now <= validUntil);\r\n};\r\n/**\r\n * Decodes a Firebase auth. token and returns its issued at time if valid, null otherwise.\r\n *\r\n * Notes:\r\n * - May return null if there's no native base64 decoding support.\r\n * - Doesn't check if the token is actually valid.\r\n */\r\nconst issuedAtTime = function (token) {\r\n    const claims = decode(token).claims;\r\n    if (typeof claims === 'object' && claims.hasOwnProperty('iat')) {\r\n        return claims['iat'];\r\n    }\r\n    return null;\r\n};\r\n/**\r\n * Decodes a Firebase auth. token and checks the validity of its format. Expects a valid issued-at time.\r\n *\r\n * Notes:\r\n * - May return a false negative if there's no native base64 decoding support.\r\n * - Doesn't check if the token is actually valid.\r\n */\r\nconst isValidFormat = function (token) {\r\n    const decoded = decode(token), claims = decoded.claims;\r\n    return !!claims && typeof claims === 'object' && claims.hasOwnProperty('iat');\r\n};\r\n/**\r\n * Attempts to peer into an auth token and determine if it's an admin auth token by looking at the claims portion.\r\n *\r\n * Notes:\r\n * - May return a false negative if there's no native base64 decoding support.\r\n * - Doesn't check if the token is actually valid.\r\n */\r\nconst isAdmin = function (token) {\r\n    const claims = decode(token).claims;\r\n    return typeof claims === 'object' && claims['admin'] === true;\r\n};\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nfunction contains(obj, key) {\r\n    return Object.prototype.hasOwnProperty.call(obj, key);\r\n}\r\nfunction safeGet(obj, key) {\r\n    if (Object.prototype.hasOwnProperty.call(obj, key)) {\r\n        return obj[key];\r\n    }\r\n    else {\r\n        return undefined;\r\n    }\r\n}\r\nfunction isEmpty(obj) {\r\n    for (const key in obj) {\r\n        if (Object.prototype.hasOwnProperty.call(obj, key)) {\r\n            return false;\r\n        }\r\n    }\r\n    return true;\r\n}\r\nfunction map(obj, fn, contextObj) {\r\n    const res = {};\r\n    for (const key in obj) {\r\n        if (Object.prototype.hasOwnProperty.call(obj, key)) {\r\n            res[key] = fn.call(contextObj, obj[key], key, obj);\r\n        }\r\n    }\r\n    return res;\r\n}\r\n/**\r\n * Deep equal two objects. Support Arrays and Objects.\r\n */\r\nfunction deepEqual(a, b) {\r\n    if (a === b) {\r\n        return true;\r\n    }\r\n    const aKeys = Object.keys(a);\r\n    const bKeys = Object.keys(b);\r\n    for (const k of aKeys) {\r\n        if (!bKeys.includes(k)) {\r\n            return false;\r\n        }\r\n        const aProp = a[k];\r\n        const bProp = b[k];\r\n        if (isObject(aProp) && isObject(bProp)) {\r\n            if (!deepEqual(aProp, bProp)) {\r\n                return false;\r\n            }\r\n        }\r\n        else if (aProp !== bProp) {\r\n            return false;\r\n        }\r\n    }\r\n    for (const k of bKeys) {\r\n        if (!aKeys.includes(k)) {\r\n            return false;\r\n        }\r\n    }\r\n    return true;\r\n}\r\nfunction isObject(thing) {\r\n    return thing !== null && typeof thing === 'object';\r\n}\n\n/**\r\n * @license\r\n * Copyright 2022 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Rejects if the given promise doesn't resolve in timeInMS milliseconds.\r\n * @internal\r\n */\r\nfunction promiseWithTimeout(promise, timeInMS = 2000) {\r\n    const deferredPromise = new Deferred();\r\n    setTimeout(() => deferredPromise.reject('timeout!'), timeInMS);\r\n    promise.then(deferredPromise.resolve, deferredPromise.reject);\r\n    return deferredPromise.promise;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Returns a querystring-formatted string (e.g. &arg=val&arg2=val2) from a\r\n * params object (e.g. {arg: 'val', arg2: 'val2'})\r\n * Note: You must prepend it with ? when adding it to a URL.\r\n */\r\nfunction querystring(querystringParams) {\r\n    const params = [];\r\n    for (const [key, value] of Object.entries(querystringParams)) {\r\n        if (Array.isArray(value)) {\r\n            value.forEach(arrayVal => {\r\n                params.push(encodeURIComponent(key) + '=' + encodeURIComponent(arrayVal));\r\n            });\r\n        }\r\n        else {\r\n            params.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));\r\n        }\r\n    }\r\n    return params.length ? '&' + params.join('&') : '';\r\n}\r\n/**\r\n * Decodes a querystring (e.g. ?arg=val&arg2=val2) into a params object\r\n * (e.g. {arg: 'val', arg2: 'val2'})\r\n */\r\nfunction querystringDecode(querystring) {\r\n    const obj = {};\r\n    const tokens = querystring.replace(/^\\?/, '').split('&');\r\n    tokens.forEach(token => {\r\n        if (token) {\r\n            const [key, value] = token.split('=');\r\n            obj[decodeURIComponent(key)] = decodeURIComponent(value);\r\n        }\r\n    });\r\n    return obj;\r\n}\r\n/**\r\n * Extract the query string part of a URL, including the leading question mark (if present).\r\n */\r\nfunction extractQuerystring(url) {\r\n    const queryStart = url.indexOf('?');\r\n    if (!queryStart) {\r\n        return '';\r\n    }\r\n    const fragmentStart = url.indexOf('#', queryStart);\r\n    return url.substring(queryStart, fragmentStart > 0 ? fragmentStart : undefined);\r\n}\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * @fileoverview SHA-1 cryptographic hash.\r\n * Variable names follow the notation in FIPS PUB 180-3:\r\n * http://csrc.nist.gov/publications/fips/fips180-3/fips180-3_final.pdf.\r\n *\r\n * Usage:\r\n *   var sha1 = new sha1();\r\n *   sha1.update(bytes);\r\n *   var hash = sha1.digest();\r\n *\r\n * Performance:\r\n *   Chrome 23:   ~400 Mbit/s\r\n *   Firefox 16:  ~250 Mbit/s\r\n *\r\n */\r\n/**\r\n * SHA-1 cryptographic hash constructor.\r\n *\r\n * The properties declared here are discussed in the above algorithm document.\r\n * @constructor\r\n * @final\r\n * @struct\r\n */\r\nclass Sha1 {\r\n    constructor() {\r\n        /**\r\n         * Holds the previous values of accumulated variables a-e in the compress_\r\n         * function.\r\n         * @private\r\n         */\r\n        this.chain_ = [];\r\n        /**\r\n         * A buffer holding the partially computed hash result.\r\n         * @private\r\n         */\r\n        this.buf_ = [];\r\n        /**\r\n         * An array of 80 bytes, each a part of the message to be hashed.  Referred to\r\n         * as the message schedule in the docs.\r\n         * @private\r\n         */\r\n        this.W_ = [];\r\n        /**\r\n         * Contains data needed to pad messages less than 64 bytes.\r\n         * @private\r\n         */\r\n        this.pad_ = [];\r\n        /**\r\n         * @private {number}\r\n         */\r\n        this.inbuf_ = 0;\r\n        /**\r\n         * @private {number}\r\n         */\r\n        this.total_ = 0;\r\n        this.blockSize = 512 / 8;\r\n        this.pad_[0] = 128;\r\n        for (let i = 1; i < this.blockSize; ++i) {\r\n            this.pad_[i] = 0;\r\n        }\r\n        this.reset();\r\n    }\r\n    reset() {\r\n        this.chain_[0] = 0x67452301;\r\n        this.chain_[1] = 0xefcdab89;\r\n        this.chain_[2] = 0x98badcfe;\r\n        this.chain_[3] = 0x10325476;\r\n        this.chain_[4] = 0xc3d2e1f0;\r\n        this.inbuf_ = 0;\r\n        this.total_ = 0;\r\n    }\r\n    /**\r\n     * Internal compress helper function.\r\n     * @param buf Block to compress.\r\n     * @param offset Offset of the block in the buffer.\r\n     * @private\r\n     */\r\n    compress_(buf, offset) {\r\n        if (!offset) {\r\n            offset = 0;\r\n        }\r\n        const W = this.W_;\r\n        // get 16 big endian words\r\n        if (typeof buf === 'string') {\r\n            for (let i = 0; i < 16; i++) {\r\n                // TODO(user): [bug 8140122] Recent versions of Safari for Mac OS and iOS\r\n                // have a bug that turns the post-increment ++ operator into pre-increment\r\n                // during JIT compilation.  We have code that depends heavily on SHA-1 for\r\n                // correctness and which is affected by this bug, so I've removed all uses\r\n                // of post-increment ++ in which the result value is used.  We can revert\r\n                // this change once the Safari bug\r\n                // (https://bugs.webkit.org/show_bug.cgi?id=109036) has been fixed and\r\n                // most clients have been updated.\r\n                W[i] =\r\n                    (buf.charCodeAt(offset) << 24) |\r\n                        (buf.charCodeAt(offset + 1) << 16) |\r\n                        (buf.charCodeAt(offset + 2) << 8) |\r\n                        buf.charCodeAt(offset + 3);\r\n                offset += 4;\r\n            }\r\n        }\r\n        else {\r\n            for (let i = 0; i < 16; i++) {\r\n                W[i] =\r\n                    (buf[offset] << 24) |\r\n                        (buf[offset + 1] << 16) |\r\n                        (buf[offset + 2] << 8) |\r\n                        buf[offset + 3];\r\n                offset += 4;\r\n            }\r\n        }\r\n        // expand to 80 words\r\n        for (let i = 16; i < 80; i++) {\r\n            const t = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16];\r\n            W[i] = ((t << 1) | (t >>> 31)) & 0xffffffff;\r\n        }\r\n        let a = this.chain_[0];\r\n        let b = this.chain_[1];\r\n        let c = this.chain_[2];\r\n        let d = this.chain_[3];\r\n        let e = this.chain_[4];\r\n        let f, k;\r\n        // TODO(user): Try to unroll this loop to speed up the computation.\r\n        for (let i = 0; i < 80; i++) {\r\n            if (i < 40) {\r\n                if (i < 20) {\r\n                    f = d ^ (b & (c ^ d));\r\n                    k = 0x5a827999;\r\n                }\r\n                else {\r\n                    f = b ^ c ^ d;\r\n                    k = 0x6ed9eba1;\r\n                }\r\n            }\r\n            else {\r\n                if (i < 60) {\r\n                    f = (b & c) | (d & (b | c));\r\n                    k = 0x8f1bbcdc;\r\n                }\r\n                else {\r\n                    f = b ^ c ^ d;\r\n                    k = 0xca62c1d6;\r\n                }\r\n            }\r\n            const t = (((a << 5) | (a >>> 27)) + f + e + k + W[i]) & 0xffffffff;\r\n            e = d;\r\n            d = c;\r\n            c = ((b << 30) | (b >>> 2)) & 0xffffffff;\r\n            b = a;\r\n            a = t;\r\n        }\r\n        this.chain_[0] = (this.chain_[0] + a) & 0xffffffff;\r\n        this.chain_[1] = (this.chain_[1] + b) & 0xffffffff;\r\n        this.chain_[2] = (this.chain_[2] + c) & 0xffffffff;\r\n        this.chain_[3] = (this.chain_[3] + d) & 0xffffffff;\r\n        this.chain_[4] = (this.chain_[4] + e) & 0xffffffff;\r\n    }\r\n    update(bytes, length) {\r\n        // TODO(johnlenz): tighten the function signature and remove this check\r\n        if (bytes == null) {\r\n            return;\r\n        }\r\n        if (length === undefined) {\r\n            length = bytes.length;\r\n        }\r\n        const lengthMinusBlock = length - this.blockSize;\r\n        let n = 0;\r\n        // Using local instead of member variables gives ~5% speedup on Firefox 16.\r\n        const buf = this.buf_;\r\n        let inbuf = this.inbuf_;\r\n        // The outer while loop should execute at most twice.\r\n        while (n < length) {\r\n            // When we have no data in the block to top up, we can directly process the\r\n            // input buffer (assuming it contains sufficient data). This gives ~25%\r\n            // speedup on Chrome 23 and ~15% speedup on Firefox 16, but requires that\r\n            // the data is provided in large chunks (or in multiples of 64 bytes).\r\n            if (inbuf === 0) {\r\n                while (n <= lengthMinusBlock) {\r\n                    this.compress_(bytes, n);\r\n                    n += this.blockSize;\r\n                }\r\n            }\r\n            if (typeof bytes === 'string') {\r\n                while (n < length) {\r\n                    buf[inbuf] = bytes.charCodeAt(n);\r\n                    ++inbuf;\r\n                    ++n;\r\n                    if (inbuf === this.blockSize) {\r\n                        this.compress_(buf);\r\n                        inbuf = 0;\r\n                        // Jump to the outer loop so we use the full-block optimization.\r\n                        break;\r\n                    }\r\n                }\r\n            }\r\n            else {\r\n                while (n < length) {\r\n                    buf[inbuf] = bytes[n];\r\n                    ++inbuf;\r\n                    ++n;\r\n                    if (inbuf === this.blockSize) {\r\n                        this.compress_(buf);\r\n                        inbuf = 0;\r\n                        // Jump to the outer loop so we use the full-block optimization.\r\n                        break;\r\n                    }\r\n                }\r\n            }\r\n        }\r\n        this.inbuf_ = inbuf;\r\n        this.total_ += length;\r\n    }\r\n    /** @override */\r\n    digest() {\r\n        const digest = [];\r\n        let totalBits = this.total_ * 8;\r\n        // Add pad 0x80 0x00*.\r\n        if (this.inbuf_ < 56) {\r\n            this.update(this.pad_, 56 - this.inbuf_);\r\n        }\r\n        else {\r\n            this.update(this.pad_, this.blockSize - (this.inbuf_ - 56));\r\n        }\r\n        // Add # bits.\r\n        for (let i = this.blockSize - 1; i >= 56; i--) {\r\n            this.buf_[i] = totalBits & 255;\r\n            totalBits /= 256; // Don't use bit-shifting here!\r\n        }\r\n        this.compress_(this.buf_);\r\n        let n = 0;\r\n        for (let i = 0; i < 5; i++) {\r\n            for (let j = 24; j >= 0; j -= 8) {\r\n                digest[n] = (this.chain_[i] >> j) & 255;\r\n                ++n;\r\n            }\r\n        }\r\n        return digest;\r\n    }\r\n}\n\n/**\r\n * Helper to make a Subscribe function (just like Promise helps make a\r\n * Thenable).\r\n *\r\n * @param executor Function which can make calls to a single Observer\r\n *     as a proxy.\r\n * @param onNoObservers Callback when count of Observers goes to zero.\r\n */\r\nfunction createSubscribe(executor, onNoObservers) {\r\n    const proxy = new ObserverProxy(executor, onNoObservers);\r\n    return proxy.subscribe.bind(proxy);\r\n}\r\n/**\r\n * Implement fan-out for any number of Observers attached via a subscribe\r\n * function.\r\n */\r\nclass ObserverProxy {\r\n    /**\r\n     * @param executor Function which can make calls to a single Observer\r\n     *     as a proxy.\r\n     * @param onNoObservers Callback when count of Observers goes to zero.\r\n     */\r\n    constructor(executor, onNoObservers) {\r\n        this.observers = [];\r\n        this.unsubscribes = [];\r\n        this.observerCount = 0;\r\n        // Micro-task scheduling by calling task.then().\r\n        this.task = Promise.resolve();\r\n        this.finalized = false;\r\n        this.onNoObservers = onNoObservers;\r\n        // Call the executor asynchronously so subscribers that are called\r\n        // synchronously after the creation of the subscribe function\r\n        // can still receive the very first value generated in the executor.\r\n        this.task\r\n            .then(() => {\r\n            executor(this);\r\n        })\r\n            .catch(e => {\r\n            this.error(e);\r\n        });\r\n    }\r\n    next(value) {\r\n        this.forEachObserver((observer) => {\r\n            observer.next(value);\r\n        });\r\n    }\r\n    error(error) {\r\n        this.forEachObserver((observer) => {\r\n            observer.error(error);\r\n        });\r\n        this.close(error);\r\n    }\r\n    complete() {\r\n        this.forEachObserver((observer) => {\r\n            observer.complete();\r\n        });\r\n        this.close();\r\n    }\r\n    /**\r\n     * Subscribe function that can be used to add an Observer to the fan-out list.\r\n     *\r\n     * - We require that no event is sent to a subscriber sychronously to their\r\n     *   call to subscribe().\r\n     */\r\n    subscribe(nextOrObserver, error, complete) {\r\n        let observer;\r\n        if (nextOrObserver === undefined &&\r\n            error === undefined &&\r\n            complete === undefined) {\r\n            throw new Error('Missing Observer.');\r\n        }\r\n        // Assemble an Observer object when passed as callback functions.\r\n        if (implementsAnyMethods(nextOrObserver, [\r\n            'next',\r\n            'error',\r\n            'complete'\r\n        ])) {\r\n            observer = nextOrObserver;\r\n        }\r\n        else {\r\n            observer = {\r\n                next: nextOrObserver,\r\n                error,\r\n                complete\r\n            };\r\n        }\r\n        if (observer.next === undefined) {\r\n            observer.next = noop;\r\n        }\r\n        if (observer.error === undefined) {\r\n            observer.error = noop;\r\n        }\r\n        if (observer.complete === undefined) {\r\n            observer.complete = noop;\r\n        }\r\n        const unsub = this.unsubscribeOne.bind(this, this.observers.length);\r\n        // Attempt to subscribe to a terminated Observable - we\r\n        // just respond to the Observer with the final error or complete\r\n        // event.\r\n        if (this.finalized) {\r\n            // eslint-disable-next-line @typescript-eslint/no-floating-promises\r\n            this.task.then(() => {\r\n                try {\r\n                    if (this.finalError) {\r\n                        observer.error(this.finalError);\r\n                    }\r\n                    else {\r\n                        observer.complete();\r\n                    }\r\n                }\r\n                catch (e) {\r\n                    // nothing\r\n                }\r\n                return;\r\n            });\r\n        }\r\n        this.observers.push(observer);\r\n        return unsub;\r\n    }\r\n    // Unsubscribe is synchronous - we guarantee that no events are sent to\r\n    // any unsubscribed Observer.\r\n    unsubscribeOne(i) {\r\n        if (this.observers === undefined || this.observers[i] === undefined) {\r\n            return;\r\n        }\r\n        delete this.observers[i];\r\n        this.observerCount -= 1;\r\n        if (this.observerCount === 0 && this.onNoObservers !== undefined) {\r\n            this.onNoObservers(this);\r\n        }\r\n    }\r\n    forEachObserver(fn) {\r\n        if (this.finalized) {\r\n            // Already closed by previous event....just eat the additional values.\r\n            return;\r\n        }\r\n        // Since sendOne calls asynchronously - there is no chance that\r\n        // this.observers will become undefined.\r\n        for (let i = 0; i < this.observers.length; i++) {\r\n            this.sendOne(i, fn);\r\n        }\r\n    }\r\n    // Call the Observer via one of it's callback function. We are careful to\r\n    // confirm that the observe has not been unsubscribed since this asynchronous\r\n    // function had been queued.\r\n    sendOne(i, fn) {\r\n        // Execute the callback asynchronously\r\n        // eslint-disable-next-line @typescript-eslint/no-floating-promises\r\n        this.task.then(() => {\r\n            if (this.observers !== undefined && this.observers[i] !== undefined) {\r\n                try {\r\n                    fn(this.observers[i]);\r\n                }\r\n                catch (e) {\r\n                    // Ignore exceptions raised in Observers or missing methods of an\r\n                    // Observer.\r\n                    // Log error to console. b/31404806\r\n                    if (typeof console !== 'undefined' && console.error) {\r\n                        console.error(e);\r\n                    }\r\n                }\r\n            }\r\n        });\r\n    }\r\n    close(err) {\r\n        if (this.finalized) {\r\n            return;\r\n        }\r\n        this.finalized = true;\r\n        if (err !== undefined) {\r\n            this.finalError = err;\r\n        }\r\n        // Proxy is no longer needed - garbage collect references\r\n        // eslint-disable-next-line @typescript-eslint/no-floating-promises\r\n        this.task.then(() => {\r\n            this.observers = undefined;\r\n            this.onNoObservers = undefined;\r\n        });\r\n    }\r\n}\r\n/** Turn synchronous function into one called asynchronously. */\r\n// eslint-disable-next-line @typescript-eslint/ban-types\r\nfunction async(fn, onError) {\r\n    return (...args) => {\r\n        Promise.resolve(true)\r\n            .then(() => {\r\n            fn(...args);\r\n        })\r\n            .catch((error) => {\r\n            if (onError) {\r\n                onError(error);\r\n            }\r\n        });\r\n    };\r\n}\r\n/**\r\n * Return true if the object passed in implements any of the named methods.\r\n */\r\nfunction implementsAnyMethods(obj, methods) {\r\n    if (typeof obj !== 'object' || obj === null) {\r\n        return false;\r\n    }\r\n    for (const method of methods) {\r\n        if (method in obj && typeof obj[method] === 'function') {\r\n            return true;\r\n        }\r\n    }\r\n    return false;\r\n}\r\nfunction noop() {\r\n    // do nothing\r\n}\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Check to make sure the appropriate number of arguments are provided for a public function.\r\n * Throws an error if it fails.\r\n *\r\n * @param fnName The function name\r\n * @param minCount The minimum number of arguments to allow for the function call\r\n * @param maxCount The maximum number of argument to allow for the function call\r\n * @param argCount The actual number of arguments provided.\r\n */\r\nconst validateArgCount = function (fnName, minCount, maxCount, argCount) {\r\n    let argError;\r\n    if (argCount < minCount) {\r\n        argError = 'at least ' + minCount;\r\n    }\r\n    else if (argCount > maxCount) {\r\n        argError = maxCount === 0 ? 'none' : 'no more than ' + maxCount;\r\n    }\r\n    if (argError) {\r\n        const error = fnName +\r\n            ' failed: Was called with ' +\r\n            argCount +\r\n            (argCount === 1 ? ' argument.' : ' arguments.') +\r\n            ' Expects ' +\r\n            argError +\r\n            '.';\r\n        throw new Error(error);\r\n    }\r\n};\r\n/**\r\n * Generates a string to prefix an error message about failed argument validation\r\n *\r\n * @param fnName The function name\r\n * @param argName The name of the argument\r\n * @return The prefix to add to the error thrown for validation.\r\n */\r\nfunction errorPrefix(fnName, argName) {\r\n    return `${fnName} failed: ${argName} argument `;\r\n}\r\n/**\r\n * @param fnName\r\n * @param argumentNumber\r\n * @param namespace\r\n * @param optional\r\n */\r\nfunction validateNamespace(fnName, namespace, optional) {\r\n    if (optional && !namespace) {\r\n        return;\r\n    }\r\n    if (typeof namespace !== 'string') {\r\n        //TODO: I should do more validation here. We only allow certain chars in namespaces.\r\n        throw new Error(errorPrefix(fnName, 'namespace') + 'must be a valid firebase namespace.');\r\n    }\r\n}\r\nfunction validateCallback(fnName, argumentName, \r\n// eslint-disable-next-line @typescript-eslint/ban-types\r\ncallback, optional) {\r\n    if (optional && !callback) {\r\n        return;\r\n    }\r\n    if (typeof callback !== 'function') {\r\n        throw new Error(errorPrefix(fnName, argumentName) + 'must be a valid function.');\r\n    }\r\n}\r\nfunction validateContextObject(fnName, argumentName, context, optional) {\r\n    if (optional && !context) {\r\n        return;\r\n    }\r\n    if (typeof context !== 'object' || context === null) {\r\n        throw new Error(errorPrefix(fnName, argumentName) + 'must be a valid context object.');\r\n    }\r\n}\n\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n// Code originally came from goog.crypt.stringToUtf8ByteArray, but for some reason they\r\n// automatically replaced '\\r\\n' with '\\n', and they didn't handle surrogate pairs,\r\n// so it's been modified.\r\n// Note that not all Unicode characters appear as single characters in JavaScript strings.\r\n// fromCharCode returns the UTF-16 encoding of a character - so some Unicode characters\r\n// use 2 characters in Javascript.  All 4-byte UTF-8 characters begin with a first\r\n// character in the range 0xD800 - 0xDBFF (the first character of a so-called surrogate\r\n// pair).\r\n// See http://www.ecma-international.org/ecma-262/5.1/#sec-15.1.3\r\n/**\r\n * @param {string} str\r\n * @return {Array}\r\n */\r\nconst stringToByteArray = function (str) {\r\n    const out = [];\r\n    let p = 0;\r\n    for (let i = 0; i < str.length; i++) {\r\n        let c = str.charCodeAt(i);\r\n        // Is this the lead surrogate in a surrogate pair?\r\n        if (c >= 0xd800 && c <= 0xdbff) {\r\n            const high = c - 0xd800; // the high 10 bits.\r\n            i++;\r\n            assert(i < str.length, 'Surrogate pair missing trail surrogate.');\r\n            const low = str.charCodeAt(i) - 0xdc00; // the low 10 bits.\r\n            c = 0x10000 + (high << 10) + low;\r\n        }\r\n        if (c < 128) {\r\n            out[p++] = c;\r\n        }\r\n        else if (c < 2048) {\r\n            out[p++] = (c >> 6) | 192;\r\n            out[p++] = (c & 63) | 128;\r\n        }\r\n        else if (c < 65536) {\r\n            out[p++] = (c >> 12) | 224;\r\n            out[p++] = ((c >> 6) & 63) | 128;\r\n            out[p++] = (c & 63) | 128;\r\n        }\r\n        else {\r\n            out[p++] = (c >> 18) | 240;\r\n            out[p++] = ((c >> 12) & 63) | 128;\r\n            out[p++] = ((c >> 6) & 63) | 128;\r\n            out[p++] = (c & 63) | 128;\r\n        }\r\n    }\r\n    return out;\r\n};\r\n/**\r\n * Calculate length without actually converting; useful for doing cheaper validation.\r\n * @param {string} str\r\n * @return {number}\r\n */\r\nconst stringLength = function (str) {\r\n    let p = 0;\r\n    for (let i = 0; i < str.length; i++) {\r\n        const c = str.charCodeAt(i);\r\n        if (c < 128) {\r\n            p++;\r\n        }\r\n        else if (c < 2048) {\r\n            p += 2;\r\n        }\r\n        else if (c >= 0xd800 && c <= 0xdbff) {\r\n            // Lead surrogate of a surrogate pair.  The pair together will take 4 bytes to represent.\r\n            p += 4;\r\n            i++; // skip trail surrogate.\r\n        }\r\n        else {\r\n            p += 3;\r\n        }\r\n    }\r\n    return p;\r\n};\n\n/**\r\n * @license\r\n * Copyright 2022 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Copied from https://stackoverflow.com/a/2117523\r\n * Generates a new uuid.\r\n * @public\r\n */\r\nconst uuidv4 = function () {\r\n    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {\r\n        const r = (Math.random() * 16) | 0, v = c === 'x' ? r : (r & 0x3) | 0x8;\r\n        return v.toString(16);\r\n    });\r\n};\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * The amount of milliseconds to exponentially increase.\r\n */\r\nconst DEFAULT_INTERVAL_MILLIS = 1000;\r\n/**\r\n * The factor to backoff by.\r\n * Should be a number greater than 1.\r\n */\r\nconst DEFAULT_BACKOFF_FACTOR = 2;\r\n/**\r\n * The maximum milliseconds to increase to.\r\n *\r\n * <p>Visible for testing\r\n */\r\nconst MAX_VALUE_MILLIS = 4 * 60 * 60 * 1000; // Four hours, like iOS and Android.\r\n/**\r\n * The percentage of backoff time to randomize by.\r\n * See\r\n * http://go/safe-client-behavior#step-1-determine-the-appropriate-retry-interval-to-handle-spike-traffic\r\n * for context.\r\n *\r\n * <p>Visible for testing\r\n */\r\nconst RANDOM_FACTOR = 0.5;\r\n/**\r\n * Based on the backoff method from\r\n * https://github.com/google/closure-library/blob/master/closure/goog/math/exponentialbackoff.js.\r\n * Extracted here so we don't need to pass metadata and a stateful ExponentialBackoff object around.\r\n */\r\nfunction calculateBackoffMillis(backoffCount, intervalMillis = DEFAULT_INTERVAL_MILLIS, backoffFactor = DEFAULT_BACKOFF_FACTOR) {\r\n    // Calculates an exponentially increasing value.\r\n    // Deviation: calculates value from count and a constant interval, so we only need to save value\r\n    // and count to restore state.\r\n    const currBaseValue = intervalMillis * Math.pow(backoffFactor, backoffCount);\r\n    // A random \"fuzz\" to avoid waves of retries.\r\n    // Deviation: randomFactor is required.\r\n    const randomWait = Math.round(\r\n    // A fraction of the backoff value to add/subtract.\r\n    // Deviation: changes multiplication order to improve readability.\r\n    RANDOM_FACTOR *\r\n        currBaseValue *\r\n        // A random float (rounded to int by Math.round above) in the range [-1, 1]. Determines\r\n        // if we add or subtract.\r\n        (Math.random() - 0.5) *\r\n        2);\r\n    // Limits backoff to max to avoid effectively permanent backoff.\r\n    return Math.min(MAX_VALUE_MILLIS, currBaseValue + randomWait);\r\n}\n\n/**\r\n * @license\r\n * Copyright 2020 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Provide English ordinal letters after a number\r\n */\r\nfunction ordinal(i) {\r\n    if (!Number.isFinite(i)) {\r\n        return `${i}`;\r\n    }\r\n    return i + indicator(i);\r\n}\r\nfunction indicator(i) {\r\n    i = Math.abs(i);\r\n    const cent = i % 100;\r\n    if (cent >= 10 && cent <= 20) {\r\n        return 'th';\r\n    }\r\n    const dec = i % 10;\r\n    if (dec === 1) {\r\n        return 'st';\r\n    }\r\n    if (dec === 2) {\r\n        return 'nd';\r\n    }\r\n    if (dec === 3) {\r\n        return 'rd';\r\n    }\r\n    return 'th';\r\n}\n\n/**\r\n * @license\r\n * Copyright 2021 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nfunction getModularInstance(service) {\r\n    if (service && service._delegate) {\r\n        return service._delegate;\r\n    }\r\n    else {\r\n        return service;\r\n    }\r\n}\n\n\n//# sourceMappingURL=index.esm2017.js.map\n\n\n//# sourceURL=webpack://daveads.github.io/./node_modules/@firebase/util/dist/index.esm2017.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CONSTANTS: () => (/* binding */ CONSTANTS),
+/* harmony export */   DecodeBase64StringError: () => (/* binding */ DecodeBase64StringError),
+/* harmony export */   Deferred: () => (/* binding */ Deferred),
+/* harmony export */   ErrorFactory: () => (/* binding */ ErrorFactory),
+/* harmony export */   FirebaseError: () => (/* binding */ FirebaseError),
+/* harmony export */   MAX_VALUE_MILLIS: () => (/* binding */ MAX_VALUE_MILLIS),
+/* harmony export */   RANDOM_FACTOR: () => (/* binding */ RANDOM_FACTOR),
+/* harmony export */   Sha1: () => (/* binding */ Sha1),
+/* harmony export */   areCookiesEnabled: () => (/* binding */ areCookiesEnabled),
+/* harmony export */   assert: () => (/* binding */ assert),
+/* harmony export */   assertionError: () => (/* binding */ assertionError),
+/* harmony export */   async: () => (/* binding */ async),
+/* harmony export */   base64: () => (/* binding */ base64),
+/* harmony export */   base64Decode: () => (/* binding */ base64Decode),
+/* harmony export */   base64Encode: () => (/* binding */ base64Encode),
+/* harmony export */   base64urlEncodeWithoutPadding: () => (/* binding */ base64urlEncodeWithoutPadding),
+/* harmony export */   calculateBackoffMillis: () => (/* binding */ calculateBackoffMillis),
+/* harmony export */   contains: () => (/* binding */ contains),
+/* harmony export */   createMockUserToken: () => (/* binding */ createMockUserToken),
+/* harmony export */   createSubscribe: () => (/* binding */ createSubscribe),
+/* harmony export */   decode: () => (/* binding */ decode),
+/* harmony export */   deepCopy: () => (/* binding */ deepCopy),
+/* harmony export */   deepEqual: () => (/* binding */ deepEqual),
+/* harmony export */   deepExtend: () => (/* binding */ deepExtend),
+/* harmony export */   errorPrefix: () => (/* binding */ errorPrefix),
+/* harmony export */   extractQuerystring: () => (/* binding */ extractQuerystring),
+/* harmony export */   getDefaultAppConfig: () => (/* binding */ getDefaultAppConfig),
+/* harmony export */   getDefaultEmulatorHost: () => (/* binding */ getDefaultEmulatorHost),
+/* harmony export */   getDefaultEmulatorHostnameAndPort: () => (/* binding */ getDefaultEmulatorHostnameAndPort),
+/* harmony export */   getDefaults: () => (/* binding */ getDefaults),
+/* harmony export */   getExperimentalSetting: () => (/* binding */ getExperimentalSetting),
+/* harmony export */   getGlobal: () => (/* binding */ getGlobal),
+/* harmony export */   getModularInstance: () => (/* binding */ getModularInstance),
+/* harmony export */   getUA: () => (/* binding */ getUA),
+/* harmony export */   isAdmin: () => (/* binding */ isAdmin),
+/* harmony export */   isBrowser: () => (/* binding */ isBrowser),
+/* harmony export */   isBrowserExtension: () => (/* binding */ isBrowserExtension),
+/* harmony export */   isElectron: () => (/* binding */ isElectron),
+/* harmony export */   isEmpty: () => (/* binding */ isEmpty),
+/* harmony export */   isIE: () => (/* binding */ isIE),
+/* harmony export */   isIndexedDBAvailable: () => (/* binding */ isIndexedDBAvailable),
+/* harmony export */   isMobileCordova: () => (/* binding */ isMobileCordova),
+/* harmony export */   isNode: () => (/* binding */ isNode),
+/* harmony export */   isNodeSdk: () => (/* binding */ isNodeSdk),
+/* harmony export */   isReactNative: () => (/* binding */ isReactNative),
+/* harmony export */   isSafari: () => (/* binding */ isSafari),
+/* harmony export */   isUWP: () => (/* binding */ isUWP),
+/* harmony export */   isValidFormat: () => (/* binding */ isValidFormat),
+/* harmony export */   isValidTimestamp: () => (/* binding */ isValidTimestamp),
+/* harmony export */   issuedAtTime: () => (/* binding */ issuedAtTime),
+/* harmony export */   jsonEval: () => (/* binding */ jsonEval),
+/* harmony export */   map: () => (/* binding */ map),
+/* harmony export */   ordinal: () => (/* binding */ ordinal),
+/* harmony export */   promiseWithTimeout: () => (/* binding */ promiseWithTimeout),
+/* harmony export */   querystring: () => (/* binding */ querystring),
+/* harmony export */   querystringDecode: () => (/* binding */ querystringDecode),
+/* harmony export */   safeGet: () => (/* binding */ safeGet),
+/* harmony export */   stringLength: () => (/* binding */ stringLength),
+/* harmony export */   stringToByteArray: () => (/* binding */ stringToByteArray),
+/* harmony export */   stringify: () => (/* binding */ stringify),
+/* harmony export */   uuidv4: () => (/* binding */ uuidv4),
+/* harmony export */   validateArgCount: () => (/* binding */ validateArgCount),
+/* harmony export */   validateCallback: () => (/* binding */ validateCallback),
+/* harmony export */   validateContextObject: () => (/* binding */ validateContextObject),
+/* harmony export */   validateIndexedDBOpenable: () => (/* binding */ validateIndexedDBOpenable),
+/* harmony export */   validateNamespace: () => (/* binding */ validateNamespace)
+/* harmony export */ });
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @fileoverview Firebase constants.  Some of these (@defines) can be overridden at compile-time.
+ */
+const CONSTANTS = {
+    /**
+     * @define {boolean} Whether this is the client Node.js SDK.
+     */
+    NODE_CLIENT: false,
+    /**
+     * @define {boolean} Whether this is the Admin Node.js SDK.
+     */
+    NODE_ADMIN: false,
+    /**
+     * Firebase SDK Version
+     */
+    SDK_VERSION: '${JSCORE_VERSION}'
+};
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Throws an error if the provided assertion is falsy
+ */
+const assert = function (assertion, message) {
+    if (!assertion) {
+        throw assertionError(message);
+    }
+};
+/**
+ * Returns an Error object suitable for throwing.
+ */
+const assertionError = function (message) {
+    return new Error('Firebase Database (' +
+        CONSTANTS.SDK_VERSION +
+        ') INTERNAL ASSERT FAILED: ' +
+        message);
+};
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const stringToByteArray$1 = function (str) {
+    // TODO(user): Use native implementations if/when available
+    const out = [];
+    let p = 0;
+    for (let i = 0; i < str.length; i++) {
+        let c = str.charCodeAt(i);
+        if (c < 128) {
+            out[p++] = c;
+        }
+        else if (c < 2048) {
+            out[p++] = (c >> 6) | 192;
+            out[p++] = (c & 63) | 128;
+        }
+        else if ((c & 0xfc00) === 0xd800 &&
+            i + 1 < str.length &&
+            (str.charCodeAt(i + 1) & 0xfc00) === 0xdc00) {
+            // Surrogate Pair
+            c = 0x10000 + ((c & 0x03ff) << 10) + (str.charCodeAt(++i) & 0x03ff);
+            out[p++] = (c >> 18) | 240;
+            out[p++] = ((c >> 12) & 63) | 128;
+            out[p++] = ((c >> 6) & 63) | 128;
+            out[p++] = (c & 63) | 128;
+        }
+        else {
+            out[p++] = (c >> 12) | 224;
+            out[p++] = ((c >> 6) & 63) | 128;
+            out[p++] = (c & 63) | 128;
+        }
+    }
+    return out;
+};
+/**
+ * Turns an array of numbers into the string given by the concatenation of the
+ * characters to which the numbers correspond.
+ * @param bytes Array of numbers representing characters.
+ * @return Stringification of the array.
+ */
+const byteArrayToString = function (bytes) {
+    // TODO(user): Use native implementations if/when available
+    const out = [];
+    let pos = 0, c = 0;
+    while (pos < bytes.length) {
+        const c1 = bytes[pos++];
+        if (c1 < 128) {
+            out[c++] = String.fromCharCode(c1);
+        }
+        else if (c1 > 191 && c1 < 224) {
+            const c2 = bytes[pos++];
+            out[c++] = String.fromCharCode(((c1 & 31) << 6) | (c2 & 63));
+        }
+        else if (c1 > 239 && c1 < 365) {
+            // Surrogate Pair
+            const c2 = bytes[pos++];
+            const c3 = bytes[pos++];
+            const c4 = bytes[pos++];
+            const u = (((c1 & 7) << 18) | ((c2 & 63) << 12) | ((c3 & 63) << 6) | (c4 & 63)) -
+                0x10000;
+            out[c++] = String.fromCharCode(0xd800 + (u >> 10));
+            out[c++] = String.fromCharCode(0xdc00 + (u & 1023));
+        }
+        else {
+            const c2 = bytes[pos++];
+            const c3 = bytes[pos++];
+            out[c++] = String.fromCharCode(((c1 & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+        }
+    }
+    return out.join('');
+};
+// We define it as an object literal instead of a class because a class compiled down to es5 can't
+// be treeshaked. https://github.com/rollup/rollup/issues/1691
+// Static lookup maps, lazily populated by init_()
+const base64 = {
+    /**
+     * Maps bytes to characters.
+     */
+    byteToCharMap_: null,
+    /**
+     * Maps characters to bytes.
+     */
+    charToByteMap_: null,
+    /**
+     * Maps bytes to websafe characters.
+     * @private
+     */
+    byteToCharMapWebSafe_: null,
+    /**
+     * Maps websafe characters to bytes.
+     * @private
+     */
+    charToByteMapWebSafe_: null,
+    /**
+     * Our default alphabet, shared between
+     * ENCODED_VALS and ENCODED_VALS_WEBSAFE
+     */
+    ENCODED_VALS_BASE: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + 'abcdefghijklmnopqrstuvwxyz' + '0123456789',
+    /**
+     * Our default alphabet. Value 64 (=) is special; it means "nothing."
+     */
+    get ENCODED_VALS() {
+        return this.ENCODED_VALS_BASE + '+/=';
+    },
+    /**
+     * Our websafe alphabet.
+     */
+    get ENCODED_VALS_WEBSAFE() {
+        return this.ENCODED_VALS_BASE + '-_.';
+    },
+    /**
+     * Whether this browser supports the atob and btoa functions. This extension
+     * started at Mozilla but is now implemented by many browsers. We use the
+     * ASSUME_* variables to avoid pulling in the full useragent detection library
+     * but still allowing the standard per-browser compilations.
+     *
+     */
+    HAS_NATIVE_SUPPORT: typeof atob === 'function',
+    /**
+     * Base64-encode an array of bytes.
+     *
+     * @param input An array of bytes (numbers with
+     *     value in [0, 255]) to encode.
+     * @param webSafe Boolean indicating we should use the
+     *     alternative alphabet.
+     * @return The base64 encoded string.
+     */
+    encodeByteArray(input, webSafe) {
+        if (!Array.isArray(input)) {
+            throw Error('encodeByteArray takes an array as a parameter');
+        }
+        this.init_();
+        const byteToCharMap = webSafe
+            ? this.byteToCharMapWebSafe_
+            : this.byteToCharMap_;
+        const output = [];
+        for (let i = 0; i < input.length; i += 3) {
+            const byte1 = input[i];
+            const haveByte2 = i + 1 < input.length;
+            const byte2 = haveByte2 ? input[i + 1] : 0;
+            const haveByte3 = i + 2 < input.length;
+            const byte3 = haveByte3 ? input[i + 2] : 0;
+            const outByte1 = byte1 >> 2;
+            const outByte2 = ((byte1 & 0x03) << 4) | (byte2 >> 4);
+            let outByte3 = ((byte2 & 0x0f) << 2) | (byte3 >> 6);
+            let outByte4 = byte3 & 0x3f;
+            if (!haveByte3) {
+                outByte4 = 64;
+                if (!haveByte2) {
+                    outByte3 = 64;
+                }
+            }
+            output.push(byteToCharMap[outByte1], byteToCharMap[outByte2], byteToCharMap[outByte3], byteToCharMap[outByte4]);
+        }
+        return output.join('');
+    },
+    /**
+     * Base64-encode a string.
+     *
+     * @param input A string to encode.
+     * @param webSafe If true, we should use the
+     *     alternative alphabet.
+     * @return The base64 encoded string.
+     */
+    encodeString(input, webSafe) {
+        // Shortcut for Mozilla browsers that implement
+        // a native base64 encoder in the form of "btoa/atob"
+        if (this.HAS_NATIVE_SUPPORT && !webSafe) {
+            return btoa(input);
+        }
+        return this.encodeByteArray(stringToByteArray$1(input), webSafe);
+    },
+    /**
+     * Base64-decode a string.
+     *
+     * @param input to decode.
+     * @param webSafe True if we should use the
+     *     alternative alphabet.
+     * @return string representing the decoded value.
+     */
+    decodeString(input, webSafe) {
+        // Shortcut for Mozilla browsers that implement
+        // a native base64 encoder in the form of "btoa/atob"
+        if (this.HAS_NATIVE_SUPPORT && !webSafe) {
+            return atob(input);
+        }
+        return byteArrayToString(this.decodeStringToByteArray(input, webSafe));
+    },
+    /**
+     * Base64-decode a string.
+     *
+     * In base-64 decoding, groups of four characters are converted into three
+     * bytes.  If the encoder did not apply padding, the input length may not
+     * be a multiple of 4.
+     *
+     * In this case, the last group will have fewer than 4 characters, and
+     * padding will be inferred.  If the group has one or two characters, it decodes
+     * to one byte.  If the group has three characters, it decodes to two bytes.
+     *
+     * @param input Input to decode.
+     * @param webSafe True if we should use the web-safe alphabet.
+     * @return bytes representing the decoded value.
+     */
+    decodeStringToByteArray(input, webSafe) {
+        this.init_();
+        const charToByteMap = webSafe
+            ? this.charToByteMapWebSafe_
+            : this.charToByteMap_;
+        const output = [];
+        for (let i = 0; i < input.length;) {
+            const byte1 = charToByteMap[input.charAt(i++)];
+            const haveByte2 = i < input.length;
+            const byte2 = haveByte2 ? charToByteMap[input.charAt(i)] : 0;
+            ++i;
+            const haveByte3 = i < input.length;
+            const byte3 = haveByte3 ? charToByteMap[input.charAt(i)] : 64;
+            ++i;
+            const haveByte4 = i < input.length;
+            const byte4 = haveByte4 ? charToByteMap[input.charAt(i)] : 64;
+            ++i;
+            if (byte1 == null || byte2 == null || byte3 == null || byte4 == null) {
+                throw new DecodeBase64StringError();
+            }
+            const outByte1 = (byte1 << 2) | (byte2 >> 4);
+            output.push(outByte1);
+            if (byte3 !== 64) {
+                const outByte2 = ((byte2 << 4) & 0xf0) | (byte3 >> 2);
+                output.push(outByte2);
+                if (byte4 !== 64) {
+                    const outByte3 = ((byte3 << 6) & 0xc0) | byte4;
+                    output.push(outByte3);
+                }
+            }
+        }
+        return output;
+    },
+    /**
+     * Lazy static initialization function. Called before
+     * accessing any of the static map variables.
+     * @private
+     */
+    init_() {
+        if (!this.byteToCharMap_) {
+            this.byteToCharMap_ = {};
+            this.charToByteMap_ = {};
+            this.byteToCharMapWebSafe_ = {};
+            this.charToByteMapWebSafe_ = {};
+            // We want quick mappings back and forth, so we precompute two maps.
+            for (let i = 0; i < this.ENCODED_VALS.length; i++) {
+                this.byteToCharMap_[i] = this.ENCODED_VALS.charAt(i);
+                this.charToByteMap_[this.byteToCharMap_[i]] = i;
+                this.byteToCharMapWebSafe_[i] = this.ENCODED_VALS_WEBSAFE.charAt(i);
+                this.charToByteMapWebSafe_[this.byteToCharMapWebSafe_[i]] = i;
+                // Be forgiving when decoding and correctly decode both encodings.
+                if (i >= this.ENCODED_VALS_BASE.length) {
+                    this.charToByteMap_[this.ENCODED_VALS_WEBSAFE.charAt(i)] = i;
+                    this.charToByteMapWebSafe_[this.ENCODED_VALS.charAt(i)] = i;
+                }
+            }
+        }
+    }
+};
+/**
+ * An error encountered while decoding base64 string.
+ */
+class DecodeBase64StringError extends Error {
+    constructor() {
+        super(...arguments);
+        this.name = 'DecodeBase64StringError';
+    }
+}
+/**
+ * URL-safe base64 encoding
+ */
+const base64Encode = function (str) {
+    const utf8Bytes = stringToByteArray$1(str);
+    return base64.encodeByteArray(utf8Bytes, true);
+};
+/**
+ * URL-safe base64 encoding (without "." padding in the end).
+ * e.g. Used in JSON Web Token (JWT) parts.
+ */
+const base64urlEncodeWithoutPadding = function (str) {
+    // Use base64url encoding and remove padding in the end (dot characters).
+    return base64Encode(str).replace(/\./g, '');
+};
+/**
+ * URL-safe base64 decoding
+ *
+ * NOTE: DO NOT use the global atob() function - it does NOT support the
+ * base64Url variant encoding.
+ *
+ * @param str To be decoded
+ * @return Decoded result, if possible
+ */
+const base64Decode = function (str) {
+    try {
+        return base64.decodeString(str, true);
+    }
+    catch (e) {
+        console.error('base64Decode failed: ', e);
+    }
+    return null;
+};
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Do a deep-copy of basic JavaScript Objects or Arrays.
+ */
+function deepCopy(value) {
+    return deepExtend(undefined, value);
+}
+/**
+ * Copy properties from source to target (recursively allows extension
+ * of Objects and Arrays).  Scalar values in the target are over-written.
+ * If target is undefined, an object of the appropriate type will be created
+ * (and returned).
+ *
+ * We recursively copy all child properties of plain Objects in the source- so
+ * that namespace- like dictionaries are merged.
+ *
+ * Note that the target can be a function, in which case the properties in
+ * the source Object are copied onto it as static properties of the Function.
+ *
+ * Note: we don't merge __proto__ to prevent prototype pollution
+ */
+function deepExtend(target, source) {
+    if (!(source instanceof Object)) {
+        return source;
+    }
+    switch (source.constructor) {
+        case Date:
+            // Treat Dates like scalars; if the target date object had any child
+            // properties - they will be lost!
+            const dateValue = source;
+            return new Date(dateValue.getTime());
+        case Object:
+            if (target === undefined) {
+                target = {};
+            }
+            break;
+        case Array:
+            // Always copy the array source and overwrite the target.
+            target = [];
+            break;
+        default:
+            // Not a plain Object - treat it as a scalar.
+            return source;
+    }
+    for (const prop in source) {
+        // use isValidKey to guard against prototype pollution. See https://snyk.io/vuln/SNYK-JS-LODASH-450202
+        if (!source.hasOwnProperty(prop) || !isValidKey(prop)) {
+            continue;
+        }
+        target[prop] = deepExtend(target[prop], source[prop]);
+    }
+    return target;
+}
+function isValidKey(key) {
+    return key !== '__proto__';
+}
+
+/**
+ * @license
+ * Copyright 2022 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Polyfill for `globalThis` object.
+ * @returns the `globalThis` object for the given environment.
+ * @public
+ */
+function getGlobal() {
+    if (typeof self !== 'undefined') {
+        return self;
+    }
+    if (typeof window !== 'undefined') {
+        return window;
+    }
+    if (typeof __webpack_require__.g !== 'undefined') {
+        return __webpack_require__.g;
+    }
+    throw new Error('Unable to locate global object.');
+}
+
+/**
+ * @license
+ * Copyright 2022 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const getDefaultsFromGlobal = () => getGlobal().__FIREBASE_DEFAULTS__;
+/**
+ * Attempt to read defaults from a JSON string provided to
+ * process(.)env(.)__FIREBASE_DEFAULTS__ or a JSON file whose path is in
+ * process(.)env(.)__FIREBASE_DEFAULTS_PATH__
+ * The dots are in parens because certain compilers (Vite?) cannot
+ * handle seeing that variable in comments.
+ * See https://github.com/firebase/firebase-js-sdk/issues/6838
+ */
+const getDefaultsFromEnvVariable = () => {
+    if (typeof process === 'undefined' || "string" === 'undefined') {
+        return;
+    }
+    const defaultsJsonString = "MISSING_ENV_VAR".__FIREBASE_DEFAULTS__;
+    if (defaultsJsonString) {
+        return JSON.parse(defaultsJsonString);
+    }
+};
+const getDefaultsFromCookie = () => {
+    if (typeof document === 'undefined') {
+        return;
+    }
+    let match;
+    try {
+        match = document.cookie.match(/__FIREBASE_DEFAULTS__=([^;]+)/);
+    }
+    catch (e) {
+        // Some environments such as Angular Universal SSR have a
+        // `document` object but error on accessing `document.cookie`.
+        return;
+    }
+    const decoded = match && base64Decode(match[1]);
+    return decoded && JSON.parse(decoded);
+};
+/**
+ * Get the __FIREBASE_DEFAULTS__ object. It checks in order:
+ * (1) if such an object exists as a property of `globalThis`
+ * (2) if such an object was provided on a shell environment variable
+ * (3) if such an object exists in a cookie
+ * @public
+ */
+const getDefaults = () => {
+    try {
+        return (getDefaultsFromGlobal() ||
+            getDefaultsFromEnvVariable() ||
+            getDefaultsFromCookie());
+    }
+    catch (e) {
+        /**
+         * Catch-all for being unable to get __FIREBASE_DEFAULTS__ due
+         * to any environment case we have not accounted for. Log to
+         * info instead of swallowing so we can find these unknown cases
+         * and add paths for them if needed.
+         */
+        console.info(`Unable to get __FIREBASE_DEFAULTS__ due to: ${e}`);
+        return;
+    }
+};
+/**
+ * Returns emulator host stored in the __FIREBASE_DEFAULTS__ object
+ * for the given product.
+ * @returns a URL host formatted like `127.0.0.1:9999` or `[::1]:4000` if available
+ * @public
+ */
+const getDefaultEmulatorHost = (productName) => { var _a, _b; return (_b = (_a = getDefaults()) === null || _a === void 0 ? void 0 : _a.emulatorHosts) === null || _b === void 0 ? void 0 : _b[productName]; };
+/**
+ * Returns emulator hostname and port stored in the __FIREBASE_DEFAULTS__ object
+ * for the given product.
+ * @returns a pair of hostname and port like `["::1", 4000]` if available
+ * @public
+ */
+const getDefaultEmulatorHostnameAndPort = (productName) => {
+    const host = getDefaultEmulatorHost(productName);
+    if (!host) {
+        return undefined;
+    }
+    const separatorIndex = host.lastIndexOf(':'); // Finding the last since IPv6 addr also has colons.
+    if (separatorIndex <= 0 || separatorIndex + 1 === host.length) {
+        throw new Error(`Invalid host ${host} with no separate hostname and port!`);
+    }
+    // eslint-disable-next-line no-restricted-globals
+    const port = parseInt(host.substring(separatorIndex + 1), 10);
+    if (host[0] === '[') {
+        // Bracket-quoted `[ipv6addr]:port` => return "ipv6addr" (without brackets).
+        return [host.substring(1, separatorIndex - 1), port];
+    }
+    else {
+        return [host.substring(0, separatorIndex), port];
+    }
+};
+/**
+ * Returns Firebase app config stored in the __FIREBASE_DEFAULTS__ object.
+ * @public
+ */
+const getDefaultAppConfig = () => { var _a; return (_a = getDefaults()) === null || _a === void 0 ? void 0 : _a.config; };
+/**
+ * Returns an experimental setting on the __FIREBASE_DEFAULTS__ object (properties
+ * prefixed by "_")
+ * @public
+ */
+const getExperimentalSetting = (name) => { var _a; return (_a = getDefaults()) === null || _a === void 0 ? void 0 : _a[`_${name}`]; };
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+class Deferred {
+    constructor() {
+        this.reject = () => { };
+        this.resolve = () => { };
+        this.promise = new Promise((resolve, reject) => {
+            this.resolve = resolve;
+            this.reject = reject;
+        });
+    }
+    /**
+     * Our API internals are not promiseified and cannot because our callback APIs have subtle expectations around
+     * invoking promises inline, which Promises are forbidden to do. This method accepts an optional node-style callback
+     * and returns a node-style callback which will resolve or reject the Deferred's promise.
+     */
+    wrapCallback(callback) {
+        return (error, value) => {
+            if (error) {
+                this.reject(error);
+            }
+            else {
+                this.resolve(value);
+            }
+            if (typeof callback === 'function') {
+                // Attaching noop handler just in case developer wasn't expecting
+                // promises
+                this.promise.catch(() => { });
+                // Some of our callbacks don't expect a value and our own tests
+                // assert that the parameter length is 1
+                if (callback.length === 1) {
+                    callback(error);
+                }
+                else {
+                    callback(error, value);
+                }
+            }
+        };
+    }
+}
+
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function createMockUserToken(token, projectId) {
+    if (token.uid) {
+        throw new Error('The "uid" field is no longer supported by mockUserToken. Please use "sub" instead for Firebase Auth User ID.');
+    }
+    // Unsecured JWTs use "none" as the algorithm.
+    const header = {
+        alg: 'none',
+        type: 'JWT'
+    };
+    const project = projectId || 'demo-project';
+    const iat = token.iat || 0;
+    const sub = token.sub || token.user_id;
+    if (!sub) {
+        throw new Error("mockUserToken must contain 'sub' or 'user_id' field!");
+    }
+    const payload = Object.assign({ 
+        // Set all required fields to decent defaults
+        iss: `https://securetoken.google.com/${project}`, aud: project, iat, exp: iat + 3600, auth_time: iat, sub, user_id: sub, firebase: {
+            sign_in_provider: 'custom',
+            identities: {}
+        } }, token);
+    // Unsecured JWTs use the empty string as a signature.
+    const signature = '';
+    return [
+        base64urlEncodeWithoutPadding(JSON.stringify(header)),
+        base64urlEncodeWithoutPadding(JSON.stringify(payload)),
+        signature
+    ].join('.');
+}
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Returns navigator.userAgent string or '' if it's not defined.
+ * @return user agent string
+ */
+function getUA() {
+    if (typeof navigator !== 'undefined' &&
+        typeof navigator['userAgent'] === 'string') {
+        return navigator['userAgent'];
+    }
+    else {
+        return '';
+    }
+}
+/**
+ * Detect Cordova / PhoneGap / Ionic frameworks on a mobile device.
+ *
+ * Deliberately does not rely on checking `file://` URLs (as this fails PhoneGap
+ * in the Ripple emulator) nor Cordova `onDeviceReady`, which would normally
+ * wait for a callback.
+ */
+function isMobileCordova() {
+    return (typeof window !== 'undefined' &&
+        // @ts-ignore Setting up an broadly applicable index signature for Window
+        // just to deal with this case would probably be a bad idea.
+        !!(window['cordova'] || window['phonegap'] || window['PhoneGap']) &&
+        /ios|iphone|ipod|ipad|android|blackberry|iemobile/i.test(getUA()));
+}
+/**
+ * Detect Node.js.
+ *
+ * @return true if Node.js environment is detected or specified.
+ */
+// Node detection logic from: https://github.com/iliakan/detect-node/
+function isNode() {
+    var _a;
+    const forceEnvironment = (_a = getDefaults()) === null || _a === void 0 ? void 0 : _a.forceEnvironment;
+    if (forceEnvironment === 'node') {
+        return true;
+    }
+    else if (forceEnvironment === 'browser') {
+        return false;
+    }
+    try {
+        return (Object.prototype.toString.call(__webpack_require__.g.process) === '[object process]');
+    }
+    catch (e) {
+        return false;
+    }
+}
+/**
+ * Detect Browser Environment
+ */
+function isBrowser() {
+    return typeof self === 'object' && self.self === self;
+}
+function isBrowserExtension() {
+    const runtime = typeof chrome === 'object'
+        ? chrome.runtime
+        : typeof browser === 'object'
+            ? browser.runtime
+            : undefined;
+    return typeof runtime === 'object' && runtime.id !== undefined;
+}
+/**
+ * Detect React Native.
+ *
+ * @return true if ReactNative environment is detected.
+ */
+function isReactNative() {
+    return (typeof navigator === 'object' && navigator['product'] === 'ReactNative');
+}
+/** Detects Electron apps. */
+function isElectron() {
+    return getUA().indexOf('Electron/') >= 0;
+}
+/** Detects Internet Explorer. */
+function isIE() {
+    const ua = getUA();
+    return ua.indexOf('MSIE ') >= 0 || ua.indexOf('Trident/') >= 0;
+}
+/** Detects Universal Windows Platform apps. */
+function isUWP() {
+    return getUA().indexOf('MSAppHost/') >= 0;
+}
+/**
+ * Detect whether the current SDK build is the Node version.
+ *
+ * @return true if it's the Node SDK build.
+ */
+function isNodeSdk() {
+    return CONSTANTS.NODE_CLIENT === true || CONSTANTS.NODE_ADMIN === true;
+}
+/** Returns true if we are running in Safari. */
+function isSafari() {
+    return (!isNode() &&
+        !!navigator.userAgent &&
+        navigator.userAgent.includes('Safari') &&
+        !navigator.userAgent.includes('Chrome'));
+}
+/**
+ * This method checks if indexedDB is supported by current browser/service worker context
+ * @return true if indexedDB is supported by current browser/service worker context
+ */
+function isIndexedDBAvailable() {
+    try {
+        return typeof indexedDB === 'object';
+    }
+    catch (e) {
+        return false;
+    }
+}
+/**
+ * This method validates browser/sw context for indexedDB by opening a dummy indexedDB database and reject
+ * if errors occur during the database open operation.
+ *
+ * @throws exception if current browser/sw context can't run idb.open (ex: Safari iframe, Firefox
+ * private browsing)
+ */
+function validateIndexedDBOpenable() {
+    return new Promise((resolve, reject) => {
+        try {
+            let preExist = true;
+            const DB_CHECK_NAME = 'validate-browser-context-for-indexeddb-analytics-module';
+            const request = self.indexedDB.open(DB_CHECK_NAME);
+            request.onsuccess = () => {
+                request.result.close();
+                // delete database only when it doesn't pre-exist
+                if (!preExist) {
+                    self.indexedDB.deleteDatabase(DB_CHECK_NAME);
+                }
+                resolve(true);
+            };
+            request.onupgradeneeded = () => {
+                preExist = false;
+            };
+            request.onerror = () => {
+                var _a;
+                reject(((_a = request.error) === null || _a === void 0 ? void 0 : _a.message) || '');
+            };
+        }
+        catch (error) {
+            reject(error);
+        }
+    });
+}
+/**
+ *
+ * This method checks whether cookie is enabled within current browser
+ * @return true if cookie is enabled within current browser
+ */
+function areCookiesEnabled() {
+    if (typeof navigator === 'undefined' || !navigator.cookieEnabled) {
+        return false;
+    }
+    return true;
+}
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @fileoverview Standardized Firebase Error.
+ *
+ * Usage:
+ *
+ *   // Typescript string literals for type-safe codes
+ *   type Err =
+ *     'unknown' |
+ *     'object-not-found'
+ *     ;
+ *
+ *   // Closure enum for type-safe error codes
+ *   // at-enum {string}
+ *   var Err = {
+ *     UNKNOWN: 'unknown',
+ *     OBJECT_NOT_FOUND: 'object-not-found',
+ *   }
+ *
+ *   let errors: Map<Err, string> = {
+ *     'generic-error': "Unknown error",
+ *     'file-not-found': "Could not find file: {$file}",
+ *   };
+ *
+ *   // Type-safe function - must pass a valid error code as param.
+ *   let error = new ErrorFactory<Err>('service', 'Service', errors);
+ *
+ *   ...
+ *   throw error.create(Err.GENERIC);
+ *   ...
+ *   throw error.create(Err.FILE_NOT_FOUND, {'file': fileName});
+ *   ...
+ *   // Service: Could not file file: foo.txt (service/file-not-found).
+ *
+ *   catch (e) {
+ *     assert(e.message === "Could not find file: foo.txt.");
+ *     if ((e as FirebaseError)?.code === 'service/file-not-found') {
+ *       console.log("Could not read file: " + e['file']);
+ *     }
+ *   }
+ */
+const ERROR_NAME = 'FirebaseError';
+// Based on code from:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#Custom_Error_Types
+class FirebaseError extends Error {
+    constructor(
+    /** The error code for this error. */
+    code, message, 
+    /** Custom data for this error. */
+    customData) {
+        super(message);
+        this.code = code;
+        this.customData = customData;
+        /** The custom name for all FirebaseErrors. */
+        this.name = ERROR_NAME;
+        // Fix For ES5
+        // https://github.com/Microsoft/TypeScript-wiki/blob/master/Breaking-Changes.md#extending-built-ins-like-error-array-and-map-may-no-longer-work
+        Object.setPrototypeOf(this, FirebaseError.prototype);
+        // Maintains proper stack trace for where our error was thrown.
+        // Only available on V8.
+        if (Error.captureStackTrace) {
+            Error.captureStackTrace(this, ErrorFactory.prototype.create);
+        }
+    }
+}
+class ErrorFactory {
+    constructor(service, serviceName, errors) {
+        this.service = service;
+        this.serviceName = serviceName;
+        this.errors = errors;
+    }
+    create(code, ...data) {
+        const customData = data[0] || {};
+        const fullCode = `${this.service}/${code}`;
+        const template = this.errors[code];
+        const message = template ? replaceTemplate(template, customData) : 'Error';
+        // Service Name: Error message (service/code).
+        const fullMessage = `${this.serviceName}: ${message} (${fullCode}).`;
+        const error = new FirebaseError(fullCode, fullMessage, customData);
+        return error;
+    }
+}
+function replaceTemplate(template, data) {
+    return template.replace(PATTERN, (_, key) => {
+        const value = data[key];
+        return value != null ? String(value) : `<${key}?>`;
+    });
+}
+const PATTERN = /\{\$([^}]+)}/g;
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Evaluates a JSON string into a javascript object.
+ *
+ * @param {string} str A string containing JSON.
+ * @return {*} The javascript object representing the specified JSON.
+ */
+function jsonEval(str) {
+    return JSON.parse(str);
+}
+/**
+ * Returns JSON representing a javascript object.
+ * @param {*} data Javascript object to be stringified.
+ * @return {string} The JSON contents of the object.
+ */
+function stringify(data) {
+    return JSON.stringify(data);
+}
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Decodes a Firebase auth. token into constituent parts.
+ *
+ * Notes:
+ * - May return with invalid / incomplete claims if there's no native base64 decoding support.
+ * - Doesn't check if the token is actually valid.
+ */
+const decode = function (token) {
+    let header = {}, claims = {}, data = {}, signature = '';
+    try {
+        const parts = token.split('.');
+        header = jsonEval(base64Decode(parts[0]) || '');
+        claims = jsonEval(base64Decode(parts[1]) || '');
+        signature = parts[2];
+        data = claims['d'] || {};
+        delete claims['d'];
+    }
+    catch (e) { }
+    return {
+        header,
+        claims,
+        data,
+        signature
+    };
+};
+/**
+ * Decodes a Firebase auth. token and checks the validity of its time-based claims. Will return true if the
+ * token is within the time window authorized by the 'nbf' (not-before) and 'iat' (issued-at) claims.
+ *
+ * Notes:
+ * - May return a false negative if there's no native base64 decoding support.
+ * - Doesn't check if the token is actually valid.
+ */
+const isValidTimestamp = function (token) {
+    const claims = decode(token).claims;
+    const now = Math.floor(new Date().getTime() / 1000);
+    let validSince = 0, validUntil = 0;
+    if (typeof claims === 'object') {
+        if (claims.hasOwnProperty('nbf')) {
+            validSince = claims['nbf'];
+        }
+        else if (claims.hasOwnProperty('iat')) {
+            validSince = claims['iat'];
+        }
+        if (claims.hasOwnProperty('exp')) {
+            validUntil = claims['exp'];
+        }
+        else {
+            // token will expire after 24h by default
+            validUntil = validSince + 86400;
+        }
+    }
+    return (!!now &&
+        !!validSince &&
+        !!validUntil &&
+        now >= validSince &&
+        now <= validUntil);
+};
+/**
+ * Decodes a Firebase auth. token and returns its issued at time if valid, null otherwise.
+ *
+ * Notes:
+ * - May return null if there's no native base64 decoding support.
+ * - Doesn't check if the token is actually valid.
+ */
+const issuedAtTime = function (token) {
+    const claims = decode(token).claims;
+    if (typeof claims === 'object' && claims.hasOwnProperty('iat')) {
+        return claims['iat'];
+    }
+    return null;
+};
+/**
+ * Decodes a Firebase auth. token and checks the validity of its format. Expects a valid issued-at time.
+ *
+ * Notes:
+ * - May return a false negative if there's no native base64 decoding support.
+ * - Doesn't check if the token is actually valid.
+ */
+const isValidFormat = function (token) {
+    const decoded = decode(token), claims = decoded.claims;
+    return !!claims && typeof claims === 'object' && claims.hasOwnProperty('iat');
+};
+/**
+ * Attempts to peer into an auth token and determine if it's an admin auth token by looking at the claims portion.
+ *
+ * Notes:
+ * - May return a false negative if there's no native base64 decoding support.
+ * - Doesn't check if the token is actually valid.
+ */
+const isAdmin = function (token) {
+    const claims = decode(token).claims;
+    return typeof claims === 'object' && claims['admin'] === true;
+};
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function contains(obj, key) {
+    return Object.prototype.hasOwnProperty.call(obj, key);
+}
+function safeGet(obj, key) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        return obj[key];
+    }
+    else {
+        return undefined;
+    }
+}
+function isEmpty(obj) {
+    for (const key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+            return false;
+        }
+    }
+    return true;
+}
+function map(obj, fn, contextObj) {
+    const res = {};
+    for (const key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+            res[key] = fn.call(contextObj, obj[key], key, obj);
+        }
+    }
+    return res;
+}
+/**
+ * Deep equal two objects. Support Arrays and Objects.
+ */
+function deepEqual(a, b) {
+    if (a === b) {
+        return true;
+    }
+    const aKeys = Object.keys(a);
+    const bKeys = Object.keys(b);
+    for (const k of aKeys) {
+        if (!bKeys.includes(k)) {
+            return false;
+        }
+        const aProp = a[k];
+        const bProp = b[k];
+        if (isObject(aProp) && isObject(bProp)) {
+            if (!deepEqual(aProp, bProp)) {
+                return false;
+            }
+        }
+        else if (aProp !== bProp) {
+            return false;
+        }
+    }
+    for (const k of bKeys) {
+        if (!aKeys.includes(k)) {
+            return false;
+        }
+    }
+    return true;
+}
+function isObject(thing) {
+    return thing !== null && typeof thing === 'object';
+}
+
+/**
+ * @license
+ * Copyright 2022 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Rejects if the given promise doesn't resolve in timeInMS milliseconds.
+ * @internal
+ */
+function promiseWithTimeout(promise, timeInMS = 2000) {
+    const deferredPromise = new Deferred();
+    setTimeout(() => deferredPromise.reject('timeout!'), timeInMS);
+    promise.then(deferredPromise.resolve, deferredPromise.reject);
+    return deferredPromise.promise;
+}
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Returns a querystring-formatted string (e.g. &arg=val&arg2=val2) from a
+ * params object (e.g. {arg: 'val', arg2: 'val2'})
+ * Note: You must prepend it with ? when adding it to a URL.
+ */
+function querystring(querystringParams) {
+    const params = [];
+    for (const [key, value] of Object.entries(querystringParams)) {
+        if (Array.isArray(value)) {
+            value.forEach(arrayVal => {
+                params.push(encodeURIComponent(key) + '=' + encodeURIComponent(arrayVal));
+            });
+        }
+        else {
+            params.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));
+        }
+    }
+    return params.length ? '&' + params.join('&') : '';
+}
+/**
+ * Decodes a querystring (e.g. ?arg=val&arg2=val2) into a params object
+ * (e.g. {arg: 'val', arg2: 'val2'})
+ */
+function querystringDecode(querystring) {
+    const obj = {};
+    const tokens = querystring.replace(/^\?/, '').split('&');
+    tokens.forEach(token => {
+        if (token) {
+            const [key, value] = token.split('=');
+            obj[decodeURIComponent(key)] = decodeURIComponent(value);
+        }
+    });
+    return obj;
+}
+/**
+ * Extract the query string part of a URL, including the leading question mark (if present).
+ */
+function extractQuerystring(url) {
+    const queryStart = url.indexOf('?');
+    if (!queryStart) {
+        return '';
+    }
+    const fragmentStart = url.indexOf('#', queryStart);
+    return url.substring(queryStart, fragmentStart > 0 ? fragmentStart : undefined);
+}
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @fileoverview SHA-1 cryptographic hash.
+ * Variable names follow the notation in FIPS PUB 180-3:
+ * http://csrc.nist.gov/publications/fips/fips180-3/fips180-3_final.pdf.
+ *
+ * Usage:
+ *   var sha1 = new sha1();
+ *   sha1.update(bytes);
+ *   var hash = sha1.digest();
+ *
+ * Performance:
+ *   Chrome 23:   ~400 Mbit/s
+ *   Firefox 16:  ~250 Mbit/s
+ *
+ */
+/**
+ * SHA-1 cryptographic hash constructor.
+ *
+ * The properties declared here are discussed in the above algorithm document.
+ * @constructor
+ * @final
+ * @struct
+ */
+class Sha1 {
+    constructor() {
+        /**
+         * Holds the previous values of accumulated variables a-e in the compress_
+         * function.
+         * @private
+         */
+        this.chain_ = [];
+        /**
+         * A buffer holding the partially computed hash result.
+         * @private
+         */
+        this.buf_ = [];
+        /**
+         * An array of 80 bytes, each a part of the message to be hashed.  Referred to
+         * as the message schedule in the docs.
+         * @private
+         */
+        this.W_ = [];
+        /**
+         * Contains data needed to pad messages less than 64 bytes.
+         * @private
+         */
+        this.pad_ = [];
+        /**
+         * @private {number}
+         */
+        this.inbuf_ = 0;
+        /**
+         * @private {number}
+         */
+        this.total_ = 0;
+        this.blockSize = 512 / 8;
+        this.pad_[0] = 128;
+        for (let i = 1; i < this.blockSize; ++i) {
+            this.pad_[i] = 0;
+        }
+        this.reset();
+    }
+    reset() {
+        this.chain_[0] = 0x67452301;
+        this.chain_[1] = 0xefcdab89;
+        this.chain_[2] = 0x98badcfe;
+        this.chain_[3] = 0x10325476;
+        this.chain_[4] = 0xc3d2e1f0;
+        this.inbuf_ = 0;
+        this.total_ = 0;
+    }
+    /**
+     * Internal compress helper function.
+     * @param buf Block to compress.
+     * @param offset Offset of the block in the buffer.
+     * @private
+     */
+    compress_(buf, offset) {
+        if (!offset) {
+            offset = 0;
+        }
+        const W = this.W_;
+        // get 16 big endian words
+        if (typeof buf === 'string') {
+            for (let i = 0; i < 16; i++) {
+                // TODO(user): [bug 8140122] Recent versions of Safari for Mac OS and iOS
+                // have a bug that turns the post-increment ++ operator into pre-increment
+                // during JIT compilation.  We have code that depends heavily on SHA-1 for
+                // correctness and which is affected by this bug, so I've removed all uses
+                // of post-increment ++ in which the result value is used.  We can revert
+                // this change once the Safari bug
+                // (https://bugs.webkit.org/show_bug.cgi?id=109036) has been fixed and
+                // most clients have been updated.
+                W[i] =
+                    (buf.charCodeAt(offset) << 24) |
+                        (buf.charCodeAt(offset + 1) << 16) |
+                        (buf.charCodeAt(offset + 2) << 8) |
+                        buf.charCodeAt(offset + 3);
+                offset += 4;
+            }
+        }
+        else {
+            for (let i = 0; i < 16; i++) {
+                W[i] =
+                    (buf[offset] << 24) |
+                        (buf[offset + 1] << 16) |
+                        (buf[offset + 2] << 8) |
+                        buf[offset + 3];
+                offset += 4;
+            }
+        }
+        // expand to 80 words
+        for (let i = 16; i < 80; i++) {
+            const t = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16];
+            W[i] = ((t << 1) | (t >>> 31)) & 0xffffffff;
+        }
+        let a = this.chain_[0];
+        let b = this.chain_[1];
+        let c = this.chain_[2];
+        let d = this.chain_[3];
+        let e = this.chain_[4];
+        let f, k;
+        // TODO(user): Try to unroll this loop to speed up the computation.
+        for (let i = 0; i < 80; i++) {
+            if (i < 40) {
+                if (i < 20) {
+                    f = d ^ (b & (c ^ d));
+                    k = 0x5a827999;
+                }
+                else {
+                    f = b ^ c ^ d;
+                    k = 0x6ed9eba1;
+                }
+            }
+            else {
+                if (i < 60) {
+                    f = (b & c) | (d & (b | c));
+                    k = 0x8f1bbcdc;
+                }
+                else {
+                    f = b ^ c ^ d;
+                    k = 0xca62c1d6;
+                }
+            }
+            const t = (((a << 5) | (a >>> 27)) + f + e + k + W[i]) & 0xffffffff;
+            e = d;
+            d = c;
+            c = ((b << 30) | (b >>> 2)) & 0xffffffff;
+            b = a;
+            a = t;
+        }
+        this.chain_[0] = (this.chain_[0] + a) & 0xffffffff;
+        this.chain_[1] = (this.chain_[1] + b) & 0xffffffff;
+        this.chain_[2] = (this.chain_[2] + c) & 0xffffffff;
+        this.chain_[3] = (this.chain_[3] + d) & 0xffffffff;
+        this.chain_[4] = (this.chain_[4] + e) & 0xffffffff;
+    }
+    update(bytes, length) {
+        // TODO(johnlenz): tighten the function signature and remove this check
+        if (bytes == null) {
+            return;
+        }
+        if (length === undefined) {
+            length = bytes.length;
+        }
+        const lengthMinusBlock = length - this.blockSize;
+        let n = 0;
+        // Using local instead of member variables gives ~5% speedup on Firefox 16.
+        const buf = this.buf_;
+        let inbuf = this.inbuf_;
+        // The outer while loop should execute at most twice.
+        while (n < length) {
+            // When we have no data in the block to top up, we can directly process the
+            // input buffer (assuming it contains sufficient data). This gives ~25%
+            // speedup on Chrome 23 and ~15% speedup on Firefox 16, but requires that
+            // the data is provided in large chunks (or in multiples of 64 bytes).
+            if (inbuf === 0) {
+                while (n <= lengthMinusBlock) {
+                    this.compress_(bytes, n);
+                    n += this.blockSize;
+                }
+            }
+            if (typeof bytes === 'string') {
+                while (n < length) {
+                    buf[inbuf] = bytes.charCodeAt(n);
+                    ++inbuf;
+                    ++n;
+                    if (inbuf === this.blockSize) {
+                        this.compress_(buf);
+                        inbuf = 0;
+                        // Jump to the outer loop so we use the full-block optimization.
+                        break;
+                    }
+                }
+            }
+            else {
+                while (n < length) {
+                    buf[inbuf] = bytes[n];
+                    ++inbuf;
+                    ++n;
+                    if (inbuf === this.blockSize) {
+                        this.compress_(buf);
+                        inbuf = 0;
+                        // Jump to the outer loop so we use the full-block optimization.
+                        break;
+                    }
+                }
+            }
+        }
+        this.inbuf_ = inbuf;
+        this.total_ += length;
+    }
+    /** @override */
+    digest() {
+        const digest = [];
+        let totalBits = this.total_ * 8;
+        // Add pad 0x80 0x00*.
+        if (this.inbuf_ < 56) {
+            this.update(this.pad_, 56 - this.inbuf_);
+        }
+        else {
+            this.update(this.pad_, this.blockSize - (this.inbuf_ - 56));
+        }
+        // Add # bits.
+        for (let i = this.blockSize - 1; i >= 56; i--) {
+            this.buf_[i] = totalBits & 255;
+            totalBits /= 256; // Don't use bit-shifting here!
+        }
+        this.compress_(this.buf_);
+        let n = 0;
+        for (let i = 0; i < 5; i++) {
+            for (let j = 24; j >= 0; j -= 8) {
+                digest[n] = (this.chain_[i] >> j) & 255;
+                ++n;
+            }
+        }
+        return digest;
+    }
+}
+
+/**
+ * Helper to make a Subscribe function (just like Promise helps make a
+ * Thenable).
+ *
+ * @param executor Function which can make calls to a single Observer
+ *     as a proxy.
+ * @param onNoObservers Callback when count of Observers goes to zero.
+ */
+function createSubscribe(executor, onNoObservers) {
+    const proxy = new ObserverProxy(executor, onNoObservers);
+    return proxy.subscribe.bind(proxy);
+}
+/**
+ * Implement fan-out for any number of Observers attached via a subscribe
+ * function.
+ */
+class ObserverProxy {
+    /**
+     * @param executor Function which can make calls to a single Observer
+     *     as a proxy.
+     * @param onNoObservers Callback when count of Observers goes to zero.
+     */
+    constructor(executor, onNoObservers) {
+        this.observers = [];
+        this.unsubscribes = [];
+        this.observerCount = 0;
+        // Micro-task scheduling by calling task.then().
+        this.task = Promise.resolve();
+        this.finalized = false;
+        this.onNoObservers = onNoObservers;
+        // Call the executor asynchronously so subscribers that are called
+        // synchronously after the creation of the subscribe function
+        // can still receive the very first value generated in the executor.
+        this.task
+            .then(() => {
+            executor(this);
+        })
+            .catch(e => {
+            this.error(e);
+        });
+    }
+    next(value) {
+        this.forEachObserver((observer) => {
+            observer.next(value);
+        });
+    }
+    error(error) {
+        this.forEachObserver((observer) => {
+            observer.error(error);
+        });
+        this.close(error);
+    }
+    complete() {
+        this.forEachObserver((observer) => {
+            observer.complete();
+        });
+        this.close();
+    }
+    /**
+     * Subscribe function that can be used to add an Observer to the fan-out list.
+     *
+     * - We require that no event is sent to a subscriber sychronously to their
+     *   call to subscribe().
+     */
+    subscribe(nextOrObserver, error, complete) {
+        let observer;
+        if (nextOrObserver === undefined &&
+            error === undefined &&
+            complete === undefined) {
+            throw new Error('Missing Observer.');
+        }
+        // Assemble an Observer object when passed as callback functions.
+        if (implementsAnyMethods(nextOrObserver, [
+            'next',
+            'error',
+            'complete'
+        ])) {
+            observer = nextOrObserver;
+        }
+        else {
+            observer = {
+                next: nextOrObserver,
+                error,
+                complete
+            };
+        }
+        if (observer.next === undefined) {
+            observer.next = noop;
+        }
+        if (observer.error === undefined) {
+            observer.error = noop;
+        }
+        if (observer.complete === undefined) {
+            observer.complete = noop;
+        }
+        const unsub = this.unsubscribeOne.bind(this, this.observers.length);
+        // Attempt to subscribe to a terminated Observable - we
+        // just respond to the Observer with the final error or complete
+        // event.
+        if (this.finalized) {
+            // eslint-disable-next-line @typescript-eslint/no-floating-promises
+            this.task.then(() => {
+                try {
+                    if (this.finalError) {
+                        observer.error(this.finalError);
+                    }
+                    else {
+                        observer.complete();
+                    }
+                }
+                catch (e) {
+                    // nothing
+                }
+                return;
+            });
+        }
+        this.observers.push(observer);
+        return unsub;
+    }
+    // Unsubscribe is synchronous - we guarantee that no events are sent to
+    // any unsubscribed Observer.
+    unsubscribeOne(i) {
+        if (this.observers === undefined || this.observers[i] === undefined) {
+            return;
+        }
+        delete this.observers[i];
+        this.observerCount -= 1;
+        if (this.observerCount === 0 && this.onNoObservers !== undefined) {
+            this.onNoObservers(this);
+        }
+    }
+    forEachObserver(fn) {
+        if (this.finalized) {
+            // Already closed by previous event....just eat the additional values.
+            return;
+        }
+        // Since sendOne calls asynchronously - there is no chance that
+        // this.observers will become undefined.
+        for (let i = 0; i < this.observers.length; i++) {
+            this.sendOne(i, fn);
+        }
+    }
+    // Call the Observer via one of it's callback function. We are careful to
+    // confirm that the observe has not been unsubscribed since this asynchronous
+    // function had been queued.
+    sendOne(i, fn) {
+        // Execute the callback asynchronously
+        // eslint-disable-next-line @typescript-eslint/no-floating-promises
+        this.task.then(() => {
+            if (this.observers !== undefined && this.observers[i] !== undefined) {
+                try {
+                    fn(this.observers[i]);
+                }
+                catch (e) {
+                    // Ignore exceptions raised in Observers or missing methods of an
+                    // Observer.
+                    // Log error to console. b/31404806
+                    if (typeof console !== 'undefined' && console.error) {
+                        console.error(e);
+                    }
+                }
+            }
+        });
+    }
+    close(err) {
+        if (this.finalized) {
+            return;
+        }
+        this.finalized = true;
+        if (err !== undefined) {
+            this.finalError = err;
+        }
+        // Proxy is no longer needed - garbage collect references
+        // eslint-disable-next-line @typescript-eslint/no-floating-promises
+        this.task.then(() => {
+            this.observers = undefined;
+            this.onNoObservers = undefined;
+        });
+    }
+}
+/** Turn synchronous function into one called asynchronously. */
+// eslint-disable-next-line @typescript-eslint/ban-types
+function async(fn, onError) {
+    return (...args) => {
+        Promise.resolve(true)
+            .then(() => {
+            fn(...args);
+        })
+            .catch((error) => {
+            if (onError) {
+                onError(error);
+            }
+        });
+    };
+}
+/**
+ * Return true if the object passed in implements any of the named methods.
+ */
+function implementsAnyMethods(obj, methods) {
+    if (typeof obj !== 'object' || obj === null) {
+        return false;
+    }
+    for (const method of methods) {
+        if (method in obj && typeof obj[method] === 'function') {
+            return true;
+        }
+    }
+    return false;
+}
+function noop() {
+    // do nothing
+}
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Check to make sure the appropriate number of arguments are provided for a public function.
+ * Throws an error if it fails.
+ *
+ * @param fnName The function name
+ * @param minCount The minimum number of arguments to allow for the function call
+ * @param maxCount The maximum number of argument to allow for the function call
+ * @param argCount The actual number of arguments provided.
+ */
+const validateArgCount = function (fnName, minCount, maxCount, argCount) {
+    let argError;
+    if (argCount < minCount) {
+        argError = 'at least ' + minCount;
+    }
+    else if (argCount > maxCount) {
+        argError = maxCount === 0 ? 'none' : 'no more than ' + maxCount;
+    }
+    if (argError) {
+        const error = fnName +
+            ' failed: Was called with ' +
+            argCount +
+            (argCount === 1 ? ' argument.' : ' arguments.') +
+            ' Expects ' +
+            argError +
+            '.';
+        throw new Error(error);
+    }
+};
+/**
+ * Generates a string to prefix an error message about failed argument validation
+ *
+ * @param fnName The function name
+ * @param argName The name of the argument
+ * @return The prefix to add to the error thrown for validation.
+ */
+function errorPrefix(fnName, argName) {
+    return `${fnName} failed: ${argName} argument `;
+}
+/**
+ * @param fnName
+ * @param argumentNumber
+ * @param namespace
+ * @param optional
+ */
+function validateNamespace(fnName, namespace, optional) {
+    if (optional && !namespace) {
+        return;
+    }
+    if (typeof namespace !== 'string') {
+        //TODO: I should do more validation here. We only allow certain chars in namespaces.
+        throw new Error(errorPrefix(fnName, 'namespace') + 'must be a valid firebase namespace.');
+    }
+}
+function validateCallback(fnName, argumentName, 
+// eslint-disable-next-line @typescript-eslint/ban-types
+callback, optional) {
+    if (optional && !callback) {
+        return;
+    }
+    if (typeof callback !== 'function') {
+        throw new Error(errorPrefix(fnName, argumentName) + 'must be a valid function.');
+    }
+}
+function validateContextObject(fnName, argumentName, context, optional) {
+    if (optional && !context) {
+        return;
+    }
+    if (typeof context !== 'object' || context === null) {
+        throw new Error(errorPrefix(fnName, argumentName) + 'must be a valid context object.');
+    }
+}
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+// Code originally came from goog.crypt.stringToUtf8ByteArray, but for some reason they
+// automatically replaced '\r\n' with '\n', and they didn't handle surrogate pairs,
+// so it's been modified.
+// Note that not all Unicode characters appear as single characters in JavaScript strings.
+// fromCharCode returns the UTF-16 encoding of a character - so some Unicode characters
+// use 2 characters in Javascript.  All 4-byte UTF-8 characters begin with a first
+// character in the range 0xD800 - 0xDBFF (the first character of a so-called surrogate
+// pair).
+// See http://www.ecma-international.org/ecma-262/5.1/#sec-15.1.3
+/**
+ * @param {string} str
+ * @return {Array}
+ */
+const stringToByteArray = function (str) {
+    const out = [];
+    let p = 0;
+    for (let i = 0; i < str.length; i++) {
+        let c = str.charCodeAt(i);
+        // Is this the lead surrogate in a surrogate pair?
+        if (c >= 0xd800 && c <= 0xdbff) {
+            const high = c - 0xd800; // the high 10 bits.
+            i++;
+            assert(i < str.length, 'Surrogate pair missing trail surrogate.');
+            const low = str.charCodeAt(i) - 0xdc00; // the low 10 bits.
+            c = 0x10000 + (high << 10) + low;
+        }
+        if (c < 128) {
+            out[p++] = c;
+        }
+        else if (c < 2048) {
+            out[p++] = (c >> 6) | 192;
+            out[p++] = (c & 63) | 128;
+        }
+        else if (c < 65536) {
+            out[p++] = (c >> 12) | 224;
+            out[p++] = ((c >> 6) & 63) | 128;
+            out[p++] = (c & 63) | 128;
+        }
+        else {
+            out[p++] = (c >> 18) | 240;
+            out[p++] = ((c >> 12) & 63) | 128;
+            out[p++] = ((c >> 6) & 63) | 128;
+            out[p++] = (c & 63) | 128;
+        }
+    }
+    return out;
+};
+/**
+ * Calculate length without actually converting; useful for doing cheaper validation.
+ * @param {string} str
+ * @return {number}
+ */
+const stringLength = function (str) {
+    let p = 0;
+    for (let i = 0; i < str.length; i++) {
+        const c = str.charCodeAt(i);
+        if (c < 128) {
+            p++;
+        }
+        else if (c < 2048) {
+            p += 2;
+        }
+        else if (c >= 0xd800 && c <= 0xdbff) {
+            // Lead surrogate of a surrogate pair.  The pair together will take 4 bytes to represent.
+            p += 4;
+            i++; // skip trail surrogate.
+        }
+        else {
+            p += 3;
+        }
+    }
+    return p;
+};
+
+/**
+ * @license
+ * Copyright 2022 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Copied from https://stackoverflow.com/a/2117523
+ * Generates a new uuid.
+ * @public
+ */
+const uuidv4 = function () {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+        const r = (Math.random() * 16) | 0, v = c === 'x' ? r : (r & 0x3) | 0x8;
+        return v.toString(16);
+    });
+};
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * The amount of milliseconds to exponentially increase.
+ */
+const DEFAULT_INTERVAL_MILLIS = 1000;
+/**
+ * The factor to backoff by.
+ * Should be a number greater than 1.
+ */
+const DEFAULT_BACKOFF_FACTOR = 2;
+/**
+ * The maximum milliseconds to increase to.
+ *
+ * <p>Visible for testing
+ */
+const MAX_VALUE_MILLIS = 4 * 60 * 60 * 1000; // Four hours, like iOS and Android.
+/**
+ * The percentage of backoff time to randomize by.
+ * See
+ * http://go/safe-client-behavior#step-1-determine-the-appropriate-retry-interval-to-handle-spike-traffic
+ * for context.
+ *
+ * <p>Visible for testing
+ */
+const RANDOM_FACTOR = 0.5;
+/**
+ * Based on the backoff method from
+ * https://github.com/google/closure-library/blob/master/closure/goog/math/exponentialbackoff.js.
+ * Extracted here so we don't need to pass metadata and a stateful ExponentialBackoff object around.
+ */
+function calculateBackoffMillis(backoffCount, intervalMillis = DEFAULT_INTERVAL_MILLIS, backoffFactor = DEFAULT_BACKOFF_FACTOR) {
+    // Calculates an exponentially increasing value.
+    // Deviation: calculates value from count and a constant interval, so we only need to save value
+    // and count to restore state.
+    const currBaseValue = intervalMillis * Math.pow(backoffFactor, backoffCount);
+    // A random "fuzz" to avoid waves of retries.
+    // Deviation: randomFactor is required.
+    const randomWait = Math.round(
+    // A fraction of the backoff value to add/subtract.
+    // Deviation: changes multiplication order to improve readability.
+    RANDOM_FACTOR *
+        currBaseValue *
+        // A random float (rounded to int by Math.round above) in the range [-1, 1]. Determines
+        // if we add or subtract.
+        (Math.random() - 0.5) *
+        2);
+    // Limits backoff to max to avoid effectively permanent backoff.
+    return Math.min(MAX_VALUE_MILLIS, currBaseValue + randomWait);
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Provide English ordinal letters after a number
+ */
+function ordinal(i) {
+    if (!Number.isFinite(i)) {
+        return `${i}`;
+    }
+    return i + indicator(i);
+}
+function indicator(i) {
+    i = Math.abs(i);
+    const cent = i % 100;
+    if (cent >= 10 && cent <= 20) {
+        return 'th';
+    }
+    const dec = i % 10;
+    if (dec === 1) {
+        return 'st';
+    }
+    if (dec === 2) {
+        return 'nd';
+    }
+    if (dec === 3) {
+        return 'rd';
+    }
+    return 'th';
+}
+
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function getModularInstance(service) {
+    if (service && service._delegate) {
+        return service._delegate;
+    }
+    else {
+        return service;
+    }
+}
+
+
+//# sourceMappingURL=index.esm2017.js.map
+
 
 /***/ }),
 
@@ -26,7 +2200,77 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************/
 /***/ (function() {
 
-eval("var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (g && (g = 0, op[0] && (_ = 0)), _) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nfunction helloWorld() {\n    return __awaiter(this, void 0, void 0, function () {\n        return __generator(this, function (_a) {\n            switch (_a.label) {\n                case 0: return [4 /*yield*/, new Promise(function (resolve) {\n                        setTimeout(function () {\n                            resolve();\n                        }, 2000); // wait 2 seconds before resolving\n                    })];\n                case 1:\n                    _a.sent();\n                    return [2 /*return*/, \"Hello World Test in typescript\"];\n            }\n        });\n    });\n}\n// Check if document is defined before adding event listener\nif (typeof document !== 'undefined') {\n    document.addEventListener(\"DOMContentLoaded\", function () { return __awaiter(void 0, void 0, void 0, function () {\n        var hello, responseElement;\n        return __generator(this, function (_a) {\n            switch (_a.label) {\n                case 0: return [4 /*yield*/, helloWorld()];\n                case 1:\n                    hello = _a.sent();\n                    responseElement = document.getElementById('response');\n                    if (responseElement) {\n                        responseElement.textContent = hello;\n                    }\n                    return [2 /*return*/];\n            }\n        });\n    }); });\n}\n\n\n//# sourceURL=webpack://daveads.github.io/./src/test_ts.ts?");
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+function helloWorld() {
+    return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, new Promise(function (resolve) {
+                        setTimeout(function () {
+                            resolve();
+                        }, 2000); // wait 2 seconds before resolving
+                    })];
+                case 1:
+                    _a.sent();
+                    return [2 /*return*/, "Hello World Test in typescript"];
+            }
+        });
+    });
+}
+// Check if document is defined before adding event listener
+if (typeof document !== 'undefined') {
+    document.addEventListener("DOMContentLoaded", function () { return __awaiter(void 0, void 0, void 0, function () {
+        var hello, responseElement;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, helloWorld()];
+                case 1:
+                    hello = _a.sent();
+                    responseElement = document.getElementById('response');
+                    if (responseElement) {
+                        responseElement.textContent = hello;
+                    }
+                    return [2 /*return*/];
+            }
+        });
+    }); });
+}
+
 
 /***/ }),
 
@@ -37,7 +2281,1296 @@ eval("var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments,
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getAnalytics: () => (/* binding */ getAnalytics),\n/* harmony export */   getGoogleAnalyticsClientId: () => (/* binding */ getGoogleAnalyticsClientId),\n/* harmony export */   initializeAnalytics: () => (/* binding */ initializeAnalytics),\n/* harmony export */   isSupported: () => (/* binding */ isSupported),\n/* harmony export */   logEvent: () => (/* binding */ logEvent),\n/* harmony export */   setAnalyticsCollectionEnabled: () => (/* binding */ setAnalyticsCollectionEnabled),\n/* harmony export */   setConsent: () => (/* binding */ setConsent),\n/* harmony export */   setCurrentScreen: () => (/* binding */ setCurrentScreen),\n/* harmony export */   setDefaultEventParameters: () => (/* binding */ setDefaultEventParameters),\n/* harmony export */   setUserId: () => (/* binding */ setUserId),\n/* harmony export */   setUserProperties: () => (/* binding */ setUserProperties),\n/* harmony export */   settings: () => (/* binding */ settings)\n/* harmony export */ });\n/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/app */ \"./node_modules/@firebase/app/dist/esm/index.esm2017.js\");\n/* harmony import */ var _firebase_logger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @firebase/logger */ \"./node_modules/@firebase/logger/dist/esm/index.esm2017.js\");\n/* harmony import */ var _firebase_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @firebase/util */ \"./node_modules/@firebase/util/dist/index.esm2017.js\");\n/* harmony import */ var _firebase_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @firebase/component */ \"./node_modules/@firebase/component/dist/esm/index.esm2017.js\");\n/* harmony import */ var _firebase_installations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @firebase/installations */ \"./node_modules/@firebase/installations/dist/esm/index.esm2017.js\");\n\n\n\n\n\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Type constant for Firebase Analytics.\r\n */\r\nconst ANALYTICS_TYPE = 'analytics';\r\n// Key to attach FID to in gtag params.\r\nconst GA_FID_KEY = 'firebase_id';\r\nconst ORIGIN_KEY = 'origin';\r\nconst FETCH_TIMEOUT_MILLIS = 60 * 1000;\r\nconst DYNAMIC_CONFIG_URL = 'https://firebase.googleapis.com/v1alpha/projects/-/apps/{app-id}/webConfig';\r\nconst GTAG_URL = 'https://www.googletagmanager.com/gtag/js';\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst logger = new _firebase_logger__WEBPACK_IMPORTED_MODULE_1__.Logger('@firebase/analytics');\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst ERRORS = {\r\n    [\"already-exists\" /* AnalyticsError.ALREADY_EXISTS */]: 'A Firebase Analytics instance with the appId {$id} ' +\r\n        ' already exists. ' +\r\n        'Only one Firebase Analytics instance can be created for each appId.',\r\n    [\"already-initialized\" /* AnalyticsError.ALREADY_INITIALIZED */]: 'initializeAnalytics() cannot be called again with different options than those ' +\r\n        'it was initially called with. It can be called again with the same options to ' +\r\n        'return the existing instance, or getAnalytics() can be used ' +\r\n        'to get a reference to the already-intialized instance.',\r\n    [\"already-initialized-settings\" /* AnalyticsError.ALREADY_INITIALIZED_SETTINGS */]: 'Firebase Analytics has already been initialized.' +\r\n        'settings() must be called before initializing any Analytics instance' +\r\n        'or it will have no effect.',\r\n    [\"interop-component-reg-failed\" /* AnalyticsError.INTEROP_COMPONENT_REG_FAILED */]: 'Firebase Analytics Interop Component failed to instantiate: {$reason}',\r\n    [\"invalid-analytics-context\" /* AnalyticsError.INVALID_ANALYTICS_CONTEXT */]: 'Firebase Analytics is not supported in this environment. ' +\r\n        'Wrap initialization of analytics in analytics.isSupported() ' +\r\n        'to prevent initialization in unsupported environments. Details: {$errorInfo}',\r\n    [\"indexeddb-unavailable\" /* AnalyticsError.INDEXEDDB_UNAVAILABLE */]: 'IndexedDB unavailable or restricted in this environment. ' +\r\n        'Wrap initialization of analytics in analytics.isSupported() ' +\r\n        'to prevent initialization in unsupported environments. Details: {$errorInfo}',\r\n    [\"fetch-throttle\" /* AnalyticsError.FETCH_THROTTLE */]: 'The config fetch request timed out while in an exponential backoff state.' +\r\n        ' Unix timestamp in milliseconds when fetch request throttling ends: {$throttleEndTimeMillis}.',\r\n    [\"config-fetch-failed\" /* AnalyticsError.CONFIG_FETCH_FAILED */]: 'Dynamic config fetch failed: [{$httpStatus}] {$responseMessage}',\r\n    [\"no-api-key\" /* AnalyticsError.NO_API_KEY */]: 'The \"apiKey\" field is empty in the local Firebase config. Firebase Analytics requires this field to' +\r\n        'contain a valid API key.',\r\n    [\"no-app-id\" /* AnalyticsError.NO_APP_ID */]: 'The \"appId\" field is empty in the local Firebase config. Firebase Analytics requires this field to' +\r\n        'contain a valid app ID.',\r\n    [\"no-client-id\" /* AnalyticsError.NO_CLIENT_ID */]: 'The \"client_id\" field is empty.',\r\n    [\"invalid-gtag-resource\" /* AnalyticsError.INVALID_GTAG_RESOURCE */]: 'Trusted Types detected an invalid gtag resource: {$gtagURL}.'\r\n};\r\nconst ERROR_FACTORY = new _firebase_util__WEBPACK_IMPORTED_MODULE_2__.ErrorFactory('analytics', 'Analytics', ERRORS);\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Verifies and creates a TrustedScriptURL.\r\n */\r\nfunction createGtagTrustedTypesScriptURL(url) {\r\n    if (!url.startsWith(GTAG_URL)) {\r\n        const err = ERROR_FACTORY.create(\"invalid-gtag-resource\" /* AnalyticsError.INVALID_GTAG_RESOURCE */, {\r\n            gtagURL: url\r\n        });\r\n        logger.warn(err.message);\r\n        return '';\r\n    }\r\n    return url;\r\n}\r\n/**\r\n * Makeshift polyfill for Promise.allSettled(). Resolves when all promises\r\n * have either resolved or rejected.\r\n *\r\n * @param promises Array of promises to wait for.\r\n */\r\nfunction promiseAllSettled(promises) {\r\n    return Promise.all(promises.map(promise => promise.catch(e => e)));\r\n}\r\n/**\r\n * Creates a TrustedTypePolicy object that implements the rules passed as policyOptions.\r\n *\r\n * @param policyName A string containing the name of the policy\r\n * @param policyOptions Object containing implementations of instance methods for TrustedTypesPolicy, see {@link https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicy#instance_methods\r\n * | the TrustedTypePolicy reference documentation}.\r\n */\r\nfunction createTrustedTypesPolicy(policyName, policyOptions) {\r\n    // Create a TrustedTypes policy that we can use for updating src\r\n    // properties\r\n    let trustedTypesPolicy;\r\n    if (window.trustedTypes) {\r\n        trustedTypesPolicy = window.trustedTypes.createPolicy(policyName, policyOptions);\r\n    }\r\n    return trustedTypesPolicy;\r\n}\r\n/**\r\n * Inserts gtag script tag into the page to asynchronously download gtag.\r\n * @param dataLayerName Name of datalayer (most often the default, \"_dataLayer\").\r\n */\r\nfunction insertScriptTag(dataLayerName, measurementId) {\r\n    const trustedTypesPolicy = createTrustedTypesPolicy('firebase-js-sdk-policy', {\r\n        createScriptURL: createGtagTrustedTypesScriptURL\r\n    });\r\n    const script = document.createElement('script');\r\n    // We are not providing an analyticsId in the URL because it would trigger a `page_view`\r\n    // without fid. We will initialize ga-id using gtag (config) command together with fid.\r\n    const gtagScriptURL = `${GTAG_URL}?l=${dataLayerName}&id=${measurementId}`;\r\n    script.src = trustedTypesPolicy\r\n        ? trustedTypesPolicy === null || trustedTypesPolicy === void 0 ? void 0 : trustedTypesPolicy.createScriptURL(gtagScriptURL)\r\n        : gtagScriptURL;\r\n    script.async = true;\r\n    document.head.appendChild(script);\r\n}\r\n/**\r\n * Get reference to, or create, global datalayer.\r\n * @param dataLayerName Name of datalayer (most often the default, \"_dataLayer\").\r\n */\r\nfunction getOrCreateDataLayer(dataLayerName) {\r\n    // Check for existing dataLayer and create if needed.\r\n    let dataLayer = [];\r\n    if (Array.isArray(window[dataLayerName])) {\r\n        dataLayer = window[dataLayerName];\r\n    }\r\n    else {\r\n        window[dataLayerName] = dataLayer;\r\n    }\r\n    return dataLayer;\r\n}\r\n/**\r\n * Wrapped gtag logic when gtag is called with 'config' command.\r\n *\r\n * @param gtagCore Basic gtag function that just appends to dataLayer.\r\n * @param initializationPromisesMap Map of appIds to their initialization promises.\r\n * @param dynamicConfigPromisesList Array of dynamic config fetch promises.\r\n * @param measurementIdToAppId Map of GA measurementIDs to corresponding Firebase appId.\r\n * @param measurementId GA Measurement ID to set config for.\r\n * @param gtagParams Gtag config params to set.\r\n */\r\nasync function gtagOnConfig(gtagCore, initializationPromisesMap, dynamicConfigPromisesList, measurementIdToAppId, measurementId, gtagParams) {\r\n    // If config is already fetched, we know the appId and can use it to look up what FID promise we\r\n    /// are waiting for, and wait only on that one.\r\n    const correspondingAppId = measurementIdToAppId[measurementId];\r\n    try {\r\n        if (correspondingAppId) {\r\n            await initializationPromisesMap[correspondingAppId];\r\n        }\r\n        else {\r\n            // If config is not fetched yet, wait for all configs (we don't know which one we need) and\r\n            // find the appId (if any) corresponding to this measurementId. If there is one, wait on\r\n            // that appId's initialization promise. If there is none, promise resolves and gtag\r\n            // call goes through.\r\n            const dynamicConfigResults = await promiseAllSettled(dynamicConfigPromisesList);\r\n            const foundConfig = dynamicConfigResults.find(config => config.measurementId === measurementId);\r\n            if (foundConfig) {\r\n                await initializationPromisesMap[foundConfig.appId];\r\n            }\r\n        }\r\n    }\r\n    catch (e) {\r\n        logger.error(e);\r\n    }\r\n    gtagCore(\"config\" /* GtagCommand.CONFIG */, measurementId, gtagParams);\r\n}\r\n/**\r\n * Wrapped gtag logic when gtag is called with 'event' command.\r\n *\r\n * @param gtagCore Basic gtag function that just appends to dataLayer.\r\n * @param initializationPromisesMap Map of appIds to their initialization promises.\r\n * @param dynamicConfigPromisesList Array of dynamic config fetch promises.\r\n * @param measurementId GA Measurement ID to log event to.\r\n * @param gtagParams Params to log with this event.\r\n */\r\nasync function gtagOnEvent(gtagCore, initializationPromisesMap, dynamicConfigPromisesList, measurementId, gtagParams) {\r\n    try {\r\n        let initializationPromisesToWaitFor = [];\r\n        // If there's a 'send_to' param, check if any ID specified matches\r\n        // an initializeIds() promise we are waiting for.\r\n        if (gtagParams && gtagParams['send_to']) {\r\n            let gaSendToList = gtagParams['send_to'];\r\n            // Make it an array if is isn't, so it can be dealt with the same way.\r\n            if (!Array.isArray(gaSendToList)) {\r\n                gaSendToList = [gaSendToList];\r\n            }\r\n            // Checking 'send_to' fields requires having all measurement ID results back from\r\n            // the dynamic config fetch.\r\n            const dynamicConfigResults = await promiseAllSettled(dynamicConfigPromisesList);\r\n            for (const sendToId of gaSendToList) {\r\n                // Any fetched dynamic measurement ID that matches this 'send_to' ID\r\n                const foundConfig = dynamicConfigResults.find(config => config.measurementId === sendToId);\r\n                const initializationPromise = foundConfig && initializationPromisesMap[foundConfig.appId];\r\n                if (initializationPromise) {\r\n                    initializationPromisesToWaitFor.push(initializationPromise);\r\n                }\r\n                else {\r\n                    // Found an item in 'send_to' that is not associated\r\n                    // directly with an FID, possibly a group.  Empty this array,\r\n                    // exit the loop early, and let it get populated below.\r\n                    initializationPromisesToWaitFor = [];\r\n                    break;\r\n                }\r\n            }\r\n        }\r\n        // This will be unpopulated if there was no 'send_to' field , or\r\n        // if not all entries in the 'send_to' field could be mapped to\r\n        // a FID. In these cases, wait on all pending initialization promises.\r\n        if (initializationPromisesToWaitFor.length === 0) {\r\n            initializationPromisesToWaitFor = Object.values(initializationPromisesMap);\r\n        }\r\n        // Run core gtag function with args after all relevant initialization\r\n        // promises have been resolved.\r\n        await Promise.all(initializationPromisesToWaitFor);\r\n        // Workaround for http://b/141370449 - third argument cannot be undefined.\r\n        gtagCore(\"event\" /* GtagCommand.EVENT */, measurementId, gtagParams || {});\r\n    }\r\n    catch (e) {\r\n        logger.error(e);\r\n    }\r\n}\r\n/**\r\n * Wraps a standard gtag function with extra code to wait for completion of\r\n * relevant initialization promises before sending requests.\r\n *\r\n * @param gtagCore Basic gtag function that just appends to dataLayer.\r\n * @param initializationPromisesMap Map of appIds to their initialization promises.\r\n * @param dynamicConfigPromisesList Array of dynamic config fetch promises.\r\n * @param measurementIdToAppId Map of GA measurementIDs to corresponding Firebase appId.\r\n */\r\nfunction wrapGtag(gtagCore, \r\n/**\r\n * Allows wrapped gtag calls to wait on whichever intialization promises are required,\r\n * depending on the contents of the gtag params' `send_to` field, if any.\r\n */\r\ninitializationPromisesMap, \r\n/**\r\n * Wrapped gtag calls sometimes require all dynamic config fetches to have returned\r\n * before determining what initialization promises (which include FIDs) to wait for.\r\n */\r\ndynamicConfigPromisesList, \r\n/**\r\n * Wrapped gtag config calls can narrow down which initialization promise (with FID)\r\n * to wait for if the measurementId is already fetched, by getting the corresponding appId,\r\n * which is the key for the initialization promises map.\r\n */\r\nmeasurementIdToAppId) {\r\n    /**\r\n     * Wrapper around gtag that ensures FID is sent with gtag calls.\r\n     * @param command Gtag command type.\r\n     * @param idOrNameOrParams Measurement ID if command is EVENT/CONFIG, params if command is SET.\r\n     * @param gtagParams Params if event is EVENT/CONFIG.\r\n     */\r\n    async function gtagWrapper(command, ...args) {\r\n        try {\r\n            // If event, check that relevant initialization promises have completed.\r\n            if (command === \"event\" /* GtagCommand.EVENT */) {\r\n                const [measurementId, gtagParams] = args;\r\n                // If EVENT, second arg must be measurementId.\r\n                await gtagOnEvent(gtagCore, initializationPromisesMap, dynamicConfigPromisesList, measurementId, gtagParams);\r\n            }\r\n            else if (command === \"config\" /* GtagCommand.CONFIG */) {\r\n                const [measurementId, gtagParams] = args;\r\n                // If CONFIG, second arg must be measurementId.\r\n                await gtagOnConfig(gtagCore, initializationPromisesMap, dynamicConfigPromisesList, measurementIdToAppId, measurementId, gtagParams);\r\n            }\r\n            else if (command === \"consent\" /* GtagCommand.CONSENT */) {\r\n                const [gtagParams] = args;\r\n                gtagCore(\"consent\" /* GtagCommand.CONSENT */, 'update', gtagParams);\r\n            }\r\n            else if (command === \"get\" /* GtagCommand.GET */) {\r\n                const [measurementId, fieldName, callback] = args;\r\n                gtagCore(\"get\" /* GtagCommand.GET */, measurementId, fieldName, callback);\r\n            }\r\n            else if (command === \"set\" /* GtagCommand.SET */) {\r\n                const [customParams] = args;\r\n                // If SET, second arg must be params.\r\n                gtagCore(\"set\" /* GtagCommand.SET */, customParams);\r\n            }\r\n            else {\r\n                gtagCore(command, ...args);\r\n            }\r\n        }\r\n        catch (e) {\r\n            logger.error(e);\r\n        }\r\n    }\r\n    return gtagWrapper;\r\n}\r\n/**\r\n * Creates global gtag function or wraps existing one if found.\r\n * This wrapped function attaches Firebase instance ID (FID) to gtag 'config' and\r\n * 'event' calls that belong to the GAID associated with this Firebase instance.\r\n *\r\n * @param initializationPromisesMap Map of appIds to their initialization promises.\r\n * @param dynamicConfigPromisesList Array of dynamic config fetch promises.\r\n * @param measurementIdToAppId Map of GA measurementIDs to corresponding Firebase appId.\r\n * @param dataLayerName Name of global GA datalayer array.\r\n * @param gtagFunctionName Name of global gtag function (\"gtag\" if not user-specified).\r\n */\r\nfunction wrapOrCreateGtag(initializationPromisesMap, dynamicConfigPromisesList, measurementIdToAppId, dataLayerName, gtagFunctionName) {\r\n    // Create a basic core gtag function\r\n    let gtagCore = function (..._args) {\r\n        // Must push IArguments object, not an array.\r\n        window[dataLayerName].push(arguments);\r\n    };\r\n    // Replace it with existing one if found\r\n    if (window[gtagFunctionName] &&\r\n        typeof window[gtagFunctionName] === 'function') {\r\n        // @ts-ignore\r\n        gtagCore = window[gtagFunctionName];\r\n    }\r\n    window[gtagFunctionName] = wrapGtag(gtagCore, initializationPromisesMap, dynamicConfigPromisesList, measurementIdToAppId);\r\n    return {\r\n        gtagCore,\r\n        wrappedGtag: window[gtagFunctionName]\r\n    };\r\n}\r\n/**\r\n * Returns the script tag in the DOM matching both the gtag url pattern\r\n * and the provided data layer name.\r\n */\r\nfunction findGtagScriptOnPage(dataLayerName) {\r\n    const scriptTags = window.document.getElementsByTagName('script');\r\n    for (const tag of Object.values(scriptTags)) {\r\n        if (tag.src &&\r\n            tag.src.includes(GTAG_URL) &&\r\n            tag.src.includes(dataLayerName)) {\r\n            return tag;\r\n        }\r\n    }\r\n    return null;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2020 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Backoff factor for 503 errors, which we want to be conservative about\r\n * to avoid overloading servers. Each retry interval will be\r\n * BASE_INTERVAL_MILLIS * LONG_RETRY_FACTOR ^ retryCount, so the second one\r\n * will be ~30 seconds (with fuzzing).\r\n */\r\nconst LONG_RETRY_FACTOR = 30;\r\n/**\r\n * Base wait interval to multiplied by backoffFactor^backoffCount.\r\n */\r\nconst BASE_INTERVAL_MILLIS = 1000;\r\n/**\r\n * Stubbable retry data storage class.\r\n */\r\nclass RetryData {\r\n    constructor(throttleMetadata = {}, intervalMillis = BASE_INTERVAL_MILLIS) {\r\n        this.throttleMetadata = throttleMetadata;\r\n        this.intervalMillis = intervalMillis;\r\n    }\r\n    getThrottleMetadata(appId) {\r\n        return this.throttleMetadata[appId];\r\n    }\r\n    setThrottleMetadata(appId, metadata) {\r\n        this.throttleMetadata[appId] = metadata;\r\n    }\r\n    deleteThrottleMetadata(appId) {\r\n        delete this.throttleMetadata[appId];\r\n    }\r\n}\r\nconst defaultRetryData = new RetryData();\r\n/**\r\n * Set GET request headers.\r\n * @param apiKey App API key.\r\n */\r\nfunction getHeaders(apiKey) {\r\n    return new Headers({\r\n        Accept: 'application/json',\r\n        'x-goog-api-key': apiKey\r\n    });\r\n}\r\n/**\r\n * Fetches dynamic config from backend.\r\n * @param app Firebase app to fetch config for.\r\n */\r\nasync function fetchDynamicConfig(appFields) {\r\n    var _a;\r\n    const { appId, apiKey } = appFields;\r\n    const request = {\r\n        method: 'GET',\r\n        headers: getHeaders(apiKey)\r\n    };\r\n    const appUrl = DYNAMIC_CONFIG_URL.replace('{app-id}', appId);\r\n    const response = await fetch(appUrl, request);\r\n    if (response.status !== 200 && response.status !== 304) {\r\n        let errorMessage = '';\r\n        try {\r\n            // Try to get any error message text from server response.\r\n            const jsonResponse = (await response.json());\r\n            if ((_a = jsonResponse.error) === null || _a === void 0 ? void 0 : _a.message) {\r\n                errorMessage = jsonResponse.error.message;\r\n            }\r\n        }\r\n        catch (_ignored) { }\r\n        throw ERROR_FACTORY.create(\"config-fetch-failed\" /* AnalyticsError.CONFIG_FETCH_FAILED */, {\r\n            httpStatus: response.status,\r\n            responseMessage: errorMessage\r\n        });\r\n    }\r\n    return response.json();\r\n}\r\n/**\r\n * Fetches dynamic config from backend, retrying if failed.\r\n * @param app Firebase app to fetch config for.\r\n */\r\nasync function fetchDynamicConfigWithRetry(app, \r\n// retryData and timeoutMillis are parameterized to allow passing a different value for testing.\r\nretryData = defaultRetryData, timeoutMillis) {\r\n    const { appId, apiKey, measurementId } = app.options;\r\n    if (!appId) {\r\n        throw ERROR_FACTORY.create(\"no-app-id\" /* AnalyticsError.NO_APP_ID */);\r\n    }\r\n    if (!apiKey) {\r\n        if (measurementId) {\r\n            return {\r\n                measurementId,\r\n                appId\r\n            };\r\n        }\r\n        throw ERROR_FACTORY.create(\"no-api-key\" /* AnalyticsError.NO_API_KEY */);\r\n    }\r\n    const throttleMetadata = retryData.getThrottleMetadata(appId) || {\r\n        backoffCount: 0,\r\n        throttleEndTimeMillis: Date.now()\r\n    };\r\n    const signal = new AnalyticsAbortSignal();\r\n    setTimeout(async () => {\r\n        // Note a very low delay, eg < 10ms, can elapse before listeners are initialized.\r\n        signal.abort();\r\n    }, timeoutMillis !== undefined ? timeoutMillis : FETCH_TIMEOUT_MILLIS);\r\n    return attemptFetchDynamicConfigWithRetry({ appId, apiKey, measurementId }, throttleMetadata, signal, retryData);\r\n}\r\n/**\r\n * Runs one retry attempt.\r\n * @param appFields Necessary app config fields.\r\n * @param throttleMetadata Ongoing metadata to determine throttling times.\r\n * @param signal Abort signal.\r\n */\r\nasync function attemptFetchDynamicConfigWithRetry(appFields, { throttleEndTimeMillis, backoffCount }, signal, retryData = defaultRetryData // for testing\r\n) {\r\n    var _a;\r\n    const { appId, measurementId } = appFields;\r\n    // Starts with a (potentially zero) timeout to support resumption from stored state.\r\n    // Ensures the throttle end time is honored if the last attempt timed out.\r\n    // Note the SDK will never make a request if the fetch timeout expires at this point.\r\n    try {\r\n        await setAbortableTimeout(signal, throttleEndTimeMillis);\r\n    }\r\n    catch (e) {\r\n        if (measurementId) {\r\n            logger.warn(`Timed out fetching this Firebase app's measurement ID from the server.` +\r\n                ` Falling back to the measurement ID ${measurementId}` +\r\n                ` provided in the \"measurementId\" field in the local Firebase config. [${e === null || e === void 0 ? void 0 : e.message}]`);\r\n            return { appId, measurementId };\r\n        }\r\n        throw e;\r\n    }\r\n    try {\r\n        const response = await fetchDynamicConfig(appFields);\r\n        // Note the SDK only clears throttle state if response is success or non-retriable.\r\n        retryData.deleteThrottleMetadata(appId);\r\n        return response;\r\n    }\r\n    catch (e) {\r\n        const error = e;\r\n        if (!isRetriableError(error)) {\r\n            retryData.deleteThrottleMetadata(appId);\r\n            if (measurementId) {\r\n                logger.warn(`Failed to fetch this Firebase app's measurement ID from the server.` +\r\n                    ` Falling back to the measurement ID ${measurementId}` +\r\n                    ` provided in the \"measurementId\" field in the local Firebase config. [${error === null || error === void 0 ? void 0 : error.message}]`);\r\n                return { appId, measurementId };\r\n            }\r\n            else {\r\n                throw e;\r\n            }\r\n        }\r\n        const backoffMillis = Number((_a = error === null || error === void 0 ? void 0 : error.customData) === null || _a === void 0 ? void 0 : _a.httpStatus) === 503\r\n            ? (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.calculateBackoffMillis)(backoffCount, retryData.intervalMillis, LONG_RETRY_FACTOR)\r\n            : (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.calculateBackoffMillis)(backoffCount, retryData.intervalMillis);\r\n        // Increments backoff state.\r\n        const throttleMetadata = {\r\n            throttleEndTimeMillis: Date.now() + backoffMillis,\r\n            backoffCount: backoffCount + 1\r\n        };\r\n        // Persists state.\r\n        retryData.setThrottleMetadata(appId, throttleMetadata);\r\n        logger.debug(`Calling attemptFetch again in ${backoffMillis} millis`);\r\n        return attemptFetchDynamicConfigWithRetry(appFields, throttleMetadata, signal, retryData);\r\n    }\r\n}\r\n/**\r\n * Supports waiting on a backoff by:\r\n *\r\n * <ul>\r\n *   <li>Promisifying setTimeout, so we can set a timeout in our Promise chain</li>\r\n *   <li>Listening on a signal bus for abort events, just like the Fetch API</li>\r\n *   <li>Failing in the same way the Fetch API fails, so timing out a live request and a throttled\r\n *       request appear the same.</li>\r\n * </ul>\r\n *\r\n * <p>Visible for testing.\r\n */\r\nfunction setAbortableTimeout(signal, throttleEndTimeMillis) {\r\n    return new Promise((resolve, reject) => {\r\n        // Derives backoff from given end time, normalizing negative numbers to zero.\r\n        const backoffMillis = Math.max(throttleEndTimeMillis - Date.now(), 0);\r\n        const timeout = setTimeout(resolve, backoffMillis);\r\n        // Adds listener, rather than sets onabort, because signal is a shared object.\r\n        signal.addEventListener(() => {\r\n            clearTimeout(timeout);\r\n            // If the request completes before this timeout, the rejection has no effect.\r\n            reject(ERROR_FACTORY.create(\"fetch-throttle\" /* AnalyticsError.FETCH_THROTTLE */, {\r\n                throttleEndTimeMillis\r\n            }));\r\n        });\r\n    });\r\n}\r\n/**\r\n * Returns true if the {@link Error} indicates a fetch request may succeed later.\r\n */\r\nfunction isRetriableError(e) {\r\n    if (!(e instanceof _firebase_util__WEBPACK_IMPORTED_MODULE_2__.FirebaseError) || !e.customData) {\r\n        return false;\r\n    }\r\n    // Uses string index defined by ErrorData, which FirebaseError implements.\r\n    const httpStatus = Number(e.customData['httpStatus']);\r\n    return (httpStatus === 429 ||\r\n        httpStatus === 500 ||\r\n        httpStatus === 503 ||\r\n        httpStatus === 504);\r\n}\r\n/**\r\n * Shims a minimal AbortSignal (copied from Remote Config).\r\n *\r\n * <p>AbortController's AbortSignal conveniently decouples fetch timeout logic from other aspects\r\n * of networking, such as retries. Firebase doesn't use AbortController enough to justify a\r\n * polyfill recommendation, like we do with the Fetch API, but this minimal shim can easily be\r\n * swapped out if/when we do.\r\n */\r\nclass AnalyticsAbortSignal {\r\n    constructor() {\r\n        this.listeners = [];\r\n    }\r\n    addEventListener(listener) {\r\n        this.listeners.push(listener);\r\n    }\r\n    abort() {\r\n        this.listeners.forEach(listener => listener());\r\n    }\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Event parameters to set on 'gtag' during initialization.\r\n */\r\nlet defaultEventParametersForInit;\r\n/**\r\n * Logs an analytics event through the Firebase SDK.\r\n *\r\n * @param gtagFunction Wrapped gtag function that waits for fid to be set before sending an event\r\n * @param eventName Google Analytics event name, choose from standard list or use a custom string.\r\n * @param eventParams Analytics event parameters.\r\n */\r\nasync function logEvent$1(gtagFunction, initializationPromise, eventName, eventParams, options) {\r\n    if (options && options.global) {\r\n        gtagFunction(\"event\" /* GtagCommand.EVENT */, eventName, eventParams);\r\n        return;\r\n    }\r\n    else {\r\n        const measurementId = await initializationPromise;\r\n        const params = Object.assign(Object.assign({}, eventParams), { 'send_to': measurementId });\r\n        gtagFunction(\"event\" /* GtagCommand.EVENT */, eventName, params);\r\n    }\r\n}\r\n/**\r\n * Set screen_name parameter for this Google Analytics ID.\r\n *\r\n * @deprecated Use {@link logEvent} with `eventName` as 'screen_view' and add relevant `eventParams`.\r\n * See {@link https://firebase.google.com/docs/analytics/screenviews | Track Screenviews}.\r\n *\r\n * @param gtagFunction Wrapped gtag function that waits for fid to be set before sending an event\r\n * @param screenName Screen name string to set.\r\n */\r\nasync function setCurrentScreen$1(gtagFunction, initializationPromise, screenName, options) {\r\n    if (options && options.global) {\r\n        gtagFunction(\"set\" /* GtagCommand.SET */, { 'screen_name': screenName });\r\n        return Promise.resolve();\r\n    }\r\n    else {\r\n        const measurementId = await initializationPromise;\r\n        gtagFunction(\"config\" /* GtagCommand.CONFIG */, measurementId, {\r\n            update: true,\r\n            'screen_name': screenName\r\n        });\r\n    }\r\n}\r\n/**\r\n * Set user_id parameter for this Google Analytics ID.\r\n *\r\n * @param gtagFunction Wrapped gtag function that waits for fid to be set before sending an event\r\n * @param id User ID string to set\r\n */\r\nasync function setUserId$1(gtagFunction, initializationPromise, id, options) {\r\n    if (options && options.global) {\r\n        gtagFunction(\"set\" /* GtagCommand.SET */, { 'user_id': id });\r\n        return Promise.resolve();\r\n    }\r\n    else {\r\n        const measurementId = await initializationPromise;\r\n        gtagFunction(\"config\" /* GtagCommand.CONFIG */, measurementId, {\r\n            update: true,\r\n            'user_id': id\r\n        });\r\n    }\r\n}\r\n/**\r\n * Set all other user properties other than user_id and screen_name.\r\n *\r\n * @param gtagFunction Wrapped gtag function that waits for fid to be set before sending an event\r\n * @param properties Map of user properties to set\r\n */\r\nasync function setUserProperties$1(gtagFunction, initializationPromise, properties, options) {\r\n    if (options && options.global) {\r\n        const flatProperties = {};\r\n        for (const key of Object.keys(properties)) {\r\n            // use dot notation for merge behavior in gtag.js\r\n            flatProperties[`user_properties.${key}`] = properties[key];\r\n        }\r\n        gtagFunction(\"set\" /* GtagCommand.SET */, flatProperties);\r\n        return Promise.resolve();\r\n    }\r\n    else {\r\n        const measurementId = await initializationPromise;\r\n        gtagFunction(\"config\" /* GtagCommand.CONFIG */, measurementId, {\r\n            update: true,\r\n            'user_properties': properties\r\n        });\r\n    }\r\n}\r\n/**\r\n * Retrieves a unique Google Analytics identifier for the web client.\r\n * See {@link https://developers.google.com/analytics/devguides/collection/ga4/reference/config#client_id | client_id}.\r\n *\r\n * @param gtagFunction Wrapped gtag function that waits for fid to be set before sending an event\r\n */\r\nasync function internalGetGoogleAnalyticsClientId(gtagFunction, initializationPromise) {\r\n    const measurementId = await initializationPromise;\r\n    return new Promise((resolve, reject) => {\r\n        gtagFunction(\"get\" /* GtagCommand.GET */, measurementId, 'client_id', (clientId) => {\r\n            if (!clientId) {\r\n                reject(ERROR_FACTORY.create(\"no-client-id\" /* AnalyticsError.NO_CLIENT_ID */));\r\n            }\r\n            resolve(clientId);\r\n        });\r\n    });\r\n}\r\n/**\r\n * Set whether collection is enabled for this ID.\r\n *\r\n * @param enabled If true, collection is enabled for this ID.\r\n */\r\nasync function setAnalyticsCollectionEnabled$1(initializationPromise, enabled) {\r\n    const measurementId = await initializationPromise;\r\n    window[`ga-disable-${measurementId}`] = !enabled;\r\n}\r\n/**\r\n * Consent parameters to default to during 'gtag' initialization.\r\n */\r\nlet defaultConsentSettingsForInit;\r\n/**\r\n * Sets the variable {@link defaultConsentSettingsForInit} for use in the initialization of\r\n * analytics.\r\n *\r\n * @param consentSettings Maps the applicable end user consent state for gtag.js.\r\n */\r\nfunction _setConsentDefaultForInit(consentSettings) {\r\n    defaultConsentSettingsForInit = consentSettings;\r\n}\r\n/**\r\n * Sets the variable `defaultEventParametersForInit` for use in the initialization of\r\n * analytics.\r\n *\r\n * @param customParams Any custom params the user may pass to gtag.js.\r\n */\r\nfunction _setDefaultEventParametersForInit(customParams) {\r\n    defaultEventParametersForInit = customParams;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2020 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nasync function validateIndexedDB() {\r\n    if (!(0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.isIndexedDBAvailable)()) {\r\n        logger.warn(ERROR_FACTORY.create(\"indexeddb-unavailable\" /* AnalyticsError.INDEXEDDB_UNAVAILABLE */, {\r\n            errorInfo: 'IndexedDB is not available in this environment.'\r\n        }).message);\r\n        return false;\r\n    }\r\n    else {\r\n        try {\r\n            await (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.validateIndexedDBOpenable)();\r\n        }\r\n        catch (e) {\r\n            logger.warn(ERROR_FACTORY.create(\"indexeddb-unavailable\" /* AnalyticsError.INDEXEDDB_UNAVAILABLE */, {\r\n                errorInfo: e === null || e === void 0 ? void 0 : e.toString()\r\n            }).message);\r\n            return false;\r\n        }\r\n    }\r\n    return true;\r\n}\r\n/**\r\n * Initialize the analytics instance in gtag.js by calling config command with fid.\r\n *\r\n * NOTE: We combine analytics initialization and setting fid together because we want fid to be\r\n * part of the `page_view` event that's sent during the initialization\r\n * @param app Firebase app\r\n * @param gtagCore The gtag function that's not wrapped.\r\n * @param dynamicConfigPromisesList Array of all dynamic config promises.\r\n * @param measurementIdToAppId Maps measurementID to appID.\r\n * @param installations _FirebaseInstallationsInternal instance.\r\n *\r\n * @returns Measurement ID.\r\n */\r\nasync function _initializeAnalytics(app, dynamicConfigPromisesList, measurementIdToAppId, installations, gtagCore, dataLayerName, options) {\r\n    var _a;\r\n    const dynamicConfigPromise = fetchDynamicConfigWithRetry(app);\r\n    // Once fetched, map measurementIds to appId, for ease of lookup in wrapped gtag function.\r\n    dynamicConfigPromise\r\n        .then(config => {\r\n        measurementIdToAppId[config.measurementId] = config.appId;\r\n        if (app.options.measurementId &&\r\n            config.measurementId !== app.options.measurementId) {\r\n            logger.warn(`The measurement ID in the local Firebase config (${app.options.measurementId})` +\r\n                ` does not match the measurement ID fetched from the server (${config.measurementId}).` +\r\n                ` To ensure analytics events are always sent to the correct Analytics property,` +\r\n                ` update the` +\r\n                ` measurement ID field in the local config or remove it from the local config.`);\r\n        }\r\n    })\r\n        .catch(e => logger.error(e));\r\n    // Add to list to track state of all dynamic config promises.\r\n    dynamicConfigPromisesList.push(dynamicConfigPromise);\r\n    const fidPromise = validateIndexedDB().then(envIsValid => {\r\n        if (envIsValid) {\r\n            return installations.getId();\r\n        }\r\n        else {\r\n            return undefined;\r\n        }\r\n    });\r\n    const [dynamicConfig, fid] = await Promise.all([\r\n        dynamicConfigPromise,\r\n        fidPromise\r\n    ]);\r\n    // Detect if user has already put the gtag <script> tag on this page with the passed in\r\n    // data layer name.\r\n    if (!findGtagScriptOnPage(dataLayerName)) {\r\n        insertScriptTag(dataLayerName, dynamicConfig.measurementId);\r\n    }\r\n    // Detects if there are consent settings that need to be configured.\r\n    if (defaultConsentSettingsForInit) {\r\n        gtagCore(\"consent\" /* GtagCommand.CONSENT */, 'default', defaultConsentSettingsForInit);\r\n        _setConsentDefaultForInit(undefined);\r\n    }\r\n    // This command initializes gtag.js and only needs to be called once for the entire web app,\r\n    // but since it is idempotent, we can call it multiple times.\r\n    // We keep it together with other initialization logic for better code structure.\r\n    // eslint-disable-next-line @typescript-eslint/no-explicit-any\r\n    gtagCore('js', new Date());\r\n    // User config added first. We don't want users to accidentally overwrite\r\n    // base Firebase config properties.\r\n    const configProperties = (_a = options === null || options === void 0 ? void 0 : options.config) !== null && _a !== void 0 ? _a : {};\r\n    // guard against developers accidentally setting properties with prefix `firebase_`\r\n    configProperties[ORIGIN_KEY] = 'firebase';\r\n    configProperties.update = true;\r\n    if (fid != null) {\r\n        configProperties[GA_FID_KEY] = fid;\r\n    }\r\n    // It should be the first config command called on this GA-ID\r\n    // Initialize this GA-ID and set FID on it using the gtag config API.\r\n    // Note: This will trigger a page_view event unless 'send_page_view' is set to false in\r\n    // `configProperties`.\r\n    gtagCore(\"config\" /* GtagCommand.CONFIG */, dynamicConfig.measurementId, configProperties);\r\n    // Detects if there is data that will be set on every event logged from the SDK.\r\n    if (defaultEventParametersForInit) {\r\n        gtagCore(\"set\" /* GtagCommand.SET */, defaultEventParametersForInit);\r\n        _setDefaultEventParametersForInit(undefined);\r\n    }\r\n    return dynamicConfig.measurementId;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Analytics Service class.\r\n */\r\nclass AnalyticsService {\r\n    constructor(app) {\r\n        this.app = app;\r\n    }\r\n    _delete() {\r\n        delete initializationPromisesMap[this.app.options.appId];\r\n        return Promise.resolve();\r\n    }\r\n}\r\n/**\r\n * Maps appId to full initialization promise. Wrapped gtag calls must wait on\r\n * all or some of these, depending on the call's `send_to` param and the status\r\n * of the dynamic config fetches (see below).\r\n */\r\nlet initializationPromisesMap = {};\r\n/**\r\n * List of dynamic config fetch promises. In certain cases, wrapped gtag calls\r\n * wait on all these to be complete in order to determine if it can selectively\r\n * wait for only certain initialization (FID) promises or if it must wait for all.\r\n */\r\nlet dynamicConfigPromisesList = [];\r\n/**\r\n * Maps fetched measurementIds to appId. Populated when the app's dynamic config\r\n * fetch completes. If already populated, gtag config calls can use this to\r\n * selectively wait for only this app's initialization promise (FID) instead of all\r\n * initialization promises.\r\n */\r\nconst measurementIdToAppId = {};\r\n/**\r\n * Name for window global data layer array used by GA: defaults to 'dataLayer'.\r\n */\r\nlet dataLayerName = 'dataLayer';\r\n/**\r\n * Name for window global gtag function used by GA: defaults to 'gtag'.\r\n */\r\nlet gtagName = 'gtag';\r\n/**\r\n * Reproduction of standard gtag function or reference to existing\r\n * gtag function on window object.\r\n */\r\nlet gtagCoreFunction;\r\n/**\r\n * Wrapper around gtag function that ensures FID is sent with all\r\n * relevant event and config calls.\r\n */\r\nlet wrappedGtagFunction;\r\n/**\r\n * Flag to ensure page initialization steps (creation or wrapping of\r\n * dataLayer and gtag script) are only run once per page load.\r\n */\r\nlet globalInitDone = false;\r\n/**\r\n * Configures Firebase Analytics to use custom `gtag` or `dataLayer` names.\r\n * Intended to be used if `gtag.js` script has been installed on\r\n * this page independently of Firebase Analytics, and is using non-default\r\n * names for either the `gtag` function or for `dataLayer`.\r\n * Must be called before calling `getAnalytics()` or it won't\r\n * have any effect.\r\n *\r\n * @public\r\n *\r\n * @param options - Custom gtag and dataLayer names.\r\n */\r\nfunction settings(options) {\r\n    if (globalInitDone) {\r\n        throw ERROR_FACTORY.create(\"already-initialized\" /* AnalyticsError.ALREADY_INITIALIZED */);\r\n    }\r\n    if (options.dataLayerName) {\r\n        dataLayerName = options.dataLayerName;\r\n    }\r\n    if (options.gtagName) {\r\n        gtagName = options.gtagName;\r\n    }\r\n}\r\n/**\r\n * Returns true if no environment mismatch is found.\r\n * If environment mismatches are found, throws an INVALID_ANALYTICS_CONTEXT\r\n * error that also lists details for each mismatch found.\r\n */\r\nfunction warnOnBrowserContextMismatch() {\r\n    const mismatchedEnvMessages = [];\r\n    if ((0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.isBrowserExtension)()) {\r\n        mismatchedEnvMessages.push('This is a browser extension environment.');\r\n    }\r\n    if (!(0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.areCookiesEnabled)()) {\r\n        mismatchedEnvMessages.push('Cookies are not available.');\r\n    }\r\n    if (mismatchedEnvMessages.length > 0) {\r\n        const details = mismatchedEnvMessages\r\n            .map((message, index) => `(${index + 1}) ${message}`)\r\n            .join(' ');\r\n        const err = ERROR_FACTORY.create(\"invalid-analytics-context\" /* AnalyticsError.INVALID_ANALYTICS_CONTEXT */, {\r\n            errorInfo: details\r\n        });\r\n        logger.warn(err.message);\r\n    }\r\n}\r\n/**\r\n * Analytics instance factory.\r\n * @internal\r\n */\r\nfunction factory(app, installations, options) {\r\n    warnOnBrowserContextMismatch();\r\n    const appId = app.options.appId;\r\n    if (!appId) {\r\n        throw ERROR_FACTORY.create(\"no-app-id\" /* AnalyticsError.NO_APP_ID */);\r\n    }\r\n    if (!app.options.apiKey) {\r\n        if (app.options.measurementId) {\r\n            logger.warn(`The \"apiKey\" field is empty in the local Firebase config. This is needed to fetch the latest` +\r\n                ` measurement ID for this Firebase app. Falling back to the measurement ID ${app.options.measurementId}` +\r\n                ` provided in the \"measurementId\" field in the local Firebase config.`);\r\n        }\r\n        else {\r\n            throw ERROR_FACTORY.create(\"no-api-key\" /* AnalyticsError.NO_API_KEY */);\r\n        }\r\n    }\r\n    if (initializationPromisesMap[appId] != null) {\r\n        throw ERROR_FACTORY.create(\"already-exists\" /* AnalyticsError.ALREADY_EXISTS */, {\r\n            id: appId\r\n        });\r\n    }\r\n    if (!globalInitDone) {\r\n        // Steps here should only be done once per page: creation or wrapping\r\n        // of dataLayer and global gtag function.\r\n        getOrCreateDataLayer(dataLayerName);\r\n        const { wrappedGtag, gtagCore } = wrapOrCreateGtag(initializationPromisesMap, dynamicConfigPromisesList, measurementIdToAppId, dataLayerName, gtagName);\r\n        wrappedGtagFunction = wrappedGtag;\r\n        gtagCoreFunction = gtagCore;\r\n        globalInitDone = true;\r\n    }\r\n    // Async but non-blocking.\r\n    // This map reflects the completion state of all promises for each appId.\r\n    initializationPromisesMap[appId] = _initializeAnalytics(app, dynamicConfigPromisesList, measurementIdToAppId, installations, gtagCoreFunction, dataLayerName, options);\r\n    const analyticsInstance = new AnalyticsService(app);\r\n    return analyticsInstance;\r\n}\n\n/* eslint-disable @typescript-eslint/no-explicit-any */\r\n/**\r\n * Returns an {@link Analytics} instance for the given app.\r\n *\r\n * @public\r\n *\r\n * @param app - The {@link @firebase/app#FirebaseApp} to use.\r\n */\r\nfunction getAnalytics(app = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.getApp)()) {\r\n    app = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(app);\r\n    // Dependencies\r\n    const analyticsProvider = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._getProvider)(app, ANALYTICS_TYPE);\r\n    if (analyticsProvider.isInitialized()) {\r\n        return analyticsProvider.getImmediate();\r\n    }\r\n    return initializeAnalytics(app);\r\n}\r\n/**\r\n * Returns an {@link Analytics} instance for the given app.\r\n *\r\n * @public\r\n *\r\n * @param app - The {@link @firebase/app#FirebaseApp} to use.\r\n */\r\nfunction initializeAnalytics(app, options = {}) {\r\n    // Dependencies\r\n    const analyticsProvider = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._getProvider)(app, ANALYTICS_TYPE);\r\n    if (analyticsProvider.isInitialized()) {\r\n        const existingInstance = analyticsProvider.getImmediate();\r\n        if ((0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.deepEqual)(options, analyticsProvider.getOptions())) {\r\n            return existingInstance;\r\n        }\r\n        else {\r\n            throw ERROR_FACTORY.create(\"already-initialized\" /* AnalyticsError.ALREADY_INITIALIZED */);\r\n        }\r\n    }\r\n    const analyticsInstance = analyticsProvider.initialize({ options });\r\n    return analyticsInstance;\r\n}\r\n/**\r\n * This is a public static method provided to users that wraps four different checks:\r\n *\r\n * 1. Check if it's not a browser extension environment.\r\n * 2. Check if cookies are enabled in current browser.\r\n * 3. Check if IndexedDB is supported by the browser environment.\r\n * 4. Check if the current browser context is valid for using `IndexedDB.open()`.\r\n *\r\n * @public\r\n *\r\n */\r\nasync function isSupported() {\r\n    if ((0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.isBrowserExtension)()) {\r\n        return false;\r\n    }\r\n    if (!(0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.areCookiesEnabled)()) {\r\n        return false;\r\n    }\r\n    if (!(0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.isIndexedDBAvailable)()) {\r\n        return false;\r\n    }\r\n    try {\r\n        const isDBOpenable = await (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.validateIndexedDBOpenable)();\r\n        return isDBOpenable;\r\n    }\r\n    catch (error) {\r\n        return false;\r\n    }\r\n}\r\n/**\r\n * Use gtag `config` command to set `screen_name`.\r\n *\r\n * @public\r\n *\r\n * @deprecated Use {@link logEvent} with `eventName` as 'screen_view' and add relevant `eventParams`.\r\n * See {@link https://firebase.google.com/docs/analytics/screenviews | Track Screenviews}.\r\n *\r\n * @param analyticsInstance - The {@link Analytics} instance.\r\n * @param screenName - Screen name to set.\r\n */\r\nfunction setCurrentScreen(analyticsInstance, screenName, options) {\r\n    analyticsInstance = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(analyticsInstance);\r\n    setCurrentScreen$1(wrappedGtagFunction, initializationPromisesMap[analyticsInstance.app.options.appId], screenName, options).catch(e => logger.error(e));\r\n}\r\n/**\r\n * Retrieves a unique Google Analytics identifier for the web client.\r\n * See {@link https://developers.google.com/analytics/devguides/collection/ga4/reference/config#client_id | client_id}.\r\n *\r\n * @public\r\n *\r\n * @param app - The {@link @firebase/app#FirebaseApp} to use.\r\n */\r\nasync function getGoogleAnalyticsClientId(analyticsInstance) {\r\n    analyticsInstance = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(analyticsInstance);\r\n    return internalGetGoogleAnalyticsClientId(wrappedGtagFunction, initializationPromisesMap[analyticsInstance.app.options.appId]);\r\n}\r\n/**\r\n * Use gtag `config` command to set `user_id`.\r\n *\r\n * @public\r\n *\r\n * @param analyticsInstance - The {@link Analytics} instance.\r\n * @param id - User ID to set.\r\n */\r\nfunction setUserId(analyticsInstance, id, options) {\r\n    analyticsInstance = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(analyticsInstance);\r\n    setUserId$1(wrappedGtagFunction, initializationPromisesMap[analyticsInstance.app.options.appId], id, options).catch(e => logger.error(e));\r\n}\r\n/**\r\n * Use gtag `config` command to set all params specified.\r\n *\r\n * @public\r\n */\r\nfunction setUserProperties(analyticsInstance, properties, options) {\r\n    analyticsInstance = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(analyticsInstance);\r\n    setUserProperties$1(wrappedGtagFunction, initializationPromisesMap[analyticsInstance.app.options.appId], properties, options).catch(e => logger.error(e));\r\n}\r\n/**\r\n * Sets whether Google Analytics collection is enabled for this app on this device.\r\n * Sets global `window['ga-disable-analyticsId'] = true;`\r\n *\r\n * @public\r\n *\r\n * @param analyticsInstance - The {@link Analytics} instance.\r\n * @param enabled - If true, enables collection, if false, disables it.\r\n */\r\nfunction setAnalyticsCollectionEnabled(analyticsInstance, enabled) {\r\n    analyticsInstance = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(analyticsInstance);\r\n    setAnalyticsCollectionEnabled$1(initializationPromisesMap[analyticsInstance.app.options.appId], enabled).catch(e => logger.error(e));\r\n}\r\n/**\r\n * Adds data that will be set on every event logged from the SDK, including automatic ones.\r\n * With gtag's \"set\" command, the values passed persist on the current page and are passed with\r\n * all subsequent events.\r\n * @public\r\n * @param customParams - Any custom params the user may pass to gtag.js.\r\n */\r\nfunction setDefaultEventParameters(customParams) {\r\n    // Check if reference to existing gtag function on window object exists\r\n    if (wrappedGtagFunction) {\r\n        wrappedGtagFunction(\"set\" /* GtagCommand.SET */, customParams);\r\n    }\r\n    else {\r\n        _setDefaultEventParametersForInit(customParams);\r\n    }\r\n}\r\n/**\r\n * Sends a Google Analytics event with given `eventParams`. This method\r\n * automatically associates this logged event with this Firebase web\r\n * app instance on this device.\r\n * List of official event parameters can be found in the gtag.js\r\n * reference documentation:\r\n * {@link https://developers.google.com/gtagjs/reference/ga4-events\r\n * | the GA4 reference documentation}.\r\n *\r\n * @public\r\n */\r\nfunction logEvent(analyticsInstance, eventName, eventParams, options) {\r\n    analyticsInstance = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(analyticsInstance);\r\n    logEvent$1(wrappedGtagFunction, initializationPromisesMap[analyticsInstance.app.options.appId], eventName, eventParams, options).catch(e => logger.error(e));\r\n}\r\n/**\r\n * Sets the applicable end user consent state for this web app across all gtag references once\r\n * Firebase Analytics is initialized.\r\n *\r\n * Use the {@link ConsentSettings} to specify individual consent type values. By default consent\r\n * types are set to \"granted\".\r\n * @public\r\n * @param consentSettings - Maps the applicable end user consent state for gtag.js.\r\n */\r\nfunction setConsent(consentSettings) {\r\n    // Check if reference to existing gtag function on window object exists\r\n    if (wrappedGtagFunction) {\r\n        wrappedGtagFunction(\"consent\" /* GtagCommand.CONSENT */, 'update', consentSettings);\r\n    }\r\n    else {\r\n        _setConsentDefaultForInit(consentSettings);\r\n    }\r\n}\n\nconst name = \"@firebase/analytics\";\nconst version = \"0.10.3\";\n\n/**\r\n * The Firebase Analytics Web SDK.\r\n * This SDK does not work in a Node.js environment.\r\n *\r\n * @packageDocumentation\r\n */\r\nfunction registerAnalytics() {\r\n    (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._registerComponent)(new _firebase_component__WEBPACK_IMPORTED_MODULE_3__.Component(ANALYTICS_TYPE, (container, { options: analyticsOptions }) => {\r\n        // getImmediate for FirebaseApp will always succeed\r\n        const app = container.getProvider('app').getImmediate();\r\n        const installations = container\r\n            .getProvider('installations-internal')\r\n            .getImmediate();\r\n        return factory(app, installations, analyticsOptions);\r\n    }, \"PUBLIC\" /* ComponentType.PUBLIC */));\r\n    (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._registerComponent)(new _firebase_component__WEBPACK_IMPORTED_MODULE_3__.Component('analytics-internal', internalFactory, \"PRIVATE\" /* ComponentType.PRIVATE */));\r\n    (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.registerVersion)(name, version);\r\n    // BUILD_TARGET will be replaced by values like esm5, esm2017, cjs5, etc during the compilation\r\n    (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.registerVersion)(name, version, 'esm2017');\r\n    function internalFactory(container) {\r\n        try {\r\n            const analytics = container.getProvider(ANALYTICS_TYPE).getImmediate();\r\n            return {\r\n                logEvent: (eventName, eventParams, options) => logEvent(analytics, eventName, eventParams, options)\r\n            };\r\n        }\r\n        catch (e) {\r\n            throw ERROR_FACTORY.create(\"interop-component-reg-failed\" /* AnalyticsError.INTEROP_COMPONENT_REG_FAILED */, {\r\n                reason: e\r\n            });\r\n        }\r\n    }\r\n}\r\nregisterAnalytics();\n\n\n//# sourceMappingURL=index.esm2017.js.map\n\n\n//# sourceURL=webpack://daveads.github.io/./node_modules/@firebase/analytics/dist/esm/index.esm2017.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getAnalytics: () => (/* binding */ getAnalytics),
+/* harmony export */   getGoogleAnalyticsClientId: () => (/* binding */ getGoogleAnalyticsClientId),
+/* harmony export */   initializeAnalytics: () => (/* binding */ initializeAnalytics),
+/* harmony export */   isSupported: () => (/* binding */ isSupported),
+/* harmony export */   logEvent: () => (/* binding */ logEvent),
+/* harmony export */   setAnalyticsCollectionEnabled: () => (/* binding */ setAnalyticsCollectionEnabled),
+/* harmony export */   setConsent: () => (/* binding */ setConsent),
+/* harmony export */   setCurrentScreen: () => (/* binding */ setCurrentScreen),
+/* harmony export */   setDefaultEventParameters: () => (/* binding */ setDefaultEventParameters),
+/* harmony export */   setUserId: () => (/* binding */ setUserId),
+/* harmony export */   setUserProperties: () => (/* binding */ setUserProperties),
+/* harmony export */   settings: () => (/* binding */ settings)
+/* harmony export */ });
+/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/app */ "./node_modules/@firebase/app/dist/esm/index.esm2017.js");
+/* harmony import */ var _firebase_logger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @firebase/logger */ "./node_modules/@firebase/logger/dist/esm/index.esm2017.js");
+/* harmony import */ var _firebase_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @firebase/util */ "./node_modules/@firebase/util/dist/index.esm2017.js");
+/* harmony import */ var _firebase_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @firebase/component */ "./node_modules/@firebase/component/dist/esm/index.esm2017.js");
+/* harmony import */ var _firebase_installations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @firebase/installations */ "./node_modules/@firebase/installations/dist/esm/index.esm2017.js");
+
+
+
+
+
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Type constant for Firebase Analytics.
+ */
+const ANALYTICS_TYPE = 'analytics';
+// Key to attach FID to in gtag params.
+const GA_FID_KEY = 'firebase_id';
+const ORIGIN_KEY = 'origin';
+const FETCH_TIMEOUT_MILLIS = 60 * 1000;
+const DYNAMIC_CONFIG_URL = 'https://firebase.googleapis.com/v1alpha/projects/-/apps/{app-id}/webConfig';
+const GTAG_URL = 'https://www.googletagmanager.com/gtag/js';
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const logger = new _firebase_logger__WEBPACK_IMPORTED_MODULE_1__.Logger('@firebase/analytics');
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const ERRORS = {
+    ["already-exists" /* AnalyticsError.ALREADY_EXISTS */]: 'A Firebase Analytics instance with the appId {$id} ' +
+        ' already exists. ' +
+        'Only one Firebase Analytics instance can be created for each appId.',
+    ["already-initialized" /* AnalyticsError.ALREADY_INITIALIZED */]: 'initializeAnalytics() cannot be called again with different options than those ' +
+        'it was initially called with. It can be called again with the same options to ' +
+        'return the existing instance, or getAnalytics() can be used ' +
+        'to get a reference to the already-intialized instance.',
+    ["already-initialized-settings" /* AnalyticsError.ALREADY_INITIALIZED_SETTINGS */]: 'Firebase Analytics has already been initialized.' +
+        'settings() must be called before initializing any Analytics instance' +
+        'or it will have no effect.',
+    ["interop-component-reg-failed" /* AnalyticsError.INTEROP_COMPONENT_REG_FAILED */]: 'Firebase Analytics Interop Component failed to instantiate: {$reason}',
+    ["invalid-analytics-context" /* AnalyticsError.INVALID_ANALYTICS_CONTEXT */]: 'Firebase Analytics is not supported in this environment. ' +
+        'Wrap initialization of analytics in analytics.isSupported() ' +
+        'to prevent initialization in unsupported environments. Details: {$errorInfo}',
+    ["indexeddb-unavailable" /* AnalyticsError.INDEXEDDB_UNAVAILABLE */]: 'IndexedDB unavailable or restricted in this environment. ' +
+        'Wrap initialization of analytics in analytics.isSupported() ' +
+        'to prevent initialization in unsupported environments. Details: {$errorInfo}',
+    ["fetch-throttle" /* AnalyticsError.FETCH_THROTTLE */]: 'The config fetch request timed out while in an exponential backoff state.' +
+        ' Unix timestamp in milliseconds when fetch request throttling ends: {$throttleEndTimeMillis}.',
+    ["config-fetch-failed" /* AnalyticsError.CONFIG_FETCH_FAILED */]: 'Dynamic config fetch failed: [{$httpStatus}] {$responseMessage}',
+    ["no-api-key" /* AnalyticsError.NO_API_KEY */]: 'The "apiKey" field is empty in the local Firebase config. Firebase Analytics requires this field to' +
+        'contain a valid API key.',
+    ["no-app-id" /* AnalyticsError.NO_APP_ID */]: 'The "appId" field is empty in the local Firebase config. Firebase Analytics requires this field to' +
+        'contain a valid app ID.',
+    ["no-client-id" /* AnalyticsError.NO_CLIENT_ID */]: 'The "client_id" field is empty.',
+    ["invalid-gtag-resource" /* AnalyticsError.INVALID_GTAG_RESOURCE */]: 'Trusted Types detected an invalid gtag resource: {$gtagURL}.'
+};
+const ERROR_FACTORY = new _firebase_util__WEBPACK_IMPORTED_MODULE_2__.ErrorFactory('analytics', 'Analytics', ERRORS);
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Verifies and creates a TrustedScriptURL.
+ */
+function createGtagTrustedTypesScriptURL(url) {
+    if (!url.startsWith(GTAG_URL)) {
+        const err = ERROR_FACTORY.create("invalid-gtag-resource" /* AnalyticsError.INVALID_GTAG_RESOURCE */, {
+            gtagURL: url
+        });
+        logger.warn(err.message);
+        return '';
+    }
+    return url;
+}
+/**
+ * Makeshift polyfill for Promise.allSettled(). Resolves when all promises
+ * have either resolved or rejected.
+ *
+ * @param promises Array of promises to wait for.
+ */
+function promiseAllSettled(promises) {
+    return Promise.all(promises.map(promise => promise.catch(e => e)));
+}
+/**
+ * Creates a TrustedTypePolicy object that implements the rules passed as policyOptions.
+ *
+ * @param policyName A string containing the name of the policy
+ * @param policyOptions Object containing implementations of instance methods for TrustedTypesPolicy, see {@link https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicy#instance_methods
+ * | the TrustedTypePolicy reference documentation}.
+ */
+function createTrustedTypesPolicy(policyName, policyOptions) {
+    // Create a TrustedTypes policy that we can use for updating src
+    // properties
+    let trustedTypesPolicy;
+    if (window.trustedTypes) {
+        trustedTypesPolicy = window.trustedTypes.createPolicy(policyName, policyOptions);
+    }
+    return trustedTypesPolicy;
+}
+/**
+ * Inserts gtag script tag into the page to asynchronously download gtag.
+ * @param dataLayerName Name of datalayer (most often the default, "_dataLayer").
+ */
+function insertScriptTag(dataLayerName, measurementId) {
+    const trustedTypesPolicy = createTrustedTypesPolicy('firebase-js-sdk-policy', {
+        createScriptURL: createGtagTrustedTypesScriptURL
+    });
+    const script = document.createElement('script');
+    // We are not providing an analyticsId in the URL because it would trigger a `page_view`
+    // without fid. We will initialize ga-id using gtag (config) command together with fid.
+    const gtagScriptURL = `${GTAG_URL}?l=${dataLayerName}&id=${measurementId}`;
+    script.src = trustedTypesPolicy
+        ? trustedTypesPolicy === null || trustedTypesPolicy === void 0 ? void 0 : trustedTypesPolicy.createScriptURL(gtagScriptURL)
+        : gtagScriptURL;
+    script.async = true;
+    document.head.appendChild(script);
+}
+/**
+ * Get reference to, or create, global datalayer.
+ * @param dataLayerName Name of datalayer (most often the default, "_dataLayer").
+ */
+function getOrCreateDataLayer(dataLayerName) {
+    // Check for existing dataLayer and create if needed.
+    let dataLayer = [];
+    if (Array.isArray(window[dataLayerName])) {
+        dataLayer = window[dataLayerName];
+    }
+    else {
+        window[dataLayerName] = dataLayer;
+    }
+    return dataLayer;
+}
+/**
+ * Wrapped gtag logic when gtag is called with 'config' command.
+ *
+ * @param gtagCore Basic gtag function that just appends to dataLayer.
+ * @param initializationPromisesMap Map of appIds to their initialization promises.
+ * @param dynamicConfigPromisesList Array of dynamic config fetch promises.
+ * @param measurementIdToAppId Map of GA measurementIDs to corresponding Firebase appId.
+ * @param measurementId GA Measurement ID to set config for.
+ * @param gtagParams Gtag config params to set.
+ */
+async function gtagOnConfig(gtagCore, initializationPromisesMap, dynamicConfigPromisesList, measurementIdToAppId, measurementId, gtagParams) {
+    // If config is already fetched, we know the appId and can use it to look up what FID promise we
+    /// are waiting for, and wait only on that one.
+    const correspondingAppId = measurementIdToAppId[measurementId];
+    try {
+        if (correspondingAppId) {
+            await initializationPromisesMap[correspondingAppId];
+        }
+        else {
+            // If config is not fetched yet, wait for all configs (we don't know which one we need) and
+            // find the appId (if any) corresponding to this measurementId. If there is one, wait on
+            // that appId's initialization promise. If there is none, promise resolves and gtag
+            // call goes through.
+            const dynamicConfigResults = await promiseAllSettled(dynamicConfigPromisesList);
+            const foundConfig = dynamicConfigResults.find(config => config.measurementId === measurementId);
+            if (foundConfig) {
+                await initializationPromisesMap[foundConfig.appId];
+            }
+        }
+    }
+    catch (e) {
+        logger.error(e);
+    }
+    gtagCore("config" /* GtagCommand.CONFIG */, measurementId, gtagParams);
+}
+/**
+ * Wrapped gtag logic when gtag is called with 'event' command.
+ *
+ * @param gtagCore Basic gtag function that just appends to dataLayer.
+ * @param initializationPromisesMap Map of appIds to their initialization promises.
+ * @param dynamicConfigPromisesList Array of dynamic config fetch promises.
+ * @param measurementId GA Measurement ID to log event to.
+ * @param gtagParams Params to log with this event.
+ */
+async function gtagOnEvent(gtagCore, initializationPromisesMap, dynamicConfigPromisesList, measurementId, gtagParams) {
+    try {
+        let initializationPromisesToWaitFor = [];
+        // If there's a 'send_to' param, check if any ID specified matches
+        // an initializeIds() promise we are waiting for.
+        if (gtagParams && gtagParams['send_to']) {
+            let gaSendToList = gtagParams['send_to'];
+            // Make it an array if is isn't, so it can be dealt with the same way.
+            if (!Array.isArray(gaSendToList)) {
+                gaSendToList = [gaSendToList];
+            }
+            // Checking 'send_to' fields requires having all measurement ID results back from
+            // the dynamic config fetch.
+            const dynamicConfigResults = await promiseAllSettled(dynamicConfigPromisesList);
+            for (const sendToId of gaSendToList) {
+                // Any fetched dynamic measurement ID that matches this 'send_to' ID
+                const foundConfig = dynamicConfigResults.find(config => config.measurementId === sendToId);
+                const initializationPromise = foundConfig && initializationPromisesMap[foundConfig.appId];
+                if (initializationPromise) {
+                    initializationPromisesToWaitFor.push(initializationPromise);
+                }
+                else {
+                    // Found an item in 'send_to' that is not associated
+                    // directly with an FID, possibly a group.  Empty this array,
+                    // exit the loop early, and let it get populated below.
+                    initializationPromisesToWaitFor = [];
+                    break;
+                }
+            }
+        }
+        // This will be unpopulated if there was no 'send_to' field , or
+        // if not all entries in the 'send_to' field could be mapped to
+        // a FID. In these cases, wait on all pending initialization promises.
+        if (initializationPromisesToWaitFor.length === 0) {
+            initializationPromisesToWaitFor = Object.values(initializationPromisesMap);
+        }
+        // Run core gtag function with args after all relevant initialization
+        // promises have been resolved.
+        await Promise.all(initializationPromisesToWaitFor);
+        // Workaround for http://b/141370449 - third argument cannot be undefined.
+        gtagCore("event" /* GtagCommand.EVENT */, measurementId, gtagParams || {});
+    }
+    catch (e) {
+        logger.error(e);
+    }
+}
+/**
+ * Wraps a standard gtag function with extra code to wait for completion of
+ * relevant initialization promises before sending requests.
+ *
+ * @param gtagCore Basic gtag function that just appends to dataLayer.
+ * @param initializationPromisesMap Map of appIds to their initialization promises.
+ * @param dynamicConfigPromisesList Array of dynamic config fetch promises.
+ * @param measurementIdToAppId Map of GA measurementIDs to corresponding Firebase appId.
+ */
+function wrapGtag(gtagCore, 
+/**
+ * Allows wrapped gtag calls to wait on whichever intialization promises are required,
+ * depending on the contents of the gtag params' `send_to` field, if any.
+ */
+initializationPromisesMap, 
+/**
+ * Wrapped gtag calls sometimes require all dynamic config fetches to have returned
+ * before determining what initialization promises (which include FIDs) to wait for.
+ */
+dynamicConfigPromisesList, 
+/**
+ * Wrapped gtag config calls can narrow down which initialization promise (with FID)
+ * to wait for if the measurementId is already fetched, by getting the corresponding appId,
+ * which is the key for the initialization promises map.
+ */
+measurementIdToAppId) {
+    /**
+     * Wrapper around gtag that ensures FID is sent with gtag calls.
+     * @param command Gtag command type.
+     * @param idOrNameOrParams Measurement ID if command is EVENT/CONFIG, params if command is SET.
+     * @param gtagParams Params if event is EVENT/CONFIG.
+     */
+    async function gtagWrapper(command, ...args) {
+        try {
+            // If event, check that relevant initialization promises have completed.
+            if (command === "event" /* GtagCommand.EVENT */) {
+                const [measurementId, gtagParams] = args;
+                // If EVENT, second arg must be measurementId.
+                await gtagOnEvent(gtagCore, initializationPromisesMap, dynamicConfigPromisesList, measurementId, gtagParams);
+            }
+            else if (command === "config" /* GtagCommand.CONFIG */) {
+                const [measurementId, gtagParams] = args;
+                // If CONFIG, second arg must be measurementId.
+                await gtagOnConfig(gtagCore, initializationPromisesMap, dynamicConfigPromisesList, measurementIdToAppId, measurementId, gtagParams);
+            }
+            else if (command === "consent" /* GtagCommand.CONSENT */) {
+                const [gtagParams] = args;
+                gtagCore("consent" /* GtagCommand.CONSENT */, 'update', gtagParams);
+            }
+            else if (command === "get" /* GtagCommand.GET */) {
+                const [measurementId, fieldName, callback] = args;
+                gtagCore("get" /* GtagCommand.GET */, measurementId, fieldName, callback);
+            }
+            else if (command === "set" /* GtagCommand.SET */) {
+                const [customParams] = args;
+                // If SET, second arg must be params.
+                gtagCore("set" /* GtagCommand.SET */, customParams);
+            }
+            else {
+                gtagCore(command, ...args);
+            }
+        }
+        catch (e) {
+            logger.error(e);
+        }
+    }
+    return gtagWrapper;
+}
+/**
+ * Creates global gtag function or wraps existing one if found.
+ * This wrapped function attaches Firebase instance ID (FID) to gtag 'config' and
+ * 'event' calls that belong to the GAID associated with this Firebase instance.
+ *
+ * @param initializationPromisesMap Map of appIds to their initialization promises.
+ * @param dynamicConfigPromisesList Array of dynamic config fetch promises.
+ * @param measurementIdToAppId Map of GA measurementIDs to corresponding Firebase appId.
+ * @param dataLayerName Name of global GA datalayer array.
+ * @param gtagFunctionName Name of global gtag function ("gtag" if not user-specified).
+ */
+function wrapOrCreateGtag(initializationPromisesMap, dynamicConfigPromisesList, measurementIdToAppId, dataLayerName, gtagFunctionName) {
+    // Create a basic core gtag function
+    let gtagCore = function (..._args) {
+        // Must push IArguments object, not an array.
+        window[dataLayerName].push(arguments);
+    };
+    // Replace it with existing one if found
+    if (window[gtagFunctionName] &&
+        typeof window[gtagFunctionName] === 'function') {
+        // @ts-ignore
+        gtagCore = window[gtagFunctionName];
+    }
+    window[gtagFunctionName] = wrapGtag(gtagCore, initializationPromisesMap, dynamicConfigPromisesList, measurementIdToAppId);
+    return {
+        gtagCore,
+        wrappedGtag: window[gtagFunctionName]
+    };
+}
+/**
+ * Returns the script tag in the DOM matching both the gtag url pattern
+ * and the provided data layer name.
+ */
+function findGtagScriptOnPage(dataLayerName) {
+    const scriptTags = window.document.getElementsByTagName('script');
+    for (const tag of Object.values(scriptTags)) {
+        if (tag.src &&
+            tag.src.includes(GTAG_URL) &&
+            tag.src.includes(dataLayerName)) {
+            return tag;
+        }
+    }
+    return null;
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Backoff factor for 503 errors, which we want to be conservative about
+ * to avoid overloading servers. Each retry interval will be
+ * BASE_INTERVAL_MILLIS * LONG_RETRY_FACTOR ^ retryCount, so the second one
+ * will be ~30 seconds (with fuzzing).
+ */
+const LONG_RETRY_FACTOR = 30;
+/**
+ * Base wait interval to multiplied by backoffFactor^backoffCount.
+ */
+const BASE_INTERVAL_MILLIS = 1000;
+/**
+ * Stubbable retry data storage class.
+ */
+class RetryData {
+    constructor(throttleMetadata = {}, intervalMillis = BASE_INTERVAL_MILLIS) {
+        this.throttleMetadata = throttleMetadata;
+        this.intervalMillis = intervalMillis;
+    }
+    getThrottleMetadata(appId) {
+        return this.throttleMetadata[appId];
+    }
+    setThrottleMetadata(appId, metadata) {
+        this.throttleMetadata[appId] = metadata;
+    }
+    deleteThrottleMetadata(appId) {
+        delete this.throttleMetadata[appId];
+    }
+}
+const defaultRetryData = new RetryData();
+/**
+ * Set GET request headers.
+ * @param apiKey App API key.
+ */
+function getHeaders(apiKey) {
+    return new Headers({
+        Accept: 'application/json',
+        'x-goog-api-key': apiKey
+    });
+}
+/**
+ * Fetches dynamic config from backend.
+ * @param app Firebase app to fetch config for.
+ */
+async function fetchDynamicConfig(appFields) {
+    var _a;
+    const { appId, apiKey } = appFields;
+    const request = {
+        method: 'GET',
+        headers: getHeaders(apiKey)
+    };
+    const appUrl = DYNAMIC_CONFIG_URL.replace('{app-id}', appId);
+    const response = await fetch(appUrl, request);
+    if (response.status !== 200 && response.status !== 304) {
+        let errorMessage = '';
+        try {
+            // Try to get any error message text from server response.
+            const jsonResponse = (await response.json());
+            if ((_a = jsonResponse.error) === null || _a === void 0 ? void 0 : _a.message) {
+                errorMessage = jsonResponse.error.message;
+            }
+        }
+        catch (_ignored) { }
+        throw ERROR_FACTORY.create("config-fetch-failed" /* AnalyticsError.CONFIG_FETCH_FAILED */, {
+            httpStatus: response.status,
+            responseMessage: errorMessage
+        });
+    }
+    return response.json();
+}
+/**
+ * Fetches dynamic config from backend, retrying if failed.
+ * @param app Firebase app to fetch config for.
+ */
+async function fetchDynamicConfigWithRetry(app, 
+// retryData and timeoutMillis are parameterized to allow passing a different value for testing.
+retryData = defaultRetryData, timeoutMillis) {
+    const { appId, apiKey, measurementId } = app.options;
+    if (!appId) {
+        throw ERROR_FACTORY.create("no-app-id" /* AnalyticsError.NO_APP_ID */);
+    }
+    if (!apiKey) {
+        if (measurementId) {
+            return {
+                measurementId,
+                appId
+            };
+        }
+        throw ERROR_FACTORY.create("no-api-key" /* AnalyticsError.NO_API_KEY */);
+    }
+    const throttleMetadata = retryData.getThrottleMetadata(appId) || {
+        backoffCount: 0,
+        throttleEndTimeMillis: Date.now()
+    };
+    const signal = new AnalyticsAbortSignal();
+    setTimeout(async () => {
+        // Note a very low delay, eg < 10ms, can elapse before listeners are initialized.
+        signal.abort();
+    }, timeoutMillis !== undefined ? timeoutMillis : FETCH_TIMEOUT_MILLIS);
+    return attemptFetchDynamicConfigWithRetry({ appId, apiKey, measurementId }, throttleMetadata, signal, retryData);
+}
+/**
+ * Runs one retry attempt.
+ * @param appFields Necessary app config fields.
+ * @param throttleMetadata Ongoing metadata to determine throttling times.
+ * @param signal Abort signal.
+ */
+async function attemptFetchDynamicConfigWithRetry(appFields, { throttleEndTimeMillis, backoffCount }, signal, retryData = defaultRetryData // for testing
+) {
+    var _a;
+    const { appId, measurementId } = appFields;
+    // Starts with a (potentially zero) timeout to support resumption from stored state.
+    // Ensures the throttle end time is honored if the last attempt timed out.
+    // Note the SDK will never make a request if the fetch timeout expires at this point.
+    try {
+        await setAbortableTimeout(signal, throttleEndTimeMillis);
+    }
+    catch (e) {
+        if (measurementId) {
+            logger.warn(`Timed out fetching this Firebase app's measurement ID from the server.` +
+                ` Falling back to the measurement ID ${measurementId}` +
+                ` provided in the "measurementId" field in the local Firebase config. [${e === null || e === void 0 ? void 0 : e.message}]`);
+            return { appId, measurementId };
+        }
+        throw e;
+    }
+    try {
+        const response = await fetchDynamicConfig(appFields);
+        // Note the SDK only clears throttle state if response is success or non-retriable.
+        retryData.deleteThrottleMetadata(appId);
+        return response;
+    }
+    catch (e) {
+        const error = e;
+        if (!isRetriableError(error)) {
+            retryData.deleteThrottleMetadata(appId);
+            if (measurementId) {
+                logger.warn(`Failed to fetch this Firebase app's measurement ID from the server.` +
+                    ` Falling back to the measurement ID ${measurementId}` +
+                    ` provided in the "measurementId" field in the local Firebase config. [${error === null || error === void 0 ? void 0 : error.message}]`);
+                return { appId, measurementId };
+            }
+            else {
+                throw e;
+            }
+        }
+        const backoffMillis = Number((_a = error === null || error === void 0 ? void 0 : error.customData) === null || _a === void 0 ? void 0 : _a.httpStatus) === 503
+            ? (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.calculateBackoffMillis)(backoffCount, retryData.intervalMillis, LONG_RETRY_FACTOR)
+            : (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.calculateBackoffMillis)(backoffCount, retryData.intervalMillis);
+        // Increments backoff state.
+        const throttleMetadata = {
+            throttleEndTimeMillis: Date.now() + backoffMillis,
+            backoffCount: backoffCount + 1
+        };
+        // Persists state.
+        retryData.setThrottleMetadata(appId, throttleMetadata);
+        logger.debug(`Calling attemptFetch again in ${backoffMillis} millis`);
+        return attemptFetchDynamicConfigWithRetry(appFields, throttleMetadata, signal, retryData);
+    }
+}
+/**
+ * Supports waiting on a backoff by:
+ *
+ * <ul>
+ *   <li>Promisifying setTimeout, so we can set a timeout in our Promise chain</li>
+ *   <li>Listening on a signal bus for abort events, just like the Fetch API</li>
+ *   <li>Failing in the same way the Fetch API fails, so timing out a live request and a throttled
+ *       request appear the same.</li>
+ * </ul>
+ *
+ * <p>Visible for testing.
+ */
+function setAbortableTimeout(signal, throttleEndTimeMillis) {
+    return new Promise((resolve, reject) => {
+        // Derives backoff from given end time, normalizing negative numbers to zero.
+        const backoffMillis = Math.max(throttleEndTimeMillis - Date.now(), 0);
+        const timeout = setTimeout(resolve, backoffMillis);
+        // Adds listener, rather than sets onabort, because signal is a shared object.
+        signal.addEventListener(() => {
+            clearTimeout(timeout);
+            // If the request completes before this timeout, the rejection has no effect.
+            reject(ERROR_FACTORY.create("fetch-throttle" /* AnalyticsError.FETCH_THROTTLE */, {
+                throttleEndTimeMillis
+            }));
+        });
+    });
+}
+/**
+ * Returns true if the {@link Error} indicates a fetch request may succeed later.
+ */
+function isRetriableError(e) {
+    if (!(e instanceof _firebase_util__WEBPACK_IMPORTED_MODULE_2__.FirebaseError) || !e.customData) {
+        return false;
+    }
+    // Uses string index defined by ErrorData, which FirebaseError implements.
+    const httpStatus = Number(e.customData['httpStatus']);
+    return (httpStatus === 429 ||
+        httpStatus === 500 ||
+        httpStatus === 503 ||
+        httpStatus === 504);
+}
+/**
+ * Shims a minimal AbortSignal (copied from Remote Config).
+ *
+ * <p>AbortController's AbortSignal conveniently decouples fetch timeout logic from other aspects
+ * of networking, such as retries. Firebase doesn't use AbortController enough to justify a
+ * polyfill recommendation, like we do with the Fetch API, but this minimal shim can easily be
+ * swapped out if/when we do.
+ */
+class AnalyticsAbortSignal {
+    constructor() {
+        this.listeners = [];
+    }
+    addEventListener(listener) {
+        this.listeners.push(listener);
+    }
+    abort() {
+        this.listeners.forEach(listener => listener());
+    }
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Event parameters to set on 'gtag' during initialization.
+ */
+let defaultEventParametersForInit;
+/**
+ * Logs an analytics event through the Firebase SDK.
+ *
+ * @param gtagFunction Wrapped gtag function that waits for fid to be set before sending an event
+ * @param eventName Google Analytics event name, choose from standard list or use a custom string.
+ * @param eventParams Analytics event parameters.
+ */
+async function logEvent$1(gtagFunction, initializationPromise, eventName, eventParams, options) {
+    if (options && options.global) {
+        gtagFunction("event" /* GtagCommand.EVENT */, eventName, eventParams);
+        return;
+    }
+    else {
+        const measurementId = await initializationPromise;
+        const params = Object.assign(Object.assign({}, eventParams), { 'send_to': measurementId });
+        gtagFunction("event" /* GtagCommand.EVENT */, eventName, params);
+    }
+}
+/**
+ * Set screen_name parameter for this Google Analytics ID.
+ *
+ * @deprecated Use {@link logEvent} with `eventName` as 'screen_view' and add relevant `eventParams`.
+ * See {@link https://firebase.google.com/docs/analytics/screenviews | Track Screenviews}.
+ *
+ * @param gtagFunction Wrapped gtag function that waits for fid to be set before sending an event
+ * @param screenName Screen name string to set.
+ */
+async function setCurrentScreen$1(gtagFunction, initializationPromise, screenName, options) {
+    if (options && options.global) {
+        gtagFunction("set" /* GtagCommand.SET */, { 'screen_name': screenName });
+        return Promise.resolve();
+    }
+    else {
+        const measurementId = await initializationPromise;
+        gtagFunction("config" /* GtagCommand.CONFIG */, measurementId, {
+            update: true,
+            'screen_name': screenName
+        });
+    }
+}
+/**
+ * Set user_id parameter for this Google Analytics ID.
+ *
+ * @param gtagFunction Wrapped gtag function that waits for fid to be set before sending an event
+ * @param id User ID string to set
+ */
+async function setUserId$1(gtagFunction, initializationPromise, id, options) {
+    if (options && options.global) {
+        gtagFunction("set" /* GtagCommand.SET */, { 'user_id': id });
+        return Promise.resolve();
+    }
+    else {
+        const measurementId = await initializationPromise;
+        gtagFunction("config" /* GtagCommand.CONFIG */, measurementId, {
+            update: true,
+            'user_id': id
+        });
+    }
+}
+/**
+ * Set all other user properties other than user_id and screen_name.
+ *
+ * @param gtagFunction Wrapped gtag function that waits for fid to be set before sending an event
+ * @param properties Map of user properties to set
+ */
+async function setUserProperties$1(gtagFunction, initializationPromise, properties, options) {
+    if (options && options.global) {
+        const flatProperties = {};
+        for (const key of Object.keys(properties)) {
+            // use dot notation for merge behavior in gtag.js
+            flatProperties[`user_properties.${key}`] = properties[key];
+        }
+        gtagFunction("set" /* GtagCommand.SET */, flatProperties);
+        return Promise.resolve();
+    }
+    else {
+        const measurementId = await initializationPromise;
+        gtagFunction("config" /* GtagCommand.CONFIG */, measurementId, {
+            update: true,
+            'user_properties': properties
+        });
+    }
+}
+/**
+ * Retrieves a unique Google Analytics identifier for the web client.
+ * See {@link https://developers.google.com/analytics/devguides/collection/ga4/reference/config#client_id | client_id}.
+ *
+ * @param gtagFunction Wrapped gtag function that waits for fid to be set before sending an event
+ */
+async function internalGetGoogleAnalyticsClientId(gtagFunction, initializationPromise) {
+    const measurementId = await initializationPromise;
+    return new Promise((resolve, reject) => {
+        gtagFunction("get" /* GtagCommand.GET */, measurementId, 'client_id', (clientId) => {
+            if (!clientId) {
+                reject(ERROR_FACTORY.create("no-client-id" /* AnalyticsError.NO_CLIENT_ID */));
+            }
+            resolve(clientId);
+        });
+    });
+}
+/**
+ * Set whether collection is enabled for this ID.
+ *
+ * @param enabled If true, collection is enabled for this ID.
+ */
+async function setAnalyticsCollectionEnabled$1(initializationPromise, enabled) {
+    const measurementId = await initializationPromise;
+    window[`ga-disable-${measurementId}`] = !enabled;
+}
+/**
+ * Consent parameters to default to during 'gtag' initialization.
+ */
+let defaultConsentSettingsForInit;
+/**
+ * Sets the variable {@link defaultConsentSettingsForInit} for use in the initialization of
+ * analytics.
+ *
+ * @param consentSettings Maps the applicable end user consent state for gtag.js.
+ */
+function _setConsentDefaultForInit(consentSettings) {
+    defaultConsentSettingsForInit = consentSettings;
+}
+/**
+ * Sets the variable `defaultEventParametersForInit` for use in the initialization of
+ * analytics.
+ *
+ * @param customParams Any custom params the user may pass to gtag.js.
+ */
+function _setDefaultEventParametersForInit(customParams) {
+    defaultEventParametersForInit = customParams;
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function validateIndexedDB() {
+    if (!(0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.isIndexedDBAvailable)()) {
+        logger.warn(ERROR_FACTORY.create("indexeddb-unavailable" /* AnalyticsError.INDEXEDDB_UNAVAILABLE */, {
+            errorInfo: 'IndexedDB is not available in this environment.'
+        }).message);
+        return false;
+    }
+    else {
+        try {
+            await (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.validateIndexedDBOpenable)();
+        }
+        catch (e) {
+            logger.warn(ERROR_FACTORY.create("indexeddb-unavailable" /* AnalyticsError.INDEXEDDB_UNAVAILABLE */, {
+                errorInfo: e === null || e === void 0 ? void 0 : e.toString()
+            }).message);
+            return false;
+        }
+    }
+    return true;
+}
+/**
+ * Initialize the analytics instance in gtag.js by calling config command with fid.
+ *
+ * NOTE: We combine analytics initialization and setting fid together because we want fid to be
+ * part of the `page_view` event that's sent during the initialization
+ * @param app Firebase app
+ * @param gtagCore The gtag function that's not wrapped.
+ * @param dynamicConfigPromisesList Array of all dynamic config promises.
+ * @param measurementIdToAppId Maps measurementID to appID.
+ * @param installations _FirebaseInstallationsInternal instance.
+ *
+ * @returns Measurement ID.
+ */
+async function _initializeAnalytics(app, dynamicConfigPromisesList, measurementIdToAppId, installations, gtagCore, dataLayerName, options) {
+    var _a;
+    const dynamicConfigPromise = fetchDynamicConfigWithRetry(app);
+    // Once fetched, map measurementIds to appId, for ease of lookup in wrapped gtag function.
+    dynamicConfigPromise
+        .then(config => {
+        measurementIdToAppId[config.measurementId] = config.appId;
+        if (app.options.measurementId &&
+            config.measurementId !== app.options.measurementId) {
+            logger.warn(`The measurement ID in the local Firebase config (${app.options.measurementId})` +
+                ` does not match the measurement ID fetched from the server (${config.measurementId}).` +
+                ` To ensure analytics events are always sent to the correct Analytics property,` +
+                ` update the` +
+                ` measurement ID field in the local config or remove it from the local config.`);
+        }
+    })
+        .catch(e => logger.error(e));
+    // Add to list to track state of all dynamic config promises.
+    dynamicConfigPromisesList.push(dynamicConfigPromise);
+    const fidPromise = validateIndexedDB().then(envIsValid => {
+        if (envIsValid) {
+            return installations.getId();
+        }
+        else {
+            return undefined;
+        }
+    });
+    const [dynamicConfig, fid] = await Promise.all([
+        dynamicConfigPromise,
+        fidPromise
+    ]);
+    // Detect if user has already put the gtag <script> tag on this page with the passed in
+    // data layer name.
+    if (!findGtagScriptOnPage(dataLayerName)) {
+        insertScriptTag(dataLayerName, dynamicConfig.measurementId);
+    }
+    // Detects if there are consent settings that need to be configured.
+    if (defaultConsentSettingsForInit) {
+        gtagCore("consent" /* GtagCommand.CONSENT */, 'default', defaultConsentSettingsForInit);
+        _setConsentDefaultForInit(undefined);
+    }
+    // This command initializes gtag.js and only needs to be called once for the entire web app,
+    // but since it is idempotent, we can call it multiple times.
+    // We keep it together with other initialization logic for better code structure.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    gtagCore('js', new Date());
+    // User config added first. We don't want users to accidentally overwrite
+    // base Firebase config properties.
+    const configProperties = (_a = options === null || options === void 0 ? void 0 : options.config) !== null && _a !== void 0 ? _a : {};
+    // guard against developers accidentally setting properties with prefix `firebase_`
+    configProperties[ORIGIN_KEY] = 'firebase';
+    configProperties.update = true;
+    if (fid != null) {
+        configProperties[GA_FID_KEY] = fid;
+    }
+    // It should be the first config command called on this GA-ID
+    // Initialize this GA-ID and set FID on it using the gtag config API.
+    // Note: This will trigger a page_view event unless 'send_page_view' is set to false in
+    // `configProperties`.
+    gtagCore("config" /* GtagCommand.CONFIG */, dynamicConfig.measurementId, configProperties);
+    // Detects if there is data that will be set on every event logged from the SDK.
+    if (defaultEventParametersForInit) {
+        gtagCore("set" /* GtagCommand.SET */, defaultEventParametersForInit);
+        _setDefaultEventParametersForInit(undefined);
+    }
+    return dynamicConfig.measurementId;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Analytics Service class.
+ */
+class AnalyticsService {
+    constructor(app) {
+        this.app = app;
+    }
+    _delete() {
+        delete initializationPromisesMap[this.app.options.appId];
+        return Promise.resolve();
+    }
+}
+/**
+ * Maps appId to full initialization promise. Wrapped gtag calls must wait on
+ * all or some of these, depending on the call's `send_to` param and the status
+ * of the dynamic config fetches (see below).
+ */
+let initializationPromisesMap = {};
+/**
+ * List of dynamic config fetch promises. In certain cases, wrapped gtag calls
+ * wait on all these to be complete in order to determine if it can selectively
+ * wait for only certain initialization (FID) promises or if it must wait for all.
+ */
+let dynamicConfigPromisesList = [];
+/**
+ * Maps fetched measurementIds to appId. Populated when the app's dynamic config
+ * fetch completes. If already populated, gtag config calls can use this to
+ * selectively wait for only this app's initialization promise (FID) instead of all
+ * initialization promises.
+ */
+const measurementIdToAppId = {};
+/**
+ * Name for window global data layer array used by GA: defaults to 'dataLayer'.
+ */
+let dataLayerName = 'dataLayer';
+/**
+ * Name for window global gtag function used by GA: defaults to 'gtag'.
+ */
+let gtagName = 'gtag';
+/**
+ * Reproduction of standard gtag function or reference to existing
+ * gtag function on window object.
+ */
+let gtagCoreFunction;
+/**
+ * Wrapper around gtag function that ensures FID is sent with all
+ * relevant event and config calls.
+ */
+let wrappedGtagFunction;
+/**
+ * Flag to ensure page initialization steps (creation or wrapping of
+ * dataLayer and gtag script) are only run once per page load.
+ */
+let globalInitDone = false;
+/**
+ * Configures Firebase Analytics to use custom `gtag` or `dataLayer` names.
+ * Intended to be used if `gtag.js` script has been installed on
+ * this page independently of Firebase Analytics, and is using non-default
+ * names for either the `gtag` function or for `dataLayer`.
+ * Must be called before calling `getAnalytics()` or it won't
+ * have any effect.
+ *
+ * @public
+ *
+ * @param options - Custom gtag and dataLayer names.
+ */
+function settings(options) {
+    if (globalInitDone) {
+        throw ERROR_FACTORY.create("already-initialized" /* AnalyticsError.ALREADY_INITIALIZED */);
+    }
+    if (options.dataLayerName) {
+        dataLayerName = options.dataLayerName;
+    }
+    if (options.gtagName) {
+        gtagName = options.gtagName;
+    }
+}
+/**
+ * Returns true if no environment mismatch is found.
+ * If environment mismatches are found, throws an INVALID_ANALYTICS_CONTEXT
+ * error that also lists details for each mismatch found.
+ */
+function warnOnBrowserContextMismatch() {
+    const mismatchedEnvMessages = [];
+    if ((0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.isBrowserExtension)()) {
+        mismatchedEnvMessages.push('This is a browser extension environment.');
+    }
+    if (!(0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.areCookiesEnabled)()) {
+        mismatchedEnvMessages.push('Cookies are not available.');
+    }
+    if (mismatchedEnvMessages.length > 0) {
+        const details = mismatchedEnvMessages
+            .map((message, index) => `(${index + 1}) ${message}`)
+            .join(' ');
+        const err = ERROR_FACTORY.create("invalid-analytics-context" /* AnalyticsError.INVALID_ANALYTICS_CONTEXT */, {
+            errorInfo: details
+        });
+        logger.warn(err.message);
+    }
+}
+/**
+ * Analytics instance factory.
+ * @internal
+ */
+function factory(app, installations, options) {
+    warnOnBrowserContextMismatch();
+    const appId = app.options.appId;
+    if (!appId) {
+        throw ERROR_FACTORY.create("no-app-id" /* AnalyticsError.NO_APP_ID */);
+    }
+    if (!app.options.apiKey) {
+        if (app.options.measurementId) {
+            logger.warn(`The "apiKey" field is empty in the local Firebase config. This is needed to fetch the latest` +
+                ` measurement ID for this Firebase app. Falling back to the measurement ID ${app.options.measurementId}` +
+                ` provided in the "measurementId" field in the local Firebase config.`);
+        }
+        else {
+            throw ERROR_FACTORY.create("no-api-key" /* AnalyticsError.NO_API_KEY */);
+        }
+    }
+    if (initializationPromisesMap[appId] != null) {
+        throw ERROR_FACTORY.create("already-exists" /* AnalyticsError.ALREADY_EXISTS */, {
+            id: appId
+        });
+    }
+    if (!globalInitDone) {
+        // Steps here should only be done once per page: creation or wrapping
+        // of dataLayer and global gtag function.
+        getOrCreateDataLayer(dataLayerName);
+        const { wrappedGtag, gtagCore } = wrapOrCreateGtag(initializationPromisesMap, dynamicConfigPromisesList, measurementIdToAppId, dataLayerName, gtagName);
+        wrappedGtagFunction = wrappedGtag;
+        gtagCoreFunction = gtagCore;
+        globalInitDone = true;
+    }
+    // Async but non-blocking.
+    // This map reflects the completion state of all promises for each appId.
+    initializationPromisesMap[appId] = _initializeAnalytics(app, dynamicConfigPromisesList, measurementIdToAppId, installations, gtagCoreFunction, dataLayerName, options);
+    const analyticsInstance = new AnalyticsService(app);
+    return analyticsInstance;
+}
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/**
+ * Returns an {@link Analytics} instance for the given app.
+ *
+ * @public
+ *
+ * @param app - The {@link @firebase/app#FirebaseApp} to use.
+ */
+function getAnalytics(app = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.getApp)()) {
+    app = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(app);
+    // Dependencies
+    const analyticsProvider = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._getProvider)(app, ANALYTICS_TYPE);
+    if (analyticsProvider.isInitialized()) {
+        return analyticsProvider.getImmediate();
+    }
+    return initializeAnalytics(app);
+}
+/**
+ * Returns an {@link Analytics} instance for the given app.
+ *
+ * @public
+ *
+ * @param app - The {@link @firebase/app#FirebaseApp} to use.
+ */
+function initializeAnalytics(app, options = {}) {
+    // Dependencies
+    const analyticsProvider = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._getProvider)(app, ANALYTICS_TYPE);
+    if (analyticsProvider.isInitialized()) {
+        const existingInstance = analyticsProvider.getImmediate();
+        if ((0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.deepEqual)(options, analyticsProvider.getOptions())) {
+            return existingInstance;
+        }
+        else {
+            throw ERROR_FACTORY.create("already-initialized" /* AnalyticsError.ALREADY_INITIALIZED */);
+        }
+    }
+    const analyticsInstance = analyticsProvider.initialize({ options });
+    return analyticsInstance;
+}
+/**
+ * This is a public static method provided to users that wraps four different checks:
+ *
+ * 1. Check if it's not a browser extension environment.
+ * 2. Check if cookies are enabled in current browser.
+ * 3. Check if IndexedDB is supported by the browser environment.
+ * 4. Check if the current browser context is valid for using `IndexedDB.open()`.
+ *
+ * @public
+ *
+ */
+async function isSupported() {
+    if ((0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.isBrowserExtension)()) {
+        return false;
+    }
+    if (!(0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.areCookiesEnabled)()) {
+        return false;
+    }
+    if (!(0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.isIndexedDBAvailable)()) {
+        return false;
+    }
+    try {
+        const isDBOpenable = await (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.validateIndexedDBOpenable)();
+        return isDBOpenable;
+    }
+    catch (error) {
+        return false;
+    }
+}
+/**
+ * Use gtag `config` command to set `screen_name`.
+ *
+ * @public
+ *
+ * @deprecated Use {@link logEvent} with `eventName` as 'screen_view' and add relevant `eventParams`.
+ * See {@link https://firebase.google.com/docs/analytics/screenviews | Track Screenviews}.
+ *
+ * @param analyticsInstance - The {@link Analytics} instance.
+ * @param screenName - Screen name to set.
+ */
+function setCurrentScreen(analyticsInstance, screenName, options) {
+    analyticsInstance = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(analyticsInstance);
+    setCurrentScreen$1(wrappedGtagFunction, initializationPromisesMap[analyticsInstance.app.options.appId], screenName, options).catch(e => logger.error(e));
+}
+/**
+ * Retrieves a unique Google Analytics identifier for the web client.
+ * See {@link https://developers.google.com/analytics/devguides/collection/ga4/reference/config#client_id | client_id}.
+ *
+ * @public
+ *
+ * @param app - The {@link @firebase/app#FirebaseApp} to use.
+ */
+async function getGoogleAnalyticsClientId(analyticsInstance) {
+    analyticsInstance = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(analyticsInstance);
+    return internalGetGoogleAnalyticsClientId(wrappedGtagFunction, initializationPromisesMap[analyticsInstance.app.options.appId]);
+}
+/**
+ * Use gtag `config` command to set `user_id`.
+ *
+ * @public
+ *
+ * @param analyticsInstance - The {@link Analytics} instance.
+ * @param id - User ID to set.
+ */
+function setUserId(analyticsInstance, id, options) {
+    analyticsInstance = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(analyticsInstance);
+    setUserId$1(wrappedGtagFunction, initializationPromisesMap[analyticsInstance.app.options.appId], id, options).catch(e => logger.error(e));
+}
+/**
+ * Use gtag `config` command to set all params specified.
+ *
+ * @public
+ */
+function setUserProperties(analyticsInstance, properties, options) {
+    analyticsInstance = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(analyticsInstance);
+    setUserProperties$1(wrappedGtagFunction, initializationPromisesMap[analyticsInstance.app.options.appId], properties, options).catch(e => logger.error(e));
+}
+/**
+ * Sets whether Google Analytics collection is enabled for this app on this device.
+ * Sets global `window['ga-disable-analyticsId'] = true;`
+ *
+ * @public
+ *
+ * @param analyticsInstance - The {@link Analytics} instance.
+ * @param enabled - If true, enables collection, if false, disables it.
+ */
+function setAnalyticsCollectionEnabled(analyticsInstance, enabled) {
+    analyticsInstance = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(analyticsInstance);
+    setAnalyticsCollectionEnabled$1(initializationPromisesMap[analyticsInstance.app.options.appId], enabled).catch(e => logger.error(e));
+}
+/**
+ * Adds data that will be set on every event logged from the SDK, including automatic ones.
+ * With gtag's "set" command, the values passed persist on the current page and are passed with
+ * all subsequent events.
+ * @public
+ * @param customParams - Any custom params the user may pass to gtag.js.
+ */
+function setDefaultEventParameters(customParams) {
+    // Check if reference to existing gtag function on window object exists
+    if (wrappedGtagFunction) {
+        wrappedGtagFunction("set" /* GtagCommand.SET */, customParams);
+    }
+    else {
+        _setDefaultEventParametersForInit(customParams);
+    }
+}
+/**
+ * Sends a Google Analytics event with given `eventParams`. This method
+ * automatically associates this logged event with this Firebase web
+ * app instance on this device.
+ * List of official event parameters can be found in the gtag.js
+ * reference documentation:
+ * {@link https://developers.google.com/gtagjs/reference/ga4-events
+ * | the GA4 reference documentation}.
+ *
+ * @public
+ */
+function logEvent(analyticsInstance, eventName, eventParams, options) {
+    analyticsInstance = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getModularInstance)(analyticsInstance);
+    logEvent$1(wrappedGtagFunction, initializationPromisesMap[analyticsInstance.app.options.appId], eventName, eventParams, options).catch(e => logger.error(e));
+}
+/**
+ * Sets the applicable end user consent state for this web app across all gtag references once
+ * Firebase Analytics is initialized.
+ *
+ * Use the {@link ConsentSettings} to specify individual consent type values. By default consent
+ * types are set to "granted".
+ * @public
+ * @param consentSettings - Maps the applicable end user consent state for gtag.js.
+ */
+function setConsent(consentSettings) {
+    // Check if reference to existing gtag function on window object exists
+    if (wrappedGtagFunction) {
+        wrappedGtagFunction("consent" /* GtagCommand.CONSENT */, 'update', consentSettings);
+    }
+    else {
+        _setConsentDefaultForInit(consentSettings);
+    }
+}
+
+const name = "@firebase/analytics";
+const version = "0.10.3";
+
+/**
+ * The Firebase Analytics Web SDK.
+ * This SDK does not work in a Node.js environment.
+ *
+ * @packageDocumentation
+ */
+function registerAnalytics() {
+    (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._registerComponent)(new _firebase_component__WEBPACK_IMPORTED_MODULE_3__.Component(ANALYTICS_TYPE, (container, { options: analyticsOptions }) => {
+        // getImmediate for FirebaseApp will always succeed
+        const app = container.getProvider('app').getImmediate();
+        const installations = container
+            .getProvider('installations-internal')
+            .getImmediate();
+        return factory(app, installations, analyticsOptions);
+    }, "PUBLIC" /* ComponentType.PUBLIC */));
+    (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._registerComponent)(new _firebase_component__WEBPACK_IMPORTED_MODULE_3__.Component('analytics-internal', internalFactory, "PRIVATE" /* ComponentType.PRIVATE */));
+    (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.registerVersion)(name, version);
+    // BUILD_TARGET will be replaced by values like esm5, esm2017, cjs5, etc during the compilation
+    (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.registerVersion)(name, version, 'esm2017');
+    function internalFactory(container) {
+        try {
+            const analytics = container.getProvider(ANALYTICS_TYPE).getImmediate();
+            return {
+                logEvent: (eventName, eventParams, options) => logEvent(analytics, eventName, eventParams, options)
+            };
+        }
+        catch (e) {
+            throw ERROR_FACTORY.create("interop-component-reg-failed" /* AnalyticsError.INTEROP_COMPONENT_REG_FAILED */, {
+                reason: e
+            });
+        }
+    }
+}
+registerAnalytics();
+
+
+//# sourceMappingURL=index.esm2017.js.map
+
 
 /***/ }),
 
@@ -48,7 +3581,1173 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   FirebaseError: () => (/* reexport safe */ _firebase_util__WEBPACK_IMPORTED_MODULE_2__.FirebaseError),\n/* harmony export */   SDK_VERSION: () => (/* binding */ SDK_VERSION),\n/* harmony export */   _DEFAULT_ENTRY_NAME: () => (/* binding */ DEFAULT_ENTRY_NAME),\n/* harmony export */   _addComponent: () => (/* binding */ _addComponent),\n/* harmony export */   _addOrOverwriteComponent: () => (/* binding */ _addOrOverwriteComponent),\n/* harmony export */   _apps: () => (/* binding */ _apps),\n/* harmony export */   _clearComponents: () => (/* binding */ _clearComponents),\n/* harmony export */   _components: () => (/* binding */ _components),\n/* harmony export */   _getProvider: () => (/* binding */ _getProvider),\n/* harmony export */   _isFirebaseApp: () => (/* binding */ _isFirebaseApp),\n/* harmony export */   _isFirebaseServerApp: () => (/* binding */ _isFirebaseServerApp),\n/* harmony export */   _registerComponent: () => (/* binding */ _registerComponent),\n/* harmony export */   _removeServiceInstance: () => (/* binding */ _removeServiceInstance),\n/* harmony export */   _serverApps: () => (/* binding */ _serverApps),\n/* harmony export */   deleteApp: () => (/* binding */ deleteApp),\n/* harmony export */   getApp: () => (/* binding */ getApp),\n/* harmony export */   getApps: () => (/* binding */ getApps),\n/* harmony export */   initializeApp: () => (/* binding */ initializeApp),\n/* harmony export */   initializeServerApp: () => (/* binding */ initializeServerApp),\n/* harmony export */   onLog: () => (/* binding */ onLog),\n/* harmony export */   registerVersion: () => (/* binding */ registerVersion),\n/* harmony export */   setLogLevel: () => (/* binding */ setLogLevel)\n/* harmony export */ });\n/* harmony import */ var _firebase_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/component */ \"./node_modules/@firebase/component/dist/esm/index.esm2017.js\");\n/* harmony import */ var _firebase_logger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @firebase/logger */ \"./node_modules/@firebase/logger/dist/esm/index.esm2017.js\");\n/* harmony import */ var _firebase_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @firebase/util */ \"./node_modules/@firebase/util/dist/index.esm2017.js\");\n/* harmony import */ var idb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! idb */ \"./node_modules/idb/build/index.js\");\n\n\n\n\n\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nclass PlatformLoggerServiceImpl {\r\n    constructor(container) {\r\n        this.container = container;\r\n    }\r\n    // In initial implementation, this will be called by installations on\r\n    // auth token refresh, and installations will send this string.\r\n    getPlatformInfoString() {\r\n        const providers = this.container.getProviders();\r\n        // Loop through providers and get library/version pairs from any that are\r\n        // version components.\r\n        return providers\r\n            .map(provider => {\r\n            if (isVersionServiceProvider(provider)) {\r\n                const service = provider.getImmediate();\r\n                return `${service.library}/${service.version}`;\r\n            }\r\n            else {\r\n                return null;\r\n            }\r\n        })\r\n            .filter(logString => logString)\r\n            .join(' ');\r\n    }\r\n}\r\n/**\r\n *\r\n * @param provider check if this provider provides a VersionService\r\n *\r\n * NOTE: Using Provider<'app-version'> is a hack to indicate that the provider\r\n * provides VersionService. The provider is not necessarily a 'app-version'\r\n * provider.\r\n */\r\nfunction isVersionServiceProvider(provider) {\r\n    const component = provider.getComponent();\r\n    return (component === null || component === void 0 ? void 0 : component.type) === \"VERSION\" /* ComponentType.VERSION */;\r\n}\n\nconst name$p = \"@firebase/app\";\nconst version$1 = \"0.10.3\";\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst logger = new _firebase_logger__WEBPACK_IMPORTED_MODULE_1__.Logger('@firebase/app');\n\nconst name$o = \"@firebase/app-compat\";\n\nconst name$n = \"@firebase/analytics-compat\";\n\nconst name$m = \"@firebase/analytics\";\n\nconst name$l = \"@firebase/app-check-compat\";\n\nconst name$k = \"@firebase/app-check\";\n\nconst name$j = \"@firebase/auth\";\n\nconst name$i = \"@firebase/auth-compat\";\n\nconst name$h = \"@firebase/database\";\n\nconst name$g = \"@firebase/database-compat\";\n\nconst name$f = \"@firebase/functions\";\n\nconst name$e = \"@firebase/functions-compat\";\n\nconst name$d = \"@firebase/installations\";\n\nconst name$c = \"@firebase/installations-compat\";\n\nconst name$b = \"@firebase/messaging\";\n\nconst name$a = \"@firebase/messaging-compat\";\n\nconst name$9 = \"@firebase/performance\";\n\nconst name$8 = \"@firebase/performance-compat\";\n\nconst name$7 = \"@firebase/remote-config\";\n\nconst name$6 = \"@firebase/remote-config-compat\";\n\nconst name$5 = \"@firebase/storage\";\n\nconst name$4 = \"@firebase/storage-compat\";\n\nconst name$3 = \"@firebase/firestore\";\n\nconst name$2 = \"@firebase/vertexai-preview\";\n\nconst name$1 = \"@firebase/firestore-compat\";\n\nconst name = \"firebase\";\nconst version = \"10.12.0\";\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * The default app name\r\n *\r\n * @internal\r\n */\r\nconst DEFAULT_ENTRY_NAME = '[DEFAULT]';\r\nconst PLATFORM_LOG_STRING = {\r\n    [name$p]: 'fire-core',\r\n    [name$o]: 'fire-core-compat',\r\n    [name$m]: 'fire-analytics',\r\n    [name$n]: 'fire-analytics-compat',\r\n    [name$k]: 'fire-app-check',\r\n    [name$l]: 'fire-app-check-compat',\r\n    [name$j]: 'fire-auth',\r\n    [name$i]: 'fire-auth-compat',\r\n    [name$h]: 'fire-rtdb',\r\n    [name$g]: 'fire-rtdb-compat',\r\n    [name$f]: 'fire-fn',\r\n    [name$e]: 'fire-fn-compat',\r\n    [name$d]: 'fire-iid',\r\n    [name$c]: 'fire-iid-compat',\r\n    [name$b]: 'fire-fcm',\r\n    [name$a]: 'fire-fcm-compat',\r\n    [name$9]: 'fire-perf',\r\n    [name$8]: 'fire-perf-compat',\r\n    [name$7]: 'fire-rc',\r\n    [name$6]: 'fire-rc-compat',\r\n    [name$5]: 'fire-gcs',\r\n    [name$4]: 'fire-gcs-compat',\r\n    [name$3]: 'fire-fst',\r\n    [name$1]: 'fire-fst-compat',\r\n    [name$2]: 'fire-vertex',\r\n    'fire-js': 'fire-js',\r\n    [name]: 'fire-js-all'\r\n};\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * @internal\r\n */\r\nconst _apps = new Map();\r\n/**\r\n * @internal\r\n */\r\nconst _serverApps = new Map();\r\n/**\r\n * Registered components.\r\n *\r\n * @internal\r\n */\r\n// eslint-disable-next-line @typescript-eslint/no-explicit-any\r\nconst _components = new Map();\r\n/**\r\n * @param component - the component being added to this app's container\r\n *\r\n * @internal\r\n */\r\nfunction _addComponent(app, component) {\r\n    try {\r\n        app.container.addComponent(component);\r\n    }\r\n    catch (e) {\r\n        logger.debug(`Component ${component.name} failed to register with FirebaseApp ${app.name}`, e);\r\n    }\r\n}\r\n/**\r\n *\r\n * @internal\r\n */\r\nfunction _addOrOverwriteComponent(app, component) {\r\n    app.container.addOrOverwriteComponent(component);\r\n}\r\n/**\r\n *\r\n * @param component - the component to register\r\n * @returns whether or not the component is registered successfully\r\n *\r\n * @internal\r\n */\r\nfunction _registerComponent(component) {\r\n    const componentName = component.name;\r\n    if (_components.has(componentName)) {\r\n        logger.debug(`There were multiple attempts to register component ${componentName}.`);\r\n        return false;\r\n    }\r\n    _components.set(componentName, component);\r\n    // add the component to existing app instances\r\n    for (const app of _apps.values()) {\r\n        _addComponent(app, component);\r\n    }\r\n    for (const serverApp of _serverApps.values()) {\r\n        _addComponent(serverApp, component);\r\n    }\r\n    return true;\r\n}\r\n/**\r\n *\r\n * @param app - FirebaseApp instance\r\n * @param name - service name\r\n *\r\n * @returns the provider for the service with the matching name\r\n *\r\n * @internal\r\n */\r\nfunction _getProvider(app, name) {\r\n    const heartbeatController = app.container\r\n        .getProvider('heartbeat')\r\n        .getImmediate({ optional: true });\r\n    if (heartbeatController) {\r\n        void heartbeatController.triggerHeartbeat();\r\n    }\r\n    return app.container.getProvider(name);\r\n}\r\n/**\r\n *\r\n * @param app - FirebaseApp instance\r\n * @param name - service name\r\n * @param instanceIdentifier - service instance identifier in case the service supports multiple instances\r\n *\r\n * @internal\r\n */\r\nfunction _removeServiceInstance(app, name, instanceIdentifier = DEFAULT_ENTRY_NAME) {\r\n    _getProvider(app, name).clearInstance(instanceIdentifier);\r\n}\r\n/**\r\n *\r\n * @param obj - an object of type FirebaseApp or FirebaseOptions.\r\n *\r\n * @returns true if the provide object is of type FirebaseApp.\r\n *\r\n * @internal\r\n */\r\nfunction _isFirebaseApp(obj) {\r\n    return obj.options !== undefined;\r\n}\r\n/**\r\n *\r\n * @param obj - an object of type FirebaseApp.\r\n *\r\n * @returns true if the provided object is of type FirebaseServerAppImpl.\r\n *\r\n * @internal\r\n */\r\nfunction _isFirebaseServerApp(obj) {\r\n    return obj.settings !== undefined;\r\n}\r\n/**\r\n * Test only\r\n *\r\n * @internal\r\n */\r\nfunction _clearComponents() {\r\n    _components.clear();\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst ERRORS = {\r\n    [\"no-app\" /* AppError.NO_APP */]: \"No Firebase App '{$appName}' has been created - \" +\r\n        'call initializeApp() first',\r\n    [\"bad-app-name\" /* AppError.BAD_APP_NAME */]: \"Illegal App name: '{$appName}'\",\r\n    [\"duplicate-app\" /* AppError.DUPLICATE_APP */]: \"Firebase App named '{$appName}' already exists with different options or config\",\r\n    [\"app-deleted\" /* AppError.APP_DELETED */]: \"Firebase App named '{$appName}' already deleted\",\r\n    [\"server-app-deleted\" /* AppError.SERVER_APP_DELETED */]: 'Firebase Server App has been deleted',\r\n    [\"no-options\" /* AppError.NO_OPTIONS */]: 'Need to provide options, when not being deployed to hosting via source.',\r\n    [\"invalid-app-argument\" /* AppError.INVALID_APP_ARGUMENT */]: 'firebase.{$appName}() takes either no argument or a ' +\r\n        'Firebase App instance.',\r\n    [\"invalid-log-argument\" /* AppError.INVALID_LOG_ARGUMENT */]: 'First argument to `onLog` must be null or a function.',\r\n    [\"idb-open\" /* AppError.IDB_OPEN */]: 'Error thrown when opening IndexedDB. Original error: {$originalErrorMessage}.',\r\n    [\"idb-get\" /* AppError.IDB_GET */]: 'Error thrown when reading from IndexedDB. Original error: {$originalErrorMessage}.',\r\n    [\"idb-set\" /* AppError.IDB_WRITE */]: 'Error thrown when writing to IndexedDB. Original error: {$originalErrorMessage}.',\r\n    [\"idb-delete\" /* AppError.IDB_DELETE */]: 'Error thrown when deleting from IndexedDB. Original error: {$originalErrorMessage}.',\r\n    [\"finalization-registry-not-supported\" /* AppError.FINALIZATION_REGISTRY_NOT_SUPPORTED */]: 'FirebaseServerApp deleteOnDeref field defined but the JS runtime does not support FinalizationRegistry.',\r\n    [\"invalid-server-app-environment\" /* AppError.INVALID_SERVER_APP_ENVIRONMENT */]: 'FirebaseServerApp is not for use in browser environments.'\r\n};\r\nconst ERROR_FACTORY = new _firebase_util__WEBPACK_IMPORTED_MODULE_2__.ErrorFactory('app', 'Firebase', ERRORS);\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nclass FirebaseAppImpl {\r\n    constructor(options, config, container) {\r\n        this._isDeleted = false;\r\n        this._options = Object.assign({}, options);\r\n        this._config = Object.assign({}, config);\r\n        this._name = config.name;\r\n        this._automaticDataCollectionEnabled =\r\n            config.automaticDataCollectionEnabled;\r\n        this._container = container;\r\n        this.container.addComponent(new _firebase_component__WEBPACK_IMPORTED_MODULE_0__.Component('app', () => this, \"PUBLIC\" /* ComponentType.PUBLIC */));\r\n    }\r\n    get automaticDataCollectionEnabled() {\r\n        this.checkDestroyed();\r\n        return this._automaticDataCollectionEnabled;\r\n    }\r\n    set automaticDataCollectionEnabled(val) {\r\n        this.checkDestroyed();\r\n        this._automaticDataCollectionEnabled = val;\r\n    }\r\n    get name() {\r\n        this.checkDestroyed();\r\n        return this._name;\r\n    }\r\n    get options() {\r\n        this.checkDestroyed();\r\n        return this._options;\r\n    }\r\n    get config() {\r\n        this.checkDestroyed();\r\n        return this._config;\r\n    }\r\n    get container() {\r\n        return this._container;\r\n    }\r\n    get isDeleted() {\r\n        return this._isDeleted;\r\n    }\r\n    set isDeleted(val) {\r\n        this._isDeleted = val;\r\n    }\r\n    /**\r\n     * This function will throw an Error if the App has already been deleted -\r\n     * use before performing API actions on the App.\r\n     */\r\n    checkDestroyed() {\r\n        if (this.isDeleted) {\r\n            throw ERROR_FACTORY.create(\"app-deleted\" /* AppError.APP_DELETED */, { appName: this._name });\r\n        }\r\n    }\r\n}\n\n/**\r\n * @license\r\n * Copyright 2023 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nclass FirebaseServerAppImpl extends FirebaseAppImpl {\r\n    constructor(options, serverConfig, name, container) {\r\n        // Build configuration parameters for the FirebaseAppImpl base class.\r\n        const automaticDataCollectionEnabled = serverConfig.automaticDataCollectionEnabled !== undefined\r\n            ? serverConfig.automaticDataCollectionEnabled\r\n            : false;\r\n        // Create the FirebaseAppSettings object for the FirebaseAppImp constructor.\r\n        const config = {\r\n            name,\r\n            automaticDataCollectionEnabled\r\n        };\r\n        if (options.apiKey !== undefined) {\r\n            // Construct the parent FirebaseAppImp object.\r\n            super(options, config, container);\r\n        }\r\n        else {\r\n            const appImpl = options;\r\n            super(appImpl.options, config, container);\r\n        }\r\n        // Now construct the data for the FirebaseServerAppImpl.\r\n        this._serverConfig = Object.assign({ automaticDataCollectionEnabled }, serverConfig);\r\n        this._finalizationRegistry = new FinalizationRegistry(() => {\r\n            this.automaticCleanup();\r\n        });\r\n        this._refCount = 0;\r\n        this.incRefCount(this._serverConfig.releaseOnDeref);\r\n        // Do not retain a hard reference to the dref object, otherwise the FinalizationRegisry\r\n        // will never trigger.\r\n        this._serverConfig.releaseOnDeref = undefined;\r\n        serverConfig.releaseOnDeref = undefined;\r\n        registerVersion(name$p, version$1, 'serverapp');\r\n    }\r\n    toJSON() {\r\n        return undefined;\r\n    }\r\n    get refCount() {\r\n        return this._refCount;\r\n    }\r\n    // Increment the reference count of this server app. If an object is provided, register it\r\n    // with the finalization registry.\r\n    incRefCount(obj) {\r\n        if (this.isDeleted) {\r\n            return;\r\n        }\r\n        this._refCount++;\r\n        if (obj !== undefined) {\r\n            this._finalizationRegistry.register(obj, this);\r\n        }\r\n    }\r\n    // Decrement the reference count.\r\n    decRefCount() {\r\n        if (this.isDeleted) {\r\n            return 0;\r\n        }\r\n        return --this._refCount;\r\n    }\r\n    // Invoked by the FinalizationRegistry callback to note that this app should go through its\r\n    // reference counts and delete itself if no reference count remain. The coordinating logic that\r\n    // handles this is in deleteApp(...).\r\n    automaticCleanup() {\r\n        void deleteApp(this);\r\n    }\r\n    get settings() {\r\n        this.checkDestroyed();\r\n        return this._serverConfig;\r\n    }\r\n    /**\r\n     * This function will throw an Error if the App has already been deleted -\r\n     * use before performing API actions on the App.\r\n     */\r\n    checkDestroyed() {\r\n        if (this.isDeleted) {\r\n            throw ERROR_FACTORY.create(\"server-app-deleted\" /* AppError.SERVER_APP_DELETED */);\r\n        }\r\n    }\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * The current SDK version.\r\n *\r\n * @public\r\n */\r\nconst SDK_VERSION = version;\r\nfunction initializeApp(_options, rawConfig = {}) {\r\n    let options = _options;\r\n    if (typeof rawConfig !== 'object') {\r\n        const name = rawConfig;\r\n        rawConfig = { name };\r\n    }\r\n    const config = Object.assign({ name: DEFAULT_ENTRY_NAME, automaticDataCollectionEnabled: false }, rawConfig);\r\n    const name = config.name;\r\n    if (typeof name !== 'string' || !name) {\r\n        throw ERROR_FACTORY.create(\"bad-app-name\" /* AppError.BAD_APP_NAME */, {\r\n            appName: String(name)\r\n        });\r\n    }\r\n    options || (options = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getDefaultAppConfig)());\r\n    if (!options) {\r\n        throw ERROR_FACTORY.create(\"no-options\" /* AppError.NO_OPTIONS */);\r\n    }\r\n    const existingApp = _apps.get(name);\r\n    if (existingApp) {\r\n        // return the existing app if options and config deep equal the ones in the existing app.\r\n        if ((0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.deepEqual)(options, existingApp.options) &&\r\n            (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.deepEqual)(config, existingApp.config)) {\r\n            return existingApp;\r\n        }\r\n        else {\r\n            throw ERROR_FACTORY.create(\"duplicate-app\" /* AppError.DUPLICATE_APP */, { appName: name });\r\n        }\r\n    }\r\n    const container = new _firebase_component__WEBPACK_IMPORTED_MODULE_0__.ComponentContainer(name);\r\n    for (const component of _components.values()) {\r\n        container.addComponent(component);\r\n    }\r\n    const newApp = new FirebaseAppImpl(options, config, container);\r\n    _apps.set(name, newApp);\r\n    return newApp;\r\n}\r\nfunction initializeServerApp(_options, _serverAppConfig) {\r\n    if ((0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.isBrowser)()) {\r\n        // FirebaseServerApp isn't designed to be run in browsers.\r\n        throw ERROR_FACTORY.create(\"invalid-server-app-environment\" /* AppError.INVALID_SERVER_APP_ENVIRONMENT */);\r\n    }\r\n    if (_serverAppConfig.automaticDataCollectionEnabled === undefined) {\r\n        _serverAppConfig.automaticDataCollectionEnabled = false;\r\n    }\r\n    let appOptions;\r\n    if (_isFirebaseApp(_options)) {\r\n        appOptions = _options.options;\r\n    }\r\n    else {\r\n        appOptions = _options;\r\n    }\r\n    // Build an app name based on a hash of the configuration options.\r\n    const nameObj = Object.assign(Object.assign({}, _serverAppConfig), appOptions);\r\n    // However, Do not mangle the name based on releaseOnDeref, since it will vary between the\r\n    // construction of FirebaseServerApp instances. For example, if the object is the request headers.\r\n    if (nameObj.releaseOnDeref !== undefined) {\r\n        delete nameObj.releaseOnDeref;\r\n    }\r\n    const hashCode = (s) => {\r\n        return [...s].reduce((hash, c) => (Math.imul(31, hash) + c.charCodeAt(0)) | 0, 0);\r\n    };\r\n    if (_serverAppConfig.releaseOnDeref !== undefined) {\r\n        if (typeof FinalizationRegistry === 'undefined') {\r\n            throw ERROR_FACTORY.create(\"finalization-registry-not-supported\" /* AppError.FINALIZATION_REGISTRY_NOT_SUPPORTED */, {});\r\n        }\r\n    }\r\n    const nameString = '' + hashCode(JSON.stringify(nameObj));\r\n    const existingApp = _serverApps.get(nameString);\r\n    if (existingApp) {\r\n        existingApp.incRefCount(_serverAppConfig.releaseOnDeref);\r\n        return existingApp;\r\n    }\r\n    const container = new _firebase_component__WEBPACK_IMPORTED_MODULE_0__.ComponentContainer(nameString);\r\n    for (const component of _components.values()) {\r\n        container.addComponent(component);\r\n    }\r\n    const newApp = new FirebaseServerAppImpl(appOptions, _serverAppConfig, nameString, container);\r\n    _serverApps.set(nameString, newApp);\r\n    return newApp;\r\n}\r\n/**\r\n * Retrieves a {@link @firebase/app#FirebaseApp} instance.\r\n *\r\n * When called with no arguments, the default app is returned. When an app name\r\n * is provided, the app corresponding to that name is returned.\r\n *\r\n * An exception is thrown if the app being retrieved has not yet been\r\n * initialized.\r\n *\r\n * @example\r\n * ```javascript\r\n * // Return the default app\r\n * const app = getApp();\r\n * ```\r\n *\r\n * @example\r\n * ```javascript\r\n * // Return a named app\r\n * const otherApp = getApp(\"otherApp\");\r\n * ```\r\n *\r\n * @param name - Optional name of the app to return. If no name is\r\n *   provided, the default is `\"[DEFAULT]\"`.\r\n *\r\n * @returns The app corresponding to the provided app name.\r\n *   If no app name is provided, the default app is returned.\r\n *\r\n * @public\r\n */\r\nfunction getApp(name = DEFAULT_ENTRY_NAME) {\r\n    const app = _apps.get(name);\r\n    if (!app && name === DEFAULT_ENTRY_NAME && (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getDefaultAppConfig)()) {\r\n        return initializeApp();\r\n    }\r\n    if (!app) {\r\n        throw ERROR_FACTORY.create(\"no-app\" /* AppError.NO_APP */, { appName: name });\r\n    }\r\n    return app;\r\n}\r\n/**\r\n * A (read-only) array of all initialized apps.\r\n * @public\r\n */\r\nfunction getApps() {\r\n    return Array.from(_apps.values());\r\n}\r\n/**\r\n * Renders this app unusable and frees the resources of all associated\r\n * services.\r\n *\r\n * @example\r\n * ```javascript\r\n * deleteApp(app)\r\n *   .then(function() {\r\n *     console.log(\"App deleted successfully\");\r\n *   })\r\n *   .catch(function(error) {\r\n *     console.log(\"Error deleting app:\", error);\r\n *   });\r\n * ```\r\n *\r\n * @public\r\n */\r\nasync function deleteApp(app) {\r\n    let cleanupProviders = false;\r\n    const name = app.name;\r\n    if (_apps.has(name)) {\r\n        cleanupProviders = true;\r\n        _apps.delete(name);\r\n    }\r\n    else if (_serverApps.has(name)) {\r\n        const firebaseServerApp = app;\r\n        if (firebaseServerApp.decRefCount() <= 0) {\r\n            _serverApps.delete(name);\r\n            cleanupProviders = true;\r\n        }\r\n    }\r\n    if (cleanupProviders) {\r\n        await Promise.all(app.container\r\n            .getProviders()\r\n            .map(provider => provider.delete()));\r\n        app.isDeleted = true;\r\n    }\r\n}\r\n/**\r\n * Registers a library's name and version for platform logging purposes.\r\n * @param library - Name of 1p or 3p library (e.g. firestore, angularfire)\r\n * @param version - Current version of that library.\r\n * @param variant - Bundle variant, e.g., node, rn, etc.\r\n *\r\n * @public\r\n */\r\nfunction registerVersion(libraryKeyOrName, version, variant) {\r\n    var _a;\r\n    // TODO: We can use this check to whitelist strings when/if we set up\r\n    // a good whitelist system.\r\n    let library = (_a = PLATFORM_LOG_STRING[libraryKeyOrName]) !== null && _a !== void 0 ? _a : libraryKeyOrName;\r\n    if (variant) {\r\n        library += `-${variant}`;\r\n    }\r\n    const libraryMismatch = library.match(/\\s|\\//);\r\n    const versionMismatch = version.match(/\\s|\\//);\r\n    if (libraryMismatch || versionMismatch) {\r\n        const warning = [\r\n            `Unable to register library \"${library}\" with version \"${version}\":`\r\n        ];\r\n        if (libraryMismatch) {\r\n            warning.push(`library name \"${library}\" contains illegal characters (whitespace or \"/\")`);\r\n        }\r\n        if (libraryMismatch && versionMismatch) {\r\n            warning.push('and');\r\n        }\r\n        if (versionMismatch) {\r\n            warning.push(`version name \"${version}\" contains illegal characters (whitespace or \"/\")`);\r\n        }\r\n        logger.warn(warning.join(' '));\r\n        return;\r\n    }\r\n    _registerComponent(new _firebase_component__WEBPACK_IMPORTED_MODULE_0__.Component(`${library}-version`, () => ({ library, version }), \"VERSION\" /* ComponentType.VERSION */));\r\n}\r\n/**\r\n * Sets log handler for all Firebase SDKs.\r\n * @param logCallback - An optional custom log handler that executes user code whenever\r\n * the Firebase SDK makes a logging call.\r\n *\r\n * @public\r\n */\r\nfunction onLog(logCallback, options) {\r\n    if (logCallback !== null && typeof logCallback !== 'function') {\r\n        throw ERROR_FACTORY.create(\"invalid-log-argument\" /* AppError.INVALID_LOG_ARGUMENT */);\r\n    }\r\n    (0,_firebase_logger__WEBPACK_IMPORTED_MODULE_1__.setUserLogHandler)(logCallback, options);\r\n}\r\n/**\r\n * Sets log level for all Firebase SDKs.\r\n *\r\n * All of the log types above the current log level are captured (i.e. if\r\n * you set the log level to `info`, errors are logged, but `debug` and\r\n * `verbose` logs are not).\r\n *\r\n * @public\r\n */\r\nfunction setLogLevel(logLevel) {\r\n    (0,_firebase_logger__WEBPACK_IMPORTED_MODULE_1__.setLogLevel)(logLevel);\r\n}\n\n/**\r\n * @license\r\n * Copyright 2021 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst DB_NAME = 'firebase-heartbeat-database';\r\nconst DB_VERSION = 1;\r\nconst STORE_NAME = 'firebase-heartbeat-store';\r\nlet dbPromise = null;\r\nfunction getDbPromise() {\r\n    if (!dbPromise) {\r\n        dbPromise = (0,idb__WEBPACK_IMPORTED_MODULE_3__.openDB)(DB_NAME, DB_VERSION, {\r\n            upgrade: (db, oldVersion) => {\r\n                // We don't use 'break' in this switch statement, the fall-through\r\n                // behavior is what we want, because if there are multiple versions between\r\n                // the old version and the current version, we want ALL the migrations\r\n                // that correspond to those versions to run, not only the last one.\r\n                // eslint-disable-next-line default-case\r\n                switch (oldVersion) {\r\n                    case 0:\r\n                        try {\r\n                            db.createObjectStore(STORE_NAME);\r\n                        }\r\n                        catch (e) {\r\n                            // Safari/iOS browsers throw occasional exceptions on\r\n                            // db.createObjectStore() that may be a bug. Avoid blocking\r\n                            // the rest of the app functionality.\r\n                            console.warn(e);\r\n                        }\r\n                }\r\n            }\r\n        }).catch(e => {\r\n            throw ERROR_FACTORY.create(\"idb-open\" /* AppError.IDB_OPEN */, {\r\n                originalErrorMessage: e.message\r\n            });\r\n        });\r\n    }\r\n    return dbPromise;\r\n}\r\nasync function readHeartbeatsFromIndexedDB(app) {\r\n    try {\r\n        const db = await getDbPromise();\r\n        const tx = db.transaction(STORE_NAME);\r\n        const result = await tx.objectStore(STORE_NAME).get(computeKey(app));\r\n        // We already have the value but tx.done can throw,\r\n        // so we need to await it here to catch errors\r\n        await tx.done;\r\n        return result;\r\n    }\r\n    catch (e) {\r\n        if (e instanceof _firebase_util__WEBPACK_IMPORTED_MODULE_2__.FirebaseError) {\r\n            logger.warn(e.message);\r\n        }\r\n        else {\r\n            const idbGetError = ERROR_FACTORY.create(\"idb-get\" /* AppError.IDB_GET */, {\r\n                originalErrorMessage: e === null || e === void 0 ? void 0 : e.message\r\n            });\r\n            logger.warn(idbGetError.message);\r\n        }\r\n    }\r\n}\r\nasync function writeHeartbeatsToIndexedDB(app, heartbeatObject) {\r\n    try {\r\n        const db = await getDbPromise();\r\n        const tx = db.transaction(STORE_NAME, 'readwrite');\r\n        const objectStore = tx.objectStore(STORE_NAME);\r\n        await objectStore.put(heartbeatObject, computeKey(app));\r\n        await tx.done;\r\n    }\r\n    catch (e) {\r\n        if (e instanceof _firebase_util__WEBPACK_IMPORTED_MODULE_2__.FirebaseError) {\r\n            logger.warn(e.message);\r\n        }\r\n        else {\r\n            const idbGetError = ERROR_FACTORY.create(\"idb-set\" /* AppError.IDB_WRITE */, {\r\n                originalErrorMessage: e === null || e === void 0 ? void 0 : e.message\r\n            });\r\n            logger.warn(idbGetError.message);\r\n        }\r\n    }\r\n}\r\nfunction computeKey(app) {\r\n    return `${app.name}!${app.options.appId}`;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2021 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst MAX_HEADER_BYTES = 1024;\r\n// 30 days\r\nconst STORED_HEARTBEAT_RETENTION_MAX_MILLIS = 30 * 24 * 60 * 60 * 1000;\r\nclass HeartbeatServiceImpl {\r\n    constructor(container) {\r\n        this.container = container;\r\n        /**\r\n         * In-memory cache for heartbeats, used by getHeartbeatsHeader() to generate\r\n         * the header string.\r\n         * Stores one record per date. This will be consolidated into the standard\r\n         * format of one record per user agent string before being sent as a header.\r\n         * Populated from indexedDB when the controller is instantiated and should\r\n         * be kept in sync with indexedDB.\r\n         * Leave public for easier testing.\r\n         */\r\n        this._heartbeatsCache = null;\r\n        const app = this.container.getProvider('app').getImmediate();\r\n        this._storage = new HeartbeatStorageImpl(app);\r\n        this._heartbeatsCachePromise = this._storage.read().then(result => {\r\n            this._heartbeatsCache = result;\r\n            return result;\r\n        });\r\n    }\r\n    /**\r\n     * Called to report a heartbeat. The function will generate\r\n     * a HeartbeatsByUserAgent object, update heartbeatsCache, and persist it\r\n     * to IndexedDB.\r\n     * Note that we only store one heartbeat per day. So if a heartbeat for today is\r\n     * already logged, subsequent calls to this function in the same day will be ignored.\r\n     */\r\n    async triggerHeartbeat() {\r\n        var _a, _b;\r\n        const platformLogger = this.container\r\n            .getProvider('platform-logger')\r\n            .getImmediate();\r\n        // This is the \"Firebase user agent\" string from the platform logger\r\n        // service, not the browser user agent.\r\n        const agent = platformLogger.getPlatformInfoString();\r\n        const date = getUTCDateString();\r\n        if (((_a = this._heartbeatsCache) === null || _a === void 0 ? void 0 : _a.heartbeats) == null) {\r\n            this._heartbeatsCache = await this._heartbeatsCachePromise;\r\n            // If we failed to construct a heartbeats cache, then return immediately.\r\n            if (((_b = this._heartbeatsCache) === null || _b === void 0 ? void 0 : _b.heartbeats) == null) {\r\n                return;\r\n            }\r\n        }\r\n        // Do not store a heartbeat if one is already stored for this day\r\n        // or if a header has already been sent today.\r\n        if (this._heartbeatsCache.lastSentHeartbeatDate === date ||\r\n            this._heartbeatsCache.heartbeats.some(singleDateHeartbeat => singleDateHeartbeat.date === date)) {\r\n            return;\r\n        }\r\n        else {\r\n            // There is no entry for this date. Create one.\r\n            this._heartbeatsCache.heartbeats.push({ date, agent });\r\n        }\r\n        // Remove entries older than 30 days.\r\n        this._heartbeatsCache.heartbeats = this._heartbeatsCache.heartbeats.filter(singleDateHeartbeat => {\r\n            const hbTimestamp = new Date(singleDateHeartbeat.date).valueOf();\r\n            const now = Date.now();\r\n            return now - hbTimestamp <= STORED_HEARTBEAT_RETENTION_MAX_MILLIS;\r\n        });\r\n        return this._storage.overwrite(this._heartbeatsCache);\r\n    }\r\n    /**\r\n     * Returns a base64 encoded string which can be attached to the heartbeat-specific header directly.\r\n     * It also clears all heartbeats from memory as well as in IndexedDB.\r\n     *\r\n     * NOTE: Consuming product SDKs should not send the header if this method\r\n     * returns an empty string.\r\n     */\r\n    async getHeartbeatsHeader() {\r\n        var _a;\r\n        if (this._heartbeatsCache === null) {\r\n            await this._heartbeatsCachePromise;\r\n        }\r\n        // If it's still null or the array is empty, there is no data to send.\r\n        if (((_a = this._heartbeatsCache) === null || _a === void 0 ? void 0 : _a.heartbeats) == null ||\r\n            this._heartbeatsCache.heartbeats.length === 0) {\r\n            return '';\r\n        }\r\n        const date = getUTCDateString();\r\n        // Extract as many heartbeats from the cache as will fit under the size limit.\r\n        const { heartbeatsToSend, unsentEntries } = extractHeartbeatsForHeader(this._heartbeatsCache.heartbeats);\r\n        const headerString = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.base64urlEncodeWithoutPadding)(JSON.stringify({ version: 2, heartbeats: heartbeatsToSend }));\r\n        // Store last sent date to prevent another being logged/sent for the same day.\r\n        this._heartbeatsCache.lastSentHeartbeatDate = date;\r\n        if (unsentEntries.length > 0) {\r\n            // Store any unsent entries if they exist.\r\n            this._heartbeatsCache.heartbeats = unsentEntries;\r\n            // This seems more likely than emptying the array (below) to lead to some odd state\r\n            // since the cache isn't empty and this will be called again on the next request,\r\n            // and is probably safest if we await it.\r\n            await this._storage.overwrite(this._heartbeatsCache);\r\n        }\r\n        else {\r\n            this._heartbeatsCache.heartbeats = [];\r\n            // Do not wait for this, to reduce latency.\r\n            void this._storage.overwrite(this._heartbeatsCache);\r\n        }\r\n        return headerString;\r\n    }\r\n}\r\nfunction getUTCDateString() {\r\n    const today = new Date();\r\n    // Returns date format 'YYYY-MM-DD'\r\n    return today.toISOString().substring(0, 10);\r\n}\r\nfunction extractHeartbeatsForHeader(heartbeatsCache, maxSize = MAX_HEADER_BYTES) {\r\n    // Heartbeats grouped by user agent in the standard format to be sent in\r\n    // the header.\r\n    const heartbeatsToSend = [];\r\n    // Single date format heartbeats that are not sent.\r\n    let unsentEntries = heartbeatsCache.slice();\r\n    for (const singleDateHeartbeat of heartbeatsCache) {\r\n        // Look for an existing entry with the same user agent.\r\n        const heartbeatEntry = heartbeatsToSend.find(hb => hb.agent === singleDateHeartbeat.agent);\r\n        if (!heartbeatEntry) {\r\n            // If no entry for this user agent exists, create one.\r\n            heartbeatsToSend.push({\r\n                agent: singleDateHeartbeat.agent,\r\n                dates: [singleDateHeartbeat.date]\r\n            });\r\n            if (countBytes(heartbeatsToSend) > maxSize) {\r\n                // If the header would exceed max size, remove the added heartbeat\r\n                // entry and stop adding to the header.\r\n                heartbeatsToSend.pop();\r\n                break;\r\n            }\r\n        }\r\n        else {\r\n            heartbeatEntry.dates.push(singleDateHeartbeat.date);\r\n            // If the header would exceed max size, remove the added date\r\n            // and stop adding to the header.\r\n            if (countBytes(heartbeatsToSend) > maxSize) {\r\n                heartbeatEntry.dates.pop();\r\n                break;\r\n            }\r\n        }\r\n        // Pop unsent entry from queue. (Skipped if adding the entry exceeded\r\n        // quota and the loop breaks early.)\r\n        unsentEntries = unsentEntries.slice(1);\r\n    }\r\n    return {\r\n        heartbeatsToSend,\r\n        unsentEntries\r\n    };\r\n}\r\nclass HeartbeatStorageImpl {\r\n    constructor(app) {\r\n        this.app = app;\r\n        this._canUseIndexedDBPromise = this.runIndexedDBEnvironmentCheck();\r\n    }\r\n    async runIndexedDBEnvironmentCheck() {\r\n        if (!(0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.isIndexedDBAvailable)()) {\r\n            return false;\r\n        }\r\n        else {\r\n            return (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.validateIndexedDBOpenable)()\r\n                .then(() => true)\r\n                .catch(() => false);\r\n        }\r\n    }\r\n    /**\r\n     * Read all heartbeats.\r\n     */\r\n    async read() {\r\n        const canUseIndexedDB = await this._canUseIndexedDBPromise;\r\n        if (!canUseIndexedDB) {\r\n            return { heartbeats: [] };\r\n        }\r\n        else {\r\n            const idbHeartbeatObject = await readHeartbeatsFromIndexedDB(this.app);\r\n            if (idbHeartbeatObject === null || idbHeartbeatObject === void 0 ? void 0 : idbHeartbeatObject.heartbeats) {\r\n                return idbHeartbeatObject;\r\n            }\r\n            else {\r\n                return { heartbeats: [] };\r\n            }\r\n        }\r\n    }\r\n    // overwrite the storage with the provided heartbeats\r\n    async overwrite(heartbeatsObject) {\r\n        var _a;\r\n        const canUseIndexedDB = await this._canUseIndexedDBPromise;\r\n        if (!canUseIndexedDB) {\r\n            return;\r\n        }\r\n        else {\r\n            const existingHeartbeatsObject = await this.read();\r\n            return writeHeartbeatsToIndexedDB(this.app, {\r\n                lastSentHeartbeatDate: (_a = heartbeatsObject.lastSentHeartbeatDate) !== null && _a !== void 0 ? _a : existingHeartbeatsObject.lastSentHeartbeatDate,\r\n                heartbeats: heartbeatsObject.heartbeats\r\n            });\r\n        }\r\n    }\r\n    // add heartbeats\r\n    async add(heartbeatsObject) {\r\n        var _a;\r\n        const canUseIndexedDB = await this._canUseIndexedDBPromise;\r\n        if (!canUseIndexedDB) {\r\n            return;\r\n        }\r\n        else {\r\n            const existingHeartbeatsObject = await this.read();\r\n            return writeHeartbeatsToIndexedDB(this.app, {\r\n                lastSentHeartbeatDate: (_a = heartbeatsObject.lastSentHeartbeatDate) !== null && _a !== void 0 ? _a : existingHeartbeatsObject.lastSentHeartbeatDate,\r\n                heartbeats: [\r\n                    ...existingHeartbeatsObject.heartbeats,\r\n                    ...heartbeatsObject.heartbeats\r\n                ]\r\n            });\r\n        }\r\n    }\r\n}\r\n/**\r\n * Calculate bytes of a HeartbeatsByUserAgent array after being wrapped\r\n * in a platform logging header JSON object, stringified, and converted\r\n * to base 64.\r\n */\r\nfunction countBytes(heartbeatsCache) {\r\n    // base64 has a restricted set of characters, all of which should be 1 byte.\r\n    return (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.base64urlEncodeWithoutPadding)(\r\n    // heartbeatsCache wrapper properties\r\n    JSON.stringify({ version: 2, heartbeats: heartbeatsCache })).length;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nfunction registerCoreComponents(variant) {\r\n    _registerComponent(new _firebase_component__WEBPACK_IMPORTED_MODULE_0__.Component('platform-logger', container => new PlatformLoggerServiceImpl(container), \"PRIVATE\" /* ComponentType.PRIVATE */));\r\n    _registerComponent(new _firebase_component__WEBPACK_IMPORTED_MODULE_0__.Component('heartbeat', container => new HeartbeatServiceImpl(container), \"PRIVATE\" /* ComponentType.PRIVATE */));\r\n    // Register `app` package.\r\n    registerVersion(name$p, version$1, variant);\r\n    // BUILD_TARGET will be replaced by values like esm5, esm2017, cjs5, etc during the compilation\r\n    registerVersion(name$p, version$1, 'esm2017');\r\n    // Register platform SDK identifier (no version).\r\n    registerVersion('fire-js', '');\r\n}\n\n/**\r\n * Firebase App\r\n *\r\n * @remarks This package coordinates the communication between the different Firebase components\r\n * @packageDocumentation\r\n */\r\nregisterCoreComponents('');\n\n\n//# sourceMappingURL=index.esm2017.js.map\n\n\n//# sourceURL=webpack://daveads.github.io/./node_modules/@firebase/app/dist/esm/index.esm2017.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   FirebaseError: () => (/* reexport safe */ _firebase_util__WEBPACK_IMPORTED_MODULE_2__.FirebaseError),
+/* harmony export */   SDK_VERSION: () => (/* binding */ SDK_VERSION),
+/* harmony export */   _DEFAULT_ENTRY_NAME: () => (/* binding */ DEFAULT_ENTRY_NAME),
+/* harmony export */   _addComponent: () => (/* binding */ _addComponent),
+/* harmony export */   _addOrOverwriteComponent: () => (/* binding */ _addOrOverwriteComponent),
+/* harmony export */   _apps: () => (/* binding */ _apps),
+/* harmony export */   _clearComponents: () => (/* binding */ _clearComponents),
+/* harmony export */   _components: () => (/* binding */ _components),
+/* harmony export */   _getProvider: () => (/* binding */ _getProvider),
+/* harmony export */   _isFirebaseApp: () => (/* binding */ _isFirebaseApp),
+/* harmony export */   _isFirebaseServerApp: () => (/* binding */ _isFirebaseServerApp),
+/* harmony export */   _registerComponent: () => (/* binding */ _registerComponent),
+/* harmony export */   _removeServiceInstance: () => (/* binding */ _removeServiceInstance),
+/* harmony export */   _serverApps: () => (/* binding */ _serverApps),
+/* harmony export */   deleteApp: () => (/* binding */ deleteApp),
+/* harmony export */   getApp: () => (/* binding */ getApp),
+/* harmony export */   getApps: () => (/* binding */ getApps),
+/* harmony export */   initializeApp: () => (/* binding */ initializeApp),
+/* harmony export */   initializeServerApp: () => (/* binding */ initializeServerApp),
+/* harmony export */   onLog: () => (/* binding */ onLog),
+/* harmony export */   registerVersion: () => (/* binding */ registerVersion),
+/* harmony export */   setLogLevel: () => (/* binding */ setLogLevel)
+/* harmony export */ });
+/* harmony import */ var _firebase_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/component */ "./node_modules/@firebase/component/dist/esm/index.esm2017.js");
+/* harmony import */ var _firebase_logger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @firebase/logger */ "./node_modules/@firebase/logger/dist/esm/index.esm2017.js");
+/* harmony import */ var _firebase_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @firebase/util */ "./node_modules/@firebase/util/dist/index.esm2017.js");
+/* harmony import */ var idb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! idb */ "./node_modules/idb/build/index.js");
+
+
+
+
+
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+class PlatformLoggerServiceImpl {
+    constructor(container) {
+        this.container = container;
+    }
+    // In initial implementation, this will be called by installations on
+    // auth token refresh, and installations will send this string.
+    getPlatformInfoString() {
+        const providers = this.container.getProviders();
+        // Loop through providers and get library/version pairs from any that are
+        // version components.
+        return providers
+            .map(provider => {
+            if (isVersionServiceProvider(provider)) {
+                const service = provider.getImmediate();
+                return `${service.library}/${service.version}`;
+            }
+            else {
+                return null;
+            }
+        })
+            .filter(logString => logString)
+            .join(' ');
+    }
+}
+/**
+ *
+ * @param provider check if this provider provides a VersionService
+ *
+ * NOTE: Using Provider<'app-version'> is a hack to indicate that the provider
+ * provides VersionService. The provider is not necessarily a 'app-version'
+ * provider.
+ */
+function isVersionServiceProvider(provider) {
+    const component = provider.getComponent();
+    return (component === null || component === void 0 ? void 0 : component.type) === "VERSION" /* ComponentType.VERSION */;
+}
+
+const name$p = "@firebase/app";
+const version$1 = "0.10.3";
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const logger = new _firebase_logger__WEBPACK_IMPORTED_MODULE_1__.Logger('@firebase/app');
+
+const name$o = "@firebase/app-compat";
+
+const name$n = "@firebase/analytics-compat";
+
+const name$m = "@firebase/analytics";
+
+const name$l = "@firebase/app-check-compat";
+
+const name$k = "@firebase/app-check";
+
+const name$j = "@firebase/auth";
+
+const name$i = "@firebase/auth-compat";
+
+const name$h = "@firebase/database";
+
+const name$g = "@firebase/database-compat";
+
+const name$f = "@firebase/functions";
+
+const name$e = "@firebase/functions-compat";
+
+const name$d = "@firebase/installations";
+
+const name$c = "@firebase/installations-compat";
+
+const name$b = "@firebase/messaging";
+
+const name$a = "@firebase/messaging-compat";
+
+const name$9 = "@firebase/performance";
+
+const name$8 = "@firebase/performance-compat";
+
+const name$7 = "@firebase/remote-config";
+
+const name$6 = "@firebase/remote-config-compat";
+
+const name$5 = "@firebase/storage";
+
+const name$4 = "@firebase/storage-compat";
+
+const name$3 = "@firebase/firestore";
+
+const name$2 = "@firebase/vertexai-preview";
+
+const name$1 = "@firebase/firestore-compat";
+
+const name = "firebase";
+const version = "10.12.0";
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * The default app name
+ *
+ * @internal
+ */
+const DEFAULT_ENTRY_NAME = '[DEFAULT]';
+const PLATFORM_LOG_STRING = {
+    [name$p]: 'fire-core',
+    [name$o]: 'fire-core-compat',
+    [name$m]: 'fire-analytics',
+    [name$n]: 'fire-analytics-compat',
+    [name$k]: 'fire-app-check',
+    [name$l]: 'fire-app-check-compat',
+    [name$j]: 'fire-auth',
+    [name$i]: 'fire-auth-compat',
+    [name$h]: 'fire-rtdb',
+    [name$g]: 'fire-rtdb-compat',
+    [name$f]: 'fire-fn',
+    [name$e]: 'fire-fn-compat',
+    [name$d]: 'fire-iid',
+    [name$c]: 'fire-iid-compat',
+    [name$b]: 'fire-fcm',
+    [name$a]: 'fire-fcm-compat',
+    [name$9]: 'fire-perf',
+    [name$8]: 'fire-perf-compat',
+    [name$7]: 'fire-rc',
+    [name$6]: 'fire-rc-compat',
+    [name$5]: 'fire-gcs',
+    [name$4]: 'fire-gcs-compat',
+    [name$3]: 'fire-fst',
+    [name$1]: 'fire-fst-compat',
+    [name$2]: 'fire-vertex',
+    'fire-js': 'fire-js',
+    [name]: 'fire-js-all'
+};
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @internal
+ */
+const _apps = new Map();
+/**
+ * @internal
+ */
+const _serverApps = new Map();
+/**
+ * Registered components.
+ *
+ * @internal
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const _components = new Map();
+/**
+ * @param component - the component being added to this app's container
+ *
+ * @internal
+ */
+function _addComponent(app, component) {
+    try {
+        app.container.addComponent(component);
+    }
+    catch (e) {
+        logger.debug(`Component ${component.name} failed to register with FirebaseApp ${app.name}`, e);
+    }
+}
+/**
+ *
+ * @internal
+ */
+function _addOrOverwriteComponent(app, component) {
+    app.container.addOrOverwriteComponent(component);
+}
+/**
+ *
+ * @param component - the component to register
+ * @returns whether or not the component is registered successfully
+ *
+ * @internal
+ */
+function _registerComponent(component) {
+    const componentName = component.name;
+    if (_components.has(componentName)) {
+        logger.debug(`There were multiple attempts to register component ${componentName}.`);
+        return false;
+    }
+    _components.set(componentName, component);
+    // add the component to existing app instances
+    for (const app of _apps.values()) {
+        _addComponent(app, component);
+    }
+    for (const serverApp of _serverApps.values()) {
+        _addComponent(serverApp, component);
+    }
+    return true;
+}
+/**
+ *
+ * @param app - FirebaseApp instance
+ * @param name - service name
+ *
+ * @returns the provider for the service with the matching name
+ *
+ * @internal
+ */
+function _getProvider(app, name) {
+    const heartbeatController = app.container
+        .getProvider('heartbeat')
+        .getImmediate({ optional: true });
+    if (heartbeatController) {
+        void heartbeatController.triggerHeartbeat();
+    }
+    return app.container.getProvider(name);
+}
+/**
+ *
+ * @param app - FirebaseApp instance
+ * @param name - service name
+ * @param instanceIdentifier - service instance identifier in case the service supports multiple instances
+ *
+ * @internal
+ */
+function _removeServiceInstance(app, name, instanceIdentifier = DEFAULT_ENTRY_NAME) {
+    _getProvider(app, name).clearInstance(instanceIdentifier);
+}
+/**
+ *
+ * @param obj - an object of type FirebaseApp or FirebaseOptions.
+ *
+ * @returns true if the provide object is of type FirebaseApp.
+ *
+ * @internal
+ */
+function _isFirebaseApp(obj) {
+    return obj.options !== undefined;
+}
+/**
+ *
+ * @param obj - an object of type FirebaseApp.
+ *
+ * @returns true if the provided object is of type FirebaseServerAppImpl.
+ *
+ * @internal
+ */
+function _isFirebaseServerApp(obj) {
+    return obj.settings !== undefined;
+}
+/**
+ * Test only
+ *
+ * @internal
+ */
+function _clearComponents() {
+    _components.clear();
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const ERRORS = {
+    ["no-app" /* AppError.NO_APP */]: "No Firebase App '{$appName}' has been created - " +
+        'call initializeApp() first',
+    ["bad-app-name" /* AppError.BAD_APP_NAME */]: "Illegal App name: '{$appName}'",
+    ["duplicate-app" /* AppError.DUPLICATE_APP */]: "Firebase App named '{$appName}' already exists with different options or config",
+    ["app-deleted" /* AppError.APP_DELETED */]: "Firebase App named '{$appName}' already deleted",
+    ["server-app-deleted" /* AppError.SERVER_APP_DELETED */]: 'Firebase Server App has been deleted',
+    ["no-options" /* AppError.NO_OPTIONS */]: 'Need to provide options, when not being deployed to hosting via source.',
+    ["invalid-app-argument" /* AppError.INVALID_APP_ARGUMENT */]: 'firebase.{$appName}() takes either no argument or a ' +
+        'Firebase App instance.',
+    ["invalid-log-argument" /* AppError.INVALID_LOG_ARGUMENT */]: 'First argument to `onLog` must be null or a function.',
+    ["idb-open" /* AppError.IDB_OPEN */]: 'Error thrown when opening IndexedDB. Original error: {$originalErrorMessage}.',
+    ["idb-get" /* AppError.IDB_GET */]: 'Error thrown when reading from IndexedDB. Original error: {$originalErrorMessage}.',
+    ["idb-set" /* AppError.IDB_WRITE */]: 'Error thrown when writing to IndexedDB. Original error: {$originalErrorMessage}.',
+    ["idb-delete" /* AppError.IDB_DELETE */]: 'Error thrown when deleting from IndexedDB. Original error: {$originalErrorMessage}.',
+    ["finalization-registry-not-supported" /* AppError.FINALIZATION_REGISTRY_NOT_SUPPORTED */]: 'FirebaseServerApp deleteOnDeref field defined but the JS runtime does not support FinalizationRegistry.',
+    ["invalid-server-app-environment" /* AppError.INVALID_SERVER_APP_ENVIRONMENT */]: 'FirebaseServerApp is not for use in browser environments.'
+};
+const ERROR_FACTORY = new _firebase_util__WEBPACK_IMPORTED_MODULE_2__.ErrorFactory('app', 'Firebase', ERRORS);
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+class FirebaseAppImpl {
+    constructor(options, config, container) {
+        this._isDeleted = false;
+        this._options = Object.assign({}, options);
+        this._config = Object.assign({}, config);
+        this._name = config.name;
+        this._automaticDataCollectionEnabled =
+            config.automaticDataCollectionEnabled;
+        this._container = container;
+        this.container.addComponent(new _firebase_component__WEBPACK_IMPORTED_MODULE_0__.Component('app', () => this, "PUBLIC" /* ComponentType.PUBLIC */));
+    }
+    get automaticDataCollectionEnabled() {
+        this.checkDestroyed();
+        return this._automaticDataCollectionEnabled;
+    }
+    set automaticDataCollectionEnabled(val) {
+        this.checkDestroyed();
+        this._automaticDataCollectionEnabled = val;
+    }
+    get name() {
+        this.checkDestroyed();
+        return this._name;
+    }
+    get options() {
+        this.checkDestroyed();
+        return this._options;
+    }
+    get config() {
+        this.checkDestroyed();
+        return this._config;
+    }
+    get container() {
+        return this._container;
+    }
+    get isDeleted() {
+        return this._isDeleted;
+    }
+    set isDeleted(val) {
+        this._isDeleted = val;
+    }
+    /**
+     * This function will throw an Error if the App has already been deleted -
+     * use before performing API actions on the App.
+     */
+    checkDestroyed() {
+        if (this.isDeleted) {
+            throw ERROR_FACTORY.create("app-deleted" /* AppError.APP_DELETED */, { appName: this._name });
+        }
+    }
+}
+
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+class FirebaseServerAppImpl extends FirebaseAppImpl {
+    constructor(options, serverConfig, name, container) {
+        // Build configuration parameters for the FirebaseAppImpl base class.
+        const automaticDataCollectionEnabled = serverConfig.automaticDataCollectionEnabled !== undefined
+            ? serverConfig.automaticDataCollectionEnabled
+            : false;
+        // Create the FirebaseAppSettings object for the FirebaseAppImp constructor.
+        const config = {
+            name,
+            automaticDataCollectionEnabled
+        };
+        if (options.apiKey !== undefined) {
+            // Construct the parent FirebaseAppImp object.
+            super(options, config, container);
+        }
+        else {
+            const appImpl = options;
+            super(appImpl.options, config, container);
+        }
+        // Now construct the data for the FirebaseServerAppImpl.
+        this._serverConfig = Object.assign({ automaticDataCollectionEnabled }, serverConfig);
+        this._finalizationRegistry = new FinalizationRegistry(() => {
+            this.automaticCleanup();
+        });
+        this._refCount = 0;
+        this.incRefCount(this._serverConfig.releaseOnDeref);
+        // Do not retain a hard reference to the dref object, otherwise the FinalizationRegisry
+        // will never trigger.
+        this._serverConfig.releaseOnDeref = undefined;
+        serverConfig.releaseOnDeref = undefined;
+        registerVersion(name$p, version$1, 'serverapp');
+    }
+    toJSON() {
+        return undefined;
+    }
+    get refCount() {
+        return this._refCount;
+    }
+    // Increment the reference count of this server app. If an object is provided, register it
+    // with the finalization registry.
+    incRefCount(obj) {
+        if (this.isDeleted) {
+            return;
+        }
+        this._refCount++;
+        if (obj !== undefined) {
+            this._finalizationRegistry.register(obj, this);
+        }
+    }
+    // Decrement the reference count.
+    decRefCount() {
+        if (this.isDeleted) {
+            return 0;
+        }
+        return --this._refCount;
+    }
+    // Invoked by the FinalizationRegistry callback to note that this app should go through its
+    // reference counts and delete itself if no reference count remain. The coordinating logic that
+    // handles this is in deleteApp(...).
+    automaticCleanup() {
+        void deleteApp(this);
+    }
+    get settings() {
+        this.checkDestroyed();
+        return this._serverConfig;
+    }
+    /**
+     * This function will throw an Error if the App has already been deleted -
+     * use before performing API actions on the App.
+     */
+    checkDestroyed() {
+        if (this.isDeleted) {
+            throw ERROR_FACTORY.create("server-app-deleted" /* AppError.SERVER_APP_DELETED */);
+        }
+    }
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * The current SDK version.
+ *
+ * @public
+ */
+const SDK_VERSION = version;
+function initializeApp(_options, rawConfig = {}) {
+    let options = _options;
+    if (typeof rawConfig !== 'object') {
+        const name = rawConfig;
+        rawConfig = { name };
+    }
+    const config = Object.assign({ name: DEFAULT_ENTRY_NAME, automaticDataCollectionEnabled: false }, rawConfig);
+    const name = config.name;
+    if (typeof name !== 'string' || !name) {
+        throw ERROR_FACTORY.create("bad-app-name" /* AppError.BAD_APP_NAME */, {
+            appName: String(name)
+        });
+    }
+    options || (options = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getDefaultAppConfig)());
+    if (!options) {
+        throw ERROR_FACTORY.create("no-options" /* AppError.NO_OPTIONS */);
+    }
+    const existingApp = _apps.get(name);
+    if (existingApp) {
+        // return the existing app if options and config deep equal the ones in the existing app.
+        if ((0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.deepEqual)(options, existingApp.options) &&
+            (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.deepEqual)(config, existingApp.config)) {
+            return existingApp;
+        }
+        else {
+            throw ERROR_FACTORY.create("duplicate-app" /* AppError.DUPLICATE_APP */, { appName: name });
+        }
+    }
+    const container = new _firebase_component__WEBPACK_IMPORTED_MODULE_0__.ComponentContainer(name);
+    for (const component of _components.values()) {
+        container.addComponent(component);
+    }
+    const newApp = new FirebaseAppImpl(options, config, container);
+    _apps.set(name, newApp);
+    return newApp;
+}
+function initializeServerApp(_options, _serverAppConfig) {
+    if ((0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.isBrowser)()) {
+        // FirebaseServerApp isn't designed to be run in browsers.
+        throw ERROR_FACTORY.create("invalid-server-app-environment" /* AppError.INVALID_SERVER_APP_ENVIRONMENT */);
+    }
+    if (_serverAppConfig.automaticDataCollectionEnabled === undefined) {
+        _serverAppConfig.automaticDataCollectionEnabled = false;
+    }
+    let appOptions;
+    if (_isFirebaseApp(_options)) {
+        appOptions = _options.options;
+    }
+    else {
+        appOptions = _options;
+    }
+    // Build an app name based on a hash of the configuration options.
+    const nameObj = Object.assign(Object.assign({}, _serverAppConfig), appOptions);
+    // However, Do not mangle the name based on releaseOnDeref, since it will vary between the
+    // construction of FirebaseServerApp instances. For example, if the object is the request headers.
+    if (nameObj.releaseOnDeref !== undefined) {
+        delete nameObj.releaseOnDeref;
+    }
+    const hashCode = (s) => {
+        return [...s].reduce((hash, c) => (Math.imul(31, hash) + c.charCodeAt(0)) | 0, 0);
+    };
+    if (_serverAppConfig.releaseOnDeref !== undefined) {
+        if (typeof FinalizationRegistry === 'undefined') {
+            throw ERROR_FACTORY.create("finalization-registry-not-supported" /* AppError.FINALIZATION_REGISTRY_NOT_SUPPORTED */, {});
+        }
+    }
+    const nameString = '' + hashCode(JSON.stringify(nameObj));
+    const existingApp = _serverApps.get(nameString);
+    if (existingApp) {
+        existingApp.incRefCount(_serverAppConfig.releaseOnDeref);
+        return existingApp;
+    }
+    const container = new _firebase_component__WEBPACK_IMPORTED_MODULE_0__.ComponentContainer(nameString);
+    for (const component of _components.values()) {
+        container.addComponent(component);
+    }
+    const newApp = new FirebaseServerAppImpl(appOptions, _serverAppConfig, nameString, container);
+    _serverApps.set(nameString, newApp);
+    return newApp;
+}
+/**
+ * Retrieves a {@link @firebase/app#FirebaseApp} instance.
+ *
+ * When called with no arguments, the default app is returned. When an app name
+ * is provided, the app corresponding to that name is returned.
+ *
+ * An exception is thrown if the app being retrieved has not yet been
+ * initialized.
+ *
+ * @example
+ * ```javascript
+ * // Return the default app
+ * const app = getApp();
+ * ```
+ *
+ * @example
+ * ```javascript
+ * // Return a named app
+ * const otherApp = getApp("otherApp");
+ * ```
+ *
+ * @param name - Optional name of the app to return. If no name is
+ *   provided, the default is `"[DEFAULT]"`.
+ *
+ * @returns The app corresponding to the provided app name.
+ *   If no app name is provided, the default app is returned.
+ *
+ * @public
+ */
+function getApp(name = DEFAULT_ENTRY_NAME) {
+    const app = _apps.get(name);
+    if (!app && name === DEFAULT_ENTRY_NAME && (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.getDefaultAppConfig)()) {
+        return initializeApp();
+    }
+    if (!app) {
+        throw ERROR_FACTORY.create("no-app" /* AppError.NO_APP */, { appName: name });
+    }
+    return app;
+}
+/**
+ * A (read-only) array of all initialized apps.
+ * @public
+ */
+function getApps() {
+    return Array.from(_apps.values());
+}
+/**
+ * Renders this app unusable and frees the resources of all associated
+ * services.
+ *
+ * @example
+ * ```javascript
+ * deleteApp(app)
+ *   .then(function() {
+ *     console.log("App deleted successfully");
+ *   })
+ *   .catch(function(error) {
+ *     console.log("Error deleting app:", error);
+ *   });
+ * ```
+ *
+ * @public
+ */
+async function deleteApp(app) {
+    let cleanupProviders = false;
+    const name = app.name;
+    if (_apps.has(name)) {
+        cleanupProviders = true;
+        _apps.delete(name);
+    }
+    else if (_serverApps.has(name)) {
+        const firebaseServerApp = app;
+        if (firebaseServerApp.decRefCount() <= 0) {
+            _serverApps.delete(name);
+            cleanupProviders = true;
+        }
+    }
+    if (cleanupProviders) {
+        await Promise.all(app.container
+            .getProviders()
+            .map(provider => provider.delete()));
+        app.isDeleted = true;
+    }
+}
+/**
+ * Registers a library's name and version for platform logging purposes.
+ * @param library - Name of 1p or 3p library (e.g. firestore, angularfire)
+ * @param version - Current version of that library.
+ * @param variant - Bundle variant, e.g., node, rn, etc.
+ *
+ * @public
+ */
+function registerVersion(libraryKeyOrName, version, variant) {
+    var _a;
+    // TODO: We can use this check to whitelist strings when/if we set up
+    // a good whitelist system.
+    let library = (_a = PLATFORM_LOG_STRING[libraryKeyOrName]) !== null && _a !== void 0 ? _a : libraryKeyOrName;
+    if (variant) {
+        library += `-${variant}`;
+    }
+    const libraryMismatch = library.match(/\s|\//);
+    const versionMismatch = version.match(/\s|\//);
+    if (libraryMismatch || versionMismatch) {
+        const warning = [
+            `Unable to register library "${library}" with version "${version}":`
+        ];
+        if (libraryMismatch) {
+            warning.push(`library name "${library}" contains illegal characters (whitespace or "/")`);
+        }
+        if (libraryMismatch && versionMismatch) {
+            warning.push('and');
+        }
+        if (versionMismatch) {
+            warning.push(`version name "${version}" contains illegal characters (whitespace or "/")`);
+        }
+        logger.warn(warning.join(' '));
+        return;
+    }
+    _registerComponent(new _firebase_component__WEBPACK_IMPORTED_MODULE_0__.Component(`${library}-version`, () => ({ library, version }), "VERSION" /* ComponentType.VERSION */));
+}
+/**
+ * Sets log handler for all Firebase SDKs.
+ * @param logCallback - An optional custom log handler that executes user code whenever
+ * the Firebase SDK makes a logging call.
+ *
+ * @public
+ */
+function onLog(logCallback, options) {
+    if (logCallback !== null && typeof logCallback !== 'function') {
+        throw ERROR_FACTORY.create("invalid-log-argument" /* AppError.INVALID_LOG_ARGUMENT */);
+    }
+    (0,_firebase_logger__WEBPACK_IMPORTED_MODULE_1__.setUserLogHandler)(logCallback, options);
+}
+/**
+ * Sets log level for all Firebase SDKs.
+ *
+ * All of the log types above the current log level are captured (i.e. if
+ * you set the log level to `info`, errors are logged, but `debug` and
+ * `verbose` logs are not).
+ *
+ * @public
+ */
+function setLogLevel(logLevel) {
+    (0,_firebase_logger__WEBPACK_IMPORTED_MODULE_1__.setLogLevel)(logLevel);
+}
+
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const DB_NAME = 'firebase-heartbeat-database';
+const DB_VERSION = 1;
+const STORE_NAME = 'firebase-heartbeat-store';
+let dbPromise = null;
+function getDbPromise() {
+    if (!dbPromise) {
+        dbPromise = (0,idb__WEBPACK_IMPORTED_MODULE_3__.openDB)(DB_NAME, DB_VERSION, {
+            upgrade: (db, oldVersion) => {
+                // We don't use 'break' in this switch statement, the fall-through
+                // behavior is what we want, because if there are multiple versions between
+                // the old version and the current version, we want ALL the migrations
+                // that correspond to those versions to run, not only the last one.
+                // eslint-disable-next-line default-case
+                switch (oldVersion) {
+                    case 0:
+                        try {
+                            db.createObjectStore(STORE_NAME);
+                        }
+                        catch (e) {
+                            // Safari/iOS browsers throw occasional exceptions on
+                            // db.createObjectStore() that may be a bug. Avoid blocking
+                            // the rest of the app functionality.
+                            console.warn(e);
+                        }
+                }
+            }
+        }).catch(e => {
+            throw ERROR_FACTORY.create("idb-open" /* AppError.IDB_OPEN */, {
+                originalErrorMessage: e.message
+            });
+        });
+    }
+    return dbPromise;
+}
+async function readHeartbeatsFromIndexedDB(app) {
+    try {
+        const db = await getDbPromise();
+        const tx = db.transaction(STORE_NAME);
+        const result = await tx.objectStore(STORE_NAME).get(computeKey(app));
+        // We already have the value but tx.done can throw,
+        // so we need to await it here to catch errors
+        await tx.done;
+        return result;
+    }
+    catch (e) {
+        if (e instanceof _firebase_util__WEBPACK_IMPORTED_MODULE_2__.FirebaseError) {
+            logger.warn(e.message);
+        }
+        else {
+            const idbGetError = ERROR_FACTORY.create("idb-get" /* AppError.IDB_GET */, {
+                originalErrorMessage: e === null || e === void 0 ? void 0 : e.message
+            });
+            logger.warn(idbGetError.message);
+        }
+    }
+}
+async function writeHeartbeatsToIndexedDB(app, heartbeatObject) {
+    try {
+        const db = await getDbPromise();
+        const tx = db.transaction(STORE_NAME, 'readwrite');
+        const objectStore = tx.objectStore(STORE_NAME);
+        await objectStore.put(heartbeatObject, computeKey(app));
+        await tx.done;
+    }
+    catch (e) {
+        if (e instanceof _firebase_util__WEBPACK_IMPORTED_MODULE_2__.FirebaseError) {
+            logger.warn(e.message);
+        }
+        else {
+            const idbGetError = ERROR_FACTORY.create("idb-set" /* AppError.IDB_WRITE */, {
+                originalErrorMessage: e === null || e === void 0 ? void 0 : e.message
+            });
+            logger.warn(idbGetError.message);
+        }
+    }
+}
+function computeKey(app) {
+    return `${app.name}!${app.options.appId}`;
+}
+
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const MAX_HEADER_BYTES = 1024;
+// 30 days
+const STORED_HEARTBEAT_RETENTION_MAX_MILLIS = 30 * 24 * 60 * 60 * 1000;
+class HeartbeatServiceImpl {
+    constructor(container) {
+        this.container = container;
+        /**
+         * In-memory cache for heartbeats, used by getHeartbeatsHeader() to generate
+         * the header string.
+         * Stores one record per date. This will be consolidated into the standard
+         * format of one record per user agent string before being sent as a header.
+         * Populated from indexedDB when the controller is instantiated and should
+         * be kept in sync with indexedDB.
+         * Leave public for easier testing.
+         */
+        this._heartbeatsCache = null;
+        const app = this.container.getProvider('app').getImmediate();
+        this._storage = new HeartbeatStorageImpl(app);
+        this._heartbeatsCachePromise = this._storage.read().then(result => {
+            this._heartbeatsCache = result;
+            return result;
+        });
+    }
+    /**
+     * Called to report a heartbeat. The function will generate
+     * a HeartbeatsByUserAgent object, update heartbeatsCache, and persist it
+     * to IndexedDB.
+     * Note that we only store one heartbeat per day. So if a heartbeat for today is
+     * already logged, subsequent calls to this function in the same day will be ignored.
+     */
+    async triggerHeartbeat() {
+        var _a, _b;
+        const platformLogger = this.container
+            .getProvider('platform-logger')
+            .getImmediate();
+        // This is the "Firebase user agent" string from the platform logger
+        // service, not the browser user agent.
+        const agent = platformLogger.getPlatformInfoString();
+        const date = getUTCDateString();
+        if (((_a = this._heartbeatsCache) === null || _a === void 0 ? void 0 : _a.heartbeats) == null) {
+            this._heartbeatsCache = await this._heartbeatsCachePromise;
+            // If we failed to construct a heartbeats cache, then return immediately.
+            if (((_b = this._heartbeatsCache) === null || _b === void 0 ? void 0 : _b.heartbeats) == null) {
+                return;
+            }
+        }
+        // Do not store a heartbeat if one is already stored for this day
+        // or if a header has already been sent today.
+        if (this._heartbeatsCache.lastSentHeartbeatDate === date ||
+            this._heartbeatsCache.heartbeats.some(singleDateHeartbeat => singleDateHeartbeat.date === date)) {
+            return;
+        }
+        else {
+            // There is no entry for this date. Create one.
+            this._heartbeatsCache.heartbeats.push({ date, agent });
+        }
+        // Remove entries older than 30 days.
+        this._heartbeatsCache.heartbeats = this._heartbeatsCache.heartbeats.filter(singleDateHeartbeat => {
+            const hbTimestamp = new Date(singleDateHeartbeat.date).valueOf();
+            const now = Date.now();
+            return now - hbTimestamp <= STORED_HEARTBEAT_RETENTION_MAX_MILLIS;
+        });
+        return this._storage.overwrite(this._heartbeatsCache);
+    }
+    /**
+     * Returns a base64 encoded string which can be attached to the heartbeat-specific header directly.
+     * It also clears all heartbeats from memory as well as in IndexedDB.
+     *
+     * NOTE: Consuming product SDKs should not send the header if this method
+     * returns an empty string.
+     */
+    async getHeartbeatsHeader() {
+        var _a;
+        if (this._heartbeatsCache === null) {
+            await this._heartbeatsCachePromise;
+        }
+        // If it's still null or the array is empty, there is no data to send.
+        if (((_a = this._heartbeatsCache) === null || _a === void 0 ? void 0 : _a.heartbeats) == null ||
+            this._heartbeatsCache.heartbeats.length === 0) {
+            return '';
+        }
+        const date = getUTCDateString();
+        // Extract as many heartbeats from the cache as will fit under the size limit.
+        const { heartbeatsToSend, unsentEntries } = extractHeartbeatsForHeader(this._heartbeatsCache.heartbeats);
+        const headerString = (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.base64urlEncodeWithoutPadding)(JSON.stringify({ version: 2, heartbeats: heartbeatsToSend }));
+        // Store last sent date to prevent another being logged/sent for the same day.
+        this._heartbeatsCache.lastSentHeartbeatDate = date;
+        if (unsentEntries.length > 0) {
+            // Store any unsent entries if they exist.
+            this._heartbeatsCache.heartbeats = unsentEntries;
+            // This seems more likely than emptying the array (below) to lead to some odd state
+            // since the cache isn't empty and this will be called again on the next request,
+            // and is probably safest if we await it.
+            await this._storage.overwrite(this._heartbeatsCache);
+        }
+        else {
+            this._heartbeatsCache.heartbeats = [];
+            // Do not wait for this, to reduce latency.
+            void this._storage.overwrite(this._heartbeatsCache);
+        }
+        return headerString;
+    }
+}
+function getUTCDateString() {
+    const today = new Date();
+    // Returns date format 'YYYY-MM-DD'
+    return today.toISOString().substring(0, 10);
+}
+function extractHeartbeatsForHeader(heartbeatsCache, maxSize = MAX_HEADER_BYTES) {
+    // Heartbeats grouped by user agent in the standard format to be sent in
+    // the header.
+    const heartbeatsToSend = [];
+    // Single date format heartbeats that are not sent.
+    let unsentEntries = heartbeatsCache.slice();
+    for (const singleDateHeartbeat of heartbeatsCache) {
+        // Look for an existing entry with the same user agent.
+        const heartbeatEntry = heartbeatsToSend.find(hb => hb.agent === singleDateHeartbeat.agent);
+        if (!heartbeatEntry) {
+            // If no entry for this user agent exists, create one.
+            heartbeatsToSend.push({
+                agent: singleDateHeartbeat.agent,
+                dates: [singleDateHeartbeat.date]
+            });
+            if (countBytes(heartbeatsToSend) > maxSize) {
+                // If the header would exceed max size, remove the added heartbeat
+                // entry and stop adding to the header.
+                heartbeatsToSend.pop();
+                break;
+            }
+        }
+        else {
+            heartbeatEntry.dates.push(singleDateHeartbeat.date);
+            // If the header would exceed max size, remove the added date
+            // and stop adding to the header.
+            if (countBytes(heartbeatsToSend) > maxSize) {
+                heartbeatEntry.dates.pop();
+                break;
+            }
+        }
+        // Pop unsent entry from queue. (Skipped if adding the entry exceeded
+        // quota and the loop breaks early.)
+        unsentEntries = unsentEntries.slice(1);
+    }
+    return {
+        heartbeatsToSend,
+        unsentEntries
+    };
+}
+class HeartbeatStorageImpl {
+    constructor(app) {
+        this.app = app;
+        this._canUseIndexedDBPromise = this.runIndexedDBEnvironmentCheck();
+    }
+    async runIndexedDBEnvironmentCheck() {
+        if (!(0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.isIndexedDBAvailable)()) {
+            return false;
+        }
+        else {
+            return (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.validateIndexedDBOpenable)()
+                .then(() => true)
+                .catch(() => false);
+        }
+    }
+    /**
+     * Read all heartbeats.
+     */
+    async read() {
+        const canUseIndexedDB = await this._canUseIndexedDBPromise;
+        if (!canUseIndexedDB) {
+            return { heartbeats: [] };
+        }
+        else {
+            const idbHeartbeatObject = await readHeartbeatsFromIndexedDB(this.app);
+            if (idbHeartbeatObject === null || idbHeartbeatObject === void 0 ? void 0 : idbHeartbeatObject.heartbeats) {
+                return idbHeartbeatObject;
+            }
+            else {
+                return { heartbeats: [] };
+            }
+        }
+    }
+    // overwrite the storage with the provided heartbeats
+    async overwrite(heartbeatsObject) {
+        var _a;
+        const canUseIndexedDB = await this._canUseIndexedDBPromise;
+        if (!canUseIndexedDB) {
+            return;
+        }
+        else {
+            const existingHeartbeatsObject = await this.read();
+            return writeHeartbeatsToIndexedDB(this.app, {
+                lastSentHeartbeatDate: (_a = heartbeatsObject.lastSentHeartbeatDate) !== null && _a !== void 0 ? _a : existingHeartbeatsObject.lastSentHeartbeatDate,
+                heartbeats: heartbeatsObject.heartbeats
+            });
+        }
+    }
+    // add heartbeats
+    async add(heartbeatsObject) {
+        var _a;
+        const canUseIndexedDB = await this._canUseIndexedDBPromise;
+        if (!canUseIndexedDB) {
+            return;
+        }
+        else {
+            const existingHeartbeatsObject = await this.read();
+            return writeHeartbeatsToIndexedDB(this.app, {
+                lastSentHeartbeatDate: (_a = heartbeatsObject.lastSentHeartbeatDate) !== null && _a !== void 0 ? _a : existingHeartbeatsObject.lastSentHeartbeatDate,
+                heartbeats: [
+                    ...existingHeartbeatsObject.heartbeats,
+                    ...heartbeatsObject.heartbeats
+                ]
+            });
+        }
+    }
+}
+/**
+ * Calculate bytes of a HeartbeatsByUserAgent array after being wrapped
+ * in a platform logging header JSON object, stringified, and converted
+ * to base 64.
+ */
+function countBytes(heartbeatsCache) {
+    // base64 has a restricted set of characters, all of which should be 1 byte.
+    return (0,_firebase_util__WEBPACK_IMPORTED_MODULE_2__.base64urlEncodeWithoutPadding)(
+    // heartbeatsCache wrapper properties
+    JSON.stringify({ version: 2, heartbeats: heartbeatsCache })).length;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function registerCoreComponents(variant) {
+    _registerComponent(new _firebase_component__WEBPACK_IMPORTED_MODULE_0__.Component('platform-logger', container => new PlatformLoggerServiceImpl(container), "PRIVATE" /* ComponentType.PRIVATE */));
+    _registerComponent(new _firebase_component__WEBPACK_IMPORTED_MODULE_0__.Component('heartbeat', container => new HeartbeatServiceImpl(container), "PRIVATE" /* ComponentType.PRIVATE */));
+    // Register `app` package.
+    registerVersion(name$p, version$1, variant);
+    // BUILD_TARGET will be replaced by values like esm5, esm2017, cjs5, etc during the compilation
+    registerVersion(name$p, version$1, 'esm2017');
+    // Register platform SDK identifier (no version).
+    registerVersion('fire-js', '');
+}
+
+/**
+ * Firebase App
+ *
+ * @remarks This package coordinates the communication between the different Firebase components
+ * @packageDocumentation
+ */
+registerCoreComponents('');
+
+
+//# sourceMappingURL=index.esm2017.js.map
+
 
 /***/ }),
 
@@ -59,7 +4758,423 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Component: () => (/* binding */ Component),\n/* harmony export */   ComponentContainer: () => (/* binding */ ComponentContainer),\n/* harmony export */   Provider: () => (/* binding */ Provider)\n/* harmony export */ });\n/* harmony import */ var _firebase_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/util */ \"./node_modules/@firebase/util/dist/index.esm2017.js\");\n\n\n/**\r\n * Component for service name T, e.g. `auth`, `auth-internal`\r\n */\r\nclass Component {\r\n    /**\r\n     *\r\n     * @param name The public service name, e.g. app, auth, firestore, database\r\n     * @param instanceFactory Service factory responsible for creating the public interface\r\n     * @param type whether the service provided by the component is public or private\r\n     */\r\n    constructor(name, instanceFactory, type) {\r\n        this.name = name;\r\n        this.instanceFactory = instanceFactory;\r\n        this.type = type;\r\n        this.multipleInstances = false;\r\n        /**\r\n         * Properties to be added to the service namespace\r\n         */\r\n        this.serviceProps = {};\r\n        this.instantiationMode = \"LAZY\" /* InstantiationMode.LAZY */;\r\n        this.onInstanceCreated = null;\r\n    }\r\n    setInstantiationMode(mode) {\r\n        this.instantiationMode = mode;\r\n        return this;\r\n    }\r\n    setMultipleInstances(multipleInstances) {\r\n        this.multipleInstances = multipleInstances;\r\n        return this;\r\n    }\r\n    setServiceProps(props) {\r\n        this.serviceProps = props;\r\n        return this;\r\n    }\r\n    setInstanceCreatedCallback(callback) {\r\n        this.onInstanceCreated = callback;\r\n        return this;\r\n    }\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst DEFAULT_ENTRY_NAME = '[DEFAULT]';\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Provider for instance for service name T, e.g. 'auth', 'auth-internal'\r\n * NameServiceMapping[T] is an alias for the type of the instance\r\n */\r\nclass Provider {\r\n    constructor(name, container) {\r\n        this.name = name;\r\n        this.container = container;\r\n        this.component = null;\r\n        this.instances = new Map();\r\n        this.instancesDeferred = new Map();\r\n        this.instancesOptions = new Map();\r\n        this.onInitCallbacks = new Map();\r\n    }\r\n    /**\r\n     * @param identifier A provider can provide mulitple instances of a service\r\n     * if this.component.multipleInstances is true.\r\n     */\r\n    get(identifier) {\r\n        // if multipleInstances is not supported, use the default name\r\n        const normalizedIdentifier = this.normalizeInstanceIdentifier(identifier);\r\n        if (!this.instancesDeferred.has(normalizedIdentifier)) {\r\n            const deferred = new _firebase_util__WEBPACK_IMPORTED_MODULE_0__.Deferred();\r\n            this.instancesDeferred.set(normalizedIdentifier, deferred);\r\n            if (this.isInitialized(normalizedIdentifier) ||\r\n                this.shouldAutoInitialize()) {\r\n                // initialize the service if it can be auto-initialized\r\n                try {\r\n                    const instance = this.getOrInitializeService({\r\n                        instanceIdentifier: normalizedIdentifier\r\n                    });\r\n                    if (instance) {\r\n                        deferred.resolve(instance);\r\n                    }\r\n                }\r\n                catch (e) {\r\n                    // when the instance factory throws an exception during get(), it should not cause\r\n                    // a fatal error. We just return the unresolved promise in this case.\r\n                }\r\n            }\r\n        }\r\n        return this.instancesDeferred.get(normalizedIdentifier).promise;\r\n    }\r\n    getImmediate(options) {\r\n        var _a;\r\n        // if multipleInstances is not supported, use the default name\r\n        const normalizedIdentifier = this.normalizeInstanceIdentifier(options === null || options === void 0 ? void 0 : options.identifier);\r\n        const optional = (_a = options === null || options === void 0 ? void 0 : options.optional) !== null && _a !== void 0 ? _a : false;\r\n        if (this.isInitialized(normalizedIdentifier) ||\r\n            this.shouldAutoInitialize()) {\r\n            try {\r\n                return this.getOrInitializeService({\r\n                    instanceIdentifier: normalizedIdentifier\r\n                });\r\n            }\r\n            catch (e) {\r\n                if (optional) {\r\n                    return null;\r\n                }\r\n                else {\r\n                    throw e;\r\n                }\r\n            }\r\n        }\r\n        else {\r\n            // In case a component is not initialized and should/can not be auto-initialized at the moment, return null if the optional flag is set, or throw\r\n            if (optional) {\r\n                return null;\r\n            }\r\n            else {\r\n                throw Error(`Service ${this.name} is not available`);\r\n            }\r\n        }\r\n    }\r\n    getComponent() {\r\n        return this.component;\r\n    }\r\n    setComponent(component) {\r\n        if (component.name !== this.name) {\r\n            throw Error(`Mismatching Component ${component.name} for Provider ${this.name}.`);\r\n        }\r\n        if (this.component) {\r\n            throw Error(`Component for ${this.name} has already been provided`);\r\n        }\r\n        this.component = component;\r\n        // return early without attempting to initialize the component if the component requires explicit initialization (calling `Provider.initialize()`)\r\n        if (!this.shouldAutoInitialize()) {\r\n            return;\r\n        }\r\n        // if the service is eager, initialize the default instance\r\n        if (isComponentEager(component)) {\r\n            try {\r\n                this.getOrInitializeService({ instanceIdentifier: DEFAULT_ENTRY_NAME });\r\n            }\r\n            catch (e) {\r\n                // when the instance factory for an eager Component throws an exception during the eager\r\n                // initialization, it should not cause a fatal error.\r\n                // TODO: Investigate if we need to make it configurable, because some component may want to cause\r\n                // a fatal error in this case?\r\n            }\r\n        }\r\n        // Create service instances for the pending promises and resolve them\r\n        // NOTE: if this.multipleInstances is false, only the default instance will be created\r\n        // and all promises with resolve with it regardless of the identifier.\r\n        for (const [instanceIdentifier, instanceDeferred] of this.instancesDeferred.entries()) {\r\n            const normalizedIdentifier = this.normalizeInstanceIdentifier(instanceIdentifier);\r\n            try {\r\n                // `getOrInitializeService()` should always return a valid instance since a component is guaranteed. use ! to make typescript happy.\r\n                const instance = this.getOrInitializeService({\r\n                    instanceIdentifier: normalizedIdentifier\r\n                });\r\n                instanceDeferred.resolve(instance);\r\n            }\r\n            catch (e) {\r\n                // when the instance factory throws an exception, it should not cause\r\n                // a fatal error. We just leave the promise unresolved.\r\n            }\r\n        }\r\n    }\r\n    clearInstance(identifier = DEFAULT_ENTRY_NAME) {\r\n        this.instancesDeferred.delete(identifier);\r\n        this.instancesOptions.delete(identifier);\r\n        this.instances.delete(identifier);\r\n    }\r\n    // app.delete() will call this method on every provider to delete the services\r\n    // TODO: should we mark the provider as deleted?\r\n    async delete() {\r\n        const services = Array.from(this.instances.values());\r\n        await Promise.all([\r\n            ...services\r\n                .filter(service => 'INTERNAL' in service) // legacy services\r\n                // eslint-disable-next-line @typescript-eslint/no-explicit-any\r\n                .map(service => service.INTERNAL.delete()),\r\n            ...services\r\n                .filter(service => '_delete' in service) // modularized services\r\n                // eslint-disable-next-line @typescript-eslint/no-explicit-any\r\n                .map(service => service._delete())\r\n        ]);\r\n    }\r\n    isComponentSet() {\r\n        return this.component != null;\r\n    }\r\n    isInitialized(identifier = DEFAULT_ENTRY_NAME) {\r\n        return this.instances.has(identifier);\r\n    }\r\n    getOptions(identifier = DEFAULT_ENTRY_NAME) {\r\n        return this.instancesOptions.get(identifier) || {};\r\n    }\r\n    initialize(opts = {}) {\r\n        const { options = {} } = opts;\r\n        const normalizedIdentifier = this.normalizeInstanceIdentifier(opts.instanceIdentifier);\r\n        if (this.isInitialized(normalizedIdentifier)) {\r\n            throw Error(`${this.name}(${normalizedIdentifier}) has already been initialized`);\r\n        }\r\n        if (!this.isComponentSet()) {\r\n            throw Error(`Component ${this.name} has not been registered yet`);\r\n        }\r\n        const instance = this.getOrInitializeService({\r\n            instanceIdentifier: normalizedIdentifier,\r\n            options\r\n        });\r\n        // resolve any pending promise waiting for the service instance\r\n        for (const [instanceIdentifier, instanceDeferred] of this.instancesDeferred.entries()) {\r\n            const normalizedDeferredIdentifier = this.normalizeInstanceIdentifier(instanceIdentifier);\r\n            if (normalizedIdentifier === normalizedDeferredIdentifier) {\r\n                instanceDeferred.resolve(instance);\r\n            }\r\n        }\r\n        return instance;\r\n    }\r\n    /**\r\n     *\r\n     * @param callback - a function that will be invoked  after the provider has been initialized by calling provider.initialize().\r\n     * The function is invoked SYNCHRONOUSLY, so it should not execute any longrunning tasks in order to not block the program.\r\n     *\r\n     * @param identifier An optional instance identifier\r\n     * @returns a function to unregister the callback\r\n     */\r\n    onInit(callback, identifier) {\r\n        var _a;\r\n        const normalizedIdentifier = this.normalizeInstanceIdentifier(identifier);\r\n        const existingCallbacks = (_a = this.onInitCallbacks.get(normalizedIdentifier)) !== null && _a !== void 0 ? _a : new Set();\r\n        existingCallbacks.add(callback);\r\n        this.onInitCallbacks.set(normalizedIdentifier, existingCallbacks);\r\n        const existingInstance = this.instances.get(normalizedIdentifier);\r\n        if (existingInstance) {\r\n            callback(existingInstance, normalizedIdentifier);\r\n        }\r\n        return () => {\r\n            existingCallbacks.delete(callback);\r\n        };\r\n    }\r\n    /**\r\n     * Invoke onInit callbacks synchronously\r\n     * @param instance the service instance`\r\n     */\r\n    invokeOnInitCallbacks(instance, identifier) {\r\n        const callbacks = this.onInitCallbacks.get(identifier);\r\n        if (!callbacks) {\r\n            return;\r\n        }\r\n        for (const callback of callbacks) {\r\n            try {\r\n                callback(instance, identifier);\r\n            }\r\n            catch (_a) {\r\n                // ignore errors in the onInit callback\r\n            }\r\n        }\r\n    }\r\n    getOrInitializeService({ instanceIdentifier, options = {} }) {\r\n        let instance = this.instances.get(instanceIdentifier);\r\n        if (!instance && this.component) {\r\n            instance = this.component.instanceFactory(this.container, {\r\n                instanceIdentifier: normalizeIdentifierForFactory(instanceIdentifier),\r\n                options\r\n            });\r\n            this.instances.set(instanceIdentifier, instance);\r\n            this.instancesOptions.set(instanceIdentifier, options);\r\n            /**\r\n             * Invoke onInit listeners.\r\n             * Note this.component.onInstanceCreated is different, which is used by the component creator,\r\n             * while onInit listeners are registered by consumers of the provider.\r\n             */\r\n            this.invokeOnInitCallbacks(instance, instanceIdentifier);\r\n            /**\r\n             * Order is important\r\n             * onInstanceCreated() should be called after this.instances.set(instanceIdentifier, instance); which\r\n             * makes `isInitialized()` return true.\r\n             */\r\n            if (this.component.onInstanceCreated) {\r\n                try {\r\n                    this.component.onInstanceCreated(this.container, instanceIdentifier, instance);\r\n                }\r\n                catch (_a) {\r\n                    // ignore errors in the onInstanceCreatedCallback\r\n                }\r\n            }\r\n        }\r\n        return instance || null;\r\n    }\r\n    normalizeInstanceIdentifier(identifier = DEFAULT_ENTRY_NAME) {\r\n        if (this.component) {\r\n            return this.component.multipleInstances ? identifier : DEFAULT_ENTRY_NAME;\r\n        }\r\n        else {\r\n            return identifier; // assume multiple instances are supported before the component is provided.\r\n        }\r\n    }\r\n    shouldAutoInitialize() {\r\n        return (!!this.component &&\r\n            this.component.instantiationMode !== \"EXPLICIT\" /* InstantiationMode.EXPLICIT */);\r\n    }\r\n}\r\n// undefined should be passed to the service factory for the default instance\r\nfunction normalizeIdentifierForFactory(identifier) {\r\n    return identifier === DEFAULT_ENTRY_NAME ? undefined : identifier;\r\n}\r\nfunction isComponentEager(component) {\r\n    return component.instantiationMode === \"EAGER\" /* InstantiationMode.EAGER */;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * ComponentContainer that provides Providers for service name T, e.g. `auth`, `auth-internal`\r\n */\r\nclass ComponentContainer {\r\n    constructor(name) {\r\n        this.name = name;\r\n        this.providers = new Map();\r\n    }\r\n    /**\r\n     *\r\n     * @param component Component being added\r\n     * @param overwrite When a component with the same name has already been registered,\r\n     * if overwrite is true: overwrite the existing component with the new component and create a new\r\n     * provider with the new component. It can be useful in tests where you want to use different mocks\r\n     * for different tests.\r\n     * if overwrite is false: throw an exception\r\n     */\r\n    addComponent(component) {\r\n        const provider = this.getProvider(component.name);\r\n        if (provider.isComponentSet()) {\r\n            throw new Error(`Component ${component.name} has already been registered with ${this.name}`);\r\n        }\r\n        provider.setComponent(component);\r\n    }\r\n    addOrOverwriteComponent(component) {\r\n        const provider = this.getProvider(component.name);\r\n        if (provider.isComponentSet()) {\r\n            // delete the existing provider from the container, so we can register the new component\r\n            this.providers.delete(component.name);\r\n        }\r\n        this.addComponent(component);\r\n    }\r\n    /**\r\n     * getProvider provides a type safe interface where it can only be called with a field name\r\n     * present in NameServiceMapping interface.\r\n     *\r\n     * Firebase SDKs providing services should extend NameServiceMapping interface to register\r\n     * themselves.\r\n     */\r\n    getProvider(name) {\r\n        if (this.providers.has(name)) {\r\n            return this.providers.get(name);\r\n        }\r\n        // create a Provider for a service that hasn't registered with Firebase\r\n        const provider = new Provider(name, this);\r\n        this.providers.set(name, provider);\r\n        return provider;\r\n    }\r\n    getProviders() {\r\n        return Array.from(this.providers.values());\r\n    }\r\n}\n\n\n//# sourceMappingURL=index.esm2017.js.map\n\n\n//# sourceURL=webpack://daveads.github.io/./node_modules/@firebase/component/dist/esm/index.esm2017.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Component: () => (/* binding */ Component),
+/* harmony export */   ComponentContainer: () => (/* binding */ ComponentContainer),
+/* harmony export */   Provider: () => (/* binding */ Provider)
+/* harmony export */ });
+/* harmony import */ var _firebase_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/util */ "./node_modules/@firebase/util/dist/index.esm2017.js");
+
+
+/**
+ * Component for service name T, e.g. `auth`, `auth-internal`
+ */
+class Component {
+    /**
+     *
+     * @param name The public service name, e.g. app, auth, firestore, database
+     * @param instanceFactory Service factory responsible for creating the public interface
+     * @param type whether the service provided by the component is public or private
+     */
+    constructor(name, instanceFactory, type) {
+        this.name = name;
+        this.instanceFactory = instanceFactory;
+        this.type = type;
+        this.multipleInstances = false;
+        /**
+         * Properties to be added to the service namespace
+         */
+        this.serviceProps = {};
+        this.instantiationMode = "LAZY" /* InstantiationMode.LAZY */;
+        this.onInstanceCreated = null;
+    }
+    setInstantiationMode(mode) {
+        this.instantiationMode = mode;
+        return this;
+    }
+    setMultipleInstances(multipleInstances) {
+        this.multipleInstances = multipleInstances;
+        return this;
+    }
+    setServiceProps(props) {
+        this.serviceProps = props;
+        return this;
+    }
+    setInstanceCreatedCallback(callback) {
+        this.onInstanceCreated = callback;
+        return this;
+    }
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const DEFAULT_ENTRY_NAME = '[DEFAULT]';
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Provider for instance for service name T, e.g. 'auth', 'auth-internal'
+ * NameServiceMapping[T] is an alias for the type of the instance
+ */
+class Provider {
+    constructor(name, container) {
+        this.name = name;
+        this.container = container;
+        this.component = null;
+        this.instances = new Map();
+        this.instancesDeferred = new Map();
+        this.instancesOptions = new Map();
+        this.onInitCallbacks = new Map();
+    }
+    /**
+     * @param identifier A provider can provide mulitple instances of a service
+     * if this.component.multipleInstances is true.
+     */
+    get(identifier) {
+        // if multipleInstances is not supported, use the default name
+        const normalizedIdentifier = this.normalizeInstanceIdentifier(identifier);
+        if (!this.instancesDeferred.has(normalizedIdentifier)) {
+            const deferred = new _firebase_util__WEBPACK_IMPORTED_MODULE_0__.Deferred();
+            this.instancesDeferred.set(normalizedIdentifier, deferred);
+            if (this.isInitialized(normalizedIdentifier) ||
+                this.shouldAutoInitialize()) {
+                // initialize the service if it can be auto-initialized
+                try {
+                    const instance = this.getOrInitializeService({
+                        instanceIdentifier: normalizedIdentifier
+                    });
+                    if (instance) {
+                        deferred.resolve(instance);
+                    }
+                }
+                catch (e) {
+                    // when the instance factory throws an exception during get(), it should not cause
+                    // a fatal error. We just return the unresolved promise in this case.
+                }
+            }
+        }
+        return this.instancesDeferred.get(normalizedIdentifier).promise;
+    }
+    getImmediate(options) {
+        var _a;
+        // if multipleInstances is not supported, use the default name
+        const normalizedIdentifier = this.normalizeInstanceIdentifier(options === null || options === void 0 ? void 0 : options.identifier);
+        const optional = (_a = options === null || options === void 0 ? void 0 : options.optional) !== null && _a !== void 0 ? _a : false;
+        if (this.isInitialized(normalizedIdentifier) ||
+            this.shouldAutoInitialize()) {
+            try {
+                return this.getOrInitializeService({
+                    instanceIdentifier: normalizedIdentifier
+                });
+            }
+            catch (e) {
+                if (optional) {
+                    return null;
+                }
+                else {
+                    throw e;
+                }
+            }
+        }
+        else {
+            // In case a component is not initialized and should/can not be auto-initialized at the moment, return null if the optional flag is set, or throw
+            if (optional) {
+                return null;
+            }
+            else {
+                throw Error(`Service ${this.name} is not available`);
+            }
+        }
+    }
+    getComponent() {
+        return this.component;
+    }
+    setComponent(component) {
+        if (component.name !== this.name) {
+            throw Error(`Mismatching Component ${component.name} for Provider ${this.name}.`);
+        }
+        if (this.component) {
+            throw Error(`Component for ${this.name} has already been provided`);
+        }
+        this.component = component;
+        // return early without attempting to initialize the component if the component requires explicit initialization (calling `Provider.initialize()`)
+        if (!this.shouldAutoInitialize()) {
+            return;
+        }
+        // if the service is eager, initialize the default instance
+        if (isComponentEager(component)) {
+            try {
+                this.getOrInitializeService({ instanceIdentifier: DEFAULT_ENTRY_NAME });
+            }
+            catch (e) {
+                // when the instance factory for an eager Component throws an exception during the eager
+                // initialization, it should not cause a fatal error.
+                // TODO: Investigate if we need to make it configurable, because some component may want to cause
+                // a fatal error in this case?
+            }
+        }
+        // Create service instances for the pending promises and resolve them
+        // NOTE: if this.multipleInstances is false, only the default instance will be created
+        // and all promises with resolve with it regardless of the identifier.
+        for (const [instanceIdentifier, instanceDeferred] of this.instancesDeferred.entries()) {
+            const normalizedIdentifier = this.normalizeInstanceIdentifier(instanceIdentifier);
+            try {
+                // `getOrInitializeService()` should always return a valid instance since a component is guaranteed. use ! to make typescript happy.
+                const instance = this.getOrInitializeService({
+                    instanceIdentifier: normalizedIdentifier
+                });
+                instanceDeferred.resolve(instance);
+            }
+            catch (e) {
+                // when the instance factory throws an exception, it should not cause
+                // a fatal error. We just leave the promise unresolved.
+            }
+        }
+    }
+    clearInstance(identifier = DEFAULT_ENTRY_NAME) {
+        this.instancesDeferred.delete(identifier);
+        this.instancesOptions.delete(identifier);
+        this.instances.delete(identifier);
+    }
+    // app.delete() will call this method on every provider to delete the services
+    // TODO: should we mark the provider as deleted?
+    async delete() {
+        const services = Array.from(this.instances.values());
+        await Promise.all([
+            ...services
+                .filter(service => 'INTERNAL' in service) // legacy services
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                .map(service => service.INTERNAL.delete()),
+            ...services
+                .filter(service => '_delete' in service) // modularized services
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                .map(service => service._delete())
+        ]);
+    }
+    isComponentSet() {
+        return this.component != null;
+    }
+    isInitialized(identifier = DEFAULT_ENTRY_NAME) {
+        return this.instances.has(identifier);
+    }
+    getOptions(identifier = DEFAULT_ENTRY_NAME) {
+        return this.instancesOptions.get(identifier) || {};
+    }
+    initialize(opts = {}) {
+        const { options = {} } = opts;
+        const normalizedIdentifier = this.normalizeInstanceIdentifier(opts.instanceIdentifier);
+        if (this.isInitialized(normalizedIdentifier)) {
+            throw Error(`${this.name}(${normalizedIdentifier}) has already been initialized`);
+        }
+        if (!this.isComponentSet()) {
+            throw Error(`Component ${this.name} has not been registered yet`);
+        }
+        const instance = this.getOrInitializeService({
+            instanceIdentifier: normalizedIdentifier,
+            options
+        });
+        // resolve any pending promise waiting for the service instance
+        for (const [instanceIdentifier, instanceDeferred] of this.instancesDeferred.entries()) {
+            const normalizedDeferredIdentifier = this.normalizeInstanceIdentifier(instanceIdentifier);
+            if (normalizedIdentifier === normalizedDeferredIdentifier) {
+                instanceDeferred.resolve(instance);
+            }
+        }
+        return instance;
+    }
+    /**
+     *
+     * @param callback - a function that will be invoked  after the provider has been initialized by calling provider.initialize().
+     * The function is invoked SYNCHRONOUSLY, so it should not execute any longrunning tasks in order to not block the program.
+     *
+     * @param identifier An optional instance identifier
+     * @returns a function to unregister the callback
+     */
+    onInit(callback, identifier) {
+        var _a;
+        const normalizedIdentifier = this.normalizeInstanceIdentifier(identifier);
+        const existingCallbacks = (_a = this.onInitCallbacks.get(normalizedIdentifier)) !== null && _a !== void 0 ? _a : new Set();
+        existingCallbacks.add(callback);
+        this.onInitCallbacks.set(normalizedIdentifier, existingCallbacks);
+        const existingInstance = this.instances.get(normalizedIdentifier);
+        if (existingInstance) {
+            callback(existingInstance, normalizedIdentifier);
+        }
+        return () => {
+            existingCallbacks.delete(callback);
+        };
+    }
+    /**
+     * Invoke onInit callbacks synchronously
+     * @param instance the service instance`
+     */
+    invokeOnInitCallbacks(instance, identifier) {
+        const callbacks = this.onInitCallbacks.get(identifier);
+        if (!callbacks) {
+            return;
+        }
+        for (const callback of callbacks) {
+            try {
+                callback(instance, identifier);
+            }
+            catch (_a) {
+                // ignore errors in the onInit callback
+            }
+        }
+    }
+    getOrInitializeService({ instanceIdentifier, options = {} }) {
+        let instance = this.instances.get(instanceIdentifier);
+        if (!instance && this.component) {
+            instance = this.component.instanceFactory(this.container, {
+                instanceIdentifier: normalizeIdentifierForFactory(instanceIdentifier),
+                options
+            });
+            this.instances.set(instanceIdentifier, instance);
+            this.instancesOptions.set(instanceIdentifier, options);
+            /**
+             * Invoke onInit listeners.
+             * Note this.component.onInstanceCreated is different, which is used by the component creator,
+             * while onInit listeners are registered by consumers of the provider.
+             */
+            this.invokeOnInitCallbacks(instance, instanceIdentifier);
+            /**
+             * Order is important
+             * onInstanceCreated() should be called after this.instances.set(instanceIdentifier, instance); which
+             * makes `isInitialized()` return true.
+             */
+            if (this.component.onInstanceCreated) {
+                try {
+                    this.component.onInstanceCreated(this.container, instanceIdentifier, instance);
+                }
+                catch (_a) {
+                    // ignore errors in the onInstanceCreatedCallback
+                }
+            }
+        }
+        return instance || null;
+    }
+    normalizeInstanceIdentifier(identifier = DEFAULT_ENTRY_NAME) {
+        if (this.component) {
+            return this.component.multipleInstances ? identifier : DEFAULT_ENTRY_NAME;
+        }
+        else {
+            return identifier; // assume multiple instances are supported before the component is provided.
+        }
+    }
+    shouldAutoInitialize() {
+        return (!!this.component &&
+            this.component.instantiationMode !== "EXPLICIT" /* InstantiationMode.EXPLICIT */);
+    }
+}
+// undefined should be passed to the service factory for the default instance
+function normalizeIdentifierForFactory(identifier) {
+    return identifier === DEFAULT_ENTRY_NAME ? undefined : identifier;
+}
+function isComponentEager(component) {
+    return component.instantiationMode === "EAGER" /* InstantiationMode.EAGER */;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * ComponentContainer that provides Providers for service name T, e.g. `auth`, `auth-internal`
+ */
+class ComponentContainer {
+    constructor(name) {
+        this.name = name;
+        this.providers = new Map();
+    }
+    /**
+     *
+     * @param component Component being added
+     * @param overwrite When a component with the same name has already been registered,
+     * if overwrite is true: overwrite the existing component with the new component and create a new
+     * provider with the new component. It can be useful in tests where you want to use different mocks
+     * for different tests.
+     * if overwrite is false: throw an exception
+     */
+    addComponent(component) {
+        const provider = this.getProvider(component.name);
+        if (provider.isComponentSet()) {
+            throw new Error(`Component ${component.name} has already been registered with ${this.name}`);
+        }
+        provider.setComponent(component);
+    }
+    addOrOverwriteComponent(component) {
+        const provider = this.getProvider(component.name);
+        if (provider.isComponentSet()) {
+            // delete the existing provider from the container, so we can register the new component
+            this.providers.delete(component.name);
+        }
+        this.addComponent(component);
+    }
+    /**
+     * getProvider provides a type safe interface where it can only be called with a field name
+     * present in NameServiceMapping interface.
+     *
+     * Firebase SDKs providing services should extend NameServiceMapping interface to register
+     * themselves.
+     */
+    getProvider(name) {
+        if (this.providers.has(name)) {
+            return this.providers.get(name);
+        }
+        // create a Provider for a service that hasn't registered with Firebase
+        const provider = new Provider(name, this);
+        this.providers.set(name, provider);
+        return provider;
+    }
+    getProviders() {
+        return Array.from(this.providers.values());
+    }
+}
+
+
+//# sourceMappingURL=index.esm2017.js.map
+
 
 /***/ }),
 
@@ -70,7 +5185,1174 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   deleteInstallations: () => (/* binding */ deleteInstallations),\n/* harmony export */   getId: () => (/* binding */ getId),\n/* harmony export */   getInstallations: () => (/* binding */ getInstallations),\n/* harmony export */   getToken: () => (/* binding */ getToken),\n/* harmony export */   onIdChange: () => (/* binding */ onIdChange)\n/* harmony export */ });\n/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/app */ \"./node_modules/@firebase/app/dist/esm/index.esm2017.js\");\n/* harmony import */ var _firebase_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @firebase/component */ \"./node_modules/@firebase/component/dist/esm/index.esm2017.js\");\n/* harmony import */ var _firebase_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @firebase/util */ \"./node_modules/@firebase/util/dist/index.esm2017.js\");\n/* harmony import */ var idb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! idb */ \"./node_modules/idb/build/index.js\");\n\n\n\n\n\nconst name = \"@firebase/installations\";\nconst version = \"0.6.7\";\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst PENDING_TIMEOUT_MS = 10000;\r\nconst PACKAGE_VERSION = `w:${version}`;\r\nconst INTERNAL_AUTH_VERSION = 'FIS_v2';\r\nconst INSTALLATIONS_API_URL = 'https://firebaseinstallations.googleapis.com/v1';\r\nconst TOKEN_EXPIRATION_BUFFER = 60 * 60 * 1000; // One hour\r\nconst SERVICE = 'installations';\r\nconst SERVICE_NAME = 'Installations';\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst ERROR_DESCRIPTION_MAP = {\r\n    [\"missing-app-config-values\" /* ErrorCode.MISSING_APP_CONFIG_VALUES */]: 'Missing App configuration value: \"{$valueName}\"',\r\n    [\"not-registered\" /* ErrorCode.NOT_REGISTERED */]: 'Firebase Installation is not registered.',\r\n    [\"installation-not-found\" /* ErrorCode.INSTALLATION_NOT_FOUND */]: 'Firebase Installation not found.',\r\n    [\"request-failed\" /* ErrorCode.REQUEST_FAILED */]: '{$requestName} request failed with error \"{$serverCode} {$serverStatus}: {$serverMessage}\"',\r\n    [\"app-offline\" /* ErrorCode.APP_OFFLINE */]: 'Could not process request. Application offline.',\r\n    [\"delete-pending-registration\" /* ErrorCode.DELETE_PENDING_REGISTRATION */]: \"Can't delete installation while there is a pending registration request.\"\r\n};\r\nconst ERROR_FACTORY = new _firebase_util__WEBPACK_IMPORTED_MODULE_2__.ErrorFactory(SERVICE, SERVICE_NAME, ERROR_DESCRIPTION_MAP);\r\n/** Returns true if error is a FirebaseError that is based on an error from the server. */\r\nfunction isServerError(error) {\r\n    return (error instanceof _firebase_util__WEBPACK_IMPORTED_MODULE_2__.FirebaseError &&\r\n        error.code.includes(\"request-failed\" /* ErrorCode.REQUEST_FAILED */));\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nfunction getInstallationsEndpoint({ projectId }) {\r\n    return `${INSTALLATIONS_API_URL}/projects/${projectId}/installations`;\r\n}\r\nfunction extractAuthTokenInfoFromResponse(response) {\r\n    return {\r\n        token: response.token,\r\n        requestStatus: 2 /* RequestStatus.COMPLETED */,\r\n        expiresIn: getExpiresInFromResponseExpiresIn(response.expiresIn),\r\n        creationTime: Date.now()\r\n    };\r\n}\r\nasync function getErrorFromResponse(requestName, response) {\r\n    const responseJson = await response.json();\r\n    const errorData = responseJson.error;\r\n    return ERROR_FACTORY.create(\"request-failed\" /* ErrorCode.REQUEST_FAILED */, {\r\n        requestName,\r\n        serverCode: errorData.code,\r\n        serverMessage: errorData.message,\r\n        serverStatus: errorData.status\r\n    });\r\n}\r\nfunction getHeaders({ apiKey }) {\r\n    return new Headers({\r\n        'Content-Type': 'application/json',\r\n        Accept: 'application/json',\r\n        'x-goog-api-key': apiKey\r\n    });\r\n}\r\nfunction getHeadersWithAuth(appConfig, { refreshToken }) {\r\n    const headers = getHeaders(appConfig);\r\n    headers.append('Authorization', getAuthorizationHeader(refreshToken));\r\n    return headers;\r\n}\r\n/**\r\n * Calls the passed in fetch wrapper and returns the response.\r\n * If the returned response has a status of 5xx, re-runs the function once and\r\n * returns the response.\r\n */\r\nasync function retryIfServerError(fn) {\r\n    const result = await fn();\r\n    if (result.status >= 500 && result.status < 600) {\r\n        // Internal Server Error. Retry request.\r\n        return fn();\r\n    }\r\n    return result;\r\n}\r\nfunction getExpiresInFromResponseExpiresIn(responseExpiresIn) {\r\n    // This works because the server will never respond with fractions of a second.\r\n    return Number(responseExpiresIn.replace('s', '000'));\r\n}\r\nfunction getAuthorizationHeader(refreshToken) {\r\n    return `${INTERNAL_AUTH_VERSION} ${refreshToken}`;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nasync function createInstallationRequest({ appConfig, heartbeatServiceProvider }, { fid }) {\r\n    const endpoint = getInstallationsEndpoint(appConfig);\r\n    const headers = getHeaders(appConfig);\r\n    // If heartbeat service exists, add the heartbeat string to the header.\r\n    const heartbeatService = heartbeatServiceProvider.getImmediate({\r\n        optional: true\r\n    });\r\n    if (heartbeatService) {\r\n        const heartbeatsHeader = await heartbeatService.getHeartbeatsHeader();\r\n        if (heartbeatsHeader) {\r\n            headers.append('x-firebase-client', heartbeatsHeader);\r\n        }\r\n    }\r\n    const body = {\r\n        fid,\r\n        authVersion: INTERNAL_AUTH_VERSION,\r\n        appId: appConfig.appId,\r\n        sdkVersion: PACKAGE_VERSION\r\n    };\r\n    const request = {\r\n        method: 'POST',\r\n        headers,\r\n        body: JSON.stringify(body)\r\n    };\r\n    const response = await retryIfServerError(() => fetch(endpoint, request));\r\n    if (response.ok) {\r\n        const responseValue = await response.json();\r\n        const registeredInstallationEntry = {\r\n            fid: responseValue.fid || fid,\r\n            registrationStatus: 2 /* RequestStatus.COMPLETED */,\r\n            refreshToken: responseValue.refreshToken,\r\n            authToken: extractAuthTokenInfoFromResponse(responseValue.authToken)\r\n        };\r\n        return registeredInstallationEntry;\r\n    }\r\n    else {\r\n        throw await getErrorFromResponse('Create Installation', response);\r\n    }\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/** Returns a promise that resolves after given time passes. */\r\nfunction sleep(ms) {\r\n    return new Promise(resolve => {\r\n        setTimeout(resolve, ms);\r\n    });\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nfunction bufferToBase64UrlSafe(array) {\r\n    const b64 = btoa(String.fromCharCode(...array));\r\n    return b64.replace(/\\+/g, '-').replace(/\\//g, '_');\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst VALID_FID_PATTERN = /^[cdef][\\w-]{21}$/;\r\nconst INVALID_FID = '';\r\n/**\r\n * Generates a new FID using random values from Web Crypto API.\r\n * Returns an empty string if FID generation fails for any reason.\r\n */\r\nfunction generateFid() {\r\n    try {\r\n        // A valid FID has exactly 22 base64 characters, which is 132 bits, or 16.5\r\n        // bytes. our implementation generates a 17 byte array instead.\r\n        const fidByteArray = new Uint8Array(17);\r\n        const crypto = self.crypto || self.msCrypto;\r\n        crypto.getRandomValues(fidByteArray);\r\n        // Replace the first 4 random bits with the constant FID header of 0b0111.\r\n        fidByteArray[0] = 0b01110000 + (fidByteArray[0] % 0b00010000);\r\n        const fid = encode(fidByteArray);\r\n        return VALID_FID_PATTERN.test(fid) ? fid : INVALID_FID;\r\n    }\r\n    catch (_a) {\r\n        // FID generation errored\r\n        return INVALID_FID;\r\n    }\r\n}\r\n/** Converts a FID Uint8Array to a base64 string representation. */\r\nfunction encode(fidByteArray) {\r\n    const b64String = bufferToBase64UrlSafe(fidByteArray);\r\n    // Remove the 23rd character that was added because of the extra 4 bits at the\r\n    // end of our 17 byte array, and the '=' padding.\r\n    return b64String.substr(0, 22);\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/** Returns a string key that can be used to identify the app. */\r\nfunction getKey(appConfig) {\r\n    return `${appConfig.appName}!${appConfig.appId}`;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst fidChangeCallbacks = new Map();\r\n/**\r\n * Calls the onIdChange callbacks with the new FID value, and broadcasts the\r\n * change to other tabs.\r\n */\r\nfunction fidChanged(appConfig, fid) {\r\n    const key = getKey(appConfig);\r\n    callFidChangeCallbacks(key, fid);\r\n    broadcastFidChange(key, fid);\r\n}\r\nfunction addCallback(appConfig, callback) {\r\n    // Open the broadcast channel if it's not already open,\r\n    // to be able to listen to change events from other tabs.\r\n    getBroadcastChannel();\r\n    const key = getKey(appConfig);\r\n    let callbackSet = fidChangeCallbacks.get(key);\r\n    if (!callbackSet) {\r\n        callbackSet = new Set();\r\n        fidChangeCallbacks.set(key, callbackSet);\r\n    }\r\n    callbackSet.add(callback);\r\n}\r\nfunction removeCallback(appConfig, callback) {\r\n    const key = getKey(appConfig);\r\n    const callbackSet = fidChangeCallbacks.get(key);\r\n    if (!callbackSet) {\r\n        return;\r\n    }\r\n    callbackSet.delete(callback);\r\n    if (callbackSet.size === 0) {\r\n        fidChangeCallbacks.delete(key);\r\n    }\r\n    // Close broadcast channel if there are no more callbacks.\r\n    closeBroadcastChannel();\r\n}\r\nfunction callFidChangeCallbacks(key, fid) {\r\n    const callbacks = fidChangeCallbacks.get(key);\r\n    if (!callbacks) {\r\n        return;\r\n    }\r\n    for (const callback of callbacks) {\r\n        callback(fid);\r\n    }\r\n}\r\nfunction broadcastFidChange(key, fid) {\r\n    const channel = getBroadcastChannel();\r\n    if (channel) {\r\n        channel.postMessage({ key, fid });\r\n    }\r\n    closeBroadcastChannel();\r\n}\r\nlet broadcastChannel = null;\r\n/** Opens and returns a BroadcastChannel if it is supported by the browser. */\r\nfunction getBroadcastChannel() {\r\n    if (!broadcastChannel && 'BroadcastChannel' in self) {\r\n        broadcastChannel = new BroadcastChannel('[Firebase] FID Change');\r\n        broadcastChannel.onmessage = e => {\r\n            callFidChangeCallbacks(e.data.key, e.data.fid);\r\n        };\r\n    }\r\n    return broadcastChannel;\r\n}\r\nfunction closeBroadcastChannel() {\r\n    if (fidChangeCallbacks.size === 0 && broadcastChannel) {\r\n        broadcastChannel.close();\r\n        broadcastChannel = null;\r\n    }\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst DATABASE_NAME = 'firebase-installations-database';\r\nconst DATABASE_VERSION = 1;\r\nconst OBJECT_STORE_NAME = 'firebase-installations-store';\r\nlet dbPromise = null;\r\nfunction getDbPromise() {\r\n    if (!dbPromise) {\r\n        dbPromise = (0,idb__WEBPACK_IMPORTED_MODULE_3__.openDB)(DATABASE_NAME, DATABASE_VERSION, {\r\n            upgrade: (db, oldVersion) => {\r\n                // We don't use 'break' in this switch statement, the fall-through\r\n                // behavior is what we want, because if there are multiple versions between\r\n                // the old version and the current version, we want ALL the migrations\r\n                // that correspond to those versions to run, not only the last one.\r\n                // eslint-disable-next-line default-case\r\n                switch (oldVersion) {\r\n                    case 0:\r\n                        db.createObjectStore(OBJECT_STORE_NAME);\r\n                }\r\n            }\r\n        });\r\n    }\r\n    return dbPromise;\r\n}\r\n/** Assigns or overwrites the record for the given key with the given value. */\r\nasync function set(appConfig, value) {\r\n    const key = getKey(appConfig);\r\n    const db = await getDbPromise();\r\n    const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');\r\n    const objectStore = tx.objectStore(OBJECT_STORE_NAME);\r\n    const oldValue = (await objectStore.get(key));\r\n    await objectStore.put(value, key);\r\n    await tx.done;\r\n    if (!oldValue || oldValue.fid !== value.fid) {\r\n        fidChanged(appConfig, value.fid);\r\n    }\r\n    return value;\r\n}\r\n/** Removes record(s) from the objectStore that match the given key. */\r\nasync function remove(appConfig) {\r\n    const key = getKey(appConfig);\r\n    const db = await getDbPromise();\r\n    const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');\r\n    await tx.objectStore(OBJECT_STORE_NAME).delete(key);\r\n    await tx.done;\r\n}\r\n/**\r\n * Atomically updates a record with the result of updateFn, which gets\r\n * called with the current value. If newValue is undefined, the record is\r\n * deleted instead.\r\n * @return Updated value\r\n */\r\nasync function update(appConfig, updateFn) {\r\n    const key = getKey(appConfig);\r\n    const db = await getDbPromise();\r\n    const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');\r\n    const store = tx.objectStore(OBJECT_STORE_NAME);\r\n    const oldValue = (await store.get(key));\r\n    const newValue = updateFn(oldValue);\r\n    if (newValue === undefined) {\r\n        await store.delete(key);\r\n    }\r\n    else {\r\n        await store.put(newValue, key);\r\n    }\r\n    await tx.done;\r\n    if (newValue && (!oldValue || oldValue.fid !== newValue.fid)) {\r\n        fidChanged(appConfig, newValue.fid);\r\n    }\r\n    return newValue;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Updates and returns the InstallationEntry from the database.\r\n * Also triggers a registration request if it is necessary and possible.\r\n */\r\nasync function getInstallationEntry(installations) {\r\n    let registrationPromise;\r\n    const installationEntry = await update(installations.appConfig, oldEntry => {\r\n        const installationEntry = updateOrCreateInstallationEntry(oldEntry);\r\n        const entryWithPromise = triggerRegistrationIfNecessary(installations, installationEntry);\r\n        registrationPromise = entryWithPromise.registrationPromise;\r\n        return entryWithPromise.installationEntry;\r\n    });\r\n    if (installationEntry.fid === INVALID_FID) {\r\n        // FID generation failed. Waiting for the FID from the server.\r\n        return { installationEntry: await registrationPromise };\r\n    }\r\n    return {\r\n        installationEntry,\r\n        registrationPromise\r\n    };\r\n}\r\n/**\r\n * Creates a new Installation Entry if one does not exist.\r\n * Also clears timed out pending requests.\r\n */\r\nfunction updateOrCreateInstallationEntry(oldEntry) {\r\n    const entry = oldEntry || {\r\n        fid: generateFid(),\r\n        registrationStatus: 0 /* RequestStatus.NOT_STARTED */\r\n    };\r\n    return clearTimedOutRequest(entry);\r\n}\r\n/**\r\n * If the Firebase Installation is not registered yet, this will trigger the\r\n * registration and return an InProgressInstallationEntry.\r\n *\r\n * If registrationPromise does not exist, the installationEntry is guaranteed\r\n * to be registered.\r\n */\r\nfunction triggerRegistrationIfNecessary(installations, installationEntry) {\r\n    if (installationEntry.registrationStatus === 0 /* RequestStatus.NOT_STARTED */) {\r\n        if (!navigator.onLine) {\r\n            // Registration required but app is offline.\r\n            const registrationPromiseWithError = Promise.reject(ERROR_FACTORY.create(\"app-offline\" /* ErrorCode.APP_OFFLINE */));\r\n            return {\r\n                installationEntry,\r\n                registrationPromise: registrationPromiseWithError\r\n            };\r\n        }\r\n        // Try registering. Change status to IN_PROGRESS.\r\n        const inProgressEntry = {\r\n            fid: installationEntry.fid,\r\n            registrationStatus: 1 /* RequestStatus.IN_PROGRESS */,\r\n            registrationTime: Date.now()\r\n        };\r\n        const registrationPromise = registerInstallation(installations, inProgressEntry);\r\n        return { installationEntry: inProgressEntry, registrationPromise };\r\n    }\r\n    else if (installationEntry.registrationStatus === 1 /* RequestStatus.IN_PROGRESS */) {\r\n        return {\r\n            installationEntry,\r\n            registrationPromise: waitUntilFidRegistration(installations)\r\n        };\r\n    }\r\n    else {\r\n        return { installationEntry };\r\n    }\r\n}\r\n/** This will be executed only once for each new Firebase Installation. */\r\nasync function registerInstallation(installations, installationEntry) {\r\n    try {\r\n        const registeredInstallationEntry = await createInstallationRequest(installations, installationEntry);\r\n        return set(installations.appConfig, registeredInstallationEntry);\r\n    }\r\n    catch (e) {\r\n        if (isServerError(e) && e.customData.serverCode === 409) {\r\n            // Server returned a \"FID can not be used\" error.\r\n            // Generate a new ID next time.\r\n            await remove(installations.appConfig);\r\n        }\r\n        else {\r\n            // Registration failed. Set FID as not registered.\r\n            await set(installations.appConfig, {\r\n                fid: installationEntry.fid,\r\n                registrationStatus: 0 /* RequestStatus.NOT_STARTED */\r\n            });\r\n        }\r\n        throw e;\r\n    }\r\n}\r\n/** Call if FID registration is pending in another request. */\r\nasync function waitUntilFidRegistration(installations) {\r\n    // Unfortunately, there is no way of reliably observing when a value in\r\n    // IndexedDB changes (yet, see https://github.com/WICG/indexed-db-observers),\r\n    // so we need to poll.\r\n    let entry = await updateInstallationRequest(installations.appConfig);\r\n    while (entry.registrationStatus === 1 /* RequestStatus.IN_PROGRESS */) {\r\n        // createInstallation request still in progress.\r\n        await sleep(100);\r\n        entry = await updateInstallationRequest(installations.appConfig);\r\n    }\r\n    if (entry.registrationStatus === 0 /* RequestStatus.NOT_STARTED */) {\r\n        // The request timed out or failed in a different call. Try again.\r\n        const { installationEntry, registrationPromise } = await getInstallationEntry(installations);\r\n        if (registrationPromise) {\r\n            return registrationPromise;\r\n        }\r\n        else {\r\n            // if there is no registrationPromise, entry is registered.\r\n            return installationEntry;\r\n        }\r\n    }\r\n    return entry;\r\n}\r\n/**\r\n * Called only if there is a CreateInstallation request in progress.\r\n *\r\n * Updates the InstallationEntry in the DB based on the status of the\r\n * CreateInstallation request.\r\n *\r\n * Returns the updated InstallationEntry.\r\n */\r\nfunction updateInstallationRequest(appConfig) {\r\n    return update(appConfig, oldEntry => {\r\n        if (!oldEntry) {\r\n            throw ERROR_FACTORY.create(\"installation-not-found\" /* ErrorCode.INSTALLATION_NOT_FOUND */);\r\n        }\r\n        return clearTimedOutRequest(oldEntry);\r\n    });\r\n}\r\nfunction clearTimedOutRequest(entry) {\r\n    if (hasInstallationRequestTimedOut(entry)) {\r\n        return {\r\n            fid: entry.fid,\r\n            registrationStatus: 0 /* RequestStatus.NOT_STARTED */\r\n        };\r\n    }\r\n    return entry;\r\n}\r\nfunction hasInstallationRequestTimedOut(installationEntry) {\r\n    return (installationEntry.registrationStatus === 1 /* RequestStatus.IN_PROGRESS */ &&\r\n        installationEntry.registrationTime + PENDING_TIMEOUT_MS < Date.now());\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nasync function generateAuthTokenRequest({ appConfig, heartbeatServiceProvider }, installationEntry) {\r\n    const endpoint = getGenerateAuthTokenEndpoint(appConfig, installationEntry);\r\n    const headers = getHeadersWithAuth(appConfig, installationEntry);\r\n    // If heartbeat service exists, add the heartbeat string to the header.\r\n    const heartbeatService = heartbeatServiceProvider.getImmediate({\r\n        optional: true\r\n    });\r\n    if (heartbeatService) {\r\n        const heartbeatsHeader = await heartbeatService.getHeartbeatsHeader();\r\n        if (heartbeatsHeader) {\r\n            headers.append('x-firebase-client', heartbeatsHeader);\r\n        }\r\n    }\r\n    const body = {\r\n        installation: {\r\n            sdkVersion: PACKAGE_VERSION,\r\n            appId: appConfig.appId\r\n        }\r\n    };\r\n    const request = {\r\n        method: 'POST',\r\n        headers,\r\n        body: JSON.stringify(body)\r\n    };\r\n    const response = await retryIfServerError(() => fetch(endpoint, request));\r\n    if (response.ok) {\r\n        const responseValue = await response.json();\r\n        const completedAuthToken = extractAuthTokenInfoFromResponse(responseValue);\r\n        return completedAuthToken;\r\n    }\r\n    else {\r\n        throw await getErrorFromResponse('Generate Auth Token', response);\r\n    }\r\n}\r\nfunction getGenerateAuthTokenEndpoint(appConfig, { fid }) {\r\n    return `${getInstallationsEndpoint(appConfig)}/${fid}/authTokens:generate`;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Returns a valid authentication token for the installation. Generates a new\r\n * token if one doesn't exist, is expired or about to expire.\r\n *\r\n * Should only be called if the Firebase Installation is registered.\r\n */\r\nasync function refreshAuthToken(installations, forceRefresh = false) {\r\n    let tokenPromise;\r\n    const entry = await update(installations.appConfig, oldEntry => {\r\n        if (!isEntryRegistered(oldEntry)) {\r\n            throw ERROR_FACTORY.create(\"not-registered\" /* ErrorCode.NOT_REGISTERED */);\r\n        }\r\n        const oldAuthToken = oldEntry.authToken;\r\n        if (!forceRefresh && isAuthTokenValid(oldAuthToken)) {\r\n            // There is a valid token in the DB.\r\n            return oldEntry;\r\n        }\r\n        else if (oldAuthToken.requestStatus === 1 /* RequestStatus.IN_PROGRESS */) {\r\n            // There already is a token request in progress.\r\n            tokenPromise = waitUntilAuthTokenRequest(installations, forceRefresh);\r\n            return oldEntry;\r\n        }\r\n        else {\r\n            // No token or token expired.\r\n            if (!navigator.onLine) {\r\n                throw ERROR_FACTORY.create(\"app-offline\" /* ErrorCode.APP_OFFLINE */);\r\n            }\r\n            const inProgressEntry = makeAuthTokenRequestInProgressEntry(oldEntry);\r\n            tokenPromise = fetchAuthTokenFromServer(installations, inProgressEntry);\r\n            return inProgressEntry;\r\n        }\r\n    });\r\n    const authToken = tokenPromise\r\n        ? await tokenPromise\r\n        : entry.authToken;\r\n    return authToken;\r\n}\r\n/**\r\n * Call only if FID is registered and Auth Token request is in progress.\r\n *\r\n * Waits until the current pending request finishes. If the request times out,\r\n * tries once in this thread as well.\r\n */\r\nasync function waitUntilAuthTokenRequest(installations, forceRefresh) {\r\n    // Unfortunately, there is no way of reliably observing when a value in\r\n    // IndexedDB changes (yet, see https://github.com/WICG/indexed-db-observers),\r\n    // so we need to poll.\r\n    let entry = await updateAuthTokenRequest(installations.appConfig);\r\n    while (entry.authToken.requestStatus === 1 /* RequestStatus.IN_PROGRESS */) {\r\n        // generateAuthToken still in progress.\r\n        await sleep(100);\r\n        entry = await updateAuthTokenRequest(installations.appConfig);\r\n    }\r\n    const authToken = entry.authToken;\r\n    if (authToken.requestStatus === 0 /* RequestStatus.NOT_STARTED */) {\r\n        // The request timed out or failed in a different call. Try again.\r\n        return refreshAuthToken(installations, forceRefresh);\r\n    }\r\n    else {\r\n        return authToken;\r\n    }\r\n}\r\n/**\r\n * Called only if there is a GenerateAuthToken request in progress.\r\n *\r\n * Updates the InstallationEntry in the DB based on the status of the\r\n * GenerateAuthToken request.\r\n *\r\n * Returns the updated InstallationEntry.\r\n */\r\nfunction updateAuthTokenRequest(appConfig) {\r\n    return update(appConfig, oldEntry => {\r\n        if (!isEntryRegistered(oldEntry)) {\r\n            throw ERROR_FACTORY.create(\"not-registered\" /* ErrorCode.NOT_REGISTERED */);\r\n        }\r\n        const oldAuthToken = oldEntry.authToken;\r\n        if (hasAuthTokenRequestTimedOut(oldAuthToken)) {\r\n            return Object.assign(Object.assign({}, oldEntry), { authToken: { requestStatus: 0 /* RequestStatus.NOT_STARTED */ } });\r\n        }\r\n        return oldEntry;\r\n    });\r\n}\r\nasync function fetchAuthTokenFromServer(installations, installationEntry) {\r\n    try {\r\n        const authToken = await generateAuthTokenRequest(installations, installationEntry);\r\n        const updatedInstallationEntry = Object.assign(Object.assign({}, installationEntry), { authToken });\r\n        await set(installations.appConfig, updatedInstallationEntry);\r\n        return authToken;\r\n    }\r\n    catch (e) {\r\n        if (isServerError(e) &&\r\n            (e.customData.serverCode === 401 || e.customData.serverCode === 404)) {\r\n            // Server returned a \"FID not found\" or a \"Invalid authentication\" error.\r\n            // Generate a new ID next time.\r\n            await remove(installations.appConfig);\r\n        }\r\n        else {\r\n            const updatedInstallationEntry = Object.assign(Object.assign({}, installationEntry), { authToken: { requestStatus: 0 /* RequestStatus.NOT_STARTED */ } });\r\n            await set(installations.appConfig, updatedInstallationEntry);\r\n        }\r\n        throw e;\r\n    }\r\n}\r\nfunction isEntryRegistered(installationEntry) {\r\n    return (installationEntry !== undefined &&\r\n        installationEntry.registrationStatus === 2 /* RequestStatus.COMPLETED */);\r\n}\r\nfunction isAuthTokenValid(authToken) {\r\n    return (authToken.requestStatus === 2 /* RequestStatus.COMPLETED */ &&\r\n        !isAuthTokenExpired(authToken));\r\n}\r\nfunction isAuthTokenExpired(authToken) {\r\n    const now = Date.now();\r\n    return (now < authToken.creationTime ||\r\n        authToken.creationTime + authToken.expiresIn < now + TOKEN_EXPIRATION_BUFFER);\r\n}\r\n/** Returns an updated InstallationEntry with an InProgressAuthToken. */\r\nfunction makeAuthTokenRequestInProgressEntry(oldEntry) {\r\n    const inProgressAuthToken = {\r\n        requestStatus: 1 /* RequestStatus.IN_PROGRESS */,\r\n        requestTime: Date.now()\r\n    };\r\n    return Object.assign(Object.assign({}, oldEntry), { authToken: inProgressAuthToken });\r\n}\r\nfunction hasAuthTokenRequestTimedOut(authToken) {\r\n    return (authToken.requestStatus === 1 /* RequestStatus.IN_PROGRESS */ &&\r\n        authToken.requestTime + PENDING_TIMEOUT_MS < Date.now());\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Creates a Firebase Installation if there isn't one for the app and\r\n * returns the Installation ID.\r\n * @param installations - The `Installations` instance.\r\n *\r\n * @public\r\n */\r\nasync function getId(installations) {\r\n    const installationsImpl = installations;\r\n    const { installationEntry, registrationPromise } = await getInstallationEntry(installationsImpl);\r\n    if (registrationPromise) {\r\n        registrationPromise.catch(console.error);\r\n    }\r\n    else {\r\n        // If the installation is already registered, update the authentication\r\n        // token if needed.\r\n        refreshAuthToken(installationsImpl).catch(console.error);\r\n    }\r\n    return installationEntry.fid;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Returns a Firebase Installations auth token, identifying the current\r\n * Firebase Installation.\r\n * @param installations - The `Installations` instance.\r\n * @param forceRefresh - Force refresh regardless of token expiration.\r\n *\r\n * @public\r\n */\r\nasync function getToken(installations, forceRefresh = false) {\r\n    const installationsImpl = installations;\r\n    await completeInstallationRegistration(installationsImpl);\r\n    // At this point we either have a Registered Installation in the DB, or we've\r\n    // already thrown an error.\r\n    const authToken = await refreshAuthToken(installationsImpl, forceRefresh);\r\n    return authToken.token;\r\n}\r\nasync function completeInstallationRegistration(installations) {\r\n    const { registrationPromise } = await getInstallationEntry(installations);\r\n    if (registrationPromise) {\r\n        // A createInstallation request is in progress. Wait until it finishes.\r\n        await registrationPromise;\r\n    }\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nasync function deleteInstallationRequest(appConfig, installationEntry) {\r\n    const endpoint = getDeleteEndpoint(appConfig, installationEntry);\r\n    const headers = getHeadersWithAuth(appConfig, installationEntry);\r\n    const request = {\r\n        method: 'DELETE',\r\n        headers\r\n    };\r\n    const response = await retryIfServerError(() => fetch(endpoint, request));\r\n    if (!response.ok) {\r\n        throw await getErrorFromResponse('Delete Installation', response);\r\n    }\r\n}\r\nfunction getDeleteEndpoint(appConfig, { fid }) {\r\n    return `${getInstallationsEndpoint(appConfig)}/${fid}`;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Deletes the Firebase Installation and all associated data.\r\n * @param installations - The `Installations` instance.\r\n *\r\n * @public\r\n */\r\nasync function deleteInstallations(installations) {\r\n    const { appConfig } = installations;\r\n    const entry = await update(appConfig, oldEntry => {\r\n        if (oldEntry && oldEntry.registrationStatus === 0 /* RequestStatus.NOT_STARTED */) {\r\n            // Delete the unregistered entry without sending a deleteInstallation request.\r\n            return undefined;\r\n        }\r\n        return oldEntry;\r\n    });\r\n    if (entry) {\r\n        if (entry.registrationStatus === 1 /* RequestStatus.IN_PROGRESS */) {\r\n            // Can't delete while trying to register.\r\n            throw ERROR_FACTORY.create(\"delete-pending-registration\" /* ErrorCode.DELETE_PENDING_REGISTRATION */);\r\n        }\r\n        else if (entry.registrationStatus === 2 /* RequestStatus.COMPLETED */) {\r\n            if (!navigator.onLine) {\r\n                throw ERROR_FACTORY.create(\"app-offline\" /* ErrorCode.APP_OFFLINE */);\r\n            }\r\n            else {\r\n                await deleteInstallationRequest(appConfig, entry);\r\n                await remove(appConfig);\r\n            }\r\n        }\r\n    }\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Sets a new callback that will get called when Installation ID changes.\r\n * Returns an unsubscribe function that will remove the callback when called.\r\n * @param installations - The `Installations` instance.\r\n * @param callback - The callback function that is invoked when FID changes.\r\n * @returns A function that can be called to unsubscribe.\r\n *\r\n * @public\r\n */\r\nfunction onIdChange(installations, callback) {\r\n    const { appConfig } = installations;\r\n    addCallback(appConfig, callback);\r\n    return () => {\r\n        removeCallback(appConfig, callback);\r\n    };\r\n}\n\n/**\r\n * @license\r\n * Copyright 2020 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * Returns an instance of {@link Installations} associated with the given\r\n * {@link @firebase/app#FirebaseApp} instance.\r\n * @param app - The {@link @firebase/app#FirebaseApp} instance.\r\n *\r\n * @public\r\n */\r\nfunction getInstallations(app = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.getApp)()) {\r\n    const installationsImpl = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._getProvider)(app, 'installations').getImmediate();\r\n    return installationsImpl;\r\n}\n\n/**\r\n * @license\r\n * Copyright 2019 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nfunction extractAppConfig(app) {\r\n    if (!app || !app.options) {\r\n        throw getMissingValueError('App Configuration');\r\n    }\r\n    if (!app.name) {\r\n        throw getMissingValueError('App Name');\r\n    }\r\n    // Required app config keys\r\n    const configKeys = [\r\n        'projectId',\r\n        'apiKey',\r\n        'appId'\r\n    ];\r\n    for (const keyName of configKeys) {\r\n        if (!app.options[keyName]) {\r\n            throw getMissingValueError(keyName);\r\n        }\r\n    }\r\n    return {\r\n        appName: app.name,\r\n        projectId: app.options.projectId,\r\n        apiKey: app.options.apiKey,\r\n        appId: app.options.appId\r\n    };\r\n}\r\nfunction getMissingValueError(valueName) {\r\n    return ERROR_FACTORY.create(\"missing-app-config-values\" /* ErrorCode.MISSING_APP_CONFIG_VALUES */, {\r\n        valueName\r\n    });\r\n}\n\n/**\r\n * @license\r\n * Copyright 2020 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\nconst INSTALLATIONS_NAME = 'installations';\r\nconst INSTALLATIONS_NAME_INTERNAL = 'installations-internal';\r\nconst publicFactory = (container) => {\r\n    const app = container.getProvider('app').getImmediate();\r\n    // Throws if app isn't configured properly.\r\n    const appConfig = extractAppConfig(app);\r\n    const heartbeatServiceProvider = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._getProvider)(app, 'heartbeat');\r\n    const installationsImpl = {\r\n        app,\r\n        appConfig,\r\n        heartbeatServiceProvider,\r\n        _delete: () => Promise.resolve()\r\n    };\r\n    return installationsImpl;\r\n};\r\nconst internalFactory = (container) => {\r\n    const app = container.getProvider('app').getImmediate();\r\n    // Internal FIS instance relies on public FIS instance.\r\n    const installations = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._getProvider)(app, INSTALLATIONS_NAME).getImmediate();\r\n    const installationsInternal = {\r\n        getId: () => getId(installations),\r\n        getToken: (forceRefresh) => getToken(installations, forceRefresh)\r\n    };\r\n    return installationsInternal;\r\n};\r\nfunction registerInstallations() {\r\n    (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._registerComponent)(new _firebase_component__WEBPACK_IMPORTED_MODULE_1__.Component(INSTALLATIONS_NAME, publicFactory, \"PUBLIC\" /* ComponentType.PUBLIC */));\r\n    (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._registerComponent)(new _firebase_component__WEBPACK_IMPORTED_MODULE_1__.Component(INSTALLATIONS_NAME_INTERNAL, internalFactory, \"PRIVATE\" /* ComponentType.PRIVATE */));\r\n}\n\n/**\r\n * The Firebase Installations Web SDK.\r\n * This SDK does not work in a Node.js environment.\r\n *\r\n * @packageDocumentation\r\n */\r\nregisterInstallations();\r\n(0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.registerVersion)(name, version);\r\n// BUILD_TARGET will be replaced by values like esm5, esm2017, cjs5, etc during the compilation\r\n(0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.registerVersion)(name, version, 'esm2017');\n\n\n//# sourceMappingURL=index.esm2017.js.map\n\n\n//# sourceURL=webpack://daveads.github.io/./node_modules/@firebase/installations/dist/esm/index.esm2017.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   deleteInstallations: () => (/* binding */ deleteInstallations),
+/* harmony export */   getId: () => (/* binding */ getId),
+/* harmony export */   getInstallations: () => (/* binding */ getInstallations),
+/* harmony export */   getToken: () => (/* binding */ getToken),
+/* harmony export */   onIdChange: () => (/* binding */ onIdChange)
+/* harmony export */ });
+/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/app */ "./node_modules/@firebase/app/dist/esm/index.esm2017.js");
+/* harmony import */ var _firebase_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @firebase/component */ "./node_modules/@firebase/component/dist/esm/index.esm2017.js");
+/* harmony import */ var _firebase_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @firebase/util */ "./node_modules/@firebase/util/dist/index.esm2017.js");
+/* harmony import */ var idb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! idb */ "./node_modules/idb/build/index.js");
+
+
+
+
+
+const name = "@firebase/installations";
+const version = "0.6.7";
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const PENDING_TIMEOUT_MS = 10000;
+const PACKAGE_VERSION = `w:${version}`;
+const INTERNAL_AUTH_VERSION = 'FIS_v2';
+const INSTALLATIONS_API_URL = 'https://firebaseinstallations.googleapis.com/v1';
+const TOKEN_EXPIRATION_BUFFER = 60 * 60 * 1000; // One hour
+const SERVICE = 'installations';
+const SERVICE_NAME = 'Installations';
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const ERROR_DESCRIPTION_MAP = {
+    ["missing-app-config-values" /* ErrorCode.MISSING_APP_CONFIG_VALUES */]: 'Missing App configuration value: "{$valueName}"',
+    ["not-registered" /* ErrorCode.NOT_REGISTERED */]: 'Firebase Installation is not registered.',
+    ["installation-not-found" /* ErrorCode.INSTALLATION_NOT_FOUND */]: 'Firebase Installation not found.',
+    ["request-failed" /* ErrorCode.REQUEST_FAILED */]: '{$requestName} request failed with error "{$serverCode} {$serverStatus}: {$serverMessage}"',
+    ["app-offline" /* ErrorCode.APP_OFFLINE */]: 'Could not process request. Application offline.',
+    ["delete-pending-registration" /* ErrorCode.DELETE_PENDING_REGISTRATION */]: "Can't delete installation while there is a pending registration request."
+};
+const ERROR_FACTORY = new _firebase_util__WEBPACK_IMPORTED_MODULE_2__.ErrorFactory(SERVICE, SERVICE_NAME, ERROR_DESCRIPTION_MAP);
+/** Returns true if error is a FirebaseError that is based on an error from the server. */
+function isServerError(error) {
+    return (error instanceof _firebase_util__WEBPACK_IMPORTED_MODULE_2__.FirebaseError &&
+        error.code.includes("request-failed" /* ErrorCode.REQUEST_FAILED */));
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function getInstallationsEndpoint({ projectId }) {
+    return `${INSTALLATIONS_API_URL}/projects/${projectId}/installations`;
+}
+function extractAuthTokenInfoFromResponse(response) {
+    return {
+        token: response.token,
+        requestStatus: 2 /* RequestStatus.COMPLETED */,
+        expiresIn: getExpiresInFromResponseExpiresIn(response.expiresIn),
+        creationTime: Date.now()
+    };
+}
+async function getErrorFromResponse(requestName, response) {
+    const responseJson = await response.json();
+    const errorData = responseJson.error;
+    return ERROR_FACTORY.create("request-failed" /* ErrorCode.REQUEST_FAILED */, {
+        requestName,
+        serverCode: errorData.code,
+        serverMessage: errorData.message,
+        serverStatus: errorData.status
+    });
+}
+function getHeaders({ apiKey }) {
+    return new Headers({
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'x-goog-api-key': apiKey
+    });
+}
+function getHeadersWithAuth(appConfig, { refreshToken }) {
+    const headers = getHeaders(appConfig);
+    headers.append('Authorization', getAuthorizationHeader(refreshToken));
+    return headers;
+}
+/**
+ * Calls the passed in fetch wrapper and returns the response.
+ * If the returned response has a status of 5xx, re-runs the function once and
+ * returns the response.
+ */
+async function retryIfServerError(fn) {
+    const result = await fn();
+    if (result.status >= 500 && result.status < 600) {
+        // Internal Server Error. Retry request.
+        return fn();
+    }
+    return result;
+}
+function getExpiresInFromResponseExpiresIn(responseExpiresIn) {
+    // This works because the server will never respond with fractions of a second.
+    return Number(responseExpiresIn.replace('s', '000'));
+}
+function getAuthorizationHeader(refreshToken) {
+    return `${INTERNAL_AUTH_VERSION} ${refreshToken}`;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function createInstallationRequest({ appConfig, heartbeatServiceProvider }, { fid }) {
+    const endpoint = getInstallationsEndpoint(appConfig);
+    const headers = getHeaders(appConfig);
+    // If heartbeat service exists, add the heartbeat string to the header.
+    const heartbeatService = heartbeatServiceProvider.getImmediate({
+        optional: true
+    });
+    if (heartbeatService) {
+        const heartbeatsHeader = await heartbeatService.getHeartbeatsHeader();
+        if (heartbeatsHeader) {
+            headers.append('x-firebase-client', heartbeatsHeader);
+        }
+    }
+    const body = {
+        fid,
+        authVersion: INTERNAL_AUTH_VERSION,
+        appId: appConfig.appId,
+        sdkVersion: PACKAGE_VERSION
+    };
+    const request = {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(body)
+    };
+    const response = await retryIfServerError(() => fetch(endpoint, request));
+    if (response.ok) {
+        const responseValue = await response.json();
+        const registeredInstallationEntry = {
+            fid: responseValue.fid || fid,
+            registrationStatus: 2 /* RequestStatus.COMPLETED */,
+            refreshToken: responseValue.refreshToken,
+            authToken: extractAuthTokenInfoFromResponse(responseValue.authToken)
+        };
+        return registeredInstallationEntry;
+    }
+    else {
+        throw await getErrorFromResponse('Create Installation', response);
+    }
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/** Returns a promise that resolves after given time passes. */
+function sleep(ms) {
+    return new Promise(resolve => {
+        setTimeout(resolve, ms);
+    });
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function bufferToBase64UrlSafe(array) {
+    const b64 = btoa(String.fromCharCode(...array));
+    return b64.replace(/\+/g, '-').replace(/\//g, '_');
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const VALID_FID_PATTERN = /^[cdef][\w-]{21}$/;
+const INVALID_FID = '';
+/**
+ * Generates a new FID using random values from Web Crypto API.
+ * Returns an empty string if FID generation fails for any reason.
+ */
+function generateFid() {
+    try {
+        // A valid FID has exactly 22 base64 characters, which is 132 bits, or 16.5
+        // bytes. our implementation generates a 17 byte array instead.
+        const fidByteArray = new Uint8Array(17);
+        const crypto = self.crypto || self.msCrypto;
+        crypto.getRandomValues(fidByteArray);
+        // Replace the first 4 random bits with the constant FID header of 0b0111.
+        fidByteArray[0] = 0b01110000 + (fidByteArray[0] % 0b00010000);
+        const fid = encode(fidByteArray);
+        return VALID_FID_PATTERN.test(fid) ? fid : INVALID_FID;
+    }
+    catch (_a) {
+        // FID generation errored
+        return INVALID_FID;
+    }
+}
+/** Converts a FID Uint8Array to a base64 string representation. */
+function encode(fidByteArray) {
+    const b64String = bufferToBase64UrlSafe(fidByteArray);
+    // Remove the 23rd character that was added because of the extra 4 bits at the
+    // end of our 17 byte array, and the '=' padding.
+    return b64String.substr(0, 22);
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/** Returns a string key that can be used to identify the app. */
+function getKey(appConfig) {
+    return `${appConfig.appName}!${appConfig.appId}`;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const fidChangeCallbacks = new Map();
+/**
+ * Calls the onIdChange callbacks with the new FID value, and broadcasts the
+ * change to other tabs.
+ */
+function fidChanged(appConfig, fid) {
+    const key = getKey(appConfig);
+    callFidChangeCallbacks(key, fid);
+    broadcastFidChange(key, fid);
+}
+function addCallback(appConfig, callback) {
+    // Open the broadcast channel if it's not already open,
+    // to be able to listen to change events from other tabs.
+    getBroadcastChannel();
+    const key = getKey(appConfig);
+    let callbackSet = fidChangeCallbacks.get(key);
+    if (!callbackSet) {
+        callbackSet = new Set();
+        fidChangeCallbacks.set(key, callbackSet);
+    }
+    callbackSet.add(callback);
+}
+function removeCallback(appConfig, callback) {
+    const key = getKey(appConfig);
+    const callbackSet = fidChangeCallbacks.get(key);
+    if (!callbackSet) {
+        return;
+    }
+    callbackSet.delete(callback);
+    if (callbackSet.size === 0) {
+        fidChangeCallbacks.delete(key);
+    }
+    // Close broadcast channel if there are no more callbacks.
+    closeBroadcastChannel();
+}
+function callFidChangeCallbacks(key, fid) {
+    const callbacks = fidChangeCallbacks.get(key);
+    if (!callbacks) {
+        return;
+    }
+    for (const callback of callbacks) {
+        callback(fid);
+    }
+}
+function broadcastFidChange(key, fid) {
+    const channel = getBroadcastChannel();
+    if (channel) {
+        channel.postMessage({ key, fid });
+    }
+    closeBroadcastChannel();
+}
+let broadcastChannel = null;
+/** Opens and returns a BroadcastChannel if it is supported by the browser. */
+function getBroadcastChannel() {
+    if (!broadcastChannel && 'BroadcastChannel' in self) {
+        broadcastChannel = new BroadcastChannel('[Firebase] FID Change');
+        broadcastChannel.onmessage = e => {
+            callFidChangeCallbacks(e.data.key, e.data.fid);
+        };
+    }
+    return broadcastChannel;
+}
+function closeBroadcastChannel() {
+    if (fidChangeCallbacks.size === 0 && broadcastChannel) {
+        broadcastChannel.close();
+        broadcastChannel = null;
+    }
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const DATABASE_NAME = 'firebase-installations-database';
+const DATABASE_VERSION = 1;
+const OBJECT_STORE_NAME = 'firebase-installations-store';
+let dbPromise = null;
+function getDbPromise() {
+    if (!dbPromise) {
+        dbPromise = (0,idb__WEBPACK_IMPORTED_MODULE_3__.openDB)(DATABASE_NAME, DATABASE_VERSION, {
+            upgrade: (db, oldVersion) => {
+                // We don't use 'break' in this switch statement, the fall-through
+                // behavior is what we want, because if there are multiple versions between
+                // the old version and the current version, we want ALL the migrations
+                // that correspond to those versions to run, not only the last one.
+                // eslint-disable-next-line default-case
+                switch (oldVersion) {
+                    case 0:
+                        db.createObjectStore(OBJECT_STORE_NAME);
+                }
+            }
+        });
+    }
+    return dbPromise;
+}
+/** Assigns or overwrites the record for the given key with the given value. */
+async function set(appConfig, value) {
+    const key = getKey(appConfig);
+    const db = await getDbPromise();
+    const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');
+    const objectStore = tx.objectStore(OBJECT_STORE_NAME);
+    const oldValue = (await objectStore.get(key));
+    await objectStore.put(value, key);
+    await tx.done;
+    if (!oldValue || oldValue.fid !== value.fid) {
+        fidChanged(appConfig, value.fid);
+    }
+    return value;
+}
+/** Removes record(s) from the objectStore that match the given key. */
+async function remove(appConfig) {
+    const key = getKey(appConfig);
+    const db = await getDbPromise();
+    const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');
+    await tx.objectStore(OBJECT_STORE_NAME).delete(key);
+    await tx.done;
+}
+/**
+ * Atomically updates a record with the result of updateFn, which gets
+ * called with the current value. If newValue is undefined, the record is
+ * deleted instead.
+ * @return Updated value
+ */
+async function update(appConfig, updateFn) {
+    const key = getKey(appConfig);
+    const db = await getDbPromise();
+    const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');
+    const store = tx.objectStore(OBJECT_STORE_NAME);
+    const oldValue = (await store.get(key));
+    const newValue = updateFn(oldValue);
+    if (newValue === undefined) {
+        await store.delete(key);
+    }
+    else {
+        await store.put(newValue, key);
+    }
+    await tx.done;
+    if (newValue && (!oldValue || oldValue.fid !== newValue.fid)) {
+        fidChanged(appConfig, newValue.fid);
+    }
+    return newValue;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Updates and returns the InstallationEntry from the database.
+ * Also triggers a registration request if it is necessary and possible.
+ */
+async function getInstallationEntry(installations) {
+    let registrationPromise;
+    const installationEntry = await update(installations.appConfig, oldEntry => {
+        const installationEntry = updateOrCreateInstallationEntry(oldEntry);
+        const entryWithPromise = triggerRegistrationIfNecessary(installations, installationEntry);
+        registrationPromise = entryWithPromise.registrationPromise;
+        return entryWithPromise.installationEntry;
+    });
+    if (installationEntry.fid === INVALID_FID) {
+        // FID generation failed. Waiting for the FID from the server.
+        return { installationEntry: await registrationPromise };
+    }
+    return {
+        installationEntry,
+        registrationPromise
+    };
+}
+/**
+ * Creates a new Installation Entry if one does not exist.
+ * Also clears timed out pending requests.
+ */
+function updateOrCreateInstallationEntry(oldEntry) {
+    const entry = oldEntry || {
+        fid: generateFid(),
+        registrationStatus: 0 /* RequestStatus.NOT_STARTED */
+    };
+    return clearTimedOutRequest(entry);
+}
+/**
+ * If the Firebase Installation is not registered yet, this will trigger the
+ * registration and return an InProgressInstallationEntry.
+ *
+ * If registrationPromise does not exist, the installationEntry is guaranteed
+ * to be registered.
+ */
+function triggerRegistrationIfNecessary(installations, installationEntry) {
+    if (installationEntry.registrationStatus === 0 /* RequestStatus.NOT_STARTED */) {
+        if (!navigator.onLine) {
+            // Registration required but app is offline.
+            const registrationPromiseWithError = Promise.reject(ERROR_FACTORY.create("app-offline" /* ErrorCode.APP_OFFLINE */));
+            return {
+                installationEntry,
+                registrationPromise: registrationPromiseWithError
+            };
+        }
+        // Try registering. Change status to IN_PROGRESS.
+        const inProgressEntry = {
+            fid: installationEntry.fid,
+            registrationStatus: 1 /* RequestStatus.IN_PROGRESS */,
+            registrationTime: Date.now()
+        };
+        const registrationPromise = registerInstallation(installations, inProgressEntry);
+        return { installationEntry: inProgressEntry, registrationPromise };
+    }
+    else if (installationEntry.registrationStatus === 1 /* RequestStatus.IN_PROGRESS */) {
+        return {
+            installationEntry,
+            registrationPromise: waitUntilFidRegistration(installations)
+        };
+    }
+    else {
+        return { installationEntry };
+    }
+}
+/** This will be executed only once for each new Firebase Installation. */
+async function registerInstallation(installations, installationEntry) {
+    try {
+        const registeredInstallationEntry = await createInstallationRequest(installations, installationEntry);
+        return set(installations.appConfig, registeredInstallationEntry);
+    }
+    catch (e) {
+        if (isServerError(e) && e.customData.serverCode === 409) {
+            // Server returned a "FID can not be used" error.
+            // Generate a new ID next time.
+            await remove(installations.appConfig);
+        }
+        else {
+            // Registration failed. Set FID as not registered.
+            await set(installations.appConfig, {
+                fid: installationEntry.fid,
+                registrationStatus: 0 /* RequestStatus.NOT_STARTED */
+            });
+        }
+        throw e;
+    }
+}
+/** Call if FID registration is pending in another request. */
+async function waitUntilFidRegistration(installations) {
+    // Unfortunately, there is no way of reliably observing when a value in
+    // IndexedDB changes (yet, see https://github.com/WICG/indexed-db-observers),
+    // so we need to poll.
+    let entry = await updateInstallationRequest(installations.appConfig);
+    while (entry.registrationStatus === 1 /* RequestStatus.IN_PROGRESS */) {
+        // createInstallation request still in progress.
+        await sleep(100);
+        entry = await updateInstallationRequest(installations.appConfig);
+    }
+    if (entry.registrationStatus === 0 /* RequestStatus.NOT_STARTED */) {
+        // The request timed out or failed in a different call. Try again.
+        const { installationEntry, registrationPromise } = await getInstallationEntry(installations);
+        if (registrationPromise) {
+            return registrationPromise;
+        }
+        else {
+            // if there is no registrationPromise, entry is registered.
+            return installationEntry;
+        }
+    }
+    return entry;
+}
+/**
+ * Called only if there is a CreateInstallation request in progress.
+ *
+ * Updates the InstallationEntry in the DB based on the status of the
+ * CreateInstallation request.
+ *
+ * Returns the updated InstallationEntry.
+ */
+function updateInstallationRequest(appConfig) {
+    return update(appConfig, oldEntry => {
+        if (!oldEntry) {
+            throw ERROR_FACTORY.create("installation-not-found" /* ErrorCode.INSTALLATION_NOT_FOUND */);
+        }
+        return clearTimedOutRequest(oldEntry);
+    });
+}
+function clearTimedOutRequest(entry) {
+    if (hasInstallationRequestTimedOut(entry)) {
+        return {
+            fid: entry.fid,
+            registrationStatus: 0 /* RequestStatus.NOT_STARTED */
+        };
+    }
+    return entry;
+}
+function hasInstallationRequestTimedOut(installationEntry) {
+    return (installationEntry.registrationStatus === 1 /* RequestStatus.IN_PROGRESS */ &&
+        installationEntry.registrationTime + PENDING_TIMEOUT_MS < Date.now());
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function generateAuthTokenRequest({ appConfig, heartbeatServiceProvider }, installationEntry) {
+    const endpoint = getGenerateAuthTokenEndpoint(appConfig, installationEntry);
+    const headers = getHeadersWithAuth(appConfig, installationEntry);
+    // If heartbeat service exists, add the heartbeat string to the header.
+    const heartbeatService = heartbeatServiceProvider.getImmediate({
+        optional: true
+    });
+    if (heartbeatService) {
+        const heartbeatsHeader = await heartbeatService.getHeartbeatsHeader();
+        if (heartbeatsHeader) {
+            headers.append('x-firebase-client', heartbeatsHeader);
+        }
+    }
+    const body = {
+        installation: {
+            sdkVersion: PACKAGE_VERSION,
+            appId: appConfig.appId
+        }
+    };
+    const request = {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(body)
+    };
+    const response = await retryIfServerError(() => fetch(endpoint, request));
+    if (response.ok) {
+        const responseValue = await response.json();
+        const completedAuthToken = extractAuthTokenInfoFromResponse(responseValue);
+        return completedAuthToken;
+    }
+    else {
+        throw await getErrorFromResponse('Generate Auth Token', response);
+    }
+}
+function getGenerateAuthTokenEndpoint(appConfig, { fid }) {
+    return `${getInstallationsEndpoint(appConfig)}/${fid}/authTokens:generate`;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Returns a valid authentication token for the installation. Generates a new
+ * token if one doesn't exist, is expired or about to expire.
+ *
+ * Should only be called if the Firebase Installation is registered.
+ */
+async function refreshAuthToken(installations, forceRefresh = false) {
+    let tokenPromise;
+    const entry = await update(installations.appConfig, oldEntry => {
+        if (!isEntryRegistered(oldEntry)) {
+            throw ERROR_FACTORY.create("not-registered" /* ErrorCode.NOT_REGISTERED */);
+        }
+        const oldAuthToken = oldEntry.authToken;
+        if (!forceRefresh && isAuthTokenValid(oldAuthToken)) {
+            // There is a valid token in the DB.
+            return oldEntry;
+        }
+        else if (oldAuthToken.requestStatus === 1 /* RequestStatus.IN_PROGRESS */) {
+            // There already is a token request in progress.
+            tokenPromise = waitUntilAuthTokenRequest(installations, forceRefresh);
+            return oldEntry;
+        }
+        else {
+            // No token or token expired.
+            if (!navigator.onLine) {
+                throw ERROR_FACTORY.create("app-offline" /* ErrorCode.APP_OFFLINE */);
+            }
+            const inProgressEntry = makeAuthTokenRequestInProgressEntry(oldEntry);
+            tokenPromise = fetchAuthTokenFromServer(installations, inProgressEntry);
+            return inProgressEntry;
+        }
+    });
+    const authToken = tokenPromise
+        ? await tokenPromise
+        : entry.authToken;
+    return authToken;
+}
+/**
+ * Call only if FID is registered and Auth Token request is in progress.
+ *
+ * Waits until the current pending request finishes. If the request times out,
+ * tries once in this thread as well.
+ */
+async function waitUntilAuthTokenRequest(installations, forceRefresh) {
+    // Unfortunately, there is no way of reliably observing when a value in
+    // IndexedDB changes (yet, see https://github.com/WICG/indexed-db-observers),
+    // so we need to poll.
+    let entry = await updateAuthTokenRequest(installations.appConfig);
+    while (entry.authToken.requestStatus === 1 /* RequestStatus.IN_PROGRESS */) {
+        // generateAuthToken still in progress.
+        await sleep(100);
+        entry = await updateAuthTokenRequest(installations.appConfig);
+    }
+    const authToken = entry.authToken;
+    if (authToken.requestStatus === 0 /* RequestStatus.NOT_STARTED */) {
+        // The request timed out or failed in a different call. Try again.
+        return refreshAuthToken(installations, forceRefresh);
+    }
+    else {
+        return authToken;
+    }
+}
+/**
+ * Called only if there is a GenerateAuthToken request in progress.
+ *
+ * Updates the InstallationEntry in the DB based on the status of the
+ * GenerateAuthToken request.
+ *
+ * Returns the updated InstallationEntry.
+ */
+function updateAuthTokenRequest(appConfig) {
+    return update(appConfig, oldEntry => {
+        if (!isEntryRegistered(oldEntry)) {
+            throw ERROR_FACTORY.create("not-registered" /* ErrorCode.NOT_REGISTERED */);
+        }
+        const oldAuthToken = oldEntry.authToken;
+        if (hasAuthTokenRequestTimedOut(oldAuthToken)) {
+            return Object.assign(Object.assign({}, oldEntry), { authToken: { requestStatus: 0 /* RequestStatus.NOT_STARTED */ } });
+        }
+        return oldEntry;
+    });
+}
+async function fetchAuthTokenFromServer(installations, installationEntry) {
+    try {
+        const authToken = await generateAuthTokenRequest(installations, installationEntry);
+        const updatedInstallationEntry = Object.assign(Object.assign({}, installationEntry), { authToken });
+        await set(installations.appConfig, updatedInstallationEntry);
+        return authToken;
+    }
+    catch (e) {
+        if (isServerError(e) &&
+            (e.customData.serverCode === 401 || e.customData.serverCode === 404)) {
+            // Server returned a "FID not found" or a "Invalid authentication" error.
+            // Generate a new ID next time.
+            await remove(installations.appConfig);
+        }
+        else {
+            const updatedInstallationEntry = Object.assign(Object.assign({}, installationEntry), { authToken: { requestStatus: 0 /* RequestStatus.NOT_STARTED */ } });
+            await set(installations.appConfig, updatedInstallationEntry);
+        }
+        throw e;
+    }
+}
+function isEntryRegistered(installationEntry) {
+    return (installationEntry !== undefined &&
+        installationEntry.registrationStatus === 2 /* RequestStatus.COMPLETED */);
+}
+function isAuthTokenValid(authToken) {
+    return (authToken.requestStatus === 2 /* RequestStatus.COMPLETED */ &&
+        !isAuthTokenExpired(authToken));
+}
+function isAuthTokenExpired(authToken) {
+    const now = Date.now();
+    return (now < authToken.creationTime ||
+        authToken.creationTime + authToken.expiresIn < now + TOKEN_EXPIRATION_BUFFER);
+}
+/** Returns an updated InstallationEntry with an InProgressAuthToken. */
+function makeAuthTokenRequestInProgressEntry(oldEntry) {
+    const inProgressAuthToken = {
+        requestStatus: 1 /* RequestStatus.IN_PROGRESS */,
+        requestTime: Date.now()
+    };
+    return Object.assign(Object.assign({}, oldEntry), { authToken: inProgressAuthToken });
+}
+function hasAuthTokenRequestTimedOut(authToken) {
+    return (authToken.requestStatus === 1 /* RequestStatus.IN_PROGRESS */ &&
+        authToken.requestTime + PENDING_TIMEOUT_MS < Date.now());
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Creates a Firebase Installation if there isn't one for the app and
+ * returns the Installation ID.
+ * @param installations - The `Installations` instance.
+ *
+ * @public
+ */
+async function getId(installations) {
+    const installationsImpl = installations;
+    const { installationEntry, registrationPromise } = await getInstallationEntry(installationsImpl);
+    if (registrationPromise) {
+        registrationPromise.catch(console.error);
+    }
+    else {
+        // If the installation is already registered, update the authentication
+        // token if needed.
+        refreshAuthToken(installationsImpl).catch(console.error);
+    }
+    return installationEntry.fid;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Returns a Firebase Installations auth token, identifying the current
+ * Firebase Installation.
+ * @param installations - The `Installations` instance.
+ * @param forceRefresh - Force refresh regardless of token expiration.
+ *
+ * @public
+ */
+async function getToken(installations, forceRefresh = false) {
+    const installationsImpl = installations;
+    await completeInstallationRegistration(installationsImpl);
+    // At this point we either have a Registered Installation in the DB, or we've
+    // already thrown an error.
+    const authToken = await refreshAuthToken(installationsImpl, forceRefresh);
+    return authToken.token;
+}
+async function completeInstallationRegistration(installations) {
+    const { registrationPromise } = await getInstallationEntry(installations);
+    if (registrationPromise) {
+        // A createInstallation request is in progress. Wait until it finishes.
+        await registrationPromise;
+    }
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function deleteInstallationRequest(appConfig, installationEntry) {
+    const endpoint = getDeleteEndpoint(appConfig, installationEntry);
+    const headers = getHeadersWithAuth(appConfig, installationEntry);
+    const request = {
+        method: 'DELETE',
+        headers
+    };
+    const response = await retryIfServerError(() => fetch(endpoint, request));
+    if (!response.ok) {
+        throw await getErrorFromResponse('Delete Installation', response);
+    }
+}
+function getDeleteEndpoint(appConfig, { fid }) {
+    return `${getInstallationsEndpoint(appConfig)}/${fid}`;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Deletes the Firebase Installation and all associated data.
+ * @param installations - The `Installations` instance.
+ *
+ * @public
+ */
+async function deleteInstallations(installations) {
+    const { appConfig } = installations;
+    const entry = await update(appConfig, oldEntry => {
+        if (oldEntry && oldEntry.registrationStatus === 0 /* RequestStatus.NOT_STARTED */) {
+            // Delete the unregistered entry without sending a deleteInstallation request.
+            return undefined;
+        }
+        return oldEntry;
+    });
+    if (entry) {
+        if (entry.registrationStatus === 1 /* RequestStatus.IN_PROGRESS */) {
+            // Can't delete while trying to register.
+            throw ERROR_FACTORY.create("delete-pending-registration" /* ErrorCode.DELETE_PENDING_REGISTRATION */);
+        }
+        else if (entry.registrationStatus === 2 /* RequestStatus.COMPLETED */) {
+            if (!navigator.onLine) {
+                throw ERROR_FACTORY.create("app-offline" /* ErrorCode.APP_OFFLINE */);
+            }
+            else {
+                await deleteInstallationRequest(appConfig, entry);
+                await remove(appConfig);
+            }
+        }
+    }
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Sets a new callback that will get called when Installation ID changes.
+ * Returns an unsubscribe function that will remove the callback when called.
+ * @param installations - The `Installations` instance.
+ * @param callback - The callback function that is invoked when FID changes.
+ * @returns A function that can be called to unsubscribe.
+ *
+ * @public
+ */
+function onIdChange(installations, callback) {
+    const { appConfig } = installations;
+    addCallback(appConfig, callback);
+    return () => {
+        removeCallback(appConfig, callback);
+    };
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Returns an instance of {@link Installations} associated with the given
+ * {@link @firebase/app#FirebaseApp} instance.
+ * @param app - The {@link @firebase/app#FirebaseApp} instance.
+ *
+ * @public
+ */
+function getInstallations(app = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.getApp)()) {
+    const installationsImpl = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._getProvider)(app, 'installations').getImmediate();
+    return installationsImpl;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function extractAppConfig(app) {
+    if (!app || !app.options) {
+        throw getMissingValueError('App Configuration');
+    }
+    if (!app.name) {
+        throw getMissingValueError('App Name');
+    }
+    // Required app config keys
+    const configKeys = [
+        'projectId',
+        'apiKey',
+        'appId'
+    ];
+    for (const keyName of configKeys) {
+        if (!app.options[keyName]) {
+            throw getMissingValueError(keyName);
+        }
+    }
+    return {
+        appName: app.name,
+        projectId: app.options.projectId,
+        apiKey: app.options.apiKey,
+        appId: app.options.appId
+    };
+}
+function getMissingValueError(valueName) {
+    return ERROR_FACTORY.create("missing-app-config-values" /* ErrorCode.MISSING_APP_CONFIG_VALUES */, {
+        valueName
+    });
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const INSTALLATIONS_NAME = 'installations';
+const INSTALLATIONS_NAME_INTERNAL = 'installations-internal';
+const publicFactory = (container) => {
+    const app = container.getProvider('app').getImmediate();
+    // Throws if app isn't configured properly.
+    const appConfig = extractAppConfig(app);
+    const heartbeatServiceProvider = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._getProvider)(app, 'heartbeat');
+    const installationsImpl = {
+        app,
+        appConfig,
+        heartbeatServiceProvider,
+        _delete: () => Promise.resolve()
+    };
+    return installationsImpl;
+};
+const internalFactory = (container) => {
+    const app = container.getProvider('app').getImmediate();
+    // Internal FIS instance relies on public FIS instance.
+    const installations = (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._getProvider)(app, INSTALLATIONS_NAME).getImmediate();
+    const installationsInternal = {
+        getId: () => getId(installations),
+        getToken: (forceRefresh) => getToken(installations, forceRefresh)
+    };
+    return installationsInternal;
+};
+function registerInstallations() {
+    (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._registerComponent)(new _firebase_component__WEBPACK_IMPORTED_MODULE_1__.Component(INSTALLATIONS_NAME, publicFactory, "PUBLIC" /* ComponentType.PUBLIC */));
+    (0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__._registerComponent)(new _firebase_component__WEBPACK_IMPORTED_MODULE_1__.Component(INSTALLATIONS_NAME_INTERNAL, internalFactory, "PRIVATE" /* ComponentType.PRIVATE */));
+}
+
+/**
+ * The Firebase Installations Web SDK.
+ * This SDK does not work in a Node.js environment.
+ *
+ * @packageDocumentation
+ */
+registerInstallations();
+(0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.registerVersion)(name, version);
+// BUILD_TARGET will be replaced by values like esm5, esm2017, cjs5, etc during the compilation
+(0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.registerVersion)(name, version, 'esm2017');
+
+
+//# sourceMappingURL=index.esm2017.js.map
+
 
 /***/ }),
 
@@ -81,7 +6363,233 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   LogLevel: () => (/* binding */ LogLevel),\n/* harmony export */   Logger: () => (/* binding */ Logger),\n/* harmony export */   setLogLevel: () => (/* binding */ setLogLevel),\n/* harmony export */   setUserLogHandler: () => (/* binding */ setUserLogHandler)\n/* harmony export */ });\n/**\r\n * @license\r\n * Copyright 2017 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n/**\r\n * A container for all of the Logger instances\r\n */\r\nconst instances = [];\r\n/**\r\n * The JS SDK supports 5 log levels and also allows a user the ability to\r\n * silence the logs altogether.\r\n *\r\n * The order is a follows:\r\n * DEBUG < VERBOSE < INFO < WARN < ERROR\r\n *\r\n * All of the log types above the current log level will be captured (i.e. if\r\n * you set the log level to `INFO`, errors will still be logged, but `DEBUG` and\r\n * `VERBOSE` logs will not)\r\n */\r\nvar LogLevel;\r\n(function (LogLevel) {\r\n    LogLevel[LogLevel[\"DEBUG\"] = 0] = \"DEBUG\";\r\n    LogLevel[LogLevel[\"VERBOSE\"] = 1] = \"VERBOSE\";\r\n    LogLevel[LogLevel[\"INFO\"] = 2] = \"INFO\";\r\n    LogLevel[LogLevel[\"WARN\"] = 3] = \"WARN\";\r\n    LogLevel[LogLevel[\"ERROR\"] = 4] = \"ERROR\";\r\n    LogLevel[LogLevel[\"SILENT\"] = 5] = \"SILENT\";\r\n})(LogLevel || (LogLevel = {}));\r\nconst levelStringToEnum = {\r\n    'debug': LogLevel.DEBUG,\r\n    'verbose': LogLevel.VERBOSE,\r\n    'info': LogLevel.INFO,\r\n    'warn': LogLevel.WARN,\r\n    'error': LogLevel.ERROR,\r\n    'silent': LogLevel.SILENT\r\n};\r\n/**\r\n * The default log level\r\n */\r\nconst defaultLogLevel = LogLevel.INFO;\r\n/**\r\n * By default, `console.debug` is not displayed in the developer console (in\r\n * chrome). To avoid forcing users to have to opt-in to these logs twice\r\n * (i.e. once for firebase, and once in the console), we are sending `DEBUG`\r\n * logs to the `console.log` function.\r\n */\r\nconst ConsoleMethod = {\r\n    [LogLevel.DEBUG]: 'log',\r\n    [LogLevel.VERBOSE]: 'log',\r\n    [LogLevel.INFO]: 'info',\r\n    [LogLevel.WARN]: 'warn',\r\n    [LogLevel.ERROR]: 'error'\r\n};\r\n/**\r\n * The default log handler will forward DEBUG, VERBOSE, INFO, WARN, and ERROR\r\n * messages on to their corresponding console counterparts (if the log method\r\n * is supported by the current log level)\r\n */\r\nconst defaultLogHandler = (instance, logType, ...args) => {\r\n    if (logType < instance.logLevel) {\r\n        return;\r\n    }\r\n    const now = new Date().toISOString();\r\n    const method = ConsoleMethod[logType];\r\n    if (method) {\r\n        console[method](`[${now}]  ${instance.name}:`, ...args);\r\n    }\r\n    else {\r\n        throw new Error(`Attempted to log a message with an invalid logType (value: ${logType})`);\r\n    }\r\n};\r\nclass Logger {\r\n    /**\r\n     * Gives you an instance of a Logger to capture messages according to\r\n     * Firebase's logging scheme.\r\n     *\r\n     * @param name The name that the logs will be associated with\r\n     */\r\n    constructor(name) {\r\n        this.name = name;\r\n        /**\r\n         * The log level of the given Logger instance.\r\n         */\r\n        this._logLevel = defaultLogLevel;\r\n        /**\r\n         * The main (internal) log handler for the Logger instance.\r\n         * Can be set to a new function in internal package code but not by user.\r\n         */\r\n        this._logHandler = defaultLogHandler;\r\n        /**\r\n         * The optional, additional, user-defined log handler for the Logger instance.\r\n         */\r\n        this._userLogHandler = null;\r\n        /**\r\n         * Capture the current instance for later use\r\n         */\r\n        instances.push(this);\r\n    }\r\n    get logLevel() {\r\n        return this._logLevel;\r\n    }\r\n    set logLevel(val) {\r\n        if (!(val in LogLevel)) {\r\n            throw new TypeError(`Invalid value \"${val}\" assigned to \\`logLevel\\``);\r\n        }\r\n        this._logLevel = val;\r\n    }\r\n    // Workaround for setter/getter having to be the same type.\r\n    setLogLevel(val) {\r\n        this._logLevel = typeof val === 'string' ? levelStringToEnum[val] : val;\r\n    }\r\n    get logHandler() {\r\n        return this._logHandler;\r\n    }\r\n    set logHandler(val) {\r\n        if (typeof val !== 'function') {\r\n            throw new TypeError('Value assigned to `logHandler` must be a function');\r\n        }\r\n        this._logHandler = val;\r\n    }\r\n    get userLogHandler() {\r\n        return this._userLogHandler;\r\n    }\r\n    set userLogHandler(val) {\r\n        this._userLogHandler = val;\r\n    }\r\n    /**\r\n     * The functions below are all based on the `console` interface\r\n     */\r\n    debug(...args) {\r\n        this._userLogHandler && this._userLogHandler(this, LogLevel.DEBUG, ...args);\r\n        this._logHandler(this, LogLevel.DEBUG, ...args);\r\n    }\r\n    log(...args) {\r\n        this._userLogHandler &&\r\n            this._userLogHandler(this, LogLevel.VERBOSE, ...args);\r\n        this._logHandler(this, LogLevel.VERBOSE, ...args);\r\n    }\r\n    info(...args) {\r\n        this._userLogHandler && this._userLogHandler(this, LogLevel.INFO, ...args);\r\n        this._logHandler(this, LogLevel.INFO, ...args);\r\n    }\r\n    warn(...args) {\r\n        this._userLogHandler && this._userLogHandler(this, LogLevel.WARN, ...args);\r\n        this._logHandler(this, LogLevel.WARN, ...args);\r\n    }\r\n    error(...args) {\r\n        this._userLogHandler && this._userLogHandler(this, LogLevel.ERROR, ...args);\r\n        this._logHandler(this, LogLevel.ERROR, ...args);\r\n    }\r\n}\r\nfunction setLogLevel(level) {\r\n    instances.forEach(inst => {\r\n        inst.setLogLevel(level);\r\n    });\r\n}\r\nfunction setUserLogHandler(logCallback, options) {\r\n    for (const instance of instances) {\r\n        let customLogLevel = null;\r\n        if (options && options.level) {\r\n            customLogLevel = levelStringToEnum[options.level];\r\n        }\r\n        if (logCallback === null) {\r\n            instance.userLogHandler = null;\r\n        }\r\n        else {\r\n            instance.userLogHandler = (instance, level, ...args) => {\r\n                const message = args\r\n                    .map(arg => {\r\n                    if (arg == null) {\r\n                        return null;\r\n                    }\r\n                    else if (typeof arg === 'string') {\r\n                        return arg;\r\n                    }\r\n                    else if (typeof arg === 'number' || typeof arg === 'boolean') {\r\n                        return arg.toString();\r\n                    }\r\n                    else if (arg instanceof Error) {\r\n                        return arg.message;\r\n                    }\r\n                    else {\r\n                        try {\r\n                            return JSON.stringify(arg);\r\n                        }\r\n                        catch (ignored) {\r\n                            return null;\r\n                        }\r\n                    }\r\n                })\r\n                    .filter(arg => arg)\r\n                    .join(' ');\r\n                if (level >= (customLogLevel !== null && customLogLevel !== void 0 ? customLogLevel : instance.logLevel)) {\r\n                    logCallback({\r\n                        level: LogLevel[level].toLowerCase(),\r\n                        message,\r\n                        args,\r\n                        type: instance.name\r\n                    });\r\n                }\r\n            };\r\n        }\r\n    }\r\n}\n\n\n//# sourceMappingURL=index.esm2017.js.map\n\n\n//# sourceURL=webpack://daveads.github.io/./node_modules/@firebase/logger/dist/esm/index.esm2017.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   LogLevel: () => (/* binding */ LogLevel),
+/* harmony export */   Logger: () => (/* binding */ Logger),
+/* harmony export */   setLogLevel: () => (/* binding */ setLogLevel),
+/* harmony export */   setUserLogHandler: () => (/* binding */ setUserLogHandler)
+/* harmony export */ });
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * A container for all of the Logger instances
+ */
+const instances = [];
+/**
+ * The JS SDK supports 5 log levels and also allows a user the ability to
+ * silence the logs altogether.
+ *
+ * The order is a follows:
+ * DEBUG < VERBOSE < INFO < WARN < ERROR
+ *
+ * All of the log types above the current log level will be captured (i.e. if
+ * you set the log level to `INFO`, errors will still be logged, but `DEBUG` and
+ * `VERBOSE` logs will not)
+ */
+var LogLevel;
+(function (LogLevel) {
+    LogLevel[LogLevel["DEBUG"] = 0] = "DEBUG";
+    LogLevel[LogLevel["VERBOSE"] = 1] = "VERBOSE";
+    LogLevel[LogLevel["INFO"] = 2] = "INFO";
+    LogLevel[LogLevel["WARN"] = 3] = "WARN";
+    LogLevel[LogLevel["ERROR"] = 4] = "ERROR";
+    LogLevel[LogLevel["SILENT"] = 5] = "SILENT";
+})(LogLevel || (LogLevel = {}));
+const levelStringToEnum = {
+    'debug': LogLevel.DEBUG,
+    'verbose': LogLevel.VERBOSE,
+    'info': LogLevel.INFO,
+    'warn': LogLevel.WARN,
+    'error': LogLevel.ERROR,
+    'silent': LogLevel.SILENT
+};
+/**
+ * The default log level
+ */
+const defaultLogLevel = LogLevel.INFO;
+/**
+ * By default, `console.debug` is not displayed in the developer console (in
+ * chrome). To avoid forcing users to have to opt-in to these logs twice
+ * (i.e. once for firebase, and once in the console), we are sending `DEBUG`
+ * logs to the `console.log` function.
+ */
+const ConsoleMethod = {
+    [LogLevel.DEBUG]: 'log',
+    [LogLevel.VERBOSE]: 'log',
+    [LogLevel.INFO]: 'info',
+    [LogLevel.WARN]: 'warn',
+    [LogLevel.ERROR]: 'error'
+};
+/**
+ * The default log handler will forward DEBUG, VERBOSE, INFO, WARN, and ERROR
+ * messages on to their corresponding console counterparts (if the log method
+ * is supported by the current log level)
+ */
+const defaultLogHandler = (instance, logType, ...args) => {
+    if (logType < instance.logLevel) {
+        return;
+    }
+    const now = new Date().toISOString();
+    const method = ConsoleMethod[logType];
+    if (method) {
+        console[method](`[${now}]  ${instance.name}:`, ...args);
+    }
+    else {
+        throw new Error(`Attempted to log a message with an invalid logType (value: ${logType})`);
+    }
+};
+class Logger {
+    /**
+     * Gives you an instance of a Logger to capture messages according to
+     * Firebase's logging scheme.
+     *
+     * @param name The name that the logs will be associated with
+     */
+    constructor(name) {
+        this.name = name;
+        /**
+         * The log level of the given Logger instance.
+         */
+        this._logLevel = defaultLogLevel;
+        /**
+         * The main (internal) log handler for the Logger instance.
+         * Can be set to a new function in internal package code but not by user.
+         */
+        this._logHandler = defaultLogHandler;
+        /**
+         * The optional, additional, user-defined log handler for the Logger instance.
+         */
+        this._userLogHandler = null;
+        /**
+         * Capture the current instance for later use
+         */
+        instances.push(this);
+    }
+    get logLevel() {
+        return this._logLevel;
+    }
+    set logLevel(val) {
+        if (!(val in LogLevel)) {
+            throw new TypeError(`Invalid value "${val}" assigned to \`logLevel\``);
+        }
+        this._logLevel = val;
+    }
+    // Workaround for setter/getter having to be the same type.
+    setLogLevel(val) {
+        this._logLevel = typeof val === 'string' ? levelStringToEnum[val] : val;
+    }
+    get logHandler() {
+        return this._logHandler;
+    }
+    set logHandler(val) {
+        if (typeof val !== 'function') {
+            throw new TypeError('Value assigned to `logHandler` must be a function');
+        }
+        this._logHandler = val;
+    }
+    get userLogHandler() {
+        return this._userLogHandler;
+    }
+    set userLogHandler(val) {
+        this._userLogHandler = val;
+    }
+    /**
+     * The functions below are all based on the `console` interface
+     */
+    debug(...args) {
+        this._userLogHandler && this._userLogHandler(this, LogLevel.DEBUG, ...args);
+        this._logHandler(this, LogLevel.DEBUG, ...args);
+    }
+    log(...args) {
+        this._userLogHandler &&
+            this._userLogHandler(this, LogLevel.VERBOSE, ...args);
+        this._logHandler(this, LogLevel.VERBOSE, ...args);
+    }
+    info(...args) {
+        this._userLogHandler && this._userLogHandler(this, LogLevel.INFO, ...args);
+        this._logHandler(this, LogLevel.INFO, ...args);
+    }
+    warn(...args) {
+        this._userLogHandler && this._userLogHandler(this, LogLevel.WARN, ...args);
+        this._logHandler(this, LogLevel.WARN, ...args);
+    }
+    error(...args) {
+        this._userLogHandler && this._userLogHandler(this, LogLevel.ERROR, ...args);
+        this._logHandler(this, LogLevel.ERROR, ...args);
+    }
+}
+function setLogLevel(level) {
+    instances.forEach(inst => {
+        inst.setLogLevel(level);
+    });
+}
+function setUserLogHandler(logCallback, options) {
+    for (const instance of instances) {
+        let customLogLevel = null;
+        if (options && options.level) {
+            customLogLevel = levelStringToEnum[options.level];
+        }
+        if (logCallback === null) {
+            instance.userLogHandler = null;
+        }
+        else {
+            instance.userLogHandler = (instance, level, ...args) => {
+                const message = args
+                    .map(arg => {
+                    if (arg == null) {
+                        return null;
+                    }
+                    else if (typeof arg === 'string') {
+                        return arg;
+                    }
+                    else if (typeof arg === 'number' || typeof arg === 'boolean') {
+                        return arg.toString();
+                    }
+                    else if (arg instanceof Error) {
+                        return arg.message;
+                    }
+                    else {
+                        try {
+                            return JSON.stringify(arg);
+                        }
+                        catch (ignored) {
+                            return null;
+                        }
+                    }
+                })
+                    .filter(arg => arg)
+                    .join(' ');
+                if (level >= (customLogLevel !== null && customLogLevel !== void 0 ? customLogLevel : instance.logLevel)) {
+                    logCallback({
+                        level: LogLevel[level].toLowerCase(),
+                        message,
+                        args,
+                        type: instance.name
+                    });
+                }
+            };
+        }
+    }
+}
+
+
+//# sourceMappingURL=index.esm2017.js.map
+
 
 /***/ }),
 
@@ -92,7 +6600,1283 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   BlockReason: () => (/* binding */ BlockReason),\n/* harmony export */   ChatSession: () => (/* binding */ ChatSession),\n/* harmony export */   FinishReason: () => (/* binding */ FinishReason),\n/* harmony export */   FunctionCallingMode: () => (/* binding */ FunctionCallingMode),\n/* harmony export */   FunctionDeclarationSchemaType: () => (/* binding */ FunctionDeclarationSchemaType),\n/* harmony export */   GenerativeModel: () => (/* binding */ GenerativeModel),\n/* harmony export */   GoogleGenerativeAI: () => (/* binding */ GoogleGenerativeAI),\n/* harmony export */   GoogleGenerativeAIError: () => (/* binding */ GoogleGenerativeAIError),\n/* harmony export */   GoogleGenerativeAIFetchError: () => (/* binding */ GoogleGenerativeAIFetchError),\n/* harmony export */   GoogleGenerativeAIRequestInputError: () => (/* binding */ GoogleGenerativeAIRequestInputError),\n/* harmony export */   GoogleGenerativeAIResponseError: () => (/* binding */ GoogleGenerativeAIResponseError),\n/* harmony export */   HarmBlockThreshold: () => (/* binding */ HarmBlockThreshold),\n/* harmony export */   HarmCategory: () => (/* binding */ HarmCategory),\n/* harmony export */   HarmProbability: () => (/* binding */ HarmProbability),\n/* harmony export */   POSSIBLE_ROLES: () => (/* binding */ POSSIBLE_ROLES),\n/* harmony export */   TaskType: () => (/* binding */ TaskType)\n/* harmony export */ });\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n/**\n * Possible roles.\n * @public\n */\nconst POSSIBLE_ROLES = [\"user\", \"model\", \"function\", \"system\"];\n/**\n * Harm categories that would cause prompts or candidates to be blocked.\n * @public\n */\nvar HarmCategory;\n(function (HarmCategory) {\n    HarmCategory[\"HARM_CATEGORY_UNSPECIFIED\"] = \"HARM_CATEGORY_UNSPECIFIED\";\n    HarmCategory[\"HARM_CATEGORY_HATE_SPEECH\"] = \"HARM_CATEGORY_HATE_SPEECH\";\n    HarmCategory[\"HARM_CATEGORY_SEXUALLY_EXPLICIT\"] = \"HARM_CATEGORY_SEXUALLY_EXPLICIT\";\n    HarmCategory[\"HARM_CATEGORY_HARASSMENT\"] = \"HARM_CATEGORY_HARASSMENT\";\n    HarmCategory[\"HARM_CATEGORY_DANGEROUS_CONTENT\"] = \"HARM_CATEGORY_DANGEROUS_CONTENT\";\n})(HarmCategory || (HarmCategory = {}));\n/**\n * Threshold above which a prompt or candidate will be blocked.\n * @public\n */\nvar HarmBlockThreshold;\n(function (HarmBlockThreshold) {\n    // Threshold is unspecified.\n    HarmBlockThreshold[\"HARM_BLOCK_THRESHOLD_UNSPECIFIED\"] = \"HARM_BLOCK_THRESHOLD_UNSPECIFIED\";\n    // Content with NEGLIGIBLE will be allowed.\n    HarmBlockThreshold[\"BLOCK_LOW_AND_ABOVE\"] = \"BLOCK_LOW_AND_ABOVE\";\n    // Content with NEGLIGIBLE and LOW will be allowed.\n    HarmBlockThreshold[\"BLOCK_MEDIUM_AND_ABOVE\"] = \"BLOCK_MEDIUM_AND_ABOVE\";\n    // Content with NEGLIGIBLE, LOW, and MEDIUM will be allowed.\n    HarmBlockThreshold[\"BLOCK_ONLY_HIGH\"] = \"BLOCK_ONLY_HIGH\";\n    // All content will be allowed.\n    HarmBlockThreshold[\"BLOCK_NONE\"] = \"BLOCK_NONE\";\n})(HarmBlockThreshold || (HarmBlockThreshold = {}));\n/**\n * Probability that a prompt or candidate matches a harm category.\n * @public\n */\nvar HarmProbability;\n(function (HarmProbability) {\n    // Probability is unspecified.\n    HarmProbability[\"HARM_PROBABILITY_UNSPECIFIED\"] = \"HARM_PROBABILITY_UNSPECIFIED\";\n    // Content has a negligible chance of being unsafe.\n    HarmProbability[\"NEGLIGIBLE\"] = \"NEGLIGIBLE\";\n    // Content has a low chance of being unsafe.\n    HarmProbability[\"LOW\"] = \"LOW\";\n    // Content has a medium chance of being unsafe.\n    HarmProbability[\"MEDIUM\"] = \"MEDIUM\";\n    // Content has a high chance of being unsafe.\n    HarmProbability[\"HIGH\"] = \"HIGH\";\n})(HarmProbability || (HarmProbability = {}));\n/**\n * Reason that a prompt was blocked.\n * @public\n */\nvar BlockReason;\n(function (BlockReason) {\n    // A blocked reason was not specified.\n    BlockReason[\"BLOCKED_REASON_UNSPECIFIED\"] = \"BLOCKED_REASON_UNSPECIFIED\";\n    // Content was blocked by safety settings.\n    BlockReason[\"SAFETY\"] = \"SAFETY\";\n    // Content was blocked, but the reason is uncategorized.\n    BlockReason[\"OTHER\"] = \"OTHER\";\n})(BlockReason || (BlockReason = {}));\n/**\n * Reason that a candidate finished.\n * @public\n */\nvar FinishReason;\n(function (FinishReason) {\n    // Default value. This value is unused.\n    FinishReason[\"FINISH_REASON_UNSPECIFIED\"] = \"FINISH_REASON_UNSPECIFIED\";\n    // Natural stop point of the model or provided stop sequence.\n    FinishReason[\"STOP\"] = \"STOP\";\n    // The maximum number of tokens as specified in the request was reached.\n    FinishReason[\"MAX_TOKENS\"] = \"MAX_TOKENS\";\n    // The candidate content was flagged for safety reasons.\n    FinishReason[\"SAFETY\"] = \"SAFETY\";\n    // The candidate content was flagged for recitation reasons.\n    FinishReason[\"RECITATION\"] = \"RECITATION\";\n    // Unknown reason.\n    FinishReason[\"OTHER\"] = \"OTHER\";\n})(FinishReason || (FinishReason = {}));\n/**\n * Task type for embedding content.\n * @public\n */\nvar TaskType;\n(function (TaskType) {\n    TaskType[\"TASK_TYPE_UNSPECIFIED\"] = \"TASK_TYPE_UNSPECIFIED\";\n    TaskType[\"RETRIEVAL_QUERY\"] = \"RETRIEVAL_QUERY\";\n    TaskType[\"RETRIEVAL_DOCUMENT\"] = \"RETRIEVAL_DOCUMENT\";\n    TaskType[\"SEMANTIC_SIMILARITY\"] = \"SEMANTIC_SIMILARITY\";\n    TaskType[\"CLASSIFICATION\"] = \"CLASSIFICATION\";\n    TaskType[\"CLUSTERING\"] = \"CLUSTERING\";\n})(TaskType || (TaskType = {}));\n/**\n * @public\n */\nvar FunctionCallingMode;\n(function (FunctionCallingMode) {\n    // Unspecified function calling mode. This value should not be used.\n    FunctionCallingMode[\"MODE_UNSPECIFIED\"] = \"MODE_UNSPECIFIED\";\n    // Default model behavior, model decides to predict either a function call\n    // or a natural language repspose.\n    FunctionCallingMode[\"AUTO\"] = \"AUTO\";\n    // Model is constrained to always predicting a function call only.\n    // If \"allowed_function_names\" are set, the predicted function call will be\n    // limited to any one of \"allowed_function_names\", else the predicted\n    // function call will be any one of the provided \"function_declarations\".\n    FunctionCallingMode[\"ANY\"] = \"ANY\";\n    // Model will not predict any function call. Model behavior is same as when\n    // not passing any function declarations.\n    FunctionCallingMode[\"NONE\"] = \"NONE\";\n})(FunctionCallingMode || (FunctionCallingMode = {}));\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n/**\n * Contains the list of OpenAPI data types\n * as defined by https://swagger.io/docs/specification/data-models/data-types/\n * @public\n */\nvar FunctionDeclarationSchemaType;\n(function (FunctionDeclarationSchemaType) {\n    /** String type. */\n    FunctionDeclarationSchemaType[\"STRING\"] = \"STRING\";\n    /** Number type. */\n    FunctionDeclarationSchemaType[\"NUMBER\"] = \"NUMBER\";\n    /** Integer type. */\n    FunctionDeclarationSchemaType[\"INTEGER\"] = \"INTEGER\";\n    /** Boolean type. */\n    FunctionDeclarationSchemaType[\"BOOLEAN\"] = \"BOOLEAN\";\n    /** Array type. */\n    FunctionDeclarationSchemaType[\"ARRAY\"] = \"ARRAY\";\n    /** Object type. */\n    FunctionDeclarationSchemaType[\"OBJECT\"] = \"OBJECT\";\n})(FunctionDeclarationSchemaType || (FunctionDeclarationSchemaType = {}));\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n/**\n * Basic error type for this SDK.\n * @public\n */\nclass GoogleGenerativeAIError extends Error {\n    constructor(message) {\n        super(`[GoogleGenerativeAI Error]: ${message}`);\n    }\n}\n/**\n * Errors in the contents of a response from the model. This includes parsing\n * errors, or responses including a safety block reason.\n * @public\n */\nclass GoogleGenerativeAIResponseError extends GoogleGenerativeAIError {\n    constructor(message, response) {\n        super(message);\n        this.response = response;\n    }\n}\n/**\n * Error class covering HTTP errors when calling the server. Includes HTTP\n * status, statusText, and optional details, if provided in the server response.\n * @public\n */\nclass GoogleGenerativeAIFetchError extends GoogleGenerativeAIError {\n    constructor(message, status, statusText, errorDetails) {\n        super(message);\n        this.status = status;\n        this.statusText = statusText;\n        this.errorDetails = errorDetails;\n    }\n}\n/**\n * Errors in the contents of a request originating from user input.\n * @public\n */\nclass GoogleGenerativeAIRequestInputError extends GoogleGenerativeAIError {\n}\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\nconst DEFAULT_BASE_URL = \"https://generativelanguage.googleapis.com\";\nconst DEFAULT_API_VERSION = \"v1beta\";\n/**\n * We can't `require` package.json if this runs on web. We will use rollup to\n * swap in the version number here at build time.\n */\nconst PACKAGE_VERSION = \"0.11.2\";\nconst PACKAGE_LOG_HEADER = \"genai-js\";\nvar Task;\n(function (Task) {\n    Task[\"GENERATE_CONTENT\"] = \"generateContent\";\n    Task[\"STREAM_GENERATE_CONTENT\"] = \"streamGenerateContent\";\n    Task[\"COUNT_TOKENS\"] = \"countTokens\";\n    Task[\"EMBED_CONTENT\"] = \"embedContent\";\n    Task[\"BATCH_EMBED_CONTENTS\"] = \"batchEmbedContents\";\n})(Task || (Task = {}));\nclass RequestUrl {\n    constructor(model, task, apiKey, stream, requestOptions) {\n        this.model = model;\n        this.task = task;\n        this.apiKey = apiKey;\n        this.stream = stream;\n        this.requestOptions = requestOptions;\n    }\n    toString() {\n        var _a, _b;\n        const apiVersion = ((_a = this.requestOptions) === null || _a === void 0 ? void 0 : _a.apiVersion) || DEFAULT_API_VERSION;\n        const baseUrl = ((_b = this.requestOptions) === null || _b === void 0 ? void 0 : _b.baseUrl) || DEFAULT_BASE_URL;\n        let url = `${baseUrl}/${apiVersion}/${this.model}:${this.task}`;\n        if (this.stream) {\n            url += \"?alt=sse\";\n        }\n        return url;\n    }\n}\n/**\n * Simple, but may become more complex if we add more versions to log.\n */\nfunction getClientHeaders(requestOptions) {\n    const clientHeaders = [];\n    if (requestOptions === null || requestOptions === void 0 ? void 0 : requestOptions.apiClient) {\n        clientHeaders.push(requestOptions.apiClient);\n    }\n    clientHeaders.push(`${PACKAGE_LOG_HEADER}/${PACKAGE_VERSION}`);\n    return clientHeaders.join(\" \");\n}\nasync function getHeaders(url) {\n    const headers = new Headers();\n    headers.append(\"Content-Type\", \"application/json\");\n    headers.append(\"x-goog-api-client\", getClientHeaders(url.requestOptions));\n    headers.append(\"x-goog-api-key\", url.apiKey);\n    let customHeaders = url.requestOptions.customHeaders;\n    if (customHeaders) {\n        if (!(customHeaders instanceof Headers)) {\n            try {\n                customHeaders = new Headers(customHeaders);\n            }\n            catch (e) {\n                throw new GoogleGenerativeAIRequestInputError(`unable to convert customHeaders value ${JSON.stringify(customHeaders)} to Headers: ${e.message}`);\n            }\n        }\n        for (const [headerName, headerValue] of customHeaders.entries()) {\n            if (headerName === \"x-goog-api-key\") {\n                throw new GoogleGenerativeAIRequestInputError(`Cannot set reserved header name ${headerName}`);\n            }\n            else if (headerName === \"x-goog-api-client\") {\n                throw new GoogleGenerativeAIRequestInputError(`Header name ${headerName} can only be set using the apiClient field`);\n            }\n            headers.append(headerName, headerValue);\n        }\n    }\n    return headers;\n}\nasync function constructRequest(model, task, apiKey, stream, body, requestOptions) {\n    const url = new RequestUrl(model, task, apiKey, stream, requestOptions);\n    return {\n        url: url.toString(),\n        fetchOptions: Object.assign(Object.assign({}, buildFetchOptions(requestOptions)), { method: \"POST\", headers: await getHeaders(url), body }),\n    };\n}\n/**\n * Wrapper for _makeRequestInternal that automatically uses native fetch,\n * allowing _makeRequestInternal to be tested with a mocked fetch function.\n */\nasync function makeRequest(model, task, apiKey, stream, body, requestOptions) {\n    return _makeRequestInternal(model, task, apiKey, stream, body, requestOptions, fetch);\n}\nasync function _makeRequestInternal(model, task, apiKey, stream, body, requestOptions, \n// Allows this to be stubbed for tests\nfetchFn = fetch) {\n    const url = new RequestUrl(model, task, apiKey, stream, requestOptions);\n    let response;\n    try {\n        const request = await constructRequest(model, task, apiKey, stream, body, requestOptions);\n        response = await fetchFn(request.url, request.fetchOptions);\n        if (!response.ok) {\n            let message = \"\";\n            let errorDetails;\n            try {\n                const json = await response.json();\n                message = json.error.message;\n                if (json.error.details) {\n                    message += ` ${JSON.stringify(json.error.details)}`;\n                    errorDetails = json.error.details;\n                }\n            }\n            catch (e) {\n                // ignored\n            }\n            throw new GoogleGenerativeAIFetchError(`Error fetching from ${url.toString()}: [${response.status} ${response.statusText}] ${message}`, response.status, response.statusText, errorDetails);\n        }\n    }\n    catch (e) {\n        let err = e;\n        if (!(e instanceof GoogleGenerativeAIFetchError ||\n            e instanceof GoogleGenerativeAIRequestInputError)) {\n            err = new GoogleGenerativeAIError(`Error fetching from ${url.toString()}: ${e.message}`);\n            err.stack = e.stack;\n        }\n        throw err;\n    }\n    return response;\n}\n/**\n * Generates the request options to be passed to the fetch API.\n * @param requestOptions - The user-defined request options.\n * @returns The generated request options.\n */\nfunction buildFetchOptions(requestOptions) {\n    const fetchOptions = {};\n    if ((requestOptions === null || requestOptions === void 0 ? void 0 : requestOptions.timeout) >= 0) {\n        const abortController = new AbortController();\n        const signal = abortController.signal;\n        setTimeout(() => abortController.abort(), requestOptions.timeout);\n        fetchOptions.signal = signal;\n    }\n    return fetchOptions;\n}\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n/**\n * Adds convenience helper methods to a response object, including stream\n * chunks (as long as each chunk is a complete GenerateContentResponse JSON).\n */\nfunction addHelpers(response) {\n    response.text = () => {\n        if (response.candidates && response.candidates.length > 0) {\n            if (response.candidates.length > 1) {\n                console.warn(`This response had ${response.candidates.length} ` +\n                    `candidates. Returning text from the first candidate only. ` +\n                    `Access response.candidates directly to use the other candidates.`);\n            }\n            if (hadBadFinishReason(response.candidates[0])) {\n                throw new GoogleGenerativeAIResponseError(`${formatBlockErrorMessage(response)}`, response);\n            }\n            return getText(response);\n        }\n        else if (response.promptFeedback) {\n            throw new GoogleGenerativeAIResponseError(`Text not available. ${formatBlockErrorMessage(response)}`, response);\n        }\n        return \"\";\n    };\n    /**\n     * TODO: remove at next major version\n     */\n    response.functionCall = () => {\n        if (response.candidates && response.candidates.length > 0) {\n            if (response.candidates.length > 1) {\n                console.warn(`This response had ${response.candidates.length} ` +\n                    `candidates. Returning function calls from the first candidate only. ` +\n                    `Access response.candidates directly to use the other candidates.`);\n            }\n            if (hadBadFinishReason(response.candidates[0])) {\n                throw new GoogleGenerativeAIResponseError(`${formatBlockErrorMessage(response)}`, response);\n            }\n            console.warn(`response.functionCall() is deprecated. ` +\n                `Use response.functionCalls() instead.`);\n            return getFunctionCalls(response)[0];\n        }\n        else if (response.promptFeedback) {\n            throw new GoogleGenerativeAIResponseError(`Function call not available. ${formatBlockErrorMessage(response)}`, response);\n        }\n        return undefined;\n    };\n    response.functionCalls = () => {\n        if (response.candidates && response.candidates.length > 0) {\n            if (response.candidates.length > 1) {\n                console.warn(`This response had ${response.candidates.length} ` +\n                    `candidates. Returning function calls from the first candidate only. ` +\n                    `Access response.candidates directly to use the other candidates.`);\n            }\n            if (hadBadFinishReason(response.candidates[0])) {\n                throw new GoogleGenerativeAIResponseError(`${formatBlockErrorMessage(response)}`, response);\n            }\n            return getFunctionCalls(response);\n        }\n        else if (response.promptFeedback) {\n            throw new GoogleGenerativeAIResponseError(`Function call not available. ${formatBlockErrorMessage(response)}`, response);\n        }\n        return undefined;\n    };\n    return response;\n}\n/**\n * Returns all text found in all parts of first candidate.\n */\nfunction getText(response) {\n    var _a, _b, _c, _d;\n    const textStrings = [];\n    if ((_b = (_a = response.candidates) === null || _a === void 0 ? void 0 : _a[0].content) === null || _b === void 0 ? void 0 : _b.parts) {\n        for (const part of (_d = (_c = response.candidates) === null || _c === void 0 ? void 0 : _c[0].content) === null || _d === void 0 ? void 0 : _d.parts) {\n            if (part.text) {\n                textStrings.push(part.text);\n            }\n        }\n    }\n    if (textStrings.length > 0) {\n        return textStrings.join(\"\");\n    }\n    else {\n        return \"\";\n    }\n}\n/**\n * Returns functionCall of first candidate.\n */\nfunction getFunctionCalls(response) {\n    var _a, _b, _c, _d;\n    const functionCalls = [];\n    if ((_b = (_a = response.candidates) === null || _a === void 0 ? void 0 : _a[0].content) === null || _b === void 0 ? void 0 : _b.parts) {\n        for (const part of (_d = (_c = response.candidates) === null || _c === void 0 ? void 0 : _c[0].content) === null || _d === void 0 ? void 0 : _d.parts) {\n            if (part.functionCall) {\n                functionCalls.push(part.functionCall);\n            }\n        }\n    }\n    if (functionCalls.length > 0) {\n        return functionCalls;\n    }\n    else {\n        return undefined;\n    }\n}\nconst badFinishReasons = [FinishReason.RECITATION, FinishReason.SAFETY];\nfunction hadBadFinishReason(candidate) {\n    return (!!candidate.finishReason &&\n        badFinishReasons.includes(candidate.finishReason));\n}\nfunction formatBlockErrorMessage(response) {\n    var _a, _b, _c;\n    let message = \"\";\n    if ((!response.candidates || response.candidates.length === 0) &&\n        response.promptFeedback) {\n        message += \"Response was blocked\";\n        if ((_a = response.promptFeedback) === null || _a === void 0 ? void 0 : _a.blockReason) {\n            message += ` due to ${response.promptFeedback.blockReason}`;\n        }\n        if ((_b = response.promptFeedback) === null || _b === void 0 ? void 0 : _b.blockReasonMessage) {\n            message += `: ${response.promptFeedback.blockReasonMessage}`;\n        }\n    }\n    else if ((_c = response.candidates) === null || _c === void 0 ? void 0 : _c[0]) {\n        const firstCandidate = response.candidates[0];\n        if (hadBadFinishReason(firstCandidate)) {\n            message += `Candidate was blocked due to ${firstCandidate.finishReason}`;\n            if (firstCandidate.finishMessage) {\n                message += `: ${firstCandidate.finishMessage}`;\n            }\n        }\n    }\n    return message;\n}\n\n/******************************************************************************\r\nCopyright (c) Microsoft Corporation.\r\n\r\nPermission to use, copy, modify, and/or distribute this software for any\r\npurpose with or without fee is hereby granted.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH\r\nREGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY\r\nAND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,\r\nINDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM\r\nLOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR\r\nOTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\r\nPERFORMANCE OF THIS SOFTWARE.\r\n***************************************************************************** */\r\n/* global Reflect, Promise, SuppressedError, Symbol */\r\n\r\n\r\nfunction __await(v) {\r\n    return this instanceof __await ? (this.v = v, this) : new __await(v);\r\n}\r\n\r\nfunction __asyncGenerator(thisArg, _arguments, generator) {\r\n    if (!Symbol.asyncIterator) throw new TypeError(\"Symbol.asyncIterator is not defined.\");\r\n    var g = generator.apply(thisArg, _arguments || []), i, q = [];\r\n    return i = {}, verb(\"next\"), verb(\"throw\"), verb(\"return\"), i[Symbol.asyncIterator] = function () { return this; }, i;\r\n    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }\r\n    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }\r\n    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }\r\n    function fulfill(value) { resume(\"next\", value); }\r\n    function reject(value) { resume(\"throw\", value); }\r\n    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }\r\n}\r\n\r\ntypeof SuppressedError === \"function\" ? SuppressedError : function (error, suppressed, message) {\r\n    var e = new Error(message);\r\n    return e.name = \"SuppressedError\", e.error = error, e.suppressed = suppressed, e;\r\n};\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\nconst responseLineRE = /^data\\: (.*)(?:\\n\\n|\\r\\r|\\r\\n\\r\\n)/;\n/**\n * Process a response.body stream from the backend and return an\n * iterator that provides one complete GenerateContentResponse at a time\n * and a promise that resolves with a single aggregated\n * GenerateContentResponse.\n *\n * @param response - Response from a fetch call\n */\nfunction processStream(response) {\n    const inputStream = response.body.pipeThrough(new TextDecoderStream(\"utf8\", { fatal: true }));\n    const responseStream = getResponseStream(inputStream);\n    const [stream1, stream2] = responseStream.tee();\n    return {\n        stream: generateResponseSequence(stream1),\n        response: getResponsePromise(stream2),\n    };\n}\nasync function getResponsePromise(stream) {\n    const allResponses = [];\n    const reader = stream.getReader();\n    while (true) {\n        const { done, value } = await reader.read();\n        if (done) {\n            return addHelpers(aggregateResponses(allResponses));\n        }\n        allResponses.push(value);\n    }\n}\nfunction generateResponseSequence(stream) {\n    return __asyncGenerator(this, arguments, function* generateResponseSequence_1() {\n        const reader = stream.getReader();\n        while (true) {\n            const { value, done } = yield __await(reader.read());\n            if (done) {\n                break;\n            }\n            yield yield __await(addHelpers(value));\n        }\n    });\n}\n/**\n * Reads a raw stream from the fetch response and join incomplete\n * chunks, returning a new stream that provides a single complete\n * GenerateContentResponse in each iteration.\n */\nfunction getResponseStream(inputStream) {\n    const reader = inputStream.getReader();\n    const stream = new ReadableStream({\n        start(controller) {\n            let currentText = \"\";\n            return pump();\n            function pump() {\n                return reader.read().then(({ value, done }) => {\n                    if (done) {\n                        if (currentText.trim()) {\n                            controller.error(new GoogleGenerativeAIError(\"Failed to parse stream\"));\n                            return;\n                        }\n                        controller.close();\n                        return;\n                    }\n                    currentText += value;\n                    let match = currentText.match(responseLineRE);\n                    let parsedResponse;\n                    while (match) {\n                        try {\n                            parsedResponse = JSON.parse(match[1]);\n                        }\n                        catch (e) {\n                            controller.error(new GoogleGenerativeAIError(`Error parsing JSON response: \"${match[1]}\"`));\n                            return;\n                        }\n                        controller.enqueue(parsedResponse);\n                        currentText = currentText.substring(match[0].length);\n                        match = currentText.match(responseLineRE);\n                    }\n                    return pump();\n                });\n            }\n        },\n    });\n    return stream;\n}\n/**\n * Aggregates an array of `GenerateContentResponse`s into a single\n * GenerateContentResponse.\n */\nfunction aggregateResponses(responses) {\n    const lastResponse = responses[responses.length - 1];\n    const aggregatedResponse = {\n        promptFeedback: lastResponse === null || lastResponse === void 0 ? void 0 : lastResponse.promptFeedback,\n    };\n    for (const response of responses) {\n        if (response.candidates) {\n            for (const candidate of response.candidates) {\n                const i = candidate.index;\n                if (!aggregatedResponse.candidates) {\n                    aggregatedResponse.candidates = [];\n                }\n                if (!aggregatedResponse.candidates[i]) {\n                    aggregatedResponse.candidates[i] = {\n                        index: candidate.index,\n                    };\n                }\n                // Keep overwriting, the last one will be final\n                aggregatedResponse.candidates[i].citationMetadata =\n                    candidate.citationMetadata;\n                aggregatedResponse.candidates[i].finishReason = candidate.finishReason;\n                aggregatedResponse.candidates[i].finishMessage =\n                    candidate.finishMessage;\n                aggregatedResponse.candidates[i].safetyRatings =\n                    candidate.safetyRatings;\n                /**\n                 * Candidates should always have content and parts, but this handles\n                 * possible malformed responses.\n                 */\n                if (candidate.content && candidate.content.parts) {\n                    if (!aggregatedResponse.candidates[i].content) {\n                        aggregatedResponse.candidates[i].content = {\n                            role: candidate.content.role || \"user\",\n                            parts: [],\n                        };\n                    }\n                    const newPart = {};\n                    for (const part of candidate.content.parts) {\n                        if (part.text) {\n                            newPart.text = part.text;\n                        }\n                        if (part.functionCall) {\n                            newPart.functionCall = part.functionCall;\n                        }\n                        if (Object.keys(newPart).length === 0) {\n                            newPart.text = \"\";\n                        }\n                        aggregatedResponse.candidates[i].content.parts.push(newPart);\n                    }\n                }\n            }\n        }\n    }\n    return aggregatedResponse;\n}\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\nasync function generateContentStream(apiKey, model, params, requestOptions) {\n    const response = await makeRequest(model, Task.STREAM_GENERATE_CONTENT, apiKey, \n    /* stream */ true, JSON.stringify(params), requestOptions);\n    return processStream(response);\n}\nasync function generateContent(apiKey, model, params, requestOptions) {\n    const response = await makeRequest(model, Task.GENERATE_CONTENT, apiKey, \n    /* stream */ false, JSON.stringify(params), requestOptions);\n    const responseJson = await response.json();\n    const enhancedResponse = addHelpers(responseJson);\n    return {\n        response: enhancedResponse,\n    };\n}\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\nfunction formatSystemInstruction(input) {\n    // null or undefined\n    if (input == null) {\n        return undefined;\n    }\n    else if (typeof input === \"string\") {\n        return { role: \"system\", parts: [{ text: input }] };\n    }\n    else if (input.text) {\n        return { role: \"system\", parts: [input] };\n    }\n    else if (input.parts) {\n        if (!input.role) {\n            return { role: \"system\", parts: input.parts };\n        }\n        else {\n            return input;\n        }\n    }\n}\nfunction formatNewContent(request) {\n    let newParts = [];\n    if (typeof request === \"string\") {\n        newParts = [{ text: request }];\n    }\n    else {\n        for (const partOrString of request) {\n            if (typeof partOrString === \"string\") {\n                newParts.push({ text: partOrString });\n            }\n            else {\n                newParts.push(partOrString);\n            }\n        }\n    }\n    return assignRoleToPartsAndValidateSendMessageRequest(newParts);\n}\n/**\n * When multiple Part types (i.e. FunctionResponsePart and TextPart) are\n * passed in a single Part array, we may need to assign different roles to each\n * part. Currently only FunctionResponsePart requires a role other than 'user'.\n * @private\n * @param parts Array of parts to pass to the model\n * @returns Array of content items\n */\nfunction assignRoleToPartsAndValidateSendMessageRequest(parts) {\n    const userContent = { role: \"user\", parts: [] };\n    const functionContent = { role: \"function\", parts: [] };\n    let hasUserContent = false;\n    let hasFunctionContent = false;\n    for (const part of parts) {\n        if (\"functionResponse\" in part) {\n            functionContent.parts.push(part);\n            hasFunctionContent = true;\n        }\n        else {\n            userContent.parts.push(part);\n            hasUserContent = true;\n        }\n    }\n    if (hasUserContent && hasFunctionContent) {\n        throw new GoogleGenerativeAIError(\"Within a single message, FunctionResponse cannot be mixed with other type of part in the request for sending chat message.\");\n    }\n    if (!hasUserContent && !hasFunctionContent) {\n        throw new GoogleGenerativeAIError(\"No content is provided for sending chat message.\");\n    }\n    if (hasUserContent) {\n        return userContent;\n    }\n    return functionContent;\n}\nfunction formatGenerateContentInput(params) {\n    let formattedRequest;\n    if (params.contents) {\n        formattedRequest = params;\n    }\n    else {\n        // Array or string\n        const content = formatNewContent(params);\n        formattedRequest = { contents: [content] };\n    }\n    if (params.systemInstruction) {\n        formattedRequest.systemInstruction = formatSystemInstruction(params.systemInstruction);\n    }\n    return formattedRequest;\n}\nfunction formatEmbedContentInput(params) {\n    if (typeof params === \"string\" || Array.isArray(params)) {\n        const content = formatNewContent(params);\n        return { content };\n    }\n    return params;\n}\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n// https://ai.google.dev/api/rest/v1beta/Content#part\nconst VALID_PART_FIELDS = [\n    \"text\",\n    \"inlineData\",\n    \"functionCall\",\n    \"functionResponse\",\n];\nconst VALID_PARTS_PER_ROLE = {\n    user: [\"text\", \"inlineData\"],\n    function: [\"functionResponse\"],\n    model: [\"text\", \"functionCall\"],\n    // System instructions shouldn't be in history anyway.\n    system: [\"text\"],\n};\nfunction validateChatHistory(history) {\n    let prevContent = false;\n    for (const currContent of history) {\n        const { role, parts } = currContent;\n        if (!prevContent && role !== \"user\") {\n            throw new GoogleGenerativeAIError(`First content should be with role 'user', got ${role}`);\n        }\n        if (!POSSIBLE_ROLES.includes(role)) {\n            throw new GoogleGenerativeAIError(`Each item should include role field. Got ${role} but valid roles are: ${JSON.stringify(POSSIBLE_ROLES)}`);\n        }\n        if (!Array.isArray(parts)) {\n            throw new GoogleGenerativeAIError(\"Content should have 'parts' property with an array of Parts\");\n        }\n        if (parts.length === 0) {\n            throw new GoogleGenerativeAIError(\"Each Content should have at least one part\");\n        }\n        const countFields = {\n            text: 0,\n            inlineData: 0,\n            functionCall: 0,\n            functionResponse: 0,\n            fileData: 0,\n        };\n        for (const part of parts) {\n            for (const key of VALID_PART_FIELDS) {\n                if (key in part) {\n                    countFields[key] += 1;\n                }\n            }\n        }\n        const validParts = VALID_PARTS_PER_ROLE[role];\n        for (const key of VALID_PART_FIELDS) {\n            if (!validParts.includes(key) && countFields[key] > 0) {\n                throw new GoogleGenerativeAIError(`Content with role '${role}' can't contain '${key}' part`);\n            }\n        }\n        prevContent = true;\n    }\n}\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n/**\n * Do not log a message for this error.\n */\nconst SILENT_ERROR = \"SILENT_ERROR\";\n/**\n * ChatSession class that enables sending chat messages and stores\n * history of sent and received messages so far.\n *\n * @public\n */\nclass ChatSession {\n    constructor(apiKey, model, params, requestOptions) {\n        this.model = model;\n        this.params = params;\n        this.requestOptions = requestOptions;\n        this._history = [];\n        this._sendPromise = Promise.resolve();\n        this._apiKey = apiKey;\n        if (params === null || params === void 0 ? void 0 : params.history) {\n            validateChatHistory(params.history);\n            this._history = params.history;\n        }\n    }\n    /**\n     * Gets the chat history so far. Blocked prompts are not added to history.\n     * Blocked candidates are not added to history, nor are the prompts that\n     * generated them.\n     */\n    async getHistory() {\n        await this._sendPromise;\n        return this._history;\n    }\n    /**\n     * Sends a chat message and receives a non-streaming\n     * {@link GenerateContentResult}\n     */\n    async sendMessage(request) {\n        var _a, _b, _c, _d, _e;\n        await this._sendPromise;\n        const newContent = formatNewContent(request);\n        const generateContentRequest = {\n            safetySettings: (_a = this.params) === null || _a === void 0 ? void 0 : _a.safetySettings,\n            generationConfig: (_b = this.params) === null || _b === void 0 ? void 0 : _b.generationConfig,\n            tools: (_c = this.params) === null || _c === void 0 ? void 0 : _c.tools,\n            toolConfig: (_d = this.params) === null || _d === void 0 ? void 0 : _d.toolConfig,\n            systemInstruction: (_e = this.params) === null || _e === void 0 ? void 0 : _e.systemInstruction,\n            contents: [...this._history, newContent],\n        };\n        let finalResult;\n        // Add onto the chain.\n        this._sendPromise = this._sendPromise\n            .then(() => generateContent(this._apiKey, this.model, generateContentRequest, this.requestOptions))\n            .then((result) => {\n            var _a;\n            if (result.response.candidates &&\n                result.response.candidates.length > 0) {\n                this._history.push(newContent);\n                const responseContent = Object.assign({ parts: [], \n                    // Response seems to come back without a role set.\n                    role: \"model\" }, (_a = result.response.candidates) === null || _a === void 0 ? void 0 : _a[0].content);\n                this._history.push(responseContent);\n            }\n            else {\n                const blockErrorMessage = formatBlockErrorMessage(result.response);\n                if (blockErrorMessage) {\n                    console.warn(`sendMessage() was unsuccessful. ${blockErrorMessage}. Inspect response object for details.`);\n                }\n            }\n            finalResult = result;\n        });\n        await this._sendPromise;\n        return finalResult;\n    }\n    /**\n     * Sends a chat message and receives the response as a\n     * {@link GenerateContentStreamResult} containing an iterable stream\n     * and a response promise.\n     */\n    async sendMessageStream(request) {\n        var _a, _b, _c, _d, _e;\n        await this._sendPromise;\n        const newContent = formatNewContent(request);\n        const generateContentRequest = {\n            safetySettings: (_a = this.params) === null || _a === void 0 ? void 0 : _a.safetySettings,\n            generationConfig: (_b = this.params) === null || _b === void 0 ? void 0 : _b.generationConfig,\n            tools: (_c = this.params) === null || _c === void 0 ? void 0 : _c.tools,\n            toolConfig: (_d = this.params) === null || _d === void 0 ? void 0 : _d.toolConfig,\n            systemInstruction: (_e = this.params) === null || _e === void 0 ? void 0 : _e.systemInstruction,\n            contents: [...this._history, newContent],\n        };\n        const streamPromise = generateContentStream(this._apiKey, this.model, generateContentRequest, this.requestOptions);\n        // Add onto the chain.\n        this._sendPromise = this._sendPromise\n            .then(() => streamPromise)\n            // This must be handled to avoid unhandled rejection, but jump\n            // to the final catch block with a label to not log this error.\n            .catch((_ignored) => {\n            throw new Error(SILENT_ERROR);\n        })\n            .then((streamResult) => streamResult.response)\n            .then((response) => {\n            if (response.candidates && response.candidates.length > 0) {\n                this._history.push(newContent);\n                const responseContent = Object.assign({}, response.candidates[0].content);\n                // Response seems to come back without a role set.\n                if (!responseContent.role) {\n                    responseContent.role = \"model\";\n                }\n                this._history.push(responseContent);\n            }\n            else {\n                const blockErrorMessage = formatBlockErrorMessage(response);\n                if (blockErrorMessage) {\n                    console.warn(`sendMessageStream() was unsuccessful. ${blockErrorMessage}. Inspect response object for details.`);\n                }\n            }\n        })\n            .catch((e) => {\n            // Errors in streamPromise are already catchable by the user as\n            // streamPromise is returned.\n            // Avoid duplicating the error message in logs.\n            if (e.message !== SILENT_ERROR) {\n                // Users do not have access to _sendPromise to catch errors\n                // downstream from streamPromise, so they should not throw.\n                console.error(e);\n            }\n        });\n        return streamPromise;\n    }\n}\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\nasync function countTokens(apiKey, model, params, requestOptions) {\n    const response = await makeRequest(model, Task.COUNT_TOKENS, apiKey, false, JSON.stringify(Object.assign(Object.assign({}, params), { model })), requestOptions);\n    return response.json();\n}\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\nasync function embedContent(apiKey, model, params, requestOptions) {\n    const response = await makeRequest(model, Task.EMBED_CONTENT, apiKey, false, JSON.stringify(params), requestOptions);\n    return response.json();\n}\nasync function batchEmbedContents(apiKey, model, params, requestOptions) {\n    const requestsWithModel = params.requests.map((request) => {\n        return Object.assign(Object.assign({}, request), { model });\n    });\n    const response = await makeRequest(model, Task.BATCH_EMBED_CONTENTS, apiKey, false, JSON.stringify({ requests: requestsWithModel }), requestOptions);\n    return response.json();\n}\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n/**\n * Class for generative model APIs.\n * @public\n */\nclass GenerativeModel {\n    constructor(apiKey, modelParams, requestOptions) {\n        this.apiKey = apiKey;\n        if (modelParams.model.includes(\"/\")) {\n            // Models may be named \"models/model-name\" or \"tunedModels/model-name\"\n            this.model = modelParams.model;\n        }\n        else {\n            // If path is not included, assume it's a non-tuned model.\n            this.model = `models/${modelParams.model}`;\n        }\n        this.generationConfig = modelParams.generationConfig || {};\n        this.safetySettings = modelParams.safetySettings || [];\n        this.tools = modelParams.tools;\n        this.toolConfig = modelParams.toolConfig;\n        this.systemInstruction = formatSystemInstruction(modelParams.systemInstruction);\n        this.requestOptions = requestOptions || {};\n    }\n    /**\n     * Makes a single non-streaming call to the model\n     * and returns an object containing a single {@link GenerateContentResponse}.\n     */\n    async generateContent(request) {\n        const formattedParams = formatGenerateContentInput(request);\n        return generateContent(this.apiKey, this.model, Object.assign({ generationConfig: this.generationConfig, safetySettings: this.safetySettings, tools: this.tools, toolConfig: this.toolConfig, systemInstruction: this.systemInstruction }, formattedParams), this.requestOptions);\n    }\n    /**\n     * Makes a single streaming call to the model\n     * and returns an object containing an iterable stream that iterates\n     * over all chunks in the streaming response as well as\n     * a promise that returns the final aggregated response.\n     */\n    async generateContentStream(request) {\n        const formattedParams = formatGenerateContentInput(request);\n        return generateContentStream(this.apiKey, this.model, Object.assign({ generationConfig: this.generationConfig, safetySettings: this.safetySettings, tools: this.tools, toolConfig: this.toolConfig, systemInstruction: this.systemInstruction }, formattedParams), this.requestOptions);\n    }\n    /**\n     * Gets a new {@link ChatSession} instance which can be used for\n     * multi-turn chats.\n     */\n    startChat(startChatParams) {\n        return new ChatSession(this.apiKey, this.model, Object.assign({ generationConfig: this.generationConfig, safetySettings: this.safetySettings, tools: this.tools, toolConfig: this.toolConfig, systemInstruction: this.systemInstruction }, startChatParams), this.requestOptions);\n    }\n    /**\n     * Counts the tokens in the provided request.\n     */\n    async countTokens(request) {\n        const formattedParams = formatGenerateContentInput(request);\n        return countTokens(this.apiKey, this.model, formattedParams, this.requestOptions);\n    }\n    /**\n     * Embeds the provided content.\n     */\n    async embedContent(request) {\n        const formattedParams = formatEmbedContentInput(request);\n        return embedContent(this.apiKey, this.model, formattedParams, this.requestOptions);\n    }\n    /**\n     * Embeds an array of {@link EmbedContentRequest}s.\n     */\n    async batchEmbedContents(batchEmbedContentRequest) {\n        return batchEmbedContents(this.apiKey, this.model, batchEmbedContentRequest, this.requestOptions);\n    }\n}\n\n/**\n * @license\n * Copyright 2024 Google LLC\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n/**\n * Top-level class for this SDK\n * @public\n */\nclass GoogleGenerativeAI {\n    constructor(apiKey) {\n        this.apiKey = apiKey;\n    }\n    /**\n     * Gets a {@link GenerativeModel} instance for the provided model name.\n     */\n    getGenerativeModel(modelParams, requestOptions) {\n        if (!modelParams.model) {\n            throw new GoogleGenerativeAIError(`Must provide a model name. ` +\n                `Example: genai.getGenerativeModel({ model: 'my-model-name' })`);\n        }\n        return new GenerativeModel(this.apiKey, modelParams, requestOptions);\n    }\n}\n\n\n//# sourceMappingURL=index.mjs.map\n\n\n//# sourceURL=webpack://daveads.github.io/./node_modules/@google/generative-ai/dist/index.mjs?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   BlockReason: () => (/* binding */ BlockReason),
+/* harmony export */   ChatSession: () => (/* binding */ ChatSession),
+/* harmony export */   FinishReason: () => (/* binding */ FinishReason),
+/* harmony export */   FunctionCallingMode: () => (/* binding */ FunctionCallingMode),
+/* harmony export */   FunctionDeclarationSchemaType: () => (/* binding */ FunctionDeclarationSchemaType),
+/* harmony export */   GenerativeModel: () => (/* binding */ GenerativeModel),
+/* harmony export */   GoogleGenerativeAI: () => (/* binding */ GoogleGenerativeAI),
+/* harmony export */   GoogleGenerativeAIError: () => (/* binding */ GoogleGenerativeAIError),
+/* harmony export */   GoogleGenerativeAIFetchError: () => (/* binding */ GoogleGenerativeAIFetchError),
+/* harmony export */   GoogleGenerativeAIRequestInputError: () => (/* binding */ GoogleGenerativeAIRequestInputError),
+/* harmony export */   GoogleGenerativeAIResponseError: () => (/* binding */ GoogleGenerativeAIResponseError),
+/* harmony export */   HarmBlockThreshold: () => (/* binding */ HarmBlockThreshold),
+/* harmony export */   HarmCategory: () => (/* binding */ HarmCategory),
+/* harmony export */   HarmProbability: () => (/* binding */ HarmProbability),
+/* harmony export */   POSSIBLE_ROLES: () => (/* binding */ POSSIBLE_ROLES),
+/* harmony export */   TaskType: () => (/* binding */ TaskType)
+/* harmony export */ });
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Possible roles.
+ * @public
+ */
+const POSSIBLE_ROLES = ["user", "model", "function", "system"];
+/**
+ * Harm categories that would cause prompts or candidates to be blocked.
+ * @public
+ */
+var HarmCategory;
+(function (HarmCategory) {
+    HarmCategory["HARM_CATEGORY_UNSPECIFIED"] = "HARM_CATEGORY_UNSPECIFIED";
+    HarmCategory["HARM_CATEGORY_HATE_SPEECH"] = "HARM_CATEGORY_HATE_SPEECH";
+    HarmCategory["HARM_CATEGORY_SEXUALLY_EXPLICIT"] = "HARM_CATEGORY_SEXUALLY_EXPLICIT";
+    HarmCategory["HARM_CATEGORY_HARASSMENT"] = "HARM_CATEGORY_HARASSMENT";
+    HarmCategory["HARM_CATEGORY_DANGEROUS_CONTENT"] = "HARM_CATEGORY_DANGEROUS_CONTENT";
+})(HarmCategory || (HarmCategory = {}));
+/**
+ * Threshold above which a prompt or candidate will be blocked.
+ * @public
+ */
+var HarmBlockThreshold;
+(function (HarmBlockThreshold) {
+    // Threshold is unspecified.
+    HarmBlockThreshold["HARM_BLOCK_THRESHOLD_UNSPECIFIED"] = "HARM_BLOCK_THRESHOLD_UNSPECIFIED";
+    // Content with NEGLIGIBLE will be allowed.
+    HarmBlockThreshold["BLOCK_LOW_AND_ABOVE"] = "BLOCK_LOW_AND_ABOVE";
+    // Content with NEGLIGIBLE and LOW will be allowed.
+    HarmBlockThreshold["BLOCK_MEDIUM_AND_ABOVE"] = "BLOCK_MEDIUM_AND_ABOVE";
+    // Content with NEGLIGIBLE, LOW, and MEDIUM will be allowed.
+    HarmBlockThreshold["BLOCK_ONLY_HIGH"] = "BLOCK_ONLY_HIGH";
+    // All content will be allowed.
+    HarmBlockThreshold["BLOCK_NONE"] = "BLOCK_NONE";
+})(HarmBlockThreshold || (HarmBlockThreshold = {}));
+/**
+ * Probability that a prompt or candidate matches a harm category.
+ * @public
+ */
+var HarmProbability;
+(function (HarmProbability) {
+    // Probability is unspecified.
+    HarmProbability["HARM_PROBABILITY_UNSPECIFIED"] = "HARM_PROBABILITY_UNSPECIFIED";
+    // Content has a negligible chance of being unsafe.
+    HarmProbability["NEGLIGIBLE"] = "NEGLIGIBLE";
+    // Content has a low chance of being unsafe.
+    HarmProbability["LOW"] = "LOW";
+    // Content has a medium chance of being unsafe.
+    HarmProbability["MEDIUM"] = "MEDIUM";
+    // Content has a high chance of being unsafe.
+    HarmProbability["HIGH"] = "HIGH";
+})(HarmProbability || (HarmProbability = {}));
+/**
+ * Reason that a prompt was blocked.
+ * @public
+ */
+var BlockReason;
+(function (BlockReason) {
+    // A blocked reason was not specified.
+    BlockReason["BLOCKED_REASON_UNSPECIFIED"] = "BLOCKED_REASON_UNSPECIFIED";
+    // Content was blocked by safety settings.
+    BlockReason["SAFETY"] = "SAFETY";
+    // Content was blocked, but the reason is uncategorized.
+    BlockReason["OTHER"] = "OTHER";
+})(BlockReason || (BlockReason = {}));
+/**
+ * Reason that a candidate finished.
+ * @public
+ */
+var FinishReason;
+(function (FinishReason) {
+    // Default value. This value is unused.
+    FinishReason["FINISH_REASON_UNSPECIFIED"] = "FINISH_REASON_UNSPECIFIED";
+    // Natural stop point of the model or provided stop sequence.
+    FinishReason["STOP"] = "STOP";
+    // The maximum number of tokens as specified in the request was reached.
+    FinishReason["MAX_TOKENS"] = "MAX_TOKENS";
+    // The candidate content was flagged for safety reasons.
+    FinishReason["SAFETY"] = "SAFETY";
+    // The candidate content was flagged for recitation reasons.
+    FinishReason["RECITATION"] = "RECITATION";
+    // Unknown reason.
+    FinishReason["OTHER"] = "OTHER";
+})(FinishReason || (FinishReason = {}));
+/**
+ * Task type for embedding content.
+ * @public
+ */
+var TaskType;
+(function (TaskType) {
+    TaskType["TASK_TYPE_UNSPECIFIED"] = "TASK_TYPE_UNSPECIFIED";
+    TaskType["RETRIEVAL_QUERY"] = "RETRIEVAL_QUERY";
+    TaskType["RETRIEVAL_DOCUMENT"] = "RETRIEVAL_DOCUMENT";
+    TaskType["SEMANTIC_SIMILARITY"] = "SEMANTIC_SIMILARITY";
+    TaskType["CLASSIFICATION"] = "CLASSIFICATION";
+    TaskType["CLUSTERING"] = "CLUSTERING";
+})(TaskType || (TaskType = {}));
+/**
+ * @public
+ */
+var FunctionCallingMode;
+(function (FunctionCallingMode) {
+    // Unspecified function calling mode. This value should not be used.
+    FunctionCallingMode["MODE_UNSPECIFIED"] = "MODE_UNSPECIFIED";
+    // Default model behavior, model decides to predict either a function call
+    // or a natural language repspose.
+    FunctionCallingMode["AUTO"] = "AUTO";
+    // Model is constrained to always predicting a function call only.
+    // If "allowed_function_names" are set, the predicted function call will be
+    // limited to any one of "allowed_function_names", else the predicted
+    // function call will be any one of the provided "function_declarations".
+    FunctionCallingMode["ANY"] = "ANY";
+    // Model will not predict any function call. Model behavior is same as when
+    // not passing any function declarations.
+    FunctionCallingMode["NONE"] = "NONE";
+})(FunctionCallingMode || (FunctionCallingMode = {}));
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Contains the list of OpenAPI data types
+ * as defined by https://swagger.io/docs/specification/data-models/data-types/
+ * @public
+ */
+var FunctionDeclarationSchemaType;
+(function (FunctionDeclarationSchemaType) {
+    /** String type. */
+    FunctionDeclarationSchemaType["STRING"] = "STRING";
+    /** Number type. */
+    FunctionDeclarationSchemaType["NUMBER"] = "NUMBER";
+    /** Integer type. */
+    FunctionDeclarationSchemaType["INTEGER"] = "INTEGER";
+    /** Boolean type. */
+    FunctionDeclarationSchemaType["BOOLEAN"] = "BOOLEAN";
+    /** Array type. */
+    FunctionDeclarationSchemaType["ARRAY"] = "ARRAY";
+    /** Object type. */
+    FunctionDeclarationSchemaType["OBJECT"] = "OBJECT";
+})(FunctionDeclarationSchemaType || (FunctionDeclarationSchemaType = {}));
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Basic error type for this SDK.
+ * @public
+ */
+class GoogleGenerativeAIError extends Error {
+    constructor(message) {
+        super(`[GoogleGenerativeAI Error]: ${message}`);
+    }
+}
+/**
+ * Errors in the contents of a response from the model. This includes parsing
+ * errors, or responses including a safety block reason.
+ * @public
+ */
+class GoogleGenerativeAIResponseError extends GoogleGenerativeAIError {
+    constructor(message, response) {
+        super(message);
+        this.response = response;
+    }
+}
+/**
+ * Error class covering HTTP errors when calling the server. Includes HTTP
+ * status, statusText, and optional details, if provided in the server response.
+ * @public
+ */
+class GoogleGenerativeAIFetchError extends GoogleGenerativeAIError {
+    constructor(message, status, statusText, errorDetails) {
+        super(message);
+        this.status = status;
+        this.statusText = statusText;
+        this.errorDetails = errorDetails;
+    }
+}
+/**
+ * Errors in the contents of a request originating from user input.
+ * @public
+ */
+class GoogleGenerativeAIRequestInputError extends GoogleGenerativeAIError {
+}
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const DEFAULT_BASE_URL = "https://generativelanguage.googleapis.com";
+const DEFAULT_API_VERSION = "v1beta";
+/**
+ * We can't `require` package.json if this runs on web. We will use rollup to
+ * swap in the version number here at build time.
+ */
+const PACKAGE_VERSION = "0.11.2";
+const PACKAGE_LOG_HEADER = "genai-js";
+var Task;
+(function (Task) {
+    Task["GENERATE_CONTENT"] = "generateContent";
+    Task["STREAM_GENERATE_CONTENT"] = "streamGenerateContent";
+    Task["COUNT_TOKENS"] = "countTokens";
+    Task["EMBED_CONTENT"] = "embedContent";
+    Task["BATCH_EMBED_CONTENTS"] = "batchEmbedContents";
+})(Task || (Task = {}));
+class RequestUrl {
+    constructor(model, task, apiKey, stream, requestOptions) {
+        this.model = model;
+        this.task = task;
+        this.apiKey = apiKey;
+        this.stream = stream;
+        this.requestOptions = requestOptions;
+    }
+    toString() {
+        var _a, _b;
+        const apiVersion = ((_a = this.requestOptions) === null || _a === void 0 ? void 0 : _a.apiVersion) || DEFAULT_API_VERSION;
+        const baseUrl = ((_b = this.requestOptions) === null || _b === void 0 ? void 0 : _b.baseUrl) || DEFAULT_BASE_URL;
+        let url = `${baseUrl}/${apiVersion}/${this.model}:${this.task}`;
+        if (this.stream) {
+            url += "?alt=sse";
+        }
+        return url;
+    }
+}
+/**
+ * Simple, but may become more complex if we add more versions to log.
+ */
+function getClientHeaders(requestOptions) {
+    const clientHeaders = [];
+    if (requestOptions === null || requestOptions === void 0 ? void 0 : requestOptions.apiClient) {
+        clientHeaders.push(requestOptions.apiClient);
+    }
+    clientHeaders.push(`${PACKAGE_LOG_HEADER}/${PACKAGE_VERSION}`);
+    return clientHeaders.join(" ");
+}
+async function getHeaders(url) {
+    const headers = new Headers();
+    headers.append("Content-Type", "application/json");
+    headers.append("x-goog-api-client", getClientHeaders(url.requestOptions));
+    headers.append("x-goog-api-key", url.apiKey);
+    let customHeaders = url.requestOptions.customHeaders;
+    if (customHeaders) {
+        if (!(customHeaders instanceof Headers)) {
+            try {
+                customHeaders = new Headers(customHeaders);
+            }
+            catch (e) {
+                throw new GoogleGenerativeAIRequestInputError(`unable to convert customHeaders value ${JSON.stringify(customHeaders)} to Headers: ${e.message}`);
+            }
+        }
+        for (const [headerName, headerValue] of customHeaders.entries()) {
+            if (headerName === "x-goog-api-key") {
+                throw new GoogleGenerativeAIRequestInputError(`Cannot set reserved header name ${headerName}`);
+            }
+            else if (headerName === "x-goog-api-client") {
+                throw new GoogleGenerativeAIRequestInputError(`Header name ${headerName} can only be set using the apiClient field`);
+            }
+            headers.append(headerName, headerValue);
+        }
+    }
+    return headers;
+}
+async function constructRequest(model, task, apiKey, stream, body, requestOptions) {
+    const url = new RequestUrl(model, task, apiKey, stream, requestOptions);
+    return {
+        url: url.toString(),
+        fetchOptions: Object.assign(Object.assign({}, buildFetchOptions(requestOptions)), { method: "POST", headers: await getHeaders(url), body }),
+    };
+}
+/**
+ * Wrapper for _makeRequestInternal that automatically uses native fetch,
+ * allowing _makeRequestInternal to be tested with a mocked fetch function.
+ */
+async function makeRequest(model, task, apiKey, stream, body, requestOptions) {
+    return _makeRequestInternal(model, task, apiKey, stream, body, requestOptions, fetch);
+}
+async function _makeRequestInternal(model, task, apiKey, stream, body, requestOptions, 
+// Allows this to be stubbed for tests
+fetchFn = fetch) {
+    const url = new RequestUrl(model, task, apiKey, stream, requestOptions);
+    let response;
+    try {
+        const request = await constructRequest(model, task, apiKey, stream, body, requestOptions);
+        response = await fetchFn(request.url, request.fetchOptions);
+        if (!response.ok) {
+            let message = "";
+            let errorDetails;
+            try {
+                const json = await response.json();
+                message = json.error.message;
+                if (json.error.details) {
+                    message += ` ${JSON.stringify(json.error.details)}`;
+                    errorDetails = json.error.details;
+                }
+            }
+            catch (e) {
+                // ignored
+            }
+            throw new GoogleGenerativeAIFetchError(`Error fetching from ${url.toString()}: [${response.status} ${response.statusText}] ${message}`, response.status, response.statusText, errorDetails);
+        }
+    }
+    catch (e) {
+        let err = e;
+        if (!(e instanceof GoogleGenerativeAIFetchError ||
+            e instanceof GoogleGenerativeAIRequestInputError)) {
+            err = new GoogleGenerativeAIError(`Error fetching from ${url.toString()}: ${e.message}`);
+            err.stack = e.stack;
+        }
+        throw err;
+    }
+    return response;
+}
+/**
+ * Generates the request options to be passed to the fetch API.
+ * @param requestOptions - The user-defined request options.
+ * @returns The generated request options.
+ */
+function buildFetchOptions(requestOptions) {
+    const fetchOptions = {};
+    if ((requestOptions === null || requestOptions === void 0 ? void 0 : requestOptions.timeout) >= 0) {
+        const abortController = new AbortController();
+        const signal = abortController.signal;
+        setTimeout(() => abortController.abort(), requestOptions.timeout);
+        fetchOptions.signal = signal;
+    }
+    return fetchOptions;
+}
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Adds convenience helper methods to a response object, including stream
+ * chunks (as long as each chunk is a complete GenerateContentResponse JSON).
+ */
+function addHelpers(response) {
+    response.text = () => {
+        if (response.candidates && response.candidates.length > 0) {
+            if (response.candidates.length > 1) {
+                console.warn(`This response had ${response.candidates.length} ` +
+                    `candidates. Returning text from the first candidate only. ` +
+                    `Access response.candidates directly to use the other candidates.`);
+            }
+            if (hadBadFinishReason(response.candidates[0])) {
+                throw new GoogleGenerativeAIResponseError(`${formatBlockErrorMessage(response)}`, response);
+            }
+            return getText(response);
+        }
+        else if (response.promptFeedback) {
+            throw new GoogleGenerativeAIResponseError(`Text not available. ${formatBlockErrorMessage(response)}`, response);
+        }
+        return "";
+    };
+    /**
+     * TODO: remove at next major version
+     */
+    response.functionCall = () => {
+        if (response.candidates && response.candidates.length > 0) {
+            if (response.candidates.length > 1) {
+                console.warn(`This response had ${response.candidates.length} ` +
+                    `candidates. Returning function calls from the first candidate only. ` +
+                    `Access response.candidates directly to use the other candidates.`);
+            }
+            if (hadBadFinishReason(response.candidates[0])) {
+                throw new GoogleGenerativeAIResponseError(`${formatBlockErrorMessage(response)}`, response);
+            }
+            console.warn(`response.functionCall() is deprecated. ` +
+                `Use response.functionCalls() instead.`);
+            return getFunctionCalls(response)[0];
+        }
+        else if (response.promptFeedback) {
+            throw new GoogleGenerativeAIResponseError(`Function call not available. ${formatBlockErrorMessage(response)}`, response);
+        }
+        return undefined;
+    };
+    response.functionCalls = () => {
+        if (response.candidates && response.candidates.length > 0) {
+            if (response.candidates.length > 1) {
+                console.warn(`This response had ${response.candidates.length} ` +
+                    `candidates. Returning function calls from the first candidate only. ` +
+                    `Access response.candidates directly to use the other candidates.`);
+            }
+            if (hadBadFinishReason(response.candidates[0])) {
+                throw new GoogleGenerativeAIResponseError(`${formatBlockErrorMessage(response)}`, response);
+            }
+            return getFunctionCalls(response);
+        }
+        else if (response.promptFeedback) {
+            throw new GoogleGenerativeAIResponseError(`Function call not available. ${formatBlockErrorMessage(response)}`, response);
+        }
+        return undefined;
+    };
+    return response;
+}
+/**
+ * Returns all text found in all parts of first candidate.
+ */
+function getText(response) {
+    var _a, _b, _c, _d;
+    const textStrings = [];
+    if ((_b = (_a = response.candidates) === null || _a === void 0 ? void 0 : _a[0].content) === null || _b === void 0 ? void 0 : _b.parts) {
+        for (const part of (_d = (_c = response.candidates) === null || _c === void 0 ? void 0 : _c[0].content) === null || _d === void 0 ? void 0 : _d.parts) {
+            if (part.text) {
+                textStrings.push(part.text);
+            }
+        }
+    }
+    if (textStrings.length > 0) {
+        return textStrings.join("");
+    }
+    else {
+        return "";
+    }
+}
+/**
+ * Returns functionCall of first candidate.
+ */
+function getFunctionCalls(response) {
+    var _a, _b, _c, _d;
+    const functionCalls = [];
+    if ((_b = (_a = response.candidates) === null || _a === void 0 ? void 0 : _a[0].content) === null || _b === void 0 ? void 0 : _b.parts) {
+        for (const part of (_d = (_c = response.candidates) === null || _c === void 0 ? void 0 : _c[0].content) === null || _d === void 0 ? void 0 : _d.parts) {
+            if (part.functionCall) {
+                functionCalls.push(part.functionCall);
+            }
+        }
+    }
+    if (functionCalls.length > 0) {
+        return functionCalls;
+    }
+    else {
+        return undefined;
+    }
+}
+const badFinishReasons = [FinishReason.RECITATION, FinishReason.SAFETY];
+function hadBadFinishReason(candidate) {
+    return (!!candidate.finishReason &&
+        badFinishReasons.includes(candidate.finishReason));
+}
+function formatBlockErrorMessage(response) {
+    var _a, _b, _c;
+    let message = "";
+    if ((!response.candidates || response.candidates.length === 0) &&
+        response.promptFeedback) {
+        message += "Response was blocked";
+        if ((_a = response.promptFeedback) === null || _a === void 0 ? void 0 : _a.blockReason) {
+            message += ` due to ${response.promptFeedback.blockReason}`;
+        }
+        if ((_b = response.promptFeedback) === null || _b === void 0 ? void 0 : _b.blockReasonMessage) {
+            message += `: ${response.promptFeedback.blockReasonMessage}`;
+        }
+    }
+    else if ((_c = response.candidates) === null || _c === void 0 ? void 0 : _c[0]) {
+        const firstCandidate = response.candidates[0];
+        if (hadBadFinishReason(firstCandidate)) {
+            message += `Candidate was blocked due to ${firstCandidate.finishReason}`;
+            if (firstCandidate.finishMessage) {
+                message += `: ${firstCandidate.finishMessage}`;
+            }
+        }
+    }
+    return message;
+}
+
+/******************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise, SuppressedError, Symbol */
+
+
+function __await(v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+
+function __asyncGenerator(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+}
+
+typeof SuppressedError === "function" ? SuppressedError : function (error, suppressed, message) {
+    var e = new Error(message);
+    return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
+};
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const responseLineRE = /^data\: (.*)(?:\n\n|\r\r|\r\n\r\n)/;
+/**
+ * Process a response.body stream from the backend and return an
+ * iterator that provides one complete GenerateContentResponse at a time
+ * and a promise that resolves with a single aggregated
+ * GenerateContentResponse.
+ *
+ * @param response - Response from a fetch call
+ */
+function processStream(response) {
+    const inputStream = response.body.pipeThrough(new TextDecoderStream("utf8", { fatal: true }));
+    const responseStream = getResponseStream(inputStream);
+    const [stream1, stream2] = responseStream.tee();
+    return {
+        stream: generateResponseSequence(stream1),
+        response: getResponsePromise(stream2),
+    };
+}
+async function getResponsePromise(stream) {
+    const allResponses = [];
+    const reader = stream.getReader();
+    while (true) {
+        const { done, value } = await reader.read();
+        if (done) {
+            return addHelpers(aggregateResponses(allResponses));
+        }
+        allResponses.push(value);
+    }
+}
+function generateResponseSequence(stream) {
+    return __asyncGenerator(this, arguments, function* generateResponseSequence_1() {
+        const reader = stream.getReader();
+        while (true) {
+            const { value, done } = yield __await(reader.read());
+            if (done) {
+                break;
+            }
+            yield yield __await(addHelpers(value));
+        }
+    });
+}
+/**
+ * Reads a raw stream from the fetch response and join incomplete
+ * chunks, returning a new stream that provides a single complete
+ * GenerateContentResponse in each iteration.
+ */
+function getResponseStream(inputStream) {
+    const reader = inputStream.getReader();
+    const stream = new ReadableStream({
+        start(controller) {
+            let currentText = "";
+            return pump();
+            function pump() {
+                return reader.read().then(({ value, done }) => {
+                    if (done) {
+                        if (currentText.trim()) {
+                            controller.error(new GoogleGenerativeAIError("Failed to parse stream"));
+                            return;
+                        }
+                        controller.close();
+                        return;
+                    }
+                    currentText += value;
+                    let match = currentText.match(responseLineRE);
+                    let parsedResponse;
+                    while (match) {
+                        try {
+                            parsedResponse = JSON.parse(match[1]);
+                        }
+                        catch (e) {
+                            controller.error(new GoogleGenerativeAIError(`Error parsing JSON response: "${match[1]}"`));
+                            return;
+                        }
+                        controller.enqueue(parsedResponse);
+                        currentText = currentText.substring(match[0].length);
+                        match = currentText.match(responseLineRE);
+                    }
+                    return pump();
+                });
+            }
+        },
+    });
+    return stream;
+}
+/**
+ * Aggregates an array of `GenerateContentResponse`s into a single
+ * GenerateContentResponse.
+ */
+function aggregateResponses(responses) {
+    const lastResponse = responses[responses.length - 1];
+    const aggregatedResponse = {
+        promptFeedback: lastResponse === null || lastResponse === void 0 ? void 0 : lastResponse.promptFeedback,
+    };
+    for (const response of responses) {
+        if (response.candidates) {
+            for (const candidate of response.candidates) {
+                const i = candidate.index;
+                if (!aggregatedResponse.candidates) {
+                    aggregatedResponse.candidates = [];
+                }
+                if (!aggregatedResponse.candidates[i]) {
+                    aggregatedResponse.candidates[i] = {
+                        index: candidate.index,
+                    };
+                }
+                // Keep overwriting, the last one will be final
+                aggregatedResponse.candidates[i].citationMetadata =
+                    candidate.citationMetadata;
+                aggregatedResponse.candidates[i].finishReason = candidate.finishReason;
+                aggregatedResponse.candidates[i].finishMessage =
+                    candidate.finishMessage;
+                aggregatedResponse.candidates[i].safetyRatings =
+                    candidate.safetyRatings;
+                /**
+                 * Candidates should always have content and parts, but this handles
+                 * possible malformed responses.
+                 */
+                if (candidate.content && candidate.content.parts) {
+                    if (!aggregatedResponse.candidates[i].content) {
+                        aggregatedResponse.candidates[i].content = {
+                            role: candidate.content.role || "user",
+                            parts: [],
+                        };
+                    }
+                    const newPart = {};
+                    for (const part of candidate.content.parts) {
+                        if (part.text) {
+                            newPart.text = part.text;
+                        }
+                        if (part.functionCall) {
+                            newPart.functionCall = part.functionCall;
+                        }
+                        if (Object.keys(newPart).length === 0) {
+                            newPart.text = "";
+                        }
+                        aggregatedResponse.candidates[i].content.parts.push(newPart);
+                    }
+                }
+            }
+        }
+    }
+    return aggregatedResponse;
+}
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function generateContentStream(apiKey, model, params, requestOptions) {
+    const response = await makeRequest(model, Task.STREAM_GENERATE_CONTENT, apiKey, 
+    /* stream */ true, JSON.stringify(params), requestOptions);
+    return processStream(response);
+}
+async function generateContent(apiKey, model, params, requestOptions) {
+    const response = await makeRequest(model, Task.GENERATE_CONTENT, apiKey, 
+    /* stream */ false, JSON.stringify(params), requestOptions);
+    const responseJson = await response.json();
+    const enhancedResponse = addHelpers(responseJson);
+    return {
+        response: enhancedResponse,
+    };
+}
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function formatSystemInstruction(input) {
+    // null or undefined
+    if (input == null) {
+        return undefined;
+    }
+    else if (typeof input === "string") {
+        return { role: "system", parts: [{ text: input }] };
+    }
+    else if (input.text) {
+        return { role: "system", parts: [input] };
+    }
+    else if (input.parts) {
+        if (!input.role) {
+            return { role: "system", parts: input.parts };
+        }
+        else {
+            return input;
+        }
+    }
+}
+function formatNewContent(request) {
+    let newParts = [];
+    if (typeof request === "string") {
+        newParts = [{ text: request }];
+    }
+    else {
+        for (const partOrString of request) {
+            if (typeof partOrString === "string") {
+                newParts.push({ text: partOrString });
+            }
+            else {
+                newParts.push(partOrString);
+            }
+        }
+    }
+    return assignRoleToPartsAndValidateSendMessageRequest(newParts);
+}
+/**
+ * When multiple Part types (i.e. FunctionResponsePart and TextPart) are
+ * passed in a single Part array, we may need to assign different roles to each
+ * part. Currently only FunctionResponsePart requires a role other than 'user'.
+ * @private
+ * @param parts Array of parts to pass to the model
+ * @returns Array of content items
+ */
+function assignRoleToPartsAndValidateSendMessageRequest(parts) {
+    const userContent = { role: "user", parts: [] };
+    const functionContent = { role: "function", parts: [] };
+    let hasUserContent = false;
+    let hasFunctionContent = false;
+    for (const part of parts) {
+        if ("functionResponse" in part) {
+            functionContent.parts.push(part);
+            hasFunctionContent = true;
+        }
+        else {
+            userContent.parts.push(part);
+            hasUserContent = true;
+        }
+    }
+    if (hasUserContent && hasFunctionContent) {
+        throw new GoogleGenerativeAIError("Within a single message, FunctionResponse cannot be mixed with other type of part in the request for sending chat message.");
+    }
+    if (!hasUserContent && !hasFunctionContent) {
+        throw new GoogleGenerativeAIError("No content is provided for sending chat message.");
+    }
+    if (hasUserContent) {
+        return userContent;
+    }
+    return functionContent;
+}
+function formatGenerateContentInput(params) {
+    let formattedRequest;
+    if (params.contents) {
+        formattedRequest = params;
+    }
+    else {
+        // Array or string
+        const content = formatNewContent(params);
+        formattedRequest = { contents: [content] };
+    }
+    if (params.systemInstruction) {
+        formattedRequest.systemInstruction = formatSystemInstruction(params.systemInstruction);
+    }
+    return formattedRequest;
+}
+function formatEmbedContentInput(params) {
+    if (typeof params === "string" || Array.isArray(params)) {
+        const content = formatNewContent(params);
+        return { content };
+    }
+    return params;
+}
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+// https://ai.google.dev/api/rest/v1beta/Content#part
+const VALID_PART_FIELDS = [
+    "text",
+    "inlineData",
+    "functionCall",
+    "functionResponse",
+];
+const VALID_PARTS_PER_ROLE = {
+    user: ["text", "inlineData"],
+    function: ["functionResponse"],
+    model: ["text", "functionCall"],
+    // System instructions shouldn't be in history anyway.
+    system: ["text"],
+};
+function validateChatHistory(history) {
+    let prevContent = false;
+    for (const currContent of history) {
+        const { role, parts } = currContent;
+        if (!prevContent && role !== "user") {
+            throw new GoogleGenerativeAIError(`First content should be with role 'user', got ${role}`);
+        }
+        if (!POSSIBLE_ROLES.includes(role)) {
+            throw new GoogleGenerativeAIError(`Each item should include role field. Got ${role} but valid roles are: ${JSON.stringify(POSSIBLE_ROLES)}`);
+        }
+        if (!Array.isArray(parts)) {
+            throw new GoogleGenerativeAIError("Content should have 'parts' property with an array of Parts");
+        }
+        if (parts.length === 0) {
+            throw new GoogleGenerativeAIError("Each Content should have at least one part");
+        }
+        const countFields = {
+            text: 0,
+            inlineData: 0,
+            functionCall: 0,
+            functionResponse: 0,
+            fileData: 0,
+        };
+        for (const part of parts) {
+            for (const key of VALID_PART_FIELDS) {
+                if (key in part) {
+                    countFields[key] += 1;
+                }
+            }
+        }
+        const validParts = VALID_PARTS_PER_ROLE[role];
+        for (const key of VALID_PART_FIELDS) {
+            if (!validParts.includes(key) && countFields[key] > 0) {
+                throw new GoogleGenerativeAIError(`Content with role '${role}' can't contain '${key}' part`);
+            }
+        }
+        prevContent = true;
+    }
+}
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Do not log a message for this error.
+ */
+const SILENT_ERROR = "SILENT_ERROR";
+/**
+ * ChatSession class that enables sending chat messages and stores
+ * history of sent and received messages so far.
+ *
+ * @public
+ */
+class ChatSession {
+    constructor(apiKey, model, params, requestOptions) {
+        this.model = model;
+        this.params = params;
+        this.requestOptions = requestOptions;
+        this._history = [];
+        this._sendPromise = Promise.resolve();
+        this._apiKey = apiKey;
+        if (params === null || params === void 0 ? void 0 : params.history) {
+            validateChatHistory(params.history);
+            this._history = params.history;
+        }
+    }
+    /**
+     * Gets the chat history so far. Blocked prompts are not added to history.
+     * Blocked candidates are not added to history, nor are the prompts that
+     * generated them.
+     */
+    async getHistory() {
+        await this._sendPromise;
+        return this._history;
+    }
+    /**
+     * Sends a chat message and receives a non-streaming
+     * {@link GenerateContentResult}
+     */
+    async sendMessage(request) {
+        var _a, _b, _c, _d, _e;
+        await this._sendPromise;
+        const newContent = formatNewContent(request);
+        const generateContentRequest = {
+            safetySettings: (_a = this.params) === null || _a === void 0 ? void 0 : _a.safetySettings,
+            generationConfig: (_b = this.params) === null || _b === void 0 ? void 0 : _b.generationConfig,
+            tools: (_c = this.params) === null || _c === void 0 ? void 0 : _c.tools,
+            toolConfig: (_d = this.params) === null || _d === void 0 ? void 0 : _d.toolConfig,
+            systemInstruction: (_e = this.params) === null || _e === void 0 ? void 0 : _e.systemInstruction,
+            contents: [...this._history, newContent],
+        };
+        let finalResult;
+        // Add onto the chain.
+        this._sendPromise = this._sendPromise
+            .then(() => generateContent(this._apiKey, this.model, generateContentRequest, this.requestOptions))
+            .then((result) => {
+            var _a;
+            if (result.response.candidates &&
+                result.response.candidates.length > 0) {
+                this._history.push(newContent);
+                const responseContent = Object.assign({ parts: [], 
+                    // Response seems to come back without a role set.
+                    role: "model" }, (_a = result.response.candidates) === null || _a === void 0 ? void 0 : _a[0].content);
+                this._history.push(responseContent);
+            }
+            else {
+                const blockErrorMessage = formatBlockErrorMessage(result.response);
+                if (blockErrorMessage) {
+                    console.warn(`sendMessage() was unsuccessful. ${blockErrorMessage}. Inspect response object for details.`);
+                }
+            }
+            finalResult = result;
+        });
+        await this._sendPromise;
+        return finalResult;
+    }
+    /**
+     * Sends a chat message and receives the response as a
+     * {@link GenerateContentStreamResult} containing an iterable stream
+     * and a response promise.
+     */
+    async sendMessageStream(request) {
+        var _a, _b, _c, _d, _e;
+        await this._sendPromise;
+        const newContent = formatNewContent(request);
+        const generateContentRequest = {
+            safetySettings: (_a = this.params) === null || _a === void 0 ? void 0 : _a.safetySettings,
+            generationConfig: (_b = this.params) === null || _b === void 0 ? void 0 : _b.generationConfig,
+            tools: (_c = this.params) === null || _c === void 0 ? void 0 : _c.tools,
+            toolConfig: (_d = this.params) === null || _d === void 0 ? void 0 : _d.toolConfig,
+            systemInstruction: (_e = this.params) === null || _e === void 0 ? void 0 : _e.systemInstruction,
+            contents: [...this._history, newContent],
+        };
+        const streamPromise = generateContentStream(this._apiKey, this.model, generateContentRequest, this.requestOptions);
+        // Add onto the chain.
+        this._sendPromise = this._sendPromise
+            .then(() => streamPromise)
+            // This must be handled to avoid unhandled rejection, but jump
+            // to the final catch block with a label to not log this error.
+            .catch((_ignored) => {
+            throw new Error(SILENT_ERROR);
+        })
+            .then((streamResult) => streamResult.response)
+            .then((response) => {
+            if (response.candidates && response.candidates.length > 0) {
+                this._history.push(newContent);
+                const responseContent = Object.assign({}, response.candidates[0].content);
+                // Response seems to come back without a role set.
+                if (!responseContent.role) {
+                    responseContent.role = "model";
+                }
+                this._history.push(responseContent);
+            }
+            else {
+                const blockErrorMessage = formatBlockErrorMessage(response);
+                if (blockErrorMessage) {
+                    console.warn(`sendMessageStream() was unsuccessful. ${blockErrorMessage}. Inspect response object for details.`);
+                }
+            }
+        })
+            .catch((e) => {
+            // Errors in streamPromise are already catchable by the user as
+            // streamPromise is returned.
+            // Avoid duplicating the error message in logs.
+            if (e.message !== SILENT_ERROR) {
+                // Users do not have access to _sendPromise to catch errors
+                // downstream from streamPromise, so they should not throw.
+                console.error(e);
+            }
+        });
+        return streamPromise;
+    }
+}
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function countTokens(apiKey, model, params, requestOptions) {
+    const response = await makeRequest(model, Task.COUNT_TOKENS, apiKey, false, JSON.stringify(Object.assign(Object.assign({}, params), { model })), requestOptions);
+    return response.json();
+}
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function embedContent(apiKey, model, params, requestOptions) {
+    const response = await makeRequest(model, Task.EMBED_CONTENT, apiKey, false, JSON.stringify(params), requestOptions);
+    return response.json();
+}
+async function batchEmbedContents(apiKey, model, params, requestOptions) {
+    const requestsWithModel = params.requests.map((request) => {
+        return Object.assign(Object.assign({}, request), { model });
+    });
+    const response = await makeRequest(model, Task.BATCH_EMBED_CONTENTS, apiKey, false, JSON.stringify({ requests: requestsWithModel }), requestOptions);
+    return response.json();
+}
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Class for generative model APIs.
+ * @public
+ */
+class GenerativeModel {
+    constructor(apiKey, modelParams, requestOptions) {
+        this.apiKey = apiKey;
+        if (modelParams.model.includes("/")) {
+            // Models may be named "models/model-name" or "tunedModels/model-name"
+            this.model = modelParams.model;
+        }
+        else {
+            // If path is not included, assume it's a non-tuned model.
+            this.model = `models/${modelParams.model}`;
+        }
+        this.generationConfig = modelParams.generationConfig || {};
+        this.safetySettings = modelParams.safetySettings || [];
+        this.tools = modelParams.tools;
+        this.toolConfig = modelParams.toolConfig;
+        this.systemInstruction = formatSystemInstruction(modelParams.systemInstruction);
+        this.requestOptions = requestOptions || {};
+    }
+    /**
+     * Makes a single non-streaming call to the model
+     * and returns an object containing a single {@link GenerateContentResponse}.
+     */
+    async generateContent(request) {
+        const formattedParams = formatGenerateContentInput(request);
+        return generateContent(this.apiKey, this.model, Object.assign({ generationConfig: this.generationConfig, safetySettings: this.safetySettings, tools: this.tools, toolConfig: this.toolConfig, systemInstruction: this.systemInstruction }, formattedParams), this.requestOptions);
+    }
+    /**
+     * Makes a single streaming call to the model
+     * and returns an object containing an iterable stream that iterates
+     * over all chunks in the streaming response as well as
+     * a promise that returns the final aggregated response.
+     */
+    async generateContentStream(request) {
+        const formattedParams = formatGenerateContentInput(request);
+        return generateContentStream(this.apiKey, this.model, Object.assign({ generationConfig: this.generationConfig, safetySettings: this.safetySettings, tools: this.tools, toolConfig: this.toolConfig, systemInstruction: this.systemInstruction }, formattedParams), this.requestOptions);
+    }
+    /**
+     * Gets a new {@link ChatSession} instance which can be used for
+     * multi-turn chats.
+     */
+    startChat(startChatParams) {
+        return new ChatSession(this.apiKey, this.model, Object.assign({ generationConfig: this.generationConfig, safetySettings: this.safetySettings, tools: this.tools, toolConfig: this.toolConfig, systemInstruction: this.systemInstruction }, startChatParams), this.requestOptions);
+    }
+    /**
+     * Counts the tokens in the provided request.
+     */
+    async countTokens(request) {
+        const formattedParams = formatGenerateContentInput(request);
+        return countTokens(this.apiKey, this.model, formattedParams, this.requestOptions);
+    }
+    /**
+     * Embeds the provided content.
+     */
+    async embedContent(request) {
+        const formattedParams = formatEmbedContentInput(request);
+        return embedContent(this.apiKey, this.model, formattedParams, this.requestOptions);
+    }
+    /**
+     * Embeds an array of {@link EmbedContentRequest}s.
+     */
+    async batchEmbedContents(batchEmbedContentRequest) {
+        return batchEmbedContents(this.apiKey, this.model, batchEmbedContentRequest, this.requestOptions);
+    }
+}
+
+/**
+ * @license
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Top-level class for this SDK
+ * @public
+ */
+class GoogleGenerativeAI {
+    constructor(apiKey) {
+        this.apiKey = apiKey;
+    }
+    /**
+     * Gets a {@link GenerativeModel} instance for the provided model name.
+     */
+    getGenerativeModel(modelParams, requestOptions) {
+        if (!modelParams.model) {
+            throw new GoogleGenerativeAIError(`Must provide a model name. ` +
+                `Example: genai.getGenerativeModel({ model: 'my-model-name' })`);
+        }
+        return new GenerativeModel(this.apiKey, modelParams, requestOptions);
+    }
+}
+
+
+//# sourceMappingURL=index.mjs.map
+
 
 /***/ }),
 
@@ -103,7 +7887,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ \"./node_modules/firebase/app/dist/esm/index.esm.js\");\n/* harmony import */ var firebase_analytics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/analytics */ \"./node_modules/firebase/analytics/dist/esm/index.esm.js\");\n// Import the functions you need from the SDKs you need\n\n\n// TODO: Add SDKs for Firebase products that you want to use\n// https://firebase.google.com/docs/web/setup#available-libraries\n\n// Your web app's Firebase configuration\n// For Firebase JS SDK v7.20.0 and later, measurementId is optional\nvar firebaseConfig = {\n  apiKey: \"AIzaSyBVdoHeaAyqSjvPLnhR-bk8uYUEIJU5v_Y\",\n  authDomain: \"daveads-storage.firebaseapp.com\",\n  projectId: \"daveads-storage\",\n  storageBucket: \"daveads-storage.appspot.com\",\n  messagingSenderId: \"307422893719\",\n  appId: \"1:307422893719:web:9390fb3ccabd8a4b9d3bd2\",\n  measurementId: \"G-6TMSEMBY1B\"\n};\n\n// Initialize Firebase\nvar app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)(firebaseConfig);\nvar analytics = (0,firebase_analytics__WEBPACK_IMPORTED_MODULE_1__.getAnalytics)(app);\n\n//# sourceURL=webpack://daveads.github.io/./src/core/cache.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/esm/index.esm.js");
+/* harmony import */ var firebase_analytics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/analytics */ "./node_modules/firebase/analytics/dist/esm/index.esm.js");
+// Import the functions you need from the SDKs you need
+
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
+  apiKey: "AIzaSyBVdoHeaAyqSjvPLnhR-bk8uYUEIJU5v_Y",
+  authDomain: "daveads-storage.firebaseapp.com",
+  projectId: "daveads-storage",
+  storageBucket: "daveads-storage.appspot.com",
+  messagingSenderId: "307422893719",
+  appId: "1:307422893719:web:9390fb3ccabd8a4b9d3bd2",
+  measurementId: "G-6TMSEMBY1B"
+};
+
+// Initialize Firebase
+var app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)(firebaseConfig);
+var analytics = (0,firebase_analytics__WEBPACK_IMPORTED_MODULE_1__.getAnalytics)(app);
 
 /***/ }),
 
@@ -114,7 +7921,63 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var fire
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _google_generative_ai__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @google/generative-ai */ \"./node_modules/@google/generative-ai/dist/index.mjs\");\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction _regeneratorRuntime() { \"use strict\"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = \"function\" == typeof Symbol ? Symbol : {}, a = i.iterator || \"@@iterator\", c = i.asyncIterator || \"@@asyncIterator\", u = i.toStringTag || \"@@toStringTag\"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, \"\"); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, \"_invoke\", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: \"normal\", arg: t.call(e, r) }; } catch (t) { return { type: \"throw\", arg: t }; } } e.wrap = wrap; var h = \"suspendedStart\", l = \"suspendedYield\", f = \"executing\", s = \"completed\", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { [\"next\", \"throw\", \"return\"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if (\"throw\" !== c.type) { var u = c.arg, h = u.value; return h && \"object\" == _typeof(h) && n.call(h, \"__await\") ? e.resolve(h.__await).then(function (t) { invoke(\"next\", t, i, a); }, function (t) { invoke(\"throw\", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke(\"throw\", t, i, a); }); } a(c.arg); } var r; o(this, \"_invoke\", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error(\"Generator is already running\"); if (o === s) { if (\"throw\" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if (\"next\" === n.method) n.sent = n._sent = n.arg;else if (\"throw\" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else \"return\" === n.method && n.abrupt(\"return\", n.arg); o = f; var p = tryCatch(e, r, n); if (\"normal\" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } \"throw\" === p.type && (o = s, n.method = \"throw\", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, \"throw\" === n && e.iterator[\"return\"] && (r.method = \"return\", r.arg = t, maybeInvokeDelegate(e, r), \"throw\" === r.method) || \"return\" !== n && (r.method = \"throw\", r.arg = new TypeError(\"The iterator does not provide a '\" + n + \"' method\")), y; var i = tryCatch(o, e.iterator, r.arg); if (\"throw\" === i.type) return r.method = \"throw\", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, \"return\" !== r.method && (r.method = \"next\", r.arg = t), r.delegate = null, y) : a : (r.method = \"throw\", r.arg = new TypeError(\"iterator result is not an object\"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = \"normal\", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: \"root\" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || \"\" === e) { var r = e[a]; if (r) return r.call(e); if (\"function\" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + \" is not iterable\"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, \"constructor\", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, \"constructor\", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, \"GeneratorFunction\"), e.isGeneratorFunction = function (t) { var e = \"function\" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || \"GeneratorFunction\" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, \"GeneratorFunction\")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, \"Generator\"), define(g, a, function () { return this; }), define(g, \"toString\", function () { return \"[object Generator]\"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = \"next\", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) \"t\" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if (\"throw\" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = \"throw\", a.arg = e, r.next = n, o && (r.method = \"next\", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if (\"root\" === i.tryLoc) return handle(\"end\"); if (i.tryLoc <= this.prev) { var c = n.call(i, \"catchLoc\"), u = n.call(i, \"finallyLoc\"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error(\"try statement without catch or finally\"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, \"finallyLoc\") && this.prev < o.finallyLoc) { var i = o; break; } } i && (\"break\" === t || \"continue\" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = \"next\", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if (\"throw\" === t.type) throw t.arg; return \"break\" === t.type || \"continue\" === t.type ? this.next = t.arg : \"return\" === t.type ? (this.rval = this.arg = t.arg, this.method = \"return\", this.next = \"end\") : \"normal\" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, \"catch\": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if (\"throw\" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error(\"illegal catch attempt\"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, \"next\" === this.method && (this.arg = t), y; } }, e; }\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n\n// Access your API key\nvar API_KEY = \"AIzaSyDrhSf6PErGZ3hxq5C9zCA7azSfpD5BhgI\";\nvar genAI = new _google_generative_ai__WEBPACK_IMPORTED_MODULE_0__.GoogleGenerativeAI(API_KEY);\nfunction run() {\n  return _run.apply(this, arguments);\n}\nfunction _run() {\n  _run = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {\n    var model, quotes, randomIndex, random_prompt, Result, response, resp;\n    return _regeneratorRuntime().wrap(function _callee$(_context) {\n      while (1) switch (_context.prev = _context.next) {\n        case 0:\n          // For text-only input, use the gemini-pro model\n          model = genAI.getGenerativeModel({\n            model: \"gemini-pro\"\n          });\n          quotes = [\"A short quote in Physics\", \"A short quote in Mathematics\"];\n          randomIndex = Math.floor(Math.random() * quotes.length);\n          random_prompt = quotes[randomIndex];\n          _context.next = 6;\n          return model.generateContent(random_prompt);\n        case 6:\n          Result = _context.sent;\n          response = Result.response;\n          resp = response.text();\n          return _context.abrupt(\"return\", resp);\n        case 10:\n        case \"end\":\n          return _context.stop();\n      }\n    }, _callee);\n  }));\n  return _run.apply(this, arguments);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (run);\n\n/*\ndocument.addEventListener(\"DOMContentLoaded\", async function() {\n    var hello = await run();\n    if(document.getElementById('resp')){\n        document.getElementById('container').style.display = \"block\";\n        document.getElementById('resp').textContent = hello;\n    }\n  \n  });\n*/\n\n//# sourceURL=webpack://daveads.github.io/./src/core/quotes_gemini.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _google_generative_ai__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @google/generative-ai */ "./node_modules/@google/generative-ai/dist/index.mjs");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+// Access your API key
+var API_KEY = "AIzaSyDrhSf6PErGZ3hxq5C9zCA7azSfpD5BhgI";
+var genAI = new _google_generative_ai__WEBPACK_IMPORTED_MODULE_0__.GoogleGenerativeAI(API_KEY);
+function run() {
+  return _run.apply(this, arguments);
+}
+function _run() {
+  _run = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var model, quotes, randomIndex, random_prompt, Result, response, resp;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          // For text-only input, use the gemini-pro model
+          model = genAI.getGenerativeModel({
+            model: "gemini-pro"
+          });
+          quotes = ["A short quote in Physics", "A short quote in Mathematics"];
+          randomIndex = Math.floor(Math.random() * quotes.length);
+          random_prompt = quotes[randomIndex];
+          _context.next = 6;
+          return model.generateContent(random_prompt);
+        case 6:
+          Result = _context.sent;
+          response = Result.response;
+          resp = response.text();
+          return _context.abrupt("return", resp);
+        case 10:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return _run.apply(this, arguments);
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (run);
+
+/*
+document.addEventListener("DOMContentLoaded", async function() {
+    var hello = await run();
+    if(document.getElementById('resp')){
+        document.getElementById('container').style.display = "block";
+        document.getElementById('resp').textContent = hello;
+    }
+  
+  });
+*/
 
 /***/ }),
 
@@ -125,7 +7988,56 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _core_quotes_gemini_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/quotes_gemini.js */ \"./src/core/quotes_gemini.js\");\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction _regeneratorRuntime() { \"use strict\"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = \"function\" == typeof Symbol ? Symbol : {}, a = i.iterator || \"@@iterator\", c = i.asyncIterator || \"@@asyncIterator\", u = i.toStringTag || \"@@toStringTag\"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, \"\"); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, \"_invoke\", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: \"normal\", arg: t.call(e, r) }; } catch (t) { return { type: \"throw\", arg: t }; } } e.wrap = wrap; var h = \"suspendedStart\", l = \"suspendedYield\", f = \"executing\", s = \"completed\", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { [\"next\", \"throw\", \"return\"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if (\"throw\" !== c.type) { var u = c.arg, h = u.value; return h && \"object\" == _typeof(h) && n.call(h, \"__await\") ? e.resolve(h.__await).then(function (t) { invoke(\"next\", t, i, a); }, function (t) { invoke(\"throw\", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke(\"throw\", t, i, a); }); } a(c.arg); } var r; o(this, \"_invoke\", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error(\"Generator is already running\"); if (o === s) { if (\"throw\" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if (\"next\" === n.method) n.sent = n._sent = n.arg;else if (\"throw\" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else \"return\" === n.method && n.abrupt(\"return\", n.arg); o = f; var p = tryCatch(e, r, n); if (\"normal\" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } \"throw\" === p.type && (o = s, n.method = \"throw\", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, \"throw\" === n && e.iterator[\"return\"] && (r.method = \"return\", r.arg = t, maybeInvokeDelegate(e, r), \"throw\" === r.method) || \"return\" !== n && (r.method = \"throw\", r.arg = new TypeError(\"The iterator does not provide a '\" + n + \"' method\")), y; var i = tryCatch(o, e.iterator, r.arg); if (\"throw\" === i.type) return r.method = \"throw\", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, \"return\" !== r.method && (r.method = \"next\", r.arg = t), r.delegate = null, y) : a : (r.method = \"throw\", r.arg = new TypeError(\"iterator result is not an object\"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = \"normal\", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: \"root\" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || \"\" === e) { var r = e[a]; if (r) return r.call(e); if (\"function\" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + \" is not iterable\"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, \"constructor\", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, \"constructor\", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, \"GeneratorFunction\"), e.isGeneratorFunction = function (t) { var e = \"function\" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || \"GeneratorFunction\" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, \"GeneratorFunction\")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, \"Generator\"), define(g, a, function () { return this; }), define(g, \"toString\", function () { return \"[object Generator]\"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = \"next\", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) \"t\" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if (\"throw\" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = \"throw\", a.arg = e, r.next = n, o && (r.method = \"next\", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if (\"root\" === i.tryLoc) return handle(\"end\"); if (i.tryLoc <= this.prev) { var c = n.call(i, \"catchLoc\"), u = n.call(i, \"finallyLoc\"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error(\"try statement without catch or finally\"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, \"finallyLoc\") && this.prev < o.finallyLoc) { var i = o; break; } } i && (\"break\" === t || \"continue\" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = \"next\", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if (\"throw\" === t.type) throw t.arg; return \"break\" === t.type || \"continue\" === t.type ? this.next = t.arg : \"return\" === t.type ? (this.rval = this.arg = t.arg, this.method = \"return\", this.next = \"end\") : \"normal\" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, \"catch\": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if (\"throw\" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error(\"illegal catch attempt\"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, \"next\" === this.method && (this.arg = t), y; } }, e; }\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\nfunction helloWorld() {\n  return _helloWorld.apply(this, arguments);\n}\nfunction _helloWorld() {\n  _helloWorld = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {\n    return _regeneratorRuntime().wrap(function _callee2$(_context2) {\n      while (1) switch (_context2.prev = _context2.next) {\n        case 0:\n          _context2.next = 2;\n          return new Promise(function (resolve) {\n            setTimeout(function () {\n              resolve();\n            }); // wait 2 seconds before resolving\n          });\n        case 2:\n          return _context2.abrupt(\"return\", \"Hello World Test\");\n        case 3:\n        case \"end\":\n          return _context2.stop();\n      }\n    }, _callee2);\n  }));\n  return _helloWorld.apply(this, arguments);\n}\ndocument.addEventListener(\"DOMContentLoaded\", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {\n  var hello;\n  return _regeneratorRuntime().wrap(function _callee$(_context) {\n    while (1) switch (_context.prev = _context.next) {\n      case 0:\n        _context.next = 2;\n        return (0,_core_quotes_gemini_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n      case 2:\n        hello = _context.sent;\n        if (document.getElementById('resp')) {\n          document.getElementById('container').style.display = \"block\";\n          document.getElementById('resp').textContent = hello;\n        }\n      case 4:\n      case \"end\":\n        return _context.stop();\n    }\n  }, _callee);\n})));\n\n//# sourceURL=webpack://daveads.github.io/./src/main.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_quotes_gemini_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/quotes_gemini.js */ "./src/core/quotes_gemini.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function helloWorld() {
+  return _helloWorld.apply(this, arguments);
+}
+function _helloWorld() {
+  _helloWorld = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+      while (1) switch (_context2.prev = _context2.next) {
+        case 0:
+          _context2.next = 2;
+          return new Promise(function (resolve) {
+            setTimeout(function () {
+              resolve();
+            }); // wait 2 seconds before resolving
+          });
+        case 2:
+          return _context2.abrupt("return", "Hello World Test");
+        case 3:
+        case "end":
+          return _context2.stop();
+      }
+    }, _callee2);
+  }));
+  return _helloWorld.apply(this, arguments);
+}
+document.addEventListener("DOMContentLoaded", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+  var hello;
+  return _regeneratorRuntime().wrap(function _callee$(_context) {
+    while (1) switch (_context.prev = _context.next) {
+      case 0:
+        _context.next = 2;
+        return (0,_core_quotes_gemini_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+      case 2:
+        hello = _context.sent;
+        if (document.getElementById('resp')) {
+          document.getElementById('container').style.display = "block";
+          document.getElementById('resp').textContent = hello;
+        }
+      case 4:
+      case "end":
+        return _context.stop();
+    }
+  }, _callee);
+})));
 
 /***/ }),
 
@@ -136,7 +8048,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _cor
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//import 'dotenv/config'\n/**\nrequire('dotenv').config()\n\nconsole.log(process.env.S3_BUCKET)\nconsole.log(\"Testing\")\n */\n\n//# sourceURL=webpack://daveads.github.io/./src/test.js?");
+__webpack_require__.r(__webpack_exports__);
+//import 'dotenv/config'
+/**
+require('dotenv').config()
+
+console.log(process.env.S3_BUCKET)
+console.log("Testing")
+ */
 
 /***/ }),
 
@@ -147,7 +8066,25 @@ eval("__webpack_require__.r(__webpack_exports__);\n//import 'dotenv/config'\n/**
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getAnalytics: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.getAnalytics),\n/* harmony export */   getGoogleAnalyticsClientId: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.getGoogleAnalyticsClientId),\n/* harmony export */   initializeAnalytics: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.initializeAnalytics),\n/* harmony export */   isSupported: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.isSupported),\n/* harmony export */   logEvent: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.logEvent),\n/* harmony export */   setAnalyticsCollectionEnabled: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.setAnalyticsCollectionEnabled),\n/* harmony export */   setConsent: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.setConsent),\n/* harmony export */   setCurrentScreen: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.setCurrentScreen),\n/* harmony export */   setDefaultEventParameters: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.setDefaultEventParameters),\n/* harmony export */   setUserId: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.setUserId),\n/* harmony export */   setUserProperties: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.setUserProperties),\n/* harmony export */   settings: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.settings)\n/* harmony export */ });\n/* harmony import */ var _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/analytics */ \"./node_modules/@firebase/analytics/dist/esm/index.esm2017.js\");\n\n//# sourceMappingURL=index.esm.js.map\n\n\n//# sourceURL=webpack://daveads.github.io/./node_modules/firebase/analytics/dist/esm/index.esm.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getAnalytics: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.getAnalytics),
+/* harmony export */   getGoogleAnalyticsClientId: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.getGoogleAnalyticsClientId),
+/* harmony export */   initializeAnalytics: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.initializeAnalytics),
+/* harmony export */   isSupported: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.isSupported),
+/* harmony export */   logEvent: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.logEvent),
+/* harmony export */   setAnalyticsCollectionEnabled: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.setAnalyticsCollectionEnabled),
+/* harmony export */   setConsent: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.setConsent),
+/* harmony export */   setCurrentScreen: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.setCurrentScreen),
+/* harmony export */   setDefaultEventParameters: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.setDefaultEventParameters),
+/* harmony export */   setUserId: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.setUserId),
+/* harmony export */   setUserProperties: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.setUserProperties),
+/* harmony export */   settings: () => (/* reexport safe */ _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__.settings)
+/* harmony export */ });
+/* harmony import */ var _firebase_analytics__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/analytics */ "./node_modules/@firebase/analytics/dist/esm/index.esm2017.js");
+
+//# sourceMappingURL=index.esm.js.map
+
 
 /***/ }),
 
@@ -158,7 +8095,57 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   FirebaseError: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.FirebaseError),\n/* harmony export */   SDK_VERSION: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.SDK_VERSION),\n/* harmony export */   _DEFAULT_ENTRY_NAME: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._DEFAULT_ENTRY_NAME),\n/* harmony export */   _addComponent: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._addComponent),\n/* harmony export */   _addOrOverwriteComponent: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._addOrOverwriteComponent),\n/* harmony export */   _apps: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._apps),\n/* harmony export */   _clearComponents: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._clearComponents),\n/* harmony export */   _components: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._components),\n/* harmony export */   _getProvider: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._getProvider),\n/* harmony export */   _isFirebaseApp: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._isFirebaseApp),\n/* harmony export */   _isFirebaseServerApp: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._isFirebaseServerApp),\n/* harmony export */   _registerComponent: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._registerComponent),\n/* harmony export */   _removeServiceInstance: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._removeServiceInstance),\n/* harmony export */   _serverApps: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._serverApps),\n/* harmony export */   deleteApp: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.deleteApp),\n/* harmony export */   getApp: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.getApp),\n/* harmony export */   getApps: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.getApps),\n/* harmony export */   initializeApp: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp),\n/* harmony export */   initializeServerApp: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeServerApp),\n/* harmony export */   onLog: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.onLog),\n/* harmony export */   registerVersion: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.registerVersion),\n/* harmony export */   setLogLevel: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.setLogLevel)\n/* harmony export */ });\n/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/app */ \"./node_modules/@firebase/app/dist/esm/index.esm2017.js\");\n\n\n\nvar name = \"firebase\";\nvar version = \"10.12.0\";\n\n/**\r\n * @license\r\n * Copyright 2020 Google LLC\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n * you may not use this file except in compliance with the License.\r\n * You may obtain a copy of the License at\r\n *\r\n *   http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software\r\n * distributed under the License is distributed on an \"AS IS\" BASIS,\r\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n * See the License for the specific language governing permissions and\r\n * limitations under the License.\r\n */\r\n(0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.registerVersion)(name, version, 'app');\n//# sourceMappingURL=index.esm.js.map\n\n\n//# sourceURL=webpack://daveads.github.io/./node_modules/firebase/app/dist/esm/index.esm.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   FirebaseError: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.FirebaseError),
+/* harmony export */   SDK_VERSION: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.SDK_VERSION),
+/* harmony export */   _DEFAULT_ENTRY_NAME: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._DEFAULT_ENTRY_NAME),
+/* harmony export */   _addComponent: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._addComponent),
+/* harmony export */   _addOrOverwriteComponent: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._addOrOverwriteComponent),
+/* harmony export */   _apps: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._apps),
+/* harmony export */   _clearComponents: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._clearComponents),
+/* harmony export */   _components: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._components),
+/* harmony export */   _getProvider: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._getProvider),
+/* harmony export */   _isFirebaseApp: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._isFirebaseApp),
+/* harmony export */   _isFirebaseServerApp: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._isFirebaseServerApp),
+/* harmony export */   _registerComponent: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._registerComponent),
+/* harmony export */   _removeServiceInstance: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._removeServiceInstance),
+/* harmony export */   _serverApps: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__._serverApps),
+/* harmony export */   deleteApp: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.deleteApp),
+/* harmony export */   getApp: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.getApp),
+/* harmony export */   getApps: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.getApps),
+/* harmony export */   initializeApp: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp),
+/* harmony export */   initializeServerApp: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeServerApp),
+/* harmony export */   onLog: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.onLog),
+/* harmony export */   registerVersion: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.registerVersion),
+/* harmony export */   setLogLevel: () => (/* reexport safe */ _firebase_app__WEBPACK_IMPORTED_MODULE_0__.setLogLevel)
+/* harmony export */ });
+/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/app */ "./node_modules/@firebase/app/dist/esm/index.esm2017.js");
+
+
+
+var name = "firebase";
+var version = "10.12.0";
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+(0,_firebase_app__WEBPACK_IMPORTED_MODULE_0__.registerVersion)(name, version, 'app');
+//# sourceMappingURL=index.esm.js.map
+
 
 /***/ }),
 
@@ -169,7 +8156,110 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   deleteDB: () => (/* binding */ deleteDB),\n/* harmony export */   openDB: () => (/* binding */ openDB),\n/* harmony export */   unwrap: () => (/* reexport safe */ _wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.u),\n/* harmony export */   wrap: () => (/* reexport safe */ _wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.w)\n/* harmony export */ });\n/* harmony import */ var _wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./wrap-idb-value.js */ \"./node_modules/idb/build/wrap-idb-value.js\");\n\n\n\n/**\n * Open a database.\n *\n * @param name Name of the database.\n * @param version Schema version.\n * @param callbacks Additional callbacks.\n */\nfunction openDB(name, version, { blocked, upgrade, blocking, terminated } = {}) {\n    const request = indexedDB.open(name, version);\n    const openPromise = (0,_wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.w)(request);\n    if (upgrade) {\n        request.addEventListener('upgradeneeded', (event) => {\n            upgrade((0,_wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.w)(request.result), event.oldVersion, event.newVersion, (0,_wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.w)(request.transaction), event);\n        });\n    }\n    if (blocked) {\n        request.addEventListener('blocked', (event) => blocked(\n        // Casting due to https://github.com/microsoft/TypeScript-DOM-lib-generator/pull/1405\n        event.oldVersion, event.newVersion, event));\n    }\n    openPromise\n        .then((db) => {\n        if (terminated)\n            db.addEventListener('close', () => terminated());\n        if (blocking) {\n            db.addEventListener('versionchange', (event) => blocking(event.oldVersion, event.newVersion, event));\n        }\n    })\n        .catch(() => { });\n    return openPromise;\n}\n/**\n * Delete a database.\n *\n * @param name Name of the database.\n */\nfunction deleteDB(name, { blocked } = {}) {\n    const request = indexedDB.deleteDatabase(name);\n    if (blocked) {\n        request.addEventListener('blocked', (event) => blocked(\n        // Casting due to https://github.com/microsoft/TypeScript-DOM-lib-generator/pull/1405\n        event.oldVersion, event));\n    }\n    return (0,_wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.w)(request).then(() => undefined);\n}\n\nconst readMethods = ['get', 'getKey', 'getAll', 'getAllKeys', 'count'];\nconst writeMethods = ['put', 'add', 'delete', 'clear'];\nconst cachedMethods = new Map();\nfunction getMethod(target, prop) {\n    if (!(target instanceof IDBDatabase &&\n        !(prop in target) &&\n        typeof prop === 'string')) {\n        return;\n    }\n    if (cachedMethods.get(prop))\n        return cachedMethods.get(prop);\n    const targetFuncName = prop.replace(/FromIndex$/, '');\n    const useIndex = prop !== targetFuncName;\n    const isWrite = writeMethods.includes(targetFuncName);\n    if (\n    // Bail if the target doesn't exist on the target. Eg, getAll isn't in Edge.\n    !(targetFuncName in (useIndex ? IDBIndex : IDBObjectStore).prototype) ||\n        !(isWrite || readMethods.includes(targetFuncName))) {\n        return;\n    }\n    const method = async function (storeName, ...args) {\n        // isWrite ? 'readwrite' : undefined gzipps better, but fails in Edge :(\n        const tx = this.transaction(storeName, isWrite ? 'readwrite' : 'readonly');\n        let target = tx.store;\n        if (useIndex)\n            target = target.index(args.shift());\n        // Must reject if op rejects.\n        // If it's a write operation, must reject if tx.done rejects.\n        // Must reject with op rejection first.\n        // Must resolve with op value.\n        // Must handle both promises (no unhandled rejections)\n        return (await Promise.all([\n            target[targetFuncName](...args),\n            isWrite && tx.done,\n        ]))[0];\n    };\n    cachedMethods.set(prop, method);\n    return method;\n}\n(0,_wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.r)((oldTraps) => ({\n    ...oldTraps,\n    get: (target, prop, receiver) => getMethod(target, prop) || oldTraps.get(target, prop, receiver),\n    has: (target, prop) => !!getMethod(target, prop) || oldTraps.has(target, prop),\n}));\n\n\n\n\n//# sourceURL=webpack://daveads.github.io/./node_modules/idb/build/index.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   deleteDB: () => (/* binding */ deleteDB),
+/* harmony export */   openDB: () => (/* binding */ openDB),
+/* harmony export */   unwrap: () => (/* reexport safe */ _wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.u),
+/* harmony export */   wrap: () => (/* reexport safe */ _wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.w)
+/* harmony export */ });
+/* harmony import */ var _wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./wrap-idb-value.js */ "./node_modules/idb/build/wrap-idb-value.js");
+
+
+
+/**
+ * Open a database.
+ *
+ * @param name Name of the database.
+ * @param version Schema version.
+ * @param callbacks Additional callbacks.
+ */
+function openDB(name, version, { blocked, upgrade, blocking, terminated } = {}) {
+    const request = indexedDB.open(name, version);
+    const openPromise = (0,_wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.w)(request);
+    if (upgrade) {
+        request.addEventListener('upgradeneeded', (event) => {
+            upgrade((0,_wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.w)(request.result), event.oldVersion, event.newVersion, (0,_wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.w)(request.transaction), event);
+        });
+    }
+    if (blocked) {
+        request.addEventListener('blocked', (event) => blocked(
+        // Casting due to https://github.com/microsoft/TypeScript-DOM-lib-generator/pull/1405
+        event.oldVersion, event.newVersion, event));
+    }
+    openPromise
+        .then((db) => {
+        if (terminated)
+            db.addEventListener('close', () => terminated());
+        if (blocking) {
+            db.addEventListener('versionchange', (event) => blocking(event.oldVersion, event.newVersion, event));
+        }
+    })
+        .catch(() => { });
+    return openPromise;
+}
+/**
+ * Delete a database.
+ *
+ * @param name Name of the database.
+ */
+function deleteDB(name, { blocked } = {}) {
+    const request = indexedDB.deleteDatabase(name);
+    if (blocked) {
+        request.addEventListener('blocked', (event) => blocked(
+        // Casting due to https://github.com/microsoft/TypeScript-DOM-lib-generator/pull/1405
+        event.oldVersion, event));
+    }
+    return (0,_wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.w)(request).then(() => undefined);
+}
+
+const readMethods = ['get', 'getKey', 'getAll', 'getAllKeys', 'count'];
+const writeMethods = ['put', 'add', 'delete', 'clear'];
+const cachedMethods = new Map();
+function getMethod(target, prop) {
+    if (!(target instanceof IDBDatabase &&
+        !(prop in target) &&
+        typeof prop === 'string')) {
+        return;
+    }
+    if (cachedMethods.get(prop))
+        return cachedMethods.get(prop);
+    const targetFuncName = prop.replace(/FromIndex$/, '');
+    const useIndex = prop !== targetFuncName;
+    const isWrite = writeMethods.includes(targetFuncName);
+    if (
+    // Bail if the target doesn't exist on the target. Eg, getAll isn't in Edge.
+    !(targetFuncName in (useIndex ? IDBIndex : IDBObjectStore).prototype) ||
+        !(isWrite || readMethods.includes(targetFuncName))) {
+        return;
+    }
+    const method = async function (storeName, ...args) {
+        // isWrite ? 'readwrite' : undefined gzipps better, but fails in Edge :(
+        const tx = this.transaction(storeName, isWrite ? 'readwrite' : 'readonly');
+        let target = tx.store;
+        if (useIndex)
+            target = target.index(args.shift());
+        // Must reject if op rejects.
+        // If it's a write operation, must reject if tx.done rejects.
+        // Must reject with op rejection first.
+        // Must resolve with op value.
+        // Must handle both promises (no unhandled rejections)
+        return (await Promise.all([
+            target[targetFuncName](...args),
+            isWrite && tx.done,
+        ]))[0];
+    };
+    cachedMethods.set(prop, method);
+    return method;
+}
+(0,_wrap_idb_value_js__WEBPACK_IMPORTED_MODULE_0__.r)((oldTraps) => ({
+    ...oldTraps,
+    get: (target, prop, receiver) => getMethod(target, prop) || oldTraps.get(target, prop, receiver),
+    has: (target, prop) => !!getMethod(target, prop) || oldTraps.has(target, prop),
+}));
+
+
+
 
 /***/ }),
 
@@ -180,7 +8270,200 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   a: () => (/* binding */ reverseTransformCache),\n/* harmony export */   i: () => (/* binding */ instanceOfAny),\n/* harmony export */   r: () => (/* binding */ replaceTraps),\n/* harmony export */   u: () => (/* binding */ unwrap),\n/* harmony export */   w: () => (/* binding */ wrap)\n/* harmony export */ });\nconst instanceOfAny = (object, constructors) => constructors.some((c) => object instanceof c);\n\nlet idbProxyableTypes;\nlet cursorAdvanceMethods;\n// This is a function to prevent it throwing up in node environments.\nfunction getIdbProxyableTypes() {\n    return (idbProxyableTypes ||\n        (idbProxyableTypes = [\n            IDBDatabase,\n            IDBObjectStore,\n            IDBIndex,\n            IDBCursor,\n            IDBTransaction,\n        ]));\n}\n// This is a function to prevent it throwing up in node environments.\nfunction getCursorAdvanceMethods() {\n    return (cursorAdvanceMethods ||\n        (cursorAdvanceMethods = [\n            IDBCursor.prototype.advance,\n            IDBCursor.prototype.continue,\n            IDBCursor.prototype.continuePrimaryKey,\n        ]));\n}\nconst cursorRequestMap = new WeakMap();\nconst transactionDoneMap = new WeakMap();\nconst transactionStoreNamesMap = new WeakMap();\nconst transformCache = new WeakMap();\nconst reverseTransformCache = new WeakMap();\nfunction promisifyRequest(request) {\n    const promise = new Promise((resolve, reject) => {\n        const unlisten = () => {\n            request.removeEventListener('success', success);\n            request.removeEventListener('error', error);\n        };\n        const success = () => {\n            resolve(wrap(request.result));\n            unlisten();\n        };\n        const error = () => {\n            reject(request.error);\n            unlisten();\n        };\n        request.addEventListener('success', success);\n        request.addEventListener('error', error);\n    });\n    promise\n        .then((value) => {\n        // Since cursoring reuses the IDBRequest (*sigh*), we cache it for later retrieval\n        // (see wrapFunction).\n        if (value instanceof IDBCursor) {\n            cursorRequestMap.set(value, request);\n        }\n        // Catching to avoid \"Uncaught Promise exceptions\"\n    })\n        .catch(() => { });\n    // This mapping exists in reverseTransformCache but doesn't doesn't exist in transformCache. This\n    // is because we create many promises from a single IDBRequest.\n    reverseTransformCache.set(promise, request);\n    return promise;\n}\nfunction cacheDonePromiseForTransaction(tx) {\n    // Early bail if we've already created a done promise for this transaction.\n    if (transactionDoneMap.has(tx))\n        return;\n    const done = new Promise((resolve, reject) => {\n        const unlisten = () => {\n            tx.removeEventListener('complete', complete);\n            tx.removeEventListener('error', error);\n            tx.removeEventListener('abort', error);\n        };\n        const complete = () => {\n            resolve();\n            unlisten();\n        };\n        const error = () => {\n            reject(tx.error || new DOMException('AbortError', 'AbortError'));\n            unlisten();\n        };\n        tx.addEventListener('complete', complete);\n        tx.addEventListener('error', error);\n        tx.addEventListener('abort', error);\n    });\n    // Cache it for later retrieval.\n    transactionDoneMap.set(tx, done);\n}\nlet idbProxyTraps = {\n    get(target, prop, receiver) {\n        if (target instanceof IDBTransaction) {\n            // Special handling for transaction.done.\n            if (prop === 'done')\n                return transactionDoneMap.get(target);\n            // Polyfill for objectStoreNames because of Edge.\n            if (prop === 'objectStoreNames') {\n                return target.objectStoreNames || transactionStoreNamesMap.get(target);\n            }\n            // Make tx.store return the only store in the transaction, or undefined if there are many.\n            if (prop === 'store') {\n                return receiver.objectStoreNames[1]\n                    ? undefined\n                    : receiver.objectStore(receiver.objectStoreNames[0]);\n            }\n        }\n        // Else transform whatever we get back.\n        return wrap(target[prop]);\n    },\n    set(target, prop, value) {\n        target[prop] = value;\n        return true;\n    },\n    has(target, prop) {\n        if (target instanceof IDBTransaction &&\n            (prop === 'done' || prop === 'store')) {\n            return true;\n        }\n        return prop in target;\n    },\n};\nfunction replaceTraps(callback) {\n    idbProxyTraps = callback(idbProxyTraps);\n}\nfunction wrapFunction(func) {\n    // Due to expected object equality (which is enforced by the caching in `wrap`), we\n    // only create one new func per func.\n    // Edge doesn't support objectStoreNames (booo), so we polyfill it here.\n    if (func === IDBDatabase.prototype.transaction &&\n        !('objectStoreNames' in IDBTransaction.prototype)) {\n        return function (storeNames, ...args) {\n            const tx = func.call(unwrap(this), storeNames, ...args);\n            transactionStoreNamesMap.set(tx, storeNames.sort ? storeNames.sort() : [storeNames]);\n            return wrap(tx);\n        };\n    }\n    // Cursor methods are special, as the behaviour is a little more different to standard IDB. In\n    // IDB, you advance the cursor and wait for a new 'success' on the IDBRequest that gave you the\n    // cursor. It's kinda like a promise that can resolve with many values. That doesn't make sense\n    // with real promises, so each advance methods returns a new promise for the cursor object, or\n    // undefined if the end of the cursor has been reached.\n    if (getCursorAdvanceMethods().includes(func)) {\n        return function (...args) {\n            // Calling the original function with the proxy as 'this' causes ILLEGAL INVOCATION, so we use\n            // the original object.\n            func.apply(unwrap(this), args);\n            return wrap(cursorRequestMap.get(this));\n        };\n    }\n    return function (...args) {\n        // Calling the original function with the proxy as 'this' causes ILLEGAL INVOCATION, so we use\n        // the original object.\n        return wrap(func.apply(unwrap(this), args));\n    };\n}\nfunction transformCachableValue(value) {\n    if (typeof value === 'function')\n        return wrapFunction(value);\n    // This doesn't return, it just creates a 'done' promise for the transaction,\n    // which is later returned for transaction.done (see idbObjectHandler).\n    if (value instanceof IDBTransaction)\n        cacheDonePromiseForTransaction(value);\n    if (instanceOfAny(value, getIdbProxyableTypes()))\n        return new Proxy(value, idbProxyTraps);\n    // Return the same value back if we're not going to transform it.\n    return value;\n}\nfunction wrap(value) {\n    // We sometimes generate multiple promises from a single IDBRequest (eg when cursoring), because\n    // IDB is weird and a single IDBRequest can yield many responses, so these can't be cached.\n    if (value instanceof IDBRequest)\n        return promisifyRequest(value);\n    // If we've already transformed this value before, reuse the transformed value.\n    // This is faster, but it also provides object equality.\n    if (transformCache.has(value))\n        return transformCache.get(value);\n    const newValue = transformCachableValue(value);\n    // Not all types are transformed.\n    // These may be primitive types, so they can't be WeakMap keys.\n    if (newValue !== value) {\n        transformCache.set(value, newValue);\n        reverseTransformCache.set(newValue, value);\n    }\n    return newValue;\n}\nconst unwrap = (value) => reverseTransformCache.get(value);\n\n\n\n\n//# sourceURL=webpack://daveads.github.io/./node_modules/idb/build/wrap-idb-value.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   a: () => (/* binding */ reverseTransformCache),
+/* harmony export */   i: () => (/* binding */ instanceOfAny),
+/* harmony export */   r: () => (/* binding */ replaceTraps),
+/* harmony export */   u: () => (/* binding */ unwrap),
+/* harmony export */   w: () => (/* binding */ wrap)
+/* harmony export */ });
+const instanceOfAny = (object, constructors) => constructors.some((c) => object instanceof c);
+
+let idbProxyableTypes;
+let cursorAdvanceMethods;
+// This is a function to prevent it throwing up in node environments.
+function getIdbProxyableTypes() {
+    return (idbProxyableTypes ||
+        (idbProxyableTypes = [
+            IDBDatabase,
+            IDBObjectStore,
+            IDBIndex,
+            IDBCursor,
+            IDBTransaction,
+        ]));
+}
+// This is a function to prevent it throwing up in node environments.
+function getCursorAdvanceMethods() {
+    return (cursorAdvanceMethods ||
+        (cursorAdvanceMethods = [
+            IDBCursor.prototype.advance,
+            IDBCursor.prototype.continue,
+            IDBCursor.prototype.continuePrimaryKey,
+        ]));
+}
+const cursorRequestMap = new WeakMap();
+const transactionDoneMap = new WeakMap();
+const transactionStoreNamesMap = new WeakMap();
+const transformCache = new WeakMap();
+const reverseTransformCache = new WeakMap();
+function promisifyRequest(request) {
+    const promise = new Promise((resolve, reject) => {
+        const unlisten = () => {
+            request.removeEventListener('success', success);
+            request.removeEventListener('error', error);
+        };
+        const success = () => {
+            resolve(wrap(request.result));
+            unlisten();
+        };
+        const error = () => {
+            reject(request.error);
+            unlisten();
+        };
+        request.addEventListener('success', success);
+        request.addEventListener('error', error);
+    });
+    promise
+        .then((value) => {
+        // Since cursoring reuses the IDBRequest (*sigh*), we cache it for later retrieval
+        // (see wrapFunction).
+        if (value instanceof IDBCursor) {
+            cursorRequestMap.set(value, request);
+        }
+        // Catching to avoid "Uncaught Promise exceptions"
+    })
+        .catch(() => { });
+    // This mapping exists in reverseTransformCache but doesn't doesn't exist in transformCache. This
+    // is because we create many promises from a single IDBRequest.
+    reverseTransformCache.set(promise, request);
+    return promise;
+}
+function cacheDonePromiseForTransaction(tx) {
+    // Early bail if we've already created a done promise for this transaction.
+    if (transactionDoneMap.has(tx))
+        return;
+    const done = new Promise((resolve, reject) => {
+        const unlisten = () => {
+            tx.removeEventListener('complete', complete);
+            tx.removeEventListener('error', error);
+            tx.removeEventListener('abort', error);
+        };
+        const complete = () => {
+            resolve();
+            unlisten();
+        };
+        const error = () => {
+            reject(tx.error || new DOMException('AbortError', 'AbortError'));
+            unlisten();
+        };
+        tx.addEventListener('complete', complete);
+        tx.addEventListener('error', error);
+        tx.addEventListener('abort', error);
+    });
+    // Cache it for later retrieval.
+    transactionDoneMap.set(tx, done);
+}
+let idbProxyTraps = {
+    get(target, prop, receiver) {
+        if (target instanceof IDBTransaction) {
+            // Special handling for transaction.done.
+            if (prop === 'done')
+                return transactionDoneMap.get(target);
+            // Polyfill for objectStoreNames because of Edge.
+            if (prop === 'objectStoreNames') {
+                return target.objectStoreNames || transactionStoreNamesMap.get(target);
+            }
+            // Make tx.store return the only store in the transaction, or undefined if there are many.
+            if (prop === 'store') {
+                return receiver.objectStoreNames[1]
+                    ? undefined
+                    : receiver.objectStore(receiver.objectStoreNames[0]);
+            }
+        }
+        // Else transform whatever we get back.
+        return wrap(target[prop]);
+    },
+    set(target, prop, value) {
+        target[prop] = value;
+        return true;
+    },
+    has(target, prop) {
+        if (target instanceof IDBTransaction &&
+            (prop === 'done' || prop === 'store')) {
+            return true;
+        }
+        return prop in target;
+    },
+};
+function replaceTraps(callback) {
+    idbProxyTraps = callback(idbProxyTraps);
+}
+function wrapFunction(func) {
+    // Due to expected object equality (which is enforced by the caching in `wrap`), we
+    // only create one new func per func.
+    // Edge doesn't support objectStoreNames (booo), so we polyfill it here.
+    if (func === IDBDatabase.prototype.transaction &&
+        !('objectStoreNames' in IDBTransaction.prototype)) {
+        return function (storeNames, ...args) {
+            const tx = func.call(unwrap(this), storeNames, ...args);
+            transactionStoreNamesMap.set(tx, storeNames.sort ? storeNames.sort() : [storeNames]);
+            return wrap(tx);
+        };
+    }
+    // Cursor methods are special, as the behaviour is a little more different to standard IDB. In
+    // IDB, you advance the cursor and wait for a new 'success' on the IDBRequest that gave you the
+    // cursor. It's kinda like a promise that can resolve with many values. That doesn't make sense
+    // with real promises, so each advance methods returns a new promise for the cursor object, or
+    // undefined if the end of the cursor has been reached.
+    if (getCursorAdvanceMethods().includes(func)) {
+        return function (...args) {
+            // Calling the original function with the proxy as 'this' causes ILLEGAL INVOCATION, so we use
+            // the original object.
+            func.apply(unwrap(this), args);
+            return wrap(cursorRequestMap.get(this));
+        };
+    }
+    return function (...args) {
+        // Calling the original function with the proxy as 'this' causes ILLEGAL INVOCATION, so we use
+        // the original object.
+        return wrap(func.apply(unwrap(this), args));
+    };
+}
+function transformCachableValue(value) {
+    if (typeof value === 'function')
+        return wrapFunction(value);
+    // This doesn't return, it just creates a 'done' promise for the transaction,
+    // which is later returned for transaction.done (see idbObjectHandler).
+    if (value instanceof IDBTransaction)
+        cacheDonePromiseForTransaction(value);
+    if (instanceOfAny(value, getIdbProxyableTypes()))
+        return new Proxy(value, idbProxyTraps);
+    // Return the same value back if we're not going to transform it.
+    return value;
+}
+function wrap(value) {
+    // We sometimes generate multiple promises from a single IDBRequest (eg when cursoring), because
+    // IDB is weird and a single IDBRequest can yield many responses, so these can't be cached.
+    if (value instanceof IDBRequest)
+        return promisifyRequest(value);
+    // If we've already transformed this value before, reuse the transformed value.
+    // This is faster, but it also provides object equality.
+    if (transformCache.has(value))
+        return transformCache.get(value);
+    const newValue = transformCachableValue(value);
+    // Not all types are transformed.
+    // These may be primitive types, so they can't be WeakMap keys.
+    if (newValue !== value) {
+        transformCache.set(value, newValue);
+        reverseTransformCache.set(newValue, value);
+    }
+    return newValue;
+}
+const unwrap = (value) => reverseTransformCache.get(value);
+
+
+
 
 /***/ })
 
@@ -264,3 +8547,4 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ })()
 ;
+//# sourceMappingURL=bundle.js.map
