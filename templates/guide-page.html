@@ -1,0 +1,90 @@
+{% extends "note-page.html" %}
+{% import "macros/pagetitle-macro.html" as pageT %}
+
+
+{% block meta_content %}
+<meta property="og:title" content="{{page.title}}">
+<meta property="og:type" content="tutorial">
+<meta property="og:url" content="https://daveads.github.io{{ page.path }}">
+{% endblock meta_content %}
+
+
+
+{% block keywords %}
+	<meta name="keyword" content="{{ page.title }}">
+{% endblock keywords %}
+
+
+{% block desc %}
+<meta name="description" content="{{ page.summary }}">
+{% endblock desc %}
+
+
+<!-- keep empty -->
+{% block header %}
+{% endblock %}
+
+{% block title %}
+		{{config.title}} - {{page.title}}
+{% endblock %}
+
+
+{% block content %}
+
+<article class="post h-entry" itemscope="articleBody" itemtype="http://schema.org/BlogPosting">
+<header class="post-header">
+
+		 {% set title = page.title %}
+		 {% set title1 = "Tutorial" ~ " : " ~ title %}
+		 {{ pageT::pagetitle(page=title1) }}
+
+		 <small style="float:right; font-size: 15px;"><a href="/guide">See all guides</a>
+		 	<!-- || <a href="/note-archive">Archive</a> -->
+		 </small>
+
+<p class="post-meta">
+
+    {% if page.date %}
+		<time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date }}</time>
+		{% if page.updated %}
+		 (updated: {{ page.updated }} )
+		{% endif %}
+    {% endif %}
+</p>
+
+		<div>
+			{% include "include/back.html" %}
+
+			<!--
+			{% if page.taxonomies.notec %}
+		
+			Categories :
+			{% for noteC in page.taxonomies.notec %}
+			<small >
+			<a class="tag-link" href="{{ get_taxonomy_url(kind='notec', name=noteC) | safe }}">#{{ noteC }}</a>
+			</small>
+			<br>
+			<br>
+			{% endfor %}
+			{% endif %}
+			-->
+
+			{% if page.taxonomies.notet %}
+	
+			Tags :
+			{% for noteT in page.taxonomies.notet %}
+			<small>
+			<a class="tag-link" href="{{ get_taxonomy_url(kind='notet', name=noteT) | safe }}">#{{ noteT }}</a>
+			</small>
+			{% endfor %}
+			{% endif %}
+		</div>
+
+</header>
+	
+		<div class="post-content e-content" itemprop="articleBody">
+		{{ page.content | safe }}
+		</div>
+		
+{% include "include/home.html" %}
+{% endblock content %}

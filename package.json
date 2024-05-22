@@ -1,0 +1,29 @@
+{
+  "name": "daveads.github.io",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ported jekyll's [minima](https://github.com/jekyll/minima) theme to zola //edited",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-typescript": "^7.24.1",
+    "babel-loader": "^9.1.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.5",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.11.2",
+    "dotenv-webpack": "^8.1.0",
+    "firebase": "^10.12.0",
+    "glob": "^10.3.16"
+  }
+}

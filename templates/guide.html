@@ -1,0 +1,46 @@
+{% extends "note.html" %}
+
+{% block meta_content %}
+<meta property="og:title" content="daveads Tutorials">
+<meta property="og:type" content="Tutorial">
+<meta property="og:url" content="https://daveads.github.io/tutorial">
+{% endblock meta_content %}
+
+{% block keywords %}
+<meta name="keywords" content="tutorial">
+{% endblock keywords %}
+
+
+{% block canonical %}
+	<link rel="canonical" href="https://daveads.github.io/tutorial">
+{% endblock canonical %}
+
+
+<!-- Empty because i don't want anything here and i don't want it to extend the note header area -->
+{% block header %}
+{% endblock %}
+
+
+{% block categories_tags %}
+{% endblock %}
+
+
+{% block page_info %}
+{% endblock %}
+
+{% block main_content %}
+<div id="post">
+
+	<ul class="post-list">
+	{% for page in section.pages %}
+		<li class="post-link"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+    {% endfor %}
+	</ul>
+</div>
+
+{% endblock %}
+
+
+{% block title %}
+		{{config.title}} - {{section.title}}
+{% endblock %}
