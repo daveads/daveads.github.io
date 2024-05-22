@@ -7,6 +7,8 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '{{ config.extra.google_analytics }}');
+  gtag('config', '{{ config.extra.google_analytics }}', {
+    'cookie_flags': 'SameSite=Strict;Secure'
+  });
 </script>
 {% endif %}
