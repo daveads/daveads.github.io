@@ -19,4 +19,7 @@ zola --config config.dev.toml serve
 
 
 ### src/
+```
+// to bundle esm code in src folder 
 npx webpack
+```
