@@ -87,24 +87,26 @@
 {% endblock %}
 
 
+{% block main_content %}
+
 <div id="post">
   <ul class="post-list">
 
-
+  
   {% set writing = get_section(path="note/_index.md") %}
 
 	{{ writing.content | safe}}
 
 
-
     {% for page in section.pages %}
-
+    
 		<li class="post-link"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
 
    {% endfor %}
 
   </ul>
 </div>
+{% endblock %}
 
 
 {% include "include/home.html" %}

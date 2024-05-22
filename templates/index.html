@@ -5,6 +5,7 @@
 		{{ super() }} - {{config.extra.author}}
 {% endblock %}
 
+<script type="text/javascript" src="/assets/js/bundle.js"></script>
 
 
 {% block content %}
@@ -17,11 +18,20 @@
 
 </div>
 
+		<!--
 		<div class="gcse-searchbox-only" style="padding: 34px;">
 		</div>
+		-->
+
+		<div class="card_api" id=container>
+			<h3 id="resp" style="color: greenyellow; font-size: 22px; margin: 20px;"></h3>
+			<p style="font-style: italic; font-size: 12px;">output by gemni</p>
+		</div>
+		
+		
 		<br>
 
-{% set writing = get_section(path="writing/_index.md") %}
+		{% set writing = get_section(path="writing/_index.md") %}
 		{% if section.content or writing.pages %}
 		<main>
 		{% if section.content %}
@@ -41,19 +51,6 @@
 		 </main>
 		{% endif %}
 		<br>
-
-
-<!-- Tutorial -->
-<!--
-{% set golang = get_section(path="tutorial/go/_index.md") %}
-<h2 style="margin: 0;">Recent Tutorial</h2>
-<ul>
-	<b>Go language</b>
-	{% for post in golang.pages | slice(end=3) %}
-	<li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
-	{% endfor %}
-</ul>
--->
 
 {% endblock content %}
 

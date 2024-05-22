@@ -9,9 +9,14 @@
     <!-- content block -->
     {% block content %}
 
+    {% if page.title == "Guides" %}
+        {% set pag = get_page(path="guides/guide.md") %}
+        {{ pag.content | safe }}
+    {% endif %}
 
-        <p class="tag">{{ page.date }}</p>
-        {{ page.content | safe }}
+
+    <p class="tag">{{ page.date }}</p>
+    {{ page.content | safe }}
     
 
 	{% endblock %}

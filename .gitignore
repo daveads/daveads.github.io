@@ -5,6 +5,8 @@ static/processed_images
 
 # my files
 note.txt
-static/node_modules/
-static/package-lock.json
+package-lock.json
 config.dev.toml
+future.md
+node_modules/
+.env

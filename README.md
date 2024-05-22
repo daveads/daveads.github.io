@@ -18,3 +18,5 @@ zola --config config.dev.toml serve
 ```
 
 
+### src/
+npx webpack
