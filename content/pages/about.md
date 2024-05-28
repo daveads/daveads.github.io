@@ -4,7 +4,8 @@ template = "page.html"
 path = "about"
 +++
 
-**Name:** Adejumo David Adewale, known as Daveads on the internet. I write [Things](https://en.wikipedia.org/wiki/Computer_program) that get executed on a [Processor](https://en.wikipedia.org/wiki/Central_processing_unit) and leverage the [GPU](https://en.wikipedia.org/wiki/Graphics_processing_unit) My work extends beyond conventional boundaries, delving into diverse and captivating areas that pique my interest. [{Creativity && Critical Thinking}](#)
+**Name:** Adejumo David Adewale, known Online as Daveads. I write [Things](https://en.wikipedia.org/wiki/Computer_program) that get executed on a [Processor](https://en.wikipedia.org/wiki/Central_processing_unit) and leverage [GPUs](https://en.wikipedia.org/wiki/Graphics_processing_unit), My work transcends conventional boundaries, exploring diverse and captivating areas that pique my interest. [{Creativity && Critical Thinking}](#)
+
 
 ```
         ____                            _     
