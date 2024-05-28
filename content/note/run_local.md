@@ -50,7 +50,7 @@ sudo ln -s /etc/nginx/sites-available/daveads.com /etc/nginx/sites-enabled/
 ```
 //change base_url to "/" in the config file
 zola --config config.dev.toml build
-cd public && cp -r * /etc/nginx/sites-enbabled
+cd public && cp -r * /usr/share/nginx/daveads
 ```
 
 
