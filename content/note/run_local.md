@@ -13,6 +13,19 @@ python -m http.server 8000
 
 ```
 
+# CONFIGURING NGINX
+
+```
+// Add this under the http parenthesis
+
+http{
+    include sites-enabled/*;
+    server_names_hash_bucket_size 64;
+
+    types_hash_max_size 4096;
+}
+
+```
 
 ### Using a Web Server(Nginx) Locally
 
