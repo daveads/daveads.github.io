@@ -28,6 +28,7 @@ Shoutout to my workout buddies:
 * [Prime](https://github.com/prime-infinity)  **//Optimus Prime in human form**
 * [Itopa](#) **//He speaks to the gods!**
 * [Fona](#) **//The Jedi Master**
+* [Comrade Ginja](#) **The Strong Man #general**
 * [Wizben](#)
 * [AK](#) **//The crazy fashion designer**
 * [Nehemiah](#)
