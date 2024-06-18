@@ -252,18 +252,18 @@ table {
   border: 1px solid $grey-color-light;
   tr {
     &:nth-child(even) {
-      background-color: darken($grey-color-light, 6%);
+      background-color: darken(#604732, 6%);
     }
   }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    background-color: darken($grey-color-light, 3%);
+    background-color: darken(#201c1c, 3%);
     border: 1px solid darken($grey-color-light, 4%);
     border-bottom-color: darken($grey-color-light, 12%);
   }
   td {
-    border: 1px solid darken($grey-color-light, 3%);
+    border: 1px solid darken(#dbd5cf, 3%);
   }
 }
