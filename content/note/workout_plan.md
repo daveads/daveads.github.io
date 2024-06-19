@@ -6,6 +6,7 @@ notec = ["Workout"]
 +++
 
 # Weekly Gym Workout Plan
+**//It a pretty weird plan** Just 1 rest Day. :]
 
 ### Day 1 Monday (Chest, Shoulder, Triceps)
 
@@ -22,12 +23,14 @@ notec = ["Workout"]
 
 | Exercise              | Sets X Reps   | Muscles Groups |
 |-----------------------|---------------|----------------|
+| Deadlift              | 4 sets x 8-10 | Back           |
 | Pull-ups              | 4 sets x 6-8  | Back           |
 | Barbell Rows          | 4 sets x 8-10 | Back           |
 | Biceps Curls          | 3 sets x 8-10 | Biceps         |
 | Lat Pulldowns         | 3 sets x 8-10 | Back           |
 | Face Pulls            | 3 sets x 10-12| Rear Shoulders |
 | Hammer Curls          | 3 sets x 8-10 | Biceps         |
+
 
 ### Day 3 Wednesday (Quads, Hamstrings, Calves)
 
