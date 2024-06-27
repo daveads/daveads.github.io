@@ -80,6 +80,34 @@ if (navigator.serviceWorker.controller) {
 
 <link rel="manifest" type="application/manifest+json" href="{{ get_url(path="/manifest.json") }}">
 
+
+
+{% block katex_js %}
+
+{% if config.extra.katex_enable %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+
+
+{% if config.extra.katex_auto_render %}
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+{% endif %}
+
+{% endif %}
+{% endblock katex_js %}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
+
 <title>
 		{% block title %}
 				{{config.title}}
@@ -103,6 +131,7 @@ if (navigator.serviceWorker.controller) {
 				 <section class="section">
 						<div class="wrapper">
 								{% block content %} {% endblock %}
+
 						</div>
 				 </section>
 
