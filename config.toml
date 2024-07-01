@@ -12,7 +12,7 @@ build_search_index = true
 
 #Feeds
 generate_feeds = true
-feed_filename = "atom.xml"
+feed_filenames = ["atom.xml"]
 
 taxonomies = [
 		#writings || papers || project
