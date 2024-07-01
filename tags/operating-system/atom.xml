@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - operating-system</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/operating-system/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-05-31T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/tags/operating-system/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Programming language resources</title>
+        <published>2022-05-31T00:00:00+00:00</published>
+        <updated>2022-05-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/programming-language-resources/"/>
+        <id>https://daveads.github.io/writing/programming-language-resources/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/programming-language-resources/">&lt;p&gt;Resources to getting started with writing Programming languages, Emulators, Assembly and Operating system. &lt;!-- more --&gt;
+PL orginal post by &lt;a href=&quot;https:&#x2F;&#x2F;bernsteinbear.com&#x2F;pl-resources&#x2F;&quot;&gt;Max Bernstein&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;compilers&quot;&gt;Compilers&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tufts compilers course &lt;a href=&quot;http:&#x2F;&#x2F;www.cs.tufts.edu&#x2F;~sguyer&#x2F;classes&#x2F;comp181-2006&#x2F;&quot;&gt;COMP&#x2F;CS 181&lt;&#x2F;a&gt; (2006, but it’s been taught more recently. I should probably ping Sam.)&lt;&#x2F;li&gt;
+&lt;li&gt;Cornell compilers course &lt;a href=&quot;https:&#x2F;&#x2F;www.cs.cornell.edu&#x2F;courses&#x2F;cs6120&#x2F;2019fa&#x2F;project&#x2F;&quot;&gt;CS 6120&lt;&#x2F;a&gt; and interesting approach to project-based learning&lt;&#x2F;li&gt;
+&lt;li&gt;Nora Sandler’s &lt;a href=&quot;https:&#x2F;&#x2F;norasandler.com&#x2F;2017&#x2F;11&#x2F;29&#x2F;Write-a-Compiler.html&quot;&gt;minimal C compiler&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Jack Crenshaw’s &lt;a href=&quot;https:&#x2F;&#x2F;compilers.iecc.com&#x2F;crenshaw&#x2F;&quot;&gt;let’s build a compiler&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20170712044658&#x2F;https:&#x2F;&#x2F;ryanflannery.net&#x2F;teaching&#x2F;common&#x2F;recursive-descent-parsing&#x2F;&quot;&gt;Recursive descent parsing&lt;&#x2F;a&gt; in C. Note that this just verifies the input string, and more has to be done to build a tree out of the input.&lt;&#x2F;li&gt;
+&lt;li&gt;Vidar Hokstad’s &lt;a href=&quot;http:&#x2F;&#x2F;hokstad.com&#x2F;compiler&quot;&gt;Writing a compiler in Ruby, bottom up&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Rui Ueyama’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rui314&#x2F;chibicc&quot;&gt;chibicc&lt;&#x2F;a&gt;, a C compiler in the Ghuloum style&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natalie-lang&#x2F;natalie&quot;&gt;Natalie&lt;&#x2F;a&gt; compiler for Ruby&lt;&#x2F;li&gt;
+&lt;li&gt;Compiler passes
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Sparse_conditional_constant_propagation&quot;&gt;Sparse conditional constant propagation&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;www.cs.cornell.edu&#x2F;courses&#x2F;cs6120&#x2F;2019fa&#x2F;blog&#x2F;sccp&#x2F;&quot;&gt;Bril blog post&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;thorstenball&#x2F;status&#x2F;1526788333761863680&#x2F;photo&#x2F;1&quot;&gt;Thorsten Ball tweet&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;I’ve heard good things about &lt;a href=&quot;https:&#x2F;&#x2F;www.elsevier.com&#x2F;books&#x2F;engineering-a-compiler&#x2F;cooper&#x2F;978-0-12-088478-0&quot;&gt;Engineering a Compiler&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;www.elsevier.com&#x2F;books&#x2F;engineering-a-compiler&#x2F;cooper&#x2F;978-0-12-815412-0&quot;&gt;3rd edition&lt;&#x2F;a&gt; coming soon!)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;lisp-specific&quot;&gt;Lisp specific&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;kanaka’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kanaka&#x2F;mal&quot;&gt;mal&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;leo (lwh)’s &lt;a href=&quot;https:&#x2F;&#x2F;www.lwh.jp&#x2F;lisp&#x2F;&quot;&gt;Building LISP&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Peter Michaux’s &lt;a href=&quot;http:&#x2F;&#x2F;peter.michaux.ca&#x2F;articles&#x2F;scheme-from-scratch-introduction&quot;&gt;Scheme from Scratch&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Daniel Holden’s &lt;a href=&quot;http:&#x2F;&#x2F;buildyourownlisp.com&#x2F;contents&quot;&gt;Build Your Own Lisp&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Anthony C. Hay’s fairly readable &lt;a href=&quot;http:&#x2F;&#x2F;howtowriteaprogram.blogspot.com&#x2F;2010&#x2F;11&#x2F;lisp-interpreter-in-90-lines-of-c.html&quot;&gt;Lisp interpreter in 90 lines of C++&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;My own &lt;a href=&quot;https:&#x2F;&#x2F;bernsteinbear.com&#x2F;blog&#x2F;lisp&#x2F;&quot;&gt;Writing a Lisp&lt;&#x2F;a&gt; blog post series&lt;&#x2F;li&gt;
+&lt;li&gt;carld’s &lt;a href=&quot;https:&#x2F;&#x2F;carld.github.io&#x2F;2017&#x2F;06&#x2F;20&#x2F;lisp-in-less-than-200-lines-of-c.html&quot;&gt;Lisp in less than 200 lines of C&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;UTexas’s &lt;a href=&quot;https:&#x2F;&#x2F;www.cs.utexas.edu&#x2F;ftp&#x2F;garbage&#x2F;cs345&#x2F;schintro-v14&#x2F;schintro_142.html#SEC271&quot;&gt;A simple scheme compiler&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Rui Ueyama’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rui314&#x2F;minilisp&quot;&gt;minilisp&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;a href=&quot;http:&#x2F;&#x2F;www.call-with-current-continuation.org&#x2F;bones&#x2F;&quot;&gt;Bones&lt;&#x2F;a&gt; Scheme compiler&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;course.ccs.neu.edu&#x2F;cs4410sp20&#x2F;#%28part._lectures%29_&quot;&gt;lecture notes&lt;&#x2F;a&gt; for a course developing a Ghuloum-style compiler&lt;&#x2F;li&gt;
+&lt;li&gt;Ghuloum implementations
+&lt;ul&gt;
+&lt;li&gt;Abdulaziz Ghuloum’s &lt;a href=&quot;&#x2F;assets&#x2F;img&#x2F;11-ghuloum.pdf&quot;&gt;minimal Scheme to x86 compiler&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;li&gt;My &lt;a href=&quot;https:&#x2F;&#x2F;bernsteinbear.com&#x2F;blog&#x2F;compiling-a-lisp-0&#x2F;&quot;&gt;adaptation&lt;&#x2F;a&gt; in C (with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tekknolagi&#x2F;ghuloum&quot;&gt;implementation&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;generalproblem.net&#x2F;lets_build_a_compiler&#x2F;01-starting-out&#x2F;&quot;&gt;Let’s build a compiler&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Thorsten Ball’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mrnugget&#x2F;scheme_x86&quot;&gt;adaptation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Nada Amin’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;namin&#x2F;inc&quot;&gt;adaptation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Tao of Mac’s &lt;a href=&quot;https:&#x2F;&#x2F;taoofmac.com&#x2F;space&#x2F;dev&#x2F;lisp&quot;&gt;List implementation list&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jart&#x2F;sectorlisp&quot;&gt;sectorlisp&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;justine.lol&#x2F;sectorlisp2&#x2F;&quot;&gt;sectorlisp2&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;justine.lol&#x2F;lambda&#x2F;&quot;&gt;lambda calculus in 383 bytes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;runtimes&quot;&gt;Runtimes&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;munificent’s &lt;a href=&quot;https:&#x2F;&#x2F;craftinginterpreters.com&#x2F;&quot;&gt;Crafting Interpreters&lt;&#x2F;a&gt; book&lt;&#x2F;li&gt;
+&lt;li&gt;Mario Wolczko’s &lt;a href=&quot;http:&#x2F;&#x2F;www.wolczko.com&#x2F;CS294&#x2F;&quot;&gt;CS 294-113&lt;&#x2F;a&gt;, a course on managed runtimes&lt;&#x2F;li&gt;
+&lt;li&gt;My own &lt;a href=&quot;https:&#x2F;&#x2F;bernsteinbear.com&#x2F;blog&#x2F;bytecode-interpreters&#x2F;&quot;&gt;bytecode compiler&#x2F;VM&lt;&#x2F;a&gt; blog post&lt;&#x2F;li&gt;
+&lt;li&gt;Justin Meiners and Ryan Pendelton’s &lt;a href=&quot;https:&#x2F;&#x2F;justinmeiners.github.io&#x2F;lc3-vm&#x2F;&quot;&gt;Write your own virtual machine&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Maxime Chevalier-Boisvert’s &lt;a href=&quot;https:&#x2F;&#x2F;pointersgonewild.com&#x2F;about&#x2F;&quot;&gt;website&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Serge’s &lt;a href=&quot;https:&#x2F;&#x2F;zserge.com&#x2F;posts&#x2F;jvm&#x2F;&quot;&gt;toy JVM&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;codewords.recurse.com&#x2F;issues&#x2F;seven&#x2F;dragon-taming-with-tailbiter-a-bytecode-compiler&quot;&gt;Dragon taming with Tailbiter&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;notes.eatonphil.com&#x2F;&quot;&gt;Phil Eaton&lt;&#x2F;a&gt;’s &lt;a href=&quot;https:&#x2F;&#x2F;notes.eatonphil.com&#x2F;javascript-implementations.html&quot;&gt;list of JS implementations&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;chrisseaton.com&#x2F;&quot;&gt;Chris Seaton&lt;&#x2F;a&gt;’s &lt;a href=&quot;https:&#x2F;&#x2F;ruby-compilers.com&#x2F;&quot;&gt;The Ruby Compiler Survey&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Zg-1_7ed0hE&quot;&gt;RubyConf 2021 talk&lt;&#x2F;a&gt; (video) about it&lt;&#x2F;li&gt;
+&lt;li&gt;Laurence Tratt’s “Why aren’t more users more happy with our VMs?” &lt;a href=&quot;https:&#x2F;&#x2F;tratt.net&#x2F;laurie&#x2F;blog&#x2F;entries&#x2F;why_arent_more_users_more_happy_with_our_vms_part_1.html&quot;&gt;Part 1&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;tratt.net&#x2F;laurie&#x2F;blog&#x2F;entries&#x2F;why_arent_more_users_more_happy_with_our_vms_part_2.html&quot;&gt;Part 2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interesting runtimes
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;toitlang&#x2F;toit&quot;&gt;Toit&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tekknolagi&#x2F;skybison&quot;&gt;Skybison&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Russ Cox’s &lt;a href=&quot;https:&#x2F;&#x2F;swtch.com&#x2F;~rsc&#x2F;regexp&#x2F;regexp2.html&quot;&gt;Regular expression matching: the virtual machine approach&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Webkit’s post about the &lt;a href=&quot;https:&#x2F;&#x2F;webkit.org&#x2F;blog&#x2F;3362&#x2F;introducing-the-webkit-ftl-jit&#x2F;&quot;&gt;FTL JIT&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;runtime-optimization&quot;&gt;Runtime optimization&lt;&#x2F;h2&gt;
+&lt;p&gt;Research around optimizing dynamic languages.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dl.acm.org&#x2F;doi&#x2F;10.1145&#x2F;800017.800542&quot;&gt;Efficient implementation of the Smalltalk-80 system&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Stefan Brunthaler’s work
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dl.acm.org&#x2F;doi&#x2F;abs&#x2F;10.1145&#x2F;1869631.1869633&quot;&gt;Efficient interpretation using quickening&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dl.acm.org&#x2F;doi&#x2F;10.5555&#x2F;1883978.1884008&quot;&gt;Inline caching meets quickening&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2109.02958.pdf&quot;&gt;Multi-Level Quickening: Ten Years Later&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bibliography.selflanguage.org&#x2F;_static&#x2F;pics.pdf&quot;&gt;Optimizing dynamically-typed object-oriented languages with polymorphic inline caches&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dl.acm.org&#x2F;doi&#x2F;10.1145&#x2F;800055.802040&quot;&gt;Garbage collection in a large LISP system&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Urs Hölzle’s thesis, &lt;a href=&quot;http:&#x2F;&#x2F;i.stanford.edu&#x2F;pub&#x2F;cstr&#x2F;reports&#x2F;cs&#x2F;tr&#x2F;94&#x2F;1520&#x2F;CS-TR-94-1520.pdf&quot;&gt;Adaptive Optimization for Self&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.mgaudet.ca&#x2F;technical&#x2F;2018&#x2F;6&#x2F;5&#x2F;an-inline-cache-isnt-just-a-cache&quot;&gt;An inline cache isn’t just a cache&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.pyston.org&#x2F;2016&#x2F;06&#x2F;30&#x2F;baseline-jit-and-inline-caches&#x2F;&quot;&gt;Baseline JIT and inline caches&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;richardartoul.github.io&#x2F;jekyll&#x2F;update&#x2F;2015&#x2F;04&#x2F;26&#x2F;hidden-classes.html&quot;&gt;Javascript hidden classes and inline caching in V8&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Basic block versioning
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;1411.0352v2.pdf&quot;&gt;Simple and Effective Type Check Removal through Lazy Basic Block Versioning&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;1507.02437.pdf&quot;&gt;Extending Basic Block Versioning with Typed Object Shapes&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;1511.02956.pdf&quot;&gt;Interprocedural Type Specialization of JavaScript Programs Without Type Analysis&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;citeseerx.ist.psu.edu&#x2F;viewdoc&#x2F;download?doi=10.1.1.5.4929&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Stack Caching for Interpreters&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;wiki.openjdk.java.net&#x2F;display&#x2F;HotSpot&#x2F;PerformanceTechniques&quot;&gt;Hotspot performance techniques&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;nominolo.blogspot.com&#x2F;2012&#x2F;07&#x2F;implementing-fast-interpreters.html&quot;&gt;Assembly interpreters&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;nominolo.blogspot.com&#x2F;2012&#x2F;07&#x2F;implementing-fast-interpreters_31.html&quot;&gt;follow-up&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure to take a look at “Further Reading”&lt;&#x2F;li&gt;
+&lt;li&gt;A &lt;a href=&quot;http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20151206043326&#x2F;https:&#x2F;&#x2F;blog.mozilla.org&#x2F;dmandelin&#x2F;2008&#x2F;06&#x2F;03&#x2F;squirrelfish&#x2F;&quot;&gt;post&lt;&#x2F;a&gt; including a snippet on direct-threaded dispatch in an assembly interpreter&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Stefan Marr’s &lt;a href=&quot;https:&#x2F;&#x2F;stefan-marr.de&#x2F;2020&#x2F;06&#x2F;efficient-and-safe-implementations-of-dynamic-languages&#x2F;&quot;&gt;page&lt;&#x2F;a&gt; about efficient and safe implementations of dynamic languages&lt;&#x2F;li&gt;
+&lt;li&gt;The Wikipedia page for &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Cheney%27s_algorithm&quot;&gt;Cheney’s algorithm&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;thlorenz&#x2F;v8-perf&#x2F;blob&#x2F;master&#x2F;compiler.md&quot;&gt;web page&lt;&#x2F;a&gt; about V8 internals&lt;&#x2F;li&gt;
+&lt;li&gt;Vyacheslav Egorov’s &lt;a href=&quot;https:&#x2F;&#x2F;mrale.ph&#x2F;blog&#x2F;2015&#x2F;01&#x2F;11&#x2F;whats-up-with-monomorphism.html&quot;&gt;inline cache&lt;&#x2F;a&gt; explanation for JavaScript&lt;&#x2F;li&gt;
+&lt;li&gt;Caio Lima’s &lt;a href=&quot;https:&#x2F;&#x2F;caiolima.github.io&#x2F;jsc&#x2F;2020&#x2F;03&#x2F;12&#x2F;jsc-inline-cache.html&quot;&gt;inline cache&lt;&#x2F;a&gt; explanation for JSC (with assembly!)&lt;&#x2F;li&gt;
+&lt;li&gt;V8’s &lt;a href=&quot;https:&#x2F;&#x2F;v8.dev&#x2F;blog&#x2F;sparkplug&quot;&gt;blog post&lt;&#x2F;a&gt; about their baseline&#x2F;template JIT&lt;&#x2F;li&gt;
+&lt;li&gt;Object shapes
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;chrisseaton.com&#x2F;&quot;&gt;Chris Seaton&lt;&#x2F;a&gt;’s &lt;a href=&quot;https:&#x2F;&#x2F;chrisseaton.com&#x2F;truffleruby&#x2F;rubykaigi21&#x2F;&quot;&gt;RubyKaigi talk&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tenderlovemaking.com&#x2F;&quot;&gt;Aaron Patterson&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;jemma.dev&#x2F;&quot;&gt;Jemma Issroff&lt;&#x2F;a&gt;’s &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=C9q4V_WJ6_k&quot;&gt;livestream&lt;&#x2F;a&gt; (video)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Kate Temkin’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ktemkin&#x2F;qemu&#x2F;tree&#x2F;with_tcti&quot;&gt;QEMU fork&lt;&#x2F;a&gt; with a gadget-based pseudo-JIT and associated &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;ktemkin&#x2F;status&#x2F;1375835935061942274&quot;&gt;Twitter thread&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;bumble-tech&#x2F;when-pigs-fly-optimising-bytecode-interpreters-f64fb6bfa20f&quot;&gt;When pigs fly: optimizing bytecode interpreters&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;I particularly like the snippet on bytecode VM traces&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Optimized Python runtimes
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;facebookincubator&#x2F;cinder&quot;&gt;Cinder&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;facebookexperimental&#x2F;skybison&quot;&gt;Skybison&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tonybaloney&#x2F;Pyjion&quot;&gt;Pyjion&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;pyston&#x2F;pyston&quot;&gt;Pyston&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;foss.heptapod.net&#x2F;pypy&#x2F;pypy&quot;&gt;PyPy&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rjpower&#x2F;falcon&quot;&gt;Falcon&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;This SSA paper: &lt;a href=&quot;https:&#x2F;&#x2F;pp.info.uni-karlsruhe.de&#x2F;uploads&#x2F;publikationen&#x2F;braun13cc.pdf&quot;&gt;Simple and Efficient Construction of Static Single Assignment Form&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;li&gt;Resources on mechanical sympathy and optimization coaching
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.ccs.neu.edu&#x2F;home&#x2F;stamourv&#x2F;papers&#x2F;optimization-coaching.pdf&quot;&gt;Optimization Coaching&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rfrn.org&#x2F;~shu&#x2F;papers&#x2F;ecoop15.pdf&quot;&gt;Optimization Coaching for JavaScript&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Berkeley-Correctness-Group&#x2F;JITProf&quot;&gt;JITProf&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;JacksonGL&#x2F;jitprof-visualization&quot;&gt;JITProf-visualization&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;This paper about encoding low-level semantics in a higher-level language for optimizing code: &lt;a href=&quot;http:&#x2F;&#x2F;users.cecs.anu.edu.au&#x2F;~steveb&#x2F;pubs&#x2F;papers&#x2F;vmmagic-vee-2009.pdf&quot;&gt;Demystifying Magic: High-level Low-level Programming&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Meta-tracing JITs in native code
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nbp&#x2F;holyjit&quot;&gt;holyjit&lt;&#x2F;a&gt; (Rust)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;chc4&#x2F;lineiform&quot;&gt;lineiform&lt;&#x2F;a&gt; (Rust)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matthewfl&#x2F;redmagic&quot;&gt;redmagic&lt;&#x2F;a&gt; (C)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;prg-titech&#x2F;baccaml&quot;&gt;BacCaml&lt;&#x2F;a&gt; (OCaml)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Bump allocators: &lt;a href=&quot;https:&#x2F;&#x2F;fitzgeraldnick.com&#x2F;2019&#x2F;11&#x2F;01&#x2F;always-bump-downwards.html&quot;&gt;always bump downwards&lt;&#x2F;a&gt;!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;And here are runtime optimization resources that I wrote!&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&#x2F;blog&#x2F;inline-caching&#x2F;&quot;&gt;Inline caching&lt;&#x2F;a&gt;, a post containing a small demo of how to speed up attribute lookups in an interpreter&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;&#x2F;blog&#x2F;inline-caching-quickening&#x2F;&quot;&gt;Inline caching: quickening&lt;&#x2F;a&gt;, a post about speeding up interpreters using self-modifying bytecode (“bytecode rewriting” or “quickening”)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;&#x2F;blog&#x2F;small-objects&#x2F;&quot;&gt;Small objects and pointer tagging&lt;&#x2F;a&gt;, a post about speeding up interpreters using pointer tagging and encoding small objects inside pointers&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;pointer-tagging-and-nan-boxing&quot;&gt;Pointer tagging and NaN boxing&lt;&#x2F;h3&gt;
+&lt;p&gt;Resources on representing small values efficiently.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;nikic’s &lt;a href=&quot;https:&#x2F;&#x2F;nikic.github.io&#x2F;2012&#x2F;02&#x2F;02&#x2F;Pointer-magic-for-efficient-dynamic-value-representations.html&quot;&gt;Pointer magic…&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Sean’s &lt;a href=&quot;https:&#x2F;&#x2F;sean.cm&#x2F;a&#x2F;nan-boxing&quot;&gt;NaN-Boxing&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;zuiderkwast’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zuiderkwast&#x2F;nanbox&quot;&gt;nanbox&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;albertnetymk’s &lt;a href=&quot;http:&#x2F;&#x2F;albertnetymk.github.io&#x2F;2016&#x2F;08&#x2F;06&#x2F;nan_boxing&#x2F;&quot;&gt;NaN Boxing&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Ghuloum’s &lt;a href=&quot;&#x2F;assets&#x2F;img&#x2F;11-ghuloum.pdf&quot;&gt;Incremental approach&lt;&#x2F;a&gt; (PDF), which introduces this in a compiler setting&lt;&#x2F;li&gt;
+&lt;li&gt;Chicken Scheme’s &lt;a href=&quot;https:&#x2F;&#x2F;wiki.call-cc.org&#x2F;man&#x2F;4&#x2F;Data%20representation&quot;&gt;data representation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Guile Scheme’s &lt;a href=&quot;https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;guile&#x2F;manual&#x2F;html_node&#x2F;Faster-Integers.html&quot;&gt;Faster Integers&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Femtolisp &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;JeffBezanson&#x2F;femtolisp&#x2F;blob&#x2F;master&#x2F;flisp.h&quot;&gt;object implementation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Leonard Schütz’s &lt;a href=&quot;https:&#x2F;&#x2F;leonardschuetz.ch&#x2F;blog&#x2F;nan-boxing&#x2F;&quot;&gt;NaN Boxing&lt;&#x2F;a&gt; article&lt;&#x2F;li&gt;
+&lt;li&gt;Piotr Duperas’s &lt;a href=&quot;https:&#x2F;&#x2F;piotrduperas.com&#x2F;posts&#x2F;nan-boxing&#x2F;&quot;&gt;NaN boxing or how to make the world dynamic&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;just-in-time-compilers&quot;&gt;Just-In-Time compilers&lt;&#x2F;h3&gt;
+&lt;p&gt;Small JITs to help understand the basics. Note that these implementations tend to focus on the compiling ASTs or IRs to machine code, rather than the parts of the JIT that offer the most performance: inline caching and code inlining. Compiling is great but unless you’re producing good machine code, it may not do a whole lot.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Antonio Cuni’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;antocuni&#x2F;jit30min&quot;&gt;jit30min&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Christian Stigen Larsen’s &lt;a href=&quot;https:&#x2F;&#x2F;csl.name&#x2F;post&#x2F;python-jit&#x2F;&quot;&gt;Writing a basic x86-64 JIT compiler from scratch in stock Python&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Ben Hoyt’s &lt;a href=&quot;https:&#x2F;&#x2F;benhoyt.com&#x2F;writings&#x2F;pyast64&#x2F;&quot;&gt;Compiling Python syntax to x86-64 assembly for fun and (zero) profit&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;My very undocumented (but hopefully readable) &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tekknolagi&#x2F;ghuloum&quot;&gt;implementation&lt;&#x2F;a&gt; of the Ghuloum compiler&lt;&#x2F;li&gt;
+&lt;li&gt;Matt Page’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mpage&#x2F;template_jit&quot;&gt;template_jit&lt;&#x2F;a&gt; for CPython, which also contains a readable CFG implementation&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;assembler-libraries&quot;&gt;Assembler libraries&lt;&#x2F;h3&gt;
+&lt;p&gt;Sometimes you want to generate assembly from a host language. Common use cases include compilers, both ahead-of-time and just-in-time. Here are some libraries that can help with that.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tachyon’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Tachyon-Team&#x2F;Tachyon&#x2F;tree&#x2F;master&#x2F;source&#x2F;backend&#x2F;x86&quot;&gt;x86-64 assembler&lt;&#x2F;a&gt; (JS)&lt;&#x2F;li&gt;
+&lt;li&gt;Higgs’ &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;higgsjs&#x2F;Higgs&#x2F;blob&#x2F;master&#x2F;source&#x2F;jit&#x2F;x86.d&quot;&gt;x86-64 assembler&lt;&#x2F;a&gt; (D), which is based on Tachyon’s&lt;&#x2F;li&gt;
+&lt;li&gt;yjit’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Shopify&#x2F;ruby&#x2F;blob&#x2F;56a1220128d18a7422f72e25d99b2bee9c7e5a86&#x2F;yjit_asm.h&quot;&gt;x86-64 assembler&lt;&#x2F;a&gt; (C) from Shopify’s Ruby JIT, which is based on Higgs’&lt;&#x2F;li&gt;
+&lt;li&gt;Dart’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dart-lang&#x2F;sdk&#x2F;tree&#x2F;1e24fe7d699a1c36be142afa21859c6a9c82d035&#x2F;runtime&#x2F;vm&#x2F;compiler&#x2F;assembler&quot;&gt;multi-arch assembler&lt;&#x2F;a&gt; (C++) and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dart-lang&#x2F;sdk&#x2F;blob&#x2F;1e24fe7d699a1c36be142afa21859c6a9c82d035&#x2F;runtime&#x2F;vm&#x2F;constants_x64.h&quot;&gt;relevant constants&lt;&#x2F;a&gt;, both of which need some extracting from the main project&lt;&#x2F;li&gt;
+&lt;li&gt;Strongtalk’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;talksmall&#x2F;Strongtalk&#x2F;tree&#x2F;39b336f8399230502535e7ac12c9c1814552e6da&#x2F;vm&#x2F;asm&quot;&gt;x86 assembler&lt;&#x2F;a&gt; (C)&lt;&#x2F;li&gt;
+&lt;li&gt;AsmJit’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;asmjit&#x2F;asmjit&quot;&gt;multi-arch assembler&lt;&#x2F;a&gt; (C++)&lt;&#x2F;li&gt;
+&lt;li&gt;PeachPy’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Maratyszcza&#x2F;PeachPy&quot;&gt;x86-64 assembler&lt;&#x2F;a&gt; (Python)&lt;&#x2F;li&gt;
+&lt;li&gt;PPCI’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;windelbouwman&#x2F;ppci&#x2F;blob&#x2F;915c069e0667042c085ec42c78e9e3c9a5295324&#x2F;ppci&#x2F;arch&#x2F;x86_64&#x2F;instructions.py&quot;&gt;x86-64 assembler&lt;&#x2F;a&gt; (Python) and other great compiler infrastructure&lt;&#x2F;li&gt;
+&lt;li&gt;My &lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;tekknolagi&#x2F;201539673cfcc60df73ef75a8a9b5896&quot;&gt;small x86-64 assembler&lt;&#x2F;a&gt; (C), which I forked from the pervognsen’s &lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;pervognsen&#x2F;9d815016d8ef39f1b2c8e509ee2cf052&quot;&gt;original&lt;&#x2F;a&gt; (C)&lt;&#x2F;li&gt;
+&lt;li&gt;A &lt;a href=&quot;https:&#x2F;&#x2F;www.felixcloutier.com&#x2F;documents&#x2F;gcc-asm.html&quot;&gt;guide to using GCC inline assembly&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;systemv-abi&quot;&gt;SystemV ABI&lt;&#x2F;h3&gt;
+&lt;p&gt;This is a sort of grab-bag for helpful or interesting tools for programming language implementation.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;justine.lol&#x2F;blinkenlights&#x2F;index.html&quot;&gt;Blinkenlights&lt;&#x2F;a&gt;, a visual x86-64 emulator&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;justine.lol&#x2F;cosmopolitan&#x2F;index.html&quot;&gt;Cosmopolitan libc&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;justine.lol&#x2F;ftrace&#x2F;&quot;&gt;Cosmopolitan ftrace&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;game-boy-emulators&quot;&gt;Game Boy Emulators&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;gbdev.io&#x2F;pandocs&#x2F;&quot;&gt;Pan Docs&lt;&#x2F;a&gt;, which give technical data about the Game Boy hardware, I&#x2F;O ports, flags, cartridges, memory map, etc&lt;&#x2F;li&gt;
+&lt;li&gt;This excellent &lt;a href=&quot;https:&#x2F;&#x2F;realboyemulator.wordpress.com&#x2F;2013&#x2F;01&#x2F;03&#x2F;a-look-at-the-game-boy-bootstrap-let-the-fun-begin&#x2F;&quot;&gt;explanation&lt;&#x2F;a&gt; of the boot ROM&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;www.pastraiser.com&#x2F;cpu&#x2F;gameboy&#x2F;gameboy_opcodes.html&quot;&gt;opcode table&lt;&#x2F;a&gt; that details the full instruction set, including CB opcodes&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;rednex.github.io&#x2F;rgbds&#x2F;gbz80.7.html&quot;&gt;full opcode reference&lt;&#x2F;a&gt; for the GBZ80&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;a href=&quot;http:&#x2F;&#x2F;marc.rawer.de&#x2F;Gameboy&#x2F;Docs&#x2F;GBCPUman.pdf&quot;&gt;Game Boy CPU manual&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;a href=&quot;http:&#x2F;&#x2F;gameboy.mongenel.com&#x2F;dmg&#x2F;asmmemmap.html&quot;&gt;GameBoy memory map&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;mattbruv.github.io&#x2F;gameboy-crust&#x2F;&quot;&gt;blog post&lt;&#x2F;a&gt; that gives a pretty simple state machine for the different rendering steps&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=HyzD8pNlpwI&quot;&gt;Ultimate Game Boy Talk&lt;&#x2F;a&gt; (video) by Michael Steil at CCC&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;http:&#x2F;&#x2F;catskull.net&#x2F;GB-Logo-Generator&#x2F;&quot;&gt;ROM generator&lt;&#x2F;a&gt; for custom logos&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;EmuDev&#x2F;comments&#x2F;cdtuyw&#x2F;gameboy_emulator_fails_blargg_daa_test&#x2F;etwcyvy&#x2F;&quot;&gt;sample DAA implementation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gbdev&#x2F;awesome-gbdev&quot;&gt;awesome-gbdev&lt;&#x2F;a&gt; list&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;drhelius&#x2F;Gearboy&quot;&gt;excellent emulator and debugger&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Another &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Jonazan2&#x2F;PatBoy&quot;&gt;emulator and debugger&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;gekkio.fi&#x2F;files&#x2F;gb-docs&#x2F;gbctr.pdf&quot;&gt;Game Boy complete technical reference&lt;&#x2F;a&gt; (PDF)&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;thomas.spurden.name&#x2F;gameboy&#x2F;&quot;&gt;Gameboy Overview&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;blargg’s &lt;a href=&quot;https:&#x2F;&#x2F;gbdev.gg8.se&#x2F;files&#x2F;roms&#x2F;blargg-gb-tests&#x2F;&quot;&gt;test ROMs&lt;&#x2F;a&gt; which have instruction tests, sound tests, etc&lt;&#x2F;li&gt;
+&lt;li&gt;gekkio’s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Gekkio&#x2F;mooneye-gb&quot;&gt;emulator&lt;&#x2F;a&gt; and his &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Gekkio&#x2F;mooneye-test-suite&quot;&gt;test ROMs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Humpheh&#x2F;goboy&quot;&gt;fairly readable Go emulator&lt;&#x2F;a&gt;, which has helped me make sense of some features&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;simias&#x2F;gaembuoy&quot;&gt;fairly readable C emulator&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;MoleskiCoder&#x2F;EightBit&#x2F;blob&#x2F;master&#x2F;LR35902&#x2F;src&#x2F;LR35902.cpp&quot;&gt;fairly readable C++ implementation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mattbruv&#x2F;Gameboy-Crust&#x2F;blob&#x2F;master&#x2F;src&#x2F;core&#x2F;gpu.rs&quot;&gt;helpful GPU implementation in Rust&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;gb-archive.github.io&#x2F;salvage&#x2F;decoding_gbz80_opcodes&#x2F;Decoding%20Gamboy%20Z80%20Opcodes.html&quot;&gt;reference&lt;&#x2F;a&gt; for decoding GameBoy instructions.
+&lt;ul&gt;
+&lt;li&gt;NOTE: This has one &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gb-archive&#x2F;salvage&#x2F;issues&#x2F;1&quot;&gt;bug&lt;&#x2F;a&gt; that someone and I independently found. The &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phire&#x2F;Kea&quot;&gt;original repo&lt;&#x2F;a&gt; has fixed the bug but not the page linked above.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;This &lt;a href=&quot;http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20200726064933&#x2F;https:&#x2F;&#x2F;dandigit.com&#x2F;posts&#x2F;bigboy-writing-a-gameboy-emulator&quot;&gt;summary blog post&lt;&#x2F;a&gt; explaining GPU modes&lt;&#x2F;li&gt;
+&lt;li&gt;And of course &lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;EmuDev&#x2F;&quot;&gt;&#x2F;r&#x2F;emudev&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;danistefanovic&#x2F;build-your-own-x#build-your-own-emulator--virtual-machine&quot;&gt;DIY emulator&#x2F;VM resources&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nullprogram.com&#x2F;blog&#x2F;2017&#x2F;11&#x2F;03&#x2F;&quot;&gt;This&lt;&#x2F;a&gt; is a potentially fun way to render the screen without SDL, but only for non-interactive purposes.&lt;&#x2F;p&gt;
+&lt;p&gt;This &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;playlist?list=PLye7LM1YVhDHR4TGMklN3tMt_J2jIrn1w&quot;&gt;YouTube&lt;&#x2F;a&gt; playlist looks like it could be worth a watch, but it’s a lot of hours.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;lists&quot;&gt;Lists&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aalhour&#x2F;awesome-compilers&quot;&gt;awesome compilers resources&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;danistefanovic&#x2F;build-your-own-x#build-your-own-programming-language&quot;&gt;programming language resources&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;communities&quot;&gt;Communities&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;programminglanguages&quot;&gt;&#x2F;r&#x2F;programminglanguages&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;compilers&quot;&gt;&#x2F;r&#x2F;compilers&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;operating-system&quot;&gt;Operating System&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;wiki.osdev.org&#x2F;Main_Page&quot;&gt;OSDev&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.linuxfromscratch.org&#x2F;&quot;&gt; Linux From Scratch&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;os.phil-opp.com&#x2F;&quot;&gt;Writing an OS in Rust&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;littleosbook&#x2F;littleosbook&#x2F;&quot;&gt;littleosbook&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;cfenollosa&#x2F;os-tutorial&quot;&gt;OS from scratch&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;codecrafters-io&#x2F;build-your-own-x#build-your-own-operating-system&quot;&gt;operating system resources&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.nand2tetris.org&#x2F;&quot;&gt;Nand to Tetris courses&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;assembly-language&quot;&gt;Assembly language&lt;&#x2F;h3&gt;
+&lt;p&gt;picking up assembly is something i would like to do ASAP.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pacman128.github.io&#x2F;pcasm&#x2F;&quot;&gt;PC Assembly Language programming&lt;&#x2F;a&gt;
+32bits&lt;&#x2F;p&gt;
+&lt;p&gt;Learning assembly for linux-x64 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;0xAX&#x2F;asm&quot;&gt;asm&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Introduction to &lt;a href=&quot;https:&#x2F;&#x2F;www.cs.princeton.edu&#x2F;courses&#x2F;archive&#x2F;spring04&#x2F;cos217&#x2F;&quot;&gt; Programming Systems&lt;&#x2F;a&gt; by princeton&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;skilldrick.github.io&#x2F;easy6502&#x2F;index.html&quot;&gt;Easy 6502&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.xorpd.net&#x2F;pages&#x2F;x86_adventures.html&quot;&gt;Assembly Language Adventures&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;muff-in&#x2F;ff678b1fda17e6188aa0462a99626121&quot;&gt;Assembly Language &#x2F; Reversing &#x2F; Malware Analysis &#x2F; Game Hacking -resources&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.cs.virginia.edu&#x2F;~evans&#x2F;cs216&#x2F;guides&#x2F;x86.html&quot;&gt;x86 Assembly Guide&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mikeroyal&#x2F;Assembly-Guide&quot;&gt;Assembly Guide&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

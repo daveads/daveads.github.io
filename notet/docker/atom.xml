@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - docker</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notet/docker/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-09-22T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notet/docker/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Docker key words</title>
+        <published>2023-09-22T00:00:00+00:00</published>
+        <updated>2023-09-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/docker-file/"/>
+        <id>https://daveads.github.io/note/docker-file/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/docker-file/">&lt;p&gt;&lt;strong&gt;Docker file note&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Certainly, here are all the commonly used Dockerfile commands along with detailed explanations:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;FROM&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Specifies the base image to use as the starting point for your Docker image.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Usage: &lt;code&gt;FROM image:tag&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Example: &lt;code&gt;FROM ubuntu:latest&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;RUN&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Executes shell commands within the image during the build process. Typically used for installing software, updating packages, or any setup tasks.&lt;&#x2F;li&gt;
+&lt;li&gt;Usage: &lt;code&gt;RUN command&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Example: &lt;code&gt;RUN apt-get update &amp;amp;&amp;amp; apt-get install -y python3&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;COPY&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Copies files or directories from the host machine into the image. It&#x27;s often used to add application code and resources to the image.&lt;&#x2F;li&gt;
+&lt;li&gt;Usage: &lt;code&gt;COPY source destination&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Example: &lt;code&gt;COPY app.py &#x2F;app&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;WORKDIR&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sets the working directory inside the container where subsequent commands will be executed. Useful for organizing files and specifying paths.&lt;&#x2F;li&gt;
+&lt;li&gt;Usage: &lt;code&gt;WORKDIR path&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Example: &lt;code&gt;WORKDIR &#x2F;app&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;EXPOSE&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Informs Docker that the container will listen on specific ports at runtime. It doesn&#x27;t actually expose the ports; it&#x27;s for documentation purposes.&lt;&#x2F;li&gt;
+&lt;li&gt;Usage: &lt;code&gt;EXPOSE port(s)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Example: &lt;code&gt;EXPOSE 8080&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CMD&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Specifies the default command to run when a container is started from the image. You can override it when starting a container.&lt;&#x2F;li&gt;
+&lt;li&gt;Usage: &lt;code&gt;CMD [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Example: &lt;code&gt;CMD [&quot;python3&quot;, &quot;app.py&quot;]&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ENTRYPOINT&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Similar to CMD, it defines the default command to run when a container starts, but it&#x27;s more rigid and doesn&#x27;t allow command override. Useful for creating containerized applications that act like executables.&lt;&#x2F;li&gt;
+&lt;li&gt;Usage: &lt;code&gt;ENTRYPOINT [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Example: &lt;code&gt;ENTRYPOINT [&quot;python3&quot;, &quot;app.py&quot;]&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ENV&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sets environment variables within the container. These variables can be used in subsequent Dockerfile commands or by the running application.&lt;&#x2F;li&gt;
+&lt;li&gt;Usage: &lt;code&gt;ENV key=value&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Example: &lt;code&gt;ENV MY_VARIABLE=value&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;VOLUME&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Creates a mount point for external volumes or data to be shared with the container. It allows data persistence and sharing between containers.&lt;&#x2F;li&gt;
+&lt;li&gt;Usage: &lt;code&gt;VOLUME &#x2F;path&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Example: &lt;code&gt;VOLUME &#x2F;data&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;USER&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sets the user or UID (User ID) under which the container will run. It&#x27;s useful for improving security by running processes with lower privileges.&lt;&#x2F;li&gt;
+&lt;li&gt;Usage: &lt;code&gt;USER username_or_UID&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Example: &lt;code&gt;USER appuser&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+</feed>
