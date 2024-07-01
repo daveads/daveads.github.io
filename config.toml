@@ -11,7 +11,7 @@ build_search_index = true
 
 
 #Feeds
-generate_feed = true
+generate_feeds = true
 feed_filename = "atom.xml"
 
 taxonomies = [
