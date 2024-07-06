@@ -5,7 +5,7 @@ date = 2024-06-18
 notec = ["Workout"]
 +++
 
-# Weekly Gym Workout Plan
+# Weekly Gym Workout Plan for July Ig
 **//It a pretty weird plan** Just 1 rest Day. :]
 
 ### Day 1 Monday (Chest, Shoulder, Triceps)

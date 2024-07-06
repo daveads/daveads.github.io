@@ -10,5 +10,5 @@ config.dev.toml
 future.md
 node_modules/
 .env
-
+env
 hardware_robotics.md

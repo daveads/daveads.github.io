@@ -12,8 +12,8 @@ load_dotenv()
 WRITING_DIR = os.getenv("WRITING")
 NOTE_DIR = os.getenv("NOTE")
 
-print(WRITING_DIR)
-print(NOTE_DIR)
+#print(WRITING_DIR)
+#print(NOTE_DIR)
 
 
 # Get user input
