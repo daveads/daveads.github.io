@@ -1,0 +1,109 @@
+
+.callout {
+    border-left: 4px solid #3d5a63;
+    background-color: #269ad4;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.callout .icon {
+    margin-right: 15px;
+}
+
+.callout .icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.callout .content {
+    flex: 1;
+    color: rgb(223, 215, 215);
+}
+
+
+/** Tips **/
+.callout.tip {
+    border-color: #a5b7bd;
+    background-color: #2f353b;
+}
+
+
+/** Warning shortcodes **/
+.callout.warning {
+    border-left: 4px solid #ff0000;
+    border-top: 4px solid red;
+    border-right: 4px solid #ff0000;
+    border-bottom: 4px solid #ff0000;
+
+    background-color: #333231;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.callout.warning .icon {
+    margin-right: 15px;
+}
+
+.callout.warning .icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #ee2c1e;
+}
+
+.callout.warning .content {
+    flex: 1;
+    color: aliceblue;
+}
+
+.callout.warning strong {
+    color: #f73434;
+}
+
+/** Notes **/
+.callout.note {
+    border-left: 4px solid #5bc0de;
+    border-right: 4px solid #5bc0de;
+    border-top: 4px solid #5bc0de;
+    border-bottom: 4px solid #5bc0de;
+    
+    background-color: #2e4855;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.callout.note .icon {
+    margin-right: 15px;
+}
+
+.callout.note .icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #2e6b7e;
+}
+
+.callout.note .content {
+    flex: 1;
+}
+
+.callout.note strong {
+    color: #2cdce2;
+}
+
+
+
+
+
+/**
+* Warning (or Alert)
+* Tip
+* Note
+
+Table of Content
+Image
+**/

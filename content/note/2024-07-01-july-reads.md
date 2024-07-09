@@ -1,6 +1,8 @@
 +++
 title = "July Reads 2024"
 date = 2024-07-06
+[taxonomies]
+notec = ["Reads"]
 +++
 
 ### Tech
