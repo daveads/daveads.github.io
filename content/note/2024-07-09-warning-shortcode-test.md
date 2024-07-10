@@ -1,6 +1,8 @@
 +++
-title = "warning_shortcode"
+title = "Warning shortcode test"
 date = 2024-07-09
+[taxonomies]
+notec = ["Tests"]
 +++
 
 # Important Safety Information

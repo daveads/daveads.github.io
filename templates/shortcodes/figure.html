@@ -1,0 +1,15 @@
+<figure class="centered-image">
+
+    <img src="/assets/images/{{ src }}"
+
+    {% if alt %} alt="{{alt | safe }}"{% endif %}
+
+    {% if w %} width="{{w}}"{% endif %}
+    {% if h %} height="{{h}}"{% endif %} 
+    loading="lazy" />
+
+    {% if alt %}
+    <figcaption>{{ alt | safe }}</figcaption>
+    {% endif %}
+
+</figure>

@@ -1,6 +1,8 @@
 +++
-title = "note_shortcode"
+title = "Note shortcode test"
 date = 2024-07-09
+[taxonomies]
+notec = ["Tests"]
 +++
 
 # Introduction to Zola

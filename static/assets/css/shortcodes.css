@@ -107,3 +107,23 @@
 Table of Content
 Image
 **/
+
+/** Image **/
+.centered-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.centered-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.centered-image figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}

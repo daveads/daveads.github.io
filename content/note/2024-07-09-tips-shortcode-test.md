@@ -1,6 +1,8 @@
 +++
-title = "tips"
+title = "Tips shortcode test"
 date = 2024-07-09
+[taxonomies]
+notec = ["Tests"]
 +++
 
 # My Zola Blog Post

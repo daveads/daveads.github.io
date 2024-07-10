@@ -1,5 +1,5 @@
 <blockquote>
-    {{ content | safe }}
+    {{ body | markdown | safe }}
     {% if cite %}
     <footer>
         <cite>{{ cite }}</cite>
