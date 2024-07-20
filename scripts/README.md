@@ -1,0 +1,3 @@
+### Scripts
+
+Automating some zola stuff...
