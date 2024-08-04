@@ -3,11 +3,13 @@ title = "Jazz Chord Symbols and Nomenclature"
 date = 2024-08-04
 description = "A comprehensive guide to understanding and interpreting jazz chord symbols"
 [taxonomies]
+categories = ["Music"]
 notec = ["Music"]
 notet = ["piano", "jazz"]
 +++
 
 # Jazz Chord Symbols and Nomenclature
+
 
 Jazz chord symbols provide a concise way to notate complex harmonic structures. Most commonly used jazz chord symbols and nomenclature.
 
