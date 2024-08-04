@@ -120,7 +120,8 @@ Jazz chord symbols provide a concise way to notate complex harmonic structures. 
 
 <br>
 
-### **Common Shorthand**
+{% note(header="Common Shorthand") %}
 - △ = major 7th
 - ø = half-diminished (m7♭5)
 - ° = fully diminished
+{% end %}
