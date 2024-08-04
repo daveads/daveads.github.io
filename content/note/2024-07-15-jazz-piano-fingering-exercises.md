@@ -2,7 +2,8 @@
 title = "Jazz Piano Fingering Exercises"
 date = 2024-07-15
 [taxonomies]
-notec = ["Music", "Piano"]
+categories = ["Music"]
+notec = ["Music"]
 notet = ["piano", "jazz"]
 +++
 

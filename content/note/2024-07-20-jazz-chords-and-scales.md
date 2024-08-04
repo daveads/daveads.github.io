@@ -2,7 +2,8 @@
 title = "Jazz Chords and Scales"
 date = 2024-07-20
 [taxonomies]
-notec = ["Music", "Piano"]
+categories = ["Music"]
+notec = ["Music"]
 notet = ["piano", "jazz"]
 +++
 
