@@ -84,8 +84,7 @@ Example in C: C - G - Am - F
 5. **Tritone Substitution**: Replacing V7 with bII7
    Example: Db7 instead of G7 in the key of C
 
-## Practice Tips
-
+**Practice Tips**
 - Start by mastering basic progressions, then add extensions and alterations
 - Practice with recordings of gospel music to internalize the feel
 - Work on developing a strong sense of rhythm and groove

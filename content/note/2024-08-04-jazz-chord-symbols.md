@@ -125,6 +125,6 @@ Jazz chord symbols provide a concise way to notate complex harmonic structures. 
 - ø = Half-diminished ( Cø, Cm7(♭5) )
 - ° = Fully diminished ( C°, Cdim )
 - "+" = Augmented ( Caug or C+ )
-- ♭ = Flat ( C7(♭5), C7(♭9) )    //lower a key by a half note
-- ♯ = Sharp ( C7(♯5), C7(♯9) )   //raise a key by half note
+- ♭ = Flat ( C7(♭5), C7(♭9) )    //Lower a Key by a Half Note
+- ♯ = Sharp ( C7(♯5), C7(♯9) )   //Raise a Key by Half Note
 {% end %}
