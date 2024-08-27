@@ -8,4 +8,4 @@ notec = ["Reads"]
 ### Reads for August
 - [Fierce nerds](https://paulgraham.com/fn.html)
 - [/think](https://paulgraham.com/think.html)
-- 
+- [Erasure Coding](https://transactional.blog/blog/2024-erasure-coding)
