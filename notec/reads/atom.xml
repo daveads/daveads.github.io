@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - Reads</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notec/reads/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-08-13T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notec/reads/atom.xml</id>
+    <entry xml:lang="en">
+        <title>August Reads 2024</title>
+        <published>2024-08-13T00:00:00+00:00</published>
+        <updated>2024-08-13T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/august-reads/"/>
+        <id>https://daveads.github.io/note/august-reads/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/august-reads/">&lt;h3 id=&quot;reads-for-august&quot;&gt;Reads for August&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;paulgraham.com&#x2F;fn.html&quot;&gt;Fierce nerds&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;paulgraham.com&#x2F;think.html&quot;&gt;&#x2F;think&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;transactional.blog&#x2F;blog&#x2F;2024-erasure-coding&quot;&gt;Erasure Coding&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>July Reads 2024</title>
+        <published>2024-07-06T00:00:00+00:00</published>
+        <updated>2024-07-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/july-reads/"/>
+        <id>https://daveads.github.io/note/july-reads/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/july-reads/">&lt;h3 id=&quot;tech&quot;&gt;Tech&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;carbon-steel.github.io&#x2F;jekyll&#x2F;update&#x2F;2024&#x2F;06&#x2F;19&#x2F;abstractions.html&quot;&gt;Abstractions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tylerneylon.com&#x2F;a&#x2F;mind_model&#x2F;mind_model.html&quot;&gt;Mind Model&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;salykova.github.io&#x2F;matmul-cpu&quot;&gt;NumPy&#x27;s matrix multiplication in 150 lines of C code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.vox.com&#x2F;future-perfect&#x2F;353430&#x2F;what-if-absolutely-everything-is-conscious&quot;&gt;What if absolutely everything is conscious?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>
