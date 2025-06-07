@@ -12,6 +12,8 @@ notec = ["Reads"]
 - [how to build an agent](https://ampcode.com/how-to-build-an-agent)
 - [mirrors](https://ghuntley.com/mirrors/)
 - [AI that can improve itself](https://richardcsuwandi.github.io/blog/2025/dgm/)
+
+**06-06-2025**
 - [mcp](https://ghuntley.com/mcp/)
 - [when ai replaces coworker](https://time.com/7289692/when-ai-replaces-workers/)
 - [rl and general](https://www.artfintel.com/p/reinforcement-learning-and-general)
