@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - Piano</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notec/piano/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-10-09T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notec/piano/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Comprehensive Music Theory Reading List</title>
+        <published>2024-10-09T00:00:00+00:00</published>
+        <updated>2024-10-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/reading-list/"/>
+        <id>https://daveads.github.io/note/reading-list/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/reading-list/">&lt;h1 id=&quot;fundamentals-of-music-theory&quot;&gt;Fundamentals of Music Theory&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;pitch-and-notation&quot;&gt;Pitch and Notation&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Staff, Clefs, and Note Names&lt;&#x2F;li&gt;
+&lt;li&gt;Ledger Lines&lt;&#x2F;li&gt;
+&lt;li&gt;Accidentals (Sharps, Flats, and Naturals)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;rhythm-and-meter&quot;&gt;Rhythm and Meter&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Note Values (Whole, Half, Quarter, etc.)&lt;&#x2F;li&gt;
+&lt;li&gt;Time Signatures&lt;&#x2F;li&gt;
+&lt;li&gt;Simple, Compound, and Complex Meter&lt;&#x2F;li&gt;
+&lt;li&gt;Syncopation and Polyrhythms&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;scales-and-modes&quot;&gt;Scales and Modes&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Major and Minor Scales&lt;&#x2F;li&gt;
+&lt;li&gt;Natural, Harmonic, and Melodic Minor Scales&lt;&#x2F;li&gt;
+&lt;li&gt;Pentatonic and Blues Scales&lt;&#x2F;li&gt;
+&lt;li&gt;Church Modes (Ionian, Dorian, Phrygian, etc.)&lt;&#x2F;li&gt;
+&lt;li&gt;Whole Tone and Chromatic Scales&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;intervals&quot;&gt;Intervals&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Perfect, Major, Minor, Augmented, and Diminished Intervals&lt;&#x2F;li&gt;
+&lt;li&gt;Interval Inversion&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;harmony-and-chord-structures&quot;&gt;Harmony and Chord Structures&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;triads-and-seventh-chords&quot;&gt;Triads and Seventh Chords&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Major, Minor, Diminished, and Augmented Triads&lt;&#x2F;li&gt;
+&lt;li&gt;Major 7th, Dominant 7th, Minor 7th, Half-Diminished 7th, Fully Diminished 7th&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;extended-and-altered-chords&quot;&gt;Extended and Altered Chords&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;9th, 11th, and 13th Chords&lt;&#x2F;li&gt;
+&lt;li&gt;Altered Dominant Chords&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;chord-functions-and-progressions&quot;&gt;Chord Functions and Progressions&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Diatonic Harmony (Tonic, Dominant, Subdominant)&lt;&#x2F;li&gt;
+&lt;li&gt;Common Chord Progressions (e.g., ii-V-I, I-IV-V)&lt;&#x2F;li&gt;
+&lt;li&gt;Secondary Dominants and Leading-Tone Chords&lt;&#x2F;li&gt;
+&lt;li&gt;Modulation and Key Relationships&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;counterpoint&quot;&gt;Counterpoint&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;species-counterpoint&quot;&gt;Species Counterpoint&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;First to Fifth Species&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;fugues-and-canons&quot;&gt;Fugues and Canons&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fugue Structure (Exposition, Development, etc.)&lt;&#x2F;li&gt;
+&lt;li&gt;Canon Techniques&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;form-and-analysis&quot;&gt;Form and Analysis&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;musical-forms&quot;&gt;Musical Forms&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Binary, Ternary, Rondo, and Sonata-Allegro Forms&lt;&#x2F;li&gt;
+&lt;li&gt;Theme and Variations&lt;&#x2F;li&gt;
+&lt;li&gt;Through-Composed Form&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;phrase-structure&quot;&gt;Phrase Structure&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Periods, Phrases, and Cadences&lt;&#x2F;li&gt;
+&lt;li&gt;Antecedent and Consequent Phrases&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;advanced-concepts&quot;&gt;Advanced Concepts&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;modulation-and-key-relationships&quot;&gt;Modulation and Key Relationships&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Common and Uncommon Modulation Techniques&lt;&#x2F;li&gt;
+&lt;li&gt;Pivot Chords&lt;&#x2F;li&gt;
+&lt;li&gt;Enharmonic Modulation&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;circle-of-fifths&quot;&gt;Circle of Fifths&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Key Signatures and Relationships&lt;&#x2F;li&gt;
+&lt;li&gt;Relative and Parallel Keys&lt;&#x2F;li&gt;
+&lt;li&gt;Enharmonic Keys&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;chromaticism-and-non-diatonic-scales&quot;&gt;Chromaticism and Non-Diatonic Scales&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Chromatic Scale&lt;&#x2F;li&gt;
+&lt;li&gt;Whole Tone Scale&lt;&#x2F;li&gt;
+&lt;li&gt;Octatonic (Diminished) Scale&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;jazz-harmony-and-voicings&quot;&gt;Jazz Harmony and Voicings&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Jazz Chord Symbols and Nomenclature&lt;&#x2F;li&gt;
+&lt;li&gt;Voicing Techniques (Drop 2, Quartal Voicing, etc.)&lt;&#x2F;li&gt;
+&lt;li&gt;Improvisation and Scale Choices (Modes, Blues Scale, etc.)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;orchestration-and-instrumentation&quot;&gt;Orchestration and Instrumentation&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Instrument Ranges and Characteristics&lt;&#x2F;li&gt;
+&lt;li&gt;Writing for Different Ensembles
+&lt;ul&gt;
+&lt;li&gt;String Quartet, Wind Quintet, Brass Ensemble&lt;&#x2F;li&gt;
+&lt;li&gt;Full Orchestra, Big Band&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;atonal-and-serial-music&quot;&gt;Atonal and Serial Music&lt;&#x2F;h1&gt;
+&lt;p&gt;Twelve-Tone Technique
+Set Theory&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;contemporary-music-theory&quot;&gt;Contemporary Music Theory&lt;&#x2F;h1&gt;
+&lt;p&gt;Minimalism and Post-Minimalism
+Electronic and Computer Music Theory&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;ethnomusicology&quot;&gt;Ethnomusicology&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;study-of-non-western-music-theories&quot;&gt;Study of Non-Western Music Theories&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Indian Raga and Tala&lt;&#x2F;li&gt;
+&lt;li&gt;African Rhythmic Structures&lt;&#x2F;li&gt;
+&lt;li&gt;Gamelan Scales and Forms&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;suggested-reading-list&quot;&gt;Suggested Reading List&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Tonal Harmony&quot; by Stefan Kostka and Dorothy Payne&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;The Complete Musician&quot; by Steven G. Laitz&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Counterpoint&quot; by Fux (translated by Alfred Mann)&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Harmony&quot; by Walter Piston&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Jazz Theory Book&quot; by Mark Levine&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;The Study of Orchestration&quot; by Samuel Adler&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;A New Approach to Jazz Improvisation&quot; by Jamey Aebersold&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Twentieth-Century Harmony&quot; by Vincent Persichetti&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Materials and Techniques of Twentieth-Century Music&quot; by Stefan Kostka&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Ethnomusicology: A Contemporary Reader&quot; edited by Jennifer C. Post&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>
