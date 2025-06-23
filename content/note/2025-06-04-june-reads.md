@@ -24,7 +24,13 @@ notec = ["Reads"]
 - [Optimization in zig](https://alloc.dev/2025/06/07/zig_optimization)
 - [LLms are cheap](https://www.snellman.net/blog/archive/2025-06-02-llms-are-cheap/)
 
+
 **17-06-2025**
 - [The lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/)
 - [Live like you only have 10 years left](https://themoralcircle.substack.com/p/live-like-you-only-have-10-years?t=lLXTEW8kyYNdOUihFmjkEw&s=09)
 - [Why is AI hard and Physics simple?](https://arxiv.org/abs/2104.00008)
+
+
+**23-06-2025**
+- [Chinese industrial maximalism](https://www.high-capacity.com/p/chinese-industrial-maximalism)
+- [TDD, AI agents and coding with Kent Beck](https://newsletter.pragmaticengineer.com/p/tdd-ai-agents-and-coding-with-kent)
