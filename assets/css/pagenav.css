@@ -1,0 +1,56 @@
+.PageNavigation {
+  font-size: 16px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+}
+
+.PageNavigation .next {
+  text-align: right;
+}
+
+
+.contact-lo{
+  padding: 15px;
+  margin:0;
+  font-size: 20px;
+}
+
+.contact-lo a:link{
+  text-decoration: none;
+  background-color: transparent;	
+}
+
+.contact-lo a:hover {
+  color: black;
+}
+
+
+
+.nav {
+  background-color: grey; 
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav li a{
+  
+  font-size: 20px;
+  padding: 20px;
+  float: left;
+  color: black;
+}
+
+.nav li{
+	display: inline;
+}
