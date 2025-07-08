@@ -3,6 +3,7 @@ title = "July Reads 2025"
 date = 2025-07-08
 [taxonomies]
 notec = ["Reads"]
+slug = "july-reads-2025"
 +++
 
 ### Reads for July
