@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - AI</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notec/ai/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-06-29T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notec/ai/atom.xml</id>
+    <entry xml:lang="en">
+        <title>ai related</title>
+        <published>2022-06-29T00:00:00+00:00</published>
+        <updated>2022-06-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/learnngai/"/>
+        <id>https://daveads.github.io/note/learnngai/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/learnngai/">&lt;h2 id=&quot;math&quot;&gt;math:&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Algebra&lt;&#x2F;li&gt;
+&lt;li&gt;probability&lt;&#x2F;li&gt;
+&lt;li&gt;statistics&lt;&#x2F;li&gt;
+&lt;li&gt;linear algebra&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;building-experience-in-end-to-end-projects&quot;&gt;&lt;strong&gt;building experience in end to end projects&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;published papers in the field.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;AI literature ???&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;data-ethics&quot;&gt;data-ethics ?&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;bias,&lt;&#x2F;li&gt;
+&lt;li&gt;fairness,&lt;&#x2F;li&gt;
+&lt;li&gt;feedback loops, and&lt;&#x2F;li&gt;
+&lt;li&gt;the risks of over emphasizing metrics.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;independent researcher&lt;&#x2F;strong&gt; ?&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;read standard textbooks (machine learning, optimization, statistics etc.)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ul&gt;
+&lt;li&gt;implement the latest papers of your interest&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;physics-and-maybe-biology&quot;&gt;physics and &quot;maybe biology&quot;&lt;&#x2F;h1&gt;
+</content>
+        
+    </entry>
+</feed>
