@@ -12,43 +12,64 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "static/assets/images/uploads"
+public_folder: "/assets/images/uploads"
 
 site_url: "https://daveads.github.io"
 display_url: "https://daveads.github.io"
 
-logo:
-  src: "https://daveads.github.io/images/logo.svg"
-  show_in_header: true
-
-locale: "en"
+logo_url: "https://daveads.github.io/assets/images/logo.svg"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: "writing"
+    label: "Writing"
+    folder: "content/writing"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     extension: "md"
     format: "frontmatter"
     preview_path: "writing/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "notes"
+  - name: "note"
     label: "Notes"
     folder: "content/note"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     extension: "md"
     format: "frontmatter"
     preview_path: "note/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "paper"
+    label: "Papers"
+    folder: "content/paper"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    preview_path: "paper/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    preview_path: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
