@@ -3,21 +3,41 @@ backend:
   repo: daveads/daveads.github.io
   branch: main
   auth_endpoint: https://auth.decapcms.org/auth
+  commit_messages:
+    create: "Create {{collection}} '{{slug}}'"
+    update: "Update {{collection}} '{{slug}}'"
+    delete: "Delete {{collection}} '{{slug}}'"
+    uploadMedia: "Upload '{{path}}'"
+    deleteMedia: "Delete '{{path}}'"
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+publish_mode: editorial_workflow
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+site_url: "https://daveads.github.io"
+display_url: "https://daveads.github.io"
+
+logo:
+  src: "https://daveads.github.io/images/logo.svg"
+  show_in_header: true
+
+locale: "en"
 
 collections:
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     extension: "md"
+    format: "frontmatter"
+    preview_path: "writing/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "notes"
@@ -26,6 +46,8 @@ collections:
     create: true
     slug: "{{slug}}"
     extension: "md"
+    format: "frontmatter"
+    preview_path: "note/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
