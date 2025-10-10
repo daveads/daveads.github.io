@@ -2,7 +2,7 @@ backend:
   name: github
   repo: daveads/daveads.github.io
   branch: main
-  auth_endpoint: https://auth.decapcms.org/auth
+  auth_endpoint: https://auth.decapcms.org
   use_graphql: true
 
 site_url: "https://daveads.github.io"
