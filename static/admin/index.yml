@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
-    <!-- Optional: explicitly point to your config -->
-    <link href="config.yml" type="text/yaml" rel="cms-config-url">
+    <link href="config.yml" type="text/yaml" rel="cms-config-url" />
   </head>
   <body>
-    <!-- Load Decap CMS from CDN -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
 </html>
