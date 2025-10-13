@@ -29,8 +29,10 @@ uv python pin --global 3.12
 ```bash
 uv run --python 3.12 -- python my_script.py
 ```
+<br>
 
-### Working with Existing Projects
+
+## Adding UV To An Existing Projects
 
 ### Initialize UV in existing project
 ```bash
@@ -46,8 +48,6 @@ source .venv/bin/activate  # Linux/macOS
 
 ### Install dependencies from requirements.txt
 ```bash
-uv pip install -r requirements.txt
-# or
 uv add -r requirements.txt
 ```
 
