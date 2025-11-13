@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - Language</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notec/language/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-06-29T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notec/language/atom.xml</id>
+    <entry xml:lang="en">
+        <title>programming language shits</title>
+        <published>2022-06-29T00:00:00+00:00</published>
+        <updated>2022-06-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/language/"/>
+        <id>https://daveads.github.io/note/language/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/language/">&lt;p&gt;Compilation strategies
+Just-in-time (JIT)
+Tracing just-in-time
+Ahead-of-time (AOT)
+Transcompilation
+Recompilation&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;dynamic-compilationincremental-compilation&quot;&gt;Dynamic compilation
+Incremental compilation&lt;&#x2F;h2&gt;
+&lt;p&gt;boostraping compiler...........&amp;gt;&amp;gt;&amp;gt;??&lt;&#x2F;p&gt;
+&lt;p&gt;Microcode ?? isa&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;runtimes&quot;&gt;runtimes&lt;&#x2F;h1&gt;
+&lt;p&gt;Java virtual machine (JVM)
+V8 and Node.js
+CPython and PyPy&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;tool-chain&quot;&gt;Tool chain&lt;&#x2F;h1&gt;
+&lt;p&gt;GNU Compiler Collection (GCC)
+LLVM and Clang&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
