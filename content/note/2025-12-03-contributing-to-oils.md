@@ -1,6 +1,6 @@
 +++
 title = "Contributing to Oils0"
-date = 2025-11-15
+date = 2025-12-03
 description = "A simple guide to understanding the Oils project."
 +++
 
@@ -271,6 +271,9 @@ This is crucial for contributing effectively:
 - **Purpose**: Modern syntax, new features
 - **Example**: `ysh/expr_eval.py` - `var x = 42` expressions
 
+"""
+Next Note will contain a deep dive in the mycpp transcompiler programm 
+"""
 
 
 ## Resources
