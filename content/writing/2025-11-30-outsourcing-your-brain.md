@@ -1,5 +1,5 @@
 +++
-title = "outsourcing your brain"
+title = "Outsourcing your brain"
 date = 2025-11-30
 +++
 
