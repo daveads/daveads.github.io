@@ -1,7 +1,9 @@
 +++
-title = "Contributing to Oils0"
+title = "Contributing to Oils(i)"
 date = 2025-12-03
 description = "A simple guide to understanding the Oils project."
+[taxonomies]
+notet= ["oils"] 
 +++
 
 
