@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - oils</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notet/oils/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-12-03T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notet/oils/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Contributing to Oils(i)</title>
+        <published>2025-12-03T00:00:00+00:00</published>
+        <updated>2025-12-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/contributing-to-oils/"/>
+        <id>https://daveads.github.io/note/contributing-to-oils/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/contributing-to-oils/">&lt;p&gt;This guide gives you a clear and lightweight overview on Oils, and how to get started contributing without getting overwhelmed.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;daveads.github.io&#x2F;note&#x2F;contributing-to-oils&#x2F;#prerequisites&quot;&gt;Prerequisites&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;daveads.github.io&#x2F;note&#x2F;contributing-to-oils&#x2F;#learning&quot;&gt;Learning&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;daveads.github.io&#x2F;note&#x2F;contributing-to-oils&#x2F;#Resources&quot;&gt;Resource&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;what-is-oils&quot;&gt;What is Oils ?&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Oils&lt;&#x2F;strong&gt; is an upgrade path from bash to a better language and runtime.&lt;br &#x2F;&gt;
+It comes in &lt;strong&gt;two shells&lt;&#x2F;strong&gt;, each built for a different kind of user:&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;what-are-osh-and-ysh&quot;&gt;What are OSH and YSH?&lt;&#x2F;h3&gt;
+&lt;p&gt;OSH runs your existing shell scripts.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;What it does:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Drop-in replacement&lt;&#x2F;strong&gt; for bash&#x2F;POSIX shells&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Runs existing scripts&lt;&#x2F;strong&gt; without modification&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;POSIX compatibility&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;follows bash&#x2F;dash&#x2F;mksh behavior&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Gradual migration path&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;use it today for your existing bash scripts &lt;strong&gt;Target users:&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;System administrators with existing shell scripts&lt;&#x2F;li&gt;
+&lt;li&gt;DevOps engineers maintaining legacy bash code&lt;&#x2F;li&gt;
+&lt;li&gt;Anyone with a large corpus of shell scripts&lt;&#x2F;li&gt;
+&lt;li&gt;Projects that need bash compatibility&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;#!&#x2F;usr&#x2F;bin&#x2F;env osh
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# Your existing bash script works as-is!
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; file &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;.txt&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;do
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;[[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;f &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span&gt;file&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;]]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;then
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;Processing &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt;file&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;cat &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span&gt;file&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot; | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;grep pattern
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;fi
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;done
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;ysh-yaks-shell-modern-shell-language&quot;&gt;YSH - Yaks Shell (Modern Shell Language)&lt;&#x2F;h3&gt;
+&lt;p&gt;YSH has a a faimilar syntax similar with python&#x2F;javascript so you should have no problem if you are conversant with any of those langugages.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;What it does:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Modern shell language&lt;&#x2F;strong&gt; with clean syntax&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Data structures&lt;&#x2F;strong&gt; - lists, dicts (not just strings)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Type safety&lt;&#x2F;strong&gt; - reduce errors with static types&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Better error handling&lt;&#x2F;strong&gt; - explicit try&#x2F;catch&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Expression-oriented&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Block syntax&lt;&#x2F;strong&gt; - { } for cleaner code organization&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Target users:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;People who find bash syntax confusing&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;#!&#x2F;usr&#x2F;bin&#x2F;env ysh
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;Variable and Expressions&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;const name = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;YSH User&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;var x = 10
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;setvar x = x &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt; 2 + 5
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;Hello &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;x + 10 = $[x + 10]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;Command sub: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo hi&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;)&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;Data Structures (Lists &amp;amp; Dicts)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;var mylist = &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;x, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;bar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;var person = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;name: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;Alice&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt; age: 30&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; i, item &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;in&lt;&#x2F;span&gt;&lt;span&gt; (mylist) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;  List[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;]: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt;item&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;Expression-based Control Flow&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;person.age &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;20&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt; and x &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;20&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;  echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;  $[person.name] is over 20 and x is over 20.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;Shell-like proc (Procedure)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;proc greet (name_str&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;  Proc says: Hello, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt;name_str&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;greet &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;World&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;Python-like func (Function)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;func multiply (a, b&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt; (a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt; b&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;  Func says: 5 * 7 = $[multiply(5, 7)]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;$[ENV.PWD]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;Built-in JSON Handling&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;  Writing &amp;#39;person&amp;#39; dict to JSON:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;json write (person&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;&#x2F;h2&gt;
+&lt;p&gt;Oils is written in Python, and you&#x27;ll be reading&#x2F;writing Python code daily.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;[] A good understanding of python&lt;&#x2F;li&gt;
+&lt;li&gt;[] A Good understanding of how Lexers, parsers, and interpreters works in a practical context&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;learning&quot;&gt;Learning&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Book: &quot;Crafting Interpreters&quot; by Robert Nystrom - Best intro to parsers&lt;&#x2F;li&gt;
+&lt;li&gt;Tutorial: &lt;a href=&quot;https:&#x2F;&#x2F;ruslanspivak.com&#x2F;lsbasi-part1&#x2F;&quot;&gt;Let&#x27;s Build a Simple Interpreter&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Book: &quot;The Linux Programming Interface&quot; - Unix process management&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;getting-started-the-5-minute-setup&quot;&gt;Getting Started: The 5-Minute Setup&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;installation&quot;&gt;installation&lt;&#x2F;h3&gt;
+&lt;p&gt;You&#x27;ll need:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python2&lt;&#x2F;li&gt;
+&lt;li&gt;Git&lt;&#x2F;li&gt;
+&lt;li&gt;Basic command-line knowledge&lt;&#x2F;li&gt;
+&lt;li&gt;A Linux machine (or WSL on Windows)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;quick-setup&quot;&gt;Quick Setup&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# 1. Clone the repository
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils.git
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;cd oils
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# Install system dependencies (choose your distro)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;build&#x2F;deps.sh wedge-deps-debian   &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# Ubuntu&#x2F;Debian (uses sudo apt-get)
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# OR
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;build&#x2F;deps.sh wedge-deps-alpine   &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# Alpine Linux
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# OR
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;build&#x2F;deps.sh wedge-deps-fedora   &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# Fedora&#x2F;RHEL
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# Download and build custom tools
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;build&#x2F;deps.sh fetch               &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# Download source tarballs
+&lt;&#x2F;span&gt;&lt;span&gt;                                
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;build&#x2F;deps.sh install-wedges      &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# Build and install tools (takes 5-10 min)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# Every time you git pull
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;. build&#x2F;dev-shell.sh              &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# Update PATH with custom Python
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;build&#x2F;py.sh all                   &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# Regenerate Python code (lexer, help, etc.)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# 3. Try it out!
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;bin&#x2F;osh&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt; -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;c &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;echo &amp;quot;Hello from OSH!&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;bin&#x2F;ysh&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt; -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;c &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;echo &amp;quot;Hello from YSH!&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;# 4. Test it works
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;test&#x2F;spec.sh builtin-echo
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;If this doesn&#x27;t work, ask on &lt;a href=&quot;https:&#x2F;&#x2F;oilshell.zulipchat.com&#x2F;&quot;&gt;Zulip&lt;&#x2F;a&gt; - we&#x27;re friendly!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;understanding-the-codebase&quot;&gt;Understanding the Codebase&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;the-big-picture-how-shells-work&quot;&gt;The Big Picture: How Shells Work&lt;&#x2F;h3&gt;
+&lt;p&gt;Every shell follows this pipeline:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;color:#eeffff;&quot;&gt;&lt;code&gt;&lt;span&gt;Input → Lexer → Parser → AST → Evaluator → Output
+&lt;&#x2F;span&gt;&lt;span&gt;  ↓       ↓        ↓      ↓        ↓         ↓
+&lt;&#x2F;span&gt;&lt;span&gt;stdin  Tokens  Syntax  Tree  Execution   stdout
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Let&#x27;s trace &lt;code&gt;echo $USER&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Input&lt;&#x2F;strong&gt;: User types &lt;code&gt;echo $USER&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Lexer&lt;&#x2F;strong&gt; breaks it into tokens: &lt;code&gt;[echo]&lt;&#x2F;code&gt; &lt;code&gt;[$USER]&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Parser&lt;&#x2F;strong&gt; builds an AST: &lt;code&gt;Simple(words=[&#x27;echo&#x27;, VarSub(&#x27;USER&#x27;)])&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Evaluator&lt;&#x2F;strong&gt; looks up &lt;code&gt;USER&lt;&#x2F;code&gt; → &lt;code&gt;&#x27;alice&#x27;&lt;&#x2F;code&gt;, then runs &lt;code&gt;echo alice&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Output&lt;&#x2F;strong&gt;: &lt;code&gt;alice&lt;&#x2F;code&gt; printed to stdout&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;directory-structure&quot;&gt;Directory Structure&lt;&#x2F;h3&gt;
+&lt;p&gt;The codebase is organized logically:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;color:#eeffff;&quot;&gt;&lt;code&gt;&lt;span&gt;oils&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;├── frontend&#x2F;      # Lexing, tokens (both OSH &amp;amp; YSH)
+&lt;&#x2F;span&gt;&lt;span&gt;├── osh&#x2F;           # OSH-specific parsing &amp;amp; evaluation
+&lt;&#x2F;span&gt;&lt;span&gt;├── ysh&#x2F;           # YSH-specific parsing &amp;amp; evaluation
+&lt;&#x2F;span&gt;&lt;span&gt;├── core&#x2F;          # Shared runtime (process management, state)
+&lt;&#x2F;span&gt;&lt;span&gt;├── builtin&#x2F;       # Built-in commands (cd, echo, trap, etc.)
+&lt;&#x2F;span&gt;&lt;span&gt;├── spec&#x2F;          # Tests comparing Oils to other shells
+&lt;&#x2F;span&gt;&lt;span&gt;└── _devbuild&#x2F;gen&#x2F; # Generated code (don&amp;#39;t edit!)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Important&lt;&#x2F;strong&gt;: Universal code (like process management) lives in &lt;code&gt;core&#x2F;&lt;&#x2F;code&gt;. Shell-specific code is in &lt;code&gt;osh&#x2F;&lt;&#x2F;code&gt; or &lt;code&gt;ysh&#x2F;&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;key-files-to-know&quot;&gt;Key Files to Know&lt;&#x2F;h3&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;What&lt;&#x2F;th&gt;&lt;th&gt;Where&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Lexer&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;frontend&#x2F;lexer.py&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;OSH Parser&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;osh&#x2F;cmd_parse.py&lt;&#x2F;code&gt;, &lt;code&gt;osh&#x2F;word_parse.py&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;YSH Parser&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;ysh&#x2F;expr_parse.py&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Evaluator&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;osh&#x2F;cmd_eval.py&lt;&#x2F;code&gt;, &lt;code&gt;osh&#x2F;word_eval.py&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Builtins&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;builtin&#x2F;*.py&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Tests&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;spec&#x2F;*.test.sh&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;This is crucial for contributing effectively:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;universal-code-both-shells&quot;&gt;Universal Code (Both Shells)&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Location&lt;&#x2F;strong&gt;: &lt;code&gt;core&#x2F;&lt;&#x2F;code&gt;, &lt;code&gt;frontend&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Purpose&lt;&#x2F;strong&gt;: Process management, lexing, core runtime&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Example&lt;&#x2F;strong&gt;: &lt;code&gt;core&#x2F;process.py&lt;&#x2F;code&gt; - waiting for child processes&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;osh-specific-code&quot;&gt;OSH-Specific Code&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Location&lt;&#x2F;strong&gt;: &lt;code&gt;osh&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Purpose&lt;&#x2F;strong&gt;: POSIX compatibility, bash-like syntax&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Example&lt;&#x2F;strong&gt;: &lt;code&gt;osh&#x2F;word_eval.py&lt;&#x2F;code&gt; - &lt;code&gt;$var&lt;&#x2F;code&gt; expansion&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;ysh-specific-code&quot;&gt;YSH-Specific Code&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Location&lt;&#x2F;strong&gt;: &lt;code&gt;ysh&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Purpose&lt;&#x2F;strong&gt;: Modern syntax, new features&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Example&lt;&#x2F;strong&gt;: &lt;code&gt;ysh&#x2F;expr_eval.py&lt;&#x2F;code&gt; - &lt;code&gt;var x = 42&lt;&#x2F;code&gt; expressions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&quot;&quot;&quot;
+Next Note will contain a deep dive in the mycpp transcompiler programm
+&quot;&quot;&quot;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;documentation&quot;&gt;Documentation&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;oils.pub&#x2F;&quot;&gt;Main Documentation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;wiki&quot;&gt;GitHub Wiki&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;wiki&#x2F;Contributing&quot;&gt;Contributing Guide&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;wiki&#x2F;Spec-Tests&quot;&gt;Spec Tests Explained&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;community&quot;&gt;Community&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;oilshell.zulipchat.com&#x2F;&quot;&gt;Zulip Chat&lt;&#x2F;a&gt; - Ask questions here!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;issues&quot;&gt;GitHub Issues&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;oils.pub&#x2F;blog&#x2F;&quot;&gt;Blog&lt;&#x2F;a&gt; - Design discussions and updates&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;You don&#x27;t need deep compiler knowledge - just Python skills, curiosity, and willingness to dive deep and learn.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Ready to contribute?&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Join &lt;a href=&quot;https:&#x2F;&#x2F;oilshell.zulipchat.com&#x2F;&quot;&gt;Zulip&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Check &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22&quot;&gt;good first issues&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Clone the repo and run setup&lt;&#x2F;li&gt;
+&lt;li&gt;Ask questions and have fun! 🎉&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+</feed>
