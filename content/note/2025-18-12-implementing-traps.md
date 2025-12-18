@@ -152,5 +152,5 @@ $ bin/ysh -c "trap --ignore INT; trap -p"
 trap -- '' SIGINT
 ```
 
-Pull request :: [Solved](https://github.com/oils-for-unix/oils/pull/2586)
+Pull request :: [link](https://github.com/oils-for-unix/oils/pull/2586)
 
