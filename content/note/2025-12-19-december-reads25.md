@@ -1,6 +1,7 @@
 +++
 title = "December reads"
 date = 2025-12-19
+[taxonomies]
 notec = ["Reads"]
 +++
 
