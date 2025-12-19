@@ -4,7 +4,7 @@ date = 2025-12-19
 notec = ["Reads"]
 +++
 
-### decemeber reads
+### December reads
 
 **19-12-2025**
 
