@@ -30,18 +30,104 @@ done
 This is commonly used in installers, backup scripts, and other tools where interruption could leave the system in a bad state.
 
 
+## The Problem: `trap ''` is Special
+
+Here's the thing about `trap ''` - it's not intuitive at first glance. You might think an empty string means "do nothing," which sounds like it should behave the same as `trap ' '` (a space) or `trap '# comment'`. But it doesn't!
+
+In POSIX shells, `trap ''` has a very specific meaning: it tells the OS to ignore the signal entirely by setting it to `SIG_IGN`. This is fundamentally different from running an empty command:
+
+- **`trap '' SIGINT`** → Sets signal to `SIG_IGN` (kernel ignores it)
+- **`trap ' ' SIGINT`** → Wakes up the shell to execute a space (does nothing, but still wakes up!)
+- **`trap '# comment' SIGINT`** → Wakes up the shell to execute a comment
+
+The difference matters for performance and correctness. When a signal is set to `SIG_IGN`, the kernel drops it immediately. When you have a trap handler (even an empty one), the shell has to wake up, check what to do, execute the handler, and resume.
+
+You can verify this by checking `/proc/self/status`. Here's a demo from the Oils test suite:
+
+**Without trap:**
+```bash
+$ bash test/signal-report.sh report
+PID 1339837
+SigIgn: QUIT(3)
+SigCgt: INT(2) CHLD(17)
+```
+
+**With `trap '' SIGUSR2`:**
+```bash
+$ bash test/signal-report.sh report T
+PID 1339865
+trap -- '' SIGUSR2
+
+SigIgn: QUIT(3) USR2(12)
+SigCgt: HUP(1) INT(2) ILL(4) TRAP(5) ... CHLD(17) ...
+```
+
+See how `USR2(12)` appears under `SigIgn` (ignored), not under `SigCgt` (caught)? That's because `trap ''` sets the signal to `SIG_IGN` at the kernel level. This is fundamentally different from catching the signal and executing an empty handler.
+
+### Why Add `trap --ignore`?
+
+While `trap ''` is POSIX-compliant, it's not very clear what it means just by reading the code. Is it ignoring the signal? Resetting it? Setting a default handler?
+
+YSH's `trap --ignore` makes the intent explicit:
+
+```bash
+trap --ignore INT  # Clear: we're ignoring the signal (SIG_IGN)
+trap '' INT        # Less clear: empty string means... ignore?
+```
+
+This explicitness helps future readers understand that we're setting `SIG_IGN`, which is different from `SIG_DFL` (the default handler you get with `trap - INT`).
+
+
 ## The Design Choice: Why command.NoOp?
 
-The implementation uses `command.NoOp` from the AST to represent ignored signals.
+Once we understand that `trap ''` should set `SIG_IGN`, the question becomes: how do we represent this in the codebase?
 
-In my initial approach, I tried to add separate handling for ignored signals throughout the codebase - special branches in `_AddTheRest()` for the ignore case, duplicated logic in `AddItem()` to track ignored signals differently, and custom printing code in `_PrintTrapEntry()`. This led to a lot of duplication and made the code harder to follow.
+### The Evolution
 
-Andy suggested using `command.NoOp` to represent ignored signals, which meant the existing code paths just worked with minimal changes - just check `if handler.tag() == command_e.NoOp` at the critical points. Much simpler! This is a good example of how the right data representation can make the implementation much cleaner.
+The implementation went through several iterations:
 
+**1. Initial approach: Special handling everywhere**
+
+My first attempt added separate branches for ignored signals throughout the codebase:
+- Special branches in `_AddTheRest()` for the ignore case
+- Duplicated logic in `AddItem()` to track ignored signals differently
+- Custom printing code in `_PrintTrapEntry()`
+
+This worked, but created a lot of duplication. The code got longer and harder to follow.
+
+**2. Using `command.NoOp`**
+
+Andy suggested representing ignored signals as `command.NoOp` from the AST. This made the code much shorter! Instead of special handling everywhere, we just check `if handler.tag() == command_e.NoOp` at the critical points. The existing code paths mostly just worked.
+
+Why does this work? The shell already has `command.NoOp` for representing "do nothing" commands like `sh -c ''` (an empty command). Reusing it for ignored traps seemed natural.
+
+**3. The bug with `command.IgnoredTrap`**
+
+At one point, we tried `command.IgnoredTrap` instead - the reasoning being that we shouldn't use the same enum for two different things (`command.NoOp` for both empty commands and ignored traps).
+
+But this introduced a bug! In some code paths, we would try to execute `command.IgnoredTrap` as if it were a normal command. Using the same type for two semantically different things caused confusion.
+
+**4. Final solution: `trap_action.Ignored`**
+
+The final refactoring introduced a new algebraic data type `trap_action`:
+
+```python
+trap_action =
+  Ignored           # SIG_IGN
+  | Command(command c)
+```
+
+This makes it explicit in the type system: a trap action is either "ignored" or "runs a command." No confusion possible! The type system enforces that we handle both cases correctly.
 
 {% note(header="Note") %}
-The code has since been refactored to use `trap_action.Ignored` instead of `command.NoOp` - see commit 6f1c64891.
+This post describes the implementation using `command.NoOp` (PR #2586), but the code has since been refactored to use `trap_action.Ignored` - see commit 6f1c64891. The refactoring makes the intent even clearer in the type system.
 {% end %}
+
+### Why Algebraic Data Types?
+
+This evolution shows why Oils uses algebraic data types (ADTs) extensively. Instead of having `if` statements scattered throughout the code checking "is this an ignored trap?", we put that distinction into the data representation itself.
+
+As Andy puts it: "the if statements are in data, rather than code" - which makes the code shorter and harder to misuse. The type checker enforces that you handle both `Ignored` and `Command(c)` cases, preventing bugs like the `command.IgnoredTrap` issue above.
 
 
 
