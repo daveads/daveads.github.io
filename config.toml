@@ -24,13 +24,15 @@ taxonomies = [
 		{name = "notet", feed = true}, #note tags
 ]
 
+
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
-highlight_theme = "material-dark" #"gray-matter-dark"
+external_links_class = "external"
 render_emoji = true
 
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+code = true
+#error_on_missing_language = true
 
 [search]
 include_title = true
