@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	
+		<!-- meta data -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="author" content="Daveads">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Daveads">
+	
+
+
+<meta property="og:title" content="assembly language">
+<meta property="og:type" content="notes">
+<meta property="og:url" content="https://daveads.github.io&#x2F;note&#x2F;asm-stuffs&#x2F;">
+
+
+
+		
+			<meta name="keywords" content="[assembly]">
+		
+
+
+
+
+<meta name="description" content="">
+
+
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="daveads" href="https://daveads.github.io/atom.xml">
+
+
+	<link rel="canonical" href="https://daveads.github.io&#x2F;note&#x2F;asm-stuffs&#x2F;">
+
+
+<!-- Sass-file: minima.css -->
+<link rel="stylesheet" href="/minima.css">
+
+<!-- css files -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="/assets/css/tagc.css">
+<link rel="stylesheet" href="/assets/css/pagenav.css">
+<link rel="stylesheet" href="/assets/css/shortcodes.css"
+
+
+<!-- google_analytics -->
+
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-087FCJRFH2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-087FCJRFH2', {
+    'cookie_flags': 'SameSite=None;Secure',
+  });
+</script>
+
+
+
+		<!-- Google discover -->
+		<link rel="alternate" type="application/rss+xml" href="https://feeds.feedburner.com/blogspot/amDG" />
+		<!-- ends -->
+
+
+<!-- <script type="text/javascript" src="/assets/js/blink.js" defer></script> -->
+<script type="text/javascript" src="/assets/js/scroll-top-button.js" defer></script>
+
+<!-- PWA -->
+<script>
+  if ("serviceWorker" in navigator) {
+if (navigator.serviceWorker.controller) {
+   console.log("An active service worker found, no need to register");
+   } else {
+     // Register the service worker
+     navigator.serviceWorker
+       .register("/serviceworker.js", {
+         scope: "./"
+       })
+       .then(function (reg) {
+         console.log("Service worker has been registered for scope: " + reg.scope);
+       });
+    }
+}
+</script>
+
+<!-- programmable search engine -->
+<!-- <script async src="https://cse.google.com/cse.js?cx=acd2a3a68756706a3"></script> -->
+
+
+<! REACT SHITS -->
+<!-- end react -->
+
+
+<link rel="manifest" type="application/manifest+json" href="https://daveads.github.io/manifest.json">
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
+
+<title>
+		
+		Daveads - assembly language
+
+</title>
+
+
+</head>
+ <body>
+		
+
+
+		<button class="scrollToTopBtn" title="Go to top">
+		<img src="/assets/images/186407_arrow_up_icon.png
+		" height ="20" width="20" />
+		</button>
+
+		<main class="page-content" aria-label="Content">
+
+				 <section class="section">
+						<div class="wrapper">
+								
+
+<article class="post h-entry" itemscope="articleBody" itemtype="http://schema.org/BlogPosting">
+<header class="post-header">
+
+		 
+		 
+		 
+		<h1  style="text-align:center;" itemprop="name headline">
+				NOTE : assembly language
+		</h1>
+
+
+		 <small style="float:right; font-size: 15px;"><a href="/note">See all notes</a>
+		 	|| <a href="/note-archive">Archive</a>
+		 </small>
+
+<p class="post-meta">
+
+    
+		<time datetime="2023-02-12" itemprop="datePublished">2023-02-12</time>
+		
+    
+</p>
+
+		<div>
+			<div class="back_btn">
+    <button type="button" onclick="window.history.go(-1)" 
+    
+    
+    style="float:right; font-size: 18px; background-color: black; color: #13b7ea;"
+    >
+    
+     << cd .. 
+    </button>
+</div>
+<br>
+
+
+			<!--
+			
+		
+			Categories :
+			
+			<small >
+			<a class="tag-link" href="https://daveads.github.io/notec/learned/">#Learned</a>
+			</small>
+			<br>
+			<br>
+			
+			
+			-->
+
+			
+	
+			Tags :
+			
+			<small>
+			<a class="tag-link" href="https://daveads.github.io/notet/assembly/">#assembly</a>
+			</small>
+			
+			
+		</div>
+
+</header>
+	
+		<div class="post-content e-content" itemprop="articleBody">
+		<p>The register is built into the cpu, it is used to store temporary data that the cpu needs to access quickly in oder to perform its operation.</p>
+<p>Types of cpu registers</p>
+<ul>
+<li>
+<p>General-purpose registers :
+These registers can be used to store any type of data, including operands for arithmetic and logic operations, pointers to memory locations, and intermediate results of calculations.</p>
+</li>
+<li>
+<p>Program counter register:
+This register holds the address of the next instruction to be executed by the CPU.</p>
+</li>
+<li>
+<p>Stack pointer register:
+This register holds the address of the top of the stack, which is a region of memory used to store function call frames and temporary data.</p>
+</li>
+<li>
+<p>Status registers:
+*These registers store the state of the CPU, including information about arithmetic operations, interrupt handling, and other control signals.</p>
+</li>
+<li></li>
+</ul>
+<p>**</p>
+<h2 id="registers">registers</h2>
+<p>rax" - a large general-purpose register used for storing values and results of arithmetic operations.</p>
+<p>"rbx" - another large general-purpose register.</p>
+<p>"rcx" - a general-purpose register used for counting and loop operations.</p>
+<p>"rdx" - a general-purpose register used for storing values and results of arithmetic operations.</p>
+<p>"rsi" - a general-purpose register used as a source index register in string and array operations.</p>
+<p>"rdi" - a general-purpose register used as a destination index register in string and array operations.</p>
+<p>"r8" - "r15" - additional general-purpose registers available in the x86-64 architecture.</p>
+<p>General-purpose registers :: rax, rbx, rcx, rdx, rbp, rsp, rsi, rdi, r8, r9, r10, r11, r12, r13, r14, r15</p>
+<h1 id="operation">Operation</h1>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="plain"><span class="giallo-l"><span>ADD- integer add</span></span>
+<span class="giallo-l"><span>SUB- subtract</span></span>
+<span class="giallo-l"><span>MUL- unsigned multiply</span></span>
+<span class="giallo-l"><span>IMUL- signed multiply</span></span>
+<span class="giallo-l"><span>DIV- unsigned divide</span></span>
+<span class="giallo-l"><span>IDIV- signed divide</span></span>
+<span class="giallo-l"><span>INC- increment</span></span>
+<span class="giallo-l"><span>DEC- decrement</span></span>
+<span class="giallo-l"><span>NEG- negate</span></span></code></pre>
+<p>CONTROL FLOW
+JE - jump if equal</p>
+<p>JZ - jump if zero</p>
+<p>JNE - jump if not equal</p>
+<p>JNZ - jump if not zero</p>
+<p>JG - jump if the first operand is greater than second</p>
+<p>JGE - jump if the first operand is greater or equal to second</p>
+<p>JA - the same that JG, but performs an unsigned comparison</p>
+<p>JAE - the same that JGE, but performs an unsigned comparison</p>
+<p>DATA TYPES
+byte is eight bits
+word is two bytes
+doubleword is four bytes
+quadword is eight bytes
+double quadword is sixteen bytes (128 bits).</p>
+<p>.DATA
++-----------+-------------------+-------------------+
+| Directive |      Purpose      |   Storage Space   |
++-----------+-------------------+-------------------+
+| DB        | Define Byte       | allocates 1 byte  |
+| DW        | Define Word       | allocates 2 bytes |
+| DD        | Define Doubleword | allocates 4 bytes |
+| DQ        | Define Quadword   | allocates 8 bytes |
+| DT        | Define Ten Bytes  | allocates 10 byte |
++-----------+-------------------+-------------------+</p>
+<p>// opertation</p>
+<p>mov ebx, 123  ; ebx = 123
+mov eax, ebx  ; eax = ebx
+add ebx, ecx  ; ebx += ecx
+sub ebx, edx  ; ebx -= edx
+mul ebx       ; eax ***= ebx
+div edx       ; eax /= edx</p>
+<p>; eax handles operations</p>
+<p>data - section is used for declaring initialized data or constants
+bss - section is used for declaring non initialized variables
+text - section is used for code</p>
+<p>RESB, RESW, RESD, RESQ, REST, RESO, RESY and RESZ - are used for declaring non initialized variables
+INCBIN - includes External Binary Files
+EQU - defines constant.</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="asm"><span class="giallo-l"><span>one </span><span style="color: #89B4FA;font-style: italic;">equ</span><span style="color: #FAB387;"> 1</span></span></code></pre>
+		</div>
+		
+<br>
+<div style="text-align: center;">
+  <a href="/" style="font-weight: bold; font-size: 30px; font-family: 'Merriweather';">cd ~</a>
+</div>
+
+
+
+						</div>
+				 </section>
+
+		</main>
+		<footer></footer>
+ </body>
+
+</html>
+

@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - oils</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notet/oils/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-01-26T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notet/oils/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Implementing GLOBIGNORE</title>
+        <published>2026-01-26T00:00:00+00:00</published>
+        <updated>2026-01-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/implementing-globignore/"/>
+        <id>https://daveads.github.io/note/implementing-globignore/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/implementing-globignore/">&lt;p&gt;Issue :: &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;issues&#x2F;609&quot;&gt;Implement GLOBIGNORE #609&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;GLOBIGNORE&lt;&#x2F;code&gt; is a bash-specific variable that lets you exclude files from glob expansion. It contains a colon-separated list of patterns - any file matching these patterns gets filtered out of glob results.&lt;&#x2F;p&gt;
+&lt;p&gt;E.g.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;GLOBIGNORE&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;*.o:*.tmp&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span&gt; *&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;   # Shows all files except .o and .tmp files&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is useful for build directories, ignoring compiled files, or filtering out backup files from shell expansions.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-problem-glob-results-need-filtering&quot;&gt;The Problem: Glob Results Need Filtering&lt;&#x2F;h2&gt;
+&lt;p&gt;When you write &lt;code&gt;echo *&lt;&#x2F;code&gt; in a shell, it expands to all files in the current directory. But sometimes you want to exclude certain patterns - like object files in a build directory, or backup files ending in &lt;code&gt;~&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Bash solves this with &lt;code&gt;GLOBIGNORE&lt;&#x2F;code&gt;. When set:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Glob patterns automatically include dotfiles (like &lt;code&gt;dotglob&lt;&#x2F;code&gt; option)&lt;&#x2F;li&gt;
+&lt;li&gt;Files matching any &lt;code&gt;GLOBIGNORE&lt;&#x2F;code&gt; pattern are filtered out&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;.&lt;&#x2F;code&gt; and &lt;code&gt;..&lt;&#x2F;code&gt; are always filtered (even if they don&#x27;t match a pattern)&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; GLOBIGNORE=&amp;#39;*.txt&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; echo&lt;&#x2F;span&gt;&lt;span&gt; *&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;        # No .txt files in output&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; echo .&lt;&#x2F;span&gt;&lt;span&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;       # Shows .hidden but not . or ..&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;the-implementation&quot;&gt;The Implementation&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;where-the-code-lives&quot;&gt;Where the Code Lives&lt;&#x2F;h3&gt;
+&lt;p&gt;The implementation is in &lt;code&gt;osh&#x2F;glob_.py&lt;&#x2F;code&gt; in the &lt;code&gt;Globber&lt;&#x2F;code&gt; class. The key changes:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Parse GLOBIGNORE patterns&lt;&#x2F;strong&gt; - Split the colon-separated string into individual patterns&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Filter glob results&lt;&#x2F;strong&gt; - After libc&#x27;s &lt;code&gt;glob()&lt;&#x2F;code&gt; returns matches, filter out anything matching GLOBIGNORE&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Enable dotglob implicitly&lt;&#x2F;strong&gt; - When GLOBIGNORE is set, dotfiles are included in glob expansion&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;parsing-globignore&quot;&gt;Parsing GLOBIGNORE&lt;&#x2F;h3&gt;
+&lt;p&gt;The tricky part: colons inside bracket expressions like &lt;code&gt;[[:alnum:]]&lt;&#x2F;code&gt; shouldn&#x27;t be treated as separators. I handle this by tracking bracket depth:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;def&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; _GetGlobIgnorePatterns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;    # type: () -&amp;gt; Optional[List[str]]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;    &amp;quot;&amp;quot;&amp;quot;Get GLOBIGNORE patterns as a list, or None if not set.&amp;quot;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    val&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt; self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;mem&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;GetValue&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;GLOBIGNORE&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span&gt; scope_e&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;GlobalOnly&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    if&lt;&#x2F;span&gt;&lt;span&gt; val&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;tag&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; !=&lt;&#x2F;span&gt;&lt;span&gt; value_e&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;Str&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        return&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; None&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    globignore&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt; cast&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;value&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;Str&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span&gt; val&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;).&lt;&#x2F;span&gt;&lt;span&gt;s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;  # type: str&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    if&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt; len&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;globignore&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; ==&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        return&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; None&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;    # Check cache first&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    if&lt;&#x2F;span&gt;&lt;span&gt; globignore&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; in&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt; self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;_globignore_cache&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        return&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt; self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt;_globignore_cache&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt;globignore&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;    # Split by colon, but not inside bracket expressions&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    patterns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; []&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;  # type: List[str]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    current&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; []&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;  # type: List[str]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    in_bracket&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; False&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    for&lt;&#x2F;span&gt;&lt;span&gt; c&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; in&lt;&#x2F;span&gt;&lt;span&gt; globignore&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        if&lt;&#x2F;span&gt;&lt;span&gt; c&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; ==&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;[&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;            in_bracket&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; True&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;            current&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        elif&lt;&#x2F;span&gt;&lt;span&gt; c&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; ==&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;]&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;            in_bracket&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; False&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;            current&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        elif&lt;&#x2F;span&gt;&lt;span&gt; c&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; ==&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;:&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; and not&lt;&#x2F;span&gt;&lt;span&gt; in_bracket&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;            if&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt; len&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;current&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;                patterns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;join&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;current&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;))&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;                del&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt; current&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;[:]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        else&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;            current&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    if&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt; len&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;current&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;        patterns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;join&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;current&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;))&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;    self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt;_globignore_cache&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt;globignore&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; patterns&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    return&lt;&#x2F;span&gt;&lt;span&gt; patterns&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;caching-for-performance&quot;&gt;Caching for Performance&lt;&#x2F;h3&gt;
+&lt;p&gt;Andy suggested caching the parsed patterns. Since GLOBIGNORE doesn&#x27;t change often during script execution, we avoid re-parsing the same string:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;_globignore_cache&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; {}&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;  # type: Dict[str, List[str]]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The cache maps the raw GLOBIGNORE string to its parsed pattern list.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;filtering-results&quot;&gt;Filtering Results&lt;&#x2F;h3&gt;
+&lt;p&gt;After &lt;code&gt;glob()&lt;&#x2F;code&gt; returns matches, I filter them. This is a module-level helper function:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;def&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; _StringMatchesAnyPattern&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt;s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt; patterns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;    # type: (str, List[str]) -&amp;gt; bool&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;    &amp;quot;&amp;quot;&amp;quot;Check if string matches any pattern in the list.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;    Returns True if s matches any pattern, or if s is . or ..&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;    (which are always filtered when GLOBIGNORE is set).&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    basename&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; os_path&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;basename&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    if&lt;&#x2F;span&gt;&lt;span&gt; basename&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; in&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;.&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;..&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        return&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; True&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    flags&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 0&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    for&lt;&#x2F;span&gt;&lt;span&gt; pattern&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; in&lt;&#x2F;span&gt;&lt;span&gt; patterns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        if&lt;&#x2F;span&gt;&lt;span&gt; libc&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;fnmatch&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;pattern&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span&gt; s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span&gt; flags&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;            return&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; True&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    return&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; False&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In &lt;code&gt;_Glob()&lt;&#x2F;code&gt;, the filtering has two branches - one for when GLOBIGNORE is set, and one for the default behavior:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; globignore_patterns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; is not&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; None&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    filtered&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; []&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;  # type: List[str]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    for&lt;&#x2F;span&gt;&lt;span&gt; s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; in&lt;&#x2F;span&gt;&lt;span&gt; results&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        if not&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt; _StringMatchesAnyPattern&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span&gt; globignore_patterns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;            filtered&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    results&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; filtered&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    n&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt; len&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;results&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;    # Default behavior: just filter . and ..&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    dotfile_filtered&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; []&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;  # type: List[str]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    for&lt;&#x2F;span&gt;&lt;span&gt; s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; in&lt;&#x2F;span&gt;&lt;span&gt; results&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        if&lt;&#x2F;span&gt;&lt;span&gt; s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; not in&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;.&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;..&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;            dotfile_filtered&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    results&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; dotfile_filtered&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    n&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt; len&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;results&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;out&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;extend&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;results&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; n&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;implicit-dotglob&quot;&gt;Implicit dotglob&lt;&#x2F;h3&gt;
+&lt;p&gt;When GLOBIGNORE is set, bash enables dotglob automatically. I replicate this:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt; self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;exec_opts&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;dotglob&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; or&lt;&#x2F;span&gt;&lt;span&gt; globignore_patterns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; is not&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; None&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    flags&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; |=&lt;&#x2F;span&gt;&lt;span&gt; GLOB_PERIOD&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;test-coverage&quot;&gt;Test Coverage&lt;&#x2F;h2&gt;
+&lt;p&gt;The spec test file &lt;code&gt;spec&#x2F;globignore.test.sh&lt;&#x2F;code&gt; went from &lt;code&gt;oils_failures_allowed: 14&lt;&#x2F;code&gt; to &lt;code&gt;oils_failures_allowed: 1&lt;&#x2F;code&gt; - meaning 13 previously-failing test cases now pass.&lt;&#x2F;p&gt;
+&lt;p&gt;I also added a new test case to verify that &lt;code&gt;.&lt;&#x2F;code&gt; and &lt;code&gt;..&lt;&#x2F;code&gt; are always filtered when GLOBIGNORE is set:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;#### . and .. always filtered when GLOBIGNORE is set&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# When GLOBIGNORE is set to any non-null value, . and .. are always filtered&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# even if they don&amp;#39;t match the patterns&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;shopt&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -u globskipdots&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;touch&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; .hidden&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;GLOBIGNORE&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;*.txt&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; .&lt;&#x2F;span&gt;&lt;span&gt;*&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;## STDOUT:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;.hidden&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;## END&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;running-the-tests&quot;&gt;Running the Tests&lt;&#x2F;h2&gt;
+&lt;p&gt;To verify the implementation:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Run GLOBIGNORE spec tests&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;test&#x2F;spec.sh&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; globignore&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Run type checking&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;test&#x2F;typecheck.sh&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Run in C++ mode (after building)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;test&#x2F;spec.sh&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; globignore --oils-cpp-bin-sh&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; bin&#x2F;osh&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;osh$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; touch foo.txt bar.txt hello.py&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;osh$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; GLOBIGNORE=&amp;#39;*.txt&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;osh$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; echo&lt;&#x2F;span&gt;&lt;span&gt; *&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;hello.py&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;osh$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; touch .hidden&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;osh$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; echo .&lt;&#x2F;span&gt;&lt;span&gt;*&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;.hidden&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;osh$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; GLOBIGNORE=&amp;#39;*.o:*.h&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;osh$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; touch main.c main.o main.h&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;osh$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; echo main&lt;&#x2F;span&gt;&lt;span&gt;*&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;main.c&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Pull request :: &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;pull&#x2F;2505&quot;&gt;#2505&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Implementing trap</title>
+        <published>2025-12-04T00:00:00+00:00</published>
+        <updated>2025-12-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/2025-18-12-implementing-traps/"/>
+        <id>https://daveads.github.io/note/2025-18-12-implementing-traps/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/2025-18-12-implementing-traps/">&lt;p&gt;Issue :: &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;issues&#x2F;2476&quot;&gt;Implement trap &#x27;&#x27; in OSH and trap --ignore in YSH - should be SIG_IGN #2476&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;trap&lt;&#x2F;code&gt; lets you run a command when your script gets a signal from the operating system. Like, when you hit &lt;code&gt;Ctrl+C&lt;&#x2F;code&gt;, that sends a &lt;code&gt;SIGINT&lt;&#x2F;code&gt; signal to your script. Normally, that would just kill it, but &lt;code&gt;trap&lt;&#x2F;code&gt; lets you catch it and do some cleanup before you exit.&lt;&#x2F;p&gt;
+&lt;p&gt;E.g.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F5C2E7;font-style: italic;&quot;&gt;#!&#x2F;bin&#x2F;bash&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;trap&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;echo &amp;quot;Interrupted!&amp;quot;; exit 1&amp;#39; SIGINT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;while&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt; true&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; do&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;    echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;Running...&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;    sleep&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 2&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;done&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is commonly used in installers, backup scripts, and other tools where interruption could leave the system in a bad state.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-problem-trap-is-special&quot;&gt;The Problem: &lt;code&gt;trap &#x27;&#x27;&lt;&#x2F;code&gt; is Special&lt;&#x2F;h2&gt;
+&lt;p&gt;Here&#x27;s the thing about &lt;code&gt;trap &#x27;&#x27;&lt;&#x2F;code&gt; - it&#x27;s not intuitive at first glance. You might think an empty string means &quot;do nothing,&quot; which sounds like it should behave the same as &lt;code&gt;trap &#x27; &#x27;&lt;&#x2F;code&gt; (a space) or &lt;code&gt;trap &#x27;# comment&#x27;&lt;&#x2F;code&gt;. But it doesn&#x27;t!&lt;&#x2F;p&gt;
+&lt;p&gt;In POSIX shells, &lt;code&gt;trap &#x27;&#x27;&lt;&#x2F;code&gt; has a very specific meaning: it tells the OS to ignore the signal entirely by setting it to &lt;code&gt;SIG_IGN&lt;&#x2F;code&gt;. This is fundamentally different from running an empty command:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;trap &#x27;&#x27; SIGINT&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt; → Sets signal to &lt;code&gt;SIG_IGN&lt;&#x2F;code&gt; (kernel ignores it)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;trap &#x27; &#x27; SIGINT&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt; → Wakes up the shell to execute a space (does nothing, but still wakes up!)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;trap &#x27;# comment&#x27; SIGINT&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt; → Wakes up the shell to execute a comment&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The difference matters for performance and correctness. When a signal is set to &lt;code&gt;SIG_IGN&lt;&#x2F;code&gt;, the kernel drops it immediately. When you have a trap handler (even an empty one), the shell has to wake up, check what to do, execute the handler, and resume.&lt;&#x2F;p&gt;
+&lt;p&gt;You can verify this by checking &lt;code&gt;&#x2F;proc&#x2F;self&#x2F;status&lt;&#x2F;code&gt;. Here&#x27;s a demo from the Oils test suite:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Without trap:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; bash test&#x2F;signal-report.sh report&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;PID&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1339837&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;SigIgn:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; QUIT&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;SigCgt:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; INT&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; CHLD&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;17&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;With &lt;code&gt;trap &#x27;&#x27; SIGUSR2&lt;&#x2F;code&gt;:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; bash test&#x2F;signal-report.sh report T&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;PID&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1339865&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;trap&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -- &amp;#39;&amp;#39; SIGUSR2&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;SigIgn:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; QUIT&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; USR2&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;12&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;SigCgt:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; HUP&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; INT&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; ILL&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; TRAP&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;5&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; ... CHLD&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;17&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; ...&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;See how &lt;code&gt;USR2(12)&lt;&#x2F;code&gt; appears under &lt;code&gt;SigIgn&lt;&#x2F;code&gt; (ignored), not under &lt;code&gt;SigCgt&lt;&#x2F;code&gt; (caught)? That&#x27;s because &lt;code&gt;trap &#x27;&#x27;&lt;&#x2F;code&gt; sets the signal to &lt;code&gt;SIG_IGN&lt;&#x2F;code&gt; at the kernel level. This is fundamentally different from catching the signal and executing an empty handler.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;why-add-trap-ignore&quot;&gt;Why Add &lt;code&gt;trap --ignore&lt;&#x2F;code&gt;?&lt;&#x2F;h3&gt;
+&lt;p&gt;While &lt;code&gt;trap &#x27;&#x27;&lt;&#x2F;code&gt; is POSIX-compliant, it&#x27;s not very clear what it means just by reading the code. Is it ignoring the signal? Resetting it? Setting a default handler?&lt;&#x2F;p&gt;
+&lt;p&gt;YSH&#x27;s &lt;code&gt;trap --ignore&lt;&#x2F;code&gt; makes the intent explicit:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;trap&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; --ignore INT&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;  # Clear: we&amp;#39;re ignoring the signal (SIG_IGN)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;trap&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;&amp;#39; INT&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;        # Less clear: empty string means... ignore?&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This explicitness helps future readers understand that we&#x27;re setting &lt;code&gt;SIG_IGN&lt;&#x2F;code&gt;, which is different from &lt;code&gt;SIG_DFL&lt;&#x2F;code&gt; (the default handler you get with &lt;code&gt;trap - INT&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-design-choice-why-command-noop&quot;&gt;The Design Choice: Why command.NoOp?&lt;&#x2F;h2&gt;
+&lt;p&gt;Once we understand that &lt;code&gt;trap &#x27;&#x27;&lt;&#x2F;code&gt; should set &lt;code&gt;SIG_IGN&lt;&#x2F;code&gt;, the question becomes: how do we represent this in the codebase?&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-evolution&quot;&gt;The Evolution&lt;&#x2F;h3&gt;
+&lt;p&gt;The implementation went through several iterations:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;1. Initial approach: Special handling everywhere&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;My first attempt added separate branches for ignored signals throughout the codebase:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Special branches in &lt;code&gt;_AddTheRest()&lt;&#x2F;code&gt; for the ignore case&lt;&#x2F;li&gt;
+&lt;li&gt;Duplicated logic in &lt;code&gt;AddItem()&lt;&#x2F;code&gt; to track ignored signals differently&lt;&#x2F;li&gt;
+&lt;li&gt;Custom printing code in &lt;code&gt;_PrintTrapEntry()&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This worked, but created a lot of duplication. The code got longer and harder to follow.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;2. Using &lt;code&gt;command.NoOp&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Andy suggested representing ignored signals as &lt;code&gt;command.NoOp&lt;&#x2F;code&gt; from the AST. This made the code much shorter! Instead of special handling everywhere, we just check &lt;code&gt;if handler.tag() == command_e.NoOp&lt;&#x2F;code&gt; at the critical points. The existing code paths mostly just worked.&lt;&#x2F;p&gt;
+&lt;p&gt;Why does this work? The shell already has &lt;code&gt;command.NoOp&lt;&#x2F;code&gt; for representing &quot;do nothing&quot; commands like &lt;code&gt;sh -c &#x27;&#x27;&lt;&#x2F;code&gt; (an empty command). Reusing it for ignored traps seemed natural.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;3. The bug with &lt;code&gt;command.IgnoredTrap&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;At one point, we tried &lt;code&gt;command.IgnoredTrap&lt;&#x2F;code&gt; instead - the reasoning being that we shouldn&#x27;t use the same enum for two different things (&lt;code&gt;command.NoOp&lt;&#x2F;code&gt; for both empty commands and ignored traps).&lt;&#x2F;p&gt;
+&lt;p&gt;But this introduced a bug! In some code paths, we would try to execute &lt;code&gt;command.IgnoredTrap&lt;&#x2F;code&gt; as if it were a normal command. Using the same type for two semantically different things caused confusion.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;4. Final solution: &lt;code&gt;trap_action.Ignored&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The final refactoring introduced a new algebraic data type &lt;code&gt;trap_action&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;trap_action&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  Ignored&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;           # SIG_IGN&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;  |&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt; Command&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;command c&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This makes it explicit in the type system: a trap action is either &quot;ignored&quot; or &quot;runs a command.&quot; No confusion possible! The type system enforces that we handle both cases correctly.&lt;&#x2F;p&gt;
+&lt;blockquote class=&quot;callout note&quot;&gt;
+    
+    &lt;div class=&quot;icon&quot;&gt;
+        &lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        
+        &lt;p&gt;&lt;strong&gt;Note&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+        
+        &lt;p&gt;This post describes the implementation using &lt;code&gt;command.NoOp&lt;&#x2F;code&gt; (PR #2586), but the code has since been refactored to use &lt;code&gt;trap_action.Ignored&lt;&#x2F;code&gt; - see commit 6f1c64891. The refactoring makes the intent even clearer in the type system.&lt;&#x2F;p&gt;
+
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;why-algebraic-data-types&quot;&gt;Why Algebraic Data Types?&lt;&#x2F;h3&gt;
+&lt;p&gt;This evolution shows why Oils uses algebraic data types (ADTs) extensively. Instead of having &lt;code&gt;if&lt;&#x2F;code&gt; statements scattered throughout the code checking &quot;is this an ignored trap?&quot;, we put that distinction into the data representation itself.&lt;&#x2F;p&gt;
+&lt;p&gt;As Andy puts it: &quot;the if statements are in data, rather than code&quot; - which makes the code shorter and harder to misuse. The type checker enforces that you handle both &lt;code&gt;Ignored&lt;&#x2F;code&gt; and &lt;code&gt;Command(c)&lt;&#x2F;code&gt; cases, preventing bugs like the &lt;code&gt;command.IgnoredTrap&lt;&#x2F;code&gt; issue above.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-it-works-under-the-hood&quot;&gt;How It Works Under the Hood&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;the-core-logic&quot;&gt;The Core Logic&lt;&#x2F;h3&gt;
+&lt;p&gt;Here&#x27;s what happens in &lt;code&gt;TrapState.AddUserTrap()&lt;&#x2F;code&gt; when you set a trap:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;def&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; AddUserTrap&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt; sig_num&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt; handler&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;    # type: (int, command_t) -&amp;gt; None&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;    &amp;quot;&amp;quot;&amp;quot; e.g. SIGUSR1 &amp;quot;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;    self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt;traps&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt;sig_num&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; handler&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    if&lt;&#x2F;span&gt;&lt;span&gt; handler&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;tag&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; ==&lt;&#x2F;span&gt;&lt;span&gt; command_e&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;NoOp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;        # trap &amp;#39;&amp;#39; SIGINT - ignore the signal (SIG_IGN)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;        # For signal_safe, this is handled the same as trap -&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        if&lt;&#x2F;span&gt;&lt;span&gt; sig_num&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; ==&lt;&#x2F;span&gt;&lt;span&gt; SIGINT&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;            self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;signal_safe&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;SetSigIntTrapped&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;False&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        elif&lt;&#x2F;span&gt;&lt;span&gt; sig_num&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; ==&lt;&#x2F;span&gt;&lt;span&gt; SIGWINCH&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;            self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;signal_safe&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;SetSigWinchCode&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;iolib&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;UNTRAPPED_SIGWINCH&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        else&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;            iolib&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;sigaction&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;sig_num&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span&gt; SIG_IGN&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;  # Actually set SIG_IGN!&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    else&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;        # Normal trap handler&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        if&lt;&#x2F;span&gt;&lt;span&gt; sig_num&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; ==&lt;&#x2F;span&gt;&lt;span&gt; SIGINT&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;            self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;signal_safe&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;SetSigIntTrapped&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;True&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        elif&lt;&#x2F;span&gt;&lt;span&gt; sig_num&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; ==&lt;&#x2F;span&gt;&lt;span&gt; SIGWINCH&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;            self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;signal_safe&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;SetSigWinchCode&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;SIGWINCH&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;        else&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;            iolib&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;RegisterSignalInterest&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;sig_num&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The key insight: I check if the handler is a NoOp, and if so, call &lt;code&gt;iolib.sigaction(sig_num, SIG_IGN)&lt;&#x2F;code&gt; to actually ignore the signal at the OS level.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;why-sigint-and-sigwinch-are-special&quot;&gt;Why SIGINT and SIGWINCH Are Special&lt;&#x2F;h3&gt;
+&lt;p&gt;SIGINT and SIGWINCH need special handling because the shell interpreter itself cares about them:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SIGINT&lt;&#x2F;strong&gt; - For handling Ctrl-C &#x2F; KeyboardInterrupt&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPython has built-in handling for this&lt;&#x2F;li&gt;
+&lt;li&gt;mycpp runtime calls &lt;code&gt;RegisterSignalInterest(SIGINT)&lt;&#x2F;code&gt; and polls with &lt;code&gt;PollSigInt()&lt;&#x2F;code&gt; in the main loop&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SIGWINCH&lt;&#x2F;strong&gt; - For terminal resize events that affect line editing&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Here&#x27;s something interesting: when you do &lt;code&gt;trap &#x27;&#x27; SIGINT&lt;&#x2F;code&gt;, the &lt;code&gt;signal_safe&lt;&#x2F;code&gt; calls look the same as &lt;code&gt;trap - SIGINT&lt;&#x2F;code&gt; (both call &lt;code&gt;SetSigIntTrapped(False)&lt;&#x2F;code&gt;). But the behavior is different:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;trap -&lt;&#x2F;code&gt; removes the entry from &lt;code&gt;self.traps&lt;&#x2F;code&gt; → signal reverts to SIG_DFL&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;trap &#x27;&#x27;&lt;&#x2F;code&gt; stores NoOp in &lt;code&gt;self.traps&lt;&#x2F;code&gt; → signal set to SIG_IGN&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The shell needs to track SIGINT&#x2F;SIGWINCH separately from user traps, so this dual handling makes sense.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;displaying-trap-state&quot;&gt;Displaying Trap State&lt;&#x2F;h3&gt;
+&lt;p&gt;When you run &lt;code&gt;trap -p&lt;&#x2F;code&gt;, I modified &lt;code&gt;_PrintTrapEntry()&lt;&#x2F;code&gt; to show ignored signals correctly:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;def&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; _PrintTrapEntry&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt; handler&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    if&lt;&#x2F;span&gt;&lt;span&gt; handler&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;tag&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; ==&lt;&#x2F;span&gt;&lt;span&gt; command_e&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;NoOp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;        print&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;trap -- &amp;#39;&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color: #F5C2E7;&quot;&gt;%s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; %&lt;&#x2F;span&gt;&lt;span&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;  # Show as empty string&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    else&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;        code&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt; self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;_GetCommandSourceCode&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;handler&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;        print&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;trap -- &lt;&#x2F;span&gt;&lt;span style=&quot;color: #F5C2E7;&quot;&gt;%s %s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; %&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; (&lt;&#x2F;span&gt;&lt;span&gt;j8_lite&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;ShellEncode&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;code&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;),&lt;&#x2F;span&gt;&lt;span&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;))&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This way &lt;code&gt;trap -p&lt;&#x2F;code&gt; shows &lt;code&gt;trap -- &#x27;&#x27; SIGINT&lt;&#x2F;code&gt; for ignored signals, which you can copy-paste to restore the same state.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-i-added&quot;&gt;What I Added&lt;&#x2F;h2&gt;
+&lt;p&gt;The implementation required changes in a few key places:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;1. Empty string detection&lt;&#x2F;strong&gt; (builtin&#x2F;trap_osh.py:420):&lt;&#x2F;p&gt;
+&lt;p&gt;When the first argument to &lt;code&gt;trap&lt;&#x2F;code&gt; is an empty string, treat it as a signal to ignore:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt; len&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;first_arg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; ==&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    return&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt; self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;_AddTheRest&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;arg_r&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span&gt; command&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;NoOp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;2. YSH &lt;code&gt;--ignore&lt;&#x2F;code&gt; flag&lt;&#x2F;strong&gt; (builtin&#x2F;trap_osh.py:378):&lt;&#x2F;p&gt;
+&lt;p&gt;For the more explicit YSH syntax, I added a &lt;code&gt;--ignore&lt;&#x2F;code&gt; flag that does the same thing:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; arg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;ignore&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;  # trap --ignore&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    return&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt; self&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;_AddTheRest&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;arg_r&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span&gt; command&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;NoOp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt; allow_legacy&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;False&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;&#x2F;h2&gt;
+&lt;p&gt;Try it in OSH (POSIX-compatible):&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; bin&#x2F;osh -c &amp;quot;trap &amp;#39;&amp;#39; INT; trap -p&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;trap&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -- &amp;#39;&amp;#39; SIGINT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; bin&#x2F;osh -c &amp;quot;trap &amp;#39;&amp;#39; USR1 USR2; trap -p&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;trap&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -- &amp;#39;&amp;#39; SIGUSR1&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;trap&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -- &amp;#39;&amp;#39; SIGUSR2&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Or in YSH (modern syntax):&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; bin&#x2F;ysh -c &amp;quot;trap --ignore INT; trap -p&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;trap&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -- &amp;#39;&amp;#39; SIGINT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Pull request :: &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;pull&#x2F;2586&quot;&gt;link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Contributing to Oils(i)</title>
+        <published>2025-12-03T00:00:00+00:00</published>
+        <updated>2025-12-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/contributing-to-oils/"/>
+        <id>https://daveads.github.io/note/contributing-to-oils/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/contributing-to-oils/">&lt;p&gt;This guide gives you a clear and lightweight overview on Oils, and how to get started contributing without getting overwhelmed.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;daveads.github.io&#x2F;note&#x2F;contributing-to-oils&#x2F;#prerequisites&quot;&gt;Prerequisites&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;daveads.github.io&#x2F;note&#x2F;contributing-to-oils&#x2F;#learning&quot;&gt;Learning&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;daveads.github.io&#x2F;note&#x2F;contributing-to-oils&#x2F;#Resources&quot;&gt;Resource&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;what-is-oils&quot;&gt;What is Oils ?&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Oils&lt;&#x2F;strong&gt; is an upgrade path from bash to a better language and runtime.&lt;br &#x2F;&gt;
+It comes in &lt;strong&gt;two shells&lt;&#x2F;strong&gt;, each built for a different kind of user:&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;what-are-osh-and-ysh&quot;&gt;What are OSH and YSH?&lt;&#x2F;h3&gt;
+&lt;p&gt;OSH runs your existing shell scripts.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;What it does:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Drop-in replacement&lt;&#x2F;strong&gt; for bash&#x2F;POSIX shells&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Runs existing scripts&lt;&#x2F;strong&gt; without modification&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;POSIX compatibility&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;follows bash&#x2F;dash&#x2F;mksh behavior&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Gradual migration path&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;use it today for your existing bash scripts &lt;strong&gt;Target users:&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;System administrators with existing shell scripts&lt;&#x2F;li&gt;
+&lt;li&gt;DevOps engineers maintaining legacy bash code&lt;&#x2F;li&gt;
+&lt;li&gt;Anyone with a large corpus of shell scripts&lt;&#x2F;li&gt;
+&lt;li&gt;Projects that need bash compatibility&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F5C2E7;font-style: italic;&quot;&gt;#!&#x2F;usr&#x2F;bin&#x2F;env osh&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Your existing bash script works as-is!&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; file&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; in&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; *.txt&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; do&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; [[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; -f&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;$file&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; ]];&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; then&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;Processing &lt;&#x2F;span&gt;&lt;span&gt;$file&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;cat&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;$file&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; |&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; grep&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; pattern&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;fi&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;done&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;ysh-yaks-shell-modern-shell-language&quot;&gt;YSH - Yaks Shell (Modern Shell Language)&lt;&#x2F;h3&gt;
+&lt;p&gt;YSH has a a faimilar syntax similar with python&#x2F;javascript so you should have no problem if you are conversant with any of those langugages.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;What it does:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Modern shell language&lt;&#x2F;strong&gt; with clean syntax&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Data structures&lt;&#x2F;strong&gt; - lists, dicts (not just strings)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Type safety&lt;&#x2F;strong&gt; - reduce errors with static types&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Better error handling&lt;&#x2F;strong&gt; - explicit try&#x2F;catch&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Expression-oriented&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Block syntax&lt;&#x2F;strong&gt; - { } for cleaner code organization&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Target users:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;People who find bash syntax confusing&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F5C2E7;font-style: italic;&quot;&gt;#!&#x2F;usr&#x2F;bin&#x2F;env ysh&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;Variable and Expressions&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;const&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; name = &amp;#39;YSH User&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;var&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; x =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 10&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;setvar&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; x = x&lt;&#x2F;span&gt;&lt;span&gt; *&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 2&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; +&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 5&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;Hello &lt;&#x2F;span&gt;&lt;span&gt;$name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;!&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;x + 10 = $[x + 10]&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;Command sub: &lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; hi&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;Data Structures (Lists &amp;amp; Dicts)&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;var&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; mylist =&lt;&#x2F;span&gt;&lt;span&gt; [x,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;foo&amp;#39;, &amp;#39;bar&amp;#39;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;var&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; person = {name: &amp;#39;Alice&amp;#39;, age:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 30&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; i, item in &lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;mylist&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;) {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;  echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;  List[&lt;&#x2F;span&gt;&lt;span&gt;$i&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;]: &lt;&#x2F;span&gt;&lt;span&gt;$item&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;Expression-based Control Flow&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;person.age&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; &amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 20&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; and x&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; &amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 20&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;) {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;  echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;  $[person.name] is over 20 and x is over 20.&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;Shell-like proc (Procedure)&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;proc&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; greet&lt;&#x2F;span&gt;&lt;span&gt; (name_str) &lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;  echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;  Proc says: Hello, &lt;&#x2F;span&gt;&lt;span&gt;$name_str&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;greet&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;World&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;Python-like func (Function)&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;func&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; multiply&lt;&#x2F;span&gt;&lt;span&gt; (a,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; b&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;  return&lt;&#x2F;span&gt;&lt;span&gt; (a *&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; b&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;  Func says: 5 * 7 = $[multiply(5, 7)]&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;$[ENV.PWD]&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;Built-in JSON Handling&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;  Writing &amp;#39;person&amp;#39; dict to JSON:&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;json&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; write&lt;&#x2F;span&gt;&lt;span&gt; (person)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;&#x2F;h2&gt;
+&lt;p&gt;Oils is written in Python, and you&#x27;ll be reading&#x2F;writing Python code daily.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;[] A good understanding of python&lt;&#x2F;li&gt;
+&lt;li&gt;[] A Good understanding of how Lexers, parsers, and interpreters works in a practical context&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;learning&quot;&gt;Learning&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Book: &quot;Crafting Interpreters&quot; by Robert Nystrom - Best intro to parsers&lt;&#x2F;li&gt;
+&lt;li&gt;Tutorial: &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;ruslanspivak.com&#x2F;lsbasi-part1&#x2F;&quot;&gt;Let&#x27;s Build a Simple Interpreter&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Book: &quot;The Linux Programming Interface&quot; - Unix process management&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;getting-started-the-5-minute-setup&quot;&gt;Getting Started: The 5-Minute Setup&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;installation&quot;&gt;installation&lt;&#x2F;h3&gt;
+&lt;p&gt;You&#x27;ll need:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python2&lt;&#x2F;li&gt;
+&lt;li&gt;Git&lt;&#x2F;li&gt;
+&lt;li&gt;Basic command-line knowledge&lt;&#x2F;li&gt;
+&lt;li&gt;A Linux machine (or WSL on Windows)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;quick-setup&quot;&gt;Quick Setup&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# 1. Clone the repository&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; clone https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils.git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; oils&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Install system dependencies (choose your distro)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;build&#x2F;deps.sh&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; wedge-deps-debian&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;   # Ubuntu&#x2F;Debian (uses sudo apt-get)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# OR&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;build&#x2F;deps.sh&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; wedge-deps-alpine&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;   # Alpine Linux&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# OR&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;build&#x2F;deps.sh&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; wedge-deps-fedora&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;   # Fedora&#x2F;RHEL&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Download and build custom tools&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;build&#x2F;deps.sh&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; fetch&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;               # Download source tarballs&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;                                &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;build&#x2F;deps.sh&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; install-wedges&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;      # Build and install tools (takes 5-10 min)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Every time you git pull&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; build&#x2F;dev-shell.sh&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;              # Update PATH with custom Python&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;build&#x2F;py.sh&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; all&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;                   # Regenerate Python code (lexer, help, etc.)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# 3. Try it out!&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;bin&#x2F;osh&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -c &amp;#39;echo &amp;quot;Hello from OSH!&amp;quot;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;bin&#x2F;ysh&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -c &amp;#39;echo &amp;quot;Hello from YSH!&amp;quot;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# 4. Test it works&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;test&#x2F;spec.sh&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; builtin-echo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;If this doesn&#x27;t work, ask on &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;oilshell.zulipchat.com&#x2F;&quot;&gt;Zulip&lt;&#x2F;a&gt; - we&#x27;re friendly!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;understanding-the-codebase&quot;&gt;Understanding the Codebase&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;the-big-picture-how-shells-work&quot;&gt;The Big Picture: How Shells Work&lt;&#x2F;h3&gt;
+&lt;p&gt;Every shell follows this pipeline:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Input → Lexer → Parser → AST → Evaluator → Output&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  ↓       ↓        ↓      ↓        ↓         ↓&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;stdin  Tokens  Syntax  Tree  Execution   stdout&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Let&#x27;s trace &lt;code&gt;echo $USER&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Input&lt;&#x2F;strong&gt;: User types &lt;code&gt;echo $USER&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Lexer&lt;&#x2F;strong&gt; breaks it into tokens: &lt;code&gt;[echo]&lt;&#x2F;code&gt; &lt;code&gt;[$USER]&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Parser&lt;&#x2F;strong&gt; builds an AST: &lt;code&gt;Simple(words=[&#x27;echo&#x27;, VarSub(&#x27;USER&#x27;)])&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Evaluator&lt;&#x2F;strong&gt; looks up &lt;code&gt;USER&lt;&#x2F;code&gt; → &lt;code&gt;&#x27;alice&#x27;&lt;&#x2F;code&gt;, then runs &lt;code&gt;echo alice&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Output&lt;&#x2F;strong&gt;: &lt;code&gt;alice&lt;&#x2F;code&gt; printed to stdout&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;directory-structure&quot;&gt;Directory Structure&lt;&#x2F;h3&gt;
+&lt;p&gt;The codebase is organized logically:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;oils&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;├── frontend&#x2F;      # Lexing, tokens (both OSH &amp;amp; YSH)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;├── osh&#x2F;           # OSH-specific parsing &amp;amp; evaluation&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;├── ysh&#x2F;           # YSH-specific parsing &amp;amp; evaluation&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;├── core&#x2F;          # Shared runtime (process management, state)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;├── builtin&#x2F;       # Built-in commands (cd, echo, trap, etc.)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;├── spec&#x2F;          # Tests comparing Oils to other shells&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;└── _devbuild&#x2F;gen&#x2F; # Generated code (don&amp;#39;t edit!)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Important&lt;&#x2F;strong&gt;: Universal code (like process management) lives in &lt;code&gt;core&#x2F;&lt;&#x2F;code&gt;. Shell-specific code is in &lt;code&gt;osh&#x2F;&lt;&#x2F;code&gt; or &lt;code&gt;ysh&#x2F;&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;key-files-to-know&quot;&gt;Key Files to Know&lt;&#x2F;h3&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;What&lt;&#x2F;th&gt;&lt;th&gt;Where&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Lexer&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;frontend&#x2F;lexer.py&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;OSH Parser&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;osh&#x2F;cmd_parse.py&lt;&#x2F;code&gt;, &lt;code&gt;osh&#x2F;word_parse.py&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;YSH Parser&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;ysh&#x2F;expr_parse.py&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Evaluator&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;osh&#x2F;cmd_eval.py&lt;&#x2F;code&gt;, &lt;code&gt;osh&#x2F;word_eval.py&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Builtins&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;builtin&#x2F;*.py&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Tests&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;spec&#x2F;*.test.sh&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;This is crucial for contributing effectively:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;universal-code-both-shells&quot;&gt;Universal Code (Both Shells)&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Location&lt;&#x2F;strong&gt;: &lt;code&gt;core&#x2F;&lt;&#x2F;code&gt;, &lt;code&gt;frontend&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Purpose&lt;&#x2F;strong&gt;: Process management, lexing, core runtime&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Example&lt;&#x2F;strong&gt;: &lt;code&gt;core&#x2F;process.py&lt;&#x2F;code&gt; - waiting for child processes&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;osh-specific-code&quot;&gt;OSH-Specific Code&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Location&lt;&#x2F;strong&gt;: &lt;code&gt;osh&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Purpose&lt;&#x2F;strong&gt;: POSIX compatibility, bash-like syntax&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Example&lt;&#x2F;strong&gt;: &lt;code&gt;osh&#x2F;word_eval.py&lt;&#x2F;code&gt; - &lt;code&gt;$var&lt;&#x2F;code&gt; expansion&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;ysh-specific-code&quot;&gt;YSH-Specific Code&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Location&lt;&#x2F;strong&gt;: &lt;code&gt;ysh&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Purpose&lt;&#x2F;strong&gt;: Modern syntax, new features&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Example&lt;&#x2F;strong&gt;: &lt;code&gt;ysh&#x2F;expr_eval.py&lt;&#x2F;code&gt; - &lt;code&gt;var x = 42&lt;&#x2F;code&gt; expressions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&quot;&quot;&quot;
+Next Note will contain a deep dive in the mycpp transcompiler programm
+&quot;&quot;&quot;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;documentation&quot;&gt;Documentation&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;oils.pub&#x2F;&quot;&gt;Main Documentation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;wiki&quot;&gt;GitHub Wiki&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;wiki&#x2F;Contributing&quot;&gt;Contributing Guide&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;wiki&#x2F;Spec-Tests&quot;&gt;Spec Tests Explained&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;community&quot;&gt;Community&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;oilshell.zulipchat.com&#x2F;&quot;&gt;Zulip Chat&lt;&#x2F;a&gt; - Ask questions here!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;issues&quot;&gt;GitHub Issues&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;oils.pub&#x2F;blog&#x2F;&quot;&gt;Blog&lt;&#x2F;a&gt; - Design discussions and updates&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;You don&#x27;t need deep compiler knowledge - just Python skills, curiosity, and willingness to dive deep and learn.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Ready to contribute?&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Join &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;oilshell.zulipchat.com&#x2F;&quot;&gt;Zulip&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Check &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;oils-for-unix&#x2F;oils&#x2F;issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22&quot;&gt;good first issues&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Clone the repo and run setup&lt;&#x2F;li&gt;
+&lt;li&gt;Ask questions and have fun! 🎉&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+</feed>

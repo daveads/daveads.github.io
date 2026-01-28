@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - vim</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notet/vim/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-06-11T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notet/vim/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Notes on vim</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/vimtutor/"/>
+        <id>https://daveads.github.io/note/vimtutor/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/vimtutor/">&lt;h2 id=&quot;decided-to-try-this-out-after-months-of-using-vim&quot;&gt;Decided to try this out after months of using Vim&lt;&#x2F;h2&gt;
+&lt;p&gt;&#x2F;&#x2F; Started with Vim by just Googling the basic commands...&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Mistakes I have made in the past&lt;&#x2F;strong&gt;
+1.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;moving&quot;&gt;Moving&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         ^&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         k&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;   &amp;lt;  h       l&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         j&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         v&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;exiting-vim&quot;&gt;Exiting Vim&lt;&#x2F;h2&gt;
+&lt;p&gt;Press &lt;code&gt;&amp;lt;ESC&amp;gt;&lt;&#x2F;code&gt;
+Use &lt;code&gt;:q!&lt;&#x2F;code&gt; to discard any changes you have made and exit forcefully.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;text-editing-delete&quot;&gt;Text Editing - Delete&lt;&#x2F;h2&gt;
+&lt;p&gt;Press &lt;code&gt;&amp;lt;ESC&amp;gt;&lt;&#x2F;code&gt; to enter normal mode.
+To delete a character, move to the character and press &lt;code&gt;x&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;text-editing-insert&quot;&gt;Text Editing - Insert&lt;&#x2F;h2&gt;
+&lt;p&gt;Press &lt;code&gt;i&lt;&#x2F;code&gt; to start inserting text at the cursor position.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;text-editing-appending&quot;&gt;Text Editing - Appending&lt;&#x2F;h2&gt;
+&lt;p&gt;Press &lt;code&gt;a&lt;&#x2F;code&gt; to append text after the cursor position.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;editing-a-file&quot;&gt;Editing a File&lt;&#x2F;h2&gt;
+&lt;p&gt;Use &lt;code&gt;:wq&lt;&#x2F;code&gt; to save and exit a file.
+Press &lt;code&gt;&amp;lt;ESC&amp;gt;&lt;&#x2F;code&gt; to return to normal mode or to cancel unwanted and partially completed commands.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;deletion-commands&quot;&gt;Deletion Commands&lt;&#x2F;h2&gt;
+&lt;p&gt;In normal mode, move to the beginning of a word and type &lt;code&gt;dw&lt;&#x2F;code&gt; to delete until the start of the next word.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;more-deletion-commands&quot;&gt;More Deletion Commands&lt;&#x2F;h2&gt;
+&lt;p&gt;Type &lt;code&gt;d$&lt;&#x2F;code&gt; to delete to the end of the line, including the last character.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;on-operators-and-motions&quot;&gt;On Operators and Motions&lt;&#x2F;h2&gt;
+&lt;p&gt;Commands involving manipulating text are made from an operator and a motion.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Delete Operator: &lt;code&gt;d&lt;&#x2F;code&gt; motion&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;d&lt;&#x2F;code&gt; is the delete operator, and motion specifies what the operator will operate on.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;short-list-of-motions&quot;&gt;Short List of Motions&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;w&lt;&#x2F;code&gt;: Move until the start of the next word, excluding its first character.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;e&lt;&#x2F;code&gt;: Move to the end of the current word, including the last character.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;$&lt;&#x2F;code&gt;: Move to the end of the line, including the last character.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;using-a-count-for-a-motion&quot;&gt;Using a Count for a Motion&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2w&lt;&#x2F;code&gt;: Move the cursor two words forward.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;3e&lt;&#x2F;code&gt;: Move the cursor to the end of the third word forward.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;0&lt;&#x2F;code&gt;: Move to the start of the line.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;3w&lt;&#x2F;code&gt;: Move the cursor three words forward.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;using-a-count-to-delete-more&quot;&gt;Using a Count to Delete More&lt;&#x2F;h2&gt;
+&lt;p&gt;Typing a number with an operator repeats it that many times. For example, &lt;code&gt;d2w&lt;&#x2F;code&gt; deletes the first two words in the line.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;operating-on-lines&quot;&gt;Operating on Lines&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dd&lt;&#x2F;code&gt;: Delete a whole line.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;2dd&lt;&#x2F;code&gt;: Delete two lines.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-undo-command&quot;&gt;The Undo Command&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;u&lt;&#x2F;code&gt;: Undo the last command.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;CTRL-R&lt;&#x2F;code&gt;: Redo commands.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-put-command&quot;&gt;The PUT Command&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;p&lt;&#x2F;code&gt;: Put previously deleted text after the cursor.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;dd&lt;&#x2F;code&gt; deletes the line and stores it in a Vim register.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;the-replace-command&quot;&gt;The Replace Command&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Press &lt;code&gt;rx&lt;&#x2F;code&gt; to replace the character under the cursor with &lt;code&gt;x&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Press &lt;code&gt;r&lt;&#x2F;code&gt; then the character which should be there.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-change-operator&quot;&gt;The Change Operator&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ce&lt;&#x2F;code&gt;: Change until the end of a word.&lt;&#x2F;li&gt;
+&lt;li&gt;For example, &lt;code&gt;hello wors&lt;&#x2F;code&gt; becomes &lt;code&gt;hello world&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;more-changes-using-c&quot;&gt;More Changes Using c&lt;&#x2F;h2&gt;
+&lt;p&gt;The change operator &lt;code&gt;c&lt;&#x2F;code&gt; can be used with the same motions as delete.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;c [number] motion&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;cursor-location-and-file-status&quot;&gt;Cursor Location and File Status&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CTRL-g&lt;&#x2F;code&gt;: Shows file name and position in the file.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;gg&lt;&#x2F;code&gt;: Move you to the start of the file.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;G&lt;&#x2F;code&gt;: Move you to the bottom of the file.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;[number]G&lt;&#x2F;code&gt;: Move you to a specific line.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-search-command&quot;&gt;The Search Command&lt;&#x2F;h2&gt;
+&lt;p&gt;In normal mode, type &lt;code&gt;&quot;&#x2F;&quot;&lt;&#x2F;code&gt; followed by the character you want to search.
+To search the same phrase again, type &lt;code&gt;n&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

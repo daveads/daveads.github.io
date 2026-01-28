@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	
+		<!-- meta data -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="author" content="Daveads">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Daveads">
+	
+
+
+<meta property="og:title" content="Implementing trap">
+<meta property="og:type" content="notes">
+<meta property="og:url" content="https://daveads.github.io&#x2F;note&#x2F;2025-18-12-implementing-traps&#x2F;">
+
+
+
+		
+			<meta name="keywords" content="[oils]">
+		
+
+
+
+
+<meta name="description" content="">
+
+
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="daveads" href="https://daveads.github.io/atom.xml">
+
+
+	<link rel="canonical" href="https://daveads.github.io&#x2F;note&#x2F;2025-18-12-implementing-traps&#x2F;">
+
+
+<!-- Sass-file: minima.css -->
+<link rel="stylesheet" href="/minima.css">
+
+<!-- css files -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="/assets/css/tagc.css">
+<link rel="stylesheet" href="/assets/css/pagenav.css">
+<link rel="stylesheet" href="/assets/css/shortcodes.css"
+
+
+<!-- google_analytics -->
+
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-087FCJRFH2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-087FCJRFH2', {
+    'cookie_flags': 'SameSite=None;Secure',
+  });
+</script>
+
+
+
+		<!-- Google discover -->
+		<link rel="alternate" type="application/rss+xml" href="https://feeds.feedburner.com/blogspot/amDG" />
+		<!-- ends -->
+
+
+<!-- <script type="text/javascript" src="/assets/js/blink.js" defer></script> -->
+<script type="text/javascript" src="/assets/js/scroll-top-button.js" defer></script>
+
+<!-- PWA -->
+<script>
+  if ("serviceWorker" in navigator) {
+if (navigator.serviceWorker.controller) {
+   console.log("An active service worker found, no need to register");
+   } else {
+     // Register the service worker
+     navigator.serviceWorker
+       .register("/serviceworker.js", {
+         scope: "./"
+       })
+       .then(function (reg) {
+         console.log("Service worker has been registered for scope: " + reg.scope);
+       });
+    }
+}
+</script>
+
+<!-- programmable search engine -->
+<!-- <script async src="https://cse.google.com/cse.js?cx=acd2a3a68756706a3"></script> -->
+
+
+<! REACT SHITS -->
+<!-- end react -->
+
+
+<link rel="manifest" type="application/manifest+json" href="https://daveads.github.io/manifest.json">
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
+
+<title>
+		
+		Daveads - Implementing trap
+
+</title>
+
+
+</head>
+ <body>
+		
+
+
+		<button class="scrollToTopBtn" title="Go to top">
+		<img src="/assets/images/186407_arrow_up_icon.png
+		" height ="20" width="20" />
+		</button>
+
+		<main class="page-content" aria-label="Content">
+
+				 <section class="section">
+						<div class="wrapper">
+								
+
+<article class="post h-entry" itemscope="articleBody" itemtype="http://schema.org/BlogPosting">
+<header class="post-header">
+
+		 
+		 
+		 
+		<h1  style="text-align:center;" itemprop="name headline">
+				NOTE : Implementing trap
+		</h1>
+
+
+		 <small style="float:right; font-size: 15px;"><a href="/note">See all notes</a>
+		 	|| <a href="/note-archive">Archive</a>
+		 </small>
+
+<p class="post-meta">
+
+    
+		<time datetime="2025-12-04" itemprop="datePublished">2025-12-04</time>
+		
+    
+</p>
+
+		<div>
+			<div class="back_btn">
+    <button type="button" onclick="window.history.go(-1)" 
+    
+    
+    style="float:right; font-size: 18px; background-color: black; color: #13b7ea;"
+    >
+    
+     << cd .. 
+    </button>
+</div>
+<br>
+
+
+			<!--
+			
+			-->
+
+			
+	
+			Tags :
+			
+			<small>
+			<a class="tag-link" href="https://daveads.github.io/notet/oils/">#oils</a>
+			</small>
+			
+			
+		</div>
+
+</header>
+	
+		<div class="post-content e-content" itemprop="articleBody">
+		<p>Issue :: <a class="external" rel="external" href="https://github.com/oils-for-unix/oils/issues/2476">Implement trap '' in OSH and trap --ignore in YSH - should be SIG_IGN #2476</a></p>
+<p><code>trap</code> lets you run a command when your script gets a signal from the operating system. Like, when you hit <code>Ctrl+C</code>, that sends a <code>SIGINT</code> signal to your script. Normally, that would just kill it, but <code>trap</code> lets you catch it and do some cleanup before you exit.</p>
+<p>E.g.</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #F5C2E7;font-style: italic;">#!/bin/bash</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">trap</span><span style="color: #A6E3A1;"> &#39;echo &quot;Interrupted!&quot;; exit 1&#39; SIGINT</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">while</span><span style="color: #F38BA8;font-style: italic;"> true</span><span style="color: #9399B2;">;</span><span style="color: #CBA6F7;"> do</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">    echo</span><span style="color: #A6E3A1;"> &quot;Running...&quot;</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">    sleep</span><span style="color: #FAB387;"> 2</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">done</span></span>
+<span class="giallo-l"></span></code></pre>
+<p>This is commonly used in installers, backup scripts, and other tools where interruption could leave the system in a bad state.</p>
+<h2 id="the-problem-trap-is-special">The Problem: <code>trap ''</code> is Special</h2>
+<p>Here's the thing about <code>trap ''</code> - it's not intuitive at first glance. You might think an empty string means "do nothing," which sounds like it should behave the same as <code>trap ' '</code> (a space) or <code>trap '# comment'</code>. But it doesn't!</p>
+<p>In POSIX shells, <code>trap ''</code> has a very specific meaning: it tells the OS to ignore the signal entirely by setting it to <code>SIG_IGN</code>. This is fundamentally different from running an empty command:</p>
+<ul>
+<li><strong><code>trap '' SIGINT</code></strong> → Sets signal to <code>SIG_IGN</code> (kernel ignores it)</li>
+<li><strong><code>trap ' ' SIGINT</code></strong> → Wakes up the shell to execute a space (does nothing, but still wakes up!)</li>
+<li><strong><code>trap '# comment' SIGINT</code></strong> → Wakes up the shell to execute a comment</li>
+</ul>
+<p>The difference matters for performance and correctness. When a signal is set to <code>SIG_IGN</code>, the kernel drops it immediately. When you have a trap handler (even an empty one), the shell has to wake up, check what to do, execute the handler, and resume.</p>
+<p>You can verify this by checking <code>/proc/self/status</code>. Here's a demo from the Oils test suite:</p>
+<p><strong>Without trap:</strong></p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">$</span><span style="color: #A6E3A1;"> bash test/signal-report.sh report</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">PID</span><span style="color: #FAB387;"> 1339837</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">SigIgn:</span><span style="color: #A6E3A1;"> QUIT</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;font-style: italic;">3</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">SigCgt:</span><span style="color: #A6E3A1;"> INT</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;font-style: italic;">2</span><span style="color: #9399B2;">)</span><span style="color: #A6E3A1;"> CHLD</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;font-style: italic;">17</span><span style="color: #9399B2;">)</span></span></code></pre>
+<p><strong>With <code>trap '' SIGUSR2</code>:</strong></p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">$</span><span style="color: #A6E3A1;"> bash test/signal-report.sh report T</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">PID</span><span style="color: #FAB387;"> 1339865</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">trap</span><span style="color: #A6E3A1;"> -- &#39;&#39; SIGUSR2</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">SigIgn:</span><span style="color: #A6E3A1;"> QUIT</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;font-style: italic;">3</span><span style="color: #9399B2;">)</span><span style="color: #A6E3A1;"> USR2</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;font-style: italic;">12</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">SigCgt:</span><span style="color: #A6E3A1;"> HUP</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;font-style: italic;">1</span><span style="color: #9399B2;">)</span><span style="color: #A6E3A1;"> INT</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;font-style: italic;">2</span><span style="color: #9399B2;">)</span><span style="color: #A6E3A1;"> ILL</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;font-style: italic;">4</span><span style="color: #9399B2;">)</span><span style="color: #A6E3A1;"> TRAP</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;font-style: italic;">5</span><span style="color: #9399B2;">)</span><span style="color: #A6E3A1;"> ... CHLD</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;font-style: italic;">17</span><span style="color: #9399B2;">)</span><span style="color: #A6E3A1;"> ...</span></span></code></pre>
+<p>See how <code>USR2(12)</code> appears under <code>SigIgn</code> (ignored), not under <code>SigCgt</code> (caught)? That's because <code>trap ''</code> sets the signal to <code>SIG_IGN</code> at the kernel level. This is fundamentally different from catching the signal and executing an empty handler.</p>
+<h3 id="why-add-trap-ignore">Why Add <code>trap --ignore</code>?</h3>
+<p>While <code>trap ''</code> is POSIX-compliant, it's not very clear what it means just by reading the code. Is it ignoring the signal? Resetting it? Setting a default handler?</p>
+<p>YSH's <code>trap --ignore</code> makes the intent explicit:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">trap</span><span style="color: #A6E3A1;"> --ignore INT</span><span style="color: #9399B2;font-style: italic;">  # Clear: we&#39;re ignoring the signal (SIG_IGN)</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">trap</span><span style="color: #A6E3A1;"> &#39;&#39; INT</span><span style="color: #9399B2;font-style: italic;">        # Less clear: empty string means... ignore?</span></span></code></pre>
+<p>This explicitness helps future readers understand that we're setting <code>SIG_IGN</code>, which is different from <code>SIG_DFL</code> (the default handler you get with <code>trap - INT</code>).</p>
+<h2 id="the-design-choice-why-command-noop">The Design Choice: Why command.NoOp?</h2>
+<p>Once we understand that <code>trap ''</code> should set <code>SIG_IGN</code>, the question becomes: how do we represent this in the codebase?</p>
+<h3 id="the-evolution">The Evolution</h3>
+<p>The implementation went through several iterations:</p>
+<p><strong>1. Initial approach: Special handling everywhere</strong></p>
+<p>My first attempt added separate branches for ignored signals throughout the codebase:</p>
+<ul>
+<li>Special branches in <code>_AddTheRest()</code> for the ignore case</li>
+<li>Duplicated logic in <code>AddItem()</code> to track ignored signals differently</li>
+<li>Custom printing code in <code>_PrintTrapEntry()</code></li>
+</ul>
+<p>This worked, but created a lot of duplication. The code got longer and harder to follow.</p>
+<p><strong>2. Using <code>command.NoOp</code></strong></p>
+<p>Andy suggested representing ignored signals as <code>command.NoOp</code> from the AST. This made the code much shorter! Instead of special handling everywhere, we just check <code>if handler.tag() == command_e.NoOp</code> at the critical points. The existing code paths mostly just worked.</p>
+<p>Why does this work? The shell already has <code>command.NoOp</code> for representing "do nothing" commands like <code>sh -c ''</code> (an empty command). Reusing it for ignored traps seemed natural.</p>
+<p><strong>3. The bug with <code>command.IgnoredTrap</code></strong></p>
+<p>At one point, we tried <code>command.IgnoredTrap</code> instead - the reasoning being that we shouldn't use the same enum for two different things (<code>command.NoOp</code> for both empty commands and ignored traps).</p>
+<p>But this introduced a bug! In some code paths, we would try to execute <code>command.IgnoredTrap</code> as if it were a normal command. Using the same type for two semantically different things caused confusion.</p>
+<p><strong>4. Final solution: <code>trap_action.Ignored</code></strong></p>
+<p>The final refactoring introduced a new algebraic data type <code>trap_action</code>:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="python"><span class="giallo-l"><span>trap_action</span><span style="color: #94E2D5;"> =</span></span>
+<span class="giallo-l"><span>  Ignored</span><span style="color: #9399B2;font-style: italic;">           # SIG_IGN</span></span>
+<span class="giallo-l"><span style="color: #94E2D5;">  |</span><span style="color: #89B4FA;"> Command</span><span style="color: #9399B2;">(</span><span>command c</span><span style="color: #9399B2;">)</span></span></code></pre>
+<p>This makes it explicit in the type system: a trap action is either "ignored" or "runs a command." No confusion possible! The type system enforces that we handle both cases correctly.</p>
+<blockquote class="callout note">
+    
+    <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z" fill="currentColor"></path></svg>
+    </div>
+    <div class="content">
+        
+        <p><strong>Note</strong></p>
+        
+        <p>This post describes the implementation using <code>command.NoOp</code> (PR #2586), but the code has since been refactored to use <code>trap_action.Ignored</code> - see commit 6f1c64891. The refactoring makes the intent even clearer in the type system.</p>
+
+    </div>
+</blockquote>
+<h3 id="why-algebraic-data-types">Why Algebraic Data Types?</h3>
+<p>This evolution shows why Oils uses algebraic data types (ADTs) extensively. Instead of having <code>if</code> statements scattered throughout the code checking "is this an ignored trap?", we put that distinction into the data representation itself.</p>
+<p>As Andy puts it: "the if statements are in data, rather than code" - which makes the code shorter and harder to misuse. The type checker enforces that you handle both <code>Ignored</code> and <code>Command(c)</code> cases, preventing bugs like the <code>command.IgnoredTrap</code> issue above.</p>
+<h2 id="how-it-works-under-the-hood">How It Works Under the Hood</h2>
+<h3 id="the-core-logic">The Core Logic</h3>
+<p>Here's what happens in <code>TrapState.AddUserTrap()</code> when you set a trap:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="python"><span class="giallo-l"><span style="color: #CBA6F7;">def</span><span style="color: #89B4FA;font-style: italic;"> AddUserTrap</span><span style="color: #9399B2;">(</span><span style="color: #F38BA8;font-style: italic;">self</span><span style="color: #9399B2;">,</span><span style="color: #EBA0AC;font-style: italic;"> sig_num</span><span style="color: #9399B2;">,</span><span style="color: #EBA0AC;font-style: italic;"> handler</span><span style="color: #9399B2;">):</span></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;">    # type: (int, command_t) -&gt; None</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &quot;&quot;&quot; e.g. SIGUSR1 &quot;&quot;&quot;</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">    self</span><span style="color: #9399B2;">.</span><span style="color: #EBA0AC;font-style: italic;">traps</span><span style="color: #9399B2;">[</span><span style="color: #EBA0AC;font-style: italic;">sig_num</span><span style="color: #9399B2;">]</span><span style="color: #94E2D5;"> =</span><span> handler</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    if</span><span> handler</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">tag</span><span style="color: #9399B2;">()</span><span style="color: #94E2D5;"> ==</span><span> command_e</span><span style="color: #9399B2;">.</span><span>NoOp</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;">        # trap &#39;&#39; SIGINT - ignore the signal (SIG_IGN)</span></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;">        # For signal_safe, this is handled the same as trap -</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        if</span><span> sig_num</span><span style="color: #94E2D5;"> ==</span><span> SIGINT</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">            self</span><span style="color: #9399B2;">.</span><span>signal_safe</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">SetSigIntTrapped</span><span style="color: #9399B2;">(</span><span style="color: #FAB387;">False</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        elif</span><span> sig_num</span><span style="color: #94E2D5;"> ==</span><span> SIGWINCH</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">            self</span><span style="color: #9399B2;">.</span><span>signal_safe</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">SetSigWinchCode</span><span style="color: #9399B2;">(</span><span>iolib</span><span style="color: #9399B2;">.</span><span>UNTRAPPED_SIGWINCH</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        else</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span>            iolib</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">sigaction</span><span style="color: #9399B2;">(</span><span>sig_num</span><span style="color: #9399B2;">,</span><span> SIG_IGN</span><span style="color: #9399B2;">)</span><span style="color: #9399B2;font-style: italic;">  # Actually set SIG_IGN!</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    else</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;">        # Normal trap handler</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        if</span><span> sig_num</span><span style="color: #94E2D5;"> ==</span><span> SIGINT</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">            self</span><span style="color: #9399B2;">.</span><span>signal_safe</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">SetSigIntTrapped</span><span style="color: #9399B2;">(</span><span style="color: #FAB387;">True</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        elif</span><span> sig_num</span><span style="color: #94E2D5;"> ==</span><span> SIGWINCH</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">            self</span><span style="color: #9399B2;">.</span><span>signal_safe</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">SetSigWinchCode</span><span style="color: #9399B2;">(</span><span>SIGWINCH</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        else</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span>            iolib</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">RegisterSignalInterest</span><span style="color: #9399B2;">(</span><span>sig_num</span><span style="color: #9399B2;">)</span></span></code></pre>
+<p>The key insight: I check if the handler is a NoOp, and if so, call <code>iolib.sigaction(sig_num, SIG_IGN)</code> to actually ignore the signal at the OS level.</p>
+<h3 id="why-sigint-and-sigwinch-are-special">Why SIGINT and SIGWINCH Are Special</h3>
+<p>SIGINT and SIGWINCH need special handling because the shell interpreter itself cares about them:</p>
+<ul>
+<li>
+<p><strong>SIGINT</strong> - For handling Ctrl-C / KeyboardInterrupt</p>
+<ul>
+<li>CPython has built-in handling for this</li>
+<li>mycpp runtime calls <code>RegisterSignalInterest(SIGINT)</code> and polls with <code>PollSigInt()</code> in the main loop</li>
+</ul>
+</li>
+<li>
+<p><strong>SIGWINCH</strong> - For terminal resize events that affect line editing</p>
+</li>
+</ul>
+<p>Here's something interesting: when you do <code>trap '' SIGINT</code>, the <code>signal_safe</code> calls look the same as <code>trap - SIGINT</code> (both call <code>SetSigIntTrapped(False)</code>). But the behavior is different:</p>
+<ul>
+<li><code>trap -</code> removes the entry from <code>self.traps</code> → signal reverts to SIG_DFL</li>
+<li><code>trap ''</code> stores NoOp in <code>self.traps</code> → signal set to SIG_IGN</li>
+</ul>
+<p>The shell needs to track SIGINT/SIGWINCH separately from user traps, so this dual handling makes sense.</p>
+<h3 id="displaying-trap-state">Displaying Trap State</h3>
+<p>When you run <code>trap -p</code>, I modified <code>_PrintTrapEntry()</code> to show ignored signals correctly:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="python"><span class="giallo-l"><span style="color: #CBA6F7;">def</span><span style="color: #89B4FA;font-style: italic;"> _PrintTrapEntry</span><span style="color: #9399B2;">(</span><span style="color: #F38BA8;font-style: italic;">self</span><span style="color: #9399B2;">,</span><span style="color: #EBA0AC;font-style: italic;"> handler</span><span style="color: #9399B2;">,</span><span style="color: #EBA0AC;font-style: italic;"> name</span><span style="color: #9399B2;">):</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    if</span><span> handler</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">tag</span><span style="color: #9399B2;">()</span><span style="color: #94E2D5;"> ==</span><span> command_e</span><span style="color: #9399B2;">.</span><span>NoOp</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #FAB387;font-style: italic;">        print</span><span style="color: #9399B2;">(</span><span style="color: #A6E3A1;">&quot;trap -- &#39;&#39; </span><span style="color: #F5C2E7;">%s</span><span style="color: #A6E3A1;">&quot;</span><span style="color: #94E2D5;"> %</span><span> name</span><span style="color: #9399B2;">)</span><span style="color: #9399B2;font-style: italic;">  # Show as empty string</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    else</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span>        code</span><span style="color: #94E2D5;"> =</span><span style="color: #F38BA8;font-style: italic;"> self</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">_GetCommandSourceCode</span><span style="color: #9399B2;">(</span><span>handler</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #FAB387;font-style: italic;">        print</span><span style="color: #9399B2;">(</span><span style="color: #A6E3A1;">&quot;trap -- </span><span style="color: #F5C2E7;">%s %s</span><span style="color: #A6E3A1;">&quot;</span><span style="color: #94E2D5;"> %</span><span style="color: #9399B2;"> (</span><span>j8_lite</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">ShellEncode</span><span style="color: #9399B2;">(</span><span>code</span><span style="color: #9399B2;">),</span><span> name</span><span style="color: #9399B2;">))</span></span></code></pre>
+<p>This way <code>trap -p</code> shows <code>trap -- '' SIGINT</code> for ignored signals, which you can copy-paste to restore the same state.</p>
+<h2 id="what-i-added">What I Added</h2>
+<p>The implementation required changes in a few key places:</p>
+<p><strong>1. Empty string detection</strong> (builtin/trap_osh.py:420):</p>
+<p>When the first argument to <code>trap</code> is an empty string, treat it as a signal to ignore:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="python"><span class="giallo-l"><span style="color: #CBA6F7;">if</span><span style="color: #FAB387;font-style: italic;"> len</span><span style="color: #9399B2;">(</span><span>first_arg</span><span style="color: #9399B2;">)</span><span style="color: #94E2D5;"> ==</span><span style="color: #FAB387;"> 0</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    return</span><span style="color: #F38BA8;font-style: italic;"> self</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">_AddTheRest</span><span style="color: #9399B2;">(</span><span>arg_r</span><span style="color: #9399B2;">,</span><span> command</span><span style="color: #9399B2;">.</span><span>NoOp</span><span style="color: #9399B2;">)</span></span></code></pre>
+<p><strong>2. YSH <code>--ignore</code> flag</strong> (builtin/trap_osh.py:378):</p>
+<p>For the more explicit YSH syntax, I added a <code>--ignore</code> flag that does the same thing:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="python"><span class="giallo-l"><span style="color: #CBA6F7;">if</span><span> arg</span><span style="color: #9399B2;">.</span><span>ignore</span><span style="color: #9399B2;">:</span><span style="color: #9399B2;font-style: italic;">  # trap --ignore</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    return</span><span style="color: #F38BA8;font-style: italic;"> self</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">_AddTheRest</span><span style="color: #9399B2;">(</span><span>arg_r</span><span style="color: #9399B2;">,</span><span> command</span><span style="color: #9399B2;">.</span><span>NoOp</span><span style="color: #9399B2;">,</span><span style="color: #EBA0AC;font-style: italic;"> allow_legacy</span><span style="color: #94E2D5;">=</span><span style="color: #FAB387;">False</span><span style="color: #9399B2;">)</span></span></code></pre><h2 id="demo">Demo</h2>
+<p>Try it in OSH (POSIX-compatible):</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">$</span><span style="color: #A6E3A1;"> bin/osh -c &quot;trap &#39;&#39; INT; trap -p&quot;</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">trap</span><span style="color: #A6E3A1;"> -- &#39;&#39; SIGINT</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">$</span><span style="color: #A6E3A1;"> bin/osh -c &quot;trap &#39;&#39; USR1 USR2; trap -p&quot;</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">trap</span><span style="color: #A6E3A1;"> -- &#39;&#39; SIGUSR1</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">trap</span><span style="color: #A6E3A1;"> -- &#39;&#39; SIGUSR2</span></span></code></pre>
+<p>Or in YSH (modern syntax):</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">$</span><span style="color: #A6E3A1;"> bin/ysh -c &quot;trap --ignore INT; trap -p&quot;</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">trap</span><span style="color: #A6E3A1;"> -- &#39;&#39; SIGINT</span></span></code></pre>
+<p>Pull request :: <a class="external" rel="external" href="https://github.com/oils-for-unix/oils/pull/2586">link</a></p>
+
+		</div>
+		
+<br>
+<div style="text-align: center;">
+  <a href="/" style="font-weight: bold; font-size: 30px; font-family: 'Merriweather';">cd ~</a>
+</div>
+
+
+
+						</div>
+				 </section>
+
+		</main>
+		<footer></footer>
+ </body>
+
+</html>
+

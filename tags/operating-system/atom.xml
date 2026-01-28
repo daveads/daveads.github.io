@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - operating-system</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/operating-system/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-07-20T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/tags/operating-system/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Programming language resources</title>
+        <published>2022-05-31T00:00:00+00:00</published>
+        <updated>2024-07-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/programming-language-resources/"/>
+        <id>https://daveads.github.io/writing/programming-language-resources/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/programming-language-resources/">&lt;p&gt;For a comprehensive list, I highly recommend checking out &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;bernsteinbear.com&#x2F;pl-resources&#x2F;&quot;&gt;Max Bernstein&#x27;s PL Resources&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;favorite-resources-for-getting-started-with-pl&quot;&gt;&lt;strong&gt;Favorite Resources for Getting Started with PL&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;craftinginterpreters.com&#x2F;&quot;&gt;Crafting Interpreters&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.amazon.com&#x2F;dp&#x2F;3982016118&quot;&gt;Writing An Interpreter In Go&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.amazon.com&#x2F;dp&#x2F;398201610X&quot;&gt;Writing A Compiler In Go&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;additional-curated-lists&quot;&gt;Additional curated lists:&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aalhour&#x2F;awesome-compilers&quot;&gt;Awesome Compilers Resources&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;danistefanovic&#x2F;build-your-own-x#build-your-own-programming-language&quot;&gt;Build Your Own Programming Language&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;operating-systems&quot;&gt;Operating Systems&lt;&#x2F;h2&gt;
+&lt;p&gt;Resources for learning about and building operating systems:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;wiki.osdev.org&#x2F;Main_Page&quot;&gt;OSDev Wiki&lt;&#x2F;a&gt; - Comprehensive wiki for OS development&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.linuxfromscratch.org&#x2F;&quot;&gt;Linux From Scratch&lt;&#x2F;a&gt; - Step-by-step guide to building your own Linux system&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;os.phil-opp.com&#x2F;&quot;&gt;Writing an OS in Rust&lt;&#x2F;a&gt; - Blog series on creating an OS using Rust&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;littleosbook&#x2F;littleosbook&#x2F;&quot;&gt;Little OS Book&lt;&#x2F;a&gt; - Concise guide to OS development&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;cfenollosa&#x2F;os-tutorial&quot;&gt;OS from Scratch&lt;&#x2F;a&gt; - Hands-on tutorial for building a simple OS&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;codecrafters-io&#x2F;build-your-own-x#build-your-own-operating-system&quot;&gt;Build Your Own Operating System&lt;&#x2F;a&gt; - Curated list of OS development resources&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.nand2tetris.org&#x2F;&quot;&gt;Nand to Tetris Courses&lt;&#x2F;a&gt; - Build a modern computer system from the ground up&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;assembly-language&quot;&gt;Assembly Language&lt;&#x2F;h2&gt;
+&lt;p&gt;Resources for learning assembly language:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;pacman128.github.io&#x2F;pcasm&#x2F;&quot;&gt;PC Assembly Language Programming&lt;&#x2F;a&gt; - Guide to 32-bit x86 assembly&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;0xAX&#x2F;asm&quot;&gt;Learning Assembly for Linux-x64&lt;&#x2F;a&gt; - Tutorial series for x86-64 assembly&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.cs.princeton.edu&#x2F;courses&#x2F;archive&#x2F;spring04&#x2F;cos217&#x2F;&quot;&gt;Introduction to Programming Systems&lt;&#x2F;a&gt; - Princeton University course materials&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;skilldrick.github.io&#x2F;easy6502&#x2F;index.html&quot;&gt;Easy 6502&lt;&#x2F;a&gt; - Interactive tutorial for 6502 assembly&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.xorpd.net&#x2F;pages&#x2F;x86_adventures.html&quot;&gt;Assembly Language Adventures&lt;&#x2F;a&gt; - In-depth x86 assembly course&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;muff-in&#x2F;ff678b1fda17e6188aa0462a99626121&quot;&gt;Assembly Language &#x2F; Reversing &#x2F; Malware Analysis &#x2F; Game Hacking Resources&lt;&#x2F;a&gt; - Comprehensive list of assembly-related resources&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.cs.virginia.edu&#x2F;~evans&#x2F;cs216&#x2F;guides&#x2F;x86.html&quot;&gt;x86 Assembly Guide&lt;&#x2F;a&gt; - Concise guide to x86 assembly&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mikeroyal&#x2F;Assembly-Guide&quot;&gt;Assembly Guide&lt;&#x2F;a&gt; - Extensive guide covering various assembly topics&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

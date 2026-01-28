@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - books</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/books/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2020-10-25T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/tags/books/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Interesting programming and cs books</title>
+        <published>2019-07-07T00:00:00+00:00</published>
+        <updated>2020-10-25T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/interesting-programming-and-cs-books/"/>
+        <id>https://daveads.github.io/writing/interesting-programming-and-cs-books/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/interesting-programming-and-cs-books/">&lt;p&gt;&#x2F;&#x2F; Books i find interesting.... Many of the textbooks are freely available online&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.amazon.com&#x2F;gp&#x2F;product&#x2F;1848000693&#x2F;ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1848000693&amp;amp;linkCode=as2&amp;amp;tag=daveads-20&amp;amp;linkId=c915e2b83b5454a99aa5661d1c72bf7a&quot;&gt;The Algorithm Design Manual by Steven S. Skiena&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;3oqTpPp&quot;&gt;Algorithms by Robert Sedgewick and Kevin Wayne&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;35tICM0&quot;&gt;Introduction to algorithms Thomas H.cormen&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;34rrpmY&quot;&gt;Grokking Algorithms by Aditya Y.Bhargava&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;35woNUb&quot;&gt;Algorithms by Jeff Erickson&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;31Igpjj&quot;&gt;The art of computer programming DONALD E. KNUTH&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;3e2f7of&quot;&gt;Computer organization and architecture designing for performance by william stallings&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;37L1kS5&quot;&gt;Computer Systems:a programmer&#x27;s perspective Bryant. O&#x27;hallaron&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;3kug4rI&quot;&gt;Clean Code by Robert C. Martin&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;3mlYN4A&quot;&gt;Structure and interpretation of Computer programs (SICP)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;2HCGKs4&quot;&gt;Types and Programming Languages by Benjamin C.Pierce&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;2HDuebq&quot;&gt;Language Implementation patterns by Terence parr&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;2J4rG7b&quot;&gt;Artificial Intelligence A Modern Approach by Stuart J.Russell and Peter Norvig&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;3jvHEDI&quot;&gt;Concrete mathematics by ronald l. Graham, Donald E. knuth&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;37zMKg2&quot;&gt;Hacker&#x27;s Delight Henry S. Warren, jr.&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;35rxzTq&quot;&gt;The Annotated Turing by charles Petzold&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;3dTRKx0&quot;&gt;Algorithms to Live By: The Computer Science of Human Decisions Brian Christian and Tom Griffiths&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;31Fkepj&quot;&gt;Code: The Hidden Language of Computer Hardware and Software Charles Petzold&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;2TnI5p5&quot;&gt;The Mythical Man-Month by Fred Brooks&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;2J5LZkD&quot;&gt;Design Patterns: Elements of Reusable Object-Oriented Software Erich Gamma&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;35AGSAm&quot;&gt;Compilers: Principles, Techniques, and Tools by Alfred V.Aho, Ravi Sethi&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;amzn.to&#x2F;35u8PtG&quot;&gt;Refactoring: Improving the Design of Existing Code by kent Beck and Martin Fowler&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - tools</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/tools/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2020-04-30T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/tags/tools/atom.xml</id>
+    <entry xml:lang="en">
+        <title>A quick introduction to tmux(0)</title>
+        <published>2020-04-30T00:00:00+00:00</published>
+        <updated>2020-04-30T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/introduction-to-tmux/"/>
+        <id>https://daveads.github.io/writing/introduction-to-tmux/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/introduction-to-tmux/">&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;images&#x2F;tmux0.png&quot; alt=&quot;tmux(0)&quot; &#x2F;&gt;&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Prerequisite:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Have a basic understanding of the linux &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;daveads.github.io&#x2F;tools&#x2F;linux&#x2F;2020&#x2F;04&#x2F;25&#x2F;The-Linux-Command-Line.html&quot;&gt;command line&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Install tmux&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Goal:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn what tmux is&lt;&#x2F;li&gt;
+&lt;li&gt;Get a quick feel of tmux&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;tmux&quot;&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Tmux&quot;&gt;Tmux&lt;&#x2F;a&gt;...?&lt;&#x2F;h3&gt;
+&lt;p&gt;If you are anything like me then you probably have about &lt;code&gt;&amp;gt;= 5&lt;&#x2F;code&gt; terminal windows open on your computer when working, And you have a hard time navigating through those terminal (windows) and keeping track of them.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&quot;&gt;tmux&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; is a terminal multiplexer that helps creates and keep track of termianls from a single screen and does alot more than that, it makes multitasking much easier.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;using-tmux&quot;&gt;Using Tmux:&lt;&#x2F;h3&gt;
+&lt;p&gt;For now, the major focus is to get acquainted with tmux as qucikly as possible before understanding the way it works.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open your terminal and type &lt;code&gt;tmux&lt;&#x2F;code&gt; if available should open a default window like the pics below.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;images&#x2F;tmux0_a.png&quot; alt=&quot;tmux0_a.png&quot; &#x2F;&gt;&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Press  &lt;code&gt;ctrl + b&lt;&#x2F;code&gt; and key at the same time and then release it and then &lt;code&gt;shift + &quot;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;This split the screen into two top and bottom&lt;&#x2F;strong&gt;, the splitted screens are called pane.
+&lt;img src=&quot;&#x2F;assets&#x2F;images&#x2F;tmux0_a.png&quot; alt=&quot;tmux0_a.png&quot; &#x2F;&gt;&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;To navigate between the splitted screen &lt;code&gt;ctrl + b&lt;&#x2F;code&gt; which open the prefix then &lt;code&gt;o&lt;&#x2F;code&gt; key&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;keywords-in-tmux&quot;&gt;keywords in tmux&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;window&lt;&#x2F;li&gt;
+&lt;li&gt;pane&lt;&#x2F;li&gt;
+&lt;li&gt;sessions&lt;&#x2F;li&gt;
+&lt;li&gt;server&lt;&#x2F;li&gt;
+&lt;li&gt;client&lt;&#x2F;li&gt;
+&lt;li&gt;prefix&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&#x2F;&#x2F; will talk more on this on the next article&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&quot;&gt;tmux source code&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

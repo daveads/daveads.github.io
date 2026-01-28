@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - research</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/research/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-06T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/tags/research/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Revolutionary new drug stressless</title>
+        <published>2023-08-06T00:00:00+00:00</published>
+        <updated>2023-08-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/revolutionary-drug-stressless/"/>
+        <id>https://daveads.github.io/writing/revolutionary-drug-stressless/</id>
+        
+        <summary type="html">&lt;h3 id=&quot;introducing-stressless-the-revolutionary-stress-relief-solution&quot;&gt;&lt;strong&gt;Introducing &lt;code&gt;STRESSLESS&lt;&#x2F;code&gt; :: The Revolutionary Stress-Relief Solution&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Computer science research papers</title>
+        <published>2020-01-29T00:00:00+00:00</published>
+        <updated>2020-01-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/computer-science-research-papers/"/>
+        <id>https://daveads.github.io/writing/computer-science-research-papers/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/computer-science-research-papers/">&lt;p&gt;&lt;strong&gt;Easy access for my personal use&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;paperswelove.org&#x2F;&quot;&gt;papers we over&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Respostiory on github &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;papers-we-love&#x2F;papers-we-love&quot;&gt;papers-we-love&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;dl.acm.org&#x2F;search&#x2F;advanced&quot;&gt;ACM Digital Library&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;ieeexplore.ieee.org&#x2F;Xplore&#x2F;home.jsp&quot;&gt;IEEE Xplore Digital Library&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;dblp.uni-trier.de&#x2F;&quot;&gt;dblp computer science bibliography&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;academic.microsoft.com&#x2F;home&quot;&gt;Microsoft Academic&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;link.springer.com&#x2F;search?facet-series=%22558%22&quot;&gt;Springer Lecture Notes in Computer Science (LNCS)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;check-out-this-also&quot;&gt;Check out this also&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;citeseerx.ist.psu.edu&#x2F;index&quot;&gt;citeseerx&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.m.wikipedia.org&#x2F;wiki&#x2F;List_of_important_publications_in_computer_science&quot;&gt;wiki (list of important publications in computer science)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;scholar.google.com&#x2F;&quot;&gt;google-scholar&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.academia.edu&#x2F;&quot;&gt;academia&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.researchgate.net&#x2F;&quot;&gt;reasearchgate #microsoft&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;archive&#x2F;cs&quot;&gt;arXiv.org&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.semanticscholar.org&#x2F;&quot;&gt;semantic scholar&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.acm.org&#x2F;media-center&#x2F;2019&#x2F;march&#x2F;sigcse-top-10-papers&quot;&gt;Ten Computer Science Education Research Papers of the Last&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.aresearchguide.com&#x2F;30-computer-science-research-paper-topics.html&quot;&gt;30 great research pappers&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;mit&quot;&gt;MIT&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;news.mit.edu&#x2F;topic&#x2F;computers&quot;&gt;MIT News&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.csail.mit.edu&#x2F;research&quot;&gt;MIT Computer Science &amp;amp; Artificial Intelligence Lab&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.eecs.mit.edu&#x2F;research&quot;&gt;research mit eecs&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

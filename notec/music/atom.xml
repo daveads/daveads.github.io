@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - Music</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notec/music/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-10-09T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notec/music/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Comprehensive Music Theory Reading List</title>
+        <published>2024-10-09T00:00:00+00:00</published>
+        <updated>2024-10-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/reading-list/"/>
+        <id>https://daveads.github.io/note/reading-list/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/reading-list/">&lt;h1 id=&quot;fundamentals-of-music-theory&quot;&gt;Fundamentals of Music Theory&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;pitch-and-notation&quot;&gt;Pitch and Notation&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Staff, Clefs, and Note Names&lt;&#x2F;li&gt;
+&lt;li&gt;Ledger Lines&lt;&#x2F;li&gt;
+&lt;li&gt;Accidentals (Sharps, Flats, and Naturals)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;rhythm-and-meter&quot;&gt;Rhythm and Meter&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Note Values (Whole, Half, Quarter, etc.)&lt;&#x2F;li&gt;
+&lt;li&gt;Time Signatures&lt;&#x2F;li&gt;
+&lt;li&gt;Simple, Compound, and Complex Meter&lt;&#x2F;li&gt;
+&lt;li&gt;Syncopation and Polyrhythms&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;scales-and-modes&quot;&gt;Scales and Modes&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Major and Minor Scales&lt;&#x2F;li&gt;
+&lt;li&gt;Natural, Harmonic, and Melodic Minor Scales&lt;&#x2F;li&gt;
+&lt;li&gt;Pentatonic and Blues Scales&lt;&#x2F;li&gt;
+&lt;li&gt;Church Modes (Ionian, Dorian, Phrygian, etc.)&lt;&#x2F;li&gt;
+&lt;li&gt;Whole Tone and Chromatic Scales&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;intervals&quot;&gt;Intervals&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Perfect, Major, Minor, Augmented, and Diminished Intervals&lt;&#x2F;li&gt;
+&lt;li&gt;Interval Inversion&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;harmony-and-chord-structures&quot;&gt;Harmony and Chord Structures&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;triads-and-seventh-chords&quot;&gt;Triads and Seventh Chords&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Major, Minor, Diminished, and Augmented Triads&lt;&#x2F;li&gt;
+&lt;li&gt;Major 7th, Dominant 7th, Minor 7th, Half-Diminished 7th, Fully Diminished 7th&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;extended-and-altered-chords&quot;&gt;Extended and Altered Chords&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;9th, 11th, and 13th Chords&lt;&#x2F;li&gt;
+&lt;li&gt;Altered Dominant Chords&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;chord-functions-and-progressions&quot;&gt;Chord Functions and Progressions&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Diatonic Harmony (Tonic, Dominant, Subdominant)&lt;&#x2F;li&gt;
+&lt;li&gt;Common Chord Progressions (e.g., ii-V-I, I-IV-V)&lt;&#x2F;li&gt;
+&lt;li&gt;Secondary Dominants and Leading-Tone Chords&lt;&#x2F;li&gt;
+&lt;li&gt;Modulation and Key Relationships&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;counterpoint&quot;&gt;Counterpoint&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;species-counterpoint&quot;&gt;Species Counterpoint&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;First to Fifth Species&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;fugues-and-canons&quot;&gt;Fugues and Canons&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fugue Structure (Exposition, Development, etc.)&lt;&#x2F;li&gt;
+&lt;li&gt;Canon Techniques&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;form-and-analysis&quot;&gt;Form and Analysis&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;musical-forms&quot;&gt;Musical Forms&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Binary, Ternary, Rondo, and Sonata-Allegro Forms&lt;&#x2F;li&gt;
+&lt;li&gt;Theme and Variations&lt;&#x2F;li&gt;
+&lt;li&gt;Through-Composed Form&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;phrase-structure&quot;&gt;Phrase Structure&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Periods, Phrases, and Cadences&lt;&#x2F;li&gt;
+&lt;li&gt;Antecedent and Consequent Phrases&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;advanced-concepts&quot;&gt;Advanced Concepts&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;modulation-and-key-relationships&quot;&gt;Modulation and Key Relationships&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Common and Uncommon Modulation Techniques&lt;&#x2F;li&gt;
+&lt;li&gt;Pivot Chords&lt;&#x2F;li&gt;
+&lt;li&gt;Enharmonic Modulation&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;circle-of-fifths&quot;&gt;Circle of Fifths&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Key Signatures and Relationships&lt;&#x2F;li&gt;
+&lt;li&gt;Relative and Parallel Keys&lt;&#x2F;li&gt;
+&lt;li&gt;Enharmonic Keys&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;chromaticism-and-non-diatonic-scales&quot;&gt;Chromaticism and Non-Diatonic Scales&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Chromatic Scale&lt;&#x2F;li&gt;
+&lt;li&gt;Whole Tone Scale&lt;&#x2F;li&gt;
+&lt;li&gt;Octatonic (Diminished) Scale&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;jazz-harmony-and-voicings&quot;&gt;Jazz Harmony and Voicings&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Jazz Chord Symbols and Nomenclature&lt;&#x2F;li&gt;
+&lt;li&gt;Voicing Techniques (Drop 2, Quartal Voicing, etc.)&lt;&#x2F;li&gt;
+&lt;li&gt;Improvisation and Scale Choices (Modes, Blues Scale, etc.)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;orchestration-and-instrumentation&quot;&gt;Orchestration and Instrumentation&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Instrument Ranges and Characteristics&lt;&#x2F;li&gt;
+&lt;li&gt;Writing for Different Ensembles
+&lt;ul&gt;
+&lt;li&gt;String Quartet, Wind Quintet, Brass Ensemble&lt;&#x2F;li&gt;
+&lt;li&gt;Full Orchestra, Big Band&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;atonal-and-serial-music&quot;&gt;Atonal and Serial Music&lt;&#x2F;h1&gt;
+&lt;p&gt;Twelve-Tone Technique
+Set Theory&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;contemporary-music-theory&quot;&gt;Contemporary Music Theory&lt;&#x2F;h1&gt;
+&lt;p&gt;Minimalism and Post-Minimalism
+Electronic and Computer Music Theory&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;ethnomusicology&quot;&gt;Ethnomusicology&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;study-of-non-western-music-theories&quot;&gt;Study of Non-Western Music Theories&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Indian Raga and Tala&lt;&#x2F;li&gt;
+&lt;li&gt;African Rhythmic Structures&lt;&#x2F;li&gt;
+&lt;li&gt;Gamelan Scales and Forms&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;suggested-reading-list&quot;&gt;Suggested Reading List&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Tonal Harmony&quot; by Stefan Kostka and Dorothy Payne&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;The Complete Musician&quot; by Steven G. Laitz&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Counterpoint&quot; by Fux (translated by Alfred Mann)&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Harmony&quot; by Walter Piston&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Jazz Theory Book&quot; by Mark Levine&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;The Study of Orchestration&quot; by Samuel Adler&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;A New Approach to Jazz Improvisation&quot; by Jamey Aebersold&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Twentieth-Century Harmony&quot; by Vincent Persichetti&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Materials and Techniques of Twentieth-Century Music&quot; by Stefan Kostka&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;Ethnomusicology: A Contemporary Reader&quot; edited by Jennifer C. Post&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Gospel Music Techniques and Chords</title>
+        <published>2024-08-04T00:00:00+00:00</published>
+        <updated>2024-08-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/gospel-music-techniques-and-chords/"/>
+        <id>https://daveads.github.io/note/gospel-music-techniques-and-chords/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/gospel-music-techniques-and-chords/">&lt;h1 id=&quot;gospel-music-techniques-and-chords&quot;&gt;Gospel Music Techniques and Chords&lt;&#x2F;h1&gt;
+&lt;p&gt;Gospel music is known for its rich harmonies, soulful melodies, and powerful rhythms. Here are some key techniques and chord progressions commonly used in gospel music:
+&lt;br&gt;
+&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;techniques&quot;&gt;Techniques&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Call and Response&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Alternating sections between a leader and chorus or congregation&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Melismas&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Singing multiple notes on a single syllable of text&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Improvisation&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spontaneous melodic and rhythmic variations, especially in vocals&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Rhythmic Syncopation&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Emphasizing off-beats and creating a &quot;groove&quot;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Vamps&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Repeating short musical phrases, often with increasing intensity&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Key Changes&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dramatic modulations, often rising by a semitone or whole tone&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Walking Bass Lines&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Steady, stepwise bass movement, often in quarter notes&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;chords-and-progressions&quot;&gt;Chords and Progressions&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;common-chord-types&quot;&gt;Common Chord Types&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Major triads: 1 - 3 - 5&lt;&#x2F;li&gt;
+&lt;li&gt;Minor triads: 1 - b3 - 5&lt;&#x2F;li&gt;
+&lt;li&gt;Dominant 7th chords: 1 - 3 - 5 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Major 7th chords: 1 - 3 - 5 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;Minor 7th chords: 1 - b3 - 5 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;9th chords (especially dominant 9ths): 1 - 3 - 5 - b7 - 9&lt;&#x2F;li&gt;
+&lt;li&gt;11th chords: 1 - 3 - 5 - b7 - 9 - 11&lt;&#x2F;li&gt;
+&lt;li&gt;13th chords: 1 - 3 - 5 - b7 - 9 - 11 - 13&lt;&#x2F;li&gt;
+&lt;li&gt;Diminished 7th chords: 1 - b3 - b5 - bb7&lt;&#x2F;li&gt;
+&lt;li&gt;Augmented chords: 1 - 3 - #5&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;typical-chord-progressions&quot;&gt;Typical Chord Progressions&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;1-i-iv-i-v&quot;&gt;1. I - IV - I - V&lt;&#x2F;h4&gt;
+&lt;p&gt;Example in C: C - F - C - G&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;2-ii-v-i&quot;&gt;2. II - V - I&lt;&#x2F;h4&gt;
+&lt;p&gt;Example in C: Dm7 - G7 - C&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;3-i-vi-ii-v&quot;&gt;3. I - VI - II - V&lt;&#x2F;h4&gt;
+&lt;p&gt;Example in C: C - Am - Dm - G&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;4-i-iii-iv-i&quot;&gt;4. I - III - IV - I&lt;&#x2F;h4&gt;
+&lt;p&gt;Example in C: C - E - F - C&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;5-i-v-vi-iv&quot;&gt;5. I - V - VI - IV&lt;&#x2F;h4&gt;
+&lt;p&gt;Example in C: C - G - Am - F&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;gospel-chord-techniques&quot;&gt;Gospel Chord Techniques&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Cluster Chords&lt;&#x2F;strong&gt;: Close voicings, often including 2nds
+Example: C(add9) voiced as C-D-E-G&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Passing Chords&lt;&#x2F;strong&gt;: Chromatic movement between main chords
+Example: C - C#dim7 - Dm7 - G7&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Borrowed Chords&lt;&#x2F;strong&gt;: Using chords from parallel minor
+Example: In C major, using Ab (bVI) or Fm (iv)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Extended Dominants&lt;&#x2F;strong&gt;: Using 9ths, 11ths, and 13ths on dominant chords
+Example: G13 in place of G7&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tritone Substitution&lt;&#x2F;strong&gt;: Replacing V7 with bII7
+Example: Db7 instead of G7 in the key of C&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;strong&gt;Practice Tips&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start by mastering basic progressions, then add extensions and alterations&lt;&#x2F;li&gt;
+&lt;li&gt;Practice with recordings of gospel music to internalize the feel&lt;&#x2F;li&gt;
+&lt;li&gt;Work on developing a strong sense of rhythm and groove&lt;&#x2F;li&gt;
+&lt;li&gt;Experiment with different voicings and inversions of chords&lt;&#x2F;li&gt;
+&lt;li&gt;Focus on creating smooth voice leading between chords&lt;&#x2F;li&gt;
+&lt;li&gt;Practice improvising melodies over common gospel progressions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Jazz Chord Symbols and Nomenclature</title>
+        <published>2024-08-04T00:00:00+00:00</published>
+        <updated>2024-08-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/jazz-chord-symbols/"/>
+        <id>https://daveads.github.io/note/jazz-chord-symbols/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/jazz-chord-symbols/">&lt;h1 id=&quot;jazz-chord-symbols-and-nomenclature&quot;&gt;&lt;strong&gt;Jazz Chord Symbols and Nomenclature&lt;&#x2F;strong&gt;&lt;&#x2F;h1&gt;
+&lt;p&gt;Jazz chord symbols provide a concise way to notate complex harmonic structures. Most commonly used jazz chord symbols and nomenclature.&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;basic-chords&quot;&gt;Basic Chords&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Major Chords&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C&lt;&#x2F;strong&gt;: C Major triad (C-E-G)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;CMaj7&lt;&#x2F;strong&gt; or &lt;strong&gt;C△7&lt;&#x2F;strong&gt;: C Major 7th (C-E-G-B)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Minor Chords&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cm&lt;&#x2F;strong&gt; or &lt;strong&gt;Cmin&lt;&#x2F;strong&gt;: C Minor triad (C-Eb-G)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cm7&lt;&#x2F;strong&gt; or &lt;strong&gt;Cmin7&lt;&#x2F;strong&gt;: C Minor 7th (C-Eb-G-Bb)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Dominant Chords&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C7&lt;&#x2F;strong&gt;: C Dominant 7th (C-E-G-Bb)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Half-Diminished Chords&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cm7♭5&lt;&#x2F;strong&gt; or &lt;strong&gt;Cø&lt;&#x2F;strong&gt;: C Half-Diminished 7th (C-Eb-Gb-Bb)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Diminished Chords&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cdim&lt;&#x2F;strong&gt; or &lt;strong&gt;C°&lt;&#x2F;strong&gt;: C Diminished triad (C-Eb-Gb)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cdim7&lt;&#x2F;strong&gt; or &lt;strong&gt;C°7&lt;&#x2F;strong&gt;: C Diminished 7th (C-Eb-Gb-Bbb)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;extended-chords&quot;&gt;Extended Chords&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Extensions and Alterations&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;9th: C9 (dominant), Cmaj9, Cm9&lt;&#x2F;li&gt;
+&lt;li&gt;11th: C11, Cmaj11, Cm11&lt;&#x2F;li&gt;
+&lt;li&gt;13th: C13, Cmaj13, Cm13&lt;&#x2F;li&gt;
+&lt;li&gt;Altered 5th: C(♭5), C(♯5)&lt;&#x2F;li&gt;
+&lt;li&gt;Suspended: Csus4, Csus2&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Tensions and Additions&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added tones: C6, Cadd9&lt;&#x2F;li&gt;
+&lt;li&gt;Altered tensions: C7(♭9), C7(♯9), C7(♯11)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Ninth Chords&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C9&lt;&#x2F;strong&gt;: C Dominant 9th (C-E-G-Bb-D)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;CMaj9&lt;&#x2F;strong&gt; or &lt;strong&gt;C△9&lt;&#x2F;strong&gt;: C Major 9th (C-E-G-B-D)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cm9&lt;&#x2F;strong&gt; or &lt;strong&gt;Cmin9&lt;&#x2F;strong&gt;: C Minor 9th (C-Eb-G-Bb-D)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Eleventh Chords&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C11&lt;&#x2F;strong&gt;: C Dominant 11th (C-E-G-Bb-D-F)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;CMaj11&lt;&#x2F;strong&gt; or &lt;strong&gt;C△11&lt;&#x2F;strong&gt;: C Major 11th (C-E-G-B-D-F)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cm11&lt;&#x2F;strong&gt; or &lt;strong&gt;Cmin11&lt;&#x2F;strong&gt;: C Minor 11th (C-Eb-G-Bb-D-F)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Thirteenth Chords&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C13&lt;&#x2F;strong&gt;: C Dominant 13th (C-E-G-Bb-D-F-A)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;CMaj13&lt;&#x2F;strong&gt; or &lt;strong&gt;C△13&lt;&#x2F;strong&gt;: C Major 13th (C-E-G-B-D-F-A)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cm13&lt;&#x2F;strong&gt; or &lt;strong&gt;Cmin13&lt;&#x2F;strong&gt;: C Minor 13th (C-Eb-G-Bb-D-F-A)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;altered-chords&quot;&gt;Altered Chords&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Altered Dominants&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C7♯5&lt;&#x2F;strong&gt; or &lt;strong&gt;C7+&lt;&#x2F;strong&gt;: C Dominant 7th with raised 5th (C-E-G#-Bb)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;C7♭5&lt;&#x2F;strong&gt;: C Dominant 7th with lowered 5th (C-E-Gb-Bb)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;C7♯9&lt;&#x2F;strong&gt;: C Dominant 7th with raised 9th (C-E-G-Bb-D#)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;C7♭9&lt;&#x2F;strong&gt;: C Dominant 7th with lowered 9th (C-E-G-Bb-Db)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;C7♯11&lt;&#x2F;strong&gt;: C Dominant 7th with raised 11th (C-E-G-Bb-F#)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;C7♭13&lt;&#x2F;strong&gt;: C Dominant 7th with lowered 13th (C-E-G-Bb-Ab)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Fully Altered Chords&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C7alt&lt;&#x2F;strong&gt;: C Dominant 7th with multiple alterations (e.g., C-E-G#-Bb-D#)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;sus-chords&quot;&gt;Sus Chords&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Suspended Chords&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Csus4&lt;&#x2F;strong&gt; or &lt;strong&gt;C4&lt;&#x2F;strong&gt;: C Suspended 4th (C-F-G)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;C7sus4&lt;&#x2F;strong&gt;: C Dominant 7th Suspended 4th (C-F-G-Bb)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Csus2&lt;&#x2F;strong&gt; or &lt;strong&gt;C2&lt;&#x2F;strong&gt;: C Suspended 2nd (C-D-G)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;add-chords&quot;&gt;Add Chords&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Added Tone Chords&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cadd9&lt;&#x2F;strong&gt;: C Major with added 9th (C-E-G-D)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cmadd9&lt;&#x2F;strong&gt;: C Minor with added 9th (C-Eb-G-D)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;slash-chords&quot;&gt;Slash Chords&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Chords with Alternate Bass Notes&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C&#x2F;G&lt;&#x2F;strong&gt;: C Major with G in the bass (G-C-E)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Am7&#x2F;G&lt;&#x2F;strong&gt;: A Minor 7th with G in the bass (G-A-C-E)&lt;&#x2F;li&gt;
+&lt;li&gt;C&#x2F;E (C major with E in the bass)&lt;&#x2F;li&gt;
+&lt;li&gt;Dm7&#x2F;G (D minor 7 with G in the bass)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;quartal-and-quintal-chords&quot;&gt;Quartal and Quintal Chords&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Quartal Voicings&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C4&lt;&#x2F;strong&gt;: Chord built in fourths (e.g., C-F-Bb)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Quintal Voicings&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C5&lt;&#x2F;strong&gt;: Chord built in fifths (e.g., C-G-D)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;poly-chords&quot;&gt;Poly Chords&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Two Chords Played Simultaneously&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C&#x2F;G&lt;&#x2F;strong&gt;: C Major triad over G Major triad (C-E-G &#x2F; G-B-D)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;br&gt;
+&lt;blockquote class=&quot;callout note&quot;&gt;
+    
+    &lt;div class=&quot;icon&quot;&gt;
+        &lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        
+        &lt;p&gt;&lt;strong&gt;Common Shorthand&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+        
+        &lt;ul&gt;
+&lt;li&gt;△ = Major 7th&lt;&#x2F;li&gt;
+&lt;li&gt;ø = Half-diminished ( Cø, Cm7(♭5) )&lt;&#x2F;li&gt;
+&lt;li&gt;° = Fully diminished ( C°, Cdim )&lt;&#x2F;li&gt;
+&lt;li&gt;&quot;+&quot; = Augmented ( Caug or C+ )&lt;&#x2F;li&gt;
+&lt;li&gt;♭ = Flat ( C7(♭5), C7(♭9) )    &#x2F;&#x2F;Lower a Key by a Half Note&lt;&#x2F;li&gt;
+&lt;li&gt;♯ = Sharp ( C7(♯5), C7(♯9) )   &#x2F;&#x2F;Raise a Key by Half Note&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Jazz Chords and Scales</title>
+        <published>2024-07-20T00:00:00+00:00</published>
+        <updated>2024-07-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/jazz-chords-and-scales/"/>
+        <id>https://daveads.github.io/note/jazz-chords-and-scales/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/jazz-chords-and-scales/">&lt;h1 id=&quot;jazz-chords-and-scales&quot;&gt;Jazz Chords and Scales&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;chords&quot;&gt;Chords&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;triads&quot;&gt;Triads&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Major: 1 - 3 - 5&lt;&#x2F;li&gt;
+&lt;li&gt;Minor: 1 - b3 - 5&lt;&#x2F;li&gt;
+&lt;li&gt;Diminished: 1 - b3 - b5&lt;&#x2F;li&gt;
+&lt;li&gt;Augmented: 1 - 3 - #5&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;seventh-chords&quot;&gt;Seventh Chords&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Major 7th (Maj7): 1 - 3 - 5 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;Dominant 7th (7): 1 - 3 - 5 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Minor 7th (m7): 1 - b3 - 5 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Half-Diminished 7th (m7b5): 1 - b3 - b5 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Fully Diminished 7th (dim7): 1 - b3 - b5 - bb7&lt;&#x2F;li&gt;
+&lt;li&gt;Minor Major 7th (mMaj7): 1 - b3 - 5 - 7&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;extended-chords-and-altered-chords&quot;&gt;Extended Chords and Altered Chords&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Minor 6: 1 - b3 - 5 - 6&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;9th chords:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;add9: 1 - 3 - 5 - 9&lt;&#x2F;li&gt;
+&lt;li&gt;9: 1 - 3 - 5 - b7 - 9&lt;&#x2F;li&gt;
+&lt;li&gt;m9: 1 - b3 - 5 - b7 - 9&lt;&#x2F;li&gt;
+&lt;li&gt;Maj9: 1 - 3 - 5 - 7 - 9&lt;&#x2F;li&gt;
+&lt;li&gt;Maj6&#x2F;9: 1 - 3 - 5 - 6 - 9&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;11th chords:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;11: 1 - 3 - 5 - b7 - 9 - 11&lt;&#x2F;li&gt;
+&lt;li&gt;m11: 1 - b3 - 5 - b7 - 9 - 11&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;13th chords:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;13: 1 - 3 - 5 - b7 - 9 - 11 - 13&lt;&#x2F;li&gt;
+&lt;li&gt;m13: 1 - b3 - 5 - b7 - 9 - 11 - 13&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;altered-dominants&quot;&gt;Altered Dominants&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;7th chords:
+&lt;ul&gt;
+&lt;li&gt;Dom9: 1 - 3 - 5 - b7 - 9&lt;&#x2F;li&gt;
+&lt;li&gt;Dom7(#5): 1 - 3 - #5 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Dom7(b5): 1 - 3 - b5 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Dom7(b9): 1 - 3 - 5 - b7 - b9&lt;&#x2F;li&gt;
+&lt;li&gt;Dom7(#9): 1 - 3 - 5 - b7 - #9&lt;&#x2F;li&gt;
+&lt;li&gt;Dom7(#11): 1 - 3 - 5 - b7 - #11&lt;&#x2F;li&gt;
+&lt;li&gt;Dom7(b13): 1 - 3 - 5 - b7 - b13&lt;&#x2F;li&gt;
+&lt;li&gt;7alt: 1 - 3 - b5&#x2F;#5 - b7 - b9&#x2F;#9 - b13&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;sus-chords&quot;&gt;Sus Chords&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Sus4: 1 - 4 - 5&lt;&#x2F;li&gt;
+&lt;li&gt;Sus2: 1 - 2 - 5&lt;&#x2F;li&gt;
+&lt;li&gt;7sus4: 1 - 4 - 5 - b7&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;scales&quot;&gt;Scales&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;basic-scales&quot;&gt;Basic Scales&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Major scale: 1 - 2 - 3 - 4 - 5 - 6 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;Natural minor scale: 1 - 2 - b3 - 4 - 5 - b6 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Harmonic minor scale: 1 - 2 - b3 - 4 - 5 - b6 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;Melodic minor scale (jazz minor): 1 - 2 - b3 - 4 - 5 - 6 - 7&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;modes-of-the-major-scale&quot;&gt;Modes of the Major Scale&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dorian: 1 - 2 - b3 - 4 - 5 - 6 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Phrygian: 1 - b2 - b3 - 4 - 5 - b6 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Lydian: 1 - 2 - 3 - #4 - 5 - 6 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;Mixolydian: 1 - 2 - 3 - 4 - 5 - 6 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Aeolian: 1 - 2 - b3 - 4 - 5 - b6 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Locrian: 1 - b2 - b3 - 4 - b5 - b6 - b7&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;modes-of-the-melodic-minor&quot;&gt;Modes of the Melodic Minor&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dorian b2: 1 - b2 - b3 - 4 - 5 - 6 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Lydian Augmented: 1 - 2 - 3 - #4 - #5 - 6 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;Lydian Dominant: 1 - 2 - 3 - #4 - 5 - 6 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Mixolydian b6: 1 - 2 - 3 - 4 - 5 - b6 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Locrian #2: 1 - 2 - b3 - 4 - b5 - b6 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Altered Scale (Super Locrian): 1 - b2 - b3 - b4 - b5 - b6 - b7&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;pentatonic-scales&quot;&gt;Pentatonic Scales&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Major Pentatonic: 1 - 2 - 3 - 5 - 6&lt;&#x2F;li&gt;
+&lt;li&gt;Minor Pentatonic: 1 - b3 - 4 - 5 - b7&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;blues-scales&quot;&gt;Blues Scales&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Major Blues Scale: 1 - 2 - b3 - 3 - 5 - 6&lt;&#x2F;li&gt;
+&lt;li&gt;Minor Blues Scale: 1 - b3 - 4 - b5 - 5 - b7&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;symmetric-scales&quot;&gt;Symmetric Scales&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Whole Tone Scale: 1 - 2 - 3 - #4 - #5 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Diminished Scale (Half-Whole): 1 - b2 - b3 - 3 - #4 - 5 - 6 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;Whole-Half Diminished Scale: 1 - 2 - b3 - 4 - b5 - b6 - 6 - 7&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;bebop-scales&quot;&gt;Bebop Scales&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Bebop Dominant Scale: 1 - 2 - 3 - 4 - 5 - 6 - b7 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;Bebop Major Scale: 1 - 2 - 3 - 4 - 5 - #5 - 6 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;Bebop Dorian Scale: 1 - 2 - b3 - 3 - 4 - 5 - 6 - b7&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;miscellaneous-scales&quot;&gt;Miscellaneous Scales&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Chromatic Scale: 1 - b2 - 2 - b3 - 3 - 4 - b5 - 5 - b6 - 6 - b7 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;Augmented Scale: 1 - b3 - 3 - 5 - #5 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;Lydian b7 Scale (Overtone Scale): 1 - 2 - 3 - #4 - 5 - 6 - b7&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;practice-tips&quot;&gt;Practice Tips&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Start with major and minor triads and seventh chords in all keys.&lt;&#x2F;li&gt;
+&lt;li&gt;Learn scales in conjunction with their corresponding chords.&lt;&#x2F;li&gt;
+&lt;li&gt;Practice chord-scale relationships (e.g., Dorian mode over m7 chords).&lt;&#x2F;li&gt;
+&lt;li&gt;Work on voice leading between chords.&lt;&#x2F;li&gt;
+&lt;li&gt;Use these chords and scales in the context of standard jazz progressions.&lt;&#x2F;li&gt;
+&lt;li&gt;Incorporate these elements into your improvisation gradually.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;jazz-books&quot;&gt;Jazz Books&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The Jazz Theory Book by Mark Levine&lt;&#x2F;li&gt;
+&lt;li&gt;Jazz Piano Book by Mark Levine&lt;&#x2F;li&gt;
+&lt;li&gt;The Jazz Harmony Book by David Berkman&lt;&#x2F;li&gt;
+&lt;li&gt;Jazzology: The Encyclopedia of Jazz Theory for All Musicians by Robert Rawlins and Nor Eddine Bahha&lt;&#x2F;li&gt;
+&lt;li&gt;The Jazz Guitarist&#x27;s Handbook by Andrew Green&lt;&#x2F;li&gt;
+&lt;li&gt;Jazz Scales and Chords by Jeff Brent and Schell Barkley&lt;&#x2F;li&gt;
+&lt;li&gt;Chord Chemistry by Ted Greene&lt;&#x2F;li&gt;
+&lt;li&gt;Jazz Chord Hanon by Peter Deneff&lt;&#x2F;li&gt;
+&lt;li&gt;Scales and Modes in the Beginning by Ron Middlebrook&lt;&#x2F;li&gt;
+&lt;li&gt;The Jazz Piano Book by Mark Harrison&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Jazz Piano Fingering Exercises</title>
+        <published>2024-07-15T00:00:00+00:00</published>
+        <updated>2024-07-15T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/jazz-piano-fingering-exercises/"/>
+        <id>https://daveads.github.io/note/jazz-piano-fingering-exercises/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/jazz-piano-fingering-exercises/">&lt;h3 id=&quot;jazz-fingering-exercises&quot;&gt;Jazz Fingering Exercises&lt;&#x2F;h3&gt;
+&lt;p&gt;Exercises to improve your jazz piano technique:
+&#x2F;&#x2F; Developing finger dexterity and coordination&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;scale-patterns&quot;&gt;Scale Patterns&lt;&#x2F;h3&gt;
+&lt;p&gt;Practice major and minor scales using various fingering patterns:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;1-2-3-1-2-3-4-5 (ascending), 5-4-3-2-1-3-2-1 (descending)&lt;&#x2F;li&gt;
+&lt;li&gt;1-2-3-4-1-2-3-4 (ascending), 4-3-2-1-4-3-2-1 (descending)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Example in C major:
+C-D-E-C-D-E-F-G (ascending)
+G-F-E-D-C-E-D-C (descending)&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;chord-inversions&quot;&gt;Chord Inversions&lt;&#x2F;h3&gt;
+&lt;p&gt;Practice all inversions of seventh chords in all keys:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cmaj7: C-E-G-B, E-G-B-C, G-B-C-E, B-C-E-G&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;hanon-exercises-with-swing-feel&quot;&gt;Hanon Exercises with Swing Feel&lt;&#x2F;h3&gt;
+&lt;p&gt;Adapt classical Hanon exercises to jazz by playing them with a swing feel:&lt;&#x2F;p&gt;
+&lt;p&gt;1-2-3-4-5-4-3-2 | 2-3-4-5-6-5-4-3 | 3-4-5-6-7-6-5-4 | etc.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;chromatic-exercise&quot;&gt;Chromatic Exercise&lt;&#x2F;h3&gt;
+&lt;p&gt;Practice this chromatic pattern in all keys:&lt;&#x2F;p&gt;
+&lt;p&gt;1-3-2-4-3-5-4-6-5-7-6-8&lt;&#x2F;p&gt;
+&lt;p&gt;Example starting on C:
+C-D-C#-E-D-F-E-G-F-A-G-B&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rootless-voicing-exercise&quot;&gt;Rootless Voicing Exercise&lt;&#x2F;h3&gt;
+&lt;p&gt;Practice transitioning between rootless voicings of ii-V-I progressions:&lt;&#x2F;p&gt;
+&lt;p&gt;Dm7 (F-A-C-E) -&amp;gt; G7 (F-A-B-D) -&amp;gt; Cmaj7 (E-G-B-D)&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;triad-pairs&quot;&gt;Triad Pairs&lt;&#x2F;h3&gt;
+&lt;p&gt;Practice playing triad pairs to develop coordination and harmonic thinking:&lt;&#x2F;p&gt;
+&lt;p&gt;C and D triads:
+C-E-G-D-F#-A-C-E-G-D-F#-A (ascending)
+A-F#-D-G-E-C-A-F#-D-G-E-C (descending)&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;fourth-voicings&quot;&gt;Fourth Voicings&lt;&#x2F;h3&gt;
+&lt;p&gt;Practice voicings in fourths to improve stretch and flexibility:&lt;&#x2F;p&gt;
+&lt;p&gt;C-F-Bb-Eb | D-G-C-F | E-A-D-G | etc.&lt;&#x2F;p&gt;
+&lt;blockquote class=&quot;callout tip&quot;&gt;
+    
+    &lt;div class=&quot;icon&quot;&gt;
+        &lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M9.97308 18H11V13H13V18H14.0269C14.1589 16.7984 14.7721 15.8065 15.7676 14.7226C15.8797 14.6006 16.5988 13.8564 16.6841 13.7501C17.5318 12.6931 18 11.385 18 10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10C6 11.3843 6.46774 12.6917 7.31462 13.7484C7.40004 13.855 8.12081 14.6012 8.23154 14.7218C9.22766 15.8064 9.84103 16.7984 9.97308 18ZM10 20V21H14V20H10ZM5.75395 14.9992C4.65645 13.6297 4 11.8915 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 11.8925 19.3428 13.6315 18.2443 15.0014C17.624 15.7748 16 17 16 18.5V21C16 22.1046 15.1046 23 14 23H10C8.89543 23 8 22.1046 8 21V18.5C8 17 6.37458 15.7736 5.75395 14.9992Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        
+        &lt;p&gt;&lt;strong&gt;Practice tips&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+        
+        &lt;ul&gt;
+&lt;li&gt;practice these exercises slowly at first,&lt;&#x2F;li&gt;
+&lt;li&gt;focus on accuracy and evenness.&lt;&#x2F;li&gt;
+&lt;li&gt;Gradually increase the tempo as you become more comfortable. &lt;br&gt;
+&#x2F;&#x2F; Always use a metronome to develop a solid sense of time.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Piano Chord Voicing Techniques in Jazz</title>
+        <published>2024-07-15T00:00:00+00:00</published>
+        <updated>2024-07-15T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/piano-chord-voicing-techniques-in-jazz/"/>
+        <id>https://daveads.github.io/note/piano-chord-voicing-techniques-in-jazz/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/piano-chord-voicing-techniques-in-jazz/">&lt;p&gt;Voicing chords on the piano involves creatively arranging the notes of a chord to achieve different textures and harmonies. Common methods of voicing chords:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;root-position-and-inversions&quot;&gt;Root Position and Inversions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Root Position:&lt;&#x2F;strong&gt; The root of the chord is the lowest note.  1 - 3 - 5 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;1st Inversion:&lt;&#x2F;strong&gt; The third of the chord is the lowest note. 3 - 5 - 7 - 1&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;2nd Inversion:&lt;&#x2F;strong&gt; The fifth of the chord is the lowest note. 5 - 7 - 1 - 3&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;3rd Inversion (for 7th chords):&lt;&#x2F;strong&gt; The seventh of the chord is the lowest note. 7 - 1 - 3 - 5&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;closed-and-open-voicings&quot;&gt;Closed and Open Voicings&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Closed Voicing:&lt;&#x2F;strong&gt; All chord tones are within an octave. 1 - 3 - 5 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Open Voicing:&lt;&#x2F;strong&gt; Chord tones are spread out, often spanning more than an octave. 1 - 5 - 7 - 3&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;drop-voicings&quot;&gt;Drop Voicings&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Drop 2 Voicing:&lt;&#x2F;strong&gt; The second highest note of a closed voicing is dropped an octave.     5 - 1 - 3 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Drop 3 Voicing:&lt;&#x2F;strong&gt; The third highest note of a closed voicing is dropped an octave.      3 - 7 - 1 - 5&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Drop 2 and 4 Voicing:&lt;&#x2F;strong&gt; Both the second and fourth highest notes are dropped an octave. 3 - 5 - 7 - 1&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;quartal-and-quintal-voicings&quot;&gt;Quartal and Quintal Voicings&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Quartal Voicing:&lt;&#x2F;strong&gt; Chords built in fourths (e.g., C-F-Bb).  1 - 4 - b7 (or 1 - 4 - 7)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Quintal Voicing:&lt;&#x2F;strong&gt; Chords built in fifths (e.g., C-G-D).    1 - 5 - 9&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;cluster-voicings&quot;&gt;Cluster Voicings&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tone Clusters:&lt;&#x2F;strong&gt; Chords with notes that are close together, often including seconds and minor seconds.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;shell-voicings&quot;&gt;Shell Voicings&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Left Hand Shells:&lt;&#x2F;strong&gt; Often used in jazz, consisting of the root, third, and seventh (or sometimes the root and seventh, or root and third).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;upper-structure-triads&quot;&gt;Upper Structure Triads&lt;&#x2F;h3&gt;
+&lt;p&gt;Combining a triad (often major or minor) over a different bass note to create complex chords (e.g., an E major triad over a C bass note for a Cmaj#11 sound).  1 - 3 - #11 - 7&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;so-what-voicing&quot;&gt;So What Voicing&lt;&#x2F;h3&gt;
+&lt;p&gt;Based on the voicing used in the Miles Davis tune &quot;So What,&quot; consisting of a stack of fourths with a major third on top (e.g., D-G-C-F-A).  1 - 4 - 7 - 3 - 6&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rootless-voicings&quot;&gt;Rootless Voicings&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rootless Left Hand Voicings:&lt;&#x2F;strong&gt; Often used in jazz, where the left hand plays the third and seventh (and possibly other tensions) while the root is implied or played by a bass player.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;guide-tone-voicings&quot;&gt;Guide Tone Voicings&lt;&#x2F;h3&gt;
+&lt;p&gt;Chords reduced to their essential tones, often the third and seventh, which guide the harmony.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;practical-examples&quot;&gt;Practical Examples&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cmaj7 (root position):&lt;&#x2F;strong&gt; C-E-G-B    1 - 3 - 5 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cmaj7 (1st inversion):&lt;&#x2F;strong&gt; E-G-B-C    3 - 5 - 7 - 1&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cmaj7 (2nd inversion):&lt;&#x2F;strong&gt; G-B-C-E    5 - 7 - 1 - 3&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cmaj7 (3rd inversion):&lt;&#x2F;strong&gt; B-C-E-G    7 - 1 - 3 - 5&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cmaj7 (closed voicing):&lt;&#x2F;strong&gt; C-E-G-B   1 - 3 - 5 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cmaj7 (open voicing):&lt;&#x2F;strong&gt; C-G-B-E     1 - 5 - 7 - 3&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cmaj7 (drop 2 voicing):&lt;&#x2F;strong&gt; G-C-E-B   5 - 1 - 3 - 7&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cmaj7 (shell voicing):&lt;&#x2F;strong&gt; C-E-B      1 - 3 - 7&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;jazz-specific-voicings&quot;&gt;Jazz-Specific Voicings&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C7 (rootless left hand voicing):&lt;&#x2F;strong&gt; E-Bb (3rd and 7th)   3 - b7&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;C7 (upper structure triad):&lt;&#x2F;strong&gt; E-G#-C# (augmented triad over C)  3 - #5 - #1&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote class=&quot;callout tip&quot;&gt;
+    
+    &lt;div class=&quot;icon&quot;&gt;
+        &lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M9.97308 18H11V13H13V18H14.0269C14.1589 16.7984 14.7721 15.8065 15.7676 14.7226C15.8797 14.6006 16.5988 13.8564 16.6841 13.7501C17.5318 12.6931 18 11.385 18 10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10C6 11.3843 6.46774 12.6917 7.31462 13.7484C7.40004 13.855 8.12081 14.6012 8.23154 14.7218C9.22766 15.8064 9.84103 16.7984 9.97308 18ZM10 20V21H14V20H10ZM5.75395 14.9992C4.65645 13.6297 4 11.8915 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 11.8925 19.3428 13.6315 18.2443 15.0014C17.624 15.7748 16 17 16 18.5V21C16 22.1046 15.1046 23 14 23H10C8.89543 23 8 22.1046 8 21V18.5C8 17 6.37458 15.7736 5.75395 14.9992Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        
+        &lt;p&gt;&lt;strong&gt;Tips for Jazz Voicings&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Use Tensions:&lt;&#x2F;strong&gt; Add 9ths, 11ths, and 13ths to enrich the harmony.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Voice Leading:&lt;&#x2F;strong&gt; Smooth transitions between chords by moving the smallest distance possible.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Avoid Doubling:&lt;&#x2F;strong&gt; Especially the root and fifth, unless stylistically appropriate.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Chord formation</title>
+        <published>2022-10-16T00:00:00+00:00</published>
+        <updated>2022-10-16T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/chords-formation/"/>
+        <id>https://daveads.github.io/note/chords-formation/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/chords-formation/">&lt;h3 id=&quot;piano-chord-formation&quot;&gt;Piano Chord formation&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;b :- half note down&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;# :- half note up&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Maj ::
+&lt;strong&gt;1 - 3 - 5&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;6th or Maj6th ::
+&lt;strong&gt;1 - 3 - 5- 6&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;M7 or Maj7th ::
+&lt;strong&gt;1 - 3 - 5 - 7&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;M7#11 ::
+&lt;strong&gt;1- 3 - 5 - 7 - #11&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;add9 ::
+&lt;strong&gt;1 - 3 - 5 - 9&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;M7&lt;sup&gt;9&lt;&#x2F;sup&gt; ::
+&lt;strong&gt;1 - 3 - 7 - 9&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;6^9^ ::
+&lt;strong&gt;1 - 3 - 5 - 6 - 9&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;aug ::
+&lt;strong&gt;1 - 3 - #5&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;min ::
+&lt;strong&gt;1 - b3 - 5&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;m6 minor6 ::
+&lt;strong&gt;1 - b3 - 5 - 6&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;m7  ::
+&lt;strong&gt;1 - b3 - 5 - b7&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;m7&lt;sup&gt;b5&lt;&#x2F;sup&gt; half diminish ::
+&lt;strong&gt;1 - b3 - 5 - b7&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;madd9 ::
+&lt;strong&gt;1 - b3 - 5 - 9&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;m7&lt;sup&gt;9&lt;&#x2F;sup&gt; ::
+&lt;strong&gt;1 - b3 - 5 - b7 - 9&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;m7&lt;sup&gt;11&lt;&#x2F;sup&gt; ::
+&lt;strong&gt;1 - b3 - 5 - b7 - 11&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;mM7 minorMaj7th ::
+&lt;strong&gt;1 - b3 - 5 - 7&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;mM7&lt;sup&gt;9&lt;&#x2F;sup&gt; ::
+&lt;strong&gt;1 - b3 - 5 - 7 - 9&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;dim ::
+&lt;strong&gt;1 - b3 - b5&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;dim7 ::
+&lt;strong&gt;1 - b3 - b5 - 6&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;7 or dominat chord
+&lt;strong&gt;1 - 3 - 5 - b7&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;7sus4 ::
+&lt;strong&gt;1 - 3 - 4 - 5 - b7&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;7&lt;sup&gt;b5&lt;&#x2F;sup&gt; ::
+&lt;strong&gt;1 - 3 - b5 - b7&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;7&lt;sup&gt;9&lt;&#x2F;sup&gt; ::
+&lt;strong&gt;1 - 3 - 5 - b7 - 9&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;7#11 ::
+&lt;strong&gt;1 - 3 - 5 - b7 - #11&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;7&lt;sup&gt;13&lt;&#x2F;sup&gt; ::
+&lt;strong&gt;1 - 3 - 5 - b7 - 13&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>bass guitar strings</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/bass-string/"/>
+        <id>https://daveads.github.io/note/bass-string/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/bass-string/">&lt;p&gt;last string is G going up to D&lt;&#x2F;p&gt;
+&lt;p&gt;circle of 5th &amp;amp; 4&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

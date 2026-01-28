@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - sqlite</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notet/sqlite/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-06-11T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notet/sqlite/atom.xml</id>
+    <entry xml:lang="en">
+        <title>sqlite 3</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/sqlite/"/>
+        <id>https://daveads.github.io/note/sqlite/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/sqlite/">&lt;h3 id=&quot;followed-tutorials-from-https-www-sqlitetutorial-net-sqlite-limit&quot;&gt;FOLLOWED TUTORIALS FROM https:&#x2F;&#x2F;www.sqlitetutorial.net&#x2F;sqlite-limit&#x2F;&lt;&#x2F;h3&gt;
+&lt;p&gt;open database from terminal&lt;&#x2F;p&gt;
+&lt;p&gt;.open name.db&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;.mode &quot;to change way at which datbase is display on the terminal&quot;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;.tables&lt;&#x2F;code&gt; &#x2F;&#x2F; shows tables available in the terminal&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT&lt;&#x2F;code&gt; &#x2F;&#x2F; This is use for query data from a one or more table&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;select&quot;&gt;&lt;strong&gt;SELECT&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;code&gt;SELECT column, cloumn, e.t.c FROM tracks == #table;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;selecting column in ascending order&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT name, milliseconds, albumid FROM tracks ORDER BY albumid ASC;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;selecting column and then filtering (albumid like the above) and milliseconds in descending order&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT name, milliseconds, albumid FROM tracks ORDER BY albumid ASC, milliseconds DESC;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; ORDER BY with column position instead of column name&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT name, albumid FROM tracks ORDER BY 3 ASC, 2 DESC;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; ORDER BY clause to sort tracks by composers&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT TrackId, Name, Composer FROM tracks ORDER BY Composer;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;select-distinct-examples&quot;&gt;SELECT DISTINCT examples&lt;&#x2F;h2&gt;
+&lt;p&gt;&#x2F;*
+Distincy clasue allows you to remove the duplicate rows in the result set.
+*&#x2F;&lt;&#x2F;p&gt;
+&lt;p&gt;E.g.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT city FROM customers ORDER BY city;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;result of city would contain duplicates
+e.g. city = london, city = london&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;remove duplicates by using distinct&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT DISTINCT city FROM customers ORDER BY city;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;applying DISTINCT on multiple column&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT DISTINCT city, country FROM customers ORDER BY county;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;where-clause&quot;&gt;WHERE CLAUSE&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;SELECT column_list FROM table WHERE search_condition;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; WHERE caluse is use to SELECT statement to filter rows returned by query.&lt;&#x2F;p&gt;
+&lt;p&gt;E.g.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; column_1 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 100&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; column_2 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;IN&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; column_3 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;LIKE&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;An%&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; column_4 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;BETWEEN&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 10&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; AND&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 20&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&#x2F;&#x2F; can be use in the UPDATE and DELETE STATEMENT&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; comparison operators can also be used&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;= , &amp;lt; , &amp;gt; , &amp;lt;= e.t.c.&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;logical operators&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; no boolean data type in sqlite so True = 1 and false = 0&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Operator | Meaning&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;All | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; all expressions are &lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;AND&lt;&#x2F;span&gt;&lt;span&gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if both&lt;&#x2F;span&gt;&lt;span&gt; expressions are &lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;and&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; one of the expressions &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;is&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;ANY |&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; any one of a &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;set&lt;&#x2F;span&gt;&lt;span&gt; of comparisons &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;is&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;BETWEEN&lt;&#x2F;span&gt;&lt;span&gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; a &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;value is within&lt;&#x2F;span&gt;&lt;span&gt; a &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;EXISTS&lt;&#x2F;span&gt;&lt;span&gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; a sbuquery contains any &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;rows&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;IN&lt;&#x2F;span&gt;&lt;span&gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; a vlaues &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;is in&lt;&#x2F;span&gt;&lt;span&gt; a list of &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;values&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;LIKE&lt;&#x2F;span&gt;&lt;span&gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; a &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;value&lt;&#x2F;span&gt;&lt;span&gt; matches a pattern.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;NOT&lt;&#x2F;span&gt;&lt;span&gt;  | reverses the &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;value&lt;&#x2F;span&gt;&lt;span&gt; of other operators such &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;as NOT EXISTS&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;NOT IN&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;NOT BETWEEN&lt;&#x2F;span&gt;&lt;span&gt; e.t.c&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;OR&lt;&#x2F;span&gt;&lt;span&gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span&gt; ture &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; either expression &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;is&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;sqlite WHERE clause examples&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;SELECT name&lt;&#x2F;span&gt;&lt;span&gt;, milliseconds, bytes, albumid &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; tracks &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; ALBUMID &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;SELECT name&lt;&#x2F;span&gt;&lt;span&gt;, milliseonds, albumid &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; tracks &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; albumid &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; AND&lt;&#x2F;span&gt;&lt;span&gt; milliseconds &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 250000&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;SELECT name&lt;&#x2F;span&gt;&lt;span&gt;,albumid, composer &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; tracks &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; composer &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;LIKE&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;%Smith%&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; ORDER BY&lt;&#x2F;span&gt;&lt;span&gt; albumid;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;SELECT name&lt;&#x2F;span&gt;&lt;span&gt;, albumid, mediatypeid &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; tracks &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; mediatypid &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;IN&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt; ,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;sqlite-limit-clause&quot;&gt;sqlite limit clause&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;SELECT column_list FROM table LIMIT row_count;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; limit clause is use to constrain the number of rows returned by the query...&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT trackid, name FROM tracks LIMIT 10;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;To get the first 10 rows starting from the 10th row&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;use&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;SELECT&lt;&#x2F;span&gt;&lt;span&gt; column_list &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;FROM table LIMIT&lt;&#x2F;span&gt;&lt;span&gt; offset, row_count&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;SELECT&lt;&#x2F;span&gt;&lt;span&gt; trackid, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; tracks &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;LIMIT&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 10&lt;&#x2F;span&gt;&lt;span&gt; OFFSET &lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;insert-in-sqlite&quot;&gt;INSERT IN SQLITE&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;INSERT INTO table&lt;&#x2F;span&gt;&lt;span&gt; (column1, column2) &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;VALUES&lt;&#x2F;span&gt;&lt;span&gt; (value1, value2);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;e.g.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;INSERT INTO&lt;&#x2F;span&gt;&lt;span&gt; playlists (playlistid, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;VALUES&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;24&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;brime buk&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;inserting multiple rows into a table&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;INSERT INTO&lt;&#x2F;span&gt;&lt;span&gt; table1 (column1, column2,....) &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;VALUES&lt;&#x2F;span&gt;&lt;span&gt; (value1 , value2,), (value1, value2 );&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;e.g.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;INSERT INTO&lt;&#x2F;span&gt;&lt;span&gt; playlists (playlistid, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;VALUES&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;30&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;faith&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;), (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;34&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;favour&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;), (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;36&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;gift&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;update-statement&quot;&gt;UPDATE STATEMENT&lt;&#x2F;h3&gt;
+&lt;p&gt;&#x2F;&#x2F; to update an existing data in a table, you use sqlite UPDATE
+statment&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;UPDATE table SET&lt;&#x2F;span&gt;&lt;span&gt; column_1 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; new_value_1, column_2 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; new_value_2 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; search_condition;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;##&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; DELETE statement&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;DELETE FROM table WHERE&lt;&#x2F;span&gt;&lt;span&gt; search_condition&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;e.g.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;DELETE FROM&lt;&#x2F;span&gt;&lt;span&gt; playlists &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; playlistid &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 36&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</content>
+        
+    </entry>
+</feed>

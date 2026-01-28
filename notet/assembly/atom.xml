@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - assembly</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notet/assembly/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-02-12T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notet/assembly/atom.xml</id>
+    <entry xml:lang="en">
+        <title>assembly language</title>
+        <published>2023-02-12T00:00:00+00:00</published>
+        <updated>2023-02-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/asm-stuffs/"/>
+        <id>https://daveads.github.io/note/asm-stuffs/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/asm-stuffs/">&lt;p&gt;The register is built into the cpu, it is used to store temporary data that the cpu needs to access quickly in oder to perform its operation.&lt;&#x2F;p&gt;
+&lt;p&gt;Types of cpu registers&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;General-purpose registers :
+These registers can be used to store any type of data, including operands for arithmetic and logic operations, pointers to memory locations, and intermediate results of calculations.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Program counter register:
+This register holds the address of the next instruction to be executed by the CPU.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Stack pointer register:
+This register holds the address of the top of the stack, which is a region of memory used to store function call frames and temporary data.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Status registers:
+*These registers store the state of the CPU, including information about arithmetic operations, interrupt handling, and other control signals.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;**&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;registers&quot;&gt;registers&lt;&#x2F;h2&gt;
+&lt;p&gt;rax&quot; - a large general-purpose register used for storing values and results of arithmetic operations.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;rbx&quot; - another large general-purpose register.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;rcx&quot; - a general-purpose register used for counting and loop operations.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;rdx&quot; - a general-purpose register used for storing values and results of arithmetic operations.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;rsi&quot; - a general-purpose register used as a source index register in string and array operations.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;rdi&quot; - a general-purpose register used as a destination index register in string and array operations.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;r8&quot; - &quot;r15&quot; - additional general-purpose registers available in the x86-64 architecture.&lt;&#x2F;p&gt;
+&lt;p&gt;General-purpose registers :: rax, rbx, rcx, rdx, rbp, rsp, rsi, rdi, r8, r9, r10, r11, r12, r13, r14, r15&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;operation&quot;&gt;Operation&lt;&#x2F;h1&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;ADD- integer add&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;SUB- subtract&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;MUL- unsigned multiply&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;IMUL- signed multiply&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;DIV- unsigned divide&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;IDIV- signed divide&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;INC- increment&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;DEC- decrement&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;NEG- negate&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;CONTROL FLOW
+JE - jump if equal&lt;&#x2F;p&gt;
+&lt;p&gt;JZ - jump if zero&lt;&#x2F;p&gt;
+&lt;p&gt;JNE - jump if not equal&lt;&#x2F;p&gt;
+&lt;p&gt;JNZ - jump if not zero&lt;&#x2F;p&gt;
+&lt;p&gt;JG - jump if the first operand is greater than second&lt;&#x2F;p&gt;
+&lt;p&gt;JGE - jump if the first operand is greater or equal to second&lt;&#x2F;p&gt;
+&lt;p&gt;JA - the same that JG, but performs an unsigned comparison&lt;&#x2F;p&gt;
+&lt;p&gt;JAE - the same that JGE, but performs an unsigned comparison&lt;&#x2F;p&gt;
+&lt;p&gt;DATA TYPES
+byte is eight bits
+word is two bytes
+doubleword is four bytes
+quadword is eight bytes
+double quadword is sixteen bytes (128 bits).&lt;&#x2F;p&gt;
+&lt;p&gt;.DATA
++-----------+-------------------+-------------------+
+| Directive |      Purpose      |   Storage Space   |
++-----------+-------------------+-------------------+
+| DB        | Define Byte       | allocates 1 byte  |
+| DW        | Define Word       | allocates 2 bytes |
+| DD        | Define Doubleword | allocates 4 bytes |
+| DQ        | Define Quadword   | allocates 8 bytes |
+| DT        | Define Ten Bytes  | allocates 10 byte |
++-----------+-------------------+-------------------+&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; opertation&lt;&#x2F;p&gt;
+&lt;p&gt;mov ebx, 123  ; ebx = 123
+mov eax, ebx  ; eax = ebx
+add ebx, ecx  ; ebx += ecx
+sub ebx, edx  ; ebx -= edx
+mul ebx       ; eax ***= ebx
+div edx       ; eax &#x2F;= edx&lt;&#x2F;p&gt;
+&lt;p&gt;; eax handles operations&lt;&#x2F;p&gt;
+&lt;p&gt;data - section is used for declaring initialized data or constants
+bss - section is used for declaring non initialized variables
+text - section is used for code&lt;&#x2F;p&gt;
+&lt;p&gt;RESB, RESW, RESD, RESQ, REST, RESO, RESY and RESZ - are used for declaring non initialized variables
+INCBIN - includes External Binary Files
+EQU - defines constant.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;asm&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;one &lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;equ&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>assembly language</title>
+        <published>2022-06-19T00:00:00+00:00</published>
+        <updated>2022-06-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/assemblylang/"/>
+        <id>https://daveads.github.io/note/assemblylang/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/assemblylang/">&lt;p&gt;Assembly program :&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;.data section :
+This section is for declaring initialized data. { filenames and buffer sizes }
+DB, DW, DD, DQ and DT instructions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;asm&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;section .data&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		message&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; db&lt;&#x2F;span&gt;&lt;span&gt; &amp;quot;hello world&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		msglength&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; equ&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 12&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		buffersize&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; dw&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1024&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;.bss section :
+This is where variables are been decleared.
+RESB, RESW, RESD, RESQ, REST instrcutions are use to reserve uninitialized space in memory for your variables.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;asm&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;section .bss&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		filename&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; resb&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 255&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt; ; reserve 255 bytes&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		number&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; resb&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;     ; Reserve 1 byte&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		bignum&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; resw&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;     ; Reserve 1 word (1 word = 2 bytes)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		realarray&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; resq&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 10&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt; ; Reserve an array of 10 reals&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;.text section :
+This is where the actual assembly code is written.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  this section must begin with the declaration global_start,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  &#x2F;&#x2F; this tells the kernel where the program execution begins. == &amp;quot;main&amp;quot; @other_languages&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

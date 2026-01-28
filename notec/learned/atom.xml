@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - Learned</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notec/learned/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-10-10T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notec/learned/atom.xml</id>
+    <entry xml:lang="en">
+        <title>UV Python Manager</title>
+        <published>2025-10-10T00:00:00+00:00</published>
+        <updated>2025-10-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/uv-python-manager/"/>
+        <id>https://daveads.github.io/note/uv-python-manager/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/uv-python-manager/">&lt;h2 id=&quot;setting-python-versions&quot;&gt;Setting Python Versions&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;create-venv-with-specific-python-version&quot;&gt;Create venv with specific Python version&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; venv .venv --python&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 3.11.6&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;pin-python-version-for-project&quot;&gt;Pin Python version for project&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; python pin&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 3.12&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;set-global-default-python-version&quot;&gt;Set global default Python version&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; python pin --global&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 3.12&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;run-script-with-specific-version-one-off&quot;&gt;Run script with specific version (one-off)&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; run --python&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 3.12&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -- python my_script.py&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;br&gt;
+&lt;h2 id=&quot;adding-uv-to-an-existing-projects&quot;&gt;Adding UV To An Existing Projects&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;initialize-uv-in-existing-project&quot;&gt;Initialize UV in existing project&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; init&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;create-and-activate-virtual-environment&quot;&gt;Create and activate virtual environment&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; venv .venv&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;source&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; .venv&#x2F;bin&#x2F;activate&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;  # Linux&#x2F;macOS&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# .venv\Scripts\activate   # Windows&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;install-dependencies-from-requirements-txt&quot;&gt;Install dependencies from requirements.txt&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; add -r requirements.txt&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;sync-dependencies-pyproject-toml&quot;&gt;Sync dependencies (pyproject.toml)&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; sync&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;package-management&quot;&gt;Package Management&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;list-installed-packages&quot;&gt;List installed packages&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; pip list&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;add-new-package&quot;&gt;Add new package&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; add package-name&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;add-dev-dependency&quot;&gt;Add dev dependency&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; add --dev package-name&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;remove-package&quot;&gt;Remove package&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; remove package-name&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;update-packages&quot;&gt;Update packages&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; lock --upgrade&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; sync&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;python-version-management&quot;&gt;Python Version Management&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;install-python-version&quot;&gt;Install Python version&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; python install&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 3.12&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;list-available-python-versions&quot;&gt;List available Python versions&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; python list&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;list-installed-python-versions&quot;&gt;List installed Python versions&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; python list --only-installed&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;running-commands&quot;&gt;Running Commands&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;run-command-in-venv-without-activating&quot;&gt;Run command in venv without activating&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; run python script.py&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; run pytest&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; run uvicorn main:app --reload&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;create-new-project-from-scratch&quot;&gt;Create new project from scratch&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; init my-project&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; my-project&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; add requests pandas numpy&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;quick-reference&quot;&gt;Quick Reference&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Task&lt;&#x2F;th&gt;&lt;th&gt;Command&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;New project&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;uv init project-name&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Add package&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;uv add package-name&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Install deps&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;uv sync&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Run script&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;uv run python script.py&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Pin Python&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;uv python pin 3.12&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;List packages&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;uv pip list&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Update all&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;uv lock --upgrade &amp;amp;&amp;amp; uv sync&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;others&quot;&gt;Others&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Create isolated tool environments&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; tool install ruff&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; tool install black&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Export requirements.txt from pyproject.toml&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;uv&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; pip compile pyproject.toml -o requirements.txt&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>assembly language</title>
+        <published>2023-02-12T00:00:00+00:00</published>
+        <updated>2023-02-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/asm-stuffs/"/>
+        <id>https://daveads.github.io/note/asm-stuffs/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/asm-stuffs/">&lt;p&gt;The register is built into the cpu, it is used to store temporary data that the cpu needs to access quickly in oder to perform its operation.&lt;&#x2F;p&gt;
+&lt;p&gt;Types of cpu registers&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;General-purpose registers :
+These registers can be used to store any type of data, including operands for arithmetic and logic operations, pointers to memory locations, and intermediate results of calculations.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Program counter register:
+This register holds the address of the next instruction to be executed by the CPU.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Stack pointer register:
+This register holds the address of the top of the stack, which is a region of memory used to store function call frames and temporary data.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Status registers:
+*These registers store the state of the CPU, including information about arithmetic operations, interrupt handling, and other control signals.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;**&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;registers&quot;&gt;registers&lt;&#x2F;h2&gt;
+&lt;p&gt;rax&quot; - a large general-purpose register used for storing values and results of arithmetic operations.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;rbx&quot; - another large general-purpose register.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;rcx&quot; - a general-purpose register used for counting and loop operations.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;rdx&quot; - a general-purpose register used for storing values and results of arithmetic operations.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;rsi&quot; - a general-purpose register used as a source index register in string and array operations.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;rdi&quot; - a general-purpose register used as a destination index register in string and array operations.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;r8&quot; - &quot;r15&quot; - additional general-purpose registers available in the x86-64 architecture.&lt;&#x2F;p&gt;
+&lt;p&gt;General-purpose registers :: rax, rbx, rcx, rdx, rbp, rsp, rsi, rdi, r8, r9, r10, r11, r12, r13, r14, r15&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;operation&quot;&gt;Operation&lt;&#x2F;h1&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;ADD- integer add&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;SUB- subtract&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;MUL- unsigned multiply&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;IMUL- signed multiply&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;DIV- unsigned divide&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;IDIV- signed divide&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;INC- increment&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;DEC- decrement&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;NEG- negate&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;CONTROL FLOW
+JE - jump if equal&lt;&#x2F;p&gt;
+&lt;p&gt;JZ - jump if zero&lt;&#x2F;p&gt;
+&lt;p&gt;JNE - jump if not equal&lt;&#x2F;p&gt;
+&lt;p&gt;JNZ - jump if not zero&lt;&#x2F;p&gt;
+&lt;p&gt;JG - jump if the first operand is greater than second&lt;&#x2F;p&gt;
+&lt;p&gt;JGE - jump if the first operand is greater or equal to second&lt;&#x2F;p&gt;
+&lt;p&gt;JA - the same that JG, but performs an unsigned comparison&lt;&#x2F;p&gt;
+&lt;p&gt;JAE - the same that JGE, but performs an unsigned comparison&lt;&#x2F;p&gt;
+&lt;p&gt;DATA TYPES
+byte is eight bits
+word is two bytes
+doubleword is four bytes
+quadword is eight bytes
+double quadword is sixteen bytes (128 bits).&lt;&#x2F;p&gt;
+&lt;p&gt;.DATA
++-----------+-------------------+-------------------+
+| Directive |      Purpose      |   Storage Space   |
++-----------+-------------------+-------------------+
+| DB        | Define Byte       | allocates 1 byte  |
+| DW        | Define Word       | allocates 2 bytes |
+| DD        | Define Doubleword | allocates 4 bytes |
+| DQ        | Define Quadword   | allocates 8 bytes |
+| DT        | Define Ten Bytes  | allocates 10 byte |
++-----------+-------------------+-------------------+&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; opertation&lt;&#x2F;p&gt;
+&lt;p&gt;mov ebx, 123  ; ebx = 123
+mov eax, ebx  ; eax = ebx
+add ebx, ecx  ; ebx += ecx
+sub ebx, edx  ; ebx -= edx
+mul ebx       ; eax ***= ebx
+div edx       ; eax &#x2F;= edx&lt;&#x2F;p&gt;
+&lt;p&gt;; eax handles operations&lt;&#x2F;p&gt;
+&lt;p&gt;data - section is used for declaring initialized data or constants
+bss - section is used for declaring non initialized variables
+text - section is used for code&lt;&#x2F;p&gt;
+&lt;p&gt;RESB, RESW, RESD, RESQ, REST, RESO, RESY and RESZ - are used for declaring non initialized variables
+INCBIN - includes External Binary Files
+EQU - defines constant.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;asm&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;one &lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;equ&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>assembly language</title>
+        <published>2022-06-19T00:00:00+00:00</published>
+        <updated>2022-06-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/assemblylang/"/>
+        <id>https://daveads.github.io/note/assemblylang/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/assemblylang/">&lt;p&gt;Assembly program :&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;.data section :
+This section is for declaring initialized data. { filenames and buffer sizes }
+DB, DW, DD, DQ and DT instructions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;asm&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;section .data&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		message&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; db&lt;&#x2F;span&gt;&lt;span&gt; &amp;quot;hello world&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		msglength&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; equ&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 12&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		buffersize&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; dw&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1024&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;.bss section :
+This is where variables are been decleared.
+RESB, RESW, RESD, RESQ, REST instrcutions are use to reserve uninitialized space in memory for your variables.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;asm&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;section .bss&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		filename&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; resb&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 255&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt; ; reserve 255 bytes&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		number&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; resb&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;     ; Reserve 1 byte&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		bignum&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; resw&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;     ; Reserve 1 word (1 word = 2 bytes)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;		realarray&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; resq&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 10&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt; ; Reserve an array of 10 reals&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;.text section :
+This is where the actual assembly code is written.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  this section must begin with the declaration global_start,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  &#x2F;&#x2F; this tells the kernel where the program execution begins. == &amp;quot;main&amp;quot; @other_languages&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Docker key words</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2023-09-15T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/docker/"/>
+        <id>https://daveads.github.io/note/docker/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/docker/">&lt;ul&gt;
+&lt;li&gt;develop&lt;&#x2F;li&gt;
+&lt;li&gt;ship&lt;&#x2F;li&gt;
+&lt;li&gt;run&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;to-run-docker-images&quot;&gt;&lt;strong&gt;To run docker images&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;hr &#x2F;&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;docker run &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;image&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;to-show-docker-images&quot;&gt;&lt;strong&gt;To show docker images&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;hr &#x2F;&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;docker images&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;pull-docker-images&quot;&gt;&lt;strong&gt;pull docker images&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;code&gt;docker pull &amp;lt;image&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;docker-status&quot;&gt;&lt;strong&gt;Docker status&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;code&gt;systemctl status docker&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;current-running-container&quot;&gt;&lt;strong&gt;current running container&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;code&gt;docker ps&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;runned-container&quot;&gt;&lt;strong&gt;runned container&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;code&gt;docker ps -a&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;iteractive-tty-container&quot;&gt;&lt;strong&gt;iteractive tty @container&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;code&gt;docker run -it &amp;lt;image&amp;gt; sh&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;cleaning-up-containters&quot;&gt;&lt;strong&gt;cleaning up containters&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;docker rm &amp;lt;container id&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;docker rm $(docker ps -a -q -f status=exited)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;docker container prune&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;view-exposed-image-ports&quot;&gt;&lt;strong&gt;view exposed image ports&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;code&gt;docker port &amp;lt;image&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;to-stop-a-detached-container&quot;&gt;&lt;strong&gt;To stop a detached container&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;code&gt;docker stop &amp;lt;image&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;docker-images&quot;&gt;&lt;strong&gt;DOCKER IMAGES&lt;&#x2F;strong&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Base images : images with no parent image, usually images with an os like ubuntu, busybox &amp;amp;&amp;amp; debian&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Child images : images build on base images&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;offical images : made by folks at docker&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;user images : user&#x2F;image-name by users&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;search for images with&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;&amp;lt;docker search&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h4 id=&quot;delete-images&quot;&gt;&lt;strong&gt;Delete images&lt;&#x2F;strong&gt;&lt;&#x2F;h4&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;docker rmi &amp;lt;image_id&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;&#x2F;&#x2F; forcefully remove an image&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;docker rmi -f &amp;lt;image_id&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;interactive-shell-session&quot;&gt;Interactive shell session&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;docker run -it ubuntu bash &#x2F;&#x2F; exit&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;&#x2F;&#x2F; Keep running when exited &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;- docker run -itd ubuntu bash&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;- docker attach CONTAINER_ID&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;creating-a-docker-image&quot;&gt;Creating a docker image&lt;&#x2F;h3&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;code&gt;docker build -t daveads&#x2F;flask_py .&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>using i3 multiple monitors @xrandr</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/external-monitor/"/>
+        <id>https://daveads.github.io/note/external-monitor/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/external-monitor/">&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;xrandr&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;eDP1 connected primary 1366x768+0+0 (normal left inverted right x axis y axis) 340mm x 190mm
+1366x768      60.00*+&lt;&#x2F;p&gt;
+&lt;p&gt;HDMI1 connected 1080x1920+1366+0 left (normal left inverted right x axis y axis) 470mm x 300mm
+1920x1080     60.00*+  59.94&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;position out right of primary screen&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; horizontal position
+xrandr --output HDMI1 --auto --right-of eDP1&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; vertical position
+xrandr --output HDMI1 --rotate left --right-of eDP1&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;xrandr-output-hdmi1-rotate-left-auto-right-of-edp1&quot;&gt;xrandr --output HDMI1 --rotate left --auto --right-of eDP1&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;edit-configs-to-add-moving-workspaces-between-screens&quot;&gt;Edit configs to add moving workspaces between screens&lt;&#x2F;h3&gt;
+&lt;p&gt;.config&#x2F;i3&#x2F;config&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;bindsym-mod-p-move-workspace-to-output-right&quot;&gt;bindsym $mod+p move workspace to output right&lt;&#x2F;h2&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>i3 tilling window manager</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/i3-wm/"/>
+        <id>https://daveads.github.io/note/i3-wm/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/i3-wm/">&lt;p&gt;$mod by default == &quot;windows key&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F;modifier&lt;&#x2F;p&gt;
+&lt;p&gt;$mod + ENTER = &quot;new terminal&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;$mod + 1 || 2 = &quot;switches to a new window&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;$mod + shift + 1 = &quot;moves a window to another workspace&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;$mod + shift + q = &quot;to exit a window&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;$mod + shift + space = &quot;to make a window float&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;$mod + shift + e = &quot;logout&quot;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;black-light&quot;&gt;black light&lt;&#x2F;h1&gt;
+&lt;p&gt;&#x2F;sys&#x2F;class&#x2F;backlight&#x2F;intel_backlight&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;**
+need to figure out how to automate this
+**&#x2F;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>mysql &gt;&gt; mariadb note</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/mysql/"/>
+        <id>https://daveads.github.io/note/mysql/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/mysql/">&lt;h3 id=&quot;local-development&quot;&gt;Local development&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mysql -u root -p&lt;&#x2F;code&gt;  Connect to the MySQL server using the &lt;code&gt;mysql&lt;&#x2F;code&gt; command-line client and provide the root user credentials when prompted&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;SHOW DATABASES;&lt;&#x2F;code&gt; See all the databases available on the MySQL server&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;USE database_name;&lt;&#x2F;code&gt; To move in to the database&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;SHOW TABLES;&lt;&#x2F;code&gt; View all the tables within the selected database&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;DESCRIBE table_name;&lt;&#x2F;code&gt;  To view the structure (columns and data types) of a specific table&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CREATE DATABASE new_database_name;&lt;&#x2F;code&gt; To create a new database&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;source &#x2F;home&#x2F;ubuntu&#x2F;schema.sql&lt;&#x2F;code&gt; To run a SQL script file like &lt;code&gt;schema.sql&lt;&#x2F;code&gt; in SQL shell&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;DROP DATABASE my_database;&lt;&#x2F;code&gt; Delete a database&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>starting postgres sql</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/postgresql/"/>
+        <id>https://daveads.github.io/note/postgresql/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/postgresql/">&lt;h2 id=&quot;postgresql-local-development-setup&quot;&gt;Postgresql Local development setup&lt;&#x2F;h2&gt;
+&lt;p&gt;There are no users in PostgreSQL, only roles.&lt;&#x2F;p&gt;
+&lt;p&gt;postgres account is created by default&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;sudo -i -u postgres&lt;&#x2F;code&gt; : To switch in the postgress account then &lt;code&gt;psql&lt;&#x2F;code&gt; to start postgresql interactive terminal&lt;&#x2F;p&gt;
+&lt;p&gt;OR&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;sudo -u postgres psql&lt;&#x2F;code&gt; : This log you directly into postgres&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;THIS COMMANDS CAN BE RUN WITH THE POSTGRESS ACCOUNT&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;\du&lt;&#x2F;code&gt; : List all user accounts or roles&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;creating-a-new-role&quot;&gt;Creating a new role&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;createuser --interactive&lt;&#x2F;code&gt;: Within the postgres account&lt;&#x2F;p&gt;
+&lt;p&gt;Or&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;sudo -u postgres createuser --interactive&lt;&#x2F;code&gt; without switching in the postgres account first&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Within the postgresql interactive terminal&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT datname FROM pg_database;&lt;&#x2F;code&gt; or  &lt;code&gt;&#x2F;list&lt;&#x2F;code&gt; See all database in PostgreSQL&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT rolname FROM pg_roles;&lt;&#x2F;code&gt; To list all roles&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;DROP ROLE &amp;lt;role&amp;gt;;&lt;&#x2F;code&gt; : To remove  role&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;to-add-login&quot;&gt;to add login&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;CREATE ROLE &quot;&amp;lt;role&amp;gt;&quot;;&lt;&#x2F;code&gt; WITH LOGIN&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;quit-the-postgresqlq&quot;&gt;quit the postgresqlq&lt;&#x2F;h2&gt;
+&lt;p&gt;\q : quit&lt;&#x2F;p&gt;
+&lt;p&gt;[psql postgres -U User]&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;creating-role-with-login-password&quot;&gt;creating role with login password&lt;&#x2F;h2&gt;
+&lt;p&gt;CREATE ROLE &lt;role&gt; WITH LOGIN PASSWORD &#x27;&lt;password&gt;&#x27;;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;alternative-way&quot;&gt;alternative way&lt;&#x2F;h2&gt;
+&lt;p&gt;CREATE USER &lt;role&gt; LOGIN PASSWORD &#x27;&lt;password&gt;&#x27;;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;adding-a-role-attribute-to-a-role&quot;&gt;adding a role attribute to a role&lt;&#x2F;h2&gt;
+&lt;p&gt;ALTER ROLE &lt;role&gt; WITH LOGIN;&lt;&#x2F;p&gt;
+&lt;p&gt;##built in role attributes&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;login&#x2F;nologin : allow (or not) to login postgresql&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;SUPERUSER&#x2F;NOSUPERUSER : a db superuser will bypass other permission checks, excepts for LOGIN.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;CREATEDB : allows the ability to create db&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;CREATEUSER&#x2F;NOCREATE USER : allow (or not) the ability to create new uses.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;INHERIT&#x2F; NOINHERIT : ability to make privileges inheritable.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;REPLICATION&#x2F; NOREPLICATION : ??&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;switch-datbase&quot;&gt;switch datbase&lt;&#x2F;h2&gt;
+&lt;p&gt;\connect &amp;lt;db_name&amp;gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;exprimented-with-this&quot;&gt;exprimented with this&lt;&#x2F;h2&gt;
+&lt;p&gt;CREATE ROLE testing WITH LOGIN  Superuser Createrole Createdb Replication BypassRls;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Redis</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/redis-server/"/>
+        <id>https://daveads.github.io/note/redis-server/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/redis-server/">&lt;p&gt;&lt;strong&gt;start redis&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;redis-server&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&#x2F;&#x2F; don&#x27;t know how this works yet&lt;&#x2F;p&gt;
+&lt;p&gt;CONFIG GET CONFIG_SETTING_NAME&lt;&#x2F;p&gt;
+&lt;p&gt;methods = GET AND SET&lt;&#x2F;p&gt;
+&lt;p&gt;CONFIG GET *
+&#x2F;&#x2F; this gets all config&lt;&#x2F;p&gt;
+&lt;p&gt;update config by redis.conf or CONFIG SET&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F;strings&lt;&#x2F;p&gt;
+&lt;p&gt;SET name &quot;using redis&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;GET name &#x2F;&#x2F; outputs stored string&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; Hashes&lt;&#x2F;p&gt;
+&lt;p&gt;HMSET user:1 username password&lt;&#x2F;p&gt;
+&lt;p&gt;HGETALL user:1&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F;Lists&lt;&#x2F;p&gt;
+&lt;p&gt;lpush dbs mysql
+lpush dbs mariadb
+lpush dbs sqlite&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;gets the inserted list out&lt;&#x2F;em&gt;
+lrange dbs 0 2&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F;Sets - unordered collection of strings&lt;&#x2F;p&gt;
+&lt;p&gt;sadd check me
+sadd check data
+sadd check email
+sadd check her&lt;&#x2F;p&gt;
+&lt;p&gt;get the sets
+smemebers checks&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F;sorted sets&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>sqlite 3</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/sqlite/"/>
+        <id>https://daveads.github.io/note/sqlite/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/sqlite/">&lt;h3 id=&quot;followed-tutorials-from-https-www-sqlitetutorial-net-sqlite-limit&quot;&gt;FOLLOWED TUTORIALS FROM https:&#x2F;&#x2F;www.sqlitetutorial.net&#x2F;sqlite-limit&#x2F;&lt;&#x2F;h3&gt;
+&lt;p&gt;open database from terminal&lt;&#x2F;p&gt;
+&lt;p&gt;.open name.db&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;.mode &quot;to change way at which datbase is display on the terminal&quot;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;.tables&lt;&#x2F;code&gt; &#x2F;&#x2F; shows tables available in the terminal&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT&lt;&#x2F;code&gt; &#x2F;&#x2F; This is use for query data from a one or more table&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;select&quot;&gt;&lt;strong&gt;SELECT&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;code&gt;SELECT column, cloumn, e.t.c FROM tracks == #table;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;selecting column in ascending order&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT name, milliseconds, albumid FROM tracks ORDER BY albumid ASC;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;selecting column and then filtering (albumid like the above) and milliseconds in descending order&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT name, milliseconds, albumid FROM tracks ORDER BY albumid ASC, milliseconds DESC;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; ORDER BY with column position instead of column name&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT name, albumid FROM tracks ORDER BY 3 ASC, 2 DESC;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; ORDER BY clause to sort tracks by composers&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT TrackId, Name, Composer FROM tracks ORDER BY Composer;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;select-distinct-examples&quot;&gt;SELECT DISTINCT examples&lt;&#x2F;h2&gt;
+&lt;p&gt;&#x2F;*
+Distincy clasue allows you to remove the duplicate rows in the result set.
+*&#x2F;&lt;&#x2F;p&gt;
+&lt;p&gt;E.g.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT city FROM customers ORDER BY city;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;result of city would contain duplicates
+e.g. city = london, city = london&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;remove duplicates by using distinct&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT DISTINCT city FROM customers ORDER BY city;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;applying DISTINCT on multiple column&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT DISTINCT city, country FROM customers ORDER BY county;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;where-clause&quot;&gt;WHERE CLAUSE&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;SELECT column_list FROM table WHERE search_condition;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; WHERE caluse is use to SELECT statement to filter rows returned by query.&lt;&#x2F;p&gt;
+&lt;p&gt;E.g.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; column_1 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 100&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; column_2 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;IN&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; column_3 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;LIKE&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;An%&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; column_4 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;BETWEEN&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 10&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; AND&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 20&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&#x2F;&#x2F; can be use in the UPDATE and DELETE STATEMENT&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; comparison operators can also be used&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;= , &amp;lt; , &amp;gt; , &amp;lt;= e.t.c.&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;logical operators&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; no boolean data type in sqlite so True = 1 and false = 0&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Operator | Meaning&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;All | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; all expressions are &lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;AND&lt;&#x2F;span&gt;&lt;span&gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if both&lt;&#x2F;span&gt;&lt;span&gt; expressions are &lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;and&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; one of the expressions &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;is&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;ANY |&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; any one of a &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;set&lt;&#x2F;span&gt;&lt;span&gt; of comparisons &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;is&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;BETWEEN&lt;&#x2F;span&gt;&lt;span&gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; a &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;value is within&lt;&#x2F;span&gt;&lt;span&gt; a &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;EXISTS&lt;&#x2F;span&gt;&lt;span&gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; a sbuquery contains any &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;rows&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;IN&lt;&#x2F;span&gt;&lt;span&gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; a vlaues &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;is in&lt;&#x2F;span&gt;&lt;span&gt; a list of &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;values&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;LIKE&lt;&#x2F;span&gt;&lt;span&gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; if&lt;&#x2F;span&gt;&lt;span&gt; a &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;value&lt;&#x2F;span&gt;&lt;span&gt; matches a pattern.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;NOT&lt;&#x2F;span&gt;&lt;span&gt;  | reverses the &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;value&lt;&#x2F;span&gt;&lt;span&gt; of other operators such &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;as NOT EXISTS&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;NOT IN&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;NOT BETWEEN&lt;&#x2F;span&gt;&lt;span&gt; e.t.c&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;OR&lt;&#x2F;span&gt;&lt;span&gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;returns&lt;&#x2F;span&gt;&lt;span&gt; ture &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; either expression &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;is&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;sqlite WHERE clause examples&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;SELECT name&lt;&#x2F;span&gt;&lt;span&gt;, milliseconds, bytes, albumid &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; tracks &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; ALBUMID &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;SELECT name&lt;&#x2F;span&gt;&lt;span&gt;, milliseonds, albumid &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; tracks &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; albumid &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; AND&lt;&#x2F;span&gt;&lt;span&gt; milliseconds &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 250000&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;SELECT name&lt;&#x2F;span&gt;&lt;span&gt;,albumid, composer &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; tracks &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; composer &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;LIKE&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;#39;%Smith%&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; ORDER BY&lt;&#x2F;span&gt;&lt;span&gt; albumid;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;SELECT name&lt;&#x2F;span&gt;&lt;span&gt;, albumid, mediatypeid &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; tracks &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; mediatypid &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;IN&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt; ,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;sqlite-limit-clause&quot;&gt;sqlite limit clause&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;SELECT column_list FROM table LIMIT row_count;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; limit clause is use to constrain the number of rows returned by the query...&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;SELECT trackid, name FROM tracks LIMIT 10;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;To get the first 10 rows starting from the 10th row&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;use&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;SELECT&lt;&#x2F;span&gt;&lt;span&gt; column_list &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;FROM table LIMIT&lt;&#x2F;span&gt;&lt;span&gt; offset, row_count&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;SELECT&lt;&#x2F;span&gt;&lt;span&gt; trackid, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; tracks &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;LIMIT&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 10&lt;&#x2F;span&gt;&lt;span&gt; OFFSET &lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;insert-in-sqlite&quot;&gt;INSERT IN SQLITE&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;INSERT INTO table&lt;&#x2F;span&gt;&lt;span&gt; (column1, column2) &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;VALUES&lt;&#x2F;span&gt;&lt;span&gt; (value1, value2);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;e.g.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;INSERT INTO&lt;&#x2F;span&gt;&lt;span&gt; playlists (playlistid, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;VALUES&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;24&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;brime buk&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;inserting multiple rows into a table&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;INSERT INTO&lt;&#x2F;span&gt;&lt;span&gt; table1 (column1, column2,....) &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;VALUES&lt;&#x2F;span&gt;&lt;span&gt; (value1 , value2,), (value1, value2 );&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;e.g.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;INSERT INTO&lt;&#x2F;span&gt;&lt;span&gt; playlists (playlistid, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;VALUES&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;30&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;faith&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;), (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;34&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;favour&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;), (&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;36&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;#39;gift&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;update-statement&quot;&gt;UPDATE STATEMENT&lt;&#x2F;h3&gt;
+&lt;p&gt;&#x2F;&#x2F; to update an existing data in a table, you use sqlite UPDATE
+statment&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;UPDATE table SET&lt;&#x2F;span&gt;&lt;span&gt; column_1 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; new_value_1, column_2 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; new_value_2 &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; search_condition;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;##&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; DELETE statement&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;DELETE FROM table WHERE&lt;&#x2F;span&gt;&lt;span&gt; search_condition&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;e.g.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;DELETE FROM&lt;&#x2F;span&gt;&lt;span&gt; playlists &lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;WHERE&lt;&#x2F;span&gt;&lt;span&gt; playlistid &lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 36&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>terminal folder manager apps</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/terminal-files/"/>
+        <id>https://daveads.github.io/note/terminal-files/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/terminal-files/">&lt;ul&gt;
+&lt;li&gt;nnn&lt;&#x2F;li&gt;
+&lt;li&gt;ranger&lt;&#x2F;li&gt;
+&lt;li&gt;mc&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Notes on vim</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/vimtutor/"/>
+        <id>https://daveads.github.io/note/vimtutor/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/vimtutor/">&lt;h2 id=&quot;decided-to-try-this-out-after-months-of-using-vim&quot;&gt;Decided to try this out after months of using Vim&lt;&#x2F;h2&gt;
+&lt;p&gt;&#x2F;&#x2F; Started with Vim by just Googling the basic commands...&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Mistakes I have made in the past&lt;&#x2F;strong&gt;
+1.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;moving&quot;&gt;Moving&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         ^&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         k&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;   &amp;lt;  h       l&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         j&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         v&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;exiting-vim&quot;&gt;Exiting Vim&lt;&#x2F;h2&gt;
+&lt;p&gt;Press &lt;code&gt;&amp;lt;ESC&amp;gt;&lt;&#x2F;code&gt;
+Use &lt;code&gt;:q!&lt;&#x2F;code&gt; to discard any changes you have made and exit forcefully.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;text-editing-delete&quot;&gt;Text Editing - Delete&lt;&#x2F;h2&gt;
+&lt;p&gt;Press &lt;code&gt;&amp;lt;ESC&amp;gt;&lt;&#x2F;code&gt; to enter normal mode.
+To delete a character, move to the character and press &lt;code&gt;x&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;text-editing-insert&quot;&gt;Text Editing - Insert&lt;&#x2F;h2&gt;
+&lt;p&gt;Press &lt;code&gt;i&lt;&#x2F;code&gt; to start inserting text at the cursor position.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;text-editing-appending&quot;&gt;Text Editing - Appending&lt;&#x2F;h2&gt;
+&lt;p&gt;Press &lt;code&gt;a&lt;&#x2F;code&gt; to append text after the cursor position.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;editing-a-file&quot;&gt;Editing a File&lt;&#x2F;h2&gt;
+&lt;p&gt;Use &lt;code&gt;:wq&lt;&#x2F;code&gt; to save and exit a file.
+Press &lt;code&gt;&amp;lt;ESC&amp;gt;&lt;&#x2F;code&gt; to return to normal mode or to cancel unwanted and partially completed commands.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;deletion-commands&quot;&gt;Deletion Commands&lt;&#x2F;h2&gt;
+&lt;p&gt;In normal mode, move to the beginning of a word and type &lt;code&gt;dw&lt;&#x2F;code&gt; to delete until the start of the next word.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;more-deletion-commands&quot;&gt;More Deletion Commands&lt;&#x2F;h2&gt;
+&lt;p&gt;Type &lt;code&gt;d$&lt;&#x2F;code&gt; to delete to the end of the line, including the last character.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;on-operators-and-motions&quot;&gt;On Operators and Motions&lt;&#x2F;h2&gt;
+&lt;p&gt;Commands involving manipulating text are made from an operator and a motion.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Delete Operator: &lt;code&gt;d&lt;&#x2F;code&gt; motion&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;d&lt;&#x2F;code&gt; is the delete operator, and motion specifies what the operator will operate on.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;short-list-of-motions&quot;&gt;Short List of Motions&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;w&lt;&#x2F;code&gt;: Move until the start of the next word, excluding its first character.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;e&lt;&#x2F;code&gt;: Move to the end of the current word, including the last character.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;$&lt;&#x2F;code&gt;: Move to the end of the line, including the last character.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;using-a-count-for-a-motion&quot;&gt;Using a Count for a Motion&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2w&lt;&#x2F;code&gt;: Move the cursor two words forward.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;3e&lt;&#x2F;code&gt;: Move the cursor to the end of the third word forward.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;0&lt;&#x2F;code&gt;: Move to the start of the line.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;3w&lt;&#x2F;code&gt;: Move the cursor three words forward.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;using-a-count-to-delete-more&quot;&gt;Using a Count to Delete More&lt;&#x2F;h2&gt;
+&lt;p&gt;Typing a number with an operator repeats it that many times. For example, &lt;code&gt;d2w&lt;&#x2F;code&gt; deletes the first two words in the line.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;operating-on-lines&quot;&gt;Operating on Lines&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dd&lt;&#x2F;code&gt;: Delete a whole line.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;2dd&lt;&#x2F;code&gt;: Delete two lines.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-undo-command&quot;&gt;The Undo Command&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;u&lt;&#x2F;code&gt;: Undo the last command.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;CTRL-R&lt;&#x2F;code&gt;: Redo commands.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-put-command&quot;&gt;The PUT Command&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;p&lt;&#x2F;code&gt;: Put previously deleted text after the cursor.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;dd&lt;&#x2F;code&gt; deletes the line and stores it in a Vim register.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;the-replace-command&quot;&gt;The Replace Command&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Press &lt;code&gt;rx&lt;&#x2F;code&gt; to replace the character under the cursor with &lt;code&gt;x&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Press &lt;code&gt;r&lt;&#x2F;code&gt; then the character which should be there.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-change-operator&quot;&gt;The Change Operator&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ce&lt;&#x2F;code&gt;: Change until the end of a word.&lt;&#x2F;li&gt;
+&lt;li&gt;For example, &lt;code&gt;hello wors&lt;&#x2F;code&gt; becomes &lt;code&gt;hello world&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;more-changes-using-c&quot;&gt;More Changes Using c&lt;&#x2F;h2&gt;
+&lt;p&gt;The change operator &lt;code&gt;c&lt;&#x2F;code&gt; can be used with the same motions as delete.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;c [number] motion&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;cursor-location-and-file-status&quot;&gt;Cursor Location and File Status&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CTRL-g&lt;&#x2F;code&gt;: Shows file name and position in the file.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;gg&lt;&#x2F;code&gt;: Move you to the start of the file.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;G&lt;&#x2F;code&gt;: Move you to the bottom of the file.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;[number]G&lt;&#x2F;code&gt;: Move you to a specific line.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-search-command&quot;&gt;The Search Command&lt;&#x2F;h2&gt;
+&lt;p&gt;In normal mode, type &lt;code&gt;&quot;&#x2F;&quot;&lt;&#x2F;code&gt; followed by the character you want to search.
+To search the same phrase again, type &lt;code&gt;n&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>wifi connection</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2024-01-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/wifi/"/>
+        <id>https://daveads.github.io/note/wifi/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/wifi/">&lt;p&gt;&lt;strong&gt;Show current network connections&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;nmcli&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; connection show&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;List available Wi-Fi networks&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;nmcli&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; device wifi list&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Connect to a network using its UUID (replace &lt;code&gt;UUID&lt;&#x2F;code&gt; with the actual UUID)&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;nmcli&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; c up uuid e0bda955-475c-4625-b19b-4a1f2339d9db --ask&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;New devices&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;nmcli&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; device wifi connect&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;name ssi&lt;&#x2F;span&gt;&lt;span&gt;d&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; --ask&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Enable Wi-Fi (if disabled)&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; rfkill unblock wifi&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;nmcli&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; networking on&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;BLUETOOTH&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Turn on Bluetooth&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;bluetoothctl&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; power on&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Enter Bluetooth control interface&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;bluetoothctl&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Start scanning for nearby Bluetooth devices&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;scan&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; on&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Connect to a Bluetooth device with the specified MAC address (replace &lt;code&gt;&amp;lt;tecno square1&amp;gt;&lt;&#x2F;code&gt; with the actual MAC address)&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;connect&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; 14:A6:8E:AE:9F:51&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Show status of devices and their rfkill (Radio Frequency Kill) status&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;rfkill&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; list&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Additional Bluetooth commands:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Show connected devices&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;devices&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Show paired devices&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;paired-devices&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</content>
+        
+    </entry>
+</feed>

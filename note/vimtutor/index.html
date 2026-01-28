@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	
+		<!-- meta data -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="author" content="Daveads">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Daveads">
+	
+
+
+<meta property="og:title" content="Notes on vim">
+<meta property="og:type" content="notes">
+<meta property="og:url" content="https://daveads.github.io&#x2F;note&#x2F;vimtutor&#x2F;">
+
+
+
+		
+			<meta name="keywords" content="[vim]">
+		
+
+
+
+
+<meta name="description" content="">
+
+
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="daveads" href="https://daveads.github.io/atom.xml">
+
+
+	<link rel="canonical" href="https://daveads.github.io&#x2F;note&#x2F;vimtutor&#x2F;">
+
+
+<!-- Sass-file: minima.css -->
+<link rel="stylesheet" href="/minima.css">
+
+<!-- css files -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="/assets/css/tagc.css">
+<link rel="stylesheet" href="/assets/css/pagenav.css">
+<link rel="stylesheet" href="/assets/css/shortcodes.css"
+
+
+<!-- google_analytics -->
+
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-087FCJRFH2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-087FCJRFH2', {
+    'cookie_flags': 'SameSite=None;Secure',
+  });
+</script>
+
+
+
+		<!-- Google discover -->
+		<link rel="alternate" type="application/rss+xml" href="https://feeds.feedburner.com/blogspot/amDG" />
+		<!-- ends -->
+
+
+<!-- <script type="text/javascript" src="/assets/js/blink.js" defer></script> -->
+<script type="text/javascript" src="/assets/js/scroll-top-button.js" defer></script>
+
+<!-- PWA -->
+<script>
+  if ("serviceWorker" in navigator) {
+if (navigator.serviceWorker.controller) {
+   console.log("An active service worker found, no need to register");
+   } else {
+     // Register the service worker
+     navigator.serviceWorker
+       .register("/serviceworker.js", {
+         scope: "./"
+       })
+       .then(function (reg) {
+         console.log("Service worker has been registered for scope: " + reg.scope);
+       });
+    }
+}
+</script>
+
+<!-- programmable search engine -->
+<!-- <script async src="https://cse.google.com/cse.js?cx=acd2a3a68756706a3"></script> -->
+
+
+<! REACT SHITS -->
+<!-- end react -->
+
+
+<link rel="manifest" type="application/manifest+json" href="https://daveads.github.io/manifest.json">
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
+
+<title>
+		
+		Daveads - Notes on vim
+
+</title>
+
+
+</head>
+ <body>
+		
+
+
+		<button class="scrollToTopBtn" title="Go to top">
+		<img src="/assets/images/186407_arrow_up_icon.png
+		" height ="20" width="20" />
+		</button>
+
+		<main class="page-content" aria-label="Content">
+
+				 <section class="section">
+						<div class="wrapper">
+								
+
+<article class="post h-entry" itemscope="articleBody" itemtype="http://schema.org/BlogPosting">
+<header class="post-header">
+
+		 
+		 
+		 
+		<h1  style="text-align:center;" itemprop="name headline">
+				NOTE : Notes on vim
+		</h1>
+
+
+		 <small style="float:right; font-size: 15px;"><a href="/note">See all notes</a>
+		 	|| <a href="/note-archive">Archive</a>
+		 </small>
+
+<p class="post-meta">
+
+    
+		<time datetime="2022-06-11" itemprop="datePublished">2022-06-11</time>
+		
+    
+</p>
+
+		<div>
+			<div class="back_btn">
+    <button type="button" onclick="window.history.go(-1)" 
+    
+    
+    style="float:right; font-size: 18px; background-color: black; color: #13b7ea;"
+    >
+    
+     << cd .. 
+    </button>
+</div>
+<br>
+
+
+			<!--
+			
+		
+			Categories :
+			
+			<small >
+			<a class="tag-link" href="https://daveads.github.io/notec/learned/">#Learned</a>
+			</small>
+			<br>
+			<br>
+			
+			
+			-->
+
+			
+	
+			Tags :
+			
+			<small>
+			<a class="tag-link" href="https://daveads.github.io/notet/vim/">#vim</a>
+			</small>
+			
+			
+		</div>
+
+</header>
+	
+		<div class="post-content e-content" itemprop="articleBody">
+		<h2 id="decided-to-try-this-out-after-months-of-using-vim">Decided to try this out after months of using Vim</h2>
+<p>// Started with Vim by just Googling the basic commands...</p>
+<p><strong>Mistakes I have made in the past</strong>
+1.</p>
+<h2 id="moving">Moving</h2>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="plain"><span class="giallo-l"><span>         ^</span></span>
+<span class="giallo-l"><span>         k</span></span>
+<span class="giallo-l"><span>   &lt;  h       l&gt;</span></span>
+<span class="giallo-l"><span>         </span></span>
+<span class="giallo-l"><span>         j</span></span>
+<span class="giallo-l"><span>         v</span></span></code></pre><h2 id="exiting-vim">Exiting Vim</h2>
+<p>Press <code>&lt;ESC&gt;</code>
+Use <code>:q!</code> to discard any changes you have made and exit forcefully.</p>
+<h2 id="text-editing-delete">Text Editing - Delete</h2>
+<p>Press <code>&lt;ESC&gt;</code> to enter normal mode.
+To delete a character, move to the character and press <code>x</code>.</p>
+<h2 id="text-editing-insert">Text Editing - Insert</h2>
+<p>Press <code>i</code> to start inserting text at the cursor position.</p>
+<h2 id="text-editing-appending">Text Editing - Appending</h2>
+<p>Press <code>a</code> to append text after the cursor position.</p>
+<h2 id="editing-a-file">Editing a File</h2>
+<p>Use <code>:wq</code> to save and exit a file.
+Press <code>&lt;ESC&gt;</code> to return to normal mode or to cancel unwanted and partially completed commands.</p>
+<h2 id="deletion-commands">Deletion Commands</h2>
+<p>In normal mode, move to the beginning of a word and type <code>dw</code> to delete until the start of the next word.</p>
+<h2 id="more-deletion-commands">More Deletion Commands</h2>
+<p>Type <code>d$</code> to delete to the end of the line, including the last character.</p>
+<h2 id="on-operators-and-motions">On Operators and Motions</h2>
+<p>Commands involving manipulating text are made from an operator and a motion.</p>
+<ul>
+<li>Delete Operator: <code>d</code> motion</li>
+<li><code>d</code> is the delete operator, and motion specifies what the operator will operate on.</li>
+</ul>
+<h2 id="short-list-of-motions">Short List of Motions</h2>
+<ul>
+<li><code>w</code>: Move until the start of the next word, excluding its first character.</li>
+<li><code>e</code>: Move to the end of the current word, including the last character.</li>
+<li><code>$</code>: Move to the end of the line, including the last character.</li>
+</ul>
+<h2 id="using-a-count-for-a-motion">Using a Count for a Motion</h2>
+<ul>
+<li><code>2w</code>: Move the cursor two words forward.</li>
+<li><code>3e</code>: Move the cursor to the end of the third word forward.</li>
+<li><code>0</code>: Move to the start of the line.</li>
+<li><code>3w</code>: Move the cursor three words forward.</li>
+</ul>
+<h2 id="using-a-count-to-delete-more">Using a Count to Delete More</h2>
+<p>Typing a number with an operator repeats it that many times. For example, <code>d2w</code> deletes the first two words in the line.</p>
+<h2 id="operating-on-lines">Operating on Lines</h2>
+<ul>
+<li><code>dd</code>: Delete a whole line.</li>
+<li><code>2dd</code>: Delete two lines.</li>
+</ul>
+<h2 id="the-undo-command">The Undo Command</h2>
+<ul>
+<li><code>u</code>: Undo the last command.</li>
+<li><code>CTRL-R</code>: Redo commands.</li>
+</ul>
+<h2 id="the-put-command">The PUT Command</h2>
+<ul>
+<li><code>p</code>: Put previously deleted text after the cursor.</li>
+<li><code>dd</code> deletes the line and stores it in a Vim register.</li>
+</ul>
+<h3 id="the-replace-command">The Replace Command</h3>
+<ul>
+<li>Press <code>rx</code> to replace the character under the cursor with <code>x</code>.</li>
+<li>Press <code>r</code> then the character which should be there.</li>
+</ul>
+<h2 id="the-change-operator">The Change Operator</h2>
+<ul>
+<li><code>ce</code>: Change until the end of a word.</li>
+<li>For example, <code>hello wors</code> becomes <code>hello world</code>.</li>
+</ul>
+<h2 id="more-changes-using-c">More Changes Using c</h2>
+<p>The change operator <code>c</code> can be used with the same motions as delete.</p>
+<ul>
+<li><code>c [number] motion</code></li>
+</ul>
+<h2 id="cursor-location-and-file-status">Cursor Location and File Status</h2>
+<ul>
+<li><code>CTRL-g</code>: Shows file name and position in the file.</li>
+<li><code>gg</code>: Move you to the start of the file.</li>
+<li><code>G</code>: Move you to the bottom of the file.</li>
+<li><code>[number]G</code>: Move you to a specific line.</li>
+</ul>
+<h2 id="the-search-command">The Search Command</h2>
+<p>In normal mode, type <code>"/"</code> followed by the character you want to search.
+To search the same phrase again, type <code>n</code>.</p>
+
+		</div>
+		
+<br>
+<div style="text-align: center;">
+  <a href="/" style="font-weight: bold; font-size: 30px; font-family: 'Merriweather';">cd ~</a>
+</div>
+
+
+
+						</div>
+				 </section>
+
+		</main>
+		<footer></footer>
+ </body>
+
+</html>
+

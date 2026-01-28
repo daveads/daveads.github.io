@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - misc</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/misc/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-06-29T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/tags/misc/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Moved site from jekyll to zola</title>
+        <published>2022-06-29T00:00:00+00:00</published>
+        <updated>2022-06-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/moved-site-from-jekyll-to-zola/"/>
+        <id>https://daveads.github.io/writing/moved-site-from-jekyll-to-zola/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/moved-site-from-jekyll-to-zola/">&lt;p&gt;After transitioning from Jekyll to Zola, I have updated the website&#x27;s styling by loosely adapting the &lt;code&gt;Jekyll Minima&lt;&#x2F;code&gt; SCSS. Zola has proven to be an excellent choice as it seamlessly resolves many of the issues I faced with Jekyll. The fact that Zola is written in &lt;code&gt;Rust&lt;&#x2F;code&gt; and utilizes the powerful &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Keats&#x2F;tera&quot;&gt;Tera&lt;&#x2F;a&gt; template engine further enhances its appeal.&lt;&#x2F;p&gt;
+&lt;p&gt;The current version of Zola that I am using is v0.15.3, and it has been performing admirably. For those interested in learning more about Zola and its capabilities, the repository can be found here: &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&quot;&gt;zola-repo&lt;&#x2F;a&gt;. Additionally, the documentation is available at &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;overview&#x2F;&quot;&gt;zola-doc&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;With Zola, I feel confident in the future of my website, and I am excited about exploring its features and possibilities.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Knowledge worker</title>
+        <published>2020-10-25T00:00:00+00:00</published>
+        <updated>2020-10-25T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/knowledge-workers/"/>
+        <id>https://daveads.github.io/writing/knowledge-workers/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/knowledge-workers/">&lt;p&gt;Glancing through the book &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.amazon.com&#x2F;gp&#x2F;product&#x2F;1455586692&#x2F;ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1455586692&amp;amp;linkCode=as2&amp;amp;tag=daveads-20&amp;amp;linkId=383da9e80b4b22401dcdef4c58418841&quot;&gt;Deep work&lt;&#x2F;a&gt;, the term &quot;knowledge workers&quot; caught my attention, this is something i do without actually knowing what kind of work it is classified as.&lt;&#x2F;p&gt;
+&lt;p&gt;Did some research on &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;corporatefinanceinstitute.com&#x2F;resources&#x2F;knowledge&#x2F;other&#x2F;knowledge-workers&#x2F;&quot;&gt;knowledge worker&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;According to that article, knowledge workers are said to think for a living, unlike manual labourers who are paid for performing a physical tasks, and according to wiki knowledge workers are workers whose main capital is knowledge.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Which got me thinking about the types of workers actually available........??&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;h2 id=&quot;back-to-the-article&quot;&gt;Back to the article:&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;&quot;knowledge worker&quot;&lt;&#x2F;strong&gt; was first coined by peter drucker in
+his book &quot;The Land of Tomorrow&quot;...  the knowledge worker are differentiated by their ability to solve complex problems or to develop new products or services in their fields of expertise.. &quot;which his a clear definition of an actual computer programmer&#x27;s job&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;knowledge workers can be programmers, architects, engineers, marketers, design thinkers, public accountants, lawyers, and academics, and essentially any other white-collar worker who uses judgement and critical thinking in their role.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;important-facts&quot;&gt;Important facts :&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;To stay relevant learning process is continuous&lt;&#x2F;li&gt;
+&lt;li&gt;They spend 38% of their time searching for information
+&lt;br&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;more-info&quot;&gt;More info :&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Knowledge_worker&quot;&gt;wiki: knowledge worker&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;corporatefinanceinstitute.com&#x2F;resources&#x2F;knowledge&#x2F;other&#x2F;knowledge-workers&#x2F;&quot;&gt;corporate-finance-institute: knowledge workers&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;snipply&#x2F;knowledge-workers-information-life-cycles-and-content-silos-oh-my-a4263eed427&quot;&gt;medium: knowledge workers&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

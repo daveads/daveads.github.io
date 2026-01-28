@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	
+		<!-- meta data -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="author" content="Daveads">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Daveads">
+	
+
+
+<meta property="og:title" content="Implementing GLOBIGNORE">
+<meta property="og:type" content="notes">
+<meta property="og:url" content="https://daveads.github.io&#x2F;note&#x2F;implementing-globignore&#x2F;">
+
+
+
+		
+			<meta name="keywords" content="[oils]">
+		
+
+
+
+
+<meta name="description" content="">
+
+
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="daveads" href="https://daveads.github.io/atom.xml">
+
+
+	<link rel="canonical" href="https://daveads.github.io&#x2F;note&#x2F;implementing-globignore&#x2F;">
+
+
+<!-- Sass-file: minima.css -->
+<link rel="stylesheet" href="/minima.css">
+
+<!-- css files -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="/assets/css/tagc.css">
+<link rel="stylesheet" href="/assets/css/pagenav.css">
+<link rel="stylesheet" href="/assets/css/shortcodes.css"
+
+
+<!-- google_analytics -->
+
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-087FCJRFH2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-087FCJRFH2', {
+    'cookie_flags': 'SameSite=None;Secure',
+  });
+</script>
+
+
+
+		<!-- Google discover -->
+		<link rel="alternate" type="application/rss+xml" href="https://feeds.feedburner.com/blogspot/amDG" />
+		<!-- ends -->
+
+
+<!-- <script type="text/javascript" src="/assets/js/blink.js" defer></script> -->
+<script type="text/javascript" src="/assets/js/scroll-top-button.js" defer></script>
+
+<!-- PWA -->
+<script>
+  if ("serviceWorker" in navigator) {
+if (navigator.serviceWorker.controller) {
+   console.log("An active service worker found, no need to register");
+   } else {
+     // Register the service worker
+     navigator.serviceWorker
+       .register("/serviceworker.js", {
+         scope: "./"
+       })
+       .then(function (reg) {
+         console.log("Service worker has been registered for scope: " + reg.scope);
+       });
+    }
+}
+</script>
+
+<!-- programmable search engine -->
+<!-- <script async src="https://cse.google.com/cse.js?cx=acd2a3a68756706a3"></script> -->
+
+
+<! REACT SHITS -->
+<!-- end react -->
+
+
+<link rel="manifest" type="application/manifest+json" href="https://daveads.github.io/manifest.json">
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
+
+<title>
+		
+		Daveads - Implementing GLOBIGNORE
+
+</title>
+
+
+</head>
+ <body>
+		
+
+
+		<button class="scrollToTopBtn" title="Go to top">
+		<img src="/assets/images/186407_arrow_up_icon.png
+		" height ="20" width="20" />
+		</button>
+
+		<main class="page-content" aria-label="Content">
+
+				 <section class="section">
+						<div class="wrapper">
+								
+
+<article class="post h-entry" itemscope="articleBody" itemtype="http://schema.org/BlogPosting">
+<header class="post-header">
+
+		 
+		 
+		 
+		<h1  style="text-align:center;" itemprop="name headline">
+				NOTE : Implementing GLOBIGNORE
+		</h1>
+
+
+		 <small style="float:right; font-size: 15px;"><a href="/note">See all notes</a>
+		 	|| <a href="/note-archive">Archive</a>
+		 </small>
+
+<p class="post-meta">
+
+    
+		<time datetime="2026-01-26" itemprop="datePublished">2026-01-26</time>
+		
+    
+</p>
+
+		<div>
+			<div class="back_btn">
+    <button type="button" onclick="window.history.go(-1)" 
+    
+    
+    style="float:right; font-size: 18px; background-color: black; color: #13b7ea;"
+    >
+    
+     << cd .. 
+    </button>
+</div>
+<br>
+
+
+			<!--
+			
+			-->
+
+			
+	
+			Tags :
+			
+			<small>
+			<a class="tag-link" href="https://daveads.github.io/notet/oils/">#oils</a>
+			</small>
+			
+			
+		</div>
+
+</header>
+	
+		<div class="post-content e-content" itemprop="articleBody">
+		<p>Issue :: <a class="external" rel="external" href="https://github.com/oils-for-unix/oils/issues/609">Implement GLOBIGNORE #609</a></p>
+<p><code>GLOBIGNORE</code> is a bash-specific variable that lets you exclude files from glob expansion. It contains a colon-separated list of patterns - any file matching these patterns gets filtered out of glob results.</p>
+<p>E.g.</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span>GLOBIGNORE</span><span style="color: #94E2D5;">=</span><span style="color: #A6E3A1;">&#39;*.o:*.tmp&#39;</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">echo</span><span> *</span><span style="color: #9399B2;font-style: italic;">   # Shows all files except .o and .tmp files</span></span></code></pre>
+<p>This is useful for build directories, ignoring compiled files, or filtering out backup files from shell expansions.</p>
+<h2 id="the-problem-glob-results-need-filtering">The Problem: Glob Results Need Filtering</h2>
+<p>When you write <code>echo *</code> in a shell, it expands to all files in the current directory. But sometimes you want to exclude certain patterns - like object files in a build directory, or backup files ending in <code>~</code>.</p>
+<p>Bash solves this with <code>GLOBIGNORE</code>. When set:</p>
+<ol>
+<li>Glob patterns automatically include dotfiles (like <code>dotglob</code> option)</li>
+<li>Files matching any <code>GLOBIGNORE</code> pattern are filtered out</li>
+<li><code>.</code> and <code>..</code> are always filtered (even if they don't match a pattern)</li>
+</ol>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">$</span><span style="color: #A6E3A1;"> GLOBIGNORE=&#39;*.txt&#39;</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">$</span><span style="color: #A6E3A1;"> echo</span><span> *</span><span style="color: #9399B2;font-style: italic;">        # No .txt files in output</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">$</span><span style="color: #A6E3A1;"> echo .</span><span>*</span><span style="color: #9399B2;font-style: italic;">       # Shows .hidden but not . or ..</span></span></code></pre><h2 id="the-implementation">The Implementation</h2>
+<h3 id="where-the-code-lives">Where the Code Lives</h3>
+<p>The implementation is in <code>osh/glob_.py</code> in the <code>Globber</code> class. The key changes:</p>
+<ol>
+<li><strong>Parse GLOBIGNORE patterns</strong> - Split the colon-separated string into individual patterns</li>
+<li><strong>Filter glob results</strong> - After libc's <code>glob()</code> returns matches, filter out anything matching GLOBIGNORE</li>
+<li><strong>Enable dotglob implicitly</strong> - When GLOBIGNORE is set, dotfiles are included in glob expansion</li>
+</ol>
+<h3 id="parsing-globignore">Parsing GLOBIGNORE</h3>
+<p>The tricky part: colons inside bracket expressions like <code>[[:alnum:]]</code> shouldn't be treated as separators. I handle this by tracking bracket depth:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="python"><span class="giallo-l"><span style="color: #CBA6F7;">def</span><span style="color: #89B4FA;font-style: italic;"> _GetGlobIgnorePatterns</span><span style="color: #9399B2;">(</span><span style="color: #F38BA8;font-style: italic;">self</span><span style="color: #9399B2;">):</span></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;">    # type: () -&gt; Optional[List[str]]</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &quot;&quot;&quot;Get GLOBIGNORE patterns as a list, or None if not set.&quot;&quot;&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>    val</span><span style="color: #94E2D5;"> =</span><span style="color: #F38BA8;font-style: italic;"> self</span><span style="color: #9399B2;">.</span><span>mem</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">GetValue</span><span style="color: #9399B2;">(</span><span style="color: #A6E3A1;">&#39;GLOBIGNORE&#39;</span><span style="color: #9399B2;">,</span><span> scope_e</span><span style="color: #9399B2;">.</span><span>GlobalOnly</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    if</span><span> val</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">tag</span><span style="color: #9399B2;">()</span><span style="color: #94E2D5;"> !=</span><span> value_e</span><span style="color: #9399B2;">.</span><span>Str</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        return</span><span style="color: #FAB387;"> None</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>    globignore</span><span style="color: #94E2D5;"> =</span><span style="color: #89B4FA;"> cast</span><span style="color: #9399B2;">(</span><span>value</span><span style="color: #9399B2;">.</span><span>Str</span><span style="color: #9399B2;">,</span><span> val</span><span style="color: #9399B2;">).</span><span>s</span><span style="color: #9399B2;font-style: italic;">  # type: str</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    if</span><span style="color: #FAB387;font-style: italic;"> len</span><span style="color: #9399B2;">(</span><span>globignore</span><span style="color: #9399B2;">)</span><span style="color: #94E2D5;"> ==</span><span style="color: #FAB387;"> 0</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        return</span><span style="color: #FAB387;"> None</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;">    # Check cache first</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    if</span><span> globignore</span><span style="color: #CBA6F7;"> in</span><span style="color: #F38BA8;font-style: italic;"> self</span><span style="color: #9399B2;">.</span><span>_globignore_cache</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        return</span><span style="color: #F38BA8;font-style: italic;"> self</span><span style="color: #9399B2;">.</span><span style="color: #EBA0AC;font-style: italic;">_globignore_cache</span><span style="color: #9399B2;">[</span><span style="color: #EBA0AC;font-style: italic;">globignore</span><span style="color: #9399B2;">]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;">    # Split by colon, but not inside bracket expressions</span></span>
+<span class="giallo-l"><span>    patterns</span><span style="color: #94E2D5;"> =</span><span style="color: #9399B2;"> []</span><span style="color: #9399B2;font-style: italic;">  # type: List[str]</span></span>
+<span class="giallo-l"><span>    current</span><span style="color: #94E2D5;"> =</span><span style="color: #9399B2;"> []</span><span style="color: #9399B2;font-style: italic;">  # type: List[str]</span></span>
+<span class="giallo-l"><span>    in_bracket</span><span style="color: #94E2D5;"> =</span><span style="color: #FAB387;"> False</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    for</span><span> c</span><span style="color: #CBA6F7;"> in</span><span> globignore</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        if</span><span> c</span><span style="color: #94E2D5;"> ==</span><span style="color: #A6E3A1;"> &#39;[&#39;</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span>            in_bracket</span><span style="color: #94E2D5;"> =</span><span style="color: #FAB387;"> True</span></span>
+<span class="giallo-l"><span>            current</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">append</span><span style="color: #9399B2;">(</span><span>c</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        elif</span><span> c</span><span style="color: #94E2D5;"> ==</span><span style="color: #A6E3A1;"> &#39;]&#39;</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span>            in_bracket</span><span style="color: #94E2D5;"> =</span><span style="color: #FAB387;"> False</span></span>
+<span class="giallo-l"><span>            current</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">append</span><span style="color: #9399B2;">(</span><span>c</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        elif</span><span> c</span><span style="color: #94E2D5;"> ==</span><span style="color: #A6E3A1;"> &#39;:&#39;</span><span style="color: #CBA6F7;"> and not</span><span> in_bracket</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">            if</span><span style="color: #FAB387;font-style: italic;"> len</span><span style="color: #9399B2;">(</span><span>current</span><span style="color: #9399B2;">):</span></span>
+<span class="giallo-l"><span>                patterns</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">append</span><span style="color: #9399B2;">(</span><span style="color: #A6E3A1;">&#39;&#39;</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">join</span><span style="color: #9399B2;">(</span><span>current</span><span style="color: #9399B2;">))</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">                del</span><span style="color: #EBA0AC;font-style: italic;"> current</span><span style="color: #9399B2;">[:]</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        else</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span>            current</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">append</span><span style="color: #9399B2;">(</span><span>c</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    if</span><span style="color: #FAB387;font-style: italic;"> len</span><span style="color: #9399B2;">(</span><span>current</span><span style="color: #9399B2;">):</span></span>
+<span class="giallo-l"><span>        patterns</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">append</span><span style="color: #9399B2;">(</span><span style="color: #A6E3A1;">&#39;&#39;</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">join</span><span style="color: #9399B2;">(</span><span>current</span><span style="color: #9399B2;">))</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">    self</span><span style="color: #9399B2;">.</span><span style="color: #EBA0AC;font-style: italic;">_globignore_cache</span><span style="color: #9399B2;">[</span><span style="color: #EBA0AC;font-style: italic;">globignore</span><span style="color: #9399B2;">]</span><span style="color: #94E2D5;"> =</span><span> patterns</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    return</span><span> patterns</span></span></code></pre><h3 id="caching-for-performance">Caching for Performance</h3>
+<p>Andy suggested caching the parsed patterns. Since GLOBIGNORE doesn't change often during script execution, we avoid re-parsing the same string:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="python"><span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">self</span><span style="color: #9399B2;">.</span><span>_globignore_cache</span><span style="color: #94E2D5;"> =</span><span style="color: #9399B2;"> {}</span><span style="color: #9399B2;font-style: italic;">  # type: Dict[str, List[str]]</span></span></code></pre>
+<p>The cache maps the raw GLOBIGNORE string to its parsed pattern list.</p>
+<h3 id="filtering-results">Filtering Results</h3>
+<p>After <code>glob()</code> returns matches, I filter them. This is a module-level helper function:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="python"><span class="giallo-l"><span style="color: #CBA6F7;">def</span><span style="color: #89B4FA;font-style: italic;"> _StringMatchesAnyPattern</span><span style="color: #9399B2;">(</span><span style="color: #EBA0AC;font-style: italic;">s</span><span style="color: #9399B2;">,</span><span style="color: #EBA0AC;font-style: italic;"> patterns</span><span style="color: #9399B2;">):</span></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;">    # type: (str, List[str]) -&gt; bool</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &quot;&quot;&quot;Check if string matches any pattern in the list.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    Returns True if s matches any pattern, or if s is . or ..</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    (which are always filtered when GLOBIGNORE is set).</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &quot;&quot;&quot;</span></span>
+<span class="giallo-l"><span>    basename</span><span style="color: #94E2D5;"> =</span><span> os_path</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">basename</span><span style="color: #9399B2;">(</span><span>s</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    if</span><span> basename</span><span style="color: #CBA6F7;"> in</span><span style="color: #9399B2;"> (</span><span style="color: #A6E3A1;">&#39;.&#39;</span><span style="color: #9399B2;">,</span><span style="color: #A6E3A1;"> &#39;..&#39;</span><span style="color: #9399B2;">):</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        return</span><span style="color: #FAB387;"> True</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>    flags</span><span style="color: #94E2D5;"> =</span><span style="color: #FAB387;"> 0</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    for</span><span> pattern</span><span style="color: #CBA6F7;"> in</span><span> patterns</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        if</span><span> libc</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">fnmatch</span><span style="color: #9399B2;">(</span><span>pattern</span><span style="color: #9399B2;">,</span><span> s</span><span style="color: #9399B2;">,</span><span> flags</span><span style="color: #9399B2;">):</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">            return</span><span style="color: #FAB387;"> True</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    return</span><span style="color: #FAB387;"> False</span></span></code></pre>
+<p>In <code>_Glob()</code>, the filtering has two branches - one for when GLOBIGNORE is set, and one for the default behavior:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="python"><span class="giallo-l"><span style="color: #CBA6F7;">if</span><span> globignore_patterns</span><span style="color: #CBA6F7;"> is not</span><span style="color: #FAB387;"> None</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span>    filtered</span><span style="color: #94E2D5;"> =</span><span style="color: #9399B2;"> []</span><span style="color: #9399B2;font-style: italic;">  # type: List[str]</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    for</span><span> s</span><span style="color: #CBA6F7;"> in</span><span> results</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        if not</span><span style="color: #89B4FA;"> _StringMatchesAnyPattern</span><span style="color: #9399B2;">(</span><span>s</span><span style="color: #9399B2;">,</span><span> globignore_patterns</span><span style="color: #9399B2;">):</span></span>
+<span class="giallo-l"><span>            filtered</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">append</span><span style="color: #9399B2;">(</span><span>s</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span>    results</span><span style="color: #94E2D5;"> =</span><span> filtered</span></span>
+<span class="giallo-l"><span>    n</span><span style="color: #94E2D5;"> =</span><span style="color: #FAB387;font-style: italic;"> len</span><span style="color: #9399B2;">(</span><span>results</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">else</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;">    # Default behavior: just filter . and ..</span></span>
+<span class="giallo-l"><span>    dotfile_filtered</span><span style="color: #94E2D5;"> =</span><span style="color: #9399B2;"> []</span><span style="color: #9399B2;font-style: italic;">  # type: List[str]</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    for</span><span> s</span><span style="color: #CBA6F7;"> in</span><span> results</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">        if</span><span> s</span><span style="color: #CBA6F7;"> not in</span><span style="color: #9399B2;"> (</span><span style="color: #A6E3A1;">&#39;.&#39;</span><span style="color: #9399B2;">,</span><span style="color: #A6E3A1;"> &#39;..&#39;</span><span style="color: #9399B2;">):</span></span>
+<span class="giallo-l"><span>            dotfile_filtered</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">append</span><span style="color: #9399B2;">(</span><span>s</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span>    results</span><span style="color: #94E2D5;"> =</span><span> dotfile_filtered</span></span>
+<span class="giallo-l"><span>    n</span><span style="color: #94E2D5;"> =</span><span style="color: #FAB387;font-style: italic;"> len</span><span style="color: #9399B2;">(</span><span>results</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>out</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">extend</span><span style="color: #9399B2;">(</span><span>results</span><span style="color: #9399B2;">)</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">return</span><span> n</span></span></code></pre><h3 id="implicit-dotglob">Implicit dotglob</h3>
+<p>When GLOBIGNORE is set, bash enables dotglob automatically. I replicate this:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="python"><span class="giallo-l"><span style="color: #CBA6F7;">if</span><span style="color: #F38BA8;font-style: italic;"> self</span><span style="color: #9399B2;">.</span><span>exec_opts</span><span style="color: #9399B2;">.</span><span style="color: #89B4FA;">dotglob</span><span style="color: #9399B2;">()</span><span style="color: #CBA6F7;"> or</span><span> globignore_patterns</span><span style="color: #CBA6F7;"> is not</span><span style="color: #FAB387;"> None</span><span style="color: #9399B2;">:</span></span>
+<span class="giallo-l"><span>    flags</span><span style="color: #94E2D5;"> |=</span><span> GLOB_PERIOD</span></span></code></pre><h2 id="test-coverage">Test Coverage</h2>
+<p>The spec test file <code>spec/globignore.test.sh</code> went from <code>oils_failures_allowed: 14</code> to <code>oils_failures_allowed: 1</code> - meaning 13 previously-failing test cases now pass.</p>
+<p>I also added a new test case to verify that <code>.</code> and <code>..</code> are always filtered when GLOBIGNORE is set:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #9399B2;font-style: italic;">#### . and .. always filtered when GLOBIGNORE is set</span></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># When GLOBIGNORE is set to any non-null value, . and .. are always filtered</span></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># even if they don&#39;t match the patterns</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">shopt</span><span style="color: #A6E3A1;"> -u globskipdots</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">touch</span><span style="color: #A6E3A1;"> .hidden</span></span>
+<span class="giallo-l"><span>GLOBIGNORE</span><span style="color: #94E2D5;">=</span><span style="color: #A6E3A1;">*.txt</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">echo</span><span style="color: #A6E3A1;"> .</span><span>*</span></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;">## STDOUT:</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">.hidden</span></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;">## END</span></span></code></pre><h2 id="running-the-tests">Running the Tests</h2>
+<p>To verify the implementation:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># Run GLOBIGNORE spec tests</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">test/spec.sh</span><span style="color: #A6E3A1;"> globignore</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># Run type checking</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">test/typecheck.sh</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># Run in C++ mode (after building)</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">test/spec.sh</span><span style="color: #A6E3A1;"> globignore --oils-cpp-bin-sh</span></span></code></pre><h2 id="demo">Demo</h2>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">$</span><span style="color: #A6E3A1;"> bin/osh</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">osh$</span><span style="color: #A6E3A1;"> touch foo.txt bar.txt hello.py</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">osh$</span><span style="color: #A6E3A1;"> GLOBIGNORE=&#39;*.txt&#39;</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">osh$</span><span style="color: #A6E3A1;"> echo</span><span> *</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">hello.py</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">osh$</span><span style="color: #A6E3A1;"> touch .hidden</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">osh$</span><span style="color: #A6E3A1;"> echo .</span><span>*</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">.hidden</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">osh$</span><span style="color: #A6E3A1;"> GLOBIGNORE=&#39;*.o:*.h&#39;</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">osh$</span><span style="color: #A6E3A1;"> touch main.c main.o main.h</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">osh$</span><span style="color: #A6E3A1;"> echo main</span><span>*</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">main.c</span></span></code></pre>
+<p>Pull request :: <a class="external" rel="external" href="https://github.com/oils-for-unix/oils/pull/2505">#2505</a></p>
+
+		</div>
+		
+<br>
+<div style="text-align: center;">
+  <a href="/" style="font-weight: bold; font-size: 30px; font-family: 'Merriweather';">cd ~</a>
+</div>
+
+
+
+						</div>
+				 </section>
+
+		</main>
+		<footer></footer>
+ </body>
+
+</html>
+

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - blogroll</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/blogroll/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-09-22T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/tags/blogroll/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Blogroll</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/programming-blogs/"/>
+        <id>https://daveads.github.io/note/programming-blogs/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/programming-blogs/">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;rachelbythebay.com&#x2F;w&#x2F;&quot;&gt;Rachel Kroll&lt;&#x2F;a&gt;
+Software, technology, sysadmin war stories&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;xania.org&#x2F;&quot;&gt;Matt godbolt&#x27;s blog&lt;&#x2F;a&gt;
+c++, rust&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;pvk.ca&#x2F;&quot;&gt;PAUL KHUONG&lt;&#x2F;a&gt;
+: SOME LISP&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.windytan.com&#x2F;&quot;&gt;Oona Raisanen&lt;&#x2F;a&gt;
+a blog about sound &amp;amp; signals&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;tonsky.me&#x2F;&quot;&gt;Nikita Prokopov&lt;&#x2F;a&gt;
+programming and UI design&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;nicole.express&#x2F;listing.html&quot;&gt;Nicole Express&lt;&#x2F;a&gt;
+Explorations on old systems&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;idea.popcount.org&#x2F;&quot;&gt;Marek Majkowski&lt;&#x2F;a&gt;
+random experiments&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;brooker.co.za&#x2F;blog&#x2F;&quot;&gt;Marc Brooker&lt;&#x2F;a&gt;
+A mix of theory and wisdom from a distributed systems engineer&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;lindzey.github.io&#x2F;index.html&quot;&gt;Laura Lindzey&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;aphyr.com&#x2F;&quot;&gt;Kyle Kingsbury&lt;&#x2F;a&gt;
+distributed system&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.snellman.net&#x2F;blog&#x2F;&quot;&gt;Juho Snellman&#x27;s Weblog&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;blog.regehr.org&#x2F;&quot;&gt;John Regehr&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;check out =&amp;gt; &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;blog.regehr.org&#x2F;archives&#x2F;213&quot;&gt;A Guide to Undefined Behavior in C and C++, Part 1&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;preshing.com&#x2F;&quot;&gt;Jeff Preshing&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;blogs.whitman.edu&#x2F;countingfromzero&#x2F;&quot;&gt;Janet Davis&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.scattered-thoughts.net&#x2F;&quot;&gt;Jamie Brandon&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.akalin.com&#x2F;&quot;&gt;Fred Akalin&lt;&#x2F;a&gt;
+Notes on math, tech, and everything in between&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;fabiensanglard.net&#x2F;&quot;&gt;Fabien Sanglard&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;fgiesen.wordpress.com&#x2F;&quot;&gt;Fabian Giesen&lt;&#x2F;a&gt;
+Emphasis on computer architecture, compression, graphics, and signal processing&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;eli.thegreenplace.net&#x2F;&quot;&gt;Eli Bendersky&#x27;s website&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;www.chrisfenton.com&#x2F;&quot;&gt;Chris Fenton&lt;&#x2F;a&gt;
+Hardware&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;jakob.space&#x2F;&quot;&gt; Jakob&lt;&#x2F;a&gt;
+computer security&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;blog.jse.li&#x2F;&quot;&gt;Jesse Li&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;acha.ninja&#x2F;&quot;&gt;andrew chambers&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.xn--hrdin-gra.se&#x2F;&quot;&gt;Tomas&#x27; place in cyber­space&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.gwern.net&#x2F;index&quot;&gt;Gwern Branwen&lt;&#x2F;a&gt;
+psychology, statistics, and technology&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;beepb00p.xyz&#x2F;&quot;&gt;karlicoss&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;danluu.com&#x2F;&quot;&gt;danluu&lt;&#x2F;a&gt;
+hardware and programming&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mrale.ph&#x2F;&quot;&gt;mroleph&lt;&#x2F;a&gt;
+a compiler engineer&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;stevelosh.com&#x2F;&quot;&gt;Steve&lt;&#x2F;a&gt;
+programmer&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.evanmiller.org&#x2F;&quot;&gt;Evan Miller&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;nullprogram.com&#x2F;&quot;&gt;Chris-Wellons&lt;&#x2F;a&gt;
+software engineer&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;baturin.org&#x2F;&quot;&gt;Daniil Baturin&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;bernsteinbear.com&#x2F;&quot;&gt;Max Bernstein&lt;&#x2F;a&gt;
+Languages *****&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;blog.kingcons.io&#x2F;&quot;&gt;Brit Butler&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;blog.demofox.org&#x2F;&quot;&gt;The blog at the bottom of the sea&lt;&#x2F;a&gt;
+crypto, game-development, graphics, math, programming, video-games&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;darksi.de&#x2F;&quot;&gt;Fedor Indutny&#x27;s Blog&lt;&#x2F;a&gt;
+binary-exploitation, c++, crypto, programming, security&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;bradhodge.ca&#x2F;blog&#x2F;&quot;&gt;Brad&#x27;s Blog&lt;&#x2F;a&gt; -hardware&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;technomancy.us&#x2F;list&quot;&gt;Technomancy&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;www.philipzucker.com&#x2F;&quot;&gt; Philip Zucker&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;blog.benwiener.com&#x2F;&quot;&gt;You&#x27;ve Reached the Center of the Internet&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.declanoller.com&#x2F;&quot;&gt;declan&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;hardware&quot;&gt;HARDWARE&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;cowlark.com&#x2F;&quot;&gt;David Given&lt;&#x2F;a&gt; - hardware, compiler&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;randomascii.wordpress.com&#x2F;&quot;&gt;Random ASCII – tech blog of Bruce Dawson&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;ancientelectronics.wordpress.com&#x2F;&quot;&gt;ancientelectronics&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;thestone.zone&#x2F;&quot;&gt;The Stone Zone&lt;&#x2F;a&gt; hardware, lisp, programming, reversing&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;wargio.github.io&#x2F;about&#x2F;&quot;&gt;&#x2F;dev&#x2F;ram0&lt;&#x2F;a&gt; Cryptography, Reverse Engineering&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;travisgoodspeed.blogspot.com&#x2F;&quot;&gt;TRAVIS GOODSPEED&#x27;S BLOG&lt;&#x2F;a&gt; hardware&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;retro.moe&#x2F;&quot;&gt;RETRO.MOE&lt;&#x2F;a&gt; - hardware&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.rtl-sdr.com&#x2F;&quot;&gt;rtl-sdr.com&lt;&#x2F;a&gt; ham-radio, hardware, programming&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;nickcano.com&#x2F;&quot;&gt;Nick Cano&lt;&#x2F;a&gt; capture-the-flag, game-hacking, hardware, programming, reversing, video-games&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;nick.zoic.org&#x2F;&quot;&gt;... and another thing ...&lt;&#x2F;a&gt;
+capture-the-flag, game-hacking, hardware, programming, reversing, video-games&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;jamchamb.net&#x2F;&quot;&gt;jamchamb&#x27;s blog&lt;&#x2F;a&gt; - c, hardware, programming, retro-tech, reversing&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;reversing&quot;&gt;Reversing&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.shelliscoming.com&#x2F;&quot;&gt;Shell is coming...&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;www.codersnotes.com&#x2F;notes&#x2F;&quot;&gt;Notes On Programming&lt;&#x2F;a&gt; hardware, programming&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;shell-storm.org&#x2F;&quot;&gt;Jonathan Salwan&lt;&#x2F;a&gt; low-level computing, program analysis, reverse engineering, bugs exploitation.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;radareorg.github.io&#x2F;blog&#x2F;&quot;&gt;The radare team&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;j00ru.vexillium.org&#x2F;&quot;&gt;jooru&#x2F;&#x2F;vx tech blog&lt;&#x2F;a&gt; Windows, reversing and low-level security&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;gynvael.coldwind.pl&#x2F;?blog=1&amp;amp;lang=en&quot;&gt;Gynvael Coldwind&lt;&#x2F;a&gt;
+capture-the-flag, game-development, programming, reversing, security, video-games&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;faehnri.ch&#x2F;&quot;&gt;faehnri.ch&lt;&#x2F;a&gt; c, c++, game-hacking, reversing, video-games&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;christine.website&#x2F;blog&quot;&gt;Christine Dodrill&#x27;s Blog&lt;&#x2F;a&gt; *nix, programming, rust&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;thume.ca&#x2F;&quot;&gt;Tristans Site&lt;&#x2F;a&gt; capture-the-flag, compilers, programming, reversing, rust, security&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;eta.st&#x2F;posts.html&quot;&gt;η (eta)&lt;&#x2F;a&gt; *nix, programming, rust&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;rufflewind.com&#x2F;&quot;&gt;Rufflewind&#x27;s Scratchpad&lt;&#x2F;a&gt; functional-programming, haskell, *nix, programming, rust&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;norasandler.com&#x2F;&quot;&gt;Nora Sandler&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;marioslab.io&#x2F;posts&#x2F;&quot;&gt;Marios Lab&lt;&#x2F;a&gt; compilers, programming&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;gpfault.net&#x2F;&quot;&gt;General Protection Fault&lt;&#x2F;a&gt; c++, compilers, graphics, programming&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;bluishcoder.co.nz&#x2F;&quot;&gt;BLUISH CODER&lt;&#x2F;a&gt; PROGRAMMING LANGUAGES&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;zeux.io&#x2F;&quot;&gt;Bits, pixels, cycles and more&lt;&#x2F;a&gt; c++, graphics, programming&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;fabiensanglard.net&#x2F;&quot;&gt;Fabien Sanglard&#x27;s Website&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;hshrzd.wordpress.com&#x2F;&quot;&gt;hasherezade&#x27;s 1001 nights&lt;&#x2F;a&gt; RE &amp;amp;&amp;amp; malware analysis&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;text.causal.agency&#x2F;&quot;&gt;text.causal.agency&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;operating-system&quot;&gt;operating system&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;people.kernel.org&#x2F;read&quot;&gt;people.kernel.org &lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;outflux.net&#x2F;blog&#x2F;&quot;&gt;codeblog&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;math&quot;&gt;Math&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;datakinds.github.io&#x2F;&quot;&gt;datakind&#x27;s blog&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;nickdrozd.github.io&#x2F;&quot;&gt;Something Something Programming&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;infinityplusonemath.wordpress.com&#x2F;&quot;&gt;Infinity Plus One&lt;&#x2F;a&gt; - math&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;erkaman.github.io&#x2F;index.html&quot;&gt;Eric Arnebäck&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.evanmiller.org&#x2F;&quot;&gt; Evan Miller’s &lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;michaelnielsen.org&#x2F;blog&#x2F;&quot;&gt;Michael Nielsen&lt;&#x2F;a&gt; cogsci, math, practices, programming&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;asawicki.info&#x2F;&quot;&gt;Adam Sawicki&lt;&#x2F;a&gt;
+c++, game-development, graphics, math, programming, video-games, windows&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;[]&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;others&quot;&gt;Others&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;geohot.github.io&#x2F;blog&#x2F;&quot;&gt;george hotz&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;vitalik.ca&#x2F;&quot;&gt;Vitalik Buterin&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;blog.gregbrockman.com&#x2F;&quot;&gt;GREG BROCKMAN&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;karpathy.ai&#x2F;&quot;&gt;Andrej Karpathy&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&#x2F;&quot;&gt;Hacker news&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;ctf-s&quot;&gt;CTF&#x27;s&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;ctftime.org&#x2F;&quot;&gt;ctf time&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.hackthebox.com&#x2F;&quot;&gt;Hack the box&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Tech blogs i find interesting</title>
+        <published>2020-01-29T00:00:00+00:00</published>
+        <updated>2022-09-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/interesting-tech-blogs/"/>
+        <id>https://daveads.github.io/writing/interesting-tech-blogs/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/interesting-tech-blogs/">&lt;h3 id=&quot;a-list-of-cs-programmers-blogs-i-find-interesting&quot;&gt;&lt;strong&gt;A list of Cs&#x2F;Programmers blogs i find interesting&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;matt.might.net&#x2F;&quot;&gt;Matt Might&lt;&#x2F;a&gt; Professor of Internal Medicine and Computer Science&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;lambda-the-ultimate.org&#x2F;&quot;&gt;Lambda the Ultimate&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;lemire.me&#x2F;blog&#x2F;&quot;&gt;Daniel Lemire&#x27;s blog&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;jeremykun.com&#x2F;&quot;&gt;Math ∩ Programming&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;flaviocopes.com&#x2F;&quot;&gt;flavio copes&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.nayuki.io&#x2F;&quot;&gt;Project Nayuki&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;www.paulgraham.com&#x2F;index.html&quot;&gt;paul-graham&lt;&#x2F;a&gt; -Startup&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;overreacted.io&#x2F;&quot;&gt;Overreacted&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;norvig.com&#x2F;&quot;&gt;Peter Norvig&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;eli.thegreenplace.net&#x2F;&quot;&gt;Eli Bendersky&#x27;s website&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;blog.jessfraz.com&#x2F;&quot;&gt;Ramblings from Jessie&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;jvns.ca&#x2F;&quot;&gt;Julia Evans&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;cliffle.com&#x2F;&quot;&gt;cliffle&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;blog.samaltman.com&#x2F;&quot;&gt;Sam Altman&lt;&#x2F;a&gt; - Startup&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;journal.stuffwithstuff.com&#x2F;&quot;&gt;Bob Nystrom&lt;&#x2F;a&gt; -language&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;steveklabnik.com&#x2F;&quot;&gt;steve&lt;&#x2F;a&gt; -rust&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;coertvonk.com&#x2F;&quot;&gt;coertvonk&lt;&#x2F;a&gt; - Embedded Software Engineer&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;zserge.com&#x2F;&quot;&gt;Serge Zaitsev&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;br&gt;
+&lt;h2 id=&quot;related-list&quot;&gt;Related list&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&#x2F;note&#x2F;programming-blogs&#x2F;&quot;&gt;programming blogs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

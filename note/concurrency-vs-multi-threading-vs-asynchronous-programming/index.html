@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	
+		<!-- meta data -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="author" content="Daveads">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Daveads">
+	
+
+
+<meta property="og:title" content="Concurrency vs Multi-threading vs Asynchronous Programming">
+<meta property="og:type" content="notes">
+<meta property="og:url" content="https://daveads.github.io&#x2F;note&#x2F;concurrency-vs-multi-threading-vs-asynchronous-programming&#x2F;">
+
+
+
+		
+			<meta name="keywords" content="[concurrency, parallelism, threads, asynchronous]">
+		
+
+
+
+
+<meta name="description" content="">
+
+
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="daveads" href="https://daveads.github.io/atom.xml">
+
+
+	<link rel="canonical" href="https://daveads.github.io&#x2F;note&#x2F;concurrency-vs-multi-threading-vs-asynchronous-programming&#x2F;">
+
+
+<!-- Sass-file: minima.css -->
+<link rel="stylesheet" href="/minima.css">
+
+<!-- css files -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="/assets/css/tagc.css">
+<link rel="stylesheet" href="/assets/css/pagenav.css">
+<link rel="stylesheet" href="/assets/css/shortcodes.css"
+
+
+<!-- google_analytics -->
+
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-087FCJRFH2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-087FCJRFH2', {
+    'cookie_flags': 'SameSite=None;Secure',
+  });
+</script>
+
+
+
+		<!-- Google discover -->
+		<link rel="alternate" type="application/rss+xml" href="https://feeds.feedburner.com/blogspot/amDG" />
+		<!-- ends -->
+
+
+<!-- <script type="text/javascript" src="/assets/js/blink.js" defer></script> -->
+<script type="text/javascript" src="/assets/js/scroll-top-button.js" defer></script>
+
+<!-- PWA -->
+<script>
+  if ("serviceWorker" in navigator) {
+if (navigator.serviceWorker.controller) {
+   console.log("An active service worker found, no need to register");
+   } else {
+     // Register the service worker
+     navigator.serviceWorker
+       .register("/serviceworker.js", {
+         scope: "./"
+       })
+       .then(function (reg) {
+         console.log("Service worker has been registered for scope: " + reg.scope);
+       });
+    }
+}
+</script>
+
+<!-- programmable search engine -->
+<!-- <script async src="https://cse.google.com/cse.js?cx=acd2a3a68756706a3"></script> -->
+
+
+<! REACT SHITS -->
+<!-- end react -->
+
+
+<link rel="manifest" type="application/manifest+json" href="https://daveads.github.io/manifest.json">
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
+
+<title>
+		
+		Daveads - Concurrency vs Multi-threading vs Asynchronous Programming
+
+</title>
+
+
+</head>
+ <body>
+		
+
+
+		<button class="scrollToTopBtn" title="Go to top">
+		<img src="/assets/images/186407_arrow_up_icon.png
+		" height ="20" width="20" />
+		</button>
+
+		<main class="page-content" aria-label="Content">
+
+				 <section class="section">
+						<div class="wrapper">
+								
+
+<article class="post h-entry" itemscope="articleBody" itemtype="http://schema.org/BlogPosting">
+<header class="post-header">
+
+		 
+		 
+		 
+		<h1  style="text-align:center;" itemprop="name headline">
+				NOTE : Concurrency vs Multi-threading vs Asynchronous Programming
+		</h1>
+
+
+		 <small style="float:right; font-size: 15px;"><a href="/note">See all notes</a>
+		 	|| <a href="/note-archive">Archive</a>
+		 </small>
+
+<p class="post-meta">
+
+    
+		<time datetime="2022-06-29" itemprop="datePublished">2022-06-29</time>
+		
+    
+</p>
+
+		<div>
+			<div class="back_btn">
+    <button type="button" onclick="window.history.go(-1)" 
+    
+    
+    style="float:right; font-size: 18px; background-color: black; color: #13b7ea;"
+    >
+    
+     << cd .. 
+    </button>
+</div>
+<br>
+
+
+			<!--
+			
+		
+			Categories :
+			
+			<small >
+			<a class="tag-link" href="https://daveads.github.io/notec/computer-architecture/">#Computer-architecture</a>
+			</small>
+			<br>
+			<br>
+			
+			
+			-->
+
+			
+	
+			Tags :
+			
+			<small>
+			<a class="tag-link" href="https://daveads.github.io/notet/concurrency/">#concurrency</a>
+			</small>
+			
+			<small>
+			<a class="tag-link" href="https://daveads.github.io/notet/parallelism/">#parallelism</a>
+			</small>
+			
+			<small>
+			<a class="tag-link" href="https://daveads.github.io/notet/threads/">#threads</a>
+			</small>
+			
+			<small>
+			<a class="tag-link" href="https://daveads.github.io/notet/asynchronous/">#asynchronous</a>
+			</small>
+			
+			
+		</div>
+
+</header>
+	
+		<div class="post-content e-content" itemprop="articleBody">
+		<ul>
+<li>Concurrency &amp;&amp; Parallelism</li>
+<li>Threads (multi-threaded) &amp;&amp; Processes</li>
+<li>Synchronous &amp;&amp; Asynchronous</li>
+</ul>
+<h3 id="concurrency-parallelism">Concurrency &amp;&amp; Parallelism</h3>
+<p><strong>Concurrency:</strong></p>
+<p>Imagine a task where you have to "sing and eat":</p>
+<ol>
+<li>Sing for a time</li>
+<li>Eat for a time</li>
+</ol>
+<p>This task is performed concurrently. Concurrency is executing tasks at the same time but not necessarily simultaneously.</p>
+<p>Concurrency is handled differently in various processors. In a single core, concurrency is handled via a process called <strong>context-switching</strong>.</p>
+<p><strong>Parallelism:</strong></p>
+<p>Given a task of <em><strong>cooking and speaking to a friend over the phone</strong></em>, these two tasks can be done simultaneously.</p>
+<blockquote>
+<p>"Parallelism means performing two or more tasks simultaneously. Parallel computing in computer science refers to the process of performing multiple calculations simultaneously."</p>
+</blockquote>
+<p>Concurrency and parallelism refer to computer architectures focused on how tasks or computations are performed:</p>
+<ul>
+<li>In a single core, concurrency happens with tasks executing over the same time period via context switching, i.e. only one task gets executed.</li>
+<li>In a multi-core environment, concurrency can be achieved via parallelism, in which multiple tasks are executed simultaneously.</li>
+</ul>
+<h2 id="threads-processes">Threads &amp; Processes</h2>
+<p><strong>Threads:</strong> These are sequences of executing code that can be executed independently of one another. A program can be single-threaded or multi-threaded. It's the smallest unit of a task that can be executed by an OS.</p>
+<p><strong>Processes:</strong> A program is an instance of a running program. A program can have multiple processes. A process usually starts with a single thread but down the line of execution, it can create multiple threads.</p>
+<p><strong>Sync and Async</strong></p>
+<p>Tasks are executed one after the other, e.g. giving a task to write a letter to your mom and a letter to your friend.</p>
+<p><strong>Async:</strong> When one task gets executed, you could switch to a different task without waiting for the previous one to get completed.</p>
+<ul>
+<li>Sync and Async are <em>programming models</em>.</li>
+</ul>
+<h3 id="synchronous-and-asynchronous-in-a-single-and-multi-threaded-environment">Synchronous and Asynchronous in a Single and Multi-threaded Environment</h3>
+<p><strong>Synchronous:</strong></p>
+<ul>
+<li>Single-threaded: Each task gets executed one after another. Each task waits for its previous task to get executed.</li>
+<li>Multi-threaded: Tasks get executed in different threads but wait for any other executing tasks on any other thread.</li>
+</ul>
+<p><strong>Asynchronous:</strong></p>
+<ul>
+<li>Single-threaded: Tasks start executing without waiting for a different task to finish. At a given time, a single task gets executed.</li>
+<li>Multi-threaded: Tasks get executed in different threads without waiting for any tasks and independently finish off their executions.</li>
+</ul>
+<p>Concurrency and Parallelism:</p>
+<ul>
+<li>The way tasks are executed.</li>
+</ul>
+<p>Synchronous and Asynchronous -&gt;</p>
+<ul>
+<li>Programming models.</li>
+</ul>
+<p>Single-threaded and Multi-threaded -&gt;</p>
+<ul>
+<li>The environment of task execution.</li>
+</ul>
+<p>Async helps to achieve concurrency. Async in a multithread environment is a way to achieve parallelism.</p>
+<p>Synchronously: This is how we code normally:</p>
+<blockquote>
+<p>"You wait for an operation to finish before going to the next or moving over to the other one."</p>
+</blockquote>
+<hr />
+<ul>
+<li>Concurrency: Threading, async I/O</li>
+<li>Parallelism: Multiprocessing</li>
+</ul>
+<hr />
+<p>Links:
+<a class="external" rel="external" href="https://medium.com/swift-india/concurrency-parallelism-threads-processes-async-and-sync-related-39fd951bc61d">Medium Article</a></p>
+
+		</div>
+		
+<br>
+<div style="text-align: center;">
+  <a href="/" style="font-weight: bold; font-size: 30px; font-family: 'Merriweather';">cd ~</a>
+</div>
+
+
+
+						</div>
+				 </section>
+
+		</main>
+		<footer></footer>
+ </body>
+
+</html>
+

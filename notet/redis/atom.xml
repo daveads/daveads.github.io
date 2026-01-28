@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - redis</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notet/redis/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-06-11T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notet/redis/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Redis</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/redis-server/"/>
+        <id>https://daveads.github.io/note/redis-server/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/redis-server/">&lt;p&gt;&lt;strong&gt;start redis&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;redis-server&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&#x2F;&#x2F; don&#x27;t know how this works yet&lt;&#x2F;p&gt;
+&lt;p&gt;CONFIG GET CONFIG_SETTING_NAME&lt;&#x2F;p&gt;
+&lt;p&gt;methods = GET AND SET&lt;&#x2F;p&gt;
+&lt;p&gt;CONFIG GET *
+&#x2F;&#x2F; this gets all config&lt;&#x2F;p&gt;
+&lt;p&gt;update config by redis.conf or CONFIG SET&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F;strings&lt;&#x2F;p&gt;
+&lt;p&gt;SET name &quot;using redis&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;GET name &#x2F;&#x2F; outputs stored string&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; Hashes&lt;&#x2F;p&gt;
+&lt;p&gt;HMSET user:1 username password&lt;&#x2F;p&gt;
+&lt;p&gt;HGETALL user:1&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F;Lists&lt;&#x2F;p&gt;
+&lt;p&gt;lpush dbs mysql
+lpush dbs mariadb
+lpush dbs sqlite&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;gets the inserted list out&lt;&#x2F;em&gt;
+lrange dbs 0 2&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F;Sets - unordered collection of strings&lt;&#x2F;p&gt;
+&lt;p&gt;sadd check me
+sadd check data
+sadd check email
+sadd check her&lt;&#x2F;p&gt;
+&lt;p&gt;get the sets
+smemebers checks&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F;sorted sets&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

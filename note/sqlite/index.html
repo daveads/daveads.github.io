@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	
+		<!-- meta data -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="author" content="Daveads">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Daveads">
+	
+
+
+<meta property="og:title" content="sqlite 3">
+<meta property="og:type" content="notes">
+<meta property="og:url" content="https://daveads.github.io&#x2F;note&#x2F;sqlite&#x2F;">
+
+
+
+		
+			<meta name="keywords" content="[sqlite]">
+		
+
+
+
+
+<meta name="description" content="">
+
+
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="daveads" href="https://daveads.github.io/atom.xml">
+
+
+	<link rel="canonical" href="https://daveads.github.io&#x2F;note&#x2F;sqlite&#x2F;">
+
+
+<!-- Sass-file: minima.css -->
+<link rel="stylesheet" href="/minima.css">
+
+<!-- css files -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="/assets/css/tagc.css">
+<link rel="stylesheet" href="/assets/css/pagenav.css">
+<link rel="stylesheet" href="/assets/css/shortcodes.css"
+
+
+<!-- google_analytics -->
+
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-087FCJRFH2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-087FCJRFH2', {
+    'cookie_flags': 'SameSite=None;Secure',
+  });
+</script>
+
+
+
+		<!-- Google discover -->
+		<link rel="alternate" type="application/rss+xml" href="https://feeds.feedburner.com/blogspot/amDG" />
+		<!-- ends -->
+
+
+<!-- <script type="text/javascript" src="/assets/js/blink.js" defer></script> -->
+<script type="text/javascript" src="/assets/js/scroll-top-button.js" defer></script>
+
+<!-- PWA -->
+<script>
+  if ("serviceWorker" in navigator) {
+if (navigator.serviceWorker.controller) {
+   console.log("An active service worker found, no need to register");
+   } else {
+     // Register the service worker
+     navigator.serviceWorker
+       .register("/serviceworker.js", {
+         scope: "./"
+       })
+       .then(function (reg) {
+         console.log("Service worker has been registered for scope: " + reg.scope);
+       });
+    }
+}
+</script>
+
+<!-- programmable search engine -->
+<!-- <script async src="https://cse.google.com/cse.js?cx=acd2a3a68756706a3"></script> -->
+
+
+<! REACT SHITS -->
+<!-- end react -->
+
+
+<link rel="manifest" type="application/manifest+json" href="https://daveads.github.io/manifest.json">
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
+
+<title>
+		
+		Daveads - sqlite 3
+
+</title>
+
+
+</head>
+ <body>
+		
+
+
+		<button class="scrollToTopBtn" title="Go to top">
+		<img src="/assets/images/186407_arrow_up_icon.png
+		" height ="20" width="20" />
+		</button>
+
+		<main class="page-content" aria-label="Content">
+
+				 <section class="section">
+						<div class="wrapper">
+								
+
+<article class="post h-entry" itemscope="articleBody" itemtype="http://schema.org/BlogPosting">
+<header class="post-header">
+
+		 
+		 
+		 
+		<h1  style="text-align:center;" itemprop="name headline">
+				NOTE : sqlite 3
+		</h1>
+
+
+		 <small style="float:right; font-size: 15px;"><a href="/note">See all notes</a>
+		 	|| <a href="/note-archive">Archive</a>
+		 </small>
+
+<p class="post-meta">
+
+    
+		<time datetime="2022-06-11" itemprop="datePublished">2022-06-11</time>
+		
+    
+</p>
+
+		<div>
+			<div class="back_btn">
+    <button type="button" onclick="window.history.go(-1)" 
+    
+    
+    style="float:right; font-size: 18px; background-color: black; color: #13b7ea;"
+    >
+    
+     << cd .. 
+    </button>
+</div>
+<br>
+
+
+			<!--
+			
+		
+			Categories :
+			
+			<small >
+			<a class="tag-link" href="https://daveads.github.io/notec/learned/">#Learned</a>
+			</small>
+			<br>
+			<br>
+			
+			
+			-->
+
+			
+	
+			Tags :
+			
+			<small>
+			<a class="tag-link" href="https://daveads.github.io/notet/sqlite/">#sqlite</a>
+			</small>
+			
+			
+		</div>
+
+</header>
+	
+		<div class="post-content e-content" itemprop="articleBody">
+		<h3 id="followed-tutorials-from-https-www-sqlitetutorial-net-sqlite-limit">FOLLOWED TUTORIALS FROM https://www.sqlitetutorial.net/sqlite-limit/</h3>
+<p>open database from terminal</p>
+<p>.open name.db</p>
+<p><strong>.mode "to change way at which datbase is display on the terminal"</strong></p>
+<p><code>.tables</code> // shows tables available in the terminal</p>
+<p><code>SELECT</code> // This is use for query data from a one or more table</p>
+<h3 id="select"><strong>SELECT</strong></h3>
+<p><code>SELECT column, cloumn, e.t.c FROM tracks == #table;</code></p>
+<p><strong>selecting column in ascending order</strong></p>
+<p><code>SELECT name, milliseconds, albumid FROM tracks ORDER BY albumid ASC;</code></p>
+<p><strong>selecting column and then filtering (albumid like the above) and milliseconds in descending order</strong></p>
+<p><code>SELECT name, milliseconds, albumid FROM tracks ORDER BY albumid ASC, milliseconds DESC;</code></p>
+<p>// ORDER BY with column position instead of column name</p>
+<p><code>SELECT name, albumid FROM tracks ORDER BY 3 ASC, 2 DESC;</code></p>
+<p>// ORDER BY clause to sort tracks by composers</p>
+<p><code>SELECT TrackId, Name, Composer FROM tracks ORDER BY Composer;</code></p>
+<h2 id="select-distinct-examples">SELECT DISTINCT examples</h2>
+<p>/*
+Distincy clasue allows you to remove the duplicate rows in the result set.
+*/</p>
+<p>E.g.</p>
+<p><code>SELECT city FROM customers ORDER BY city;</code></p>
+<p>result of city would contain duplicates
+e.g. city = london, city = london</p>
+<p><strong>remove duplicates by using distinct</strong></p>
+<p><code>SELECT DISTINCT city FROM customers ORDER BY city;</code></p>
+<p><strong>applying DISTINCT on multiple column</strong></p>
+<p><code>SELECT DISTINCT city, country FROM customers ORDER BY county;</code></p>
+<h2 id="where-clause">WHERE CLAUSE</h2>
+<p><code>SELECT column_list FROM table WHERE search_condition;</code></p>
+<p>// WHERE caluse is use to SELECT statement to filter rows returned by query.</p>
+<p>E.g.</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="sql"><span class="giallo-l"><span style="color: #CBA6F7;">WHERE</span><span> column_1 </span><span style="color: #94E2D5;">=</span><span style="color: #FAB387;"> 100</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">WHERE</span><span> column_2 </span><span style="color: #CBA6F7;">IN</span><span> (</span><span style="color: #FAB387;">1</span><span>,</span><span style="color: #FAB387;">2</span><span>,</span><span style="color: #FAB387;">3</span><span>);</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">WHERE</span><span> column_3 </span><span style="color: #CBA6F7;">LIKE</span><span style="color: #A6E3A1;"> &#39;An%&#39;</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">WHERE</span><span> column_4 </span><span style="color: #CBA6F7;">BETWEEN</span><span style="color: #FAB387;"> 10</span><span style="color: #CBA6F7;"> AND</span><span style="color: #FAB387;"> 20</span><span>;</span></span></code></pre>
+<p>// can be use in the UPDATE and DELETE STATEMENT</p>
+<p>// comparison operators can also be used</p>
+<p><code>= , &lt; , &gt; , &lt;= e.t.c.</code></p>
+<p><strong>logical operators</strong>:</p>
+<p>// no boolean data type in sqlite so True = 1 and false = 0</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="sql"><span class="giallo-l"><span>Operator | Meaning</span></span>
+<span class="giallo-l"><span>All | </span><span style="color: #CBA6F7;">returns</span><span style="color: #FAB387;"> 1</span><span style="color: #CBA6F7;"> if</span><span> all expressions are </span><span style="color: #FAB387;">1</span><span>.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">AND</span><span> | </span><span style="color: #CBA6F7;">returns</span><span style="color: #FAB387;"> 1</span><span style="color: #CBA6F7;"> if both</span><span> expressions are </span><span style="color: #FAB387;">1</span><span>, </span><span style="color: #CBA6F7;">and</span><span style="color: #FAB387;"> 0</span><span style="color: #CBA6F7;"> if</span><span> one of the expressions </span><span style="color: #CBA6F7;">is</span><span style="color: #FAB387;"> 0</span><span>.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>ANY |</span><span style="color: #CBA6F7;">returns</span><span style="color: #FAB387;"> 1</span><span style="color: #CBA6F7;"> if</span><span> any one of a </span><span style="color: #CBA6F7;">set</span><span> of comparisons </span><span style="color: #CBA6F7;">is</span><span style="color: #FAB387;"> 1</span><span>.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">BETWEEN</span><span> | </span><span style="color: #CBA6F7;">returns</span><span style="color: #FAB387;"> 1</span><span style="color: #CBA6F7;"> if</span><span> a </span><span style="color: #CBA6F7;">value is within</span><span> a </span><span style="color: #CBA6F7;">range</span><span>.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">EXISTS</span><span> | </span><span style="color: #CBA6F7;">return</span><span style="color: #FAB387;"> 1</span><span style="color: #CBA6F7;"> if</span><span> a sbuquery contains any </span><span style="color: #CBA6F7;">rows</span><span>.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">IN</span><span> | </span><span style="color: #CBA6F7;">returns</span><span style="color: #FAB387;"> 1</span><span style="color: #CBA6F7;"> if</span><span> a vlaues </span><span style="color: #CBA6F7;">is in</span><span> a list of </span><span style="color: #CBA6F7;">values</span><span>.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">LIKE</span><span> | </span><span style="color: #CBA6F7;">returns</span><span style="color: #FAB387;"> 1</span><span style="color: #CBA6F7;"> if</span><span> a </span><span style="color: #CBA6F7;">value</span><span> matches a pattern.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">NOT</span><span>  | reverses the </span><span style="color: #CBA6F7;">value</span><span> of other operators such </span><span style="color: #CBA6F7;">as NOT EXISTS</span><span>, </span><span style="color: #CBA6F7;">NOT IN</span><span>, </span><span style="color: #CBA6F7;">NOT BETWEEN</span><span> e.t.c</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">OR</span><span> | </span><span style="color: #CBA6F7;">returns</span><span> ture </span><span style="color: #CBA6F7;">if</span><span> either expression </span><span style="color: #CBA6F7;">is</span><span style="color: #FAB387;"> 1</span></span></code></pre>
+<p><strong>sqlite WHERE clause examples</strong></p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="sql"><span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">SELECT name</span><span>, milliseconds, bytes, albumid </span><span style="color: #CBA6F7;">FROM</span><span> tracks </span><span style="color: #CBA6F7;">WHERE</span><span> ALBUMID </span><span style="color: #94E2D5;">=</span><span style="color: #FAB387;"> 1</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">SELECT name</span><span>, milliseonds, albumid </span><span style="color: #CBA6F7;">FROM</span><span> tracks </span><span style="color: #CBA6F7;">WHERE</span><span> albumid </span><span style="color: #94E2D5;">=</span><span style="color: #FAB387;"> 1</span><span style="color: #CBA6F7;"> AND</span><span> milliseconds </span><span style="color: #94E2D5;">&gt;</span><span style="color: #FAB387;"> 250000</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">SELECT name</span><span>,albumid, composer </span><span style="color: #CBA6F7;">FROM</span><span> tracks </span><span style="color: #CBA6F7;">WHERE</span><span> composer </span><span style="color: #CBA6F7;">LIKE</span><span style="color: #A6E3A1;"> &#39;%Smith%&#39;</span><span style="color: #CBA6F7;"> ORDER BY</span><span> albumid;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">SELECT name</span><span>, albumid, mediatypeid </span><span style="color: #CBA6F7;">FROM</span><span> tracks </span><span style="color: #CBA6F7;">WHERE</span><span> mediatypid </span><span style="color: #CBA6F7;">IN</span><span> (</span><span style="color: #FAB387;">2</span><span> ,</span><span style="color: #FAB387;">3</span><span>);</span></span></code></pre><h2 id="sqlite-limit-clause">sqlite limit clause</h2>
+<p><code>SELECT column_list FROM table LIMIT row_count;</code></p>
+<p>// limit clause is use to constrain the number of rows returned by the query...</p>
+<p><code>SELECT trackid, name FROM tracks LIMIT 10;</code></p>
+<p>To get the first 10 rows starting from the 10th row</p>
+<p><strong>use</strong></p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="sql"><span class="giallo-l"><span style="color: #CBA6F7;">SELECT</span><span> column_list </span><span style="color: #CBA6F7;">FROM table LIMIT</span><span> offset, row_count</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">SELECT</span><span> trackid, </span><span style="color: #CBA6F7;">name</span><span>, </span><span style="color: #CBA6F7;">FROM</span><span> tracks </span><span style="color: #CBA6F7;">LIMIT</span><span style="color: #FAB387;"> 10</span><span> OFFSET </span><span style="color: #FAB387;">10</span><span>;</span></span></code></pre><h3 id="insert-in-sqlite">INSERT IN SQLITE</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="sql"><span class="giallo-l"><span style="color: #CBA6F7;">INSERT INTO table</span><span> (column1, column2) </span><span style="color: #CBA6F7;">VALUES</span><span> (value1, value2);</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>e.g.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">INSERT INTO</span><span> playlists (playlistid, </span><span style="color: #CBA6F7;">name</span><span>) </span><span style="color: #CBA6F7;">VALUES</span><span> (</span><span style="color: #FAB387;">24</span><span>, </span><span style="color: #A6E3A1;">&#39;brime buk&#39;</span><span>);</span></span></code></pre>
+<p><strong>inserting multiple rows into a table</strong></p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="sql"><span class="giallo-l"><span style="color: #CBA6F7;">INSERT INTO</span><span> table1 (column1, column2,....) </span><span style="color: #CBA6F7;">VALUES</span><span> (value1 , value2,), (value1, value2 );</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>e.g.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">INSERT INTO</span><span> playlists (playlistid, </span><span style="color: #CBA6F7;">name</span><span>) </span><span style="color: #CBA6F7;">VALUES</span><span> (</span><span style="color: #FAB387;">30</span><span>, </span><span style="color: #A6E3A1;">&#39;faith&#39;</span><span>), (</span><span style="color: #FAB387;">34</span><span>, </span><span style="color: #A6E3A1;">&#39;favour&#39;</span><span>), (</span><span style="color: #FAB387;">36</span><span>, </span><span style="color: #A6E3A1;">&#39;gift&#39;</span><span>);</span></span>
+<span class="giallo-l"></span></code></pre><h3 id="update-statement">UPDATE STATEMENT</h3>
+<p>// to update an existing data in a table, you use sqlite UPDATE
+statment</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="sql"><span class="giallo-l"><span style="color: #CBA6F7;">UPDATE table SET</span><span> column_1 </span><span style="color: #94E2D5;">=</span><span> new_value_1, column_2 </span><span style="color: #94E2D5;">=</span><span> new_value_2 </span><span style="color: #CBA6F7;">WHERE</span><span> search_condition;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>##</span><span style="color: #CBA6F7;"> DELETE statement</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">DELETE FROM table WHERE</span><span> search_condition</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>e.g.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">DELETE FROM</span><span> playlists </span><span style="color: #CBA6F7;">WHERE</span><span> playlistid </span><span style="color: #94E2D5;">=</span><span style="color: #FAB387;"> 36</span><span>;</span></span></code></pre>
+		</div>
+		
+<br>
+<div style="text-align: center;">
+  <a href="/" style="font-weight: bold; font-size: 30px; font-family: 'Merriweather';">cd ~</a>
+</div>
+
+
+
+						</div>
+				 </section>
+
+		</main>
+		<footer></footer>
+ </body>
+
+</html>
+

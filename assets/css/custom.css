@@ -1,0 +1,170 @@
+.scrolling-wrapper{
+	overflow-x: auto;
+    background-color: rgb(240, 234, 234);
+}
+
+.block-div{
+    border: 1px solid silver;
+    background-color: white;
+    border-left: 2px solid black;
+}
+
+a:link {
+    text-decoration: none;
+  }
+  .icon-space{
+      margin-right: 5%;
+  }
+
+
+.category {
+    display: inline-block;
+    width: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: black;
+    font-size: 110%;
+    font-weight: bold;
+    color: #cccccc;
+}
+
+
+
+
+
+/** 	
+	search input @ "/blog" 
+**/
+
+.inputT{
+
+    /** position: relative; **/
+    display: flex;
+    min-width: 100px;
+
+}
+
+  
+/** 
+.clear-icon {
+    position: absolute;
+    top: 11px;
+    right: 100px;
+    width: 13px;
+    cursor: pointer;
+    background-color: white;
+  }
+**/
+
+ 
+#search {
+	
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 30px;
+    width: 70%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: black;
+    color: #dddee1;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    
+}
+
+#search:hover, #search:focus {
+    border: 1.5px solid #dddee1;
+    background-color: black;
+  }
+  
+  
+/** 	
+	End of search input @ "/blog" 
+**/
+
+
+
+
+
+/** SEARCH RESULT **/
+
+li.Scontain {
+	
+	list-style: none;
+	margin: 12px;
+  	padding: 0;
+  	font-size: 22px;
+}
+
+.time{
+
+	font-size: 15px;
+}
+
+
+/** Scroll To Top Button **/
+.scrollToTopBtn {
+  background-color: #828282;
+  border: none;
+  border-radius: 45%;
+  cursor: pointer;
+  line-height: 48px;
+  width: 48px;
+
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all 0.5s ease;
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.center-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+
+/* tags categories and links */
+.tag-link{
+    background-color: #80b7d926;
+    border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: .6rem .5rem;
+    padding-top: 0.2rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+}
+
+#more {display: none;}
+
+.card_api{
+  padding: 10px;
+  border: 6px solid black; 
+  background-color: black; 
+  box-shadow: 15px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+#container{
+  display: none;
+}

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - i3</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notet/i3/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-01-02T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notet/i3/atom.xml</id>
+    <entry xml:lang="en">
+        <title>using i3 multiple monitors @xrandr</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/external-monitor/"/>
+        <id>https://daveads.github.io/note/external-monitor/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/external-monitor/">&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;xrandr&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;eDP1 connected primary 1366x768+0+0 (normal left inverted right x axis y axis) 340mm x 190mm
+1366x768      60.00*+&lt;&#x2F;p&gt;
+&lt;p&gt;HDMI1 connected 1080x1920+1366+0 left (normal left inverted right x axis y axis) 470mm x 300mm
+1920x1080     60.00*+  59.94&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;position out right of primary screen&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; horizontal position
+xrandr --output HDMI1 --auto --right-of eDP1&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F; vertical position
+xrandr --output HDMI1 --rotate left --right-of eDP1&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;xrandr-output-hdmi1-rotate-left-auto-right-of-edp1&quot;&gt;xrandr --output HDMI1 --rotate left --auto --right-of eDP1&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;edit-configs-to-add-moving-workspaces-between-screens&quot;&gt;Edit configs to add moving workspaces between screens&lt;&#x2F;h3&gt;
+&lt;p&gt;.config&#x2F;i3&#x2F;config&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;bindsym-mod-p-move-workspace-to-output-right&quot;&gt;bindsym $mod+p move workspace to output right&lt;&#x2F;h2&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>i3 tilling window manager</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/i3-wm/"/>
+        <id>https://daveads.github.io/note/i3-wm/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/i3-wm/">&lt;p&gt;$mod by default == &quot;windows key&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;&#x2F;modifier&lt;&#x2F;p&gt;
+&lt;p&gt;$mod + ENTER = &quot;new terminal&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;$mod + 1 || 2 = &quot;switches to a new window&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;$mod + shift + 1 = &quot;moves a window to another workspace&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;$mod + shift + q = &quot;to exit a window&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;$mod + shift + space = &quot;to make a window float&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;$mod + shift + e = &quot;logout&quot;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;black-light&quot;&gt;black light&lt;&#x2F;h1&gt;
+&lt;p&gt;&#x2F;sys&#x2F;class&#x2F;backlight&#x2F;intel_backlight&lt;&#x2F;p&gt;
+&lt;p&gt;&#x2F;**
+need to figure out how to automate this
+**&#x2F;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>terminal folder manager apps</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/terminal-files/"/>
+        <id>https://daveads.github.io/note/terminal-files/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/terminal-files/">&lt;ul&gt;
+&lt;li&gt;nnn&lt;&#x2F;li&gt;
+&lt;li&gt;ranger&lt;&#x2F;li&gt;
+&lt;li&gt;mc&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>wifi connection</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2024-01-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/wifi/"/>
+        <id>https://daveads.github.io/note/wifi/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/wifi/">&lt;p&gt;&lt;strong&gt;Show current network connections&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;nmcli&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; connection show&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;List available Wi-Fi networks&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;nmcli&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; device wifi list&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Connect to a network using its UUID (replace &lt;code&gt;UUID&lt;&#x2F;code&gt; with the actual UUID)&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;nmcli&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; c up uuid e0bda955-475c-4625-b19b-4a1f2339d9db --ask&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;New devices&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;nmcli&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; device wifi connect&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;name ssi&lt;&#x2F;span&gt;&lt;span&gt;d&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; --ask&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Enable Wi-Fi (if disabled)&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; rfkill unblock wifi&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;nmcli&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; networking on&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;BLUETOOTH&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Turn on Bluetooth&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;bluetoothctl&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; power on&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Enter Bluetooth control interface&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;bluetoothctl&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Start scanning for nearby Bluetooth devices&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;scan&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; on&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Connect to a Bluetooth device with the specified MAC address (replace &lt;code&gt;&amp;lt;tecno square1&amp;gt;&lt;&#x2F;code&gt; with the actual MAC address)&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;connect&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; 14:A6:8E:AE:9F:51&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Show status of devices and their rfkill (Radio Frequency Kill) status&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;rfkill&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; list&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Additional Bluetooth commands:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Show connected devices&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;devices&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Show paired devices&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;paired-devices&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</content>
+        
+    </entry>
+</feed>
