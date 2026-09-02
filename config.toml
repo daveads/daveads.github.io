@@ -31,7 +31,6 @@ render_emoji = true
 
 [markdown.highlighting]
 theme = "catppuccin-mocha"
-code = true
 #error_on_missing_language = true
 
 [search]

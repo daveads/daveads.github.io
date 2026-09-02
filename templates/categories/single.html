@@ -1,5 +1,4 @@
 {% extends "page.html" %}
-{% import "macros/tags_macros.html" as post_macros %}
 
 {% block title %}
 		{{config.title}} - {{term.name}}
@@ -14,7 +13,7 @@
     <br>
     {% for page in term.pages %}
 
-        {{ post_macros::page_in_list(page=page) }}
+        {{<cat.page_in_list page={page} />}}
 
     {% endfor %}
 {% endblock content %}

@@ -5,10 +5,9 @@
 		{{ super() }} - {{config.extra.author}}
 {% endblock %}
 
+{% block content %}
 <script type="text/javascript" src="/assets/js/bundle.js"></script>
 
-
-{% block content %}
 <div style="text-align: center; font-family: Courier New; color: #02afff; font-size: 25px; ">
 
 		<p><b style="font-size: 40px; font-family: monospace;">Hello Humans!</b> 
@@ -43,7 +42,7 @@
 		{% if writing.pages %}
 		<h2 style="margin: 0;">Recent articles</h2>
 		<ul>
-				 {% for post in writing.pages | slice(end=5) %}
+				 {% for post in writing.pages[:5] %}
 				 <li style="font-size: 21px;"><a href="{{ post.permalink }}">{{ post.title }}</a></li>
 				 {% endfor %}
 		 </ul>
@@ -53,4 +52,3 @@
 		<br>
 
 {% endblock content %}
-

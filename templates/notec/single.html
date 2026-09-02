@@ -1,5 +1,4 @@
 {% extends "page.html" %}
-{% import "macros/notec_macros.html" as notec %}
 
 {% block header %}
 
@@ -22,7 +21,7 @@
 <div>
     {% for page in term.pages %}
 
-        {{ notec::page_in_list(page=page) }}
+        {{<notec.page_in_list page={page} />}}
 
     {% endfor %}
 </div>

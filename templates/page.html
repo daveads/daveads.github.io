@@ -4,11 +4,10 @@
      {{config.title}} - {{page.title}}
 {% endblock %}
 
+{% block content %}
 <article class="post">
 
     <!-- content block -->
-    {% block content %}
-
     {% if page.title == "Guides" %}
         {% set pag = get_page(path="guides/guide.md") %}
         {{ pag.content | safe }}
@@ -19,7 +18,5 @@
     {{ page.content | safe }}
     
 
-	{% endblock %}
-	
 </article>
-
+{% endblock content %}

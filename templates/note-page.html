@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "macros/pagetitle-macro.html" as pageT %}
 
 
 {% block meta_content %}
@@ -15,7 +14,7 @@
 
 
 {% block keywords %}
-		{% if page.taxonomies.notet %}
+		{% if page.taxonomies?.notet %}
 			<meta name="keywords" content="{{ page.taxonomies.notet }}">
 		{% endif %}
 {% endblock keywords %}
@@ -26,7 +25,7 @@
 {% endblock desc %}
 
 
-<!-- keep empty -->
+{# keep empty #}
 {% block header %}
 {% endblock %}
 
@@ -42,7 +41,7 @@
 
 		 {% set title = page.title %}
 		 {% set title1 = "NOTE" ~ " : " ~ title %}
-		 {{ pageT::pagetitle(page=title1) }}
+		 {{<page_title page={title1} />}}
 
 		 <small style="float:right; font-size: 15px;"><a href="/note">See all notes</a>
 		 	|| <a href="/note-archive">Archive</a>
@@ -61,26 +60,26 @@
 		<div>
 			{% include "include/back.html" %}
 
-			<!--
-			{% if page.taxonomies.notec %}
+			{#
+			{% if page.taxonomies?.notec %}
 		
 			Categories :
 			{% for noteC in page.taxonomies.notec %}
 			<small >
-			<a class="tag-link" href="{{ get_taxonomy_url(kind='notec', name=noteC) | safe }}">#{{ noteC }}</a>
+			<a class="tag-link" href="{{ get_taxonomy_url(kind='notec', term=noteC) | safe }}">#{{ noteC }}</a>
 			</small>
 			<br>
 			<br>
 			{% endfor %}
 			{% endif %}
-			-->
+			#}
 
-			{% if page.taxonomies.notet %}
+			{% if page.taxonomies?.notet %}
 	
 			Tags :
 			{% for noteT in page.taxonomies.notet %}
 			<small>
-			<a class="tag-link" href="{{ get_taxonomy_url(kind='notet', name=noteT) | safe }}">#{{ noteT }}</a>
+			<a class="tag-link" href="{{ get_taxonomy_url(kind='notet', term=noteT) | safe }}">#{{ noteT }}</a>
 			</small>
 			{% endfor %}
 			{% endif %}

@@ -1,5 +1,4 @@
 {% extends "page.html" %}
-{% import "macros/cat_macros.html" as post_macros %}
 
 {% block title %}
 	{{config.title}} - {{term.name}}
@@ -13,6 +12,6 @@
     {% include "include/back.html" %}
     <br>
     {% for page in term.pages %}
-        {{ post_macros::page_in_list(page=page) }}
+        {{<tags.page_in_list page={page} />}}
     {% endfor %}
 {% endblock content %}

@@ -1,11 +1,11 @@
-{% set image = resize_image(path="assets/images/" ~ src, width=w | default(value=1024) | int, height=h | default(value=0) | int) %}
+{% component resize_image(src, alt="", w="1024", h="") %}
+{% if h %}
+{% set image = resize_image(path="assets/images/" ~ src, width=w | int, height=h | int) %}
+{% else %}
+{% set image = resize_image(path="assets/images/" ~ src, width=w | int) %}
+{% endif %}
 <figure class="centered-image">
-    <img src="{{ image.url }}" 
-    {% if alt %} alt="{{ alt | safe }}"{% endif %}
-    {% if w %} width="{{ w }}"{% endif %}
-    {% if h %} height="{{ h }}"{% endif %}
-    loading="lazy" />
-    {% if alt %}
-    <figcaption>{{ alt | safe }}</figcaption>
-    {% endif %}
+<img src="{{ image.url }}"{% if alt %} alt="{{ alt | safe }}"{% endif %}{% if w %} width="{{ w }}"{% endif %}{% if h %} height="{{ h }}"{% endif %} loading="lazy">
+{% if alt %}<figcaption>{{ alt | safe }}</figcaption>{% endif %}
 </figure>
+{% endcomponent resize_image %}

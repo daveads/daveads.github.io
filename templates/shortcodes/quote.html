@@ -1,8 +1,6 @@
+{% component quote(cite="") %}
 <blockquote>
-    {{ body | markdown | safe }}
-    {% if cite %}
-    <footer>
-        <cite>{{ cite }}</cite>
-    </footer>
-    {% endif %}
+{{ body | markdown | safe }}
+{% if cite %}<footer><cite>{{ cite }}</cite></footer>{% endif %}
 </blockquote>
+{% endcomponent quote %}
