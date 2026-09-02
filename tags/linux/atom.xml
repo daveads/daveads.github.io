@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - linux</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/linux/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-07-20T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/tags/linux/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Development Environment</title>
+        <published>2024-07-20T00:00:00+00:00</published>
+        <updated>2024-07-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/development-environment/"/>
+        <id>https://daveads.github.io/writing/development-environment/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/development-environment/">&lt;figure class=&quot;centered-image&quot;&gt;
+&lt;img src=&quot;/assets/images/writing/dev_environment.jpg&quot; alt=&quot;a human programmer&quot; width=&quot;400&quot; height=&quot;400&quot; loading=&quot;lazy&quot;&gt;
+&lt;figcaption&gt;a human programmer&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;This post was originally intended to be about &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/neovim/neovim&quot;&gt;Neovim&lt;/a&gt; configuration, but changed its focus along the way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Operating System:&lt;/strong&gt;
+I was never a big fan of Windows, though I started with it. I disliked dealing with numerous floating windows just to complete a task that can be done within the terminal window. You don&#39;t get to choose your &lt;strong&gt;window manager&lt;/strong&gt;, &lt;strong&gt;login manager&lt;/strong&gt; or choose when to upgrade, etc. &lt;em&gt;You basically don&#39;t own that computer&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Computer 0:&lt;/strong&gt; &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://archlinux.org/&quot;&gt;Arch Linux&lt;/a&gt;&lt;br /&gt;
+I switch between &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/swaywm/sway&quot;&gt;Sway&lt;/a&gt; and &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/i3/i3&quot;&gt;i3&lt;/a&gt; tiling window managers, for reasons that are admittedly somewhat amusing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Computer 1:&lt;/strong&gt; &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt;&lt;br /&gt;
+Also equipped with i3 and Sway tiling window managers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Computer 2:&lt;/strong&gt; :}&lt;/p&gt;
+&lt;p&gt;I tend to gravitate towards tools written in my favorite programming languages and projects I could potentially contribute to when needed (with the exception of VSCode).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Code Editors:&lt;/strong&gt;&lt;br /&gt;
+I switch between Vim/Neovim and VSCode, depending on my mood. Occasionally, I use &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/lapce/lapce&quot;&gt;Lapce&lt;/a&gt; as well.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Neovim Configuration:&lt;/strong&gt;
+&lt;img src=&quot;/assets/images/writing/screenshot.png&quot; alt=&quot;tmux(0)&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;My Neovim configuration looks like the picture above... lol that is exactly how it looks... if you&#39;re curious, check out my &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/daveads/.sys_s&quot;&gt;Configs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For terminal emulator, I use &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/alacritty/alacritty&quot;&gt;Alacritty&lt;/a&gt;, and for terminal multiplexing, I primarily use &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/tmux/tmux&quot;&gt;Tmux&lt;/a&gt;. My shell environment is mostly Bash.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Browsers:&lt;/strong&gt;&lt;br /&gt;
+While I prefer &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.mozilla.org/en-US/firefox/&quot;&gt;Firefox&lt;/a&gt;, I occasionally use Chrome and Brave.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Waydroid on Arch Linux</title>
+        <published>2024-05-03T00:00:00+00:00</published>
+        <updated>2024-05-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/waydroid-on-arch-linux/"/>
+        <id>https://daveads.github.io/note/waydroid-on-arch-linux/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/waydroid-on-arch-linux/">&lt;p&gt;&lt;strong&gt;Run Full Android on Arch Linux with Waydroid&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Waydroid is a container-based approach that allows you to boot a full Android system on your Arch Linux machine. Follow this guide to get started with Waydroid on Arch Linux.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Installing Waydroid&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To install Waydroid, you can use one of the following methods:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Method 1: Using Git and Makepkg&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; clone https://aur.archlinux.org/waydroid.git&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;cd&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; waydroid&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;makepkg&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -si&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Method 2: Using Yay&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;yay&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -S waydroid&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Using LineageOS Images&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Waydroid uses LineageOS images. You can install an image using the following commands:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Automatic Image Installation&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Install an image with default settings&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;waydroid&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; init&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Install an image with GApps support&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;waydroid&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; init -s GAPPS&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Alternatively, you can manually download and install images from the AUR:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://aur.archlinux.org/packages/waydroid-image/&quot;&gt;Waydroid Image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://aur.archlinux.org/packages/waydroid-image-gapps/&quot;&gt;Waydroid Image with GApps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Manual Image Installation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you prefer manual installation, follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Download the LineageOS images:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://sourceforge.net/projects/waydroid/files/images/vendor/waydroid_x86_64/lineage-18.1-20240420-MAINLINE-waydroid_x86_64-vendor.zip/download&quot;&gt;Vendor Image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://sourceforge.net/projects/waydroid/files/images/system/lineage/waydroid_x86_64/lineage-18.1-20240420-GAPPS-waydroid_x86_64-system.zip/download&quot;&gt;System Image with GApps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Unzip both images and copy them to the correct location:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;sudo&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; cp system.img vendor.img /usr/share/waydroid-extra/images&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Kernel and Session Manager Requirements&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To run Waydroid, you need a kernel with the binder modules and a Wayland session manager. For example:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Installing linux-zen kernel&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;sudo&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; pacman -S linux-zen&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you use the i3 tiling manager, consider using &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/swaywm/sway&quot;&gt;Sway&lt;/a&gt;, an i3-compatible Wayland compositor.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Python Environment Setup&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Before proceeding, ensure you have Python installed. You can use &lt;code&gt;pyenv&lt;/code&gt; or the system-installed Python. Install the required packages:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;pip&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; install PyGObject==&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;3.48.1&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; pyclip==&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;0.7.0&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; dbus-python==&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;1.3.2&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; Cython==&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;3.0.10&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Additionally, install &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/erfanoabdi/gbinder-python&quot;&gt;gbinder-python&lt;/a&gt; by following the instructions in the README.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Play Store Support on Waydroid&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To install the Play Store on Waydroid, you can use the script provided at &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/casualsnek/waydroid_script.git&quot;&gt;casualsnek/waydroid_script&lt;/a&gt;.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>A quick introduction to tmux(0)</title>
+        <published>2020-04-30T00:00:00+00:00</published>
+        <updated>2020-04-30T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/introduction-to-tmux/"/>
+        <id>https://daveads.github.io/writing/introduction-to-tmux/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/introduction-to-tmux/">&lt;p&gt;&lt;img src=&quot;/assets/images/tmux0.png&quot; alt=&quot;tmux(0)&quot; /&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Prerequisite:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Have a basic understanding of the linux &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://daveads.github.io/tools/linux/2020/04/25/The-Linux-Command-Line.html&quot;&gt;command line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install tmux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Goal:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn what tmux is&lt;/li&gt;
+&lt;li&gt;Get a quick feel of tmux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;tmux&quot;&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Tmux&quot;&gt;Tmux&lt;/a&gt;...?&lt;/h3&gt;
+&lt;p&gt;If you are anything like me then you probably have about &lt;code&gt;&amp;gt;= 5&lt;/code&gt; terminal windows open on your computer when working, And you have a hard time navigating through those terminal (windows) and keeping track of them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/tmux/tmux&quot;&gt;tmux&lt;/a&gt;&lt;/strong&gt; is a terminal multiplexer that helps creates and keep track of termianls from a single screen and does alot more than that, it makes multitasking much easier.&lt;/p&gt;
+&lt;h3 id=&quot;using-tmux&quot;&gt;Using Tmux:&lt;/h3&gt;
+&lt;p&gt;For now, the major focus is to get acquainted with tmux as qucikly as possible before understanding the way it works.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open your terminal and type &lt;code&gt;tmux&lt;/code&gt; if available should open a default window like the pics below.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/tmux0_a.png&quot; alt=&quot;tmux0_a.png&quot; /&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Press  &lt;code&gt;ctrl + b&lt;/code&gt; and key at the same time and then release it and then &lt;code&gt;shift + &quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;This split the screen into two top and bottom&lt;/strong&gt;, the splitted screens are called pane.
+&lt;img src=&quot;/assets/images/tmux0_a.png&quot; alt=&quot;tmux0_a.png&quot; /&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To navigate between the splitted screen &lt;code&gt;ctrl + b&lt;/code&gt; which open the prefix then &lt;code&gt;o&lt;/code&gt; key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;keywords-in-tmux&quot;&gt;keywords in tmux&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;window&lt;/li&gt;
+&lt;li&gt;pane&lt;/li&gt;
+&lt;li&gt;sessions&lt;/li&gt;
+&lt;li&gt;server&lt;/li&gt;
+&lt;li&gt;client&lt;/li&gt;
+&lt;li&gt;prefix&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;// will talk more on this on the next article&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/tmux/tmux&quot;&gt;tmux source code&lt;/a&gt;&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Linux Command line interface(0)</title>
+        <published>2020-04-25T00:00:00+00:00</published>
+        <updated>2023-08-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/the-linux-command-line/"/>
+        <id>https://daveads.github.io/writing/the-linux-command-line/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/the-linux-command-line/">&lt;p&gt;&lt;img src=&quot;/assets/gifs/cmd.gif&quot; alt=&quot;cmd&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;I spend 90% of my time in the Terminal emulator (not really sure about that tho), for me it offer&#39;s great flexibility and control than the GUI, and it can be really intimidating at first but it worth your time.&lt;/p&gt;
+&lt;p&gt;Prerequisites: unix or unix-like operating system.&lt;/p&gt;
+&lt;p&gt;Goals:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn what a command line is and how to use it&lt;/li&gt;
+&lt;li&gt;Learn common useful commands and what they mean&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;what-a-command-line-interface&quot;&gt;What a &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Command-line_interface&quot;&gt;command line interface&lt;/a&gt;?&lt;/h3&gt;
+&lt;p&gt;when talking about the command line we are actually refering to &lt;strong&gt;The Shell&lt;/strong&gt;. The shell is a program that takes in Commands or #keywords and passes them to the operating system to carry out. it&#39;s a way of interacting with the computer os, similiar to the &lt;strong&gt;GUI&lt;/strong&gt; but faster and more powerful. The program which handles this commands in the terminal emulator is the &lt;strong&gt;Command-line interpreter&lt;/strong&gt; (shell).&lt;/p&gt;
+&lt;h3 id=&quot;shell-scripting&quot;&gt;Shell Scripting:&lt;/h3&gt;
+&lt;p&gt;As earlier said a Unix shell or shell is a command-line interpreter but also a programming language, the programming language features allows us to combine commands or (utilities) together in a file and run them as a scripts, and yea you can also call it a &lt;strong&gt;Script language&lt;/strong&gt; for now the major focus is getting you to understand the command line and having the feels of it without getting intimidated.. will write more on Shell script on &lt;strong&gt;Using The Linux Command Line(1)&lt;/strong&gt; or probably the next.&lt;/p&gt;
+&lt;h3 id=&quot;running-the-termainal-emulator&quot;&gt;Running the Termainal emulator:&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Computer_terminal&quot;&gt;Computer terminal&lt;/a&gt;:&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/terminal.png&quot; alt=&quot;termainal&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Before delving into what the Terminal emulator actually is, it&#39;s important to know where it all started decades ago. Computers had no GUI for accessing or modifying data; the computer terminal was the only means of entering, displaying, and printing data. These terminals were physical computing devices like IBM 3270, VT100, and many others. For more details, check out &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Computer_terminal&quot;&gt;computer terminal &amp;gt;&amp;gt; wiki&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What&#39;s a Terminal emulator:&lt;/strong&gt;
+The Terminal emulator is a software designed to replicate the functions of a computer terminal. It is a GUI application needed to access the Unix shell environment, providing an interface to invoke commands, scripts, and programs available on your system. It also allows you to view and browse through the contents of directories, just like you would with a FILE MANAGER APPLICATION.&lt;/p&gt;
+&lt;p&gt;Every Linux distro comes with a default terminal emulator. For instance, Ubuntu and Fedora come with Gnome terminal emulator, and other Linux distros have their own defaults. The first thing you see in the terminal emulator is the &quot;command prompt,&quot; which shows $, %, #, or &amp;gt;, indicating the current working directory, the current user, and the readiness of the shell to accept commands from you.&lt;/p&gt;
+&lt;p&gt;The default shell for most Unix or Unix-like systems is the &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Bash_(Unix_shell)&quot;&gt;bash shell&lt;/a&gt;. Other shells include sh, zsh, csh, and more. To find out the available shells on your system, use the command:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;cat /etc/shells&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;display-content-in-your-file-directory&quot;&gt;Display content in your file directory&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;ls&lt;/code&gt; command is used to print out the current directory on the terminal emulator screen, giving the same result as the File Manager.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/gifs/ls_cmd.gif&quot; alt=&quot;ls_cmd&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/file_m.png&quot; alt=&quot;file_manager&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;To find out what a command means through the command line, type:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;whatis ls&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also make use of the system&#39;s manual pager for the full documentation:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;man ls&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To print your current working directory, use the command &lt;code&gt;pwd&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/pwd.png&quot; alt=&quot;pwd&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;pwd&lt;/code&gt; is a built-in command within the bash shell itself. Type &lt;code&gt;help&lt;/code&gt; to find out more about built-in commands.&lt;/p&gt;
+&lt;h3 id=&quot;time-for-experiments&quot;&gt;Time for Experiments&lt;/h3&gt;
+&lt;p&gt;Here are some common commands:&lt;/p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Command&lt;/th&gt;&lt;th&gt;Meaning&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ls&lt;/code&gt;&lt;/td&gt;&lt;td&gt;List files and directories in the current directory.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;cd&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Change the current working directory.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;pwd&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Print the current working directory.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;mkdir&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Create a new directory (folder).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;rmdir&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Remove a directory (folder).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;cp&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Copy files or directories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;mv&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Move or rename files or directories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;rm&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Remove (delete) files or directories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;cat&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Concatenate and display file content.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;more&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display file content one screen at a time.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;less&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display file content with backward navigation.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;head&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display the beginning lines of a file.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;tail&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display the ending lines of a file.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;grep&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Search for a pattern in files.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;find&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Search for files and directories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;chmod&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Change file permissions.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;chown&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Change file ownership.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ps&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display information about running processes.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;kill&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Terminate processes.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ssh&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Secure Shell - remote login to a server.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;wget&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Download files from the web.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;tar&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Archive files using tar.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;zip&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Package and compress files.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;Please note that this is not an exhaustive list, but it includes some commonly used commands and their primary meanings. Additionally, the meaning of some commands may vary based on their options and arguments. Always refer to the manual (&lt;code&gt;man&lt;/code&gt; command) for a comprehensive understanding of each command.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Resources&lt;/strong&gt;
+&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://missing.csail.mit.edu/&quot;&gt;The Missing Semester of Your CS Education By Mit&lt;/a&gt;&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>
