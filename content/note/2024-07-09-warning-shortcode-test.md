@@ -9,7 +9,7 @@ notec = ["Tests"]
 
 Before we begin, please read the following warnings carefully.
 
-{% warning(header="Electrical Safety") %}
+{% <warning header="Electrical Safety"> %}
 Always unplug electronic devices before attempting any repairs. Failure to do so could result in:
 
 - Electric shock
@@ -17,4 +17,4 @@ Always unplug electronic devices before attempting any repairs. Failure to do so
 - Personal injury
 
 If you're unsure about any step, consult a professional.
-{% end %}
+{% </warning> %}

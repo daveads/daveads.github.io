@@ -5,7 +5,9 @@ date = 2024-07-20
 categories = ["General"]
 tags = ['linux']
 +++
-{{ figure(src="writing/dev_environment.jpg" alt="a human programmer" w="400" h="400") }}
+
+{{<figure src="writing/dev_environment.jpg" alt="a human programmer" w="400" h="400" />}}
+
 This post was originally intended to be about [Neovim](https://github.com/neovim/neovim) configuration, but changed its focus along the way.
 
 **Operating System:**

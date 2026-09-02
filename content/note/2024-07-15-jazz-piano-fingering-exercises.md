@@ -65,9 +65,9 @@ Practice voicings in fourths to improve stretch and flexibility:
 C-F-Bb-Eb | D-G-C-F | E-A-D-G | etc.
 
 
-{% tip(header="Practice tips") %}
+{% <tip header="Practice tips"> %}
 - practice these exercises slowly at first, 
 - focus on accuracy and evenness. 
 - Gradually increase the tempo as you become more comfortable. <br>
 // Always use a metronome to develop a solid sense of time.
-{% end %}
+{% </tip> %}

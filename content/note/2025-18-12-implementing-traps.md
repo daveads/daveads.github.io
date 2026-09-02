@@ -119,9 +119,9 @@ trap_action =
 
 This makes it explicit in the type system: a trap action is either "ignored" or "runs a command." No confusion possible! The type system enforces that we handle both cases correctly.
 
-{% note(header="Note") %}
+{% <note header="Note"> %}
 This post describes the implementation using `command.NoOp` (PR #2586), but the code has since been refactored to use `trap_action.Ignored` - see commit 6f1c64891. The refactoring makes the intent even clearer in the type system.
-{% end %}
+{% </note> %}
 
 ### Why Algebraic Data Types?
 
@@ -239,4 +239,3 @@ trap -- '' SIGINT
 ```
 
 Pull request :: [link](https://github.com/oils-for-unix/oils/pull/2586)
-

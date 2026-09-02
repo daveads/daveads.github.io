@@ -7,9 +7,11 @@ date = 2024-05-31
 
 // using shortcodes
 
-Here is some inline math: {{ katex(body="$a^2 + b^2 = c^2$") }}
+Here is some inline math: {% <katex> %}$a^2 + b^2 = c^2${% </katex> %}
 
-{{ katex(body="$$\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2} $$")}}
+{% <katex> %}
+$$\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2} $$
+{% </katex> %}
 
 
 <br>

@@ -73,8 +73,8 @@ Chords reduced to their essential tones, often the third and seventh, which guid
 - **C7 (upper structure triad):** E-G#-C# (augmented triad over C)  3 - #5 - #1
 
 
-{% tip(header="Tips for Jazz Voicings") %}
+{% <tip header="Tips for Jazz Voicings"> %}
 - **Use Tensions:** Add 9ths, 11ths, and 13ths to enrich the harmony.
 - **Voice Leading:** Smooth transitions between chords by moving the smallest distance possible.
 - **Avoid Doubling:** Especially the root and fifth, unless stylistically appropriate.
-{% end %}
+{% </tip> %}

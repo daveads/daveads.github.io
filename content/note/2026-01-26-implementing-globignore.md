@@ -7,36 +7,23 @@ description = "Implementation guide for bash-compatible GLOBIGNORE in Oils shell
 notet= ["oils"]
 +++
 
-
 Issue :: [Implement GLOBIGNORE #609](https://github.com/oils-for-unix/oils/issues/609)
 
 
 `GLOBIGNORE` is a bash-specific variable that lets you exclude files from glob expansion. It contains a colon-separated list of patterns - any file matching these patterns gets filtered out of glob results.
 
-E.g.
+When set, `GLOBIGNORE` has three effects:
+
+1. Files matching any pattern in `GLOBIGNORE` are filtered from glob results
+2. `.` and `..` are always filtered (even if they don't match a pattern)
+3. Dotfiles are automatically included in glob expansion (implicit `dotglob`)
+
+The third point deserves explanation: normally `echo *` doesn't show files starting with `.` (dotfiles). The `dotglob` shell option changes this. When `GLOBIGNORE` is set, bash enables `dotglob` implicitly - otherwise you couldn't use `GLOBIGNORE` to filter dotfiles since they wouldn't appear in the first place.
 
 ```bash
-GLOBIGNORE='*.o:*.tmp'
-echo *   # Shows all files except .o and .tmp files
-```
-
-This is useful for build directories, ignoring compiled files, or filtering out backup files from shell expansions.
-
-
-## The Problem: Glob Results Need Filtering
-
-When you write `echo *` in a shell, it expands to all files in the current directory. But sometimes you want to exclude certain patterns - like object files in a build directory, or backup files ending in `~`.
-
-Bash solves this with `GLOBIGNORE`. When set:
-
-1. Glob patterns automatically include dotfiles (like `dotglob` option)
-2. Files matching any `GLOBIGNORE` pattern are filtered out
-3. `.` and `..` are always filtered (even if they don't match a pattern)
-
-```bash
-$ GLOBIGNORE='*.txt'
-$ echo *        # No .txt files in output
-$ echo .*       # Shows .hidden but not . or ..
+$ GLOBIGNORE='*.o:*.tmp'
+$ echo *   # Shows all files (including dotfiles) except .o and .tmp files
+$ echo .*  # Shows .hidden but not . or ..
 ```
 
 
@@ -44,7 +31,7 @@ $ echo .*       # Shows .hidden but not . or ..
 
 ### Where the Code Lives
 
-The implementation is in `osh/glob_.py` in the `Globber` class. The key changes:
+The implementation is in [osh/glob_.py](https://github.com/oils-for-unix/oils/blob/648dda89fba10be77a166e81c6e899960c52cd46/osh/glob_.py) in the `Globber` class. The key changes:
 
 1. **Parse GLOBIGNORE patterns** - Split the colon-separated string into individual patterns
 2. **Filter glob results** - After libc's `glob()` returns matches, filter out anything matching GLOBIGNORE
@@ -52,7 +39,7 @@ The implementation is in `osh/glob_.py` in the `Globber` class. The key changes:
 
 ### Parsing GLOBIGNORE
 
-The tricky part: colons inside bracket expressions like `[[:alnum:]]` shouldn't be treated as separators. I handle this by tracking bracket depth:
+The tricky part: colons inside bracket expressions like `[[:alnum:]]` shouldn't be treated as separators. I handle this by tracking whether we're inside a bracket expression:
 
 ```python
 def _GetGlobIgnorePatterns(self):
@@ -156,7 +143,7 @@ return n
 
 ### Implicit dotglob
 
-When GLOBIGNORE is set, bash enables dotglob automatically. I replicate this:
+As mentioned above, GLOBIGNORE implicitly enables dotglob. In code:
 
 ```python
 if self.exec_opts.dotglob() or globignore_patterns is not None:
@@ -167,7 +154,7 @@ if self.exec_opts.dotglob() or globignore_patterns is not None:
 
 ## Test Coverage
 
-The spec test file `spec/globignore.test.sh` went from `oils_failures_allowed: 14` to `oils_failures_allowed: 1` - meaning 13 previously-failing test cases now pass.
+The spec test file [`spec/globignore.test.sh`](https://github.com/oils-for-unix/oils/blob/648dda89fba10be77a166e81c6e899960c52cd46/spec/globignore.test.sh) went from `oils_failures_allowed: 14` to `oils_failures_allowed: 1` - meaning 13 previously-failing test cases now pass.
 
 I also added a new test case to verify that `.` and `..` are always filtered when GLOBIGNORE is set:
 

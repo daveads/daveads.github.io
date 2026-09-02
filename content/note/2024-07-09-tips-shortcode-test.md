@@ -9,14 +9,14 @@ notec = ["Tests"]
 
 Welcome to my blog post about using Zola shortcodes!
 
-{% tip(header="Did you know?") %}
+{% <tip header="Did you know?"> %}
 Zola is a fast static site generator written in Rust. It's known for its simplicity and speed!
-{% end %}
+{% </tip> %}
 
 
 ## Testing**
 
-{% tip(header="Pro Tip") %}
+{% <tip header="Pro Tip"> %}
 You can nest Markdown within your [callouts](callouts). For example:
 
 - Use **bold** for emphasis
@@ -24,6 +24,6 @@ You can nest Markdown within your [callouts](callouts). For example:
 - Even add [links](https://www.getzola.org/)
 
 Tips make your content more engaging and easier to read!
-{% end %}
+{% </tip> %}
 
 I hope this helps you understand how to use tips in your Zola site!
