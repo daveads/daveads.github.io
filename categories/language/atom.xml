@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - Language</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/categories/language/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-07-20T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/categories/language/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Programming language resources</title>
+        <published>2022-05-31T00:00:00+00:00</published>
+        <updated>2024-07-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/programming-language-resources/"/>
+        <id>https://daveads.github.io/writing/programming-language-resources/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/programming-language-resources/">&lt;p&gt;For a comprehensive list, I highly recommend checking out &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://bernsteinbear.com/pl-resources/&quot;&gt;Max Bernstein&#39;s PL Resources&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;favorite-resources-for-getting-started-with-pl&quot;&gt;&lt;strong&gt;Favorite Resources for Getting Started with PL&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://craftinginterpreters.com/&quot;&gt;Crafting Interpreters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/dp/3982016118&quot;&gt;Writing An Interpreter In Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/dp/398201610X&quot;&gt;Writing A Compiler In Go&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;additional-curated-lists&quot;&gt;Additional curated lists:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/aalhour/awesome-compilers&quot;&gt;Awesome Compilers Resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/danistefanovic/build-your-own-x#build-your-own-programming-language&quot;&gt;Build Your Own Programming Language&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;operating-systems&quot;&gt;Operating Systems&lt;/h2&gt;
+&lt;p&gt;Resources for learning about and building operating systems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://wiki.osdev.org/Main_Page&quot;&gt;OSDev Wiki&lt;/a&gt; - Comprehensive wiki for OS development&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.linuxfromscratch.org/&quot;&gt;Linux From Scratch&lt;/a&gt; - Step-by-step guide to building your own Linux system&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://os.phil-opp.com/&quot;&gt;Writing an OS in Rust&lt;/a&gt; - Blog series on creating an OS using Rust&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/littleosbook/littleosbook/&quot;&gt;Little OS Book&lt;/a&gt; - Concise guide to OS development&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/cfenollosa/os-tutorial&quot;&gt;OS from Scratch&lt;/a&gt; - Hands-on tutorial for building a simple OS&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/codecrafters-io/build-your-own-x#build-your-own-operating-system&quot;&gt;Build Your Own Operating System&lt;/a&gt; - Curated list of OS development resources&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.nand2tetris.org/&quot;&gt;Nand to Tetris Courses&lt;/a&gt; - Build a modern computer system from the ground up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;assembly-language&quot;&gt;Assembly Language&lt;/h2&gt;
+&lt;p&gt;Resources for learning assembly language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://pacman128.github.io/pcasm/&quot;&gt;PC Assembly Language Programming&lt;/a&gt; - Guide to 32-bit x86 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/0xAX/asm&quot;&gt;Learning Assembly for Linux-x64&lt;/a&gt; - Tutorial series for x86-64 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.cs.princeton.edu/courses/archive/spring04/cos217/&quot;&gt;Introduction to Programming Systems&lt;/a&gt; - Princeton University course materials&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://skilldrick.github.io/easy6502/index.html&quot;&gt;Easy 6502&lt;/a&gt; - Interactive tutorial for 6502 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.xorpd.net/pages/x86_adventures.html&quot;&gt;Assembly Language Adventures&lt;/a&gt; - In-depth x86 assembly course&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://gist.github.com/muff-in/ff678b1fda17e6188aa0462a99626121&quot;&gt;Assembly Language / Reversing / Malware Analysis / Game Hacking Resources&lt;/a&gt; - Comprehensive list of assembly-related resources&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.cs.virginia.edu/~evans/cs216/guides/x86.html&quot;&gt;x86 Assembly Guide&lt;/a&gt; - Concise guide to x86 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mikeroyal/Assembly-Guide&quot;&gt;Assembly Guide&lt;/a&gt; - Extensive guide covering various assembly topics&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Indentation in Python</title>
+        <published>2020-01-17T00:00:00+00:00</published>
+        <updated>2020-01-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/indentation-in-python/"/>
+        <id>https://daveads.github.io/writing/indentation-in-python/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/indentation-in-python/">&lt;h2 id=&quot;what-is-indentation&quot;&gt;what is indentation:&lt;/h2&gt;
+&lt;p&gt;According to &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Indentation_(typesetting)&quot;&gt;wikipedia - indentation&lt;/a&gt; indent is an empty space at the beginning of a line to signal the start of a new paragraph.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/indent.png&quot; alt=&quot;indent&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;In Python indentation refers to the (spaces and tabs) that are used at the beginning of a statement, it is a way of telling the interpreter this part of the code belongs to the same group,in programming language like c, c++, java, kotlin.. curly braces {} are use to indicate the start and end of a block of code..&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;indentation in java&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;public class&lt;/span&gt;&lt;span style=&quot;color: #F9E2AF;font-style: italic;&quot;&gt; indentation&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;{&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;	public static void&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; main&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;String&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;[]&lt;/span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt; args&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;		{&lt;/span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt; // shows this is the body of the main method&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;		&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;		Scanner&lt;/span&gt;&lt;span&gt; input&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;/span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; new&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; Scanner&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span&gt;System&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;/span&gt;&lt;span&gt;in&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;		out&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;println&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;input a valid password&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;		String&lt;/span&gt;&lt;span&gt; user_input&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;/span&gt;&lt;span&gt; input&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;next&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;		if&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; (&lt;/span&gt;&lt;span&gt;user_input&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;equals&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;evad&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)){&lt;/span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt; // if statement body     &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;			out&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;println&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;logged in &lt;/span&gt;&lt;span style=&quot;color: #F5C2E7;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;		}&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;		else&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;			out&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;println&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;incorrect password&lt;/span&gt;&lt;span style=&quot;color: #F5C2E7;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;		}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;	}&lt;/span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt; //end of the main method&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt; //end of the of the porgramm &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt; what&#39;s the whole point of indentation ?&lt;br&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt; glance through the example below and tell me what you think about it.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The coherence theory states that a proposition is true if and only if that proposition coheres with the other propositions that one believes. . . . The problem with the coherence theory is that a belief could be consistent with my other beliefs and yet the whole lot could be false. —Colin McGinn (2015a, p. 148) According to the coherence theory of truth (see Young 2018), a set of propositions (or beliefs, or sentences) is true iff:they are mutually consistent, and 2.they are supported by, or consistent with, all available evidence; that is, they “cohere” with each other and with all evidence. Note that observation statements (that is, descriptions of what we observe in the world around us) are among the claims that must be mutually consistent, so this is
+not (necessarily) a “pie-in-the-sky” theory that doesn’t have to relate to the way things
+really are. It just says that we don’t have to have independent access to “reality” in
+order to determine truth.
+2.4.3Correspondence vs. Coherence Which theory is correct? Well, for one thing, there are more than two theories: There
+are several versions of each kind of theory, and there are other theories of truth that
+don’t fall under either category. The most important of the other theories is the “prag-
+matic” theory of truth (see Glanzberg 2016, §3; Misak and Talisse 2019). Here is one
+version: [T]he pragmatic theory of truth . . . is that a proposition is true if and only
+[if] it is useful [that is, “pragmatic”, or practical] to believe that proposi-
+tion. (McGinn, 2015a, p. 148, my interpolated brackets)
+Another version states that a belief, proposition, or sentence is true iff it continues to
+be accepted at the limit of inquiry:
+Truth is that to which a belief would tend were it to tend indefinitely to a fixed
+belief. (Edwin Martin, Jr., paraphrasing C.S. Peirce; lectures on the theory of
+knowledge,Spring 1973; for more on Peirce, see §2.6.1.3,below.)46&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Indentation in python is very important because with out proper indenting you will end up seeing &lt;strong&gt;IndentationError:&lt;/strong&gt; examples as seen below&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; True&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;print&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;yea true&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;else&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;print&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;not true&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In python when defining statement for functions and loops you do this using four white spaces or a single tab according to python indentation rules&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; print_statement&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;():&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;    print&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;indented under print_statement&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;    print&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;same&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;    print&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;same&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;a&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 0&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;b&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 10&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;while&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; &amp;lt;=&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 10&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;    print_statement&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;()&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    a&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;/span&gt;&lt;span&gt; a&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; +&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Importants of indentation:&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;
+	&lt;li&gt;helps to properly structure the code&lt;/li&gt;
+	&lt;li&gt;makes the code beautiful (human readable)&lt;/li&gt;
+&lt;/div&gt;
+&lt;p&gt;Python&#39;s Style guide &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.python.org/dev/peps/pep-0008/#indentation&quot;&gt;pep8&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/Daveads/indentation&quot;&gt;source code&lt;/a&gt;&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>
