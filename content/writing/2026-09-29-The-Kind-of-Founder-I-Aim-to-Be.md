@@ -1,5 +1,5 @@
 +++
-title = "The Kind of Founder I Want to Be"
+title = "The Kind of Founder I Aim to Be"
 date = 2026-09-29
 [taxonomies]
 categories = ["Merdra"]
@@ -12,7 +12,7 @@ A year later:
 
 - What would they say about working with me?
 - Would they understand where their money went?
-- Would they know what we had built, what we had learned, and where we were struggling?
+- Would they understand the progress we had made, what we had learned, and the challenges we were facing?
 - Would they feel that I had taken their belief in me seriously?
 
 Those questions matter to me.
