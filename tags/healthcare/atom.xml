@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - healthcare</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/healthcare/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-10-09T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/tags/healthcare/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Medical History</title>
+        <published>2026-10-09T00:00:00+00:00</published>
+        <updated>2026-10-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/medical-history/"/>
+        <id>https://daveads.github.io/writing/medical-history/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/medical-history/">&lt;p&gt;When you visit a doctor, the conversation usually begins with what is bothering you now. But understanding your current condition can also mean looking at what happened before.&lt;/p&gt;
+&lt;p&gt;A previous diagnosis, a medicine you are taking, an operation, or a reaction to treatment may influence the decisions made during that visit. Your medical history gives the doctor context for understanding the person in front of them.&lt;/p&gt;
+&lt;p&gt;I wanted to understand how this works in everyday practice, so I asked doctors on our team how they use previous patient information and what happens when they cannot access it. This article draws on two of those conversations.&lt;/p&gt;
+&lt;p&gt;Their responses brought the problem into focus. Sometimes patients can explain their history clearly. Sometimes they cannot. And sometimes the information has already been recorded, but the doctor still has difficulty retrieving it.&lt;/p&gt;
+&lt;p&gt;One doctor described a consultation that illustrated this last situation.&lt;/p&gt;
+&lt;p&gt;The patient could not clearly explain an existing diagnosis or name the medicines they were taking. The facility had recently moved to a different electronic medical record system. To understand the patient&#39;s treatment and decide what needed to change, the doctor and a consultant had to pause the consultation and retrieve information from the old system.&lt;/p&gt;
+&lt;p&gt;The information existed. Finding it still interrupted the care being provided.&lt;/p&gt;
+&lt;p&gt;The clinician still needs to assess the person in front of them. Previous documentation contributes to that assessment alongside the patient&#39;s account, examination findings, and relevant investigations.&lt;/p&gt;
+&lt;p&gt;Both doctors said that when records are unavailable, they take a fresh history. One pointed out that this can be straightforward when the patient can clearly describe their health and treatment. Missing documentation does not make every consultation impossible.&lt;/p&gt;
+&lt;p&gt;The difficulty becomes more apparent when the person cannot provide that account. The other doctor described an unconscious patient whose relatives did not know about an existing condition. Important parts of the patient&#39;s history became clear only during further assessment.&lt;/p&gt;
+&lt;p&gt;Those experiences made me think about how much we ask patients and families to carry between appointments. Imagine arriving at a new clinic with results on your phone, a prescription on paper, and details of an earlier consultation you are trying to remember.&lt;/p&gt;
+&lt;p&gt;Someone may know they take a tablet without knowing its name. A relative may accompany a patient without knowing their earlier diagnoses. A record can help fill those gaps, while still needing to be checked against the patient&#39;s current situation.&lt;/p&gt;
+&lt;p&gt;Medication information was another concrete example. One doctor described how reviewing a patient&#39;s medication history led the team to postpone a planned operation. I am keeping the clinical details general here, but the significance for this discussion is clear: information about earlier care changed the next decision.&lt;/p&gt;
+&lt;p&gt;Accurate medication records include current medicines, known allergies and reactions, and changes to treatment. The Care Quality Commission&#39;s guidance also emphasises checking discrepancies when people move between care settings.&lt;/p&gt;
+&lt;p&gt;The conversations also changed how I think about investigations. Not every consultation requires new laboratory tests or access to every past record. What matters is whether the available information helps answer the current clinical question.&lt;/p&gt;
+&lt;p&gt;Even when an earlier result is available, another test may be needed. The doctors described several different reasons for repeating an investigation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Monitoring:&lt;/strong&gt; a new result may be needed to assess changes in the patient&#39;s condition or response to treatment.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Checking a finding:&lt;/strong&gt; a result that raises concerns about reliability or differs substantially from the clinical picture may prompt further investigation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Missing information:&lt;/strong&gt; a previous result may have to be repeated because it cannot be retrieved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Those reasons deserve separate attention. Better access could help address the third situation. It would not remove the need for clinical monitoring or for questioning a result.&lt;/p&gt;
+&lt;p&gt;A result also needs context. A value outside a reference range does not always indicate illness, and a value within it does not always rule illness out. Interpretation depends on the wider clinical picture.&lt;/p&gt;
+&lt;p&gt;Earlier results may help reveal changes over time. Dates, units, reference ranges, and testing methods matter when making comparisons. Results from different laboratories may not be directly comparable.&lt;/p&gt;
+&lt;p&gt;For anyone building software around medical records, those details deserve as much attention as the number itself.&lt;/p&gt;
+&lt;p&gt;That leads to another question I asked: what makes a doctor trust a result from another facility?&lt;/p&gt;
+&lt;p&gt;Both doctors discussed the facility&#39;s track record and whether the findings made sense alongside the patient&#39;s presentation. Their accounts suggest that access and confidence in the information are separate problems to understand.&lt;/p&gt;
+&lt;p&gt;For Merdra, that distinction matters. Recording where a result came from and whether it has changed can make its history traceable. It does not, by itself, establish that the test was performed correctly or that the interpretation is accurate.&lt;/p&gt;
+&lt;p&gt;The old-EMR example raises a related engineering question. What happens to a patient&#39;s history when an institution changes software? In the case described to me, the clinicians could retrieve it, but doing so required an extra step during the consultation. Making information digital had not made continuity automatic.&lt;/p&gt;
+&lt;p&gt;Both doctors wanted reliable access to previous records across facilities. My interpretation is that continuity should mean access to relevant information in a form the clinician can assess and use. It needs to be current enough for the decision and available to the people authorised to use it. Patients should not have to surrender privacy to benefit from continuity.&lt;/p&gt;
+&lt;p&gt;This is part of the problem we are working on at &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.merdra.com/&quot;&gt;Merdra&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Building towards medical information that can follow a patient across providers and become usable by other healthcare software. Identity, permissions, and the source and history of each record are part of that foundation.&lt;/p&gt;
+&lt;p&gt;Making information available is one part of the work. Its accuracy, meaning, and place in the clinical workflow matter too.&lt;/p&gt;
+&lt;p&gt;These conversations give us specific things to investigate as we build:&lt;br&gt;
+how clinicians retrieve older records, how they check results from elsewhere, and where information becomes difficult to use. We still need to learn how often these situations occur and whether our approach helps in practice.&lt;/p&gt;
+&lt;br&gt;
+The question I want us to keep asking is simple:&lt;br&gt;
+when someone needs care, can the people caring for them access and understand the information that matters?
+&lt;!-- Editorial note: Before publication, ask the two doctors to confirm that the anonymised paraphrases reflect their accounts accurately. The medication examples intentionally omit drug names, doses, administration instructions, and recommended waiting periods. --&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;blockquote class=&quot;callout note&quot;&gt;
+&lt;div class=&quot;icon&quot;&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Paraphrased from responses shared by two doctors on the Merdra team while developing this article. These are exploratory conversations, not a representative study. Patient and facility identifiers are not included.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+</content>
+        
+    </entry>
+</feed>

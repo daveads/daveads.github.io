@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - CS</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/categories/cs/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2020-01-29T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/categories/cs/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Computer science research papers</title>
+        <published>2020-01-29T00:00:00+00:00</published>
+        <updated>2020-01-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/computer-science-research-papers/"/>
+        <id>https://daveads.github.io/writing/computer-science-research-papers/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/computer-science-research-papers/">&lt;p&gt;&lt;strong&gt;Easy access for my personal use&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://paperswelove.org/&quot;&gt;papers we over&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Respostiory on github &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/papers-we-love/papers-we-love&quot;&gt;papers-we-love&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://dl.acm.org/search/advanced&quot;&gt;ACM Digital Library&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ieeexplore.ieee.org/Xplore/home.jsp&quot;&gt;IEEE Xplore Digital Library&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://dblp.uni-trier.de/&quot;&gt;dblp computer science bibliography&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://academic.microsoft.com/home&quot;&gt;Microsoft Academic&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://link.springer.com/search?facet-series=%22558%22&quot;&gt;Springer Lecture Notes in Computer Science (LNCS)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;check-out-this-also&quot;&gt;Check out this also&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://citeseerx.ist.psu.edu/index&quot;&gt;citeseerx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.m.wikipedia.org/wiki/List_of_important_publications_in_computer_science&quot;&gt;wiki (list of important publications in computer science)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://scholar.google.com/&quot;&gt;google-scholar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.academia.edu/&quot;&gt;academia&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.researchgate.net/&quot;&gt;reasearchgate #microsoft&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://arxiv.org/archive/cs&quot;&gt;arXiv.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.semanticscholar.org/&quot;&gt;semantic scholar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.acm.org/media-center/2019/march/sigcse-top-10-papers&quot;&gt;Ten Computer Science Education Research Papers of the Last&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.aresearchguide.com/30-computer-science-research-paper-topics.html&quot;&gt;30 great research pappers&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;mit&quot;&gt;MIT&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://news.mit.edu/topic/computers&quot;&gt;MIT News&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.csail.mit.edu/research&quot;&gt;MIT Computer Science &amp;amp; Artificial Intelligence Lab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.eecs.mit.edu/research&quot;&gt;research mit eecs&lt;/a&gt;&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Computer Science resources -curious</title>
+        <published>2019-07-07T00:00:00+00:00</published>
+        <updated>2020-01-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/computer-science-resources/"/>
+        <id>https://daveads.github.io/writing/computer-science-resources/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/computer-science-resources/">&lt;blockquote&gt;
+&lt;p&gt;I love this particual line made by &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Alan_Kay&quot;&gt;Alan kay&lt;/a&gt;
+&lt;cite&gt;At some age you need to take responsibility for your own education&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;CS Resources &amp;amp;&amp;amp; important articles&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;cs-curriculum&quot;&gt;CS Curriculum&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/&quot;&gt;MIT OPEN COURSE WARE EE &amp;amp; CS courses&lt;/a&gt; IMP 6-2&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://catalog.mit.edu/degree-charts/computer-science-engineering-course-6-3/&quot;&gt;For a more direct Cs majors&lt;/a&gt; chart 6-3&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/ossu/computer-science&quot;&gt;Open Source Society University&lt;/a&gt; self-taught education in Computer Science&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://functionalcs.github.io/curriculum/&quot;&gt;A Self-Learning, Modern Computer Science Curriculum&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mvillaloboz/open-source-cs-degree&quot;&gt;open-source-cs-degree&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://matt.might.net/articles/what-cs-majors-should-know/&quot;&gt;What CS Major Should Know&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;others&quot;&gt;OTHERS&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ocw.mit.edu/courses/mathematics/&quot;&gt;Mit math courses&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ocw.mit.edu/courses/physics/&quot;&gt;Mit physcis Courses&lt;/a&gt; courses of interest&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.edx.org/&quot;&gt;Edx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.coursera.org/&quot;&gt;Coursera&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mtdvio/every-programmer-should-know&quot;&gt;Every Programmer Should Know&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/datasciencemasters/go&quot;&gt;The Open Source Date Science masters&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/humanwhocodes/computer-science-in-javascript&quot;&gt;computer science in javascript&lt;/a&gt; collection of classic computer science paradigms, algorithms, and approaches written in JavaScript&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://teachyourselfcs.com/&quot;&gt;Teach yourself computer science&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.nand2tetris.org/&quot;&gt;Nand to Tetris&lt;/a&gt; Building a Modern Computer From First Principles&lt;/p&gt;
+&lt;h2 id=&quot;cs-coursers&quot;&gt;CS COURSERS&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/Developer-Y/cs-video-courses&quot;&gt;List of Computer Science courses with video lectures&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/P1xt/p1xt-guides&quot;&gt;Programming curricula&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/prakhar1989/awesome-courses&quot;&gt;Awesome CS Courses&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://bootcamp.berkeley.edu/coding/&quot;&gt;Berkeley Coding Boot Camp&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;alogrithms&quot;&gt;Alogrithms&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/keon/algorithms&quot;&gt;algorithms&lt;/a&gt; algorithms using python&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mandliya/algorithms_and_data_structures&quot;&gt;algorithms and data structures&lt;/a&gt; Algorithm &amp;amp; Data Structure Problems using C++&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/TheAlgorithms/C-Plus-Plus&quot;&gt;all algorithms implemented in c++&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/jeffgerickson/algorithms&quot;&gt;Algorithms by Jeff Erickson&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;important&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://norvig.com/21-days.html&quot;&gt;Teach Yourself Programming in Ten Years&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/writing/interesting-programming-and-cs-books.html&quot;&gt;Books&lt;/a&gt;&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>

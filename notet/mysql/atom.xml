@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - mysql</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notet/mysql/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-06-11T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notet/mysql/atom.xml</id>
+    <entry xml:lang="en">
+        <title>mysql &gt;&gt; mariadb note</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/mysql/"/>
+        <id>https://daveads.github.io/note/mysql/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/mysql/">&lt;h3 id=&quot;local-development&quot;&gt;Local development&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mysql -u root -p&lt;/code&gt;  Connect to the MySQL server using the &lt;code&gt;mysql&lt;/code&gt; command-line client and provide the root user credentials when prompted&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;SHOW DATABASES;&lt;/code&gt; See all the databases available on the MySQL server&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;USE database_name;&lt;/code&gt; To move in to the database&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;SHOW TABLES;&lt;/code&gt; View all the tables within the selected database&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;DESCRIBE table_name;&lt;/code&gt;  To view the structure (columns and data types) of a specific table&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CREATE DATABASE new_database_name;&lt;/code&gt; To create a new database&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;source /home/ubuntu/schema.sql&lt;/code&gt; To run a SQL script file like &lt;code&gt;schema.sql&lt;/code&gt; in SQL shell&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;DROP DATABASE my_database;&lt;/code&gt; Delete a database&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+</feed>
