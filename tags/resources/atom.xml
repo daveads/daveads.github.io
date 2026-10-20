@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - resources</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/resources/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-07-20T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/tags/resources/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Programming language resources</title>
+        <published>2022-05-31T00:00:00+00:00</published>
+        <updated>2024-07-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/programming-language-resources/"/>
+        <id>https://daveads.github.io/writing/programming-language-resources/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/programming-language-resources/">&lt;p&gt;For a comprehensive list, I highly recommend checking out &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://bernsteinbear.com/pl-resources/&quot;&gt;Max Bernstein&#39;s PL Resources&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;favorite-resources-for-getting-started-with-pl&quot;&gt;&lt;strong&gt;Favorite Resources for Getting Started with PL&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://craftinginterpreters.com/&quot;&gt;Crafting Interpreters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/dp/3982016118&quot;&gt;Writing An Interpreter In Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/dp/398201610X&quot;&gt;Writing A Compiler In Go&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;additional-curated-lists&quot;&gt;Additional curated lists:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/aalhour/awesome-compilers&quot;&gt;Awesome Compilers Resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/danistefanovic/build-your-own-x#build-your-own-programming-language&quot;&gt;Build Your Own Programming Language&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;operating-systems&quot;&gt;Operating Systems&lt;/h2&gt;
+&lt;p&gt;Resources for learning about and building operating systems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://wiki.osdev.org/Main_Page&quot;&gt;OSDev Wiki&lt;/a&gt; - Comprehensive wiki for OS development&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.linuxfromscratch.org/&quot;&gt;Linux From Scratch&lt;/a&gt; - Step-by-step guide to building your own Linux system&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://os.phil-opp.com/&quot;&gt;Writing an OS in Rust&lt;/a&gt; - Blog series on creating an OS using Rust&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/littleosbook/littleosbook/&quot;&gt;Little OS Book&lt;/a&gt; - Concise guide to OS development&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/cfenollosa/os-tutorial&quot;&gt;OS from Scratch&lt;/a&gt; - Hands-on tutorial for building a simple OS&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/codecrafters-io/build-your-own-x#build-your-own-operating-system&quot;&gt;Build Your Own Operating System&lt;/a&gt; - Curated list of OS development resources&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.nand2tetris.org/&quot;&gt;Nand to Tetris Courses&lt;/a&gt; - Build a modern computer system from the ground up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;assembly-language&quot;&gt;Assembly Language&lt;/h2&gt;
+&lt;p&gt;Resources for learning assembly language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://pacman128.github.io/pcasm/&quot;&gt;PC Assembly Language Programming&lt;/a&gt; - Guide to 32-bit x86 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/0xAX/asm&quot;&gt;Learning Assembly for Linux-x64&lt;/a&gt; - Tutorial series for x86-64 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.cs.princeton.edu/courses/archive/spring04/cos217/&quot;&gt;Introduction to Programming Systems&lt;/a&gt; - Princeton University course materials&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://skilldrick.github.io/easy6502/index.html&quot;&gt;Easy 6502&lt;/a&gt; - Interactive tutorial for 6502 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.xorpd.net/pages/x86_adventures.html&quot;&gt;Assembly Language Adventures&lt;/a&gt; - In-depth x86 assembly course&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://gist.github.com/muff-in/ff678b1fda17e6188aa0462a99626121&quot;&gt;Assembly Language / Reversing / Malware Analysis / Game Hacking Resources&lt;/a&gt; - Comprehensive list of assembly-related resources&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.cs.virginia.edu/~evans/cs216/guides/x86.html&quot;&gt;x86 Assembly Guide&lt;/a&gt; - Concise guide to x86 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mikeroyal/Assembly-Guide&quot;&gt;Assembly Guide&lt;/a&gt; - Extensive guide covering various assembly topics&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Computer Science resources -curious</title>
+        <published>2019-07-07T00:00:00+00:00</published>
+        <updated>2020-01-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/computer-science-resources/"/>
+        <id>https://daveads.github.io/writing/computer-science-resources/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/computer-science-resources/">&lt;blockquote&gt;
+&lt;p&gt;I love this particual line made by &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Alan_Kay&quot;&gt;Alan kay&lt;/a&gt;
+&lt;cite&gt;At some age you need to take responsibility for your own education&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;CS Resources &amp;amp;&amp;amp; important articles&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;cs-curriculum&quot;&gt;CS Curriculum&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/&quot;&gt;MIT OPEN COURSE WARE EE &amp;amp; CS courses&lt;/a&gt; IMP 6-2&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://catalog.mit.edu/degree-charts/computer-science-engineering-course-6-3/&quot;&gt;For a more direct Cs majors&lt;/a&gt; chart 6-3&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/ossu/computer-science&quot;&gt;Open Source Society University&lt;/a&gt; self-taught education in Computer Science&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://functionalcs.github.io/curriculum/&quot;&gt;A Self-Learning, Modern Computer Science Curriculum&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mvillaloboz/open-source-cs-degree&quot;&gt;open-source-cs-degree&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://matt.might.net/articles/what-cs-majors-should-know/&quot;&gt;What CS Major Should Know&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;others&quot;&gt;OTHERS&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ocw.mit.edu/courses/mathematics/&quot;&gt;Mit math courses&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ocw.mit.edu/courses/physics/&quot;&gt;Mit physcis Courses&lt;/a&gt; courses of interest&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.edx.org/&quot;&gt;Edx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.coursera.org/&quot;&gt;Coursera&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mtdvio/every-programmer-should-know&quot;&gt;Every Programmer Should Know&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/datasciencemasters/go&quot;&gt;The Open Source Date Science masters&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/humanwhocodes/computer-science-in-javascript&quot;&gt;computer science in javascript&lt;/a&gt; collection of classic computer science paradigms, algorithms, and approaches written in JavaScript&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://teachyourselfcs.com/&quot;&gt;Teach yourself computer science&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.nand2tetris.org/&quot;&gt;Nand to Tetris&lt;/a&gt; Building a Modern Computer From First Principles&lt;/p&gt;
+&lt;h2 id=&quot;cs-coursers&quot;&gt;CS COURSERS&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/Developer-Y/cs-video-courses&quot;&gt;List of Computer Science courses with video lectures&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/P1xt/p1xt-guides&quot;&gt;Programming curricula&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/prakhar1989/awesome-courses&quot;&gt;Awesome CS Courses&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://bootcamp.berkeley.edu/coding/&quot;&gt;Berkeley Coding Boot Camp&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;alogrithms&quot;&gt;Alogrithms&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/keon/algorithms&quot;&gt;algorithms&lt;/a&gt; algorithms using python&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mandliya/algorithms_and_data_structures&quot;&gt;algorithms and data structures&lt;/a&gt; Algorithm &amp;amp; Data Structure Problems using C++&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/TheAlgorithms/C-Plus-Plus&quot;&gt;all algorithms implemented in c++&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/jeffgerickson/algorithms&quot;&gt;Algorithms by Jeff Erickson&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;important&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://norvig.com/21-days.html&quot;&gt;Teach Yourself Programming in Ten Years&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/writing/interesting-programming-and-cs-books.html&quot;&gt;Books&lt;/a&gt;&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>

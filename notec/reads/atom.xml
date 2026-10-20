@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - Reads</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notec/reads/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-01-20T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notec/reads/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Jan Reads 2026</title>
+        <published>2026-01-20T00:00:00+00:00</published>
+        <updated>2026-01-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/jan-reads/"/>
+        <id>https://daveads.github.io/note/jan-reads/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/jan-reads/">&lt;h3 id=&quot;my-january-reads&quot;&gt;My January Reads&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.seangoedecke.com/addicted-to-being-useful/&quot;&gt;Addicted to being useful&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;//Thoughts&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I feel there is always going to be something to do, working on something entirely new, something that never existed, something that requires a new kind of architecture.&lt;/p&gt;
+&lt;p&gt;Something the world needs. Human needs are endless. There might be some already known patterns, but there are always unknown patterns too.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I’m probably also addicted to being useful just like &lt;strong&gt;Akaky Akayevich&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://iscinumpy.dev/post/packaging-faster/&quot;&gt;How we made Python&#39;s packaging library 3x faster&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;28-01-26&quot;&gt;28-01-26&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.fast.ai/posts/2026-01-28-dark-flow/&quot;&gt;Breaking the Spell of Vibe Coding&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>December reads</title>
+        <published>2025-12-19T00:00:00+00:00</published>
+        <updated>2025-12-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/december-reads25/"/>
+        <id>https://daveads.github.io/note/december-reads25/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/december-reads25/">&lt;h3 id=&quot;december-reads&quot;&gt;December reads&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://daveads.github.io/note/december-reads25/#19-12-2025&quot;&gt;19 Dec&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://daveads.github.io/note/december-reads25/#21-12-2025&quot;&gt;20 Dec&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://daveads.github.io/note/december-reads25/#27-12-2025&quot;&gt;27 Dec&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;19-12-2025&quot;&gt;&lt;strong&gt;19-12-2025&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://simonwillison.net/2025/Dec/18/code-proven-to-work/&quot;&gt;Code you have proven to work&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://thepalindrome.org/p/if-you-want-to-hit-your-target-take&quot;&gt;if you want to hit your target take more shot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ploum.net/2025-12-19-prepare-for-that-world.html&quot;&gt;Prepare for That Stupid World&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;21-12-2025&quot;&gt;&lt;strong&gt;21-12-2025&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://nnethercote.github.io/2025/09/04/faster-rust-builds-on-mac.html&quot;&gt;faster rust builds on mac&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;27-12-2025&quot;&gt;&lt;strong&gt;27-12-2025&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://nadrieril.github.io/blog/2025/12/21/the-algebra-of-loans-in-rust.html&quot;&gt;The Algebra of Loans in Rust&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://nesbitt.io/2025/12/26/how-uv-got-so-fast.html&quot;&gt;how uv got fast&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>July Reads 2025</title>
+        <published>2025-07-08T00:00:00+00:00</published>
+        <updated>2025-07-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/july-reads25/"/>
+        <id>https://daveads.github.io/note/july-reads25/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/july-reads25/">&lt;h3 id=&quot;reads-for-july&quot;&gt;Reads for July&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;08-07-2025&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://yidingjiang.github.io/blog/post/exploration/&quot;&gt;The Era of Exploration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.librariesforthefuture.bio/p/is-this-aging&quot;&gt;Is this aging?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;16-07-2025&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://endler.dev/2025/best-programmers/#break-down-problems&quot;&gt;The Best Programmers I Know&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/davidkimai/Context-Engineering&quot;&gt;Context engineering&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://gwern.net/ai-daydreaming&quot;&gt;ai-daydreaming&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://the-nerve-blog.ghost.io/to-be-a-better-programmer-write-little-proofs-in-your-head/&quot;&gt;To-be-a-better-programmer-write-little-proofs-in-your-head&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://blog.val.town/vibe-code&quot;&gt;Vibe code is legacy code&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>June Reads 2025</title>
+        <published>2025-06-04T00:00:00+00:00</published>
+        <updated>2025-06-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/june-reads/"/>
+        <id>https://daveads.github.io/note/june-reads/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/june-reads/">&lt;h3 id=&quot;reads-for-june&quot;&gt;Reads for June&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://simonwillison.net/2025/Mar/19/vibe-coding/&quot;&gt;Not all ai-assisted programming is vibe coding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://fly.io/blog/youre-all-nuts/&quot;&gt;You&#39;re all nuts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ampcode.com/how-to-build-an-agent&quot;&gt;How to build an agent&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ghuntley.com/mirrors/&quot;&gt;Mirrors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://richardcsuwandi.github.io/blog/2025/dgm/&quot;&gt;AI that can improve itself&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;06-06-2025&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ghuntley.com/mcp/&quot;&gt;Mcp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://time.com/7289692/when-ai-replaces-workers/&quot;&gt;When ai replaces coworker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.artfintel.com/p/reinforcement-learning-and-general&quot;&gt;Rl and general&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.joshuapurtell.com/posts/spec_eng/&quot;&gt;Specification Engineering&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;09-06-2025&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://alloc.dev/2025/06/07/zig_optimization&quot;&gt;Optimization in zig&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.snellman.net/blog/archive/2025-06-02-llms-are-cheap/&quot;&gt;LLms are cheap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;17-06-2025&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/&quot;&gt;The lethal trifecta&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://themoralcircle.substack.com/p/live-like-you-only-have-10-years?t=lLXTEW8kyYNdOUihFmjkEw&amp;amp;s=09&quot;&gt;Live like you only have 10 years left&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://arxiv.org/abs/2104.00008&quot;&gt;Why is AI hard and Physics simple?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;23-06-2025&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.high-capacity.com/p/chinese-industrial-maximalism&quot;&gt;Chinese industrial maximalism&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://newsletter.pragmaticengineer.com/p/tdd-ai-agents-and-coding-with-kent&quot;&gt;TDD, AI agents and coding with Kent Beck&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>August Reads 2024</title>
+        <published>2024-08-13T00:00:00+00:00</published>
+        <updated>2024-08-13T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/august-reads/"/>
+        <id>https://daveads.github.io/note/august-reads/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/august-reads/">&lt;h3 id=&quot;reads-for-august&quot;&gt;Reads for August&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://paulgraham.com/fn.html&quot;&gt;Fierce nerds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://paulgraham.com/think.html&quot;&gt;/think&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://transactional.blog/blog/2024-erasure-coding&quot;&gt;Erasure Coding&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>July Reads 2024</title>
+        <published>2024-07-06T00:00:00+00:00</published>
+        <updated>2024-07-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/july-reads/"/>
+        <id>https://daveads.github.io/note/july-reads/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/july-reads/">&lt;h3 id=&quot;tech&quot;&gt;Tech&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://carbon-steel.github.io/jekyll/update/2024/06/19/abstractions.html&quot;&gt;Abstractions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://tylerneylon.com/a/mind_model/mind_model.html&quot;&gt;Mind Model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://salykova.github.io/matmul-cpu&quot;&gt;NumPy&#39;s matrix multiplication in 150 lines of C code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.vox.com/future-perfect/353430/what-if-absolutely-everything-is-conscious&quot;&gt;What if absolutely everything is conscious?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+</feed>

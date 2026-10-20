@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - compiler</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/compiler/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-07-20T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/tags/compiler/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Programming language resources</title>
+        <published>2022-05-31T00:00:00+00:00</published>
+        <updated>2024-07-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/programming-language-resources/"/>
+        <id>https://daveads.github.io/writing/programming-language-resources/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/writing/programming-language-resources/">&lt;p&gt;For a comprehensive list, I highly recommend checking out &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://bernsteinbear.com/pl-resources/&quot;&gt;Max Bernstein&#39;s PL Resources&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;favorite-resources-for-getting-started-with-pl&quot;&gt;&lt;strong&gt;Favorite Resources for Getting Started with PL&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://craftinginterpreters.com/&quot;&gt;Crafting Interpreters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/dp/3982016118&quot;&gt;Writing An Interpreter In Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/dp/398201610X&quot;&gt;Writing A Compiler In Go&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;additional-curated-lists&quot;&gt;Additional curated lists:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/aalhour/awesome-compilers&quot;&gt;Awesome Compilers Resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/danistefanovic/build-your-own-x#build-your-own-programming-language&quot;&gt;Build Your Own Programming Language&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;operating-systems&quot;&gt;Operating Systems&lt;/h2&gt;
+&lt;p&gt;Resources for learning about and building operating systems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://wiki.osdev.org/Main_Page&quot;&gt;OSDev Wiki&lt;/a&gt; - Comprehensive wiki for OS development&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.linuxfromscratch.org/&quot;&gt;Linux From Scratch&lt;/a&gt; - Step-by-step guide to building your own Linux system&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://os.phil-opp.com/&quot;&gt;Writing an OS in Rust&lt;/a&gt; - Blog series on creating an OS using Rust&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/littleosbook/littleosbook/&quot;&gt;Little OS Book&lt;/a&gt; - Concise guide to OS development&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/cfenollosa/os-tutorial&quot;&gt;OS from Scratch&lt;/a&gt; - Hands-on tutorial for building a simple OS&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/codecrafters-io/build-your-own-x#build-your-own-operating-system&quot;&gt;Build Your Own Operating System&lt;/a&gt; - Curated list of OS development resources&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.nand2tetris.org/&quot;&gt;Nand to Tetris Courses&lt;/a&gt; - Build a modern computer system from the ground up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;assembly-language&quot;&gt;Assembly Language&lt;/h2&gt;
+&lt;p&gt;Resources for learning assembly language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://pacman128.github.io/pcasm/&quot;&gt;PC Assembly Language Programming&lt;/a&gt; - Guide to 32-bit x86 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/0xAX/asm&quot;&gt;Learning Assembly for Linux-x64&lt;/a&gt; - Tutorial series for x86-64 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.cs.princeton.edu/courses/archive/spring04/cos217/&quot;&gt;Introduction to Programming Systems&lt;/a&gt; - Princeton University course materials&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://skilldrick.github.io/easy6502/index.html&quot;&gt;Easy 6502&lt;/a&gt; - Interactive tutorial for 6502 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.xorpd.net/pages/x86_adventures.html&quot;&gt;Assembly Language Adventures&lt;/a&gt; - In-depth x86 assembly course&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://gist.github.com/muff-in/ff678b1fda17e6188aa0462a99626121&quot;&gt;Assembly Language / Reversing / Malware Analysis / Game Hacking Resources&lt;/a&gt; - Comprehensive list of assembly-related resources&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.cs.virginia.edu/~evans/cs216/guides/x86.html&quot;&gt;x86 Assembly Guide&lt;/a&gt; - Concise guide to x86 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mikeroyal/Assembly-Guide&quot;&gt;Assembly Guide&lt;/a&gt; - Extensive guide covering various assembly topics&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+</feed>

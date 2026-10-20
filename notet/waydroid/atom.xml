@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - waydroid</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notet/waydroid/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-05-03T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notet/waydroid/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Waydroid on Arch Linux</title>
+        <published>2024-05-03T00:00:00+00:00</published>
+        <updated>2024-05-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/waydroid-on-arch-linux/"/>
+        <id>https://daveads.github.io/note/waydroid-on-arch-linux/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/waydroid-on-arch-linux/">&lt;p&gt;&lt;strong&gt;Run Full Android on Arch Linux with Waydroid&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Waydroid is a container-based approach that allows you to boot a full Android system on your Arch Linux machine. Follow this guide to get started with Waydroid on Arch Linux.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Installing Waydroid&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To install Waydroid, you can use one of the following methods:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Method 1: Using Git and Makepkg&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; clone https://aur.archlinux.org/waydroid.git&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F38BA8;font-style: italic;&quot;&gt;cd&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; waydroid&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;makepkg&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -si&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Method 2: Using Yay&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;yay&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; -S waydroid&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Using LineageOS Images&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Waydroid uses LineageOS images. You can install an image using the following commands:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Automatic Image Installation&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Install an image with default settings&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;waydroid&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; init&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Install an image with GApps support&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;waydroid&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; init -s GAPPS&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Alternatively, you can manually download and install images from the AUR:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://aur.archlinux.org/packages/waydroid-image/&quot;&gt;Waydroid Image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://aur.archlinux.org/packages/waydroid-image-gapps/&quot;&gt;Waydroid Image with GApps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Manual Image Installation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you prefer manual installation, follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Download the LineageOS images:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://sourceforge.net/projects/waydroid/files/images/vendor/waydroid_x86_64/lineage-18.1-20240420-MAINLINE-waydroid_x86_64-vendor.zip/download&quot;&gt;Vendor Image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://sourceforge.net/projects/waydroid/files/images/system/lineage/waydroid_x86_64/lineage-18.1-20240420-GAPPS-waydroid_x86_64-system.zip/download&quot;&gt;System Image with GApps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Unzip both images and copy them to the correct location:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;sudo&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; cp system.img vendor.img /usr/share/waydroid-extra/images&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Kernel and Session Manager Requirements&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To run Waydroid, you need a kernel with the binder modules and a Wayland session manager. For example:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;# Installing linux-zen kernel&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;sudo&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; pacman -S linux-zen&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you use the i3 tiling manager, consider using &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/swaywm/sway&quot;&gt;Sway&lt;/a&gt;, an i3-compatible Wayland compositor.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Python Environment Setup&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Before proceeding, ensure you have Python installed. You can use &lt;code&gt;pyenv&lt;/code&gt; or the system-installed Python. Install the required packages:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;pip&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; install PyGObject==&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;3.48.1&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; pyclip==&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;0.7.0&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; dbus-python==&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;1.3.2&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; Cython==&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;3.0.10&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Additionally, install &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/erfanoabdi/gbinder-python&quot;&gt;gbinder-python&lt;/a&gt; by following the instructions in the README.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Play Store Support on Waydroid&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To install the Play Store on Waydroid, you can use the script provided at &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/casualsnek/waydroid_script.git&quot;&gt;casualsnek/waydroid_script&lt;/a&gt;.&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>

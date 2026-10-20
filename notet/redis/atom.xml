@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daveads - redis</title>
+    <subtitle>Dive into the abyss of Daveads!</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://daveads.github.io/notet/redis/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-06-11T00:00:00+00:00</updated>
+    <id>https://daveads.github.io/notet/redis/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Redis</title>
+        <published>2022-06-11T00:00:00+00:00</published>
+        <updated>2022-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://daveads.github.io/note/redis-server/"/>
+        <id>https://daveads.github.io/note/redis-server/</id>
+        
+        <content type="html" xml:base="https://daveads.github.io/note/redis-server/">&lt;p&gt;&lt;strong&gt;start redis&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;redis-server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;// don&#39;t know how this works yet&lt;/p&gt;
+&lt;p&gt;CONFIG GET CONFIG_SETTING_NAME&lt;/p&gt;
+&lt;p&gt;methods = GET AND SET&lt;/p&gt;
+&lt;p&gt;CONFIG GET *
+// this gets all config&lt;/p&gt;
+&lt;p&gt;update config by redis.conf or CONFIG SET&lt;/p&gt;
+&lt;p&gt;//strings&lt;/p&gt;
+&lt;p&gt;SET name &quot;using redis&quot;&lt;/p&gt;
+&lt;p&gt;GET name // outputs stored string&lt;/p&gt;
+&lt;p&gt;// Hashes&lt;/p&gt;
+&lt;p&gt;HMSET user:1 username password&lt;/p&gt;
+&lt;p&gt;HGETALL user:1&lt;/p&gt;
+&lt;p&gt;//Lists&lt;/p&gt;
+&lt;p&gt;lpush dbs mysql
+lpush dbs mariadb
+lpush dbs sqlite&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;gets the inserted list out&lt;/em&gt;
+lrange dbs 0 2&lt;/p&gt;
+&lt;p&gt;//Sets - unordered collection of strings&lt;/p&gt;
+&lt;p&gt;sadd check me
+sadd check data
+sadd check email
+sadd check her&lt;/p&gt;
+&lt;p&gt;get the sets
+smemebers checks&lt;/p&gt;
+&lt;p&gt;//sorted sets&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>
