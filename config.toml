@@ -58,6 +58,7 @@ menu = [
 		{url = "/writing", name = "Writings", slash = true},
 		#{url = "/paper", name = "Papers", slash = true},
 		#{url = "/project", name = "Projects", slash = true},
+		{url="/newsletter", name="Newsletter", slash= true},
 		{url = "/about", name = "About", slash = true},
 ]
 
@@ -88,5 +89,4 @@ soundcloud= "daveads"
 [extra.newsletter]
 enabled = true
 api_url = "https://daveads.merdra.com"
-dev_api_url = "https://daveads.merdra.com"
-# "http://127.0.0.1:8000"
+dev_api_url = "http://127.0.0.1:8000"
