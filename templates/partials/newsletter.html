@@ -1,0 +1,43 @@
+{#
+  Newsletter signup block.
+  Live form only when a usable API URL exists:
+    - `zola serve`  -> extra.newsletter.dev_api_url (default http://127.0.0.1:8000)
+    - `zola build`  -> extra.newsletter.api_url, and only if it is a public https URL
+  Otherwise just the RSS/Atom link is rendered (never a broken or localhost form).
+#}
+{% set nl_api = "" %}
+{% if config.mode == "serve" %}
+  {% set nl_api = config.extra.newsletter.dev_api_url | default(value="http://127.0.0.1:8000") %}
+{% else %}
+  {% set prod_api = config.extra.newsletter.api_url | default(value="") %}
+  {% if prod_api is starting_with(pat="https://") and not prod_api is containing(pat="localhost") and not prod_api is containing(pat="127.0.0.1") and not prod_api is containing(pat="0.0.0.0") %}
+    {% set nl_api = prod_api %}
+  {% endif %}
+{% endif %}
+{% set nl_enabled = config.extra.newsletter.enabled | default(value=true) %}
+
+<link rel="stylesheet" href="/assets/css/newsletter.css">
+<aside class="newsletter" aria-labelledby="newsletter-heading">
+  <h2 id="newsletter-heading">Follow what I'm building</h2>
+  <p>Occasional writing on engineering, Merdra, healthcare infrastructure and experiments.</p>
+  {% if nl_api != "" and nl_enabled %}
+  <form class="newsletter-form" data-newsletter-form data-api="{{ nl_api }}" method="post" novalidate>
+    <label for="newsletter-email">Email address</label>
+    <div class="newsletter-row">
+      <input id="newsletter-email" name="email" type="email" inputmode="email" autocomplete="email"
+             maxlength="254" required placeholder="you@example.com">
+      <button type="submit">Subscribe</button>
+    </div>
+    <div class="newsletter-hp" aria-hidden="true">
+      <label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+    </div>
+    <p class="newsletter-status" role="status" aria-live="polite"></p>
+    <noscript><p>Please enable JavaScript to subscribe, or use the feed below.</p></noscript>
+  </form>
+  <p class="newsletter-note">No spam, no tracking. One email per new article. Confirm by email, unsubscribe anytime.</p>
+  <script src="/assets/js/newsletter.js" defer></script>
+  {% else %}
+  <p class="newsletter-note">Email updates aren't available yet.</p>
+  {% endif %}
+  <p class="newsletter-note">Prefer feeds? <a href="{{ get_url(path="atom.xml") }}">Subscribe via RSS/Atom</a>.</p>
+</aside>

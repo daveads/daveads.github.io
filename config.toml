@@ -83,3 +83,10 @@ codeberg = "daveads"
 mastodon = "daveads"
 soundcloud= "daveads"
 
+# Newsletter signup `zola serve` always uses dev_api_url.
+# For `zola build`, set api_url to the public HTTPS URL of the API; empty = RSS link only.
+[extra.newsletter]
+enabled = true
+api_url = "https://daveads.merdra.com"
+dev_api_url = "https://daveads.merdra.com"
+# "http://127.0.0.1:8000"
