@@ -7,6 +7,9 @@ path = "about"
 **Name:** Adejumo David Adewale, known Online as Daveads. I write [Things](https://en.wikipedia.org/wiki/Computer_program) that get executed on a [Processor](https://en.wikipedia.org/wiki/Central_processing_unit) and leverage [GPUs](https://en.wikipedia.org/wiki/Graphics_processing_unit), My work transcends conventional boundaries, exploring diverse and captivating areas that pique my interest. [{Creativity && Critical Thinking}](#)
 
 
+Currently Founder @[Merdra](https://www.merdra.com/)
+
+
 ```
         ____                            _     
         |  _ \  __ ___   _____  __ _  __| |___ 
