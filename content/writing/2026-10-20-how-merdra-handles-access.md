@@ -17,9 +17,14 @@ Merdra is not a mirror of every hospital’s EMR. It is a trust and exchange lay
 
 Patient permission is an important part of access, but it is not the only check.
 
-Before Merdra returns a record, it should verify the practitioner, organisation, role, purpose, requested scope, time limit, and applicable policy.
+Before Merdra returns a record, it should verify the:
 
-Working at a hospital—or knowing a patient’s name—should not be enough to access their medical information.
+- **Practitioner** and **organisation** making the request
+- **Role** and **purpose** behind it
+- **Requested scope** and **time limit**
+- **Applicable policy**
+
+Working at a hospital, or knowing a patient’s name, should not be enough to access their medical information.
 
 ## What a patient can do
 
@@ -39,10 +44,10 @@ Patients cannot edit a diagnosis, prescription, or laboratory result. The organi
 
 When a patient begins care at another hospital, an authorised provider can:
 
-- Request only the information needed for care.
-- State the purpose and duration of that request.
-- Retrieve a permitted, verified, source-attributed copy.
-- Create new clinical information under their own organisation’s identity.
+- **Request only what is needed** for care.
+- **State the purpose and duration** of that request.
+- **Retrieve a permitted, verified, source-attributed copy** of the record.
+- **Create new clinical information** under their own organisation’s identity.
 
 They cannot edit the original result, diagnosis, or note created elsewhere.
 
@@ -52,12 +57,25 @@ If Hospital B creates a new test result, diagnosis, or treatment record, that be
 
 There are situations where a patient may be unconscious or unable to approve access.
 
-Merdra should eventually support a tightly controlled emergency-access path for verified clinicians. It should expose only the information necessary for urgent care, require a reason, expire quickly, create a full audit trail, and notify the patient afterwards where appropriate.
+Merdra should eventually support a tightly controlled emergency-access path for verified clinicians. It should:
 
-Emergency access must be a governed exception—not a back door into every patient record.
+- Expose only the information necessary for urgent care
+- Require a stated reason
+- Expire quickly
+- Create a full audit trail
+- Notify the patient afterwards, where appropriate
+
+Emergency access must be a governed exception, not a back door into every patient record.
 
 ## The principle
 
-Hospitals keep using their local systems for appointments, billing, prescriptions, notes, and day-to-day care. Merdra does not replace or run those workflows. It handles the data layer: identity, consent, provenance, permissions, audit history, and the safe exchange of selected medical information between authorised systems.
+Hospitals keep using their local systems for appointments, billing, prescriptions, notes, and day-to-day care. Merdra does not replace or run those workflows. It handles the data layer:
+
+- Identity
+- Consent
+- Provenance
+- Permissions
+- Audit history
+- Safe exchange of selected medical information between authorised systems
 
 > Medical information should follow the patient without becoming a document that anyone can edit.

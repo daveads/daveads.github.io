@@ -3,149 +3,160 @@ title = "The Age of Infinite Software and Limited Imagination"
 date = 2026-10-28
 description = "On generative AI, creativity, software moats, and the obsession to build things that matter."
 
-draft = true
-
 [taxonomies]
 categories = ["Startups", "General"]
 tags = ["startups"]
 +++
 
-I've been thinking about something lately.
+We can build software faster than ever before.
 
-With the advancement of generative AI, we're entered an era where almost anyone can build software. You can describe an application to an AI agent, give it a few instructions, and watch it produce something that might have taken weeks or months to build just a few years ago.
+You can describe an idea to an AI agent, give it a few instructions, and watch something that might have taken weeks or months begin taking shape in minutes.
 
-And this is only the beginning.
+You'd expect an explosion of creativity: more unusual ideas, ambitious experiments, and people attempting things that previously seemed impossible.
 
-Naturally, you'd expect this to lead to an explosion of creativity. More unusual ideas, more ambitious experiments, and more people attempting things they previously couldn't.
+Yet sometimes I feel we're seeing the opposite.
 
-But looking around, I sometimes feel we're seeing the opposite.
+Another AI wrapper. Another dashboard. Another application that looks remarkably similar to something that already exists.
 
-Everyone seems to be building the same things.
-
-Another AI wrapper. Another dashboard. Another slightly different implementation of something that already exists.
-
-Of course, there are people doing genuinely interesting work. I'm not suggesting innovation has stopped.
+Of course, people are doing genuinely interesting work. I'm not suggesting innovation has stopped. Maybe I'm just looking in the wrong places.
 
 But I keep wondering:
 
-If we now have some of the most powerful tools ever created, where is the spark?
+> If we now have some of the most powerful tools ever created, where is the spark?
 
-### Are We Becoming More Creative or Just More Productive?
+## Building isn't the same as imagining
 
-There's a difference between being able to create something and imagining something worth creating.
+There's a difference between being able to build something and imagining something worth building.
 
-Generative AI has dramatically reduced the effort required to turn an idea into working software. But it doesn't automatically make us more imaginative.
+Generative AI is reducing the effort required to turn ideas into working systems. You don't necessarily need to understand every implementation detail before experimenting with an idea. That's incredible.
 
-If we constantly ask these systems to reproduce things that already exist, why should we expect radically different outcomes?
+But making something easier to build doesn't automatically make us more imaginative. If we keep asking these systems to reproduce what already exists, why should we expect different outcomes?
 
-I wonder if we're approaching a point where some sort of forced evolution in how we think becomes necessary.
+I think we risk confusing **productivity** with **creativity**. Producing ten applications doesn't necessarily mean you've explored ten original ideas.
 
-Not biological evolution, but a shift in how we approach problems.
+And perhaps that's where our thinking needs to change.
 
-For a long time, much of our effort has gone into figuring out how to build things. Now that machines are increasingly capable of handling implementation, perhaps we need to spend more energy on the creative and logical parts of our thinking.
+For a long time, much of our attention has gone into figuring out *how* to build things. As machines become increasingly capable of handling implementation, what happens to all that attention?
 
-Questioning assumptions. Connecting seemingly unrelated ideas. Imagining systems that don't exist. Exploring problems we've accepted as unsolvable.
+Do we simply produce more of the same things? Or do we start:
 
-Not abandoning technical understanding, but using it to think further.
+- questioning assumptions,
+- connecting unrelated ideas, and
+- investigating problems we've accepted as normal?
 
-Maybe AI shouldn't just make us faster at doing what we already do. Maybe it should force us to think differently.
+## What's stopping someone from vibe coding Google?
 
-<br>
+Here's something I've been thinking about.
 
-### What's Stopping Someone From Vibe Coding Google?
+What's stopping someone from opening Claude Code, Codex, or another coding agent and asking it to build Google? They'd need:
 
-Here's a thought experiment.
+- a web crawler,
+- a search index,
+- a ranking algorithm,
+- a query interface, and
+- perhaps even an advertising system.
 
-What's stopping someone from opening Claude Code, Codex, or another coding agent and asking it to build Google?
+Nothing is stopping them from trying, and they could probably build a functional search engine prototype surprisingly quickly.
 
-A web crawler, search index, ranking algorithm, query interface, and perhaps even an advertising system.
+But have they built Google? Not quite.
 
-Nothing is stopping them from trying.
-
-They could probably build a functional prototype surprisingly quickly.
-
-But have they built Google?
-
-Not quite.
-
-Google isn't simply a collection of source files. Behind it are enormous infrastructure investments, years of operational knowledge, ranking systems, distribution, and an entire ecosystem.
+Google isn't simply a collection of source files. Behind its search engine are enormous infrastructure investments, continuously updated indexes, ranking systems, years of operational knowledge, and an entire ecosystem.
 
 Writing software that resembles Google is one problem. Building something capable of competing with it at scale is another.
 
+### Are software moats really disappearing?
+
 This is why I find the argument that software moats are disappearing somewhat incomplete.
 
-Yes, the cost of writing software is falling. But the value of a system has never been entirely about how difficult its code is to write.
+Yes, writing code is becoming cheaper. Some products will become much easier to replicate, and some existing advantages will weaken.
 
-Reliability, architecture, accumulated knowledge, distribution, and the ability to operate at scale still matter.
+But the value of a system has never been entirely about how difficult its code is to write. These still matter:
 
-None of these advantages is permanent, and AI may eventually make many of them easier to reproduce.
+- reliability,
+- architecture,
+- distribution,
+- accumulated knowledge, and
+- the ability to operate under real-world conditions.
+
+None of these advantages is permanent. AI might eventually make many of them easier to reproduce, too.
 
 But making something easier to build doesn't necessarily make it easy to replace.
 
-**The Obsession to Keep Pushing**
+## The obsession to keep pushing
 
-There's another part of this that fascinates me.
+There's something else I think matters enormously: **obsession**.
 
-Obsession.
-
-Not necessarily working more hours or writing thousands of lines of code yourself, but having an almost unreasonable desire to understand a problem and keep pushing a system beyond its current limitations.
+Not necessarily spending endless hours writing code yourself, but having an almost unreasonable desire to understand a problem and keep pushing a system beyond its limitations.
 
 Imagine two people with access to exactly the same AI tools.
 
-One builds something functional and moves on.
+**The first** asks an agent to build an application. It works, so they launch it and move on.
 
-The other keeps asking questions.
+**The second** keeps questioning everything:
 
-Why does it work this way? Why does this limitation exist? What if the entire architecture is wrong? What if there's a completely different way to approach the problem?
+- Why does it work this way?
+- Why does this limitation exist?
+- What happens if we change the architecture?
+- Could we approach the entire problem differently?
 
 Both have the same tools, but they might produce radically different outcomes.
 
-You might not be manually implementing everything anymore, but you're still responsible for the direction, the questions, the experiments, and the judgment.
+You might no longer need to implement every component manually, but you can still be the person directing the experiments, questioning the results, and deciding what to try next. And I find that fascinating.
 
-That willingness to keep exploring matters.
+Instead of spending weeks implementing a single approach, you might be able to investigate several alternatives, discover why they fail, and keep refining your understanding.
 
-Of course, obsession alone isn't enough. You can spend years solving a problem that doesn't matter.
+Of course, obsession alone isn't enough. You can spend years perfecting something nobody needs. But combine it with curiosity, technical understanding, judgment, and a willingness to experiment, and there's still something valuable there.
 
-But combine it with curiosity, reasoning, and an understanding of the real world, and it becomes something powerful.
+> The first working implementation shouldn't necessarily be the end of your imagination. Sometimes it's where the interesting questions begin.
 
-### Beyond Software
+## This goes beyond software
 
-And I don't think any of this is limited to software.
+I don't think this opportunity is limited to software. Think about hardware, robotics, energy, manufacturing, or scientific research.
 
-Think about hardware, robotics, energy, manufacturing, or scientific research.
+Imagine designing a robotic hand. You describe what you want, use AI to explore mechanical designs, simulate their movements, and generate components for a prototype. Eventually, you build one.
 
-AI is already becoming useful in areas like circuit design, simulation, mechanical design, and scientific discovery. As these capabilities improve, individuals and smaller teams may be able to attempt increasingly complex projects.
+It works, but it struggles to pick up a tiny screw.
 
-Imagine being able to describe a machine, simulate its behaviour, generate parts of its design, test different configurations, and refine it with AI assistance.
+What happens next?
 
-Of course, physical systems introduce constraints that software doesn't. Materials cost money. Components fail. Manufacturing requires equipment. Physics doesn't care how impressive your prompt is.
+Do you accept the limitation, or do you start questioning the finger geometry, sensors, materials, and control system? Perhaps an entirely different mechanism would work better.
 
-But that's what makes this interesting.
+AI could help you investigate those possibilities, but someone still has to recognise the problem, test the ideas, and understand what the results mean.
 
-The challenge becomes figuring out how to use increasingly capable systems to push against those constraints.
+And unlike software, the physical world has constraints that don't disappear because an AI generated a convincing design. Materials cost money. Components wear out. Manufacturing takes time. Physics doesn't care how impressive your prompt is.
 
-Not everything has to be another application.
+Still, as these tools improve, individuals and smaller teams may gain the ability to attempt increasingly complex projects. There are machines we haven't invented, systems we haven't connected, and problems we haven't investigated deeply enough.
 
-There are still machines we haven't invented, systems we haven't connected, and problems we haven't thought deeply enough about.
+Not everything has to become another application.
 
-The opportunity isn't simply to produce more software. It's to expand what individuals and small teams can realistically attempt to build.
+## A forced evolution in how we think?
 
-### Where Is the Spark?
+I sometimes wonder whether we're approaching a point where a kind of forced evolution in our thinking becomes necessary. Not biological evolution, but a change in how we approach problems.
 
-Sometimes I wonder whether we're thinking too small.
+We've spent years learning how to use computers to accomplish tasks. Now computers are beginning to handle increasingly complex tasks on our behalf.
 
-We have access to tools that would have seemed extraordinary just a few years ago, yet much of our attention still goes toward reproducing familiar ideas.
+Perhaps this means we need to become more deliberate about exercising our creativity and logical reasoning: to ask better questions, challenge assumptions, and understand systems rather than merely operate them. To see possibilities where others see limitations.
 
-Perhaps that's natural. Familiar things are easier to understand, build, and sell.
+I'm not suggesting that implementation no longer matters, or that technical understanding becomes irrelevant. Quite the opposite.
 
-But there is still so much left to solve.
+The better you understand something, the more effectively you can question it. And the more capable our tools become, the further those questions might take us.
+
+But there's another possibility worth considering.
+
+What if increasingly capable AI makes it easier for us to avoid thinking altogether?
+
+We could become so comfortable accepting generated solutions that we stop investigating why they work, whether they're correct, or whether a better approach exists.
+
+I don't think that's inevitable. But it's a choice we'll increasingly have to make.
+
+## Where is the spark?
+
+There is still so much left to solve: healthcare, energy, robotics, biology, computing, and countless problems we probably haven't even recognised yet.
 
 I don't think we're running out of ideas. I think we might be underestimating how much remains possible.
 
-And maybe this is where our thinking needs to evolve.
+And perhaps the opportunity presented by generative AI isn't simply to build the same things faster. It's to explore things we previously couldn't afford to attempt.
 
-When implementation becomes increasingly accessible, imagination, logical reasoning, judgment, and the willingness to experiment may become even more important.
+We've made it easier than ever to turn an idea into something real. Maybe it's time we became more ambitious about the ideas themselves.
 
-Perhaps the next wave of remarkable builders won't be distinguished by how much code they can write, but by the problems they choose to pursue and how far they're willing to push their ideas.
-
-If we can build more than ever before, shouldn't we be imagining more than ever before?
+**The machines are getting better at building. Are we getting better at imagining?**
