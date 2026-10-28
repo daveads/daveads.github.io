@@ -2,8 +2,8 @@
 title = 'Technological Innovation in developing countries'
 date = 2020-04-14
 [taxonomies]
-categories = ["Startup"]
-tags = ["startup"]
+categories = ["Startups"]
+tags = ["startups"]
 +++
 
 <b>Note:</b> These are based on my views on factors affecting the rate of innovation in developing countries. I might be wrong, but at the same time, I might be right.

@@ -22,7 +22,10 @@
   <p>Occasional writing on engineering, Merdra, healthcare infrastructure and experiments.</p>
   {% if nl_api != "" and nl_enabled %}
   <form class="newsletter-form" data-newsletter-form data-api="{{ nl_api }}" method="post" novalidate>
-    <label for="newsletter-email">Email address</label>
+    <div class="newsletter-label-row">
+      <label for="newsletter-email">Email address</label>
+      <span class="newsletter-count" data-subscriber-count hidden></span>
+    </div>
     <div class="newsletter-row">
       <input id="newsletter-email" name="email" type="email" inputmode="email" autocomplete="email"
              maxlength="254" required placeholder="you@example.com">

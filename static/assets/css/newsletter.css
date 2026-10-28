@@ -3,6 +3,9 @@
 .newsletter h2 { margin: 0 0 .4rem; font-size: 1.2rem; }
 .newsletter p { margin: .4rem 0; }
 .newsletter label { display: block; font-size: .9rem; margin-bottom: .25rem; }
+.newsletter-label-row { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; margin-bottom: .25rem; }
+.newsletter-label-row label { margin-bottom: 0; }
+.newsletter-count { font-size: .82rem; opacity: .8; white-space: nowrap; }
 .newsletter-row { display: flex; gap: .5rem; flex-wrap: wrap; }
 .newsletter-row input { flex: 1 1 14rem; min-width: 0; padding: .5rem .6rem; font: inherit; color: inherit; background: transparent; border: 1px solid rgba(128,128,128,.7); border-radius: 4px; }
 .newsletter-row button { padding: .5rem 1rem; font: inherit; color: inherit; background: transparent; border: 1px solid currentColor; border-radius: 4px; cursor: pointer; }

@@ -2,8 +2,8 @@
 title = 'Two mind blowing articles i read today'
 date = 2020-10-27
 [taxonomies]
-categories = ["Startup"]
-tags = ["startup"]
+categories = ["Startups"]
+tags = ["startups"]
 +++
 
 **Articles on Startups and Success**

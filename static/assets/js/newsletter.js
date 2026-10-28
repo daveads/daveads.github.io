@@ -8,6 +8,24 @@
   var status = form.querySelector(".newsletter-status");
   var button = form.querySelector("button[type=submit]");
   var email = form.querySelector("input[name=email]");
+  var subscriberCount = form.querySelector("[data-subscriber-count]");
+
+  if (subscriberCount) {
+    fetch(api + "/api/subscribers/count")
+      .then(function (res) {
+        if (!res.ok) throw new Error("count unavailable");
+        return res.json();
+      })
+      .then(function (data) {
+        if (!Number.isInteger(data.active) || data.active < 0) return;
+        subscriberCount.textContent = "[" + data.active + " subscriber" +
+          (data.active === 1 ? "" : "s") + "]";
+        subscriberCount.hidden = false;
+      })
+      .catch(function () {
+        // The signup form still works when the optional count is unavailable.
+      });
+  }
 
   function show(state, text) {
     status.setAttribute("data-state", state);
