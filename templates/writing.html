@@ -23,7 +23,7 @@
 
 {% block content %}
 
-<p style="text-align:center; color:#cccccc; padding:0; font-size: 150%" ><b> {{ section.title }} </b></p>
+<h1 style="text-align:center; color:#cccccc; padding:0; font-size: 150%">{{ section.title }}</h1>
 
 <div>
 
@@ -53,7 +53,6 @@
 
 		<script defer src="{{get_url(path="elasticlunr.min.js")}}"></script>
 		<script defer src="{{get_url(path="search_index.en.js")}}"></script>
-		<!-- <script src="{{get_url(path="js/search.js")}}"></script> -->
 		<script src="{{ get_url(path="/search.js", trailing_slash=false) | safe }}"></script>
 {% endif %}
 

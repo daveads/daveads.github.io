@@ -19,7 +19,7 @@ Reasons for using multithreading:
 
 Multitasking && Multithreading
 
-[multiprocessing](multiprocessing):
+**Multiprocessing:**
 Multiple processors/CPUs executing concurrently.
 
 Multitasking: 

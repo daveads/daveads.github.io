@@ -1,5 +1,5 @@
 +++
-title = "assembly language"
+title = "x86-64 Registers and Assembly Operations"
 date = 2023-02-12
 [taxonomies]
 notec = ["Learned"]

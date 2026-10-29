@@ -7,7 +7,10 @@ categories = ["General"]
 tags = ["linux"]
 +++
 
-![cmd](/assets/gifs/cmd.gif)
+<video controls preload="metadata" width="1200" aria-label="Command-line demonstration">
+  <source src="/assets/videos/cmd.mp4" type="video/mp4">
+  Your browser does not support embedded video.
+</video>
 
 I spend 90% of my time in the Terminal emulator (not really sure about that tho), for me it offer's great flexibility and control than the GUI, and it can be really intimidating at first but it worth your time.
 

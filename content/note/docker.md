@@ -1,5 +1,5 @@
 +++
-title = "Docker key words"
+title = "Docker Commands and Terminology"
 date = 2022-06-11
 updated = 2023-09-15
 

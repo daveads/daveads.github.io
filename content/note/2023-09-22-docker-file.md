@@ -1,5 +1,5 @@
 +++
-title = "Docker key words"
+title = "Dockerfile Commands Reference"
 date = 2023-09-22
 [taxonomies]
 notet = ["docker"]

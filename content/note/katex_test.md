@@ -1,6 +1,9 @@
 +++
 title = "Hello Katex"
 date = 2024-05-31
+
+[extra]
+katex = true
 +++
 
 ### Testing out katex

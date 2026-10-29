@@ -77,7 +77,7 @@ tags = ["resources"]
 
 [Teach Yourself Programming in Ten Years](http://norvig.com/21-days.html)
 
-[Books](/writing/interesting-programming-and-cs-books.html)
+[Books](/writing/interesting-programming-and-cs-books/)
 
 
 

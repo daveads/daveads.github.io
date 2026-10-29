@@ -1,5 +1,5 @@
 +++
-title = "assembly language"
+title = "Assembly Program Sections: .data, .bss, and .text"
 date = 2022-06-19
 [taxonomies]
 notec = ["Learned"]

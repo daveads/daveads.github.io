@@ -2,33 +2,24 @@
 <html lang="en">
 
 <head>
+	{# Legacy extension points are retained for child-template compatibility. #}
+	{% if false %}
+		{% block meta_content %}{% endblock meta_content %}
+		{% block keywords %}{% endblock keywords %}
+		{% block desc %}{% endblock desc %}
+		{% block canonical %}{% endblock canonical %}
+		{% block title %}{% endblock title %}
+		{% block react %}{% endblock react %}
+	{% endif %}
 
 	{% block meta_data %}
 		{% include "include/meta-data.html" %}
 	{% endblock %}
+	{% include "include/seo.html" %}
 
-{% block meta_content %}
-<meta property="og:title" content="Daveads">
-<meta property="og:type" content="article">
-<meta property="og:url" content="">
-{% endblock meta_content %}
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 
-{% block keywords %}
-<meta name="keywords" content="daveads">
-{% endblock keywords %}
-
-
-{% block desc %}
-<meta name="description" content="{{config.extra.content}}">
-{% endblock desc %}
-
-<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
-
-<link rel="alternate" type="application/rss+xml" title="daveads" href="https://daveads.github.io/atom.xml">
-
-{% block canonical %}
-	<link rel="canonical" href="">
-{% endblock canonical %}
+<link rel="alternate" type="application/atom+xml" title="Daveads feed" href="{{ get_url(path='atom.xml') }}">
 
 <!-- Sass-file: minima.css -->
 <link rel="stylesheet" href="/minima.css">
@@ -37,16 +28,13 @@
 <link rel="stylesheet" href="/assets/css/custom.css">
 <link rel="stylesheet" href="/assets/css/tagc.css">
 <link rel="stylesheet" href="/assets/css/pagenav.css">
-<link rel="stylesheet" href="/assets/css/shortcodes.css"
+<link rel="stylesheet" href="/assets/css/shortcodes.css">
 
 
 <!-- google_analytics -->
 {% if config.extra.google_analytics %}
 		{% include "include/gtag.html" %}
 
-		<!-- Google discover -->
-		<link rel="alternate" type="application/rss+xml" href="https://feeds.feedburner.com/blogspot/amDG" />
-		<!-- ends -->
 {% endif %}
 
 <!-- <script type="text/javascript" src="/assets/js/blink.js" defer></script> -->
@@ -73,18 +61,13 @@ if (navigator.serviceWorker.controller) {
 <!-- programmable search engine -->
 <!-- <script async src="https://cse.google.com/cse.js?cx=acd2a3a68756706a3"></script> -->
 
-{% block react %}
-<! REACT SHITS -->
-<!-- end react -->
-{% endblock react %}
-
 <link rel="manifest" type="application/manifest+json" href="{{ get_url(path="/manifest.json") }}">
 
 
 
 {% block katex_js %}
 
-{% if config.extra.katex_enable %}
+{% if page and page.extra.katex | default(value=false) %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
 
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
@@ -97,6 +80,7 @@ if (navigator.serviceWorker.controller) {
 {% endif %}
 {% endblock katex_js %}
 
+{% if page and page.extra.katex | default(value=false) %}
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -107,12 +91,7 @@ if (navigator.serviceWorker.controller) {
         });
     });
 </script>
-
-<title>
-		{% block title %}
-				{{config.title}}
-		{% endblock title %}
-</title>
+{% endif %}
 
 
 </head>
@@ -122,8 +101,7 @@ if (navigator.serviceWorker.controller) {
 		{% endblock %}
 
 		<button class="scrollToTopBtn" title="Go to top">
-		<img src="/assets/images/186407_arrow_up_icon.png
-		" height ="20" width="20" />
+		<img src="/assets/images/186407_arrow_up_icon.png" alt="" height="20" width="20">
 		</button>
 
 		<main class="page-content" aria-label="Content">

@@ -6,7 +6,7 @@ categories = ["Self"]
 tags = ["self"]
 +++
 
-Having been experiencing writer’s block since the last time i wrote [new resolution](https://daveads.github.io/personal/2020/03/01/New-resolution.html), Recently i was asked why i preferred walking to driving or using the public transport, i was unable to give a straight answer to that, Though i had reasons i just don't know why it happens.
+Having been experiencing writer’s block since the last time i wrote [new resolution](/writing/new-resolution/), Recently i was asked why i preferred walking to driving or using the public transport, i was unable to give a straight answer to that, Though i had reasons i just don't know why it happens.
 
 E.g:
 
