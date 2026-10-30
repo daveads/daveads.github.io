@@ -52,6 +52,12 @@
   min-height: 100dvh;
 }
 
+.galaxy-stage:fullscreen .galaxy-zoom-controls,
+.galaxy-stage.is-galaxy-fullscreen .galaxy-zoom-controls {
+  top: max(0.65rem, env(safe-area-inset-top));
+  right: max(0.65rem, env(safe-area-inset-right));
+}
+
 .galaxy-stage.is-galaxy-fullscreen {
   position: fixed;
   z-index: 10000;
@@ -202,6 +208,12 @@ html.galaxy-fullscreen-active body {
   pointer-events: all;
 }
 
+.galaxy-cluster-hit {
+  fill: transparent;
+  pointer-events: all;
+  cursor: pointer;
+}
+
 .galaxy-orbit-layer {
   transform-box: view-box;
   transform-origin: var(--orbit-x) var(--orbit-y);
@@ -213,6 +225,7 @@ html.galaxy-fullscreen-active body {
 .galaxy-orbit-layer:hover,
 .galaxy-orbit-layer:focus-within,
 .galaxy-map-scroll.is-panning .galaxy-orbit-layer,
+.galaxy-map-scroll.has-mobile-results .galaxy-orbit-layer,
 .galaxy-system-layer:hover .galaxy-orbit-layer,
 .galaxy-system-layer:focus-within .galaxy-orbit-layer {
   animation-play-state: paused;

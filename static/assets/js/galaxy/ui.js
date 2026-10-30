@@ -1,5 +1,11 @@
 export function createGalaxyUi({
   list,
+  mapScroll,
+  mobileResults,
+  mobileResultsTitle,
+  mobileResultsList,
+  mobileResultsEmpty,
+  mobileResultsClose,
   categoryFilters,
   topicFilter,
   categories,
@@ -64,6 +70,39 @@ export function createGalaxyUi({
     });
   }
 
+  function createPageItem(node) {
+    const item = document.createElement("li");
+    const link = document.createElement("a");
+    link.href = node.url;
+    link.textContent = node.title;
+    const meta = document.createElement("small");
+    const topicLabels = node.topicIds
+      .slice(0, 2)
+      .map((id) => topicById.get(id)?.label)
+      .filter(Boolean);
+    meta.textContent = [node.kind, node.date, ...topicLabels]
+      .filter(Boolean)
+      .join(" · ");
+    link.appendChild(meta);
+    item.appendChild(link);
+    return item;
+  }
+
+  function closeMobileCategory() {
+    mobileResults.hidden = true;
+    mobileResultsList.replaceChildren();
+    mapScroll.classList.remove("has-mobile-results");
+  }
+
+  function renderMobileCategory(category, members) {
+    mobileResults.style.setProperty("--group-color", category.color);
+    mobileResultsTitle.textContent = `${category.label} · ${members.length}`;
+    mobileResultsList.replaceChildren(...members.map(createPageItem));
+    mobileResultsEmpty.hidden = members.length !== 0;
+    mobileResults.hidden = false;
+    mapScroll.classList.add("has-mobile-results");
+  }
+
   function renderList(visible, state) {
     list.replaceChildren();
     let groups;
@@ -96,33 +135,24 @@ export function createGalaxyUi({
 
       const grid = document.createElement("ul");
       grid.className = "galaxy-list-grid";
-      members.forEach((node) => {
-        const item = document.createElement("li");
-        const link = document.createElement("a");
-        link.href = node.url;
-        link.textContent = node.title;
-        const meta = document.createElement("small");
-        const topicLabels = node.topicIds
-          .slice(0, 2)
-          .map((id) => topicById.get(id)?.label)
-          .filter(Boolean);
-        meta.textContent = [node.kind, node.date, ...topicLabels]
-          .filter(Boolean)
-          .join(" · ");
-        link.appendChild(meta);
-        item.appendChild(link);
-        grid.appendChild(item);
-      });
+      grid.append(...members.map(createPageItem));
       section.appendChild(grid);
       list.appendChild(section);
     });
   }
+
+  mobileResultsClose.addEventListener("click", closeMobileCategory);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !mobileResults.hidden) closeMobileCategory();
+  });
 
   buildCategoryFilters();
   buildTopicFilter();
 
   return {
     renderList,
+    renderMobileCategory,
+    closeMobileCategory,
     setCategoryActive,
     updateCategoryCounts
   };

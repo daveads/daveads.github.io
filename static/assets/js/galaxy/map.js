@@ -145,6 +145,14 @@ export function createGalaxyMap({
         class: "galaxy-orbit-layer",
         "data-orbit": category.id
       });
+      const clusterHitArea = createSvg("circle", {
+        class: "galaxy-cluster-hit",
+        cx: position.x,
+        cy: position.y,
+        r: coarsePointer ? 30 : 15
+      });
+      clusterHitArea.addEventListener("click", () => onCategory(category.id));
+      orbitLayer.appendChild(clusterHitArea);
       orbitLayer.style.setProperty("--orbit-x", `${position.x}px`);
       orbitLayer.style.setProperty("--orbit-y", `${position.y}px`);
       orbitLayer.style.setProperty("--orbit-duration", `${90 + (orbitSeed % 61)}s`);

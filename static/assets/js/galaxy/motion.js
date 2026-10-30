@@ -28,6 +28,7 @@ export function createSystemMotion({
       const paused = state.view !== "map"
         || document.hidden
         || mapScroll.classList.contains("is-panning")
+        || mapScroll.classList.contains("has-mobile-results")
         || motion.element.matches(":hover, :focus-within");
 
       if (!paused) {
