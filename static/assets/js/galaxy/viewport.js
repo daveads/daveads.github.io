@@ -105,6 +105,7 @@ export function setupGalaxyViewport({
     panStart = {
       x: pointer.x,
       y: pointer.y,
+      threshold: pointer.pointerType === "touch" ? 10 : 4,
       scrollLeft: mapScroll.scrollLeft,
       scrollTop: mapScroll.scrollTop
     };
@@ -123,8 +124,13 @@ export function setupGalaxyViewport({
 
   mapScroll.addEventListener("pointerdown", (event) => {
     if (event.pointerType === "mouse" && event.button !== 0) return;
-    activePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
-    gestureMoved = false;
+    const startsGesture = activePointers.size === 0;
+    activePointers.set(event.pointerId, {
+      x: event.clientX,
+      y: event.clientY,
+      pointerType: event.pointerType
+    });
+    if (startsGesture) gestureMoved = false;
     mapScroll.classList.add("is-panning");
 
     if (activePointers.size === 1) beginSinglePointerPan();
@@ -143,10 +149,15 @@ export function setupGalaxyViewport({
 
   mapScroll.addEventListener("pointermove", (event) => {
     if (!activePointers.has(event.pointerId)) return;
-    event.preventDefault();
-    activePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    const activePointer = activePointers.get(event.pointerId);
+    activePointers.set(event.pointerId, {
+      x: event.clientX,
+      y: event.clientY,
+      pointerType: activePointer.pointerType
+    });
 
     if (activePointers.size === 2 && pinchStart) {
+      event.preventDefault();
       const midpoint = pointerMidpoint();
       const bounds = mapScroll.getBoundingClientRect();
       const focusX = midpoint.x - bounds.left;
@@ -172,10 +183,12 @@ export function setupGalaxyViewport({
       const pointer = [...activePointers.values()][0];
       const deltaX = pointer.x - panStart.x;
       const deltaY = pointer.y - panStart.y;
-      if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) {
+      if (!gestureMoved && Math.hypot(deltaX, deltaY) > panStart.threshold) {
         gestureMoved = true;
         captureActivePointers();
       }
+      if (!gestureMoved) return;
+      event.preventDefault();
       mapScroll.scrollLeft = panStart.scrollLeft - deltaX;
       mapScroll.scrollTop = panStart.scrollTop - deltaY;
     }
@@ -194,7 +207,9 @@ export function setupGalaxyViewport({
     if (activePointers.size === 1) beginSinglePointerPan();
     if (activePointers.size === 0) {
       panStart = null;
-      mapScroll.classList.remove("is-panning");
+      window.requestAnimationFrame(() => {
+        if (activePointers.size === 0) mapScroll.classList.remove("is-panning");
+      });
     }
   }
 

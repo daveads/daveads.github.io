@@ -24,6 +24,7 @@ export function createGalaxyMap({
   const orbitLayers = new Map();
   const spokeElements = new Map();
   const systemMotions = [];
+  const coarsePointer = window.matchMedia("(any-pointer: coarse)").matches;
 
   function drawBackground() {
     [82, 156, 244].forEach((radius) => {
@@ -240,6 +241,12 @@ export function createGalaxyMap({
       "aria-label": `${node.title}, ${node.kind}, ${category.label}`
     });
     const radius = node.kind === "writing" ? 7.2 : 4.2;
+    const hitArea = createSvg("circle", {
+      class: "galaxy-node-hit",
+      cx: node.x,
+      cy: node.y,
+      r: coarsePointer ? 30 : 15
+    });
     const circle = createSvg("circle", {
       class: `galaxy-node ${node.kind === "writing" ? "is-writing" : "is-note"}`,
       cx: node.x,
@@ -248,6 +255,7 @@ export function createGalaxyMap({
     });
     circle.style.setProperty("--node-color", category.color);
     circle.style.setProperty("--twinkle-delay", `${-(node.seed % 45) / 10}s`);
+    link.appendChild(hitArea);
     link.appendChild(circle);
     link.addEventListener("pointerenter", (event) => showTooltip(node, event));
     link.addEventListener("pointermove", (event) => showTooltip(node, event));

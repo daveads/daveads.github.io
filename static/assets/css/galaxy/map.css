@@ -197,6 +197,11 @@ html.galaxy-fullscreen-active body {
   cursor: pointer;
 }
 
+.galaxy-node-hit {
+  fill: transparent;
+  pointer-events: all;
+}
+
 .galaxy-orbit-layer {
   transform-box: view-box;
   transform-origin: var(--orbit-x) var(--orbit-y);
@@ -207,6 +212,7 @@ html.galaxy-fullscreen-active body {
 
 .galaxy-orbit-layer:hover,
 .galaxy-orbit-layer:focus-within,
+.galaxy-map-scroll.is-panning .galaxy-orbit-layer,
 .galaxy-system-layer:hover .galaxy-orbit-layer,
 .galaxy-system-layer:focus-within .galaxy-orbit-layer {
   animation-play-state: paused;
