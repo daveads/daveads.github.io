@@ -1,53 +1,38 @@
 {% extends "base-index.html" %}
 
-
-{% block title %}
-		{{ super() }} - {{config.extra.author}}
-{% endblock %}
-
 {% block content %}
-<div style="text-align: center; font-family: Courier New; color: #02afff; font-size: 25px; ">
+<section class="home-hero">
+  <h1>Hello Humans!</h1>
+  <p class="home-intro">
+    Welcome to <a href="/about/">my</a> <a href="/galaxy/">galaxy</a>.
+    Make yourself at home at <a href="/">127.0.0.1</a>.
+  </p>
+  <a class="galaxy-home-link" href="/galaxy/">
+    Explore the Daveads Galaxy <span aria-hidden="true">→</span>
+  </a>
+</section>
 
-		<h1 style="font-size: 40px; font-family: monospace;">Hello Humans!</h1>
-		<p>Welcome to <a href="/about" style="color:#006bf8">My</a>
-		<a href="/galaxy/" style="color:#006bf8">Galaxy</a>
-		feel at <a href="/" style="color:#006bf8">127.0.0.1</a></p>
-		<p><a class="galaxy-home-link" href="/galaxy/">Explore the Daveads Galaxy <span aria-hidden="true">→</span></a></p>
-
+<div class="card_api" id="container">
+  <h3 id="resp">Output</h3>
+  <p>Output by Gemini. Expect hallucinations—that's the point of it.</p>
 </div>
 
-		<!--
-		<div class="gcse-searchbox-only" style="padding: 34px;">
-		</div>
-		-->
+{% set writing = get_section(path="writing/_index.md") %}
+{% if section.content %}
+<div class="home-copy">{{ section.content | safe }}</div>
+{% endif %}
 
-		<div class="card_api" id=container>
-			<h3 id="resp" style="color: greenyellow; font-size: 22px; margin: 20px;"></h3>
-			<p style="font-style: italic; font-size: 12px;">Output by Gemni ::: Expect hallucinations, That's the point of it :) </p>
-		</div>
-		
-		
-		<br>
+{% if writing.pages %}
+<section class="home-recent" aria-labelledby="home-recent-title">
+  <header class="home-recent__header">
+    <h2 id="home-recent-title">Recent articles</h2>
+    <a href="/writing/">All writings <span aria-hidden="true">→</span></a>
+  </header>
 
-		{% set writing = get_section(path="writing/_index.md") %}
-		{% if section.content or writing.pages %}
-		<main>
-		{% if section.content %}
-		<div {% if writing.pages %}class="space"{% endif %}>
-		 {{ section.content | safe }}
-		</div>
-		{% endif %}
-
-		{% if writing.pages %}
-		<h2 style="margin: 0;">Recent articles</h2>
-		<ul>
-				 {% for post in writing.pages[:5] %}
-				 <li style="font-size: 21px;"><a href="{{ post.permalink }}">{{ post.title }}</a></li>
-				 {% endfor %}
-		 </ul>
-		 {% endif %}
-		 </main>
-		{% endif %}
-		<br>
-
+  {% set archive_list_pages = writing.pages %}
+  {% set archive_list_limit = 5 %}
+  {% set archive_list_show_date = false %}
+  {% include "include/archive-list.html" %}
+</section>
+{% endif %}
 {% endblock content %}

@@ -1,13 +1,19 @@
 <div id="posts">
-  <ul class="archive-list">
+  {% set show_date = archive_list_show_date | default(value=true) %}
+  <ul class="archive-list{% if not show_date %} archive-list--no-date{% endif %}">
+    {% set list_limit = archive_list_limit | default(value=999999) %}
     {% for entry in archive_list_pages %}
+    {% if loop.index <= list_limit %}
     <li>
       <a href="{{ entry.permalink | safe }}">
+        {% if show_date %}
         <time datetime="{{ entry.date }}">{{ entry.date | date(format="%Y-%m-%d") }}</time>
+        {% endif %}
         <span class="archive-entry"><strong>{{ entry.title }}</strong></span>
         <span class="archive-arrow" aria-hidden="true">→</span>
       </a>
     </li>
+    {% endif %}
     {% endfor %}
   </ul>
 </div>

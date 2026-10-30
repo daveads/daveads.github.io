@@ -25,6 +25,11 @@
   &:visited {
     color: white;
   }
+
+  &:hover,
+  &:focus-visible {
+    color: #13df93;
+  }
 }
 
 .site-nav {
@@ -43,8 +48,18 @@
   }
 
   .page-link {
-    color: white;
     line-height: $base-line-height;
+    transition: color 140ms ease;
+
+    &,
+    &:visited {
+      color: white;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: #13df93;
+    }
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -85,7 +100,13 @@
 
       > svg {
         fill: white;
+        transition: fill 140ms ease;
       }
+    }
+
+    label[for="nav-trigger"]:hover .menu-icon > svg,
+    label[for="nav-trigger"]:focus-within .menu-icon > svg {
+      fill: #13df93;
     }
 
      .trigger {
