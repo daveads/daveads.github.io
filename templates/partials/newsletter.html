@@ -15,13 +15,22 @@
   {% endif %}
 {% endif %}
 {% set nl_enabled = config.extra.newsletter.enabled | default(value=true) %}
+{% set newsletter_is_page = newsletter_standalone | default(value=false) %}
 
-<link rel="stylesheet" href="/assets/css/newsletter.css">
-<aside class="newsletter" aria-labelledby="newsletter-heading">
+{% if not newsletter_is_page %}<link rel="stylesheet" href="/assets/css/newsletter.css">{% endif %}
+<aside class="newsletter{% if newsletter_is_page %} newsletter--page{% endif %}" aria-labelledby="newsletter-heading">
+  {% if newsletter_is_page %}
+  <p class="newsletter-kicker">Your inbox, occasionally</p>
+  <h2 id="newsletter-heading">Join the list</h2>
+  <p class="newsletter-intro">Enter your email and confirm it from your inbox.</p>
+  {% else %}
   <h2 id="newsletter-heading">Follow what I'm building</h2>
   <p>Occasional writing on engineering, Merdra, healthcare infrastructure and experiments.</p>
+  {% endif %}
   {% if nl_api != "" and nl_enabled %}
-  <form class="newsletter-form" data-newsletter-form data-api="{{ nl_api }}" method="post" novalidate>
+  <form class="newsletter-form" data-newsletter-form data-api="{{ nl_api }}"
+        data-source="{% if newsletter_is_page %}newsletter_page{% else %}article_footer{% endif %}"
+        method="post" novalidate>
     <div class="newsletter-label-row">
       <label for="newsletter-email">Email address</label>
       <span class="newsletter-count" data-subscriber-count hidden></span>
@@ -37,10 +46,14 @@
     <p class="newsletter-status" role="status" aria-live="polite"></p>
     <noscript><p>Please enable JavaScript to subscribe, or use the feed below.</p></noscript>
   </form>
+  {% if not newsletter_is_page %}
   <p class="newsletter-note">No spam, no tracking. One email per new article. Confirm by email, unsubscribe anytime.</p>
+  {% endif %}
   <script src="/assets/js/newsletter.js" defer></script>
   {% else %}
   <p class="newsletter-note">Email updates aren't available yet.</p>
   {% endif %}
+  {% if not newsletter_is_page %}
   <p class="newsletter-note">Prefer feeds? <a href="{{ get_url(path="atom.xml") }}">Subscribe via RSS/Atom</a>.</p>
+  {% endif %}
 </aside>

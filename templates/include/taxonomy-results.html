@@ -1,0 +1,27 @@
+<article class="archive-page taxonomy-page">
+  <header class="archive-header">
+    <div>
+      <p class="archive-kicker">{{ taxonomy_path }}/{{ term.name | slugify }}</p>
+      <h1>{{ term.name }}</h1>
+      <p class="archive-intro">{{ taxonomy_kind }}</p>
+    </div>
+    <p class="archive-count">{{ term.pages | length }} {% if term.pages | length == 1 %}{{ taxonomy_entry_label }}{% else %}{{ taxonomy_entry_label }}s{% endif %}</p>
+  </header>
+
+  <nav class="archive-nav" aria-label="Explore {{ taxonomy_kind }}">
+    <a href="{{ taxonomy_parent_url }}">All {{ taxonomy_parent_name }}</a>
+    <a href="{{ taxonomy_archive_url }}">{{ taxonomy_archive_name }}</a>
+  </nav>
+
+  <ul class="archive-list">
+    {% for page in term.pages %}
+      <li>
+        <a href="{{ page.permalink | safe }}">
+          <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+          <span class="archive-entry"><strong>{{ page.title }}</strong></span>
+          <span class="archive-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</article>

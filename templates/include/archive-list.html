@@ -1,0 +1,13 @@
+<div id="posts">
+  <ul class="archive-list">
+    {% for entry in archive_list_pages %}
+    <li>
+      <a href="{{ entry.permalink | safe }}">
+        <time datetime="{{ entry.date }}">{{ entry.date | date(format="%Y-%m-%d") }}</time>
+        <span class="archive-entry"><strong>{{ entry.title }}</strong></span>
+        <span class="archive-arrow" aria-hidden="true">→</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

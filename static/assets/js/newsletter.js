@@ -9,6 +9,7 @@
   var button = form.querySelector("button[type=submit]");
   var email = form.querySelector("input[name=email]");
   var subscriberCount = form.querySelector("[data-subscriber-count]");
+  var source = form.getAttribute("data-source") || "article_footer";
 
   if (subscriberCount) {
     fetch(api + "/api/subscribers/count")
@@ -47,7 +48,7 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         email: email.value.trim(),
-        source: "article_footer",
+        source: source,
         website: form.querySelector("input[name=website]").value
       })
     })

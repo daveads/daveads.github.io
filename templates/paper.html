@@ -1,41 +1,25 @@
 {% extends "base.html" %}
 
-
-{% block meta_content %}
-<meta property="og:title" content="daveads papers">
-<meta property="og:type" content="papers">
-<meta property="og:url" content="https://daveads.github.io/paper">
-{% endblock meta_content %}
-
-{% block keywords %}
-<meta name="keywords" content="paper">
-{% endblock keywords %}
-
-
-{% block canonical %}
-	<link rel="canonical" href="https://daveads.github.io/paper">
-{% endblock canonical %}
-
-{% block title %}
-		{{config.title}} - {{section.title}}
-{% endblock %}
-
-
 {% block content %}
+<article class="archive-page">
+  <header class="archive-header">
+    <div>
+      <p class="archive-kicker">~/paper</p>
+      <h1>{{ section.title }}</h1>
+      {% if section.description %}<p class="archive-intro">{{ section.description }}</p>{% endif %}
+    </div>
+    <p class="archive-count">
+      {{ section.pages | length }} {% if section.pages | length == 1 %}paper{% else %}papers{% endif %}
+    </p>
+  </header>
 
+  <nav class="archive-nav" aria-label="Explore papers">
+    <a href="/writing/">Writings</a>
+    <a href="/note/">Notes</a>
+    <a href="/archive/">Archive</a>
+  </nav>
 
-<h1 style="text-align:center; color:#cccccc; padding:0; font-size: 150%">{{ section.title }}</h1>
-
-<div id="posts">
-  <ul class="post-list">
-
-    {% for page in section.pages %}
-
-		<li class="post-link"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-
-   {% endfor %}
-
-  </ul>
-</div>
-
+  {% set archive_list_pages = section.pages %}
+  {% include "include/archive-list.html" %}
+</article>
 {% endblock content %}

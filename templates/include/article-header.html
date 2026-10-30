@@ -1,0 +1,31 @@
+<header class="post-header article-post__header">
+  <h1 class="post-title p-name" itemprop="name headline">{{ page.title }}</h1>
+
+  <div class="article-post__details">
+    {% if page.date %}
+    <p class="post-meta article-post__meta">
+      <time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date }}</time>
+      {% if page.updated %}<span>(updated: {{ page.updated }})</span>{% endif %}
+    </p>
+    {% endif %}
+
+    <nav class="article-post__nav" aria-label="{{ article_section_label }} navigation">
+      <a href="{{ article_section_url }}">{{ article_section_label }}</a>
+      {% if article_archive_url %}
+      <span aria-hidden="true">||</span>
+      <a href="{{ article_archive_url }}">Archive</a>
+      {% endif %}
+    </nav>
+
+    {% if article_tags %}
+    <div class="article-post__tags" aria-label="Tags">
+      <span class="article-post__tags-label">Tags :</span>
+      {% for tag in article_tags %}
+      <a class="tag-link" href="{{ get_taxonomy_url(kind=article_taxonomy_kind, term=tag) | safe }}">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% include "include/back.html" %}
+  </div>
+</header>

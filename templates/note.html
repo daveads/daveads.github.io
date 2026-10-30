@@ -1,111 +1,53 @@
 {% extends "base.html" %}
 
-{% block meta_content %}
-<meta property="og:title" content="daveads note">
-<meta property="og:type" content="note">
-<meta property="og:url" content="https://daveads.github.io/note">
-{% endblock meta_content %}
-
-{% block keywords %}
-<meta name="keywords" content="notes">
-{% endblock keywords %}
-
-
-{% block canonical %}
-	<link rel="canonical" href="https://daveads.github.io/note">
-{% endblock canonical %}
-
-
-
-{% block header %}
-{% endblock %}
-
 {% block title %}
-		{{config.title}} - {{section.title}}
-{% endblock %}
-
+{{ config.title }} - {{ section.title }}
+{% endblock title %}
 
 {% block content %}
+<article class="archive-page">
+  <header class="archive-header">
+    <div>
+      <p class="archive-kicker">{% if section.path == "/note/" %}~/note{% else %}~{{ section.path }}{% endif %}</p>
+      <h1>{{ section.title }}</h1>
+      {% if section.description %}<p class="archive-intro">{{ section.description }}</p>{% endif %}
+    </div>
+    <p class="archive-count">{{ section.pages | length }} {% if section.path == "/note/" %}notes{% else %}entries{% endif %}</p>
+  </header>
 
-<h1 style="text-align:center; color:#cccccc; padding:0; font-size: 150%">{{ section.title }}</h1>
+  {% block categories_tags %}
+  <nav class="archive-nav" aria-label="Explore notes">
+    <a href="/notec/">Categories</a>
+    <a href="/notet/">Tags</a>
+    <a href="/writing/">Writings</a>
+  </nav>
+  {% endblock categories_tags %}
 
-{% block categories_tags %}
-<div>
-   <ul style="text-align:center;">
-		<b style="font-size: 22px;"></b> <a href="/notec"><b>CATEGORIES</b></a> 
-		<b>||</b>
-		<a href="/notet"><b>TAGS</b></a>
-   </ul>
- </div>
-{% endblock %}
+  {% block page_info %}
+  <details class="archive-details">
+    <summary>About these notes</summary>
+    <p>While I take physical notes, they often become scattered and difficult to manage. This is a home for unfinished notes from books, videos and articles.</p>
+    <ul>
+      <li>Books are rarely completed in one go.</li>
+      <li>I do not document everything I read, so expect partial coverage.</li>
+      <li>The organisation may be haphazard while the archive develops.</li>
+    </ul>
+  </details>
+  {% endblock page_info %}
 
-{% include "include/back.html" %}
-<br>
+  {% block main_content %}
+  <div class="archive-search">
+    {% include "include/search-input.html" %}
+  </div>
 
+  {% set archive_list_pages = section.pages %}
+  {% include "include/archive-list.html" %}
 
-{% block page_info %}
-
-<p> I needed a reliable way to organize and access my various readings, notes, thoughts e.t.c and view them when needed.</p><span id="dots"></span><div id="more">
-<p>While I do take physical notes, they often end up scattered and hard to manage. This page serves as a repository for my unfinished notes, covering books, videos, and articles I've read or plan to read soon.</p>
-
-
-<p><strong>NOTICE:</strong></p>
-<ul>
-  <li>Books are rarely completed in one go</li>
-  <li>I won't be documenting every single thing I read daily, so expect around 50-70% coverage.</li>
-  <li>The organization might be a bit haphazard for now, but I'll improve it over time.</li>
-  <li>Loading....</li>
-</ul>
-</div>
-
-<button onclick="myFunction()" id="myBtn">Read more</button>
-
-
-
-
-
-<script>
-  function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
-  }
-} 
-</script>
-
-{% endblock %}
-
-
-{% block main_content %}
-
-<div id="post">
-  <ul class="post-list">
-
-  
-  {% set writing = get_section(path="note/_index.md") %}
-
-	{{ writing.content | safe}}
-
-
-    {% for page in section.pages %}
-    
-		<li class="post-link"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-
-   {% endfor %}
-
-  </ul>
-</div>
-{% endblock %}
-
-
-{% include "include/home.html" %}
+  {% if config.build_search_index %}
+    <script defer src="{{ get_url(path='elasticlunr.min.js') }}"></script>
+    <script defer src="{{ get_url(path='search_index.en.js') }}"></script>
+    <script src="{{ get_url(path='/search.js', trailing_slash=false) | safe }}"></script>
+  {% endif %}
+  {% endblock main_content %}
+</article>
 {% endblock content %}

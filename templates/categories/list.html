@@ -1,21 +1,16 @@
-{% extends "page.html" %}
+{% extends "base.html" %}
 
-{% block title %}
-		{{config.title}} - Categories
-{% endblock %}
+{% block title %}{{ config.title }} - Categories{% endblock title %}
 
 {% block content %}
-	<h1 style="text-align:center">Categories</h1>
-
-    {% if terms %}
-    {% include "include/back.html" %}
-    <br>
-        <ul>
-            {% for term in terms %}
-                <li class="tagsC-layout" >
-                    <a href="{{ term.permalink | safe }}">{{ term.name }}</a> ({{ term.pages | length }})
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+  {% set taxonomy_title = "Categories" %}
+  {% set taxonomy_path = "~/categories" %}
+  {% set taxonomy_intro = "Browse writings by their broad subject." %}
+  {% set taxonomy_count_label = "categories" %}
+  {% set taxonomy_entry_label = "writing" %}
+  {% set taxonomy_parent_url = "/writing/" %}
+  {% set taxonomy_parent_name = "Writings" %}
+  {% set taxonomy_peer_url = "/tags/" %}
+  {% set taxonomy_peer_name = "Tags" %}
+  {% include "include/taxonomy-directory.html" %}
 {% endblock content %}

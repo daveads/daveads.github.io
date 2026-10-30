@@ -1,17 +1,14 @@
-{% extends "page.html" %}
+{% extends "base.html" %}
 
-{% block title %}
-	{{config.title}} - {{term.name}}
-{% endblock %}
+{% block title %}{{ config.title }} - {{ term.name }}{% endblock title %}
 
 {% block content %}
-
-    <h1 style="text-align:center; color:#cccccc; padding:0; font-size: 150%">
-			<b>{{ term.name | capitalize }} Tag</b>
-    </h1>
-    {% include "include/back.html" %}
-    <br>
-    {% for page in term.pages %}
-        {{<tags.page_in_list page={page} />}}
-    {% endfor %}
+  {% set taxonomy_path = "~/tags" %}
+  {% set taxonomy_kind = "Writing tag" %}
+  {% set taxonomy_entry_label = "writing" %}
+  {% set taxonomy_parent_url = "/tags/" %}
+  {% set taxonomy_parent_name = "Tags" %}
+  {% set taxonomy_archive_url = "/writing/" %}
+  {% set taxonomy_archive_name = "Writings" %}
+  {% include "include/taxonomy-results.html" %}
 {% endblock content %}

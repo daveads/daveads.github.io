@@ -1,95 +1,25 @@
 {% extends "base.html" %}
 
-
-{% block meta_content %}
-<meta property="og:title" content="{{page.title}}">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://daveads.github.io{{ page.path }}">
-{% endblock meta_content %}
-
-
-{% block canonical %}
-	<link rel="canonical" href="https://daveads.github.io{{ page.path }}">
-{% endblock canonical %}
-
-
-{# keyword & desc needs rewrite ig #}
-{% block keywords %}
-		{% if page.taxonomies?.tags %}
-			<meta name="keywords" content="{{ page.taxonomies.tags }}">
-		{% endif %}
-{% endblock keywords %}
-
-
-{% block desc %}
-<meta name="description" content="{{ page.summary }}">
-{% endblock desc %}
-
-
-
-{% block title %}
-		{{config.title}} - {{page.title}}
-{% endblock %}
-
-
-
-{# keep empty #}
-{% block header %}
-{% endblock %}
-
-
+{% block header %}{% endblock header %}
 
 {% block content %}
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-<header class="post-header">
+{% set article_section_label = "Writings" %}
+{% set article_section_url = "/writing/" %}
+{% set article_archive_url = "/archive/" %}
+{% set article_taxonomy_kind = "tags" %}
+{% set article_tags = [] %}
+{% if page.taxonomies?.tags %}
+  {% set_global article_tags = page.taxonomies.tags %}
+{% endif %}
 
+<article class="post article-post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  {% include "include/article-header.html" %}
 
-		{% set title = page.title %}
-		{{<page_title page={title} />}}
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ page.content | safe }}
+  </div>
 
-
-		<small style="float:right; color: #888; font-size: 15px;"><a href="/writing">See all writings</a>
-			|| <a href="/archive">Archive</a>
-		</small>
-			
-		<p class="post-meta">
-
-		<time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date }}</time>
-		{% if page.updated %}
-		 (updated: {{ page.updated }})
-		{% endif %}
-		</p>
-		
-	<nav>
-		
-		{% include "include/back.html" %}
-		
-		{% if page.taxonomies?.tags %}
-		<p>
-		Tags :
-		{% for tags in page.taxonomies.tags %}
-		<small>
-		<a class="tag-link" href="{{ get_taxonomy_url(kind='tags', term=tags) | safe }}">#{{ tags }}</a>
-		</small>
-		{% endfor %}
-		{% endif %}
-		</p>
-
-	</nav>
-		
-		
-</header>
-
-		<br>
-		<div class="post-content e-content" itemprop="articleBody">
-		{{ page.content | safe }}
-		</div>
-		
-		
-		{% include "partials/newsletter.html" %}
-
-		{% include "include/home.html" %}
-
-
-
+  {% include "partials/newsletter.html" %}
+  {% include "include/home.html" %}
+</article>
 {% endblock content %}

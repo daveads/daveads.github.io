@@ -1,0 +1,28 @@
+<article class="archive-page taxonomy-page">
+  <header class="archive-header">
+    <div>
+      <p class="archive-kicker">{{ taxonomy_path }}</p>
+      <h1>{{ taxonomy_title }}</h1>
+      <p class="archive-intro">{{ taxonomy_intro }}</p>
+    </div>
+    <p class="archive-count">{{ terms | length }} {{ taxonomy_count_label }}</p>
+  </header>
+
+  <nav class="archive-nav" aria-label="Explore {{ taxonomy_title }}">
+    <a href="{{ taxonomy_parent_url }}">{{ taxonomy_parent_name }}</a>
+    <a href="{{ taxonomy_peer_url }}">{{ taxonomy_peer_name }}</a>
+  </nav>
+
+  {% if terms %}
+    <ul class="taxonomy-cloud">
+      {% for term in terms %}
+        <li>
+          <a href="{{ term.permalink | safe }}">
+            <span>{{ term.name }}</span>
+            <small aria-label="{{ term.pages | length }} {% if term.pages | length == 1 %}{{ taxonomy_entry_label }}{% else %}{{ taxonomy_entry_label }}s{% endif %}">{{ term.pages | length }}</small>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>

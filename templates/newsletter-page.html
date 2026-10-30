@@ -1,16 +1,25 @@
 {% extends "base.html" %}
 
 {% block title %}
-     {{config.title}} - {{page.title}}
-{% endblock %}
+{{ config.title }} - {{ page.title }}
+{% endblock title %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ get_url(path='assets/css/newsletter.css') }}">
+{% endblock extra_head %}
 
 {% block content %}
-<article class="post">
-	<header class="post-header">
-		<h1 class="post-title" style="text-align:center; color:#cccccc; padding:0; font-size:150%">{{ page.title }}</h1>
-	</header>
-    {{ page.content | safe }}
+<article class="newsletter-page">
+  <header class="newsletter-page__header">
+    <p class="newsletter-page__kicker">Email updates</p>
+    <h1>{{ page.title }}</h1>
+  </header>
 
-    {% include "partials/newsletter.html" %}
+  <div class="newsletter-page__content">
+    {{ page.content | safe }}
+  </div>
+
+  {% set newsletter_standalone = true %}
+  {% include "partials/newsletter.html" %}
 </article>
 {% endblock content %}

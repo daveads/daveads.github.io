@@ -1,60 +1,37 @@
 {% extends "base.html" %}
 
-
-{% block meta_content %}
-<meta property="og:title" content="writings">
-<meta property="og:type" content="blog">
-<meta property="og:url" content="https://daveads.github.io/writing">
-{% endblock meta_content %}
-
-{% block keywords %}
-<meta name="keywords" content="blog">
-{% endblock keywords %}
-
-
-{% block canonical %}
-	<link rel="canonical" href="https://daveads.github.io/writing">
-{% endblock canonical %}
-
-
 {% block title %}
-		{{config.title}} - {{section.title}}
-{% endblock %}
+{{ config.title }} - {{ section.title }}
+{% endblock title %}
 
 {% block content %}
+<article class="archive-page">
+  <header class="archive-header">
+    <div>
+      <p class="archive-kicker">~/writing</p>
+      <h1>{{ section.title }}</h1>
+      <p class="archive-intro">{{ section.description }}</p>
+    </div>
+    <p class="archive-count">{{ section.pages | length }} pieces</p>
+  </header>
 
-<h1 style="text-align:center; color:#cccccc; padding:0; font-size: 150%">{{ section.title }}</h1>
+  <nav class="archive-nav" aria-label="Explore the archive">
+    {% for item in config.extra.subs %}
+      <a href="{{ get_url(path=item.url, trailing_slash=item.slash) }}">{{ item.name }}</a>
+    {% endfor %}
+  </nav>
 
-<div>
+  <div class="archive-search">
+    {% include "include/search-input.html" %}
+  </div>
 
- {% include "include/subs.html" %}
+  {% set archive_list_pages = section.pages %}
+  {% include "include/archive-list.html" %}
 
-</div>
-
-
-{% include "include/search-input.html" %}
-
-
-
-<div id="posts">
-  <ul class="post-list">
-
-    {% for page in section.pages %}
-
-		<li class="post-link"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-
-   {% endfor %}
-
-  </ul>
-</div>
-
-
-{% if config.build_search_index %}
-
-		<script defer src="{{get_url(path="elasticlunr.min.js")}}"></script>
-		<script defer src="{{get_url(path="search_index.en.js")}}"></script>
-		<script src="{{ get_url(path="/search.js", trailing_slash=false) | safe }}"></script>
-{% endif %}
-
-
+  {% if config.build_search_index %}
+    <script defer src="{{ get_url(path='elasticlunr.min.js') }}"></script>
+    <script defer src="{{ get_url(path='search_index.en.js') }}"></script>
+    <script src="{{ get_url(path='/search.js', trailing_slash=false) | safe }}"></script>
+  {% endif %}
+</article>
 {% endblock content %}

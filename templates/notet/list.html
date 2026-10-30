@@ -1,30 +1,16 @@
-{% extends "page.html" %}
+{% extends "base.html" %}
 
-{% block header %}
-{% endblock %}
-
-{% block title %}
-		{{config.title}} - Note Tags
-{% endblock %}
+{% block title %}{{ config.title }} - Note Tags{% endblock title %}
 
 {% block content %}
-<h1 style="text-align:center; font-size:23px">Note Tags</h1>
-
-{% include "include/back.html" %}
-<br>
-
-<p style="text-align:center">Note : <a href="/notec">Categories</a></p>
-
-<br>
-    {% if terms %}
-        <ul>
-            {% for term in terms %}
-                <li class="tagsC-layout" >
-                    <a href="{{ term.permalink | safe }}">{{ term.name }}</a>({{ term.pages | length }})
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-    
-    {% include "include/home.html" %}
+  {% set taxonomy_title = "Note Tags" %}
+  {% set taxonomy_path = "~/notet" %}
+  {% set taxonomy_intro = "Browse the specific topics collected across notes." %}
+  {% set taxonomy_count_label = "tags" %}
+  {% set taxonomy_entry_label = "note" %}
+  {% set taxonomy_parent_url = "/note/" %}
+  {% set taxonomy_parent_name = "Notes" %}
+  {% set taxonomy_peer_url = "/notec/" %}
+  {% set taxonomy_peer_name = "Categories" %}
+  {% include "include/taxonomy-directory.html" %}
 {% endblock content %}

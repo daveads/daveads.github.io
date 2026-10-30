@@ -278,3 +278,234 @@
     }
   }
 }
+
+/**
+ * Article pages shared by writings and notes.
+ */
+.article-post {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &__header {
+    margin: 1.5rem auto 3.25rem;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "date links"
+      "tags back";
+    align-items: center;
+    gap: 1.8rem 1rem;
+    margin-top: 2.5rem;
+  }
+
+  &__nav {
+    grid-area: links;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    justify-self: end;
+    font-size: 0.92rem;
+    white-space: nowrap;
+  }
+
+  &__nav span {
+    color: #66666b;
+  }
+
+  &__meta {
+    grid-area: date;
+    margin: 0;
+    color: lighten($grey-color, 8%);
+    font-size: 0.88rem;
+  }
+
+  &__tags {
+    grid-area: tags;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  &__tags-label {
+    color: #b8b8bd;
+    font-weight: 600;
+  }
+
+  &__tags .tag-link {
+    display: inline-flex;
+    padding: 0.18rem 0.55rem;
+    border: 1px solid rgba(95, 164, 255, 0.28);
+    border-radius: 999px;
+    background: rgba(95, 164, 255, 0.1);
+    font-size: 0.82rem;
+    line-height: 1.4;
+
+    &:hover,
+    &:focus-visible {
+      border-color: rgba(19, 223, 147, 0.55);
+      background: rgba(19, 223, 147, 0.09);
+    }
+  }
+
+  a {
+    color: $brand-color;
+
+    &:visited {
+      color: $brand-color;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: #13df93;
+    }
+  }
+
+  &__details .article-back {
+    grid-area: back;
+    justify-self: end;
+  }
+
+  .post-title {
+    margin-bottom: 1rem;
+    color: #d2d2d6;
+    font-size: 2.65rem;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.16;
+    text-align: center;
+  }
+
+  .post-content {
+    color: #bdbdc3;
+    font-size: 1.06rem;
+    line-height: 1.75;
+
+    a {
+      text-decoration: underline;
+      text-decoration-color: rgba(95, 164, 255, 0.45);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration-color: currentColor;
+      }
+    }
+
+    p, ul, ol, blockquote, figure, pre {
+      margin-bottom: 1.35rem;
+    }
+
+    h2, h3, h4 {
+      color: #ceced2;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+    }
+
+    h2 {
+      margin: 2.75rem 0 0.9rem;
+      font-size: 1.6rem;
+    }
+
+    h3 {
+      margin: 2.2rem 0 0.75rem;
+      font-size: 1.3rem;
+    }
+
+    h4 {
+      margin-top: 1.9rem;
+      font-size: 1.08rem;
+    }
+
+    blockquote {
+      border-left-width: 2px;
+      color: #aaaab0;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+
+    img {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  @include media-query($on-palm) {
+    &__header {
+      margin: 0.75rem auto 2.5rem;
+    }
+
+    &__details {
+      gap: 1.35rem 0.75rem;
+      margin-top: 2rem;
+    }
+
+    &__nav,
+    &__meta,
+    &__tags {
+      font-size: 0.82rem;
+    }
+
+    &__details .article-back {
+      padding: 0.46rem 0.65rem;
+      font-size: 0.8rem;
+    }
+
+    .post-title {
+      font-size: 2.05rem;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+    }
+
+    .post-content {
+      font-size: 1rem;
+      line-height: 1.7;
+
+      h2 {
+        margin-top: 2.35rem;
+        font-size: 1.4rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.article-back {
+  padding: 0.42rem 0.72rem;
+  border: 1px solid rgba(95, 164, 255, 0.42);
+  border-radius: 6px;
+  background: rgba(95, 164, 255, 0.08);
+  color: $brand-color;
+  cursor: pointer;
+  font: 600 0.84rem/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.01em;
+  transition: color 140ms ease, border-color 140ms ease,
+    background-color 140ms ease, transform 140ms ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: rgba(19, 223, 147, 0.62);
+    background: rgba(19, 223, 147, 0.09);
+    color: #13df93;
+    transform: translateX(-2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(19, 223, 147, 0.35);
+    outline-offset: 3px;
+  }
+
+  &:active {
+    transform: translateX(-1px) scale(0.98);
+  }
+}

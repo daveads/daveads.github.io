@@ -1,28 +1,14 @@
-{% extends "page.html" %}
+{% extends "base.html" %}
 
-{% block header %}
-
-{% endblock header %}
-
-
-{% block title %}
-		{{config.title}} - {{term.name}}
-{% endblock %}
+{% block title %}{{ config.title }} - {{ term.name }}{% endblock title %}
 
 {% block content %}
-
-<h1 style="text-align:center; color:#cccccc; padding:0; font-size: 150%">
-			<b>Note tag: {{ term.name }} </b>
-</h1>
-
-{% include "include/back.html" %}
-
-<br>
-<div>
-    {% for page in term.pages %}
-
-        {{<notet.page_in_list page={page} />}}
-
-    {% endfor %}
-</div>
+  {% set taxonomy_path = "~/notet" %}
+  {% set taxonomy_kind = "Note tag" %}
+  {% set taxonomy_entry_label = "note" %}
+  {% set taxonomy_parent_url = "/notet/" %}
+  {% set taxonomy_parent_name = "Note Tags" %}
+  {% set taxonomy_archive_url = "/note/" %}
+  {% set taxonomy_archive_name = "Notes" %}
+  {% include "include/taxonomy-results.html" %}
 {% endblock content %}
