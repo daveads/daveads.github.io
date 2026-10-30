@@ -25,24 +25,26 @@
  {% set section_item = get_section(path="writing/_index.md") %}
 
 
-{% for year, posts in section_item.pages | group_by(attribute="year") %}
-    <h2>{{ year }}</h2>
+{% set_global current_year = 0 %}
+{% for post in section_item.pages %}
+    {% if post.year != current_year %}
+        {% if not loop.first %}</ul>{% endif %}
+        <h2>{{ post.year }}</h2>
+        <ul>
+        {% set_global current_year = post.year %}
+    {% endif %}
 
-    <ul>
-    {% for post in posts %}
-        <li style="font-size: 25px;"><a href="{{ post.permalink }}">{{ post.title }}</a></li>
-        
-
+    <li style="font-size: 25px;">
+        <a href="{{ post.permalink }}">{{ post.title }}</a>
         <p class="post-meta">
-        <time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date }}</time>
+            <time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date }}</time>
             {% if post.updated %}
              (updated: {{ post.updated }})
             {% endif %}
         </p>
+    </li>
 
-        
-    {% endfor %}
-    </ul>
+    {% if loop.last %}</ul>{% endif %}
 {% endfor %}
 
 
