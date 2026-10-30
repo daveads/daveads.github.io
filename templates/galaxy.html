@@ -60,10 +60,17 @@
   <div class="galaxy-theme-filters" data-category-filters aria-label="Filter by constellation"></div>
 
   <section class="galaxy-stage" data-galaxy-stage aria-label="Interactive map of writings and notes">
-    <div class="galaxy-map-scroll">
+    <div class="galaxy-zoom-controls" data-galaxy-zoom-controls role="group" aria-label="Galaxy zoom controls">
+      <button type="button" data-galaxy-zoom-out aria-label="Zoom out">−</button>
+      <button type="button" data-galaxy-zoom-reset aria-label="Reset Galaxy zoom">
+        <span data-galaxy-zoom-value>100%</span>
+      </button>
+      <button type="button" data-galaxy-zoom-in aria-label="Zoom in">+</button>
+    </div>
+    <div class="galaxy-map-scroll" data-galaxy-map-scroll>
       <svg class="galaxy-map" data-galaxy-map viewBox="0 0 1200 720" role="img" aria-labelledby="galaxy-map-title galaxy-map-desc">
         <title id="galaxy-map-title">Daveads Galaxy</title>
-        <desc id="galaxy-map-desc">An interactive constellation map of Daveads' writings and notes. Use the filters or tab through stars to explore.</desc>
+        <desc id="galaxy-map-desc">An interactive constellation map of Daveads' writings and notes. Use the filters, zoom controls, pinch gesture, or tab through stars to explore.</desc>
       </svg>
     </div>
     <div class="galaxy-tooltip" data-galaxy-tooltip role="status" aria-live="polite" hidden>

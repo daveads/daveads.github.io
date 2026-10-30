@@ -304,8 +304,54 @@
 .galaxy-map-scroll {
   position: relative;
   z-index: 1;
+  height: 690px;
   overflow: auto;
+  overscroll-behavior: contain;
   scrollbar-color: rgba(103, 232, 249, 0.35) transparent;
+  touch-action: none;
+  cursor: grab;
+}
+
+.galaxy-map-scroll.is-panning {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.galaxy-zoom-controls {
+  position: absolute;
+  z-index: 4;
+  top: 0.65rem;
+  right: 0.65rem;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid rgba(142, 160, 201, 0.3);
+  border-radius: 9px;
+  background: rgba(5, 8, 18, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(9px);
+}
+
+.galaxy-zoom-controls button {
+  min-width: 38px;
+  min-height: 38px;
+  padding: 0 0.55rem;
+  border: 0;
+  border-right: 1px solid rgba(142, 160, 201, 0.2);
+  color: #dce8ff;
+  background: transparent;
+  cursor: pointer;
+  font: 0.74rem/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.galaxy-zoom-controls button:last-child {
+  border-right: 0;
+}
+
+.galaxy-zoom-controls button:hover,
+.galaxy-zoom-controls button:focus-visible {
+  color: #071019;
+  background: var(--galaxy-accent);
+  outline: 0;
 }
 
 .galaxy-map {
@@ -642,13 +688,15 @@
   }
 
   .galaxy-stage,
-  .galaxy-map {
+  .galaxy-map-scroll {
     min-height: 540px;
+    height: 540px;
   }
 
   .galaxy-map {
     width: 860px;
     min-width: 860px;
+    min-height: 0;
   }
 
   .galaxy-list-grid {
