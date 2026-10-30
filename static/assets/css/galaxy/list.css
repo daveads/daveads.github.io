@@ -7,7 +7,8 @@
 }
 
 .galaxy-list-group + .galaxy-list-group {
-  margin-top: 1.35rem;
+  margin-top: 2.15rem;
+  padding-top: 0.15rem;
 }
 
 .galaxy-list-group h2 {
@@ -44,6 +45,7 @@
 
 .galaxy-list-grid a {
   display: block;
+  box-sizing: border-box;
   height: 100%;
   padding: 0.7rem 0.75rem;
   border: 1px solid rgba(133, 154, 203, 0.14);
