@@ -33,6 +33,36 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 12%, transparent 88%, rgba(255, 255, 255, 0.02));
 }
 
+.galaxy-stage:fullscreen,
+.galaxy-stage.is-galaxy-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  border: 0;
+  border-radius: 0;
+}
+
+.galaxy-stage:fullscreen .galaxy-map-scroll,
+.galaxy-stage.is-galaxy-fullscreen .galaxy-map-scroll {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.galaxy-stage.is-galaxy-fullscreen {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+}
+
+html.galaxy-fullscreen-active,
+html.galaxy-fullscreen-active body {
+  overflow: hidden;
+}
+
 .galaxy-map-scroll {
   position: relative;
   z-index: 1;

@@ -1,3 +1,4 @@
+import { setupGalaxyFullscreen } from "./galaxy/fullscreen.js";
 import { layoutCategories } from "./galaxy/layout.js";
 import { createGalaxyMap } from "./galaxy/map.js";
 import { buildGalaxyModel } from "./galaxy/model.js";
@@ -38,6 +39,7 @@ if (root && dataElement) {
     categoryFilters: root.querySelector("[data-category-filters]"),
     topicFilter: root.querySelector("[data-topic-filter]"),
     viewToggle: root.querySelector("[data-view-toggle]"),
+    fullscreen: root.querySelector("[data-galaxy-fullscreen]"),
     zoomOut: root.querySelector("[data-galaxy-zoom-out]"),
     zoomReset: root.querySelector("[data-galaxy-zoom-reset]"),
     zoomIn: root.querySelector("[data-galaxy-zoom-in]"),
@@ -121,13 +123,19 @@ if (root && dataElement) {
   });
   systemMotion.start();
 
-  setupGalaxyViewport({
+  const viewport = setupGalaxyViewport({
     map: elements.map,
     mapScroll: elements.mapScroll,
     zoomOut: elements.zoomOut,
     zoomReset: elements.zoomReset,
     zoomIn: elements.zoomIn,
     zoomValue: elements.zoomValue
+  });
+
+  setupGalaxyFullscreen({
+    stage: elements.stage,
+    toggle: elements.fullscreen,
+    onChange: viewport.reset
   });
 
   function applyFilters() {

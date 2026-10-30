@@ -8,6 +8,7 @@ and tags are discovered from the page data instead of being hardcoded here.
 - `layout.js` calculates where category systems begin on the map.
 - `map.js` creates the SVG objects, links, labels, and tooltips.
 - `motion.js` moves complete category systems around the DAVEADS core.
+- `fullscreen.js` owns native fullscreen and its browser fallback.
 - `viewport.js` owns zooming, dragging, mouse-wheel, and touch gestures.
 - `ui.js` owns filter controls, counts, and list-view markup.
 - `utils.js` contains shared SVG and deterministic-number helpers.
