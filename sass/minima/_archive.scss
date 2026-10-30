@@ -1,0 +1,267 @@
+// Shared layout for the Writings and Notes archives.
+.archive-page {
+  width: min(840px, 100%);
+  margin: 0 auto;
+  color: #cbd2df;
+
+  .search-results__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      border-bottom: 1px solid rgba(139, 164, 199, 0.12);
+    }
+  }
+
+  .search-results__item {
+    padding: 1rem 0.15rem;
+    color: #8994a7;
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+}
+
+.archive-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 2rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(139, 164, 199, 0.18);
+
+  h1 {
+    margin: 0;
+    color: #f0f3f8;
+    font-size: clamp(2.25rem, 7vw, 3.7rem);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 1;
+  }
+}
+
+.archive-kicker {
+  margin: 0 0 0.45rem;
+  color: #78b99b;
+  font: 0.74rem/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.06em;
+}
+
+.archive-intro {
+  max-width: 620px;
+  margin: 0.85rem 0 0;
+  color: #909bad;
+  line-height: 1.65;
+}
+
+.archive-count,
+.archive-list time {
+  color: #718096;
+  font: 0.7rem/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.archive-count {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.archive-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(139, 164, 199, 0.12);
+  font: 0.74rem/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  a {
+    color: $brand-color;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: #13df93;
+    }
+  }
+}
+
+.archive-details {
+  margin: 1rem 0 0;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgba(139, 164, 199, 0.16);
+  border-radius: 8px;
+  color: #8f9bad;
+  font-size: 0.82rem;
+  line-height: 1.6;
+
+  summary {
+    color: #aeb8c8;
+    cursor: pointer;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  p,
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.archive-search {
+  margin: 1.1rem 0 0.4rem;
+
+  .inputT {
+    display: block;
+  }
+
+  #search {
+    box-sizing: border-box;
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    padding: 0 0.9rem;
+    border: 1px solid rgba(139, 164, 199, 0.25);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.018);
+    color: #e4e9f2;
+    font: 0.86rem/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    &:focus {
+      border-color: #78b99b;
+      outline: 2px solid rgba(120, 185, 155, 0.12);
+    }
+  }
+
+  br {
+    display: none;
+  }
+}
+
+.archive-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    border-bottom: 1px solid rgba(139, 164, 199, 0.12);
+  }
+
+  a {
+    display: grid;
+    grid-template-columns: 7.6rem minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: start;
+    padding: 1.05rem 0.15rem;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      strong {
+        color: #13df93;
+      }
+
+      .archive-arrow {
+        color: #13df93;
+      }
+    }
+  }
+}
+
+.archive-entry {
+  display: grid;
+  min-width: 0;
+
+  strong {
+    color: $brand-color;
+    font-size: 1rem;
+    font-weight: 550;
+    line-height: 1.4;
+  }
+}
+
+.archive-arrow {
+  color: #68788f;
+}
+
+.archive-years {
+  margin-top: 1.5rem;
+}
+
+.archive-year + .archive-year {
+  margin-top: 2.2rem;
+}
+
+.archive-year h2 {
+  margin: 0 0 0.35rem;
+  color: #78b99b;
+  font: 600 0.82rem/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.08em;
+}
+
+.taxonomy-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.48rem 0.65rem;
+    border: 1px solid rgba(95, 164, 255, 0.42);
+    border-radius: 6px;
+    background: rgba(95, 164, 255, 0.035);
+    color: $brand-color;
+    font-size: 0.9rem;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      border-color: #13df93;
+      background: rgba(19, 223, 147, 0.06);
+      color: #13df93;
+    }
+  }
+
+  small {
+    min-width: 1.2rem;
+    padding: 0.08rem 0.28rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #8190a6;
+    font: 0.64rem/1.35 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    text-align: center;
+  }
+}
+
+@include media-query($on-palm) {
+  .archive-header {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .archive-list a {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.35rem 0.8rem;
+    padding: 0.9rem 0.1rem;
+  }
+
+  .archive-list time {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .archive-entry {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .archive-arrow {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+}
