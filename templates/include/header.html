@@ -1,8 +1,9 @@
 <header class="site-header" role="banner">
 
+  {% set header_current_path = current_path | default(value="") %}
 
   <div class="wrapper">
-    <a class="site-title" rel="author" href="{{ "/" }}">{{ config.title }}</a>
+    <a class="site-title" rel="author" href="/"{% if header_current_path == "/" %} aria-current="page"{% endif %}>{{ config.title }}</a>
 
       <nav class="site-nav">
 
@@ -17,7 +18,8 @@
 
 	<div class="trigger">
     {%- for i in config.extra.menu %}
-	<a class="page-link" href="{{ get_url(path=i.url, trailing_slash=i.slash) }}">{{ i.name | safe }}</a>
+	<a class="page-link{% if header_current_path is starting_with(pat=i.url) %} is-active{% endif %}"
+     href="{{ get_url(path=i.url, trailing_slash=i.slash) }}"{% if header_current_path is starting_with(pat=i.url) %} aria-current="page"{% endif %}>{{ i.name | safe }}</a>
 	{%- endfor %}
 	</div>
 
