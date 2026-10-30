@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="/assets/css/tagc.css">
 <link rel="stylesheet" href="/assets/css/pagenav.css">
 <link rel="stylesheet" href="/assets/css/shortcodes.css">
+{% block extra_head %}{% endblock extra_head %}
 
 
 <!-- google_analytics -->
@@ -115,6 +116,7 @@ if (navigator.serviceWorker.controller) {
 
 		</main>
 		<footer></footer>
+		{% block extra_scripts %}{% endblock extra_scripts %}
  </body>
 
 </html>

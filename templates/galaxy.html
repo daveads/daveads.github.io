@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ get_url(path='assets/css/galaxy.css') }}">
+{% endblock extra_head %}
+
+{% block content %}
+{% set writings = get_section(path="writing/_index.md") %}
+{% set notes = get_section(path="note/_index.md") %}
+{% set total_objects = writings.pages | length + notes.pages | length %}
+
+<article class="galaxy-shell" data-galaxy>
+  <header class="galaxy-hero">
+    <div>
+      <p class="galaxy-kicker">Knowledge atlas // {{ total_objects }} fragments</p>
+      <h1>Daveads <span>Galaxy</span></h1>
+      <p class="galaxy-intro">
+        A living map of the things I write, study, question and build. Every star is a real page;
+        categories become constellations, and tags become topics you can follow.
+      </p>
+    </div>
+    <div class="galaxy-signal" aria-label="Galaxy status">
+      <span class="galaxy-signal-dot" aria-hidden="true"></span>
+      <span>Signal online</span>
+      <small>Generated from the archive</small>
+    </div>
+  </header>
+
+  <section class="galaxy-controls" aria-label="Galaxy controls">
+    <label class="galaxy-search">
+      <span class="sr-only">Search the galaxy</span>
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+        <circle cx="11" cy="11" r="7"></circle>
+        <path d="m16 16 4 4"></path>
+      </svg>
+      <input type="search" data-galaxy-search placeholder="Search ideas, titles, or tags…" autocomplete="off">
+    </label>
+
+    <div class="galaxy-type-filter" role="group" aria-label="Content type">
+      <button type="button" class="is-active" data-kind="all" aria-pressed="true">All</button>
+      <button type="button" data-kind="writing" aria-pressed="false">Writings</button>
+      <button type="button" data-kind="note" aria-pressed="false">Notes</button>
+    </div>
+
+    <label class="galaxy-topic-select">
+      <span>Topic</span>
+      <select data-topic-filter aria-label="Filter by topic">
+        <option value="all">All topics</option>
+      </select>
+    </label>
+
+    <button type="button" class="galaxy-action" data-random-voyage>
+      <span aria-hidden="true">↝</span> Random voyage
+    </button>
+    <button type="button" class="galaxy-action" data-view-toggle aria-pressed="false">
+      <span aria-hidden="true">☷</span> List view
+    </button>
+  </section>
+
+  <div class="galaxy-theme-filters" data-category-filters aria-label="Filter by constellation"></div>
+
+  <section class="galaxy-stage" data-galaxy-stage aria-label="Interactive map of writings and notes">
+    <div class="galaxy-map-scroll">
+      <svg class="galaxy-map" data-galaxy-map viewBox="0 0 1200 720" role="img" aria-labelledby="galaxy-map-title galaxy-map-desc">
+        <title id="galaxy-map-title">Daveads Galaxy</title>
+        <desc id="galaxy-map-desc">An interactive constellation map of Daveads' writings and notes. Use the filters or tab through stars to explore.</desc>
+      </svg>
+    </div>
+    <div class="galaxy-tooltip" data-galaxy-tooltip role="status" aria-live="polite" hidden>
+      <span data-tooltip-kind></span>
+      <strong data-tooltip-title></strong>
+      <small data-tooltip-meta></small>
+    </div>
+    <p class="galaxy-empty" data-galaxy-empty hidden>No objects found in this part of the galaxy.</p>
+  </section>
+
+  <section class="galaxy-list" data-galaxy-list hidden aria-label="Galaxy list view"></section>
+
+  <footer class="galaxy-legend">
+    <div><span class="legend-star legend-writing" aria-hidden="true"></span> Writings</div>
+    <div><span class="legend-star legend-note" aria-hidden="true"></span> Notes</div>
+    <div class="galaxy-legend-taxonomy">Categories → constellations · Tags → topics</div>
+    <p data-galaxy-count>{{ total_objects }} objects in view</p>
+  </footer>
+</article>
+
+<noscript>
+  <section class="galaxy-noscript">
+    <h2>The archive</h2>
+    <p>The interactive map needs JavaScript, but every destination is available below.</p>
+    <h3>Writings</h3>
+    <ul>
+      {% for post in writings.pages %}<li><a href="{{ post.permalink }}">{{ post.title }}</a></li>{% endfor %}
+    </ul>
+    <h3>Notes</h3>
+    <ul>
+      {% for post in notes.pages %}<li><a href="{{ post.permalink }}">{{ post.title }}</a></li>{% endfor %}
+    </ul>
+  </section>
+</noscript>
+
+<script id="galaxy-data" type="application/json">
+[
+{% for post in writings.pages %}
+  {
+    "title": {{ post.title | json_encode | safe }},
+    "url": {{ post.permalink | json_encode | safe }},
+    "kind": "writing",
+    "date": {{ post.date | default(value="") | json_encode | safe }},
+    "tags": {{ post.taxonomies.tags | default(value=[]) | json_encode | safe }},
+    "categories": {{ post.taxonomies.categories | default(value=[]) | json_encode | safe }}
+  },
+{% endfor %}
+{% for post in notes.pages %}
+  {
+    "title": {{ post.title | json_encode | safe }},
+    "url": {{ post.permalink | json_encode | safe }},
+    "kind": "note",
+    "date": {{ post.date | default(value="") | json_encode | safe }},
+    "tags": {{ post.taxonomies.notet | default(value=[]) | json_encode | safe }},
+    "categories": {{ post.taxonomies.notec | default(value=[]) | json_encode | safe }}
+  }{% if not loop.last %},{% endif %}
+{% endfor %}
+]
+</script>
+{% endblock content %}
+
+{% block extra_scripts %}
+<script src="{{ get_url(path='assets/js/galaxy.js') }}" defer></script>
+{% endblock extra_scripts %}

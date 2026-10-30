@@ -168,3 +168,83 @@ li.Scontain {
 #container{
   display: none;
 }
+
+.galaxy-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.35rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid rgba(95, 164, 255, 0.55);
+  border-radius: 999px;
+  background: rgba(2, 175, 255, 0.08);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.galaxy-home-link:hover,
+.galaxy-home-link:focus-visible {
+  border-color: #13df93;
+  background: rgba(19, 223, 147, 0.09);
+}
+
+/* Keep article content inside the reading column at every viewport size. */
+.post,
+.post-content {
+  min-width: 0;
+}
+
+.post-content {
+  overflow-wrap: anywhere;
+}
+
+.post-content img,
+.post-content video,
+.post-content canvas,
+.post-content svg,
+.post-content iframe,
+.post-content embed,
+.post-content object {
+  max-width: 100%;
+}
+
+.post-content video,
+.post-content iframe,
+.post-content embed,
+.post-content object {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.post-content video {
+  height: auto;
+}
+
+.post-content .article-video {
+  width: 100%;
+}
+
+.post-content iframe[src*="youtube.com"],
+.post-content iframe[src*="youtube-nocookie.com"],
+.post-content iframe[src*="vimeo.com"] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.post-content pre,
+.post-content table {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.post-content table {
+  width: 100%;
+}
+
+.post-content th,
+.post-content td {
+  overflow-wrap: anywhere;
+}

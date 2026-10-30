@@ -7,7 +7,7 @@ categories = ["General"]
 tags = ["linux"]
 +++
 
-<video controls preload="metadata" width="1200" aria-label="Command-line demonstration">
+<video class="article-video" controls preload="metadata" aria-label="Command-line demonstration">
   <source src="/assets/videos/cmd.mp4" type="video/mp4">
   Your browser does not support embedded video.
 </video>
