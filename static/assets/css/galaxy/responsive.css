@@ -73,6 +73,70 @@
 
   .galaxy-list-grid {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .galaxy-list {
+    min-height: 360px;
+    padding: 0.8rem 0.85rem 4.75rem;
+    border-radius: 14px;
+  }
+
+  .galaxy-list-group + .galaxy-list-group {
+    margin-top: 1.7rem;
+  }
+
+  .galaxy-list-group h2 {
+    margin-bottom: 0.45rem;
+    font-size: 0.74rem;
+  }
+
+  .galaxy-list-grid li + li {
+    border-top: 1px solid rgba(133, 154, 203, 0.13);
+  }
+
+  .galaxy-list-grid a {
+    min-height: 58px;
+    height: auto;
+    padding: 0.72rem 0.2rem 0.75rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+  .galaxy-list-grid a:hover,
+  .galaxy-list-grid a:focus-visible {
+    border-color: transparent;
+    background: rgba(255, 255, 255, 0.025);
+  }
+
+  .galaxy-list-grid small {
+    margin-top: 0.28rem;
+    color: #8490aa;
+    font-size: 0.66rem;
+    line-height: 1.4;
+  }
+
+  .scrollToTopBtn {
+    right: 8px;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    width: 40px;
+    border: 1px solid rgba(133, 154, 203, 0.35);
+    border-radius: 50%;
+    background: rgba(8, 12, 24, 0.86);
+    line-height: 40px;
+    backdrop-filter: blur(8px);
+  }
+
+  .scrollToTopBtn.showBtn {
+    opacity: 0.78;
+  }
+
+  .scrollToTopBtn:hover,
+  .scrollToTopBtn:focus-visible {
+    opacity: 1;
   }
 
   .galaxy-legend {

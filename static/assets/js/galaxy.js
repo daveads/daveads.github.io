@@ -4,6 +4,10 @@ import { createGalaxyMap } from "./galaxy/map.js";
 import { buildGalaxyModel } from "./galaxy/model.js";
 import { createSystemMotion } from "./galaxy/motion.js";
 import { createGalaxyUi } from "./galaxy/ui.js";
+import {
+  calculateStarBudget,
+  selectRepresentativeNodes
+} from "./galaxy/visibility.js";
 import { setupGalaxyViewport } from "./galaxy/viewport.js";
 
 const root = document.querySelector("[data-galaxy]");
@@ -50,9 +54,9 @@ if (root && dataElement) {
   elements.tooltipMeta = elements.tooltip.querySelector("[data-tooltip-meta]");
 
   const positions = layoutCategories(categories);
-  const compactOverview = nodes.length > 280 || categories.length > 28;
   let ui;
   let mapView;
+  let viewport;
 
   function matches(node) {
     const kindMatches = state.kind === "all" || node.kind === state.kind;
@@ -123,13 +127,14 @@ if (root && dataElement) {
   });
   systemMotion.start();
 
-  const viewport = setupGalaxyViewport({
+  viewport = setupGalaxyViewport({
     map: elements.map,
     mapScroll: elements.mapScroll,
     zoomOut: elements.zoomOut,
     zoomReset: elements.zoomReset,
     zoomIn: elements.zoomIn,
-    zoomValue: elements.zoomValue
+    zoomValue: elements.zoomValue,
+    onViewportChange: applyFilters
   });
 
   setupGalaxyFullscreen({
@@ -140,35 +145,45 @@ if (root && dataElement) {
 
   function applyFilters() {
     const visible = visibleNodes();
-    const visibleIds = new Set(visible.map((node) => node.id));
     const hasActiveDiscovery = state.kind !== "all"
       || state.category !== "all"
       || state.topic !== "all"
       || Boolean(state.query);
-    const displayStars = !compactOverview || hasActiveDiscovery;
-
-    nodes.forEach((node) => {
-      const hidden = !displayStars || !visibleIds.has(node.id);
-      mapView.nodeElements.get(node.id).classList.toggle("is-hidden", hidden);
-      mapView.edgeElements.get(node.id).classList.toggle("is-hidden", hidden);
+    const starBudget = calculateStarBudget({
+      width: elements.mapScroll.clientWidth,
+      height: elements.mapScroll.clientHeight,
+      scale: viewport?.getScale() || 1,
+      focused: hasActiveDiscovery
+    });
+    const displayedNodes = selectRepresentativeNodes(visible, starBudget);
+    mapView.renderNodes(displayedNodes);
+    const categoryCounts = new Map(categories.map((category) => [category.id, 0]));
+    visible.forEach((node) => {
+      node.categoryIds.forEach((categoryId) => {
+        categoryCounts.set(categoryId, (categoryCounts.get(categoryId) || 0) + 1);
+      });
     });
 
     categories.forEach((category) => {
-      const visibleCount = visible.filter((node) => {
-        return node.categoryIds.includes(category.id);
-      }).length;
+      const visibleCount = categoryCounts.get(category.id) || 0;
       const cluster = mapView.clusterElements.get(category.id);
       cluster.group.classList.toggle("is-dimmed", visibleCount === 0);
       cluster.count.textContent = `${visibleCount} ${visibleCount === 1 ? "object" : "objects"}`;
     });
 
-    ui.updateCategoryCounts(visible);
-    ui.renderList(visible, state);
+    ui.updateCategoryCounts(categoryCounts);
 
-    const compactHint = compactOverview && !hasActiveDiscovery
-      ? " · choose a constellation or topic to reveal stars"
-      : "";
-    elements.count.textContent = `${visible.length} ${visible.length === 1 ? "object" : "objects"} in view${compactHint}`;
+    if (state.view === "list") {
+      ui.renderList(visible, state);
+      elements.count.textContent = `${visible.length} ${visible.length === 1 ? "object" : "objects"} in list`;
+    } else {
+      elements.list.replaceChildren();
+      if (displayedNodes.length < visible.length) {
+        elements.count.textContent = `${displayedNodes.length} of ${visible.length} matching objects shown · zoom or filter to reveal more`;
+      } else {
+        elements.count.textContent = `${visible.length} ${visible.length === 1 ? "object" : "objects"} in view`;
+      }
+    }
     elements.emptyState.hidden = visible.length !== 0 || state.view !== "map";
   }
 
@@ -182,6 +197,7 @@ if (root && dataElement) {
       ? '<span aria-hidden="true">✦</span> Map view'
       : '<span aria-hidden="true">☷</span> List view';
     elements.emptyState.hidden = visibleNodes().length !== 0 || listView;
+    applyFilters();
   }
 
   root.querySelectorAll("[data-kind]").forEach((button) => {

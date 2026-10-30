@@ -53,29 +53,36 @@ export function createGalaxyUi({
     });
   }
 
-  function updateCategoryCounts(visible) {
+  function updateCategoryCounts(categoryCounts) {
     categories.forEach((category) => {
-      const visibleCount = visible.filter((node) => {
-        return node.categoryIds.includes(category.id);
-      }).length;
       const categoryCount = categoryFilters.querySelector(
         `[data-category-count="${category.id}"]`
       );
-      if (categoryCount) categoryCount.textContent = String(visibleCount);
+      if (categoryCount) {
+        categoryCount.textContent = String(categoryCounts.get(category.id) || 0);
+      }
     });
   }
 
   function renderList(visible, state) {
     list.replaceChildren();
-    const groups = state.category === "all"
-      ? categories.map((category) => ({
+    let groups;
+
+    if (state.category === "all") {
+      const membersByCategory = new Map(
+        categories.map((category) => [category.id, []])
+      );
+      visible.forEach((node) => membersByCategory.get(node.primaryCategory).push(node));
+      groups = categories.map((category) => ({
         category,
-        members: visible.filter((node) => node.primaryCategory === category.id)
-      }))
-      : [{
+        members: membersByCategory.get(category.id)
+      }));
+    } else {
+      groups = [{
         category: categoryById.get(state.category),
         members: visible.filter((node) => node.categoryIds.includes(state.category))
       }];
+    }
 
     groups.forEach(({ category, members }) => {
       if (!members.length) return;

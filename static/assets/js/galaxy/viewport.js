@@ -4,7 +4,8 @@ export function setupGalaxyViewport({
   zoomOut,
   zoomReset,
   zoomIn,
-  zoomValue
+  zoomValue,
+  onViewportChange = () => {}
 }) {
   const mobileGalaxy = window.matchMedia("(max-width: 640px)");
   const mobileMapWidth = 860;
@@ -16,6 +17,15 @@ export function setupGalaxyViewport({
   let pinchStart = null;
   let gestureMoved = false;
   let suppressNextMapClick = false;
+  let viewportChangeFrame = null;
+
+  function notifyViewportChange() {
+    if (viewportChangeFrame !== null) return;
+    viewportChangeFrame = window.requestAnimationFrame(() => {
+      viewportChangeFrame = null;
+      onViewportChange();
+    });
+  }
 
   function clampMapScale(scale) {
     const minScale = mobileGalaxy.matches ? 0.55 : 1;
@@ -49,6 +59,7 @@ export function setupGalaxyViewport({
     map.style.width = `${baseMapWidth * mapScale}px`;
     map.style.minWidth = `${baseMapWidth * mapScale}px`;
     updateZoomValue();
+    notifyViewportChange();
 
     requestAnimationFrame(() => {
       mapScroll.scrollLeft = contentX * mapScale - focusX;
@@ -68,6 +79,7 @@ export function setupGalaxyViewport({
       baseMapWidth = mapScroll.clientWidth;
     }
     updateZoomValue();
+    notifyViewportChange();
     requestAnimationFrame(centerMap);
   }
 
@@ -152,6 +164,7 @@ export function setupGalaxyViewport({
       mapScroll.scrollLeft = pinchStart.contentX * mapScale - focusX;
       mapScroll.scrollTop = pinchStart.contentY * mapScale - focusY;
       updateZoomValue();
+      notifyViewportChange();
       return;
     }
 
@@ -236,5 +249,8 @@ export function setupGalaxyViewport({
   });
 
   resetMapZoom();
-  return { reset: resetMapZoom };
+  return {
+    getScale: () => mapScale,
+    reset: resetMapZoom
+  };
 }

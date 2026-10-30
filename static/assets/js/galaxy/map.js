@@ -21,6 +21,7 @@ export function createGalaxyMap({
   const nodeElements = new Map();
   const edgeElements = new Map();
   const clusterElements = new Map();
+  const orbitLayers = new Map();
   const spokeElements = new Map();
   const systemMotions = [];
 
@@ -151,6 +152,7 @@ export function createGalaxyMap({
         "--orbit-direction",
         orbitSeed % 2 === 0 ? "normal" : "reverse"
       );
+      orbitLayers.set(category.id, orbitLayer);
       systemMotions.push({
         categoryId: category.id,
         element: systemLayer,
@@ -213,41 +215,63 @@ export function createGalaxyMap({
         );
         node.x = position.x + Math.cos(angle) * distance;
         node.y = position.y + Math.sin(angle) * distance * 0.72;
-
-        const edge = createSvg("line", {
-          class: "galaxy-edge",
-          x1: position.x,
-          y1: position.y,
-          x2: node.x,
-          y2: node.y
-        });
-        edge.style.setProperty("--node-color", category.color);
-        edgeElements.set(node.id, edge);
-        orbitLayer.appendChild(edge);
-
-        const link = createSvg("a", {
-          class: "galaxy-node-link",
-          href: node.url,
-          "aria-label": `${node.title}, ${node.kind}, ${category.label}`
-        });
-        const radius = node.kind === "writing" ? 7.2 : 4.2;
-        const circle = createSvg("circle", {
-          class: `galaxy-node ${node.kind === "writing" ? "is-writing" : "is-note"}`,
-          cx: node.x,
-          cy: node.y,
-          r: radius
-        });
-        circle.style.setProperty("--node-color", category.color);
-        circle.style.setProperty("--twinkle-delay", `${-(node.seed % 45) / 10}s`);
-        link.appendChild(circle);
-        link.addEventListener("pointerenter", (event) => showTooltip(node, event));
-        link.addEventListener("pointermove", (event) => showTooltip(node, event));
-        link.addEventListener("pointerleave", hideTooltip);
-        link.addEventListener("focus", () => showTooltip(node));
-        link.addEventListener("blur", hideTooltip);
-        nodeElements.set(node.id, link);
-        orbitLayer.appendChild(link);
       });
+    });
+  }
+
+  function createNode(node) {
+    const category = categoryById.get(node.primaryCategory);
+    const position = positions.get(category.id);
+    const orbitLayer = orbitLayers.get(category.id);
+    const edge = createSvg("line", {
+      class: "galaxy-edge",
+      x1: position.x,
+      y1: position.y,
+      x2: node.x,
+      y2: node.y
+    });
+    edge.style.setProperty("--node-color", category.color);
+    edgeElements.set(node.id, edge);
+    orbitLayer.appendChild(edge);
+
+    const link = createSvg("a", {
+      class: "galaxy-node-link",
+      href: node.url,
+      "aria-label": `${node.title}, ${node.kind}, ${category.label}`
+    });
+    const radius = node.kind === "writing" ? 7.2 : 4.2;
+    const circle = createSvg("circle", {
+      class: `galaxy-node ${node.kind === "writing" ? "is-writing" : "is-note"}`,
+      cx: node.x,
+      cy: node.y,
+      r: radius
+    });
+    circle.style.setProperty("--node-color", category.color);
+    circle.style.setProperty("--twinkle-delay", `${-(node.seed % 45) / 10}s`);
+    link.appendChild(circle);
+    link.addEventListener("pointerenter", (event) => showTooltip(node, event));
+    link.addEventListener("pointermove", (event) => showTooltip(node, event));
+    link.addEventListener("pointerleave", hideTooltip);
+    link.addEventListener("focus", () => showTooltip(node));
+    link.addEventListener("blur", hideTooltip);
+    nodeElements.set(node.id, link);
+    orbitLayer.appendChild(link);
+  }
+
+  function renderNodes(visibleNodes) {
+    const visibleIds = new Set(visibleNodes.map((node) => node.id));
+    hideTooltip();
+
+    nodeElements.forEach((element, nodeId) => {
+      if (visibleIds.has(nodeId)) return;
+      element.remove();
+      edgeElements.get(nodeId)?.remove();
+      nodeElements.delete(nodeId);
+      edgeElements.delete(nodeId);
+    });
+
+    visibleNodes.forEach((node) => {
+      if (!nodeElements.has(node.id)) createNode(node);
     });
   }
 
@@ -256,10 +280,9 @@ export function createGalaxyMap({
   drawClusters();
 
   return {
-    nodeElements,
-    edgeElements,
     clusterElements,
     spokeElements,
-    systemMotions
+    systemMotions,
+    renderNodes
   };
 }
