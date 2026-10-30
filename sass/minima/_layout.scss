@@ -8,6 +8,7 @@
   min-height: $spacing-unit * 1.865;
   // Positioning context for the mobile navigation icon
   position: relative;
+  z-index: 100;
 }
 
 .site-title {
@@ -53,6 +54,7 @@
 
   @include media-query($on-palm) {
     position: absolute;
+    z-index: 110;
     top: 9px;
     right: $spacing-unit / 2;
     background-color: black;
@@ -61,6 +63,7 @@
     text-align: right;
 
     label[for="nav-trigger"] {
+      position: relative;
       display: block;
       float: right;
       width: 36px;
@@ -90,10 +93,12 @@
       display: none;
     }
 
-	 &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
+
+    .nav-trigger:checked ~ .trigger,
+	&:hover .trigger {
+      display: block;
+      padding-bottom: 5px;
+    }
 
     .page-link {
       display: block;
