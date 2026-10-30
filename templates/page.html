@@ -1,25 +1,17 @@
 {% extends "base.html" %}
 
-{% block title %}
-     {{config.title}} - {{page.title}}
-{% endblock %}
-
 {% block content %}
-<article class="post">
-	<header class="post-header">
-		<h1 class="post-title" style="text-align:center; color:#cccccc; padding:0; font-size:150%">{{ page.title }}</h1>
+{% set content_page_style = page.extra.page_style | default(value="") %}
+{% set content_page_kicker = page.extra.kicker | default(value="") %}
+<article class="post article-post content-page{% if content_page_style %} content-page--{{ content_page_style }}{% endif %}">
+	<header class="post-header article-post__header">
+		{% if content_page_kicker %}<p class="content-page__kicker">{{ content_page_kicker }}</p>{% endif %}
+		<h1 class="post-title">{{ page.title }}</h1>
+		{% if page.description %}<p class="content-page__intro">{{ page.description }}</p>{% endif %}
 	</header>
 
-    <!-- content block -->
-    {% if page.title == "Guides" %}
-        {% set pag = get_page(path="guides/guide.md") %}
-        {{ pag.content | safe }}
-    {% endif %}
-
-
-    <p class="tag">{{ page.date }}</p>
+	<div class="post-content">
     {{ page.content | safe }}
-    
-
+	</div>
 </article>
 {% endblock content %}

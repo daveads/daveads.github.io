@@ -1,89 +1,19 @@
-{% extends "note-page.html" %}
-
-
-{% block meta_content %}
-<meta property="og:title" content="{{page.title}}">
-<meta property="og:type" content="tutorial">
-<meta property="og:url" content="https://daveads.github.io{{ page.path }}">
-{% endblock meta_content %}
-
-
-
-{% block keywords %}
-	<meta name="keyword" content="{{ page.title }}">
-{% endblock keywords %}
-
-
-{% block desc %}
-<meta name="description" content="{{ page.summary }}">
-{% endblock desc %}
-
-
-{# keep empty #}
-{% block header %}
-{% endblock %}
-
-{% block title %}
-		{{config.title}} - {{page.title}}
-{% endblock %}
-
+{% extends "base.html" %}
 
 {% block content %}
+{% set article_section_label = "Gopher's Guide" %}
+{% set article_section_url = "/guides/go/" %}
+{% set article_archive_url = "" %}
+{% set article_taxonomy_kind = "notet" %}
+{% set article_tags = [] %}
 
-<article class="post h-entry" itemscope="articleBody" itemtype="http://schema.org/BlogPosting">
-<header class="post-header">
+<article class="post article-post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  {% include "include/article-header.html" %}
 
-		 {% set title = page.title %}
-		 {% set title1 = "Tutorial" ~ " : " ~ title %}
-		 {{<page_title page={title1} />}}
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ page.content | safe }}
+  </div>
 
-		 <small style="float:right; font-size: 15px;"><a href="/guides/go/">See all guides</a>
-		 	{# || <a href="/note-archive">Archive</a> #}
-		 </small>
-
-<p class="post-meta">
-
-    {% if page.date %}
-		<time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date }}</time>
-		{% if page.updated %}
-		 (updated: {{ page.updated }} )
-		{% endif %}
-    {% endif %}
-</p>
-
-		<div>
-			{% include "include/back.html" %}
-
-			{#
-			{% if page.taxonomies?.notec %}
-		
-			Categories :
-			{% for noteC in page.taxonomies.notec %}
-			<small >
-			<a class="tag-link" href="{{ get_taxonomy_url(kind='notec', term=noteC) | safe }}">#{{ noteC }}</a>
-			</small>
-			<br>
-			<br>
-			{% endfor %}
-			{% endif %}
-			#}
-
-			{% if page.taxonomies?.notet %}
-	
-			Tags :
-			{% for noteT in page.taxonomies.notet %}
-			<small>
-			<a class="tag-link" href="{{ get_taxonomy_url(kind='notet', term=noteT) | safe }}">#{{ noteT }}</a>
-			</small>
-			{% endfor %}
-			{% endif %}
-		</div>
-
-</header>
-	
-		<div class="post-content e-content" itemprop="articleBody">
-		{{ page.content | safe }}
-		</div>
-		
-{% include "include/home.html" %}
+  {% include "include/home.html" %}
+</article>
 {% endblock content %}

@@ -1,67 +1,17 @@
 {% extends "base.html" %}
 
-{% block title %}
- {{config.title}} - 404 Not Found
-{% endblock %}
-
 {% block content %}
+<section class="not-found" aria-labelledby="not-found-title">
+  <p class="not-found__code">404</p>
+  <h1 id="not-found-title">Page not found.</h1>
+  <p>
+    That address does not exist, or the page may have moved somewhere else in the galaxy.
+  </p>
 
-<!-- <script type="text/javascript" src="/assets/js/bundle.js"></script> -->
-
-<script>
-	document.addEventListener('DOMContentLoaded', (event) => {
-		// URL of your backend endpoint
-		const backendUrl = 'https://api.quotable.io/random';
-
-		fetch(backendUrl, {
-			method: 'GET', 
-			headers: {
-				'Content-Type': 'application/json',
-			},
-		})
-		.then(response => {
-			if (!response.ok) {
-				throw new Error('Network response was not ok');
-			}
-			return response.json();
-		})
-		.then(data => {
-			console.log('#Success#:', data);
-			const h1Element = document.querySelector('h1');
-			h1Element.textContent = data.content; 
-		})
-		.catch(error => {
-			console.error('Error:', error);
-		});
-	});
-</script>
-
-<div class="row" style="text-align:center;">
-
-  <div class="col-12 mt-5 pt-5">
-
-    <p style="font-size: 70px;">404</p>
-    <p><strong>Page not found :(</strong></p>
-    
-	<div class="card_api">
-		
-		<p style="color: blue">Quote for the day</p>
-		<h1></h1>
-
-	</div>
-
-	<h2 id="response">see</h2>
-	
-	<br>
-    <a href="/writing" style="background-color: #dddee1;
-		     color: Black;
-			 text-align: center;
-		     padding: 10px 20px;
-			 text-decoration: none;
-			 display: inline-block;
-			">
-			Writings</a>
-  </div>
-</div>
-
-{% endblock %}
+  <nav class="not-found__links" aria-label="Continue browsing">
+    <a class="not-found__primary" href="/">cd ~</a>
+    <a href="/writing/">Writings</a>
+    <a href="/note/">Notes</a>
+  </nav>
+</section>
+{% endblock content %}
