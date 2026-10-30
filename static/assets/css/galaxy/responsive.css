@@ -1,0 +1,95 @@
+@media (max-width: 900px) {
+  .galaxy-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .galaxy-search {
+    grid-column: 1 / -1;
+  }
+
+  .galaxy-list-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .galaxy-shell {
+    width: calc(100vw - 20px);
+  }
+
+  .galaxy-hero {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .galaxy-signal {
+    justify-self: start;
+  }
+
+  .galaxy-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .galaxy-type-filter {
+    grid-column: 1 / -1;
+    min-height: 42px;
+  }
+
+  .galaxy-topic-select {
+    grid-column: 1 / -1;
+    min-height: 44px;
+  }
+
+  .galaxy-type-filter button {
+    flex: 1;
+  }
+
+  .galaxy-action {
+    padding: 0 0.55rem;
+    font-size: 0.68rem;
+  }
+
+  .galaxy-theme-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+  }
+
+  .galaxy-theme-filters button {
+    flex: 0 0 auto;
+  }
+
+  .galaxy-stage,
+  .galaxy-map-scroll {
+    min-height: 540px;
+    height: 540px;
+  }
+
+  .galaxy-map {
+    width: 860px;
+    min-width: 860px;
+    min-height: 0;
+  }
+
+  .galaxy-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galaxy-legend {
+    flex-wrap: wrap;
+  }
+
+  .galaxy-legend p {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .galaxy-orbit-layer,
+  .galaxy-node,
+  .galaxy-signal-dot {
+    animation: none;
+    transition: none;
+  }
+}

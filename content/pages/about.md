@@ -51,6 +51,5 @@ fn main() {
 
 **Others:**
 * <a href="/contact" class="blinking-link">Virtual Presence</a>
-* [Notes](/note) ::{ If interested in a raw format of what I am reading or doing. }
 * [Todo](/todo)
-* [RSS Feed](/atom.xml)
+

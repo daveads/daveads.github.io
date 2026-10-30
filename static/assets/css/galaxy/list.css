@@ -1,0 +1,106 @@
+.galaxy-list {
+  min-height: 460px;
+  padding: 1rem;
+  border: 1px solid rgba(133, 154, 203, 0.22);
+  border-radius: 18px;
+  background: #070a13;
+}
+
+.galaxy-list-group + .galaxy-list-group {
+  margin-top: 1.35rem;
+}
+
+.galaxy-list-group h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.6rem;
+  color: var(--group-color);
+  font: 0.78rem/1.3 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.galaxy-list-group h2::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 9px currentColor;
+}
+
+.galaxy-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin: 0;
+  list-style: none;
+}
+
+.galaxy-list-grid li {
+  min-width: 0;
+}
+
+.galaxy-list-grid a {
+  display: block;
+  height: 100%;
+  padding: 0.7rem 0.75rem;
+  border: 1px solid rgba(133, 154, 203, 0.14);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.018);
+  color: #cbd5eb;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.galaxy-list-grid a:hover,
+.galaxy-list-grid a:focus-visible {
+  color: #fff;
+  border-color: var(--group-color);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.galaxy-list-grid small {
+  display: block;
+  margin-top: 0.35rem;
+  color: #65708a;
+  font: 0.65rem/1.3 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.galaxy-legend {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.8rem 0.25rem 0;
+  color: #7f8aa5;
+  font: 0.7rem/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.galaxy-legend div {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.galaxy-legend p {
+  margin: 0 0 0 auto;
+}
+
+.legend-star {
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--galaxy-accent);
+  box-shadow: 0 0 7px var(--galaxy-accent);
+}
+
+.legend-writing { width: 9px; height: 9px; }
+.legend-note { width: 5px; height: 5px; }
+
+.galaxy-noscript {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #27324a;
+  border-radius: 12px;
+}
+
