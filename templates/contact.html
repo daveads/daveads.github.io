@@ -1,48 +1,46 @@
 {% extends "base.html" %}
 
 {% block title %}
-     {{config.title}} - {{page.title}}
-{% endblock %}
+{{ config.title }} - {{ page.title }}
+{% endblock title %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ get_url(path='assets/css/contact.css') }}">
+{% endblock extra_head %}
 
 {% block content %}
-<article class="post">
+<article class="contact-page">
+  <header class="contact-header">
+    <p class="contact-kicker">Contact</p>
+    <h1>{{ page.title }}</h1>
+    <p>
+      Email is the best way to reach me. You can also find my code, ideas and
+      occasional updates in the places below.
+    </p>
+  </header>
 
-    <!-- content block -->
-    <header class="post-header">
-        <h1 class="post-title" style="text-align:center; color:#cccccc; padding:0; font-size: 150%">{{ page.title }}</h1>
-    </header>
+  <a class="contact-email" href="mailto:{{ config.extra.social.mail }}">
+    <span>Email me</span>
+    <strong>{{ config.extra.social.mail }}</strong>
+    <small>For questions, collaborations, corrections or just to say hello.</small>
+    <span class="contact-arrow" aria-hidden="true">→</span>
+  </a>
 
-    <p class="tag">{{ page.date }}</p>
-    {{ page.content | safe }}
-
-    <div>
-
-        <ul> <!-- Changed <div> to <ul> and added closing </ul> -->
-
-            <li> <a href="mailto:the.daveads@gmail.com">Email ::{ {{ config.extra.social.mail }} }</a></li>
-
-            <li> <a href="https://twitter.com/The_Daveads">Twitter > X ::{ {{ config.extra.social.twitter }} }</a></li>
-
-            <li> <a href="https://codeberg.org/daveads">Codeberg ::{ {{ config.extra.social.codeberg }} }</a></li>
-
-            <li> <a href="https://github.com/Daveads"> Github ::{ {{ config.extra.social.github }} }</a></li>
-
-            <li> <a href="https://www.instagram.com/_daveads/"> Instagram ::{ {{ config.extra.social.instagram }} }</a></li>
-
-            <li> <a href="https://www.reddit.com/user/Daveads/">Reddit ::{ {{ config.extra.social.reddit }} }</a></li>
-
-            <li> <a rel="me" href="https://fosstodon.org/@daveads">Mastodon ::{ {{ config.extra.social.mastodon }} }</a></li>
-
-            <li><a href="https://soundcloud.com/daveads">Soundcloud ::{ {{ config.extra.social.soundcloud }} }</a></li>
-            
-            <li>Youtube :: </li>
-    
-            <li>Kaggle :: </li>
-            
-        </ul> <!-- Added closing </ul> -->
-
-    </div>
-    <!-- <h1>Resume</h1> -->
-
+  <section class="contact-directory" aria-labelledby="contact-directory-title">
+    <h2 id="contact-directory-title">Elsewhere</h2>
+    <ul>
+      {% for link in config.extra.contact_links %}
+        {% set link_rel = link.rel | default(value="") %}
+        <li>
+          <a href="{{ link.url }}"{% if link_rel %} rel="{{ link_rel }}"{% endif %}>
+            <span>{{ link.name }}</span>
+            <strong>{{ link.handle }}</strong>
+            <small>{{ link.description }}</small>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 </article>
 {% endblock content %}

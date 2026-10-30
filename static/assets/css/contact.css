@@ -1,0 +1,162 @@
+.contact-page {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  color: #cfd5e2;
+}
+
+.contact-header {
+  max-width: 650px;
+  margin-bottom: 2rem;
+}
+
+.contact-kicker,
+.contact-email > span:first-child,
+.contact-directory a > span:first-child {
+  color: #8ba4c7;
+  font: 0.7rem/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-kicker {
+  margin: 0 0 0.55rem;
+}
+
+.contact-header h1 {
+  margin: 0;
+  color: #f1f4fa;
+  font-size: clamp(2.15rem, 7vw, 3.65rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.contact-header > p:last-child {
+  max-width: 590px;
+  margin: 1rem 0 0;
+  color: #9ba5b8;
+  line-height: 1.7;
+}
+
+.contact-email,
+.contact-directory a {
+  position: relative;
+  display: grid;
+  box-sizing: border-box;
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-email {
+  gap: 0.25rem;
+  padding: 1.2rem 3.4rem 1.2rem 1.25rem;
+  border: 1px solid rgba(139, 164, 199, 0.32);
+  border-radius: 12px;
+  background: rgba(139, 164, 199, 0.055);
+}
+
+.contact-email strong {
+  color: #eef3fb;
+  font-size: clamp(1.05rem, 3.7vw, 1.3rem);
+  font-weight: 520;
+  overflow-wrap: anywhere;
+}
+
+.contact-email small,
+.contact-directory a small {
+  color: #7d899e;
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.contact-email small {
+  margin-top: 0.2rem;
+}
+
+.contact-directory {
+  margin-top: 2.3rem;
+}
+
+.contact-directory h2 {
+  margin: 0 0 0.75rem;
+  color: #c9d0dc;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-directory ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-directory a {
+  min-height: 116px;
+  height: 100%;
+  padding: 0.95rem 2.8rem 0.95rem 1rem;
+  border: 1px solid rgba(139, 164, 199, 0.16);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.012);
+}
+
+.contact-directory a strong {
+  align-self: end;
+  margin-top: 0.7rem;
+  color: #dbe1ec;
+  font-size: 0.9rem;
+  font-weight: 520;
+  overflow-wrap: anywhere;
+}
+
+.contact-arrow {
+  position: absolute;
+  top: 50%;
+  right: 1.15rem;
+  color: #8292aa;
+  font-size: 1.15rem;
+  transform: translateY(-50%);
+}
+
+.contact-email:hover,
+.contact-email:focus-visible,
+.contact-directory a:hover,
+.contact-directory a:focus-visible {
+  border-color: rgba(139, 164, 199, 0.55);
+  background: rgba(139, 164, 199, 0.075);
+  outline: 0;
+}
+
+@media (max-width: 600px) {
+  .contact-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-email {
+    padding-left: 1rem;
+  }
+
+  .contact-directory {
+    margin-top: 1.9rem;
+  }
+
+  .contact-directory ul {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact-directory li + li {
+    border-top: 1px solid rgba(139, 164, 199, 0.12);
+  }
+
+  .contact-directory a {
+    min-height: 84px;
+    padding: 0.8rem 2.6rem 0.8rem 0.2rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+}

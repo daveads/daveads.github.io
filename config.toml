@@ -65,6 +65,17 @@ subs = [
 		{url = "/categories", name = "Categories", slash = true},
 ]
 
+# Add one entry here to add another profile card to /contact.
+contact_links = [
+	{name = "GitHub", handle = "@daveads", url = "https://github.com/daveads", description = "Code and projects"},
+	{name = "Codeberg", handle = "@daveads", url = "https://codeberg.org/daveads", description = "Repositories and experiments"},
+	{name = "X", handle = "@The_Daveads", url = "https://x.com/The_Daveads", description = "Short updates and conversations"},
+	{name = "Instagram", handle = "@_daveads", url = "https://www.instagram.com/_daveads/", description = "Photos and occasional updates"},
+	{name = "Mastodon", handle = "@daveads", url = "https://fosstodon.org/@daveads", description = "Open social posts", rel = "me"},
+	{name = "Reddit", handle = "u/Daveads", url = "https://www.reddit.com/user/Daveads/", description = "Communities and discussions"},
+	{name = "SoundCloud", handle = "daveads", url = "https://soundcloud.com/daveads", description = "Music and audio"},
+]
+
 # Katex
 katex_enable = true
 katex_auto_render = true
