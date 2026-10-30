@@ -26,8 +26,9 @@
 
 <!-- css files -->
 <link rel="stylesheet" href="/assets/css/custom.css">
-<link rel="stylesheet" href="/assets/css/pagenav.css">
+{% block page_styles %}
 <link rel="stylesheet" href="/assets/css/shortcodes.css">
+{% endblock page_styles %}
 {% block extra_head %}{% endblock extra_head %}
 
 
@@ -39,6 +40,7 @@
 
 <!-- <script type="text/javascript" src="/assets/js/blink.js" defer></script> -->
 <script type="text/javascript" src="/assets/js/scroll-top-button.js" defer></script>
+{% block page_scripts %}{% endblock page_scripts %}
 
 <!-- PWA -->
 <script>
@@ -95,7 +97,7 @@ if (navigator.serviceWorker.controller) {
 
 
 </head>
- <body>
+ <body{% block body_attributes %}{% endblock body_attributes %}>
 		{% block header %}
 		{% include "include/header.html" %}
 		{% endblock %}
