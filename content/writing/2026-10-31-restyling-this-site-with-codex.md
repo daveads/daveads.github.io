@@ -2,13 +2,13 @@
 title = "Restyling This Site With Codex"
 date = 2026-10-31
 description = "How I used Codex with GPT-5.6 Sol to restyle this website while keeping its simple, personal character."
-draft = true
+draft = false 
 [taxonomies]
 categories = ["General"]
-tags = ["codex", "design", "zola"]
+tags = ["misc"]
 +++
 
-I am not a frontend person. I have never been one.
+I am not really a frontend or UI person, but I do know how things work there.
 
 I can tell when something feels wrong on a page, but that does not mean I always know the CSS responsible for it. This site is personal, though, so I care about how it feels. I want it to be simple, calm, and centred on the things I write.
 
@@ -44,7 +44,7 @@ That is more useful to me than making one page impressive on its own.
 
 ## The Daveads Galaxy
 
-The biggest addition was the Daveads Galaxy: Daveads at the centre, categories as constellations, topics as planets, and articles inside them.
+The biggest addition was the [Daveads Galaxy](@/pages/galaxy.md): Daveads at the centre, categories as constellations, topics as planets, and articles inside them.
 
 I did not want it to be a hardcoded visual that would break as I wrote more. It reads the categories and tags already used by Writings and Notes. When I publish something new, the Galaxy should understand where it belongs without me manually adding another planet.
 
@@ -68,4 +68,4 @@ But it did not replace taste. I still had to say when something was too much, pr
 
 Codex gave me implementation speed. I kept responsibility for what the website should feel like.
 
-The site now has more capability, but its ordinary pages feel calmer and more consistent. More importantly, it still feels like mine :) 
+The site now has more capability, but its ordinary pages feel calmer and more consistent. More importantly, it still feels like mine.

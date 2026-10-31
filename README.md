@@ -14,7 +14,7 @@ zola serve
 ```
 cp config.toml config.dev.toml 
 
-zola --config config.dev.toml serve
+zola --config config.dev.toml serve --drafts
 ```
 
 
