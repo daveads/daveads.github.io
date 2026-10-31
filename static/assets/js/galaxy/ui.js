@@ -1,11 +1,11 @@
 export function createGalaxyUi({
   list,
   mapScroll,
-  mobileResults,
-  mobileResultsTitle,
-  mobileResultsList,
-  mobileResultsEmpty,
-  mobileResultsClose,
+  categoryResults,
+  categoryResultsTitle,
+  categoryResultsList,
+  categoryResultsEmpty,
+  categoryResultsClose,
   categoryFilters,
   topicFilter,
   categories,
@@ -88,19 +88,19 @@ export function createGalaxyUi({
     return item;
   }
 
-  function closeMobileCategory() {
-    mobileResults.hidden = true;
-    mobileResultsList.replaceChildren();
-    mapScroll.classList.remove("has-mobile-results");
+  function closeCategoryResults() {
+    categoryResults.hidden = true;
+    categoryResultsList.replaceChildren();
+    mapScroll.classList.remove("has-category-results");
   }
 
-  function renderMobileCategory(category, members) {
-    mobileResults.style.setProperty("--group-color", category.color);
-    mobileResultsTitle.textContent = `${category.label} · ${members.length}`;
-    mobileResultsList.replaceChildren(...members.map(createPageItem));
-    mobileResultsEmpty.hidden = members.length !== 0;
-    mobileResults.hidden = false;
-    mapScroll.classList.add("has-mobile-results");
+  function renderCategoryResults(category, members) {
+    categoryResults.style.setProperty("--group-color", category.color);
+    categoryResultsTitle.textContent = `${category.label} · ${members.length}`;
+    categoryResultsList.replaceChildren(...members.map(createPageItem));
+    categoryResultsEmpty.hidden = members.length !== 0;
+    categoryResults.hidden = false;
+    mapScroll.classList.add("has-category-results");
   }
 
   function renderList(visible, state) {
@@ -141,9 +141,9 @@ export function createGalaxyUi({
     });
   }
 
-  mobileResultsClose.addEventListener("click", closeMobileCategory);
+  categoryResultsClose.addEventListener("click", closeCategoryResults);
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !mobileResults.hidden) closeMobileCategory();
+    if (event.key === "Escape" && !categoryResults.hidden) closeCategoryResults();
   });
 
   buildCategoryFilters();
@@ -151,8 +151,8 @@ export function createGalaxyUi({
 
   return {
     renderList,
-    renderMobileCategory,
-    closeMobileCategory,
+    renderCategoryResults,
+    closeCategoryResults,
     setCategoryActive,
     updateCategoryCounts
   };

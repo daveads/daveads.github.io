@@ -48,18 +48,17 @@ if (root && dataElement) {
     zoomReset: root.querySelector("[data-galaxy-zoom-reset]"),
     zoomIn: root.querySelector("[data-galaxy-zoom-in]"),
     zoomValue: root.querySelector("[data-galaxy-zoom-value]"),
-    mobileResults: root.querySelector("[data-galaxy-mobile-results]"),
-    mobileResultsTitle: root.querySelector("[data-galaxy-mobile-results-title]"),
-    mobileResultsList: root.querySelector("[data-galaxy-mobile-results-list]"),
-    mobileResultsEmpty: root.querySelector("[data-galaxy-mobile-results-empty]"),
-    mobileResultsClose: root.querySelector("[data-galaxy-mobile-results-close]")
+    categoryResults: root.querySelector("[data-galaxy-category-results]"),
+    categoryResultsTitle: root.querySelector("[data-galaxy-category-results-title]"),
+    categoryResultsList: root.querySelector("[data-galaxy-category-results-list]"),
+    categoryResultsEmpty: root.querySelector("[data-galaxy-category-results-empty]"),
+    categoryResultsClose: root.querySelector("[data-galaxy-category-results-close]")
   };
   elements.tooltipKind = elements.tooltip.querySelector("[data-tooltip-kind]");
   elements.tooltipTitle = elements.tooltip.querySelector("[data-tooltip-title]");
   elements.tooltipMeta = elements.tooltip.querySelector("[data-tooltip-meta]");
 
   const positions = layoutCategories(categories);
-  const mobileGalaxy = window.matchMedia("(max-width: 640px)");
   let ui;
   let mapView;
   let viewport;
@@ -78,7 +77,7 @@ if (root && dataElement) {
   }
 
   function setCategory(categoryId) {
-    ui.closeMobileCategory();
+    ui.closeCategoryResults();
     state.category = categoryId;
     ui.setCategoryActive(categoryId);
     applyFilters();
@@ -86,8 +85,8 @@ if (root && dataElement) {
 
   function selectCategoryFromMap(categoryId) {
     setCategory(categoryId);
-    if (!mobileGalaxy.matches || categoryId === "all") return;
-    ui.renderMobileCategory(categoryById.get(categoryId), visibleNodes());
+    if (categoryId === "all") return;
+    ui.renderCategoryResults(categoryById.get(categoryId), visibleNodes());
   }
 
   function resetFilters() {
@@ -124,11 +123,11 @@ if (root && dataElement) {
   ui = createGalaxyUi({
     list: elements.list,
     mapScroll: elements.mapScroll,
-    mobileResults: elements.mobileResults,
-    mobileResultsTitle: elements.mobileResultsTitle,
-    mobileResultsList: elements.mobileResultsList,
-    mobileResultsEmpty: elements.mobileResultsEmpty,
-    mobileResultsClose: elements.mobileResultsClose,
+    categoryResults: elements.categoryResults,
+    categoryResultsTitle: elements.categoryResultsTitle,
+    categoryResultsList: elements.categoryResultsList,
+    categoryResultsEmpty: elements.categoryResultsEmpty,
+    categoryResultsClose: elements.categoryResultsClose,
     categoryFilters: elements.categoryFilters,
     topicFilter: elements.topicFilter,
     categories,
@@ -207,7 +206,7 @@ if (root && dataElement) {
   }
 
   function setView(view) {
-    ui.closeMobileCategory();
+    ui.closeCategoryResults();
     state.view = view;
     const listView = view === "list";
     elements.stage.hidden = listView;
@@ -222,7 +221,7 @@ if (root && dataElement) {
 
   root.querySelectorAll("[data-kind]").forEach((button) => {
     button.addEventListener("click", () => {
-      ui.closeMobileCategory();
+      ui.closeCategoryResults();
       state.kind = button.dataset.kind;
       root.querySelectorAll("[data-kind]").forEach((candidate) => {
         const active = candidate === button;
@@ -234,13 +233,13 @@ if (root && dataElement) {
   });
 
   elements.topicFilter.addEventListener("change", () => {
-    ui.closeMobileCategory();
+    ui.closeCategoryResults();
     state.topic = elements.topicFilter.value;
     applyFilters();
   });
 
   elements.search.addEventListener("input", () => {
-    ui.closeMobileCategory();
+    ui.closeCategoryResults();
     state.query = elements.search.value.trim().toLocaleLowerCase();
     applyFilters();
   });
@@ -255,8 +254,6 @@ if (root && dataElement) {
   elements.viewToggle.addEventListener("click", () => {
     setView(state.view === "map" ? "list" : "map");
   });
-
-  mobileGalaxy.addEventListener("change", ui.closeMobileCategory);
 
   applyFilters();
 }

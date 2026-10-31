@@ -225,7 +225,7 @@ html.galaxy-fullscreen-active body {
 .galaxy-orbit-layer:hover,
 .galaxy-orbit-layer:focus-within,
 .galaxy-map-scroll.is-panning .galaxy-orbit-layer,
-.galaxy-map-scroll.has-mobile-results .galaxy-orbit-layer,
+.galaxy-map-scroll.has-category-results .galaxy-orbit-layer,
 .galaxy-system-layer:hover .galaxy-orbit-layer,
 .galaxy-system-layer:focus-within .galaxy-orbit-layer {
   animation-play-state: paused;

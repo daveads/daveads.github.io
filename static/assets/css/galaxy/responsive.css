@@ -76,97 +76,15 @@
     min-height: 44px;
   }
 
-  .galaxy-mobile-results:not([hidden]) {
-    position: absolute;
-    z-index: 6;
+  .galaxy-category-results:not([hidden]) {
+    top: auto;
     right: max(0.6rem, env(safe-area-inset-right));
     bottom: max(0.6rem, env(safe-area-inset-bottom));
     left: max(0.6rem, env(safe-area-inset-left));
-    display: grid;
-    grid-template-rows: auto minmax(0, 1fr);
+    width: auto;
     max-height: min(68vh, 470px);
     max-height: min(68dvh, 470px);
-    overflow: hidden;
-    border: 1px solid rgba(133, 154, 203, 0.35);
-    border-radius: 16px;
-    background: rgba(5, 8, 18, 0.97);
     box-shadow: 0 -14px 48px rgba(0, 0, 0, 0.58);
-    backdrop-filter: blur(16px);
-  }
-
-  .galaxy-mobile-results > header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0.8rem 0.85rem;
-    border-bottom: 1px solid rgba(133, 154, 203, 0.16);
-  }
-
-  .galaxy-mobile-results > header p {
-    margin: 0 0 0.2rem;
-    color: #8490aa;
-    font: 0.62rem/1.3 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .galaxy-mobile-results h2 {
-    margin: 0;
-    color: var(--group-color);
-    font-size: 1rem;
-    font-weight: 600;
-  }
-
-  .galaxy-mobile-results > header button {
-    flex: 0 0 44px;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border: 1px solid rgba(133, 154, 203, 0.25);
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.035);
-    color: #dce8ff;
-    font-size: 1.35rem;
-  }
-
-  .galaxy-mobile-results > ul {
-    margin: 0;
-    padding: 0.3rem 0.85rem max(0.75rem, env(safe-area-inset-bottom));
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    list-style: none;
-  }
-
-  .galaxy-mobile-results li + li {
-    border-top: 1px solid rgba(133, 154, 203, 0.13);
-  }
-
-  .galaxy-mobile-results a {
-    display: block;
-    min-height: 44px;
-    padding: 0.72rem 0.1rem;
-    color: #d4dced;
-    font-size: 0.9rem;
-    line-height: 1.35;
-  }
-
-  .galaxy-mobile-results a:active,
-  .galaxy-mobile-results a:focus-visible {
-    color: #fff;
-  }
-
-  .galaxy-mobile-results small {
-    display: block;
-    margin-top: 0.25rem;
-    color: #8490aa;
-    font: 0.65rem/1.35 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  }
-
-  .galaxy-mobile-results > p:last-child {
-    margin: 0;
-    padding: 1rem;
-    color: #9ba6bd;
   }
 
   .galaxy-list-grid {
