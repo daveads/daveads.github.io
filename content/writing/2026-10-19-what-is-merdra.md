@@ -32,7 +32,7 @@ Most healthcare information is created for a moment: a consultation, a prescript
 
 When that story is fragmented, every new provider has to reconstruct it. Patients must remember details under pressure, carry documents around, or repeat tests that may already have been done. Providers make decisions with less context than they should have. And valuable information that could support better care stays trapped in formats and systems that cannot easily work together.
 
-The consequences of fragmented history are not abstract. In [Medical History](/writing/medical-history/), we shared conversations with two doctors on our team about the difficulty of retrieving older records and using information from elsewhere during care.
+The consequences of fragmented history are not abstract. In [Medical History](@/writing/2026-10-09-medical-history.md), we shared conversations with two doctors on our team about the difficulty of retrieving older records and using information from elsewhere during care.
 
 Digitising a document alone does not solve this. A scanned result is easier to store, but it is still difficult for software and often for another provider to understand, compare, or safely use.
 

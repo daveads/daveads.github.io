@@ -51,5 +51,5 @@ fn main() {
 
 **Others:**
 * <a href="/contact" class="blinking-link">Virtual Presence</a>
-* [Todo](/todo)
+* [Todo](@/pages/todo.md)
 

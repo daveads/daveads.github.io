@@ -2,6 +2,7 @@
 base_url = "https://daveads.github.io"
 title = "Daveads"
 description = "Writings and notes by Adejumo David Adewale, Dive into the abyss of Daveads!"
+author = "Adejumo David Adewale"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -20,14 +21,15 @@ taxonomies = [
 		{name = "tags", feed = true},
 
 		#Notes
-		{name = "notec", feed = true}, #note categories
-		{name = "notet", feed = true}, #note tags
+		{name = "notec"}, #note categories
+		{name = "notet"}, #note tags
 ]
 
 
 [markdown]
 external_links_class = "external"
 render_emoji = true
+lazy_async_image = true
 
 [markdown.highlighting]
 theme = "catppuccin-mocha"

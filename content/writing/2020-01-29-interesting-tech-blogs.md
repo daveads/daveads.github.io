@@ -49,4 +49,4 @@ tags = ["blogroll"]
 <br>
 
 ## Related list
-* [programming blogs](/note/programming-blogs/)
+* [programming blogs](@/note/programming-blogs.md)

@@ -9,7 +9,7 @@ tags = ["linux", "tools"]
 ![tmux(0)](/assets/images/tmux0.png)<br>
 
 Prerequisite:
-* Have a basic understanding of the Linux [command line](/writing/the-linux-command-line/)
+* Have a basic understanding of the Linux [command line](@/writing/2020-04-23-the-linux-command-line.md)
 * Install tmux
 
 Goal:
