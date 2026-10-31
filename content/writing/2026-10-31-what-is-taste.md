@@ -38,6 +38,8 @@ Technical knowledge gives taste something to work with. Taste helps decide how a
 
 A recipe gives a chef ingredients, measurements, temperature, and cooking time. An experienced chef still tastes while cooking. They notice that an ingredient is stronger today, the pan is behaving differently, or the food needs acidity rather than more salt.
 
+The chef does not even need to be the person who cooked the meal. By tasting it, they may be able to tell how it was prepared, where the process went wrong, or what is missing. They can judge the result because experience has given them a mental library of ingredients, techniques, and outcomes.
+
 The recipe provides a path. The chef's taste guides the adjustments.
 
 A blender, thermometer, or automatic mixer does not make the chef less skilled. The danger begins when someone can produce meals without ever learning to taste what they are producing. That feels close to the question we now face with AI.
