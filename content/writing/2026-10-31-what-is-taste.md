@@ -46,15 +46,13 @@ A blender, thermometer, or automatic mixer does not make the chef less skilled. 
 
 While thinking about this, I saw [a post from Robert C. Martin](https://x.com/unclebobmartin/status/2080257779395154409), the author of *Clean Code*. He described not reading the code written by his agents and instead surrounding them with strong constraints: tests, quality metrics, coverage requirements, and other forms of verification.
 
-What interested me was the experience behind the person choosing those constraints. How does he know which ones matter? How does he know when the tests provide confidence and when they only provide the appearance of it?
+What interested me was the experience behind the person choosing those constraints.
 
-If experience helps produce taste, can someone without that experience safely copy the same workflow?
+A recent exchange between [John Carmack](https://x.com/id_aa_carmack/status/2115917666955497608)and [Chris Lattner](https://x.com/clattner_llvm/status/2116268356160667775) made this more concrete for me. Good building blocks and abstractions still matter, even when an agent writes the implementation. AI may explain the available trade-offs, but the remaining decision still belongs to someone. Perhaps recognising the important decision—and accepting responsibility for it—is part of technical taste.
 
-This may be where we are making a mistake. We see what an experienced person can stop doing but ignore everything they had to do before they could stop.
+That leaves the same question: if experience helps produce taste, can someone without it safely copy the workflow of someone who already has it?
 
-Making work easier is not the problem. Removing the feedback loops through which people learn might be. If a new programmer never struggles with a design, reads unfamiliar code, makes the wrong abstraction, or repairs something they broke, where will their judgment come from?
-
-We should automate repetition without automatically removing practice.
+Making work easier is not the problem. Removing the feedback loops through which people learn might be. We see what an experienced person can stop doing but ignore what they had to do before they could stop. We should automate repetition without automatically removing practice.
 
 ## Manual and automatic cars
 
