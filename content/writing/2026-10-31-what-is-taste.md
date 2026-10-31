@@ -48,7 +48,9 @@ While thinking about this, I saw [a post from Robert C. Martin](https://x.com/un
 
 What interested me was the experience behind the person choosing those constraints.
 
-A recent exchange between [John Carmack](https://x.com/id_aa_carmack/status/2115917666955497608)and [Chris Lattner](https://x.com/clattner_llvm/status/2116268356160667775) made this more concrete for me. Good building blocks and abstractions still matter, even when an agent writes the implementation. AI may explain the available trade-offs, but the remaining decision still belongs to someone. Perhaps recognising the important decision—and accepting responsibility for it—is part of technical taste.
+A recent exchange between [John Carmack](https://x.com/id_aa_carmack/status/2115917666955497608) and [Chris Lattner](https://x.com/clattner_llvm/status/2116268356160667775) made this more concrete for me. Good building blocks and abstractions still matter, even when an agent writes the implementation. AI may explain the available trade-offs, but the remaining decision still belongs to someone. Perhaps recognising the important decision—and accepting responsibility for it—is part of technical taste.
+
+An [Anthropic team recently shared a practical example](https://x.com/somi_ai/status/2116050219989373170/video/1). They rewrote a Python API in Rust without having a Rust developer in the room. Claude wrote much of the implementation, while the humans designed the distributed system, planned the migration, and verified it by sending shadow traffic through both versions. Their expertise did not disappear; it moved from writing each line to defining the system and deciding what evidence would make it trustworthy.
 
 That leaves the same question: if experience helps produce taste, can someone without it safely copy the workflow of someone who already has it?
 
