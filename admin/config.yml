@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: daveads/daveads.github.io
+  branch: main
+  auth_endpoint: https://auth.decapcms.org
+  use_graphql: true
+
+site_url: "https://daveads.github.io"
+display_url: "https://daveads.github.io"
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "notes"
+    label: "Notes"
+    folder: "content/note"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }

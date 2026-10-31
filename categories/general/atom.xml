@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Daveads - General</title>
+  <subtitle>Writings and notes by Adejumo David Adewale, Dive into the abyss of Daveads!</subtitle>
+  <link rel="self" type="application/atom+xml" href="https://daveads.github.io/categories/general/atom.xml"/>
+  <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+  <generator uri="https://www.getzola.org/">Zola</generator>
+  <updated>2026-10-31T00:00:00+00:00</updated>
+  <id>https://daveads.github.io/categories/general/atom.xml</id>
+  
+  <entry xml:lang="en">
+    <title>Restyling This Site With Codex</title>
+    <published>2026-10-31T00:00:00+00:00</published>
+    <updated>2026-10-31T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/restyling-this-site-with-codex/"/>
+    <id>https://daveads.github.io/writing/restyling-this-site-with-codex/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/restyling-this-site-with-codex/">&lt;p&gt;I am not really a frontend or UI person, but I do know how things work there.&lt;/p&gt;
+&lt;p&gt;I can tell when something feels wrong on a page, but that does not mean I always know the CSS responsible for it. This site is personal, though, so I care about how it feels. I want it to be simple, calm, and centred on the things I write.&lt;/p&gt;
+&lt;p&gt;I recently restyled it with Codex using &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://developers.openai.com/api/docs/models/gpt-5.6-sol&quot;&gt;GPT-5.6 Sol&lt;/a&gt; at high reasoning effort.&lt;/p&gt;
+&lt;p&gt;It started with a question about SEO. Then I noticed inconsistent spacing, duplicated CSS, mobile problems, and pages that did not feel related. What began as a review slowly became a restyling of almost the entire site.&lt;/p&gt;
+&lt;p&gt;I did not begin with a finished design or a detailed reconstruction plan. I moved through the site one page at a time. I questioned new files, asked why styles were duplicated, compared mobile screenshots, and sometimes reversed changes that felt like too much. The design emerged through those small decisions rather than from one large redesign.&lt;/p&gt;
+&lt;h2 id=&quot;trying-not-to-overdo-it&quot;&gt;Trying not to overdo it&lt;/h2&gt;
+&lt;p&gt;An AI coding agent makes it very easy to add things. A page can quickly gain cards, borders, gradients, animations, and another stylesheet.&lt;/p&gt;
+&lt;p&gt;That speed is useful, but it can also produce too much design.&lt;/p&gt;
+&lt;p&gt;Some early changes looked cool but stopped feeling like my website. The About page was one example. It had more personality, but it also felt over-designed. I kept giving the same feedback:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tone it down a bit.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Codex could produce and modify the interface quickly, while I decided what actually belonged. We would add something, look at it, and remove the parts that made the page feel busy.&lt;/p&gt;
+&lt;p&gt;The goal was never to turn the site into a modern landing page. I wanted a slightly better version of what was already here.&lt;/p&gt;
+&lt;h2 id=&quot;minimal-as-a-system&quot;&gt;Minimal as a system&lt;/h2&gt;
+&lt;p&gt;I started to think of minimalism as having fewer rules to remember, not just fewer things on the screen.&lt;/p&gt;
+&lt;p&gt;Links are blue and turn green when hovered. Writings, Notes, Paper, and their archives use the same visual language. Dates, tags, headings, lists, and the little &lt;code&gt;cd&lt;/code&gt; navigation should not look as if they came from unrelated websites.&lt;/p&gt;
+&lt;p&gt;This meant sharing templates, using the existing Sass structure, removing duplicated code, and checking the same layouts on desktop and mobile. A new page can now inherit an existing pattern instead of needing its own design and stylesheet.&lt;/p&gt;
+&lt;p&gt;That is more useful to me than making one page impressive on its own.&lt;/p&gt;
+&lt;h2 id=&quot;the-daveads-galaxy&quot;&gt;The Daveads Galaxy&lt;/h2&gt;
+&lt;p&gt;The biggest addition was the &lt;a href=&quot;https://daveads.github.io/galaxy/&quot;&gt;Daveads Galaxy&lt;/a&gt;: Daveads at the centre, categories as constellations, topics as planets, and articles inside them.&lt;/p&gt;
+&lt;p&gt;I did not want it to be a hardcoded visual that would break as I wrote more. It reads the categories and tags already used by Writings and Notes. When I publish something new, the Galaxy should understand where it belongs without me manually adding another planet.&lt;/p&gt;
+&lt;p&gt;Mobile made the feature more interesting. Planets needed useful touch targets. Tapping one had to reveal its articles. Zooming the Galaxy should not zoom the entire page, and the navigation still needed to work in full-screen mode. We also kept a list view for anyone who wants a simpler way to browse.&lt;/p&gt;
+&lt;p&gt;The Galaxy is more playful than the rest of the website, but it follows the same rule: content should drive the interface.&lt;/p&gt;
+&lt;h2 id=&quot;working-with-codex&quot;&gt;Working with Codex&lt;/h2&gt;
+&lt;p&gt;A lot of my feedback came through screenshots. I would notice too much empty space, an uncentred video, a heading disappearing on mobile, or two labels sitting too close together. I could point at the problem without knowing which template or Sass rule created it.&lt;/p&gt;
+&lt;p&gt;Codex could trace the element back to the code and make a focused change. I would look at the result and decide whether it felt right. That loop worked well for someone who is not a frontend person but still has an opinion about the result.&lt;/p&gt;
+&lt;p&gt;We also checked the less visible things: responsiveness, builds, internal links, test pages, the Atom feed, and whether Google Analytics remained untouched.&lt;/p&gt;
+&lt;p&gt;After experimenting, we refactored the Galaxy into smaller files and shared common code across other pages. Generated code can work while still being difficult for a human to own. I want to open the repository later, find the relevant file, and change it myself.&lt;/p&gt;
+&lt;p&gt;GPT-5.6 Sol at high reasoning effort was helpful when a small request crossed templates, Sass, JavaScript, content configuration, and mobile behaviour. The &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://developers.openai.com/api/docs/guides/reasoning&quot;&gt;official OpenAI documentation&lt;/a&gt; describes high effort as useful for complex planning, debugging, and agentic work, which matched this project.&lt;/p&gt;
+&lt;p&gt;But it did not replace taste. I still had to say when something was too much, protect the parts I liked, and ask whether a new file was really necessary.&lt;/p&gt;
+&lt;p&gt;Codex gave me implementation speed. I kept responsibility for what the website should feel like.&lt;/p&gt;
+&lt;p&gt;The site now has more capability, but its ordinary pages feel calmer and more consistent. More importantly, it still feels like mine.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>The Age of Infinite Software and Limited Imagination</title>
+    <published>2026-10-28T00:00:00+00:00</published>
+    <updated>2026-10-28T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/the-age-of-infinite-software/"/>
+    <id>https://daveads.github.io/writing/the-age-of-infinite-software/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/the-age-of-infinite-software/">&lt;p&gt;We can build software faster than ever before.&lt;/p&gt;
+&lt;p&gt;You can describe an idea to an AI agent, give it a few instructions, and watch something that might have taken weeks or months begin taking shape in minutes.&lt;/p&gt;
+&lt;p&gt;You&#39;d expect an explosion of creativity: more unusual ideas, ambitious experiments, and people attempting things that previously seemed impossible.&lt;/p&gt;
+&lt;p&gt;Yet sometimes I feel we&#39;re seeing the opposite.&lt;/p&gt;
+&lt;p&gt;Another AI wrapper. Another dashboard. Another application that looks remarkably similar to something that already exists.&lt;/p&gt;
+&lt;p&gt;Of course, people are doing genuinely interesting work. I&#39;m not suggesting innovation has stopped. Maybe I&#39;m just looking in the wrong places.&lt;/p&gt;
+&lt;p&gt;But I keep wondering:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If we now have some of the most powerful tools ever created, where is the spark?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;building-isn-t-the-same-as-imagining&quot;&gt;Building isn&#39;t the same as imagining&lt;/h2&gt;
+&lt;p&gt;There&#39;s a difference between being able to build something and imagining something worth building.&lt;/p&gt;
+&lt;p&gt;Generative AI is reducing the effort required to turn ideas into working systems. You don&#39;t necessarily need to understand every implementation detail before experimenting with an idea. That&#39;s incredible.&lt;/p&gt;
+&lt;p&gt;But making something easier to build doesn&#39;t automatically make us more imaginative. If we keep asking these systems to reproduce what already exists, why should we expect different outcomes?&lt;/p&gt;
+&lt;p&gt;I think we risk confusing &lt;strong&gt;productivity&lt;/strong&gt; with &lt;strong&gt;creativity&lt;/strong&gt;. Producing ten applications doesn&#39;t necessarily mean you&#39;ve explored ten original ideas.&lt;/p&gt;
+&lt;p&gt;And perhaps that&#39;s where our thinking needs to change.&lt;/p&gt;
+&lt;p&gt;For a long time, much of our attention has gone into figuring out &lt;em&gt;how&lt;/em&gt; to build things. As machines become increasingly capable of handling implementation, what happens to all that attention?&lt;/p&gt;
+&lt;p&gt;Do we simply produce more of the same things? Or do we start:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;questioning assumptions,&lt;/li&gt;
+&lt;li&gt;connecting unrelated ideas, and&lt;/li&gt;
+&lt;li&gt;investigating problems we&#39;ve accepted as normal?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;what-s-stopping-someone-from-vibe-coding-google&quot;&gt;What&#39;s stopping someone from vibe coding Google?&lt;/h2&gt;
+&lt;p&gt;Here&#39;s something I&#39;ve been thinking about.&lt;/p&gt;
+&lt;p&gt;What&#39;s stopping someone from opening Claude Code, Codex, or another coding agent and asking it to build Google? They&#39;d need:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a web crawler,&lt;/li&gt;
+&lt;li&gt;a search index,&lt;/li&gt;
+&lt;li&gt;a ranking algorithm,&lt;/li&gt;
+&lt;li&gt;a query interface, and&lt;/li&gt;
+&lt;li&gt;perhaps even an advertising system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nothing is stopping them from trying, and they could probably build a functional search engine prototype surprisingly quickly.&lt;/p&gt;
+&lt;p&gt;But have they built Google? Not quite.&lt;/p&gt;
+&lt;p&gt;Google isn&#39;t simply a collection of source files. Behind its search engine are enormous infrastructure investments, continuously updated indexes, ranking systems, years of operational knowledge, and an entire ecosystem.&lt;/p&gt;
+&lt;p&gt;Writing software that resembles Google is one problem. Building something capable of competing with it at scale is another.&lt;/p&gt;
+&lt;h3 id=&quot;are-software-moats-really-disappearing&quot;&gt;Are software moats really disappearing?&lt;/h3&gt;
+&lt;p&gt;This is why I find the argument that software moats are disappearing somewhat incomplete.&lt;/p&gt;
+&lt;p&gt;Yes, writing code is becoming cheaper. Some products will become much easier to replicate, and some existing advantages will weaken.&lt;/p&gt;
+&lt;p&gt;But the value of a system has never been entirely about how difficult its code is to write. These still matter:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;reliability,&lt;/li&gt;
+&lt;li&gt;architecture,&lt;/li&gt;
+&lt;li&gt;distribution,&lt;/li&gt;
+&lt;li&gt;accumulated knowledge, and&lt;/li&gt;
+&lt;li&gt;the ability to operate under real-world conditions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;None of these advantages is permanent. AI might eventually make many of them easier to reproduce, too.&lt;/p&gt;
+&lt;p&gt;But making something easier to build doesn&#39;t necessarily make it easy to replace.&lt;/p&gt;
+&lt;h2 id=&quot;the-obsession-to-keep-pushing&quot;&gt;The obsession to keep pushing&lt;/h2&gt;
+&lt;p&gt;There&#39;s something else I think matters enormously: &lt;strong&gt;obsession&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Not necessarily spending endless hours writing code yourself, but having an almost unreasonable desire to understand a problem and keep pushing a system beyond its limitations.&lt;/p&gt;
+&lt;p&gt;Imagine two people with access to exactly the same AI tools.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The first&lt;/strong&gt; asks an agent to build an application. It works, so they launch it and move on.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The second&lt;/strong&gt; keeps questioning everything:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Why does it work this way?&lt;/li&gt;
+&lt;li&gt;Why does this limitation exist?&lt;/li&gt;
+&lt;li&gt;What happens if we change the architecture?&lt;/li&gt;
+&lt;li&gt;Could we approach the entire problem differently?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both have the same tools, but they might produce radically different outcomes.&lt;/p&gt;
+&lt;p&gt;You might no longer need to implement every component manually, but you can still be the person directing the experiments, questioning the results, and deciding what to try next. And I find that fascinating.&lt;/p&gt;
+&lt;p&gt;Instead of spending weeks implementing a single approach, you might be able to investigate several alternatives, discover why they fail, and keep refining your understanding.&lt;/p&gt;
+&lt;p&gt;Of course, obsession alone isn&#39;t enough. You can spend years perfecting something nobody needs. But combine it with curiosity, technical understanding, judgment, and a willingness to experiment, and there&#39;s still something valuable there.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The first working implementation shouldn&#39;t necessarily be the end of your imagination. Sometimes it&#39;s where the interesting questions begin.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;this-goes-beyond-software&quot;&gt;This goes beyond software&lt;/h2&gt;
+&lt;p&gt;I don&#39;t think this opportunity is limited to software. Think about hardware, robotics, energy, manufacturing, or scientific research.&lt;/p&gt;
+&lt;p&gt;Imagine designing a robotic hand. You describe what you want, use AI to explore mechanical designs, simulate their movements, and generate components for a prototype. Eventually, you build one.&lt;/p&gt;
+&lt;p&gt;It works, but it struggles to pick up a tiny screw.&lt;/p&gt;
+&lt;p&gt;What happens next?&lt;/p&gt;
+&lt;p&gt;Do you accept the limitation, or do you start questioning the finger geometry, sensors, materials, and control system? Perhaps an entirely different mechanism would work better.&lt;/p&gt;
+&lt;p&gt;AI could help you investigate those possibilities, but someone still has to recognise the problem, test the ideas, and understand what the results mean.&lt;/p&gt;
+&lt;p&gt;And unlike software, the physical world has constraints that don&#39;t disappear because an AI generated a convincing design. Materials cost money. Components wear out. Manufacturing takes time. Physics doesn&#39;t care how impressive your prompt is.&lt;/p&gt;
+&lt;p&gt;Still, as these tools improve, individuals and smaller teams may gain the ability to attempt increasingly complex projects. There are machines we haven&#39;t invented, systems we haven&#39;t connected, and problems we haven&#39;t investigated deeply enough.&lt;/p&gt;
+&lt;p&gt;Not everything has to become another application.&lt;/p&gt;
+&lt;h2 id=&quot;a-forced-evolution-in-how-we-think&quot;&gt;A forced evolution in how we think?&lt;/h2&gt;
+&lt;p&gt;I sometimes wonder whether we&#39;re approaching a point where a kind of forced evolution in our thinking becomes necessary. Not biological evolution, but a change in how we approach problems.&lt;/p&gt;
+&lt;p&gt;We&#39;ve spent years learning how to use computers to accomplish tasks. Now computers are beginning to handle increasingly complex tasks on our behalf.&lt;/p&gt;
+&lt;p&gt;Perhaps this means we need to become more deliberate about exercising our creativity and logical reasoning: to ask better questions, challenge assumptions, and understand systems rather than merely operate them. To see possibilities where others see limitations.&lt;/p&gt;
+&lt;p&gt;I&#39;m not suggesting that implementation no longer matters, or that technical understanding becomes irrelevant. Quite the opposite.&lt;/p&gt;
+&lt;p&gt;The better you understand something, the more effectively you can question it. And the more capable our tools become, the further those questions might take us.&lt;/p&gt;
+&lt;p&gt;But there&#39;s another possibility worth considering.&lt;/p&gt;
+&lt;p&gt;What if increasingly capable AI makes it easier for us to avoid thinking altogether?&lt;/p&gt;
+&lt;p&gt;We could become so comfortable accepting generated solutions that we stop investigating why they work, whether they&#39;re correct, or whether a better approach exists.&lt;/p&gt;
+&lt;p&gt;I don&#39;t think that&#39;s inevitable. But it&#39;s a choice we&#39;ll increasingly have to make.&lt;/p&gt;
+&lt;h2 id=&quot;where-is-the-spark&quot;&gt;Where is the spark?&lt;/h2&gt;
+&lt;p&gt;There is still so much left to solve: healthcare, energy, robotics, biology, computing, and countless problems we probably haven&#39;t even recognised yet.&lt;/p&gt;
+&lt;p&gt;I don&#39;t think we&#39;re running out of ideas. I think we might be underestimating how much remains possible.&lt;/p&gt;
+&lt;p&gt;And perhaps the opportunity presented by generative AI isn&#39;t simply to build the same things faster. It&#39;s to explore things we previously couldn&#39;t afford to attempt.&lt;/p&gt;
+&lt;p&gt;We&#39;ve made it easier than ever to turn an idea into something real. Maybe it&#39;s time we became more ambitious about the ideas themselves.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The machines are getting better at building. Are we getting better at imagining?&lt;/strong&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Development Environment</title>
+    <published>2024-07-20T00:00:00+00:00</published>
+    <updated>2024-07-20T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/development-environment/"/>
+    <id>https://daveads.github.io/writing/development-environment/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/development-environment/">&lt;figure class=&quot;centered-image&quot;&gt;
+&lt;img src=&quot;/assets/images/writing/dev_environment.jpg&quot; alt=&quot;a human programmer&quot; width=&quot;400&quot; height=&quot;400&quot; loading=&quot;lazy&quot;&gt;
+&lt;figcaption&gt;a human programmer&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;This post was originally intended to be about &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/neovim/neovim&quot;&gt;Neovim&lt;/a&gt; configuration, but changed its focus along the way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Operating System:&lt;/strong&gt;
+I was never a big fan of Windows, though I started with it. I disliked dealing with numerous floating windows just to complete a task that can be done within the terminal window. You don&#39;t get to choose your &lt;strong&gt;window manager&lt;/strong&gt;, &lt;strong&gt;login manager&lt;/strong&gt; or choose when to upgrade, etc. &lt;em&gt;You basically don&#39;t own that computer&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Computer 0:&lt;/strong&gt; &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://archlinux.org/&quot;&gt;Arch Linux&lt;/a&gt;&lt;br /&gt;
+I switch between &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/swaywm/sway&quot;&gt;Sway&lt;/a&gt; and &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/i3/i3&quot;&gt;i3&lt;/a&gt; tiling window managers, for reasons that are admittedly somewhat amusing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Computer 1:&lt;/strong&gt; &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt;&lt;br /&gt;
+Also equipped with i3 and Sway tiling window managers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Computer 2:&lt;/strong&gt; :}&lt;/p&gt;
+&lt;p&gt;I tend to gravitate towards tools written in my favorite programming languages and projects I could potentially contribute to when needed (with the exception of VSCode).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Code Editors:&lt;/strong&gt;&lt;br /&gt;
+I switch between Vim/Neovim and VSCode, depending on my mood. Occasionally, I use &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/lapce/lapce&quot;&gt;Lapce&lt;/a&gt; as well.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Neovim Configuration:&lt;/strong&gt;
+&lt;img src=&quot;/assets/images/writing/screenshot.png&quot; alt=&quot;tmux(0)&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;My Neovim configuration looks like the picture above... lol that is exactly how it looks... if you&#39;re curious, check out my &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/daveads/.sys_s&quot;&gt;Configs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For terminal emulator, I use &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/alacritty/alacritty&quot;&gt;Alacritty&lt;/a&gt;, and for terminal multiplexing, I primarily use &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/tmux/tmux&quot;&gt;Tmux&lt;/a&gt;. My shell environment is mostly Bash.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Browsers:&lt;/strong&gt;&lt;br /&gt;
+While I prefer &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.mozilla.org/en-US/firefox/&quot;&gt;Firefox&lt;/a&gt;, I occasionally use Chrome and Brave.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Moved site from jekyll to zola</title>
+    <published>2022-06-29T00:00:00+00:00</published>
+    <updated>2022-06-29T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/moved-site-from-jekyll-to-zola/"/>
+    <id>https://daveads.github.io/writing/moved-site-from-jekyll-to-zola/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/moved-site-from-jekyll-to-zola/">&lt;p&gt;After transitioning from Jekyll to Zola, I have updated the website&#39;s styling by loosely adapting the &lt;code&gt;Jekyll Minima&lt;/code&gt; SCSS. Zola has proven to be an excellent choice as it seamlessly resolves many of the issues I faced with Jekyll. The fact that Zola is written in &lt;code&gt;Rust&lt;/code&gt; and utilizes the powerful &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/Keats/tera&quot;&gt;Tera&lt;/a&gt; template engine further enhances its appeal.&lt;/p&gt;
+&lt;p&gt;The current version of Zola that I am using is v0.15.3, and it has been performing admirably. For those interested in learning more about Zola and its capabilities, the repository can be found here: &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/getzola/zola&quot;&gt;zola-repo&lt;/a&gt;. Additionally, the documentation is available at &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.getzola.org/documentation/getting-started/overview/&quot;&gt;zola-doc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;With Zola, I feel confident in the future of my website, and I am excited about exploring its features and possibilities.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Knowledge worker</title>
+    <published>2020-10-25T00:00:00+00:00</published>
+    <updated>2020-10-25T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/knowledge-workers/"/>
+    <id>https://daveads.github.io/writing/knowledge-workers/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/knowledge-workers/">&lt;p&gt;Glancing through the book &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/gp/product/1455586692/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1455586692&amp;amp;linkCode=as2&amp;amp;tag=daveads-20&amp;amp;linkId=383da9e80b4b22401dcdef4c58418841&quot;&gt;Deep work&lt;/a&gt;, the term &quot;knowledge workers&quot; caught my attention, this is something i do without actually knowing what kind of work it is classified as.&lt;/p&gt;
+&lt;p&gt;Did some research on &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://corporatefinanceinstitute.com/resources/knowledge/other/knowledge-workers/&quot;&gt;knowledge worker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;According to that article, knowledge workers are said to think for a living, unlike manual labourers who are paid for performing a physical tasks, and according to wiki knowledge workers are workers whose main capital is knowledge.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Which got me thinking about the types of workers actually available........??&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&quot;back-to-the-article&quot;&gt;Back to the article:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&quot;knowledge worker&quot;&lt;/strong&gt; was first coined by peter drucker in
+his book &quot;The Land of Tomorrow&quot;...  the knowledge worker are differentiated by their ability to solve complex problems or to develop new products or services in their fields of expertise.. &quot;which his a clear definition of an actual computer programmer&#39;s job&quot;&lt;/p&gt;
+&lt;p&gt;knowledge workers can be programmers, architects, engineers, marketers, design thinkers, public accountants, lawyers, and academics, and essentially any other white-collar worker who uses judgement and critical thinking in their role.&lt;/p&gt;
+&lt;h2 id=&quot;important-facts&quot;&gt;Important facts :&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;To stay relevant learning process is continuous&lt;/li&gt;
+&lt;li&gt;They spend 38% of their time searching for information
+&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;more-info&quot;&gt;More info :&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Knowledge_worker&quot;&gt;wiki: knowledge worker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://corporatefinanceinstitute.com/resources/knowledge/other/knowledge-workers/&quot;&gt;corporate-finance-institute: knowledge workers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://medium.com/snipply/knowledge-workers-information-life-cycles-and-content-silos-oh-my-a4263eed427&quot;&gt;medium: knowledge workers&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>A quick introduction to tmux(0)</title>
+    <published>2020-04-30T00:00:00+00:00</published>
+    <updated>2020-04-30T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/introduction-to-tmux/"/>
+    <id>https://daveads.github.io/writing/introduction-to-tmux/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/introduction-to-tmux/">&lt;p&gt;&lt;img src=&quot;/assets/images/tmux0.png&quot; alt=&quot;tmux(0)&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Prerequisite:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Have a basic understanding of the Linux &lt;a href=&quot;https://daveads.github.io/writing/the-linux-command-line/&quot;&gt;command line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install tmux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Goal:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn what tmux is&lt;/li&gt;
+&lt;li&gt;Get a quick feel of tmux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;tmux&quot;&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Tmux&quot;&gt;Tmux&lt;/a&gt;...?&lt;/h3&gt;
+&lt;p&gt;If you are anything like me then you probably have about &lt;code&gt;&amp;gt;= 5&lt;/code&gt; terminal windows open on your computer when working, And you have a hard time navigating through those terminal (windows) and keeping track of them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/tmux/tmux&quot;&gt;tmux&lt;/a&gt;&lt;/strong&gt; is a terminal multiplexer that helps creates and keep track of termianls from a single screen and does alot more than that, it makes multitasking much easier.&lt;/p&gt;
+&lt;h3 id=&quot;using-tmux&quot;&gt;Using Tmux:&lt;/h3&gt;
+&lt;p&gt;For now, the major focus is to get acquainted with tmux as qucikly as possible before understanding the way it works.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open your terminal and type &lt;code&gt;tmux&lt;/code&gt; if available should open a default window like the pics below.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/tmux0_a.png&quot; alt=&quot;tmux0_a.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Press  &lt;code&gt;ctrl + b&lt;/code&gt; and key at the same time and then release it and then &lt;code&gt;shift + &quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;This split the screen into two top and bottom&lt;/strong&gt;, the splitted screens are called pane.
+&lt;img src=&quot;/assets/images/tmux0_a.png&quot; alt=&quot;tmux0_a.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To navigate between the splitted screen &lt;code&gt;ctrl + b&lt;/code&gt; which open the prefix then &lt;code&gt;o&lt;/code&gt; key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;keywords-in-tmux&quot;&gt;keywords in tmux&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;window&lt;/li&gt;
+&lt;li&gt;pane&lt;/li&gt;
+&lt;li&gt;sessions&lt;/li&gt;
+&lt;li&gt;server&lt;/li&gt;
+&lt;li&gt;client&lt;/li&gt;
+&lt;li&gt;prefix&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;// will talk more on this on the next article&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/tmux/tmux&quot;&gt;tmux source code&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>The Linux Command line interface(0)</title>
+    <published>2020-04-25T00:00:00+00:00</published>
+    <updated>2023-08-06T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/the-linux-command-line/"/>
+    <id>https://daveads.github.io/writing/the-linux-command-line/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/the-linux-command-line/">&lt;video class=&quot;article-video&quot; controls preload=&quot;metadata&quot; aria-label=&quot;Command-line demonstration&quot;&gt;
+  &lt;source src=&quot;/assets/videos/cmd.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  Your browser does not support embedded video.
+&lt;/video&gt;
+&lt;p&gt;I spend 90% of my time in the Terminal emulator (not really sure about that tho), for me it offer&#39;s great flexibility and control than the GUI, and it can be really intimidating at first but it worth your time.&lt;/p&gt;
+&lt;p&gt;Prerequisites: unix or unix-like operating system.&lt;/p&gt;
+&lt;p&gt;Goals:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn what a command line is and how to use it&lt;/li&gt;
+&lt;li&gt;Learn common useful commands and what they mean&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;what-a-command-line-interface&quot;&gt;What a &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Command-line_interface&quot;&gt;command line interface&lt;/a&gt;?&lt;/h3&gt;
+&lt;p&gt;when talking about the command line we are actually refering to &lt;strong&gt;The Shell&lt;/strong&gt;. The shell is a program that takes in Commands or #keywords and passes them to the operating system to carry out. it&#39;s a way of interacting with the computer os, similiar to the &lt;strong&gt;GUI&lt;/strong&gt; but faster and more powerful. The program which handles this commands in the terminal emulator is the &lt;strong&gt;Command-line interpreter&lt;/strong&gt; (shell).&lt;/p&gt;
+&lt;h3 id=&quot;shell-scripting&quot;&gt;Shell Scripting:&lt;/h3&gt;
+&lt;p&gt;As earlier said a Unix shell or shell is a command-line interpreter but also a programming language, the programming language features allows us to combine commands or (utilities) together in a file and run them as a scripts, and yea you can also call it a &lt;strong&gt;Script language&lt;/strong&gt; for now the major focus is getting you to understand the command line and having the feels of it without getting intimidated.. will write more on Shell script on &lt;strong&gt;Using The Linux Command Line(1)&lt;/strong&gt; or probably the next.&lt;/p&gt;
+&lt;h3 id=&quot;running-the-termainal-emulator&quot;&gt;Running the Termainal emulator:&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Computer_terminal&quot;&gt;Computer terminal&lt;/a&gt;:&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/terminal.png&quot; alt=&quot;termainal&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Before delving into what the Terminal emulator actually is, it&#39;s important to know where it all started decades ago. Computers had no GUI for accessing or modifying data; the computer terminal was the only means of entering, displaying, and printing data. These terminals were physical computing devices like IBM 3270, VT100, and many others. For more details, check out &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Computer_terminal&quot;&gt;computer terminal &amp;gt;&amp;gt; wiki&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What&#39;s a Terminal emulator:&lt;/strong&gt;
+The Terminal emulator is a software designed to replicate the functions of a computer terminal. It is a GUI application needed to access the Unix shell environment, providing an interface to invoke commands, scripts, and programs available on your system. It also allows you to view and browse through the contents of directories, just like you would with a FILE MANAGER APPLICATION.&lt;/p&gt;
+&lt;p&gt;Every Linux distro comes with a default terminal emulator. For instance, Ubuntu and Fedora come with Gnome terminal emulator, and other Linux distros have their own defaults. The first thing you see in the terminal emulator is the &quot;command prompt,&quot; which shows $, %, #, or &amp;gt;, indicating the current working directory, the current user, and the readiness of the shell to accept commands from you.&lt;/p&gt;
+&lt;p&gt;The default shell for most Unix or Unix-like systems is the &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Bash_(Unix_shell)&quot;&gt;bash shell&lt;/a&gt;. Other shells include sh, zsh, csh, and more. To find out the available shells on your system, use the command:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;cat /etc/shells&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;display-content-in-your-file-directory&quot;&gt;Display content in your file directory&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;ls&lt;/code&gt; command is used to print out the current directory on the terminal emulator screen, giving the same result as the File Manager.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/gifs/ls_cmd.gif&quot; alt=&quot;ls_cmd&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/file_m.png&quot; alt=&quot;file_manager&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;To find out what a command means through the command line, type:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;whatis ls&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also make use of the system&#39;s manual pager for the full documentation:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;man ls&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To print your current working directory, use the command &lt;code&gt;pwd&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/pwd.png&quot; alt=&quot;pwd&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;pwd&lt;/code&gt; is a built-in command within the bash shell itself. Type &lt;code&gt;help&lt;/code&gt; to find out more about built-in commands.&lt;/p&gt;
+&lt;h3 id=&quot;time-for-experiments&quot;&gt;Time for Experiments&lt;/h3&gt;
+&lt;p&gt;Here are some common commands:&lt;/p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Command&lt;/th&gt;&lt;th&gt;Meaning&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ls&lt;/code&gt;&lt;/td&gt;&lt;td&gt;List files and directories in the current directory.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;cd&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Change the current working directory.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;pwd&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Print the current working directory.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;mkdir&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Create a new directory (folder).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;rmdir&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Remove a directory (folder).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;cp&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Copy files or directories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;mv&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Move or rename files or directories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;rm&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Remove (delete) files or directories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;cat&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Concatenate and display file content.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;more&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display file content one screen at a time.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;less&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display file content with backward navigation.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;head&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display the beginning lines of a file.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;tail&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display the ending lines of a file.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;grep&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Search for a pattern in files.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;find&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Search for files and directories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;chmod&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Change file permissions.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;chown&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Change file ownership.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ps&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display information about running processes.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;kill&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Terminate processes.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ssh&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Secure Shell - remote login to a server.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;wget&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Download files from the web.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;tar&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Archive files using tar.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;zip&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Package and compress files.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;Please note that this is not an exhaustive list, but it includes some commonly used commands and their primary meanings. Additionally, the meaning of some commands may vary based on their options and arguments. Always refer to the manual (&lt;code&gt;man&lt;/code&gt; command) for a comprehensive understanding of each command.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Resources&lt;/strong&gt;
+&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://missing.csail.mit.edu/&quot;&gt;The Missing Semester of Your CS Education By Mit&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Tech blogs i find interesting</title>
+    <published>2020-01-29T00:00:00+00:00</published>
+    <updated>2022-09-22T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/interesting-tech-blogs/"/>
+    <id>https://daveads.github.io/writing/interesting-tech-blogs/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/interesting-tech-blogs/">&lt;h3 id=&quot;a-list-of-cs-programmers-blogs-i-find-interesting&quot;&gt;&lt;strong&gt;A list of Cs/Programmers blogs i find interesting&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://matt.might.net/&quot;&gt;Matt Might&lt;/a&gt; Professor of Internal Medicine and Computer Science&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://lambda-the-ultimate.org/&quot;&gt;Lambda the Ultimate&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://lemire.me/blog/&quot;&gt;Daniel Lemire&#39;s blog&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://jeremykun.com/&quot;&gt;Math ∩ Programming&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://flaviocopes.com/&quot;&gt;flavio copes&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.nayuki.io/&quot;&gt;Project Nayuki&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://www.paulgraham.com/index.html&quot;&gt;paul-graham&lt;/a&gt; -Startup&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://overreacted.io/&quot;&gt;Overreacted&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://norvig.com/&quot;&gt;Peter Norvig&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://eli.thegreenplace.net/&quot;&gt;Eli Bendersky&#39;s website&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://blog.jessfraz.com/&quot;&gt;Ramblings from Jessie&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://jvns.ca/&quot;&gt;Julia Evans&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://cliffle.com/&quot;&gt;cliffle&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://blog.samaltman.com/&quot;&gt;Sam Altman&lt;/a&gt; - Startup&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://journal.stuffwithstuff.com/&quot;&gt;Bob Nystrom&lt;/a&gt; -language&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://steveklabnik.com/&quot;&gt;steve&lt;/a&gt; -rust&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://coertvonk.com/&quot;&gt;coertvonk&lt;/a&gt; - Embedded Software Engineer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://zserge.com/&quot;&gt;Serge Zaitsev&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&quot;related-list&quot;&gt;Related list&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://daveads.github.io/note/programming-blogs/&quot;&gt;programming blogs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Interesting programming and cs books</title>
+    <published>2019-07-07T00:00:00+00:00</published>
+    <updated>2020-10-25T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/interesting-programming-and-cs-books/"/>
+    <id>https://daveads.github.io/writing/interesting-programming-and-cs-books/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/interesting-programming-and-cs-books/">&lt;p&gt;// Books i find interesting.... Many of the textbooks are freely available online&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/gp/product/1848000693/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1848000693&amp;amp;linkCode=as2&amp;amp;tag=daveads-20&amp;amp;linkId=c915e2b83b5454a99aa5661d1c72bf7a&quot;&gt;The Algorithm Design Manual by Steven S. Skiena&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/3oqTpPp&quot;&gt;Algorithms by Robert Sedgewick and Kevin Wayne&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/35tICM0&quot;&gt;Introduction to algorithms Thomas H.cormen&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/34rrpmY&quot;&gt;Grokking Algorithms by Aditya Y.Bhargava&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/35woNUb&quot;&gt;Algorithms by Jeff Erickson&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/31Igpjj&quot;&gt;The art of computer programming DONALD E. KNUTH&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/3e2f7of&quot;&gt;Computer organization and architecture designing for performance by william stallings&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/37L1kS5&quot;&gt;Computer Systems:a programmer&#39;s perspective Bryant. O&#39;hallaron&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/3kug4rI&quot;&gt;Clean Code by Robert C. Martin&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/3mlYN4A&quot;&gt;Structure and interpretation of Computer programs (SICP)&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/2HCGKs4&quot;&gt;Types and Programming Languages by Benjamin C.Pierce&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/2HDuebq&quot;&gt;Language Implementation patterns by Terence parr&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/2J4rG7b&quot;&gt;Artificial Intelligence A Modern Approach by Stuart J.Russell and Peter Norvig&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/3jvHEDI&quot;&gt;Concrete mathematics by ronald l. Graham, Donald E. knuth&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/37zMKg2&quot;&gt;Hacker&#39;s Delight Henry S. Warren, jr.&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/35rxzTq&quot;&gt;The Annotated Turing by charles Petzold&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/3dTRKx0&quot;&gt;Algorithms to Live By: The Computer Science of Human Decisions Brian Christian and Tom Griffiths&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/31Fkepj&quot;&gt;Code: The Hidden Language of Computer Hardware and Software Charles Petzold&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/2TnI5p5&quot;&gt;The Mythical Man-Month by Fred Brooks&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/2J5LZkD&quot;&gt;Design Patterns: Elements of Reusable Object-Oriented Software Erich Gamma&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/35AGSAm&quot;&gt;Compilers: Principles, Techniques, and Tools by Alfred V.Aho, Ravi Sethi&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/35u8PtG&quot;&gt;Refactoring: Improving the Design of Existing Code by kent Beck and Martin Fowler&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+  </entry>
+  
+</feed>

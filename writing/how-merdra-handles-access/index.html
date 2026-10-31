@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	
+
+	
+		<!-- meta data -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="author" content="Adejumo David Adewale">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Daveads">
+
+	
+	
+
+
+
+
+
+    
+    
+        
+    
+    
+        
+    
+
+
+
+
+<title>How Merdra Handles Access to Medical Information | Daveads</title>
+<meta name="description" content="How Merdra combines patient permission, role-based authorisation, and audit trails to make medical information portable without making it open.">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://daveads.github.io/writing/how-merdra-handles-access/">
+
+
+<meta property="og:title" content="How Merdra Handles Access to Medical Information | Daveads">
+<meta property="og:description" content="How Merdra combines patient permission, role-based authorisation, and audit trails to make medical information portable without making it open.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://daveads.github.io/writing/how-merdra-handles-access/">
+
+<meta property="article:published_time" content="2026-10-20">
+
+<meta property="article:author" content="Adejumo David Adewale">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@The_Daveads">
+<meta name="twitter:creator" content="@The_Daveads">
+<meta name="twitter:title" content="How Merdra Handles Access to Medical Information | Daveads">
+<meta name="twitter:description" content="How Merdra combines patient permission, role-based authorisation, and audit trails to make medical information portable without making it open.">
+
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How Merdra Handles Access to Medical Information",
+  "description": "How Merdra combines patient permission, role-based authorisation, and audit trails to make medical information portable without making it open.",
+  "url": "https://daveads.github.io/writing/how-merdra-handles-access/",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://daveads.github.io/writing/how-merdra-handles-access/"},
+  "datePublished": "2026-10-20",
+  "dateModified": "2026-10-20",
+  "author": {"@type": "Person", "name": "Adejumo David Adewale", "url": "https://daveads.github.io/about/"},
+  "publisher": {"@type": "Person", "name": "Adejumo David Adewale"}
+}
+
+</script>
+
+
+
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+<link rel="alternate" type="application/atom+xml" title="Daveads feed" href="https://daveads.github.io/atom.xml">
+
+<!-- Sass-file: minima.css -->
+<link rel="stylesheet" href="/minima.css">
+
+<!-- css files -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+
+<link rel="stylesheet" href="/assets/css/shortcodes.css">
+
+
+
+
+<!-- google_analytics -->
+
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-087FCJRFH2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-087FCJRFH2', {
+    'cookie_flags': 'SameSite=None;Secure',
+  });
+</script>
+
+
+
+
+
+<!-- <script type="text/javascript" src="/assets/js/blink.js" defer></script> -->
+<script type="text/javascript" src="/assets/js/scroll-top-button.js" defer></script>
+
+
+<!-- PWA -->
+<script>
+  if ("serviceWorker" in navigator) {
+if (navigator.serviceWorker.controller) {
+   console.log("An active service worker found, no need to register");
+   } else {
+     // Register the service worker
+     navigator.serviceWorker
+       .register("/serviceworker.js", {
+         scope: "./"
+       })
+       .then(function (reg) {
+         console.log("Service worker has been registered for scope: " + reg.scope);
+       });
+    }
+}
+</script>
+
+<!-- programmable search engine -->
+<!-- <script async src="https://cse.google.com/cse.js?cx=acd2a3a68756706a3"></script> -->
+
+<link rel="manifest" type="application/manifest+json" href="https://daveads.github.io/manifest.json">
+
+
+
+
+
+
+
+
+
+
+
+</head>
+ <body>
+		
+		<header class="site-header" role="banner">
+
+  
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Daveads</a>
+
+      <nav class="site-nav">
+
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" aria-label="Toggle navigation menu" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+	<div class="trigger">
+	<a class="page-link is-active"
+     href="https://daveads.github.io/writing/" aria-current="page">Writings</a>
+	<a class="page-link"
+     href="https://daveads.github.io/newsletter/">Newsletter</a>
+	<a class="page-link"
+     href="https://daveads.github.io/about/">About</a>
+	</div>
+
+      </nav>
+  </div>
+
+</header>
+
+		
+
+		<button class="scrollToTopBtn" title="Go to top">
+		<img src="/assets/images/186407_arrow_up_icon.png" alt="" height="20" width="20">
+		</button>
+
+		<main class="page-content" aria-label="Content">
+
+				 <section class="section">
+						<div class="wrapper">
+								
+
+
+
+
+
+
+  
+
+
+<article class="post article-post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header article-post__header">
+  <h1 class="post-title p-name" itemprop="name headline">How Merdra Handles Access to Medical Information</h1>
+
+  <div class="article-post__details">
+    
+    <p class="post-meta article-post__meta">
+      <time datetime="2026-10-20" itemprop="datePublished">2026-10-20</time>
+      
+    </p>
+    
+
+    <nav class="article-post__nav" aria-label="Writings navigation">
+      <a href="/writing/">Writings</a>
+      
+      <span aria-hidden="true">||</span>
+      <a href="/archive/">Archive</a>
+      
+    </nav>
+
+    
+    <div class="article-post__tags" aria-label="Tags">
+      <span class="article-post__tags-label">Tags :</span>
+      
+      <a class="tag-link" href="https://daveads.github.io/tags/merdra/">#merdra</a>
+      
+      <a class="tag-link" href="https://daveads.github.io/tags/healthcare/">#healthcare</a>
+      
+    </div>
+    
+
+    
+<button class="article-back" type="button" onclick="window.history.go(-1)"
+        aria-label="Go back to the previous page" title="Go back">
+  &lt;&lt; cd ..
+</button>
+
+
+  </div>
+</header>
+
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Medical information should follow a patient. That does not mean it should be open to every hospital, clinician, or application.</p>
+<p>Medical records are confidential. A doctor, nurse, pharmacist, and physiotherapist may care for the same person, but they do not need the same access or have the same responsibilities. Access should depend on who is asking, why they are asking, what they need, and for how long.</p>
+<p>Merdra is not a mirror of every hospital’s EMR. It is a trust and exchange layer for the parts of a medical history that need to move safely between care settings.</p>
+<h2 id="how-access-is-decided">How access is decided</h2>
+<p>Patient permission is an important part of access, but it is not the only check.</p>
+<p>Before Merdra returns a record, it should verify the:</p>
+<ul>
+<li><strong>Practitioner</strong> and <strong>organisation</strong> making the request</li>
+<li><strong>Role</strong> and <strong>purpose</strong> behind it</li>
+<li><strong>Requested scope</strong> and <strong>time limit</strong></li>
+<li><strong>Applicable policy</strong></li>
+</ul>
+<p>Working at a hospital, or knowing a patient’s name, should not be enough to access their medical information.</p>
+<h2 id="what-a-patient-can-do">What a patient can do</h2>
+<p>A patient should be able to:</p>
+<ul>
+<li><strong>See a patient-safe view of their Merdra history</strong> — what information Merdra holds, where it came from, when it was created, and whether it is current or corrected.</li>
+<li><strong>Choose who can retrieve relevant records</strong> — for example, approving a new hospital’s request for laboratory history for a defined purpose and period.</li>
+<li><strong>Revoke a sharing grant</strong> when it is no longer needed.</li>
+<li><strong>See access history</strong> — which organisation accessed which category of record and when.</li>
+<li><strong>Request a correction</strong> or add a patient statement when information appears wrong.</li>
+</ul>
+<p>This does not mean a patient sees every raw internal hospital note or every result without context. Some information may require clinician discussion or be restricted under a defined safety and legal policy before appearing in the patient-facing view.</p>
+<p>Patients cannot edit a diagnosis, prescription, or laboratory result. The organisation and professional who created a record remain accountable for it. A correction creates a new linked version while preserving the source and history.</p>
+<h2 id="what-a-treating-provider-can-do">What a treating provider can do</h2>
+<p>When a patient begins care at another hospital, an authorised provider can:</p>
+<ul>
+<li><strong>Request only what is needed</strong> for care.</li>
+<li><strong>State the purpose and duration</strong> of that request.</li>
+<li><strong>Retrieve a permitted, verified, source-attributed copy</strong> of the record.</li>
+<li><strong>Create new clinical information</strong> under their own organisation’s identity.</li>
+</ul>
+<p>They cannot edit the original result, diagnosis, or note created elsewhere.</p>
+<p>If Hospital B creates a new test result, diagnosis, or treatment record, that becomes Hospital B’s own clinical assertion. Merdra can add a structured and verifiable representation of it to the patient’s portable history.</p>
+<h2 id="what-happens-in-an-emergency">What happens in an emergency?</h2>
+<p>There are situations where a patient may be unconscious or unable to approve access.</p>
+<p>Merdra should eventually support a tightly controlled emergency-access path for verified clinicians. It should:</p>
+<ul>
+<li>Expose only the information necessary for urgent care</li>
+<li>Require a stated reason</li>
+<li>Expire quickly</li>
+<li>Create a full audit trail</li>
+<li>Notify the patient afterwards, where appropriate</li>
+</ul>
+<p>Emergency access must be a governed exception, not a back door into every patient record.</p>
+<h2 id="the-principle">The principle</h2>
+<p>Hospitals keep using their local systems for appointments, billing, prescriptions, notes, and day-to-day care. Merdra does not replace or run those workflows. It handles the data layer:</p>
+<ul>
+<li>Identity</li>
+<li>Consent</li>
+<li>Provenance</li>
+<li>Permissions</li>
+<li>Audit history</li>
+<li>Safe exchange of selected medical information between authorised systems</li>
+</ul>
+<blockquote>
+<p>Medical information should follow the patient without becoming a document that anyone can edit.</p>
+</blockquote>
+
+  </div>
+
+  
+
+
+  
+  
+    
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/newsletter.css">
+<aside class="newsletter" aria-labelledby="newsletter-heading">
+  
+  <h2 id="newsletter-heading">Follow what I'm building</h2>
+  <p>Occasional writing on engineering, Merdra, healthcare infrastructure and experiments.</p>
+  
+  
+  <form class="newsletter-form" data-newsletter-form data-api="https://daveads.merdra.com"
+        data-source="article_footer"
+        method="post" novalidate>
+    <div class="newsletter-label-row">
+      <label for="newsletter-email">Email address</label>
+      <span class="newsletter-count" data-subscriber-count hidden></span>
+    </div>
+    <div class="newsletter-row">
+      <input id="newsletter-email" name="email" type="email" inputmode="email" autocomplete="email"
+             maxlength="254" required placeholder="you@example.com">
+      <button type="submit">Subscribe</button>
+    </div>
+    <div class="newsletter-hp" aria-hidden="true">
+      <label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+    </div>
+    <p class="newsletter-status" role="status" aria-live="polite"></p>
+    <noscript><p>Please enable JavaScript to subscribe, or use the feed below.</p></noscript>
+  </form>
+  
+  <p class="newsletter-note">No spam, no tracking. One email per new article. Confirm by email, unsubscribe anytime.</p>
+  
+  <script src="/assets/js/newsletter.js" defer></script>
+  
+  
+  <p class="newsletter-note">Prefer feeds? <a href="https://daveads.github.io/atom.xml">Subscribe via RSS/Atom</a>.</p>
+  
+</aside>
+
+  <nav class="article-home" aria-label="Return home">
+  <a href="/">cd ~</a>
+</nav>
+
+</article>
+
+
+						</div>
+				 </section>
+
+		</main>
+		<footer></footer>
+		
+ </body>
+
+</html>
+

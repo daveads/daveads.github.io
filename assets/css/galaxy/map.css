@@ -1,0 +1,323 @@
+.galaxy-stage {
+  position: relative;
+  min-height: 690px;
+  overflow: hidden;
+  border: 1px solid rgba(133, 154, 203, 0.22);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(78, 104, 184, 0.12), transparent 26%),
+    radial-gradient(circle at 18% 20%, rgba(103, 232, 249, 0.08), transparent 24%),
+    radial-gradient(circle at 80% 80%, rgba(159, 140, 255, 0.08), transparent 27%),
+    #050711;
+  box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.55), 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.galaxy-stage::before,
+.galaxy-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.galaxy-stage::before {
+  opacity: 0.7;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 1px, transparent 1.2px),
+    radial-gradient(circle, rgba(130, 175, 255, 0.45) 0 1px, transparent 1.3px);
+  background-position: 13px 19px, 71px 83px;
+  background-size: 113px 127px, 173px 149px;
+}
+
+.galaxy-stage::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 12%, transparent 88%, rgba(255, 255, 255, 0.02));
+}
+
+.galaxy-stage:fullscreen,
+.galaxy-stage.is-galaxy-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  border: 0;
+  border-radius: 0;
+}
+
+.galaxy-stage:fullscreen .galaxy-map-scroll,
+.galaxy-stage.is-galaxy-fullscreen .galaxy-map-scroll {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.galaxy-stage:fullscreen .galaxy-zoom-controls,
+.galaxy-stage.is-galaxy-fullscreen .galaxy-zoom-controls {
+  top: max(0.65rem, env(safe-area-inset-top));
+  right: max(0.65rem, env(safe-area-inset-right));
+}
+
+.galaxy-stage.is-galaxy-fullscreen {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+}
+
+html.galaxy-fullscreen-active,
+html.galaxy-fullscreen-active body {
+  overflow: hidden;
+}
+
+.galaxy-map-scroll {
+  position: relative;
+  z-index: 1;
+  height: 690px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: rgba(103, 232, 249, 0.35) transparent;
+  touch-action: none;
+  cursor: grab;
+}
+
+.galaxy-map-scroll.is-panning {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.galaxy-zoom-controls {
+  position: absolute;
+  z-index: 4;
+  top: 0.65rem;
+  right: 0.65rem;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid rgba(142, 160, 201, 0.3);
+  border-radius: 9px;
+  background: rgba(5, 8, 18, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(9px);
+}
+
+.galaxy-zoom-controls button {
+  min-width: 38px;
+  min-height: 38px;
+  padding: 0 0.55rem;
+  border: 0;
+  border-right: 1px solid rgba(142, 160, 201, 0.2);
+  color: #dce8ff;
+  background: transparent;
+  cursor: pointer;
+  font: 0.74rem/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.galaxy-zoom-controls button:last-child {
+  border-right: 0;
+}
+
+.galaxy-zoom-controls button:hover,
+.galaxy-zoom-controls button:focus-visible {
+  color: #071019;
+  background: var(--galaxy-accent);
+  outline: 0;
+}
+
+.galaxy-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 690px;
+}
+
+.galaxy-orbit {
+  fill: none;
+  stroke: rgba(130, 154, 212, 0.08);
+  stroke-width: 1;
+  stroke-dasharray: 3 9;
+}
+
+.galaxy-spoke {
+  stroke: rgba(130, 154, 212, 0.12);
+  stroke-width: 1;
+}
+
+.galaxy-edge {
+  stroke: var(--node-color);
+  stroke-width: 0.75;
+  stroke-opacity: 0.18;
+  transition: opacity 180ms ease;
+}
+
+.galaxy-core,
+.galaxy-cluster {
+  cursor: pointer;
+}
+
+.galaxy-cluster:focus-visible {
+  outline: none;
+}
+
+.galaxy-cluster:focus-visible .galaxy-cluster-dot {
+  stroke: #fff;
+  stroke-width: 3;
+}
+
+.galaxy-core-halo {
+  fill: rgba(103, 232, 249, 0.06);
+  stroke: rgba(103, 232, 249, 0.18);
+  stroke-width: 1;
+}
+
+.galaxy-core-star {
+  fill: #f7fdff;
+  filter: drop-shadow(0 0 15px rgba(103, 232, 249, 0.85));
+}
+
+.galaxy-core-label {
+  fill: #dffaff;
+  font: 600 12px/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.18em;
+  text-anchor: middle;
+}
+
+.galaxy-cluster-dot {
+  fill: var(--theme-color);
+  filter: drop-shadow(0 0 9px var(--theme-color));
+}
+
+.galaxy-cluster-label {
+  fill: #c8d2e9;
+  font: 600 12px/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.04em;
+  text-anchor: middle;
+}
+
+.galaxy-cluster-count {
+  fill: #65708a;
+  font: 10px/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  text-anchor: middle;
+}
+
+.galaxy-node-link {
+  color: inherit;
+  cursor: pointer;
+}
+
+.galaxy-node-hit {
+  fill: transparent;
+  pointer-events: all;
+}
+
+.galaxy-cluster-hit {
+  fill: transparent;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.galaxy-orbit-layer {
+  transform-box: view-box;
+  transform-origin: var(--orbit-x) var(--orbit-y);
+  animation: galaxy-revolve var(--orbit-duration) linear infinite;
+  animation-delay: var(--orbit-delay);
+  animation-direction: var(--orbit-direction);
+}
+
+.galaxy-orbit-layer:hover,
+.galaxy-orbit-layer:focus-within,
+.galaxy-map-scroll.is-panning .galaxy-orbit-layer,
+.galaxy-map-scroll.has-category-results .galaxy-orbit-layer,
+.galaxy-system-layer:hover .galaxy-orbit-layer,
+.galaxy-system-layer:focus-within .galaxy-orbit-layer {
+  animation-play-state: paused;
+}
+
+.galaxy-node {
+  fill: var(--node-color);
+  stroke: rgba(255, 255, 255, 0.75);
+  stroke-width: 0.5;
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0 0 5px var(--node-color));
+  transition: opacity 180ms ease, transform 180ms ease, filter 180ms ease;
+  animation: galaxy-twinkle 4.5s ease-in-out infinite;
+  animation-delay: var(--twinkle-delay);
+}
+
+.galaxy-node.is-writing {
+  stroke-width: 1.15;
+  filter: drop-shadow(0 0 9px var(--node-color));
+}
+
+.galaxy-node-link:hover .galaxy-node,
+.galaxy-node-link:focus .galaxy-node {
+  transform: scale(1.65);
+  filter: drop-shadow(0 0 14px var(--node-color));
+}
+
+.galaxy-node-link.is-hidden,
+.galaxy-edge.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.galaxy-cluster.is-dimmed {
+  opacity: 0.22;
+}
+
+@keyframes galaxy-twinkle {
+  0%, 100% { opacity: 0.72; }
+  50% { opacity: 1; }
+}
+
+@keyframes galaxy-revolve {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.galaxy-tooltip {
+  position: absolute;
+  z-index: 4;
+  width: min(290px, calc(100% - 32px));
+  padding: 0.85rem 0.95rem;
+  border: 1px solid rgba(103, 232, 249, 0.28);
+  border-radius: 12px;
+  background: rgba(5, 8, 18, 0.96);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  backdrop-filter: blur(12px);
+}
+
+.galaxy-tooltip span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--tooltip-color, var(--galaxy-accent));
+  font: 0.66rem/1.3 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.galaxy-tooltip strong {
+  display: block;
+  color: #fff;
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
+.galaxy-tooltip small {
+  display: block;
+  margin-top: 0.45rem;
+  color: #8995af;
+  font: 0.7rem/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.galaxy-empty {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  color: var(--galaxy-muted);
+  transform: translate(-50%, -50%);
+  font: 0.8rem/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+

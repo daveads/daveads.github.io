@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Daveads - merdra</title>
+  <subtitle>Writings and notes by Adejumo David Adewale, Dive into the abyss of Daveads!</subtitle>
+  <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/merdra/atom.xml"/>
+  <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+  <generator uri="https://www.getzola.org/">Zola</generator>
+  <updated>2026-10-20T00:00:00+00:00</updated>
+  <id>https://daveads.github.io/tags/merdra/atom.xml</id>
+  
+  <entry xml:lang="en">
+    <title>How Merdra Handles Access to Medical Information</title>
+    <published>2026-10-20T00:00:00+00:00</published>
+    <updated>2026-10-20T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/how-merdra-handles-access/"/>
+    <id>https://daveads.github.io/writing/how-merdra-handles-access/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/how-merdra-handles-access/">&lt;p&gt;Medical information should follow a patient. That does not mean it should be open to every hospital, clinician, or application.&lt;/p&gt;
+&lt;p&gt;Medical records are confidential. A doctor, nurse, pharmacist, and physiotherapist may care for the same person, but they do not need the same access or have the same responsibilities. Access should depend on who is asking, why they are asking, what they need, and for how long.&lt;/p&gt;
+&lt;p&gt;Merdra is not a mirror of every hospital’s EMR. It is a trust and exchange layer for the parts of a medical history that need to move safely between care settings.&lt;/p&gt;
+&lt;h2 id=&quot;how-access-is-decided&quot;&gt;How access is decided&lt;/h2&gt;
+&lt;p&gt;Patient permission is an important part of access, but it is not the only check.&lt;/p&gt;
+&lt;p&gt;Before Merdra returns a record, it should verify the:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Practitioner&lt;/strong&gt; and &lt;strong&gt;organisation&lt;/strong&gt; making the request&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Role&lt;/strong&gt; and &lt;strong&gt;purpose&lt;/strong&gt; behind it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Requested scope&lt;/strong&gt; and &lt;strong&gt;time limit&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Applicable policy&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Working at a hospital, or knowing a patient’s name, should not be enough to access their medical information.&lt;/p&gt;
+&lt;h2 id=&quot;what-a-patient-can-do&quot;&gt;What a patient can do&lt;/h2&gt;
+&lt;p&gt;A patient should be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;See a patient-safe view of their Merdra history&lt;/strong&gt; — what information Merdra holds, where it came from, when it was created, and whether it is current or corrected.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Choose who can retrieve relevant records&lt;/strong&gt; — for example, approving a new hospital’s request for laboratory history for a defined purpose and period.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Revoke a sharing grant&lt;/strong&gt; when it is no longer needed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;See access history&lt;/strong&gt; — which organisation accessed which category of record and when.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Request a correction&lt;/strong&gt; or add a patient statement when information appears wrong.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This does not mean a patient sees every raw internal hospital note or every result without context. Some information may require clinician discussion or be restricted under a defined safety and legal policy before appearing in the patient-facing view.&lt;/p&gt;
+&lt;p&gt;Patients cannot edit a diagnosis, prescription, or laboratory result. The organisation and professional who created a record remain accountable for it. A correction creates a new linked version while preserving the source and history.&lt;/p&gt;
+&lt;h2 id=&quot;what-a-treating-provider-can-do&quot;&gt;What a treating provider can do&lt;/h2&gt;
+&lt;p&gt;When a patient begins care at another hospital, an authorised provider can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Request only what is needed&lt;/strong&gt; for care.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;State the purpose and duration&lt;/strong&gt; of that request.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Retrieve a permitted, verified, source-attributed copy&lt;/strong&gt; of the record.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create new clinical information&lt;/strong&gt; under their own organisation’s identity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;They cannot edit the original result, diagnosis, or note created elsewhere.&lt;/p&gt;
+&lt;p&gt;If Hospital B creates a new test result, diagnosis, or treatment record, that becomes Hospital B’s own clinical assertion. Merdra can add a structured and verifiable representation of it to the patient’s portable history.&lt;/p&gt;
+&lt;h2 id=&quot;what-happens-in-an-emergency&quot;&gt;What happens in an emergency?&lt;/h2&gt;
+&lt;p&gt;There are situations where a patient may be unconscious or unable to approve access.&lt;/p&gt;
+&lt;p&gt;Merdra should eventually support a tightly controlled emergency-access path for verified clinicians. It should:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Expose only the information necessary for urgent care&lt;/li&gt;
+&lt;li&gt;Require a stated reason&lt;/li&gt;
+&lt;li&gt;Expire quickly&lt;/li&gt;
+&lt;li&gt;Create a full audit trail&lt;/li&gt;
+&lt;li&gt;Notify the patient afterwards, where appropriate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Emergency access must be a governed exception, not a back door into every patient record.&lt;/p&gt;
+&lt;h2 id=&quot;the-principle&quot;&gt;The principle&lt;/h2&gt;
+&lt;p&gt;Hospitals keep using their local systems for appointments, billing, prescriptions, notes, and day-to-day care. Merdra does not replace or run those workflows. It handles the data layer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identity&lt;/li&gt;
+&lt;li&gt;Consent&lt;/li&gt;
+&lt;li&gt;Provenance&lt;/li&gt;
+&lt;li&gt;Permissions&lt;/li&gt;
+&lt;li&gt;Audit history&lt;/li&gt;
+&lt;li&gt;Safe exchange of selected medical information between authorised systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Medical information should follow the patient without becoming a document that anyone can edit.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>What Is Merdra?</title>
+    <published>2026-10-19T00:00:00+00:00</published>
+    <updated>2026-10-19T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/what-is-merdra/"/>
+    <id>https://daveads.github.io/writing/what-is-merdra/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/what-is-merdra/">&lt;p&gt;Health has a memory. Too often, healthcare does not.&lt;/p&gt;
+&lt;p&gt;When people move between clinics, hospitals, laboratories, or even cities, important parts of their medical history can be left behind. A test result may live on paper, in a PDF, in a WhatsApp chat, or inside a system that the next provider cannot access. At the next appointment, the conversation begins again: &lt;em&gt;What happened before? Which medicines have you taken? Do you have the result?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The problem is not that clinicians do not care about context. It is that the systems around them rarely allow reliable health information to travel with the person it belongs to.&lt;/p&gt;
+&lt;p&gt;That is the problem Merdra exists to solve.&lt;/p&gt;
+&lt;h2 id=&quot;merdra-is-health-data-infrastructure&quot;&gt;Merdra is health-data infrastructure&lt;/h2&gt;
+&lt;p&gt;Merdra is building the trust and interoperability layer that lets medical information follow a patient.&lt;/p&gt;
+&lt;p&gt;We are not trying to become every hospital&#39;s electronic medical-record system, nor are we building another place to upload documents and forget them. We are building the underlying infrastructure that can help laboratories, healthcare providers, patient applications, and future clinical tools work from health information that is structured, permissioned, and trustworthy.&lt;/p&gt;
+&lt;p&gt;We are also building Merdra so other healthcare startups and developers can build their own applications on it.&lt;/p&gt;
+&lt;p&gt;In simple terms, Merdra should make it possible for the right health information to be available to the right person or system, at the right time, with the patient&#39;s permission.&lt;/p&gt;
+&lt;h2 id=&quot;why-records-today-are-not-enough&quot;&gt;Why records today are not enough&lt;/h2&gt;
+&lt;p&gt;Most healthcare information is created for a moment: a consultation, a prescription, a test, or a discharge. But a person&#39;s health is not a series of isolated moments. It is a continuing story.&lt;/p&gt;
+&lt;p&gt;When that story is fragmented, every new provider has to reconstruct it. Patients must remember details under pressure, carry documents around, or repeat tests that may already have been done. Providers make decisions with less context than they should have. And valuable information that could support better care stays trapped in formats and systems that cannot easily work together.&lt;/p&gt;
+&lt;p&gt;The consequences of fragmented history are not abstract. In &lt;a href=&quot;https://daveads.github.io/writing/medical-history/&quot;&gt;Medical History&lt;/a&gt;, we shared conversations with two doctors on our team about the difficulty of retrieving older records and using information from elsewhere during care.&lt;/p&gt;
+&lt;p&gt;Digitising a document alone does not solve this. A scanned result is easier to store, but it is still difficult for software and often for another provider to understand, compare, or safely use.&lt;/p&gt;
+&lt;p&gt;Merdra is being built so health data can be more than a collection of files.&lt;/p&gt;
+&lt;h2 id=&quot;what-merdra-makes-possible&quot;&gt;What Merdra makes possible&lt;/h2&gt;
+&lt;p&gt;At its core, Merdra brings together a few things healthcare data needs in order to be useful across systems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Structured information.&lt;/strong&gt; Important clinical details such as a lab test&#39;s name, value, unit, reference range, and date should be represented as data, not just as pixels on a page.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Provenance.&lt;/strong&gt; A record should show where it came from, who created it, and when. That gives the next person or system a basis for understanding whether it can be trusted.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Consent and access control.&lt;/strong&gt; Health information is deeply personal. Patients should be able to understand and control how it is shared, while providers get the information they are authorised to use.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interoperability.&lt;/strong&gt; Different organisations and applications should not need to start from zero every time they need to work together. With permission, they should be able to exchange relevant information in a reliable way.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;An audit trail.&lt;/strong&gt; Access and changes should be accountable. Trust cannot be an afterthought when the data concerns someone&#39;s health.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These capabilities may sound technical, but their purpose is human: to give patients continuity, give clinicians context, and make safer, more useful health software possible.&lt;/p&gt;
+&lt;h2 id=&quot;we-are-starting-with-lab-results&quot;&gt;We are starting with lab results&lt;/h2&gt;
+&lt;p&gt;Merdra&#39;s first focus is structured diagnostic laboratory results.&lt;/p&gt;
+&lt;p&gt;Lab results are a practical place to begin because they are important, common, and often difficult to carry from one point of care to another. They also contain the kind of precise information that becomes far more useful when it is structured: a result can be compared over time, interpreted alongside other records, or shared with a new provider without someone having to manually re-enter it.&lt;/p&gt;
+&lt;p&gt;The first milestone is not to capture every piece of medical information at once. It is to create a trustworthy path for a laboratory result to become a portable, usable record—one a patient can access and share, and one an authorised provider or tool can understand.&lt;/p&gt;
+&lt;p&gt;From there, Merdra can expand carefully toward a more complete longitudinal health history: medication records, diagnoses, care events, and other information that helps tell the full story.&lt;/p&gt;
+&lt;h2 id=&quot;trust-is-the-product&quot;&gt;Trust is the product&lt;/h2&gt;
+&lt;p&gt;Health data is not ordinary data. It can affect a diagnosis, a treatment decision, a person&#39;s privacy, and their confidence in the healthcare system.&lt;/p&gt;
+&lt;p&gt;That means Merdra has to be built around trust from the beginning. Information needs clear provenance. Sharing needs meaningful consent. Access needs accountability. And interoperability cannot come at the cost of patient dignity or security.&lt;/p&gt;
+&lt;p&gt;The goal is not simply to move more data around. It is to make the data that moves understandable, traceable, and appropriately controlled.&lt;/p&gt;
+&lt;h2 id=&quot;beyond-continuity-building-clinical-context&quot;&gt;Beyond continuity: building clinical context&lt;/h2&gt;
+&lt;p&gt;Continuity is the first promise, not the final value. A record that can move with a patient is useful; a trustworthy longitudinal history can also help people and software understand what has changed, what may be connected, and what information is still missing.&lt;/p&gt;
+&lt;p&gt;As Merdra&#39;s records become more structured and longitudinal, we can support clinician-facing tools that surface trends over time, relevant medication and diagnostic history, family-health context, and gaps or contradictions in the record. Each signal should make its basis visible: the source records, the dates, the units, and the limits of what is known.&lt;/p&gt;
+&lt;p&gt;This is not about asking software to make a diagnosis on its own. It is about giving clinicians clearer, source-grounded context so they can apply their judgement. Over time, validated clinical decision-support and preventive tools may be built on this foundation. But trustworthy data, meaningful consent, transparency, and human review have to come first.&lt;/p&gt;
+&lt;p&gt;Family context deserves particular care. Knowing relevant family history is not the same as having access to another person&#39;s private medical record.&lt;/p&gt;
+&lt;h2 id=&quot;building-from-nigeria-with-a-global-ambition&quot;&gt;Building from Nigeria, with a global ambition&lt;/h2&gt;
+&lt;p&gt;We are starting in Nigeria, where fragmented records, paper workflows, PDFs, and disconnected providers make the need for continuity especially clear. But this is not only a Nigerian problem. Around the world, healthcare is still organised around institutions while people&#39;s lives and health needs move across them.&lt;/p&gt;
+&lt;p&gt;Nigeria is Merdra&#39;s beachhead, not its boundary.&lt;/p&gt;
+&lt;p&gt;We want to prove the model where the problem is real and urgent, learn directly from patients, laboratories, and providers, and build infrastructure strong enough to support healthcare wherever people need their information to move with them.&lt;/p&gt;
+&lt;h2 id=&quot;a-foundation-for-the-next-generation-of-care&quot;&gt;A foundation for the next generation of care&lt;/h2&gt;
+&lt;p&gt;Better health software and eventually responsible clinical intelligence depends on better underlying information. AI cannot responsibly fill the gaps created by missing, unverified, or disconnected records. It needs data that is structured, longitudinal, permissioned, and traceable.&lt;/p&gt;
+&lt;p&gt;Merdra is building toward that future, but it begins with a much simpler promise: your health information should not be trapped where it was created.&lt;/p&gt;
+&lt;p&gt;It should be able to follow you, with context and with your permission.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Medical History</title>
+    <published>2026-10-09T00:00:00+00:00</published>
+    <updated>2026-10-09T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/medical-history/"/>
+    <id>https://daveads.github.io/writing/medical-history/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/medical-history/">&lt;p&gt;When you visit a doctor, the conversation usually begins with what is bothering you now. But understanding your current condition can also mean looking at what happened before.&lt;/p&gt;
+&lt;p&gt;A previous diagnosis, a medicine you are taking, an operation, or a reaction to treatment may influence the decisions made during that visit. Your medical history gives the doctor context for understanding the person in front of them.&lt;/p&gt;
+&lt;p&gt;I wanted to understand how this works in everyday practice, so I asked doctors on our team how they use previous patient information and what happens when they cannot access it. This article draws on two of those conversations.&lt;/p&gt;
+&lt;p&gt;Their responses brought the problem into focus. Sometimes patients can explain their history clearly. Sometimes they cannot. And sometimes the information has already been recorded, but the doctor still has difficulty retrieving it.&lt;/p&gt;
+&lt;h2 id=&quot;when-the-record-exists-but-can-t-be-reached&quot;&gt;When the record exists but can&#39;t be reached&lt;/h2&gt;
+&lt;p&gt;One doctor described a consultation that illustrated this last situation.&lt;/p&gt;
+&lt;p&gt;The patient could not clearly explain an existing diagnosis or name the medicines they were taking. The facility had recently moved to a different electronic medical record system. To understand the patient&#39;s treatment and decide what needed to change, the doctor and a consultant had to pause the consultation and retrieve information from the old system.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The information existed. Finding it still interrupted the care being provided.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The clinician still needs to assess the person in front of them. Previous documentation contributes to that assessment alongside the patient&#39;s account, examination findings, and relevant investigations.&lt;/p&gt;
+&lt;h2 id=&quot;when-there-is-no-record-at-all&quot;&gt;When there is no record at all&lt;/h2&gt;
+&lt;p&gt;Both doctors said that when records are unavailable, they take a fresh history. One pointed out that this can be straightforward when the patient can clearly describe their health and treatment. Missing documentation does not make every consultation impossible.&lt;/p&gt;
+&lt;p&gt;The difficulty becomes more apparent when the person cannot provide that account. The other doctor described an unconscious patient whose relatives did not know about an existing condition. Important parts of the patient&#39;s history became clear only during further assessment.&lt;/p&gt;
+&lt;h2 id=&quot;what-patients-and-families-carry&quot;&gt;What patients and families carry&lt;/h2&gt;
+&lt;p&gt;Those experiences made me think about how much we ask patients and families to carry between appointments. Imagine arriving at a new clinic with results on your phone, a prescription on paper, and details of an earlier consultation you are trying to remember.&lt;/p&gt;
+&lt;p&gt;Someone may know they take a tablet without knowing its name. A relative may accompany a patient without knowing their earlier diagnoses. A record can help fill those gaps, while still needing to be checked against the patient&#39;s current situation.&lt;/p&gt;
+&lt;h2 id=&quot;medication-history&quot;&gt;Medication history&lt;/h2&gt;
+&lt;p&gt;Medication information was another concrete example. One doctor described how reviewing a patient&#39;s medication history led the team to postpone a planned operation. I am keeping the clinical details general here, but the significance for this discussion is clear: information about earlier care changed the next decision.&lt;/p&gt;
+&lt;p&gt;Accurate medication records include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;current medicines,&lt;/li&gt;
+&lt;li&gt;known allergies and reactions, and&lt;/li&gt;
+&lt;li&gt;changes to treatment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Care Quality Commission&#39;s guidance also emphasises checking discrepancies when people move between care settings.&lt;/p&gt;
+&lt;h2 id=&quot;why-investigations-get-repeated&quot;&gt;Why investigations get repeated&lt;/h2&gt;
+&lt;p&gt;The conversations also changed how I think about investigations. Not every consultation requires new laboratory tests or access to every past record. What matters is whether the available information helps answer the current clinical question.&lt;/p&gt;
+&lt;p&gt;Even when an earlier result is available, another test may be needed. The doctors described several different reasons for repeating an investigation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Monitoring:&lt;/strong&gt; a new result may be needed to assess changes in the patient&#39;s condition or response to treatment.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Checking a finding:&lt;/strong&gt; a result that raises concerns about reliability or differs substantially from the clinical picture may prompt further investigation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Missing information:&lt;/strong&gt; a previous result may have to be repeated because it cannot be retrieved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Those reasons deserve separate attention. Better access could help address the third situation. It would not remove the need for clinical monitoring or for questioning a result.&lt;/p&gt;
+&lt;h3 id=&quot;a-result-needs-context&quot;&gt;A result needs context&lt;/h3&gt;
+&lt;p&gt;A value outside a reference range does not always indicate illness, and a value within it does not always rule illness out. Interpretation depends on the wider clinical picture.&lt;/p&gt;
+&lt;p&gt;Earlier results may help reveal changes over time. Dates, units, reference ranges, and testing methods matter when making comparisons. Results from different laboratories may not be directly comparable.&lt;/p&gt;
+&lt;p&gt;For anyone building software around medical records, those details deserve as much attention as the number itself.&lt;/p&gt;
+&lt;h2 id=&quot;trusting-results-from-elsewhere&quot;&gt;Trusting results from elsewhere&lt;/h2&gt;
+&lt;p&gt;That leads to another question I asked: what makes a doctor trust a result from another facility?&lt;/p&gt;
+&lt;p&gt;Both doctors discussed the facility&#39;s track record and whether the findings made sense alongside the patient&#39;s presentation. Their accounts suggest that access and confidence in the information are separate problems to understand.&lt;/p&gt;
+&lt;p&gt;For Merdra, that distinction matters. Recording where a result came from and whether it has changed can make its history traceable. It does not, by itself, establish that the test was performed correctly or that the interpretation is accurate.&lt;/p&gt;
+&lt;h2 id=&quot;when-an-institution-changes-software&quot;&gt;When an institution changes software&lt;/h2&gt;
+&lt;p&gt;The old-EMR example raises a related engineering question. What happens to a patient&#39;s history when an institution changes software? In the case described to me, the clinicians could retrieve it, but doing so required an extra step during the consultation. Making information digital had not made continuity automatic.&lt;/p&gt;
+&lt;p&gt;Both doctors wanted reliable access to previous records across facilities. My interpretation is that continuity should mean access to relevant information in a form the clinician can assess and use. It needs to be current enough for the decision and available to the people authorised to use it. Patients should not have to surrender privacy to benefit from continuity.&lt;/p&gt;
+&lt;h2 id=&quot;what-we-are-building&quot;&gt;What we are building&lt;/h2&gt;
+&lt;p&gt;This is part of the problem we are working on at &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.merdra.com/&quot;&gt;Merdra&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We are building towards medical information that can follow a patient across providers and become usable by other healthcare software. Identity, permissions, and the source and history of each record are part of that foundation.&lt;/p&gt;
+&lt;p&gt;Making information available is one part of the work. Its accuracy, meaning, and place in the clinical workflow matter too.&lt;/p&gt;
+&lt;p&gt;These conversations give us specific things to investigate as we build:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;how clinicians retrieve older records,&lt;/li&gt;
+&lt;li&gt;how they check results from elsewhere, and&lt;/li&gt;
+&lt;li&gt;where information becomes difficult to use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We still need to learn how often these situations occur and whether our approach helps in practice.&lt;/p&gt;
+&lt;p&gt;The question I want us to keep asking is simple:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When someone needs care, can the people caring for them access and understand the information that matters?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- Editorial note: Before publication, ask the two doctors to confirm that the anonymised paraphrases reflect their accounts accurately. The medication examples intentionally omit drug names, doses, administration instructions, and recommended waiting periods. --&gt;
+&lt;blockquote class=&quot;callout note&quot;&gt;
+&lt;div class=&quot;icon&quot;&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Paraphrased from responses shared by two doctors on the Merdra team while developing this article. These are exploratory conversations, not a representative study. Patient and facility identifiers are not included.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>The Kind of Founder I Aim to Be</title>
+    <published>2026-09-29T00:00:00+00:00</published>
+    <updated>2026-09-29T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/the-kind-of-founder-i-aim-to-be/"/>
+    <id>https://daveads.github.io/writing/the-kind-of-founder-i-aim-to-be/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/the-kind-of-founder-i-aim-to-be/">&lt;p&gt;When I think about finding investors, I also think about the conversations we will have after they back us.&lt;/p&gt;
+&lt;p&gt;A year later:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What would they say about working with me?&lt;/li&gt;
+&lt;li&gt;Would they understand where their money went?&lt;/li&gt;
+&lt;li&gt;Would they understand the progress we had made, what we had learned, and the challenges we were facing?&lt;/li&gt;
+&lt;li&gt;Would they feel that I had taken their belief in me seriously?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Those questions matter to me.&lt;/p&gt;
+&lt;p&gt;I live in Nigeria. Building a company from here means working through constraints, including distance from many of the people I hope to build relationships with. There are fewer opportunities for someone on the other side of the world to meet me casually or watch how I work over time.&lt;/p&gt;
+&lt;p&gt;That makes me think carefully about how I make my work visible, explain my decisions, and earn trust.&lt;/p&gt;
+&lt;p&gt;I want to build relationships that last for years. I want to earn the trust of the people who back me through the way I work and the commitments I keep, so they are willing to listen when I bring them another difficult problem worth solving.&lt;/p&gt;
+&lt;p&gt;That starts with how I handle the opportunity in front of me.&lt;/p&gt;
+&lt;p&gt;For me, keeping my word starts with being careful about what I promise. If I say an investment will help us reach a particular milestone, I should be able to explain the work involved, the assumptions behind the plan, and how we will measure progress. I should understand the terms I agree to and take those commitments seriously.&lt;/p&gt;
+&lt;p&gt;Those commitments should remain visible in how I run the company.&lt;/p&gt;
+&lt;p&gt;I want to be deliberate about who we hire, what we prioritise, and how we use capital. Each decision should have a clear purpose, with progress we can assess. I will take responsibility for the results, address mistakes early, and act on what we learn, even when that means changing a decision I strongly believed in.&lt;/p&gt;
+&lt;p&gt;Communication matters just as much when the news is difficult. A delayed product, a customer who walks away, or an assumption that turns out to be wrong should lead to an honest conversation. People who have backed me should have enough information to understand the situation.&lt;/p&gt;
+&lt;p&gt;Building Merdra will mean developing new ideas and refining our approach as we learn. Research can challenge a plan. Customers can reveal a different problem. When that happens, I want to explain the evidence, discuss the consequences, and agree on any necessary changes to our commitments.&lt;/p&gt;
+&lt;p&gt;I cannot promise that every decision will work. I&#39;m committed to doing the work, taking responsibility for my decisions, and being truthful about the results.&lt;/p&gt;
+&lt;p&gt;My focus now is Merdra. I want to build infrastructure that allows medical information to follow a patient across healthcare providers and become useful to the software built around their care.&lt;/p&gt;
+&lt;p&gt;My vision for Merdra is ambitious. Software is our focus today, and over time I want us to expand into hardware that works with the infrastructure we are building. Getting there will take sustained work. I want us to earn each next step through what we build, learn, and deliver today.&lt;/p&gt;
+&lt;p&gt;A lasting investor relationship will still require each new idea to stand on its own merits. What I hope carries forward is a clear record of how I work.&lt;/p&gt;
+&lt;p&gt;Years from now, I would like someone introducing me to be able to say: &quot;He takes his commitments seriously, he tells you what is happening, and he keeps doing the difficult work.&quot;&lt;/p&gt;
+&lt;p&gt;I want to earn that description through the way I build &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.merdra.com/&quot;&gt;Merdra&lt;/a&gt;.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+</feed>

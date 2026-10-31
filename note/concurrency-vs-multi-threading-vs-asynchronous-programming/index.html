@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	
+
+	
+		<!-- meta data -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="author" content="Adejumo David Adewale">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Daveads">
+
+	
+	
+
+
+
+
+
+    
+    
+        
+    
+    
+        
+    
+
+
+
+
+<title>Concurrency vs Multi-threading vs Asynchronous Programming | Daveads</title>
+<meta name="description" content=" Concurrency &amp;amp;&amp;amp; Parallelism Threads (multi-threaded) &amp;amp;&amp;amp; Processes Synchronous &amp;amp;&amp;amp; Asynchronous  Concurrency &amp;amp;&amp;amp; Parallelism Concur…">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://daveads.github.io/note/concurrency-vs-multi-threading-vs-asynchronous-programming/">
+
+
+<meta property="og:title" content="Concurrency vs Multi-threading vs Asynchronous Programming | Daveads">
+<meta property="og:description" content=" Concurrency &amp;amp;&amp;amp; Parallelism Threads (multi-threaded) &amp;amp;&amp;amp; Processes Synchronous &amp;amp;&amp;amp; Asynchronous  Concurrency &amp;amp;&amp;amp; Parallelism Concur…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://daveads.github.io/note/concurrency-vs-multi-threading-vs-asynchronous-programming/">
+
+<meta property="article:published_time" content="2022-06-29">
+
+<meta property="article:author" content="Adejumo David Adewale">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@The_Daveads">
+<meta name="twitter:creator" content="@The_Daveads">
+<meta name="twitter:title" content="Concurrency vs Multi-threading vs Asynchronous Programming | Daveads">
+<meta name="twitter:description" content=" Concurrency &amp;amp;&amp;amp; Parallelism Threads (multi-threaded) &amp;amp;&amp;amp; Processes Synchronous &amp;amp;&amp;amp; Asynchronous  Concurrency &amp;amp;&amp;amp; Parallelism Concur…">
+
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Concurrency vs Multi-threading vs Asynchronous Programming",
+  "description": " Concurrency &amp;&amp; Parallelism Threads (multi-threaded) &amp;&amp; Processes Synchronous &amp;&amp; Asynchronous  Concurrency &amp;&amp; Parallelism Concur…",
+  "url": "https://daveads.github.io/note/concurrency-vs-multi-threading-vs-asynchronous-programming/",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://daveads.github.io/note/concurrency-vs-multi-threading-vs-asynchronous-programming/"},
+  "datePublished": "2022-06-29",
+  "dateModified": "2022-06-29",
+  "author": {"@type": "Person", "name": "Adejumo David Adewale", "url": "https://daveads.github.io/about/"},
+  "publisher": {"@type": "Person", "name": "Adejumo David Adewale"}
+}
+
+</script>
+
+
+
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+<link rel="alternate" type="application/atom+xml" title="Daveads feed" href="https://daveads.github.io/atom.xml">
+
+<!-- Sass-file: minima.css -->
+<link rel="stylesheet" href="/minima.css">
+
+<!-- css files -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+
+<link rel="stylesheet" href="/assets/css/shortcodes.css">
+
+
+
+
+<!-- google_analytics -->
+
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-087FCJRFH2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-087FCJRFH2', {
+    'cookie_flags': 'SameSite=None;Secure',
+  });
+</script>
+
+
+
+
+
+<!-- <script type="text/javascript" src="/assets/js/blink.js" defer></script> -->
+<script type="text/javascript" src="/assets/js/scroll-top-button.js" defer></script>
+
+
+<!-- PWA -->
+<script>
+  if ("serviceWorker" in navigator) {
+if (navigator.serviceWorker.controller) {
+   console.log("An active service worker found, no need to register");
+   } else {
+     // Register the service worker
+     navigator.serviceWorker
+       .register("/serviceworker.js", {
+         scope: "./"
+       })
+       .then(function (reg) {
+         console.log("Service worker has been registered for scope: " + reg.scope);
+       });
+    }
+}
+</script>
+
+<!-- programmable search engine -->
+<!-- <script async src="https://cse.google.com/cse.js?cx=acd2a3a68756706a3"></script> -->
+
+<link rel="manifest" type="application/manifest+json" href="https://daveads.github.io/manifest.json">
+
+
+
+
+
+
+
+
+
+
+
+</head>
+ <body>
+		
+		<header class="site-header" role="banner">
+
+  
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Daveads</a>
+
+      <nav class="site-nav">
+
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" aria-label="Toggle navigation menu" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+	<div class="trigger">
+	<a class="page-link"
+     href="https://daveads.github.io/writing/">Writings</a>
+	<a class="page-link"
+     href="https://daveads.github.io/newsletter/">Newsletter</a>
+	<a class="page-link"
+     href="https://daveads.github.io/about/">About</a>
+	</div>
+
+      </nav>
+  </div>
+
+</header>
+
+		
+
+		<button class="scrollToTopBtn" title="Go to top">
+		<img src="/assets/images/186407_arrow_up_icon.png" alt="" height="20" width="20">
+		</button>
+
+		<main class="page-content" aria-label="Content">
+
+				 <section class="section">
+						<div class="wrapper">
+								
+
+
+
+
+
+
+  
+
+
+<article class="post article-post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header article-post__header">
+  <h1 class="post-title p-name" itemprop="name headline">Concurrency vs Multi-threading vs Asynchronous Programming</h1>
+
+  <div class="article-post__details">
+    
+    <p class="post-meta article-post__meta">
+      <time datetime="2022-06-29" itemprop="datePublished">2022-06-29</time>
+      
+    </p>
+    
+
+    <nav class="article-post__nav" aria-label="Notes navigation">
+      <a href="/note/">Notes</a>
+      
+      <span aria-hidden="true">||</span>
+      <a href="/note-archive/">Archive</a>
+      
+    </nav>
+
+    
+    <div class="article-post__tags" aria-label="Tags">
+      <span class="article-post__tags-label">Tags :</span>
+      
+      <a class="tag-link" href="https://daveads.github.io/notet/concurrency/">#concurrency</a>
+      
+      <a class="tag-link" href="https://daveads.github.io/notet/parallelism/">#parallelism</a>
+      
+      <a class="tag-link" href="https://daveads.github.io/notet/threads/">#threads</a>
+      
+      <a class="tag-link" href="https://daveads.github.io/notet/asynchronous/">#asynchronous</a>
+      
+    </div>
+    
+
+    
+<button class="article-back" type="button" onclick="window.history.go(-1)"
+        aria-label="Go back to the previous page" title="Go back">
+  &lt;&lt; cd ..
+</button>
+
+
+  </div>
+</header>
+
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul>
+<li>Concurrency &amp;&amp; Parallelism</li>
+<li>Threads (multi-threaded) &amp;&amp; Processes</li>
+<li>Synchronous &amp;&amp; Asynchronous</li>
+</ul>
+<h3 id="concurrency-parallelism">Concurrency &amp;&amp; Parallelism</h3>
+<p><strong>Concurrency:</strong></p>
+<p>Imagine a task where you have to "sing and eat":</p>
+<ol>
+<li>Sing for a time</li>
+<li>Eat for a time</li>
+</ol>
+<p>This task is performed concurrently. Concurrency is executing tasks at the same time but not necessarily simultaneously.</p>
+<p>Concurrency is handled differently in various processors. In a single core, concurrency is handled via a process called <strong>context-switching</strong>.</p>
+<p><strong>Parallelism:</strong></p>
+<p>Given a task of <em><strong>cooking and speaking to a friend over the phone</strong></em>, these two tasks can be done simultaneously.</p>
+<blockquote>
+<p>"Parallelism means performing two or more tasks simultaneously. Parallel computing in computer science refers to the process of performing multiple calculations simultaneously."</p>
+</blockquote>
+<p>Concurrency and parallelism refer to computer architectures focused on how tasks or computations are performed:</p>
+<ul>
+<li>In a single core, concurrency happens with tasks executing over the same time period via context switching, i.e. only one task gets executed.</li>
+<li>In a multi-core environment, concurrency can be achieved via parallelism, in which multiple tasks are executed simultaneously.</li>
+</ul>
+<h2 id="threads-processes">Threads &amp; Processes</h2>
+<p><strong>Threads:</strong> These are sequences of executing code that can be executed independently of one another. A program can be single-threaded or multi-threaded. It's the smallest unit of a task that can be executed by an OS.</p>
+<p><strong>Processes:</strong> A program is an instance of a running program. A program can have multiple processes. A process usually starts with a single thread but down the line of execution, it can create multiple threads.</p>
+<p><strong>Sync and Async</strong></p>
+<p>Tasks are executed one after the other, e.g. giving a task to write a letter to your mom and a letter to your friend.</p>
+<p><strong>Async:</strong> When one task gets executed, you could switch to a different task without waiting for the previous one to get completed.</p>
+<ul>
+<li>Sync and Async are <em>programming models</em>.</li>
+</ul>
+<h3 id="synchronous-and-asynchronous-in-a-single-and-multi-threaded-environment">Synchronous and Asynchronous in a Single and Multi-threaded Environment</h3>
+<p><strong>Synchronous:</strong></p>
+<ul>
+<li>Single-threaded: Each task gets executed one after another. Each task waits for its previous task to get executed.</li>
+<li>Multi-threaded: Tasks get executed in different threads but wait for any other executing tasks on any other thread.</li>
+</ul>
+<p><strong>Asynchronous:</strong></p>
+<ul>
+<li>Single-threaded: Tasks start executing without waiting for a different task to finish. At a given time, a single task gets executed.</li>
+<li>Multi-threaded: Tasks get executed in different threads without waiting for any tasks and independently finish off their executions.</li>
+</ul>
+<p>Concurrency and Parallelism:</p>
+<ul>
+<li>The way tasks are executed.</li>
+</ul>
+<p>Synchronous and Asynchronous -&gt;</p>
+<ul>
+<li>Programming models.</li>
+</ul>
+<p>Single-threaded and Multi-threaded -&gt;</p>
+<ul>
+<li>The environment of task execution.</li>
+</ul>
+<p>Async helps to achieve concurrency. Async in a multithread environment is a way to achieve parallelism.</p>
+<p>Synchronously: This is how we code normally:</p>
+<blockquote>
+<p>"You wait for an operation to finish before going to the next or moving over to the other one."</p>
+</blockquote>
+<hr />
+<ul>
+<li>Concurrency: Threading, async I/O</li>
+<li>Parallelism: Multiprocessing</li>
+</ul>
+<hr />
+<p>Links:
+<a class="external" rel="external" href="https://medium.com/swift-india/concurrency-parallelism-threads-processes-async-and-sync-related-39fd951bc61d">Medium Article</a></p>
+
+  </div>
+
+  <nav class="article-home" aria-label="Return home">
+  <a href="/">cd ~</a>
+</nav>
+
+</article>
+
+
+						</div>
+				 </section>
+
+		</main>
+		<footer></footer>
+		
+ </body>
+
+</html>
+

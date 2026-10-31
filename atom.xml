@@ -1,0 +1,1371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+  
+  
+  
+  
+    
+  
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Daveads</title>
+  <subtitle>Writings and notes by Adejumo David Adewale, Dive into the abyss of Daveads!</subtitle>
+  <link rel="self" type="application/atom+xml" href="https://daveads.github.io/atom.xml"/>
+  <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+  <generator uri="https://www.getzola.org/">Zola</generator>
+  <updated>2026-10-31T00:00:00+00:00</updated>
+  <id>https://daveads.github.io/atom.xml</id>
+  
+  <entry xml:lang="en">
+    <title>Restyling This Site With Codex</title>
+    <published>2026-10-31T00:00:00+00:00</published>
+    <updated>2026-10-31T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/restyling-this-site-with-codex/"/>
+    <id>https://daveads.github.io/writing/restyling-this-site-with-codex/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/restyling-this-site-with-codex/">&lt;p&gt;I am not really a frontend or UI person, but I do know how things work there.&lt;/p&gt;
+&lt;p&gt;I can tell when something feels wrong on a page, but that does not mean I always know the CSS responsible for it. This site is personal, though, so I care about how it feels. I want it to be simple, calm, and centred on the things I write.&lt;/p&gt;
+&lt;p&gt;I recently restyled it with Codex using &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://developers.openai.com/api/docs/models/gpt-5.6-sol&quot;&gt;GPT-5.6 Sol&lt;/a&gt; at high reasoning effort.&lt;/p&gt;
+&lt;p&gt;It started with a question about SEO. Then I noticed inconsistent spacing, duplicated CSS, mobile problems, and pages that did not feel related. What began as a review slowly became a restyling of almost the entire site.&lt;/p&gt;
+&lt;p&gt;I did not begin with a finished design or a detailed reconstruction plan. I moved through the site one page at a time. I questioned new files, asked why styles were duplicated, compared mobile screenshots, and sometimes reversed changes that felt like too much. The design emerged through those small decisions rather than from one large redesign.&lt;/p&gt;
+&lt;h2 id=&quot;trying-not-to-overdo-it&quot;&gt;Trying not to overdo it&lt;/h2&gt;
+&lt;p&gt;An AI coding agent makes it very easy to add things. A page can quickly gain cards, borders, gradients, animations, and another stylesheet.&lt;/p&gt;
+&lt;p&gt;That speed is useful, but it can also produce too much design.&lt;/p&gt;
+&lt;p&gt;Some early changes looked cool but stopped feeling like my website. The About page was one example. It had more personality, but it also felt over-designed. I kept giving the same feedback:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tone it down a bit.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Codex could produce and modify the interface quickly, while I decided what actually belonged. We would add something, look at it, and remove the parts that made the page feel busy.&lt;/p&gt;
+&lt;p&gt;The goal was never to turn the site into a modern landing page. I wanted a slightly better version of what was already here.&lt;/p&gt;
+&lt;h2 id=&quot;minimal-as-a-system&quot;&gt;Minimal as a system&lt;/h2&gt;
+&lt;p&gt;I started to think of minimalism as having fewer rules to remember, not just fewer things on the screen.&lt;/p&gt;
+&lt;p&gt;Links are blue and turn green when hovered. Writings, Notes, Paper, and their archives use the same visual language. Dates, tags, headings, lists, and the little &lt;code&gt;cd&lt;/code&gt; navigation should not look as if they came from unrelated websites.&lt;/p&gt;
+&lt;p&gt;This meant sharing templates, using the existing Sass structure, removing duplicated code, and checking the same layouts on desktop and mobile. A new page can now inherit an existing pattern instead of needing its own design and stylesheet.&lt;/p&gt;
+&lt;p&gt;That is more useful to me than making one page impressive on its own.&lt;/p&gt;
+&lt;h2 id=&quot;the-daveads-galaxy&quot;&gt;The Daveads Galaxy&lt;/h2&gt;
+&lt;p&gt;The biggest addition was the &lt;a href=&quot;https://daveads.github.io/galaxy/&quot;&gt;Daveads Galaxy&lt;/a&gt;: Daveads at the centre, categories as constellations, topics as planets, and articles inside them.&lt;/p&gt;
+&lt;p&gt;I did not want it to be a hardcoded visual that would break as I wrote more. It reads the categories and tags already used by Writings and Notes. When I publish something new, the Galaxy should understand where it belongs without me manually adding another planet.&lt;/p&gt;
+&lt;p&gt;Mobile made the feature more interesting. Planets needed useful touch targets. Tapping one had to reveal its articles. Zooming the Galaxy should not zoom the entire page, and the navigation still needed to work in full-screen mode. We also kept a list view for anyone who wants a simpler way to browse.&lt;/p&gt;
+&lt;p&gt;The Galaxy is more playful than the rest of the website, but it follows the same rule: content should drive the interface.&lt;/p&gt;
+&lt;h2 id=&quot;working-with-codex&quot;&gt;Working with Codex&lt;/h2&gt;
+&lt;p&gt;A lot of my feedback came through screenshots. I would notice too much empty space, an uncentred video, a heading disappearing on mobile, or two labels sitting too close together. I could point at the problem without knowing which template or Sass rule created it.&lt;/p&gt;
+&lt;p&gt;Codex could trace the element back to the code and make a focused change. I would look at the result and decide whether it felt right. That loop worked well for someone who is not a frontend person but still has an opinion about the result.&lt;/p&gt;
+&lt;p&gt;We also checked the less visible things: responsiveness, builds, internal links, test pages, the Atom feed, and whether Google Analytics remained untouched.&lt;/p&gt;
+&lt;p&gt;After experimenting, we refactored the Galaxy into smaller files and shared common code across other pages. Generated code can work while still being difficult for a human to own. I want to open the repository later, find the relevant file, and change it myself.&lt;/p&gt;
+&lt;p&gt;GPT-5.6 Sol at high reasoning effort was helpful when a small request crossed templates, Sass, JavaScript, content configuration, and mobile behaviour. The &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://developers.openai.com/api/docs/guides/reasoning&quot;&gt;official OpenAI documentation&lt;/a&gt; describes high effort as useful for complex planning, debugging, and agentic work, which matched this project.&lt;/p&gt;
+&lt;p&gt;But it did not replace taste. I still had to say when something was too much, protect the parts I liked, and ask whether a new file was really necessary.&lt;/p&gt;
+&lt;p&gt;Codex gave me implementation speed. I kept responsibility for what the website should feel like.&lt;/p&gt;
+&lt;p&gt;The site now has more capability, but its ordinary pages feel calmer and more consistent. More importantly, it still feels like mine.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>The Age of Infinite Software and Limited Imagination</title>
+    <published>2026-10-28T00:00:00+00:00</published>
+    <updated>2026-10-28T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/the-age-of-infinite-software/"/>
+    <id>https://daveads.github.io/writing/the-age-of-infinite-software/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/the-age-of-infinite-software/">&lt;p&gt;We can build software faster than ever before.&lt;/p&gt;
+&lt;p&gt;You can describe an idea to an AI agent, give it a few instructions, and watch something that might have taken weeks or months begin taking shape in minutes.&lt;/p&gt;
+&lt;p&gt;You&#39;d expect an explosion of creativity: more unusual ideas, ambitious experiments, and people attempting things that previously seemed impossible.&lt;/p&gt;
+&lt;p&gt;Yet sometimes I feel we&#39;re seeing the opposite.&lt;/p&gt;
+&lt;p&gt;Another AI wrapper. Another dashboard. Another application that looks remarkably similar to something that already exists.&lt;/p&gt;
+&lt;p&gt;Of course, people are doing genuinely interesting work. I&#39;m not suggesting innovation has stopped. Maybe I&#39;m just looking in the wrong places.&lt;/p&gt;
+&lt;p&gt;But I keep wondering:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If we now have some of the most powerful tools ever created, where is the spark?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;building-isn-t-the-same-as-imagining&quot;&gt;Building isn&#39;t the same as imagining&lt;/h2&gt;
+&lt;p&gt;There&#39;s a difference between being able to build something and imagining something worth building.&lt;/p&gt;
+&lt;p&gt;Generative AI is reducing the effort required to turn ideas into working systems. You don&#39;t necessarily need to understand every implementation detail before experimenting with an idea. That&#39;s incredible.&lt;/p&gt;
+&lt;p&gt;But making something easier to build doesn&#39;t automatically make us more imaginative. If we keep asking these systems to reproduce what already exists, why should we expect different outcomes?&lt;/p&gt;
+&lt;p&gt;I think we risk confusing &lt;strong&gt;productivity&lt;/strong&gt; with &lt;strong&gt;creativity&lt;/strong&gt;. Producing ten applications doesn&#39;t necessarily mean you&#39;ve explored ten original ideas.&lt;/p&gt;
+&lt;p&gt;And perhaps that&#39;s where our thinking needs to change.&lt;/p&gt;
+&lt;p&gt;For a long time, much of our attention has gone into figuring out &lt;em&gt;how&lt;/em&gt; to build things. As machines become increasingly capable of handling implementation, what happens to all that attention?&lt;/p&gt;
+&lt;p&gt;Do we simply produce more of the same things? Or do we start:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;questioning assumptions,&lt;/li&gt;
+&lt;li&gt;connecting unrelated ideas, and&lt;/li&gt;
+&lt;li&gt;investigating problems we&#39;ve accepted as normal?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;what-s-stopping-someone-from-vibe-coding-google&quot;&gt;What&#39;s stopping someone from vibe coding Google?&lt;/h2&gt;
+&lt;p&gt;Here&#39;s something I&#39;ve been thinking about.&lt;/p&gt;
+&lt;p&gt;What&#39;s stopping someone from opening Claude Code, Codex, or another coding agent and asking it to build Google? They&#39;d need:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a web crawler,&lt;/li&gt;
+&lt;li&gt;a search index,&lt;/li&gt;
+&lt;li&gt;a ranking algorithm,&lt;/li&gt;
+&lt;li&gt;a query interface, and&lt;/li&gt;
+&lt;li&gt;perhaps even an advertising system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nothing is stopping them from trying, and they could probably build a functional search engine prototype surprisingly quickly.&lt;/p&gt;
+&lt;p&gt;But have they built Google? Not quite.&lt;/p&gt;
+&lt;p&gt;Google isn&#39;t simply a collection of source files. Behind its search engine are enormous infrastructure investments, continuously updated indexes, ranking systems, years of operational knowledge, and an entire ecosystem.&lt;/p&gt;
+&lt;p&gt;Writing software that resembles Google is one problem. Building something capable of competing with it at scale is another.&lt;/p&gt;
+&lt;h3 id=&quot;are-software-moats-really-disappearing&quot;&gt;Are software moats really disappearing?&lt;/h3&gt;
+&lt;p&gt;This is why I find the argument that software moats are disappearing somewhat incomplete.&lt;/p&gt;
+&lt;p&gt;Yes, writing code is becoming cheaper. Some products will become much easier to replicate, and some existing advantages will weaken.&lt;/p&gt;
+&lt;p&gt;But the value of a system has never been entirely about how difficult its code is to write. These still matter:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;reliability,&lt;/li&gt;
+&lt;li&gt;architecture,&lt;/li&gt;
+&lt;li&gt;distribution,&lt;/li&gt;
+&lt;li&gt;accumulated knowledge, and&lt;/li&gt;
+&lt;li&gt;the ability to operate under real-world conditions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;None of these advantages is permanent. AI might eventually make many of them easier to reproduce, too.&lt;/p&gt;
+&lt;p&gt;But making something easier to build doesn&#39;t necessarily make it easy to replace.&lt;/p&gt;
+&lt;h2 id=&quot;the-obsession-to-keep-pushing&quot;&gt;The obsession to keep pushing&lt;/h2&gt;
+&lt;p&gt;There&#39;s something else I think matters enormously: &lt;strong&gt;obsession&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Not necessarily spending endless hours writing code yourself, but having an almost unreasonable desire to understand a problem and keep pushing a system beyond its limitations.&lt;/p&gt;
+&lt;p&gt;Imagine two people with access to exactly the same AI tools.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The first&lt;/strong&gt; asks an agent to build an application. It works, so they launch it and move on.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The second&lt;/strong&gt; keeps questioning everything:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Why does it work this way?&lt;/li&gt;
+&lt;li&gt;Why does this limitation exist?&lt;/li&gt;
+&lt;li&gt;What happens if we change the architecture?&lt;/li&gt;
+&lt;li&gt;Could we approach the entire problem differently?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both have the same tools, but they might produce radically different outcomes.&lt;/p&gt;
+&lt;p&gt;You might no longer need to implement every component manually, but you can still be the person directing the experiments, questioning the results, and deciding what to try next. And I find that fascinating.&lt;/p&gt;
+&lt;p&gt;Instead of spending weeks implementing a single approach, you might be able to investigate several alternatives, discover why they fail, and keep refining your understanding.&lt;/p&gt;
+&lt;p&gt;Of course, obsession alone isn&#39;t enough. You can spend years perfecting something nobody needs. But combine it with curiosity, technical understanding, judgment, and a willingness to experiment, and there&#39;s still something valuable there.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The first working implementation shouldn&#39;t necessarily be the end of your imagination. Sometimes it&#39;s where the interesting questions begin.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;this-goes-beyond-software&quot;&gt;This goes beyond software&lt;/h2&gt;
+&lt;p&gt;I don&#39;t think this opportunity is limited to software. Think about hardware, robotics, energy, manufacturing, or scientific research.&lt;/p&gt;
+&lt;p&gt;Imagine designing a robotic hand. You describe what you want, use AI to explore mechanical designs, simulate their movements, and generate components for a prototype. Eventually, you build one.&lt;/p&gt;
+&lt;p&gt;It works, but it struggles to pick up a tiny screw.&lt;/p&gt;
+&lt;p&gt;What happens next?&lt;/p&gt;
+&lt;p&gt;Do you accept the limitation, or do you start questioning the finger geometry, sensors, materials, and control system? Perhaps an entirely different mechanism would work better.&lt;/p&gt;
+&lt;p&gt;AI could help you investigate those possibilities, but someone still has to recognise the problem, test the ideas, and understand what the results mean.&lt;/p&gt;
+&lt;p&gt;And unlike software, the physical world has constraints that don&#39;t disappear because an AI generated a convincing design. Materials cost money. Components wear out. Manufacturing takes time. Physics doesn&#39;t care how impressive your prompt is.&lt;/p&gt;
+&lt;p&gt;Still, as these tools improve, individuals and smaller teams may gain the ability to attempt increasingly complex projects. There are machines we haven&#39;t invented, systems we haven&#39;t connected, and problems we haven&#39;t investigated deeply enough.&lt;/p&gt;
+&lt;p&gt;Not everything has to become another application.&lt;/p&gt;
+&lt;h2 id=&quot;a-forced-evolution-in-how-we-think&quot;&gt;A forced evolution in how we think?&lt;/h2&gt;
+&lt;p&gt;I sometimes wonder whether we&#39;re approaching a point where a kind of forced evolution in our thinking becomes necessary. Not biological evolution, but a change in how we approach problems.&lt;/p&gt;
+&lt;p&gt;We&#39;ve spent years learning how to use computers to accomplish tasks. Now computers are beginning to handle increasingly complex tasks on our behalf.&lt;/p&gt;
+&lt;p&gt;Perhaps this means we need to become more deliberate about exercising our creativity and logical reasoning: to ask better questions, challenge assumptions, and understand systems rather than merely operate them. To see possibilities where others see limitations.&lt;/p&gt;
+&lt;p&gt;I&#39;m not suggesting that implementation no longer matters, or that technical understanding becomes irrelevant. Quite the opposite.&lt;/p&gt;
+&lt;p&gt;The better you understand something, the more effectively you can question it. And the more capable our tools become, the further those questions might take us.&lt;/p&gt;
+&lt;p&gt;But there&#39;s another possibility worth considering.&lt;/p&gt;
+&lt;p&gt;What if increasingly capable AI makes it easier for us to avoid thinking altogether?&lt;/p&gt;
+&lt;p&gt;We could become so comfortable accepting generated solutions that we stop investigating why they work, whether they&#39;re correct, or whether a better approach exists.&lt;/p&gt;
+&lt;p&gt;I don&#39;t think that&#39;s inevitable. But it&#39;s a choice we&#39;ll increasingly have to make.&lt;/p&gt;
+&lt;h2 id=&quot;where-is-the-spark&quot;&gt;Where is the spark?&lt;/h2&gt;
+&lt;p&gt;There is still so much left to solve: healthcare, energy, robotics, biology, computing, and countless problems we probably haven&#39;t even recognised yet.&lt;/p&gt;
+&lt;p&gt;I don&#39;t think we&#39;re running out of ideas. I think we might be underestimating how much remains possible.&lt;/p&gt;
+&lt;p&gt;And perhaps the opportunity presented by generative AI isn&#39;t simply to build the same things faster. It&#39;s to explore things we previously couldn&#39;t afford to attempt.&lt;/p&gt;
+&lt;p&gt;We&#39;ve made it easier than ever to turn an idea into something real. Maybe it&#39;s time we became more ambitious about the ideas themselves.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The machines are getting better at building. Are we getting better at imagining?&lt;/strong&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>How Merdra Handles Access to Medical Information</title>
+    <published>2026-10-20T00:00:00+00:00</published>
+    <updated>2026-10-20T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/how-merdra-handles-access/"/>
+    <id>https://daveads.github.io/writing/how-merdra-handles-access/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/how-merdra-handles-access/">&lt;p&gt;Medical information should follow a patient. That does not mean it should be open to every hospital, clinician, or application.&lt;/p&gt;
+&lt;p&gt;Medical records are confidential. A doctor, nurse, pharmacist, and physiotherapist may care for the same person, but they do not need the same access or have the same responsibilities. Access should depend on who is asking, why they are asking, what they need, and for how long.&lt;/p&gt;
+&lt;p&gt;Merdra is not a mirror of every hospital’s EMR. It is a trust and exchange layer for the parts of a medical history that need to move safely between care settings.&lt;/p&gt;
+&lt;h2 id=&quot;how-access-is-decided&quot;&gt;How access is decided&lt;/h2&gt;
+&lt;p&gt;Patient permission is an important part of access, but it is not the only check.&lt;/p&gt;
+&lt;p&gt;Before Merdra returns a record, it should verify the:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Practitioner&lt;/strong&gt; and &lt;strong&gt;organisation&lt;/strong&gt; making the request&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Role&lt;/strong&gt; and &lt;strong&gt;purpose&lt;/strong&gt; behind it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Requested scope&lt;/strong&gt; and &lt;strong&gt;time limit&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Applicable policy&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Working at a hospital, or knowing a patient’s name, should not be enough to access their medical information.&lt;/p&gt;
+&lt;h2 id=&quot;what-a-patient-can-do&quot;&gt;What a patient can do&lt;/h2&gt;
+&lt;p&gt;A patient should be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;See a patient-safe view of their Merdra history&lt;/strong&gt; — what information Merdra holds, where it came from, when it was created, and whether it is current or corrected.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Choose who can retrieve relevant records&lt;/strong&gt; — for example, approving a new hospital’s request for laboratory history for a defined purpose and period.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Revoke a sharing grant&lt;/strong&gt; when it is no longer needed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;See access history&lt;/strong&gt; — which organisation accessed which category of record and when.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Request a correction&lt;/strong&gt; or add a patient statement when information appears wrong.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This does not mean a patient sees every raw internal hospital note or every result without context. Some information may require clinician discussion or be restricted under a defined safety and legal policy before appearing in the patient-facing view.&lt;/p&gt;
+&lt;p&gt;Patients cannot edit a diagnosis, prescription, or laboratory result. The organisation and professional who created a record remain accountable for it. A correction creates a new linked version while preserving the source and history.&lt;/p&gt;
+&lt;h2 id=&quot;what-a-treating-provider-can-do&quot;&gt;What a treating provider can do&lt;/h2&gt;
+&lt;p&gt;When a patient begins care at another hospital, an authorised provider can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Request only what is needed&lt;/strong&gt; for care.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;State the purpose and duration&lt;/strong&gt; of that request.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Retrieve a permitted, verified, source-attributed copy&lt;/strong&gt; of the record.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create new clinical information&lt;/strong&gt; under their own organisation’s identity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;They cannot edit the original result, diagnosis, or note created elsewhere.&lt;/p&gt;
+&lt;p&gt;If Hospital B creates a new test result, diagnosis, or treatment record, that becomes Hospital B’s own clinical assertion. Merdra can add a structured and verifiable representation of it to the patient’s portable history.&lt;/p&gt;
+&lt;h2 id=&quot;what-happens-in-an-emergency&quot;&gt;What happens in an emergency?&lt;/h2&gt;
+&lt;p&gt;There are situations where a patient may be unconscious or unable to approve access.&lt;/p&gt;
+&lt;p&gt;Merdra should eventually support a tightly controlled emergency-access path for verified clinicians. It should:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Expose only the information necessary for urgent care&lt;/li&gt;
+&lt;li&gt;Require a stated reason&lt;/li&gt;
+&lt;li&gt;Expire quickly&lt;/li&gt;
+&lt;li&gt;Create a full audit trail&lt;/li&gt;
+&lt;li&gt;Notify the patient afterwards, where appropriate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Emergency access must be a governed exception, not a back door into every patient record.&lt;/p&gt;
+&lt;h2 id=&quot;the-principle&quot;&gt;The principle&lt;/h2&gt;
+&lt;p&gt;Hospitals keep using their local systems for appointments, billing, prescriptions, notes, and day-to-day care. Merdra does not replace or run those workflows. It handles the data layer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identity&lt;/li&gt;
+&lt;li&gt;Consent&lt;/li&gt;
+&lt;li&gt;Provenance&lt;/li&gt;
+&lt;li&gt;Permissions&lt;/li&gt;
+&lt;li&gt;Audit history&lt;/li&gt;
+&lt;li&gt;Safe exchange of selected medical information between authorised systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Medical information should follow the patient without becoming a document that anyone can edit.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>What Is Merdra?</title>
+    <published>2026-10-19T00:00:00+00:00</published>
+    <updated>2026-10-19T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/what-is-merdra/"/>
+    <id>https://daveads.github.io/writing/what-is-merdra/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/what-is-merdra/">&lt;p&gt;Health has a memory. Too often, healthcare does not.&lt;/p&gt;
+&lt;p&gt;When people move between clinics, hospitals, laboratories, or even cities, important parts of their medical history can be left behind. A test result may live on paper, in a PDF, in a WhatsApp chat, or inside a system that the next provider cannot access. At the next appointment, the conversation begins again: &lt;em&gt;What happened before? Which medicines have you taken? Do you have the result?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The problem is not that clinicians do not care about context. It is that the systems around them rarely allow reliable health information to travel with the person it belongs to.&lt;/p&gt;
+&lt;p&gt;That is the problem Merdra exists to solve.&lt;/p&gt;
+&lt;h2 id=&quot;merdra-is-health-data-infrastructure&quot;&gt;Merdra is health-data infrastructure&lt;/h2&gt;
+&lt;p&gt;Merdra is building the trust and interoperability layer that lets medical information follow a patient.&lt;/p&gt;
+&lt;p&gt;We are not trying to become every hospital&#39;s electronic medical-record system, nor are we building another place to upload documents and forget them. We are building the underlying infrastructure that can help laboratories, healthcare providers, patient applications, and future clinical tools work from health information that is structured, permissioned, and trustworthy.&lt;/p&gt;
+&lt;p&gt;We are also building Merdra so other healthcare startups and developers can build their own applications on it.&lt;/p&gt;
+&lt;p&gt;In simple terms, Merdra should make it possible for the right health information to be available to the right person or system, at the right time, with the patient&#39;s permission.&lt;/p&gt;
+&lt;h2 id=&quot;why-records-today-are-not-enough&quot;&gt;Why records today are not enough&lt;/h2&gt;
+&lt;p&gt;Most healthcare information is created for a moment: a consultation, a prescription, a test, or a discharge. But a person&#39;s health is not a series of isolated moments. It is a continuing story.&lt;/p&gt;
+&lt;p&gt;When that story is fragmented, every new provider has to reconstruct it. Patients must remember details under pressure, carry documents around, or repeat tests that may already have been done. Providers make decisions with less context than they should have. And valuable information that could support better care stays trapped in formats and systems that cannot easily work together.&lt;/p&gt;
+&lt;p&gt;The consequences of fragmented history are not abstract. In &lt;a href=&quot;https://daveads.github.io/writing/medical-history/&quot;&gt;Medical History&lt;/a&gt;, we shared conversations with two doctors on our team about the difficulty of retrieving older records and using information from elsewhere during care.&lt;/p&gt;
+&lt;p&gt;Digitising a document alone does not solve this. A scanned result is easier to store, but it is still difficult for software and often for another provider to understand, compare, or safely use.&lt;/p&gt;
+&lt;p&gt;Merdra is being built so health data can be more than a collection of files.&lt;/p&gt;
+&lt;h2 id=&quot;what-merdra-makes-possible&quot;&gt;What Merdra makes possible&lt;/h2&gt;
+&lt;p&gt;At its core, Merdra brings together a few things healthcare data needs in order to be useful across systems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Structured information.&lt;/strong&gt; Important clinical details such as a lab test&#39;s name, value, unit, reference range, and date should be represented as data, not just as pixels on a page.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Provenance.&lt;/strong&gt; A record should show where it came from, who created it, and when. That gives the next person or system a basis for understanding whether it can be trusted.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Consent and access control.&lt;/strong&gt; Health information is deeply personal. Patients should be able to understand and control how it is shared, while providers get the information they are authorised to use.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interoperability.&lt;/strong&gt; Different organisations and applications should not need to start from zero every time they need to work together. With permission, they should be able to exchange relevant information in a reliable way.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;An audit trail.&lt;/strong&gt; Access and changes should be accountable. Trust cannot be an afterthought when the data concerns someone&#39;s health.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These capabilities may sound technical, but their purpose is human: to give patients continuity, give clinicians context, and make safer, more useful health software possible.&lt;/p&gt;
+&lt;h2 id=&quot;we-are-starting-with-lab-results&quot;&gt;We are starting with lab results&lt;/h2&gt;
+&lt;p&gt;Merdra&#39;s first focus is structured diagnostic laboratory results.&lt;/p&gt;
+&lt;p&gt;Lab results are a practical place to begin because they are important, common, and often difficult to carry from one point of care to another. They also contain the kind of precise information that becomes far more useful when it is structured: a result can be compared over time, interpreted alongside other records, or shared with a new provider without someone having to manually re-enter it.&lt;/p&gt;
+&lt;p&gt;The first milestone is not to capture every piece of medical information at once. It is to create a trustworthy path for a laboratory result to become a portable, usable record—one a patient can access and share, and one an authorised provider or tool can understand.&lt;/p&gt;
+&lt;p&gt;From there, Merdra can expand carefully toward a more complete longitudinal health history: medication records, diagnoses, care events, and other information that helps tell the full story.&lt;/p&gt;
+&lt;h2 id=&quot;trust-is-the-product&quot;&gt;Trust is the product&lt;/h2&gt;
+&lt;p&gt;Health data is not ordinary data. It can affect a diagnosis, a treatment decision, a person&#39;s privacy, and their confidence in the healthcare system.&lt;/p&gt;
+&lt;p&gt;That means Merdra has to be built around trust from the beginning. Information needs clear provenance. Sharing needs meaningful consent. Access needs accountability. And interoperability cannot come at the cost of patient dignity or security.&lt;/p&gt;
+&lt;p&gt;The goal is not simply to move more data around. It is to make the data that moves understandable, traceable, and appropriately controlled.&lt;/p&gt;
+&lt;h2 id=&quot;beyond-continuity-building-clinical-context&quot;&gt;Beyond continuity: building clinical context&lt;/h2&gt;
+&lt;p&gt;Continuity is the first promise, not the final value. A record that can move with a patient is useful; a trustworthy longitudinal history can also help people and software understand what has changed, what may be connected, and what information is still missing.&lt;/p&gt;
+&lt;p&gt;As Merdra&#39;s records become more structured and longitudinal, we can support clinician-facing tools that surface trends over time, relevant medication and diagnostic history, family-health context, and gaps or contradictions in the record. Each signal should make its basis visible: the source records, the dates, the units, and the limits of what is known.&lt;/p&gt;
+&lt;p&gt;This is not about asking software to make a diagnosis on its own. It is about giving clinicians clearer, source-grounded context so they can apply their judgement. Over time, validated clinical decision-support and preventive tools may be built on this foundation. But trustworthy data, meaningful consent, transparency, and human review have to come first.&lt;/p&gt;
+&lt;p&gt;Family context deserves particular care. Knowing relevant family history is not the same as having access to another person&#39;s private medical record.&lt;/p&gt;
+&lt;h2 id=&quot;building-from-nigeria-with-a-global-ambition&quot;&gt;Building from Nigeria, with a global ambition&lt;/h2&gt;
+&lt;p&gt;We are starting in Nigeria, where fragmented records, paper workflows, PDFs, and disconnected providers make the need for continuity especially clear. But this is not only a Nigerian problem. Around the world, healthcare is still organised around institutions while people&#39;s lives and health needs move across them.&lt;/p&gt;
+&lt;p&gt;Nigeria is Merdra&#39;s beachhead, not its boundary.&lt;/p&gt;
+&lt;p&gt;We want to prove the model where the problem is real and urgent, learn directly from patients, laboratories, and providers, and build infrastructure strong enough to support healthcare wherever people need their information to move with them.&lt;/p&gt;
+&lt;h2 id=&quot;a-foundation-for-the-next-generation-of-care&quot;&gt;A foundation for the next generation of care&lt;/h2&gt;
+&lt;p&gt;Better health software and eventually responsible clinical intelligence depends on better underlying information. AI cannot responsibly fill the gaps created by missing, unverified, or disconnected records. It needs data that is structured, longitudinal, permissioned, and traceable.&lt;/p&gt;
+&lt;p&gt;Merdra is building toward that future, but it begins with a much simpler promise: your health information should not be trapped where it was created.&lt;/p&gt;
+&lt;p&gt;It should be able to follow you, with context and with your permission.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Medical History</title>
+    <published>2026-10-09T00:00:00+00:00</published>
+    <updated>2026-10-09T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/medical-history/"/>
+    <id>https://daveads.github.io/writing/medical-history/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/medical-history/">&lt;p&gt;When you visit a doctor, the conversation usually begins with what is bothering you now. But understanding your current condition can also mean looking at what happened before.&lt;/p&gt;
+&lt;p&gt;A previous diagnosis, a medicine you are taking, an operation, or a reaction to treatment may influence the decisions made during that visit. Your medical history gives the doctor context for understanding the person in front of them.&lt;/p&gt;
+&lt;p&gt;I wanted to understand how this works in everyday practice, so I asked doctors on our team how they use previous patient information and what happens when they cannot access it. This article draws on two of those conversations.&lt;/p&gt;
+&lt;p&gt;Their responses brought the problem into focus. Sometimes patients can explain their history clearly. Sometimes they cannot. And sometimes the information has already been recorded, but the doctor still has difficulty retrieving it.&lt;/p&gt;
+&lt;h2 id=&quot;when-the-record-exists-but-can-t-be-reached&quot;&gt;When the record exists but can&#39;t be reached&lt;/h2&gt;
+&lt;p&gt;One doctor described a consultation that illustrated this last situation.&lt;/p&gt;
+&lt;p&gt;The patient could not clearly explain an existing diagnosis or name the medicines they were taking. The facility had recently moved to a different electronic medical record system. To understand the patient&#39;s treatment and decide what needed to change, the doctor and a consultant had to pause the consultation and retrieve information from the old system.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The information existed. Finding it still interrupted the care being provided.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The clinician still needs to assess the person in front of them. Previous documentation contributes to that assessment alongside the patient&#39;s account, examination findings, and relevant investigations.&lt;/p&gt;
+&lt;h2 id=&quot;when-there-is-no-record-at-all&quot;&gt;When there is no record at all&lt;/h2&gt;
+&lt;p&gt;Both doctors said that when records are unavailable, they take a fresh history. One pointed out that this can be straightforward when the patient can clearly describe their health and treatment. Missing documentation does not make every consultation impossible.&lt;/p&gt;
+&lt;p&gt;The difficulty becomes more apparent when the person cannot provide that account. The other doctor described an unconscious patient whose relatives did not know about an existing condition. Important parts of the patient&#39;s history became clear only during further assessment.&lt;/p&gt;
+&lt;h2 id=&quot;what-patients-and-families-carry&quot;&gt;What patients and families carry&lt;/h2&gt;
+&lt;p&gt;Those experiences made me think about how much we ask patients and families to carry between appointments. Imagine arriving at a new clinic with results on your phone, a prescription on paper, and details of an earlier consultation you are trying to remember.&lt;/p&gt;
+&lt;p&gt;Someone may know they take a tablet without knowing its name. A relative may accompany a patient without knowing their earlier diagnoses. A record can help fill those gaps, while still needing to be checked against the patient&#39;s current situation.&lt;/p&gt;
+&lt;h2 id=&quot;medication-history&quot;&gt;Medication history&lt;/h2&gt;
+&lt;p&gt;Medication information was another concrete example. One doctor described how reviewing a patient&#39;s medication history led the team to postpone a planned operation. I am keeping the clinical details general here, but the significance for this discussion is clear: information about earlier care changed the next decision.&lt;/p&gt;
+&lt;p&gt;Accurate medication records include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;current medicines,&lt;/li&gt;
+&lt;li&gt;known allergies and reactions, and&lt;/li&gt;
+&lt;li&gt;changes to treatment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Care Quality Commission&#39;s guidance also emphasises checking discrepancies when people move between care settings.&lt;/p&gt;
+&lt;h2 id=&quot;why-investigations-get-repeated&quot;&gt;Why investigations get repeated&lt;/h2&gt;
+&lt;p&gt;The conversations also changed how I think about investigations. Not every consultation requires new laboratory tests or access to every past record. What matters is whether the available information helps answer the current clinical question.&lt;/p&gt;
+&lt;p&gt;Even when an earlier result is available, another test may be needed. The doctors described several different reasons for repeating an investigation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Monitoring:&lt;/strong&gt; a new result may be needed to assess changes in the patient&#39;s condition or response to treatment.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Checking a finding:&lt;/strong&gt; a result that raises concerns about reliability or differs substantially from the clinical picture may prompt further investigation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Missing information:&lt;/strong&gt; a previous result may have to be repeated because it cannot be retrieved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Those reasons deserve separate attention. Better access could help address the third situation. It would not remove the need for clinical monitoring or for questioning a result.&lt;/p&gt;
+&lt;h3 id=&quot;a-result-needs-context&quot;&gt;A result needs context&lt;/h3&gt;
+&lt;p&gt;A value outside a reference range does not always indicate illness, and a value within it does not always rule illness out. Interpretation depends on the wider clinical picture.&lt;/p&gt;
+&lt;p&gt;Earlier results may help reveal changes over time. Dates, units, reference ranges, and testing methods matter when making comparisons. Results from different laboratories may not be directly comparable.&lt;/p&gt;
+&lt;p&gt;For anyone building software around medical records, those details deserve as much attention as the number itself.&lt;/p&gt;
+&lt;h2 id=&quot;trusting-results-from-elsewhere&quot;&gt;Trusting results from elsewhere&lt;/h2&gt;
+&lt;p&gt;That leads to another question I asked: what makes a doctor trust a result from another facility?&lt;/p&gt;
+&lt;p&gt;Both doctors discussed the facility&#39;s track record and whether the findings made sense alongside the patient&#39;s presentation. Their accounts suggest that access and confidence in the information are separate problems to understand.&lt;/p&gt;
+&lt;p&gt;For Merdra, that distinction matters. Recording where a result came from and whether it has changed can make its history traceable. It does not, by itself, establish that the test was performed correctly or that the interpretation is accurate.&lt;/p&gt;
+&lt;h2 id=&quot;when-an-institution-changes-software&quot;&gt;When an institution changes software&lt;/h2&gt;
+&lt;p&gt;The old-EMR example raises a related engineering question. What happens to a patient&#39;s history when an institution changes software? In the case described to me, the clinicians could retrieve it, but doing so required an extra step during the consultation. Making information digital had not made continuity automatic.&lt;/p&gt;
+&lt;p&gt;Both doctors wanted reliable access to previous records across facilities. My interpretation is that continuity should mean access to relevant information in a form the clinician can assess and use. It needs to be current enough for the decision and available to the people authorised to use it. Patients should not have to surrender privacy to benefit from continuity.&lt;/p&gt;
+&lt;h2 id=&quot;what-we-are-building&quot;&gt;What we are building&lt;/h2&gt;
+&lt;p&gt;This is part of the problem we are working on at &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.merdra.com/&quot;&gt;Merdra&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We are building towards medical information that can follow a patient across providers and become usable by other healthcare software. Identity, permissions, and the source and history of each record are part of that foundation.&lt;/p&gt;
+&lt;p&gt;Making information available is one part of the work. Its accuracy, meaning, and place in the clinical workflow matter too.&lt;/p&gt;
+&lt;p&gt;These conversations give us specific things to investigate as we build:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;how clinicians retrieve older records,&lt;/li&gt;
+&lt;li&gt;how they check results from elsewhere, and&lt;/li&gt;
+&lt;li&gt;where information becomes difficult to use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We still need to learn how often these situations occur and whether our approach helps in practice.&lt;/p&gt;
+&lt;p&gt;The question I want us to keep asking is simple:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When someone needs care, can the people caring for them access and understand the information that matters?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- Editorial note: Before publication, ask the two doctors to confirm that the anonymised paraphrases reflect their accounts accurately. The medication examples intentionally omit drug names, doses, administration instructions, and recommended waiting periods. --&gt;
+&lt;blockquote class=&quot;callout note&quot;&gt;
+&lt;div class=&quot;icon&quot;&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Paraphrased from responses shared by two doctors on the Merdra team while developing this article. These are exploratory conversations, not a representative study. Patient and facility identifiers are not included.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>The Kind of Founder I Aim to Be</title>
+    <published>2026-09-29T00:00:00+00:00</published>
+    <updated>2026-09-29T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/the-kind-of-founder-i-aim-to-be/"/>
+    <id>https://daveads.github.io/writing/the-kind-of-founder-i-aim-to-be/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/the-kind-of-founder-i-aim-to-be/">&lt;p&gt;When I think about finding investors, I also think about the conversations we will have after they back us.&lt;/p&gt;
+&lt;p&gt;A year later:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What would they say about working with me?&lt;/li&gt;
+&lt;li&gt;Would they understand where their money went?&lt;/li&gt;
+&lt;li&gt;Would they understand the progress we had made, what we had learned, and the challenges we were facing?&lt;/li&gt;
+&lt;li&gt;Would they feel that I had taken their belief in me seriously?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Those questions matter to me.&lt;/p&gt;
+&lt;p&gt;I live in Nigeria. Building a company from here means working through constraints, including distance from many of the people I hope to build relationships with. There are fewer opportunities for someone on the other side of the world to meet me casually or watch how I work over time.&lt;/p&gt;
+&lt;p&gt;That makes me think carefully about how I make my work visible, explain my decisions, and earn trust.&lt;/p&gt;
+&lt;p&gt;I want to build relationships that last for years. I want to earn the trust of the people who back me through the way I work and the commitments I keep, so they are willing to listen when I bring them another difficult problem worth solving.&lt;/p&gt;
+&lt;p&gt;That starts with how I handle the opportunity in front of me.&lt;/p&gt;
+&lt;p&gt;For me, keeping my word starts with being careful about what I promise. If I say an investment will help us reach a particular milestone, I should be able to explain the work involved, the assumptions behind the plan, and how we will measure progress. I should understand the terms I agree to and take those commitments seriously.&lt;/p&gt;
+&lt;p&gt;Those commitments should remain visible in how I run the company.&lt;/p&gt;
+&lt;p&gt;I want to be deliberate about who we hire, what we prioritise, and how we use capital. Each decision should have a clear purpose, with progress we can assess. I will take responsibility for the results, address mistakes early, and act on what we learn, even when that means changing a decision I strongly believed in.&lt;/p&gt;
+&lt;p&gt;Communication matters just as much when the news is difficult. A delayed product, a customer who walks away, or an assumption that turns out to be wrong should lead to an honest conversation. People who have backed me should have enough information to understand the situation.&lt;/p&gt;
+&lt;p&gt;Building Merdra will mean developing new ideas and refining our approach as we learn. Research can challenge a plan. Customers can reveal a different problem. When that happens, I want to explain the evidence, discuss the consequences, and agree on any necessary changes to our commitments.&lt;/p&gt;
+&lt;p&gt;I cannot promise that every decision will work. I&#39;m committed to doing the work, taking responsibility for my decisions, and being truthful about the results.&lt;/p&gt;
+&lt;p&gt;My focus now is Merdra. I want to build infrastructure that allows medical information to follow a patient across healthcare providers and become useful to the software built around their care.&lt;/p&gt;
+&lt;p&gt;My vision for Merdra is ambitious. Software is our focus today, and over time I want us to expand into hardware that works with the infrastructure we are building. Getting there will take sustained work. I want us to earn each next step through what we build, learn, and deliver today.&lt;/p&gt;
+&lt;p&gt;A lasting investor relationship will still require each new idea to stand on its own merits. What I hope carries forward is a clear record of how I work.&lt;/p&gt;
+&lt;p&gt;Years from now, I would like someone introducing me to be able to say: &quot;He takes his commitments seriously, he tells you what is happening, and he keeps doing the difficult work.&quot;&lt;/p&gt;
+&lt;p&gt;I want to earn that description through the way I build &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.merdra.com/&quot;&gt;Merdra&lt;/a&gt;.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Outsourcing your brain</title>
+    <published>2025-11-30T00:00:00+00:00</published>
+    <updated>2025-11-30T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/outsourcing-your-brain/"/>
+    <id>https://daveads.github.io/writing/outsourcing-your-brain/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/outsourcing-your-brain/">&lt;p&gt;Once upon a time I used to Imagine the power one person could hold if they truly understood how technology works.&lt;/p&gt;
+&lt;p&gt;Now, that idea feels a bit shaky because thinking has been outsourced to LLMs.&lt;/p&gt;
+&lt;p&gt;But using your brain is just as important as going to the gym, it’s how you stay mentally strong.&lt;/p&gt;
+&lt;p&gt;It’s okay to be clueless or make unhealthy decisions at some point in your life, just make sure you start using your brain before it’s too late.&lt;/p&gt;
+&lt;p&gt;It’s important you take note of how new technology affects you.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn how to learn  &lt;em&gt;//learn to push your self&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Understand how thing works on a deeper level.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Be the control freak to LLm...&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Learn to use your brain.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;At some point in the future, thinking might just be the next new thing.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Development Environment</title>
+    <published>2024-07-20T00:00:00+00:00</published>
+    <updated>2024-07-20T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/development-environment/"/>
+    <id>https://daveads.github.io/writing/development-environment/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/development-environment/">&lt;figure class=&quot;centered-image&quot;&gt;
+&lt;img src=&quot;/assets/images/writing/dev_environment.jpg&quot; alt=&quot;a human programmer&quot; width=&quot;400&quot; height=&quot;400&quot; loading=&quot;lazy&quot;&gt;
+&lt;figcaption&gt;a human programmer&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;This post was originally intended to be about &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/neovim/neovim&quot;&gt;Neovim&lt;/a&gt; configuration, but changed its focus along the way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Operating System:&lt;/strong&gt;
+I was never a big fan of Windows, though I started with it. I disliked dealing with numerous floating windows just to complete a task that can be done within the terminal window. You don&#39;t get to choose your &lt;strong&gt;window manager&lt;/strong&gt;, &lt;strong&gt;login manager&lt;/strong&gt; or choose when to upgrade, etc. &lt;em&gt;You basically don&#39;t own that computer&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Computer 0:&lt;/strong&gt; &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://archlinux.org/&quot;&gt;Arch Linux&lt;/a&gt;&lt;br /&gt;
+I switch between &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/swaywm/sway&quot;&gt;Sway&lt;/a&gt; and &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/i3/i3&quot;&gt;i3&lt;/a&gt; tiling window managers, for reasons that are admittedly somewhat amusing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Computer 1:&lt;/strong&gt; &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt;&lt;br /&gt;
+Also equipped with i3 and Sway tiling window managers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Computer 2:&lt;/strong&gt; :}&lt;/p&gt;
+&lt;p&gt;I tend to gravitate towards tools written in my favorite programming languages and projects I could potentially contribute to when needed (with the exception of VSCode).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Code Editors:&lt;/strong&gt;&lt;br /&gt;
+I switch between Vim/Neovim and VSCode, depending on my mood. Occasionally, I use &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/lapce/lapce&quot;&gt;Lapce&lt;/a&gt; as well.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Neovim Configuration:&lt;/strong&gt;
+&lt;img src=&quot;/assets/images/writing/screenshot.png&quot; alt=&quot;tmux(0)&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;My Neovim configuration looks like the picture above... lol that is exactly how it looks... if you&#39;re curious, check out my &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/daveads/.sys_s&quot;&gt;Configs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For terminal emulator, I use &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/alacritty/alacritty&quot;&gt;Alacritty&lt;/a&gt;, and for terminal multiplexing, I primarily use &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/tmux/tmux&quot;&gt;Tmux&lt;/a&gt;. My shell environment is mostly Bash.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Browsers:&lt;/strong&gt;&lt;br /&gt;
+While I prefer &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.mozilla.org/en-US/firefox/&quot;&gt;Firefox&lt;/a&gt;, I occasionally use Chrome and Brave.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>My Approach to Resting Right from the Gym</title>
+    <published>2024-06-04T00:00:00+00:00</published>
+    <updated>2024-06-04T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/my-approach-to-resting-right-from-the-gym/"/>
+    <id>https://daveads.github.io/writing/my-approach-to-resting-right-from-the-gym/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/my-approach-to-resting-right-from-the-gym/">&lt;p&gt;One thing you shouldn&#39;t do when aiming to take a rest is to spend more than a month resting. You are pretty much reversing all that hard work. I am actually known as the guy that can never take a rest from the gym...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Spoilers&lt;/strong&gt;&lt;br&gt;
+I once told &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.instagram.com/the.afro.poet/&quot;&gt;@soso&lt;/a&gt; and &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/Retr0ville&quot;&gt;@Retr0ville&lt;/a&gt; that I was going to take a break from the gym for a week and ended up going to two gym sessions during the same week. Weird, right? :) //There are a couple more examples.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&quot;how-would-i-take-a-proper-rest-assuming-i-am-willing-to-take-a-one-month-rest&quot;&gt;How would I take a proper rest assuming I am willing to take a one-month rest?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;I would go to the gym once a week and do a 1-rep max on all my major exercises. We should probably call this &lt;strong&gt;Powerlifting&lt;/strong&gt;, I guess.&lt;br&gt; //If this isn&#39;t an option, get two dumbbells at home.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Keep up with my normal nutrition and I would advise you to eat more.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is how I would take a proper rest... I actually don&#39;t have a scientific backing for this or can give professional advice for this, but if you do have a research paper showing how this should be done properly, shoot me an email at &lt;a href=&quot;mailto:the.daveads@gmail.com&quot;&gt;the.daveads@gmail.com&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+Shoutout to my workout buddies:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/prime-infinity&quot;&gt;Prime&lt;/a&gt;  &lt;strong&gt;//Optimus Prime in human form&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Itopa&lt;/a&gt; &lt;strong&gt;//He speaks to the gods!&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Fona&lt;/a&gt; &lt;strong&gt;//The Jedi Master&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Comrade Ginja&lt;/a&gt; &lt;strong&gt;The Strong Man #general&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Wizben&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;AK&lt;/a&gt; &lt;strong&gt;//The crazy fashion designer&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Nehemiah&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.instagram.com/the.afro.poet/&quot;&gt;Soso&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/Retr0ville&quot;&gt;Retr0ville&lt;/a&gt; &lt;em&gt;//He should really learn to stop avoiding leg days.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Revolutionary new drug stressless</title>
+    <published>2023-08-06T00:00:00+00:00</published>
+    <updated>2023-08-06T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/revolutionary-drug-stressless/"/>
+    <id>https://daveads.github.io/writing/revolutionary-drug-stressless/</id>
+    
+    <summary type="html">&lt;h3 id=&quot;introducing-stressless-the-revolutionary-stress-relief-solution&quot;&gt;&lt;strong&gt;Introducing &lt;code&gt;STRESSLESS&lt;/code&gt; :: The Revolutionary Stress-Relief Solution&lt;/strong&gt;&lt;/h3&gt;</summary>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Moved site from jekyll to zola</title>
+    <published>2022-06-29T00:00:00+00:00</published>
+    <updated>2022-06-29T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/moved-site-from-jekyll-to-zola/"/>
+    <id>https://daveads.github.io/writing/moved-site-from-jekyll-to-zola/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/moved-site-from-jekyll-to-zola/">&lt;p&gt;After transitioning from Jekyll to Zola, I have updated the website&#39;s styling by loosely adapting the &lt;code&gt;Jekyll Minima&lt;/code&gt; SCSS. Zola has proven to be an excellent choice as it seamlessly resolves many of the issues I faced with Jekyll. The fact that Zola is written in &lt;code&gt;Rust&lt;/code&gt; and utilizes the powerful &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/Keats/tera&quot;&gt;Tera&lt;/a&gt; template engine further enhances its appeal.&lt;/p&gt;
+&lt;p&gt;The current version of Zola that I am using is v0.15.3, and it has been performing admirably. For those interested in learning more about Zola and its capabilities, the repository can be found here: &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/getzola/zola&quot;&gt;zola-repo&lt;/a&gt;. Additionally, the documentation is available at &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.getzola.org/documentation/getting-started/overview/&quot;&gt;zola-doc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;With Zola, I feel confident in the future of my website, and I am excited about exploring its features and possibilities.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Programming language resources</title>
+    <published>2022-05-31T00:00:00+00:00</published>
+    <updated>2024-07-20T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/programming-language-resources/"/>
+    <id>https://daveads.github.io/writing/programming-language-resources/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/programming-language-resources/">&lt;p&gt;For a comprehensive list, I highly recommend checking out &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://bernsteinbear.com/pl-resources/&quot;&gt;Max Bernstein&#39;s PL Resources&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;favorite-resources-for-getting-started-with-pl&quot;&gt;&lt;strong&gt;Favorite Resources for Getting Started with PL&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://craftinginterpreters.com/&quot;&gt;Crafting Interpreters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/dp/3982016118&quot;&gt;Writing An Interpreter In Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/dp/398201610X&quot;&gt;Writing A Compiler In Go&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;additional-curated-lists&quot;&gt;Additional curated lists:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/aalhour/awesome-compilers&quot;&gt;Awesome Compilers Resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/danistefanovic/build-your-own-x#build-your-own-programming-language&quot;&gt;Build Your Own Programming Language&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;operating-systems&quot;&gt;Operating Systems&lt;/h2&gt;
+&lt;p&gt;Resources for learning about and building operating systems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://wiki.osdev.org/Main_Page&quot;&gt;OSDev Wiki&lt;/a&gt; - Comprehensive wiki for OS development&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.linuxfromscratch.org/&quot;&gt;Linux From Scratch&lt;/a&gt; - Step-by-step guide to building your own Linux system&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://os.phil-opp.com/&quot;&gt;Writing an OS in Rust&lt;/a&gt; - Blog series on creating an OS using Rust&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/littleosbook/littleosbook/&quot;&gt;Little OS Book&lt;/a&gt; - Concise guide to OS development&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/cfenollosa/os-tutorial&quot;&gt;OS from Scratch&lt;/a&gt; - Hands-on tutorial for building a simple OS&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/codecrafters-io/build-your-own-x#build-your-own-operating-system&quot;&gt;Build Your Own Operating System&lt;/a&gt; - Curated list of OS development resources&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.nand2tetris.org/&quot;&gt;Nand to Tetris Courses&lt;/a&gt; - Build a modern computer system from the ground up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;assembly-language&quot;&gt;Assembly Language&lt;/h2&gt;
+&lt;p&gt;Resources for learning assembly language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://pacman128.github.io/pcasm/&quot;&gt;PC Assembly Language Programming&lt;/a&gt; - Guide to 32-bit x86 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/0xAX/asm&quot;&gt;Learning Assembly for Linux-x64&lt;/a&gt; - Tutorial series for x86-64 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.cs.princeton.edu/courses/archive/spring04/cos217/&quot;&gt;Introduction to Programming Systems&lt;/a&gt; - Princeton University course materials&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://skilldrick.github.io/easy6502/index.html&quot;&gt;Easy 6502&lt;/a&gt; - Interactive tutorial for 6502 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.xorpd.net/pages/x86_adventures.html&quot;&gt;Assembly Language Adventures&lt;/a&gt; - In-depth x86 assembly course&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://gist.github.com/muff-in/ff678b1fda17e6188aa0462a99626121&quot;&gt;Assembly Language / Reversing / Malware Analysis / Game Hacking Resources&lt;/a&gt; - Comprehensive list of assembly-related resources&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.cs.virginia.edu/~evans/cs216/guides/x86.html&quot;&gt;x86 Assembly Guide&lt;/a&gt; - Concise guide to x86 assembly&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mikeroyal/Assembly-Guide&quot;&gt;Assembly Guide&lt;/a&gt; - Extensive guide covering various assembly topics&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Lost someone close recently</title>
+    <published>2020-11-06T00:00:00+00:00</published>
+    <updated>2020-11-06T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/lost-someone-recently/"/>
+    <id>https://daveads.github.io/writing/lost-someone-recently/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/lost-someone-recently/">&lt;p&gt;He was more like a Grand father, Family friend... though i don&#39;t see/view things the same way.. &lt;strong&gt;Died at 78&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This got me thinking about some sort of questions like. :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;what will you be remember for..?&lt;/li&gt;
+&lt;li&gt;what problems or wrong are you willing to change..?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Remembering that i’ll be dead soon is the most important tool i’ve ever encountered to help me make the big choices in life. because almost everything - all external expectations, all pride, all fear of embarrassment or failure - these things just fall away in the face of death, leaving only what is truly important”
+~Steve Jobs&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Two mind blowing articles i read today</title>
+    <published>2020-10-27T00:00:00+00:00</published>
+    <updated>2020-10-27T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/two-mind-blowing-articles/"/>
+    <id>https://daveads.github.io/writing/two-mind-blowing-articles/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/two-mind-blowing-articles/">&lt;p&gt;&lt;strong&gt;Articles on Startups and Success&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://blog.samaltman.com/how-to-be-successful&quot;&gt;How To Be Successful&lt;/a&gt; &lt;br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://blog.samaltman.com/hard-startups&quot;&gt;Hard Startups&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;How to be successful :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Everyone has a different definition of success, irrespective of those beliefs we all do have a specific goal in mind that is to be successful.
+Meaning we do all have to put in the hard work, sleepless night and also working smart.&lt;/p&gt;
+&lt;p&gt;Sam altman actually explained, so I won&#39;t go into full details you can always read the articles.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Self belief&lt;/strong&gt;:
+Not believing in yourself makes the whole process even &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.youtube.com/watch?v=gFE-Tdz24hM&amp;amp;feature=youtu.be&quot;&gt;harder&lt;/a&gt;, this made me remember one of steve job&#39;s quote..&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;&lt;strong&gt;The people who are crazy enough to think they can change the world are the one who do.&lt;/strong&gt;&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Learning to think independently&lt;/strong&gt;:
+There is always a solution to every problem, &lt;strong&gt;success is actually 99% failure and 1% success&lt;/strong&gt;, one thing i learn to do is treat every failed attempt as an experiment or a learning process...&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Focus&lt;/strong&gt;:&lt;br /&gt;
+This is one of the quality i currently lack, According to Steve Jobs,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“&lt;strong&gt;People think focus means saying yes to the thing you&#39;ve got to focus on. But that&#39;s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I&#39;m actually as proud of the things we haven&#39;t done as the things I have done.&lt;/strong&gt;&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;h1 id=&quot;others-i-consider-important&quot;&gt;Others i consider important&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;becoming hard to compete with&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;be bold&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;be internally driven&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Taking risks&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;be good at sales&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;build a network&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;You get rich by owning things&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;hard-startups&quot;&gt;&lt;strong&gt;Hard startups&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Everyone has a different perspective to this, I like the writer&#39;s perspective and also belief startup founders should have a long-term commitment. This made me curious &lt;strong&gt;what should startup in developing countries focus on...?&lt;/strong&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>How thinking while walking helps in fixing bugs</title>
+    <published>2020-10-27T00:00:00+00:00</published>
+    <updated>2020-10-27T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/thinking-while-walking/"/>
+    <id>https://daveads.github.io/writing/thinking-while-walking/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/thinking-while-walking/">&lt;p&gt;Having been experiencing writer’s block since the last time i wrote &lt;a href=&quot;https://daveads.github.io/writing/new-resolution/&quot;&gt;new resolution&lt;/a&gt;, Recently i was asked why i preferred walking to driving or using the public transport, i was unable to give a straight answer to that, Though i had reasons i just don&#39;t know why it happens.&lt;/p&gt;
+&lt;p&gt;E.g:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Walking helped me fix more bugs than i could imagine&lt;/strong&gt;..&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I do most of my best thinking while walking alone*.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It helps me calm my nerves…&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yet i was unable to put the whole piece together,the question fired up more unanswered questions, so i did some &lt;strong&gt;googling&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id=&quot;the-science-behind-it&quot;&gt;&lt;strong&gt;The Science behind it:&lt;/strong&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When we go for a walk, the heart pumps faster, circulating more blood and oxygen not just to the muscles but to all the organs—including the brain,  Walking on a regular basis also promotes new connections between brain cells, staves off the usual withering of brain tissue that comes with age, increases the volume of the hippocampus (a brain region crucial for memory), and elevates levels of molecules that both stimulate the growth of new neurons and transmit messages between them.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;h1 id=&quot;benefit-of-walking&quot;&gt;Benefit of walking :&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Walking boost creativity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Walking sparks connections between brain cells.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It strengthens your hippocampus.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Walking increases blood flow in your brain&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h1 id=&quot;articles&quot;&gt;Articles&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://news.stanford.edu/2014/04/24/walking-vs-sitting-042414/&quot;&gt;walking Vs sitting&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.newyorker.com/tech/annals-of-technology/walking-helps-us-think/amp&quot;&gt;walking helps us think&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.forbes.com/sites/daviddisalvo/2016/10/30/six-reasons-why-walking-is-the-daily-brain-medicine-we-really-need/#5c22978252b8&quot;&gt;benfits of walking&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.bustle.com/p/8-ways-walking-changes-your-brain-for-the-better-according-to-science-10077769&quot;&gt;ways walking changes your brain&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Knowledge worker</title>
+    <published>2020-10-25T00:00:00+00:00</published>
+    <updated>2020-10-25T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/knowledge-workers/"/>
+    <id>https://daveads.github.io/writing/knowledge-workers/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/knowledge-workers/">&lt;p&gt;Glancing through the book &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/gp/product/1455586692/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1455586692&amp;amp;linkCode=as2&amp;amp;tag=daveads-20&amp;amp;linkId=383da9e80b4b22401dcdef4c58418841&quot;&gt;Deep work&lt;/a&gt;, the term &quot;knowledge workers&quot; caught my attention, this is something i do without actually knowing what kind of work it is classified as.&lt;/p&gt;
+&lt;p&gt;Did some research on &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://corporatefinanceinstitute.com/resources/knowledge/other/knowledge-workers/&quot;&gt;knowledge worker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;According to that article, knowledge workers are said to think for a living, unlike manual labourers who are paid for performing a physical tasks, and according to wiki knowledge workers are workers whose main capital is knowledge.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Which got me thinking about the types of workers actually available........??&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&quot;back-to-the-article&quot;&gt;Back to the article:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&quot;knowledge worker&quot;&lt;/strong&gt; was first coined by peter drucker in
+his book &quot;The Land of Tomorrow&quot;...  the knowledge worker are differentiated by their ability to solve complex problems or to develop new products or services in their fields of expertise.. &quot;which his a clear definition of an actual computer programmer&#39;s job&quot;&lt;/p&gt;
+&lt;p&gt;knowledge workers can be programmers, architects, engineers, marketers, design thinkers, public accountants, lawyers, and academics, and essentially any other white-collar worker who uses judgement and critical thinking in their role.&lt;/p&gt;
+&lt;h2 id=&quot;important-facts&quot;&gt;Important facts :&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;To stay relevant learning process is continuous&lt;/li&gt;
+&lt;li&gt;They spend 38% of their time searching for information
+&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;more-info&quot;&gt;More info :&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Knowledge_worker&quot;&gt;wiki: knowledge worker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://corporatefinanceinstitute.com/resources/knowledge/other/knowledge-workers/&quot;&gt;corporate-finance-institute: knowledge workers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://medium.com/snipply/knowledge-workers-information-life-cycles-and-content-silos-oh-my-a4263eed427&quot;&gt;medium: knowledge workers&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>A quick introduction to tmux(0)</title>
+    <published>2020-04-30T00:00:00+00:00</published>
+    <updated>2020-04-30T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/introduction-to-tmux/"/>
+    <id>https://daveads.github.io/writing/introduction-to-tmux/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/introduction-to-tmux/">&lt;p&gt;&lt;img src=&quot;/assets/images/tmux0.png&quot; alt=&quot;tmux(0)&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Prerequisite:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Have a basic understanding of the Linux &lt;a href=&quot;https://daveads.github.io/writing/the-linux-command-line/&quot;&gt;command line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install tmux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Goal:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn what tmux is&lt;/li&gt;
+&lt;li&gt;Get a quick feel of tmux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;tmux&quot;&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Tmux&quot;&gt;Tmux&lt;/a&gt;...?&lt;/h3&gt;
+&lt;p&gt;If you are anything like me then you probably have about &lt;code&gt;&amp;gt;= 5&lt;/code&gt; terminal windows open on your computer when working, And you have a hard time navigating through those terminal (windows) and keeping track of them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/tmux/tmux&quot;&gt;tmux&lt;/a&gt;&lt;/strong&gt; is a terminal multiplexer that helps creates and keep track of termianls from a single screen and does alot more than that, it makes multitasking much easier.&lt;/p&gt;
+&lt;h3 id=&quot;using-tmux&quot;&gt;Using Tmux:&lt;/h3&gt;
+&lt;p&gt;For now, the major focus is to get acquainted with tmux as qucikly as possible before understanding the way it works.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open your terminal and type &lt;code&gt;tmux&lt;/code&gt; if available should open a default window like the pics below.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/tmux0_a.png&quot; alt=&quot;tmux0_a.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Press  &lt;code&gt;ctrl + b&lt;/code&gt; and key at the same time and then release it and then &lt;code&gt;shift + &quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;This split the screen into two top and bottom&lt;/strong&gt;, the splitted screens are called pane.
+&lt;img src=&quot;/assets/images/tmux0_a.png&quot; alt=&quot;tmux0_a.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To navigate between the splitted screen &lt;code&gt;ctrl + b&lt;/code&gt; which open the prefix then &lt;code&gt;o&lt;/code&gt; key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;keywords-in-tmux&quot;&gt;keywords in tmux&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;window&lt;/li&gt;
+&lt;li&gt;pane&lt;/li&gt;
+&lt;li&gt;sessions&lt;/li&gt;
+&lt;li&gt;server&lt;/li&gt;
+&lt;li&gt;client&lt;/li&gt;
+&lt;li&gt;prefix&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;// will talk more on this on the next article&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/tmux/tmux&quot;&gt;tmux source code&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>The Linux Command line interface(0)</title>
+    <published>2020-04-25T00:00:00+00:00</published>
+    <updated>2023-08-06T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/the-linux-command-line/"/>
+    <id>https://daveads.github.io/writing/the-linux-command-line/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/the-linux-command-line/">&lt;video class=&quot;article-video&quot; controls preload=&quot;metadata&quot; aria-label=&quot;Command-line demonstration&quot;&gt;
+  &lt;source src=&quot;/assets/videos/cmd.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  Your browser does not support embedded video.
+&lt;/video&gt;
+&lt;p&gt;I spend 90% of my time in the Terminal emulator (not really sure about that tho), for me it offer&#39;s great flexibility and control than the GUI, and it can be really intimidating at first but it worth your time.&lt;/p&gt;
+&lt;p&gt;Prerequisites: unix or unix-like operating system.&lt;/p&gt;
+&lt;p&gt;Goals:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn what a command line is and how to use it&lt;/li&gt;
+&lt;li&gt;Learn common useful commands and what they mean&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;what-a-command-line-interface&quot;&gt;What a &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Command-line_interface&quot;&gt;command line interface&lt;/a&gt;?&lt;/h3&gt;
+&lt;p&gt;when talking about the command line we are actually refering to &lt;strong&gt;The Shell&lt;/strong&gt;. The shell is a program that takes in Commands or #keywords and passes them to the operating system to carry out. it&#39;s a way of interacting with the computer os, similiar to the &lt;strong&gt;GUI&lt;/strong&gt; but faster and more powerful. The program which handles this commands in the terminal emulator is the &lt;strong&gt;Command-line interpreter&lt;/strong&gt; (shell).&lt;/p&gt;
+&lt;h3 id=&quot;shell-scripting&quot;&gt;Shell Scripting:&lt;/h3&gt;
+&lt;p&gt;As earlier said a Unix shell or shell is a command-line interpreter but also a programming language, the programming language features allows us to combine commands or (utilities) together in a file and run them as a scripts, and yea you can also call it a &lt;strong&gt;Script language&lt;/strong&gt; for now the major focus is getting you to understand the command line and having the feels of it without getting intimidated.. will write more on Shell script on &lt;strong&gt;Using The Linux Command Line(1)&lt;/strong&gt; or probably the next.&lt;/p&gt;
+&lt;h3 id=&quot;running-the-termainal-emulator&quot;&gt;Running the Termainal emulator:&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Computer_terminal&quot;&gt;Computer terminal&lt;/a&gt;:&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/terminal.png&quot; alt=&quot;termainal&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Before delving into what the Terminal emulator actually is, it&#39;s important to know where it all started decades ago. Computers had no GUI for accessing or modifying data; the computer terminal was the only means of entering, displaying, and printing data. These terminals were physical computing devices like IBM 3270, VT100, and many others. For more details, check out &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Computer_terminal&quot;&gt;computer terminal &amp;gt;&amp;gt; wiki&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What&#39;s a Terminal emulator:&lt;/strong&gt;
+The Terminal emulator is a software designed to replicate the functions of a computer terminal. It is a GUI application needed to access the Unix shell environment, providing an interface to invoke commands, scripts, and programs available on your system. It also allows you to view and browse through the contents of directories, just like you would with a FILE MANAGER APPLICATION.&lt;/p&gt;
+&lt;p&gt;Every Linux distro comes with a default terminal emulator. For instance, Ubuntu and Fedora come with Gnome terminal emulator, and other Linux distros have their own defaults. The first thing you see in the terminal emulator is the &quot;command prompt,&quot; which shows $, %, #, or &amp;gt;, indicating the current working directory, the current user, and the readiness of the shell to accept commands from you.&lt;/p&gt;
+&lt;p&gt;The default shell for most Unix or Unix-like systems is the &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Bash_(Unix_shell)&quot;&gt;bash shell&lt;/a&gt;. Other shells include sh, zsh, csh, and more. To find out the available shells on your system, use the command:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;cat /etc/shells&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;display-content-in-your-file-directory&quot;&gt;Display content in your file directory&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;ls&lt;/code&gt; command is used to print out the current directory on the terminal emulator screen, giving the same result as the File Manager.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/gifs/ls_cmd.gif&quot; alt=&quot;ls_cmd&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/file_m.png&quot; alt=&quot;file_manager&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;To find out what a command means through the command line, type:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;whatis ls&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also make use of the system&#39;s manual pager for the full documentation:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;man ls&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To print your current working directory, use the command &lt;code&gt;pwd&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/pwd.png&quot; alt=&quot;pwd&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;pwd&lt;/code&gt; is a built-in command within the bash shell itself. Type &lt;code&gt;help&lt;/code&gt; to find out more about built-in commands.&lt;/p&gt;
+&lt;h3 id=&quot;time-for-experiments&quot;&gt;Time for Experiments&lt;/h3&gt;
+&lt;p&gt;Here are some common commands:&lt;/p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Command&lt;/th&gt;&lt;th&gt;Meaning&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ls&lt;/code&gt;&lt;/td&gt;&lt;td&gt;List files and directories in the current directory.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;cd&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Change the current working directory.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;pwd&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Print the current working directory.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;mkdir&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Create a new directory (folder).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;rmdir&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Remove a directory (folder).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;cp&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Copy files or directories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;mv&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Move or rename files or directories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;rm&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Remove (delete) files or directories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;cat&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Concatenate and display file content.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;more&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display file content one screen at a time.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;less&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display file content with backward navigation.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;head&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display the beginning lines of a file.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;tail&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display the ending lines of a file.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;grep&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Search for a pattern in files.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;find&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Search for files and directories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;chmod&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Change file permissions.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;chown&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Change file ownership.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ps&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Display information about running processes.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;kill&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Terminate processes.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ssh&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Secure Shell - remote login to a server.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;wget&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Download files from the web.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;tar&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Archive files using tar.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;zip&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Package and compress files.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;Please note that this is not an exhaustive list, but it includes some commonly used commands and their primary meanings. Additionally, the meaning of some commands may vary based on their options and arguments. Always refer to the manual (&lt;code&gt;man&lt;/code&gt; command) for a comprehensive understanding of each command.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Resources&lt;/strong&gt;
+&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://missing.csail.mit.edu/&quot;&gt;The Missing Semester of Your CS Education By Mit&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Technological Innovation in developing countries</title>
+    <published>2020-04-14T00:00:00+00:00</published>
+    <updated>2020-04-14T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/innovation-in-developing-countries/"/>
+    <id>https://daveads.github.io/writing/innovation-in-developing-countries/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/innovation-in-developing-countries/">&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; These are based on my views on factors affecting the rate of innovation in developing countries. I might be wrong, but at the same time, I might be right.&lt;/p&gt;
+&lt;p&gt;Writing this article feels a little weird for me; it seems like something I should not write about, but I also have the feeling that I should do it anyway. &lt;strong&gt;Keeping this as short as possible, I won&#39;t be able to cover all areas.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;People in developing countries seem to believe that the governing entities are solely responsible for bringing about technological innovation &lt;strong&gt;(this is done indirectly)&lt;/strong&gt;, which is something I &lt;strong&gt;strongly disagree with&lt;/strong&gt;. I guess I am not expressing this in the right way; coming from a tech background, there is a lot I don&#39;t fully understand about politics. It&#39;s not an excuse, but rather than complaining, that energy should be directed towards something else.&lt;/p&gt;
+&lt;p&gt;Secondly, the mindset (culture) and beliefs of the people are really mind-blowing. I love this quote: &lt;cite&gt;&quot;You are what you believe in.&quot;&lt;/cite&gt; It&#39;s really funny how, at the age of 20-25 in most cases, you are still considered incapable of making decisions that could cause a serious change in society, down to individual families, and this becomes a loop.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;It makes me wonder what the adults spend their youthful age doing in their 20&#39;s....???&lt;/strong&gt; This makes me want to give examples of Bill Gates, Steve Jobs, Mark Zuckerberg...&lt;/p&gt;
+&lt;p&gt;To a point, you can&#39;t entirely blame society for this; many youths spend their time in the most unproductive ways you could ever think of, involving themselves in internet fraud and other criminal activities, etc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;There is a lot at play here:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Lack of knowledge, even in a major field (poor education background, mostly outdated curriculum).&lt;/li&gt;
+&lt;li&gt;Lack of infrastructure, etc.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Technological innovation can be brought about by innovative individuals (Tech Visionaries) who:&lt;/p&gt;
+&lt;p&gt;x. See things differently.&lt;br&gt;
+x. Have a serious, intense passion for what they do.&lt;br&gt;
+x. Are ready to take action no matter the odds.&lt;br&gt;
+x. Are tired of doing things the old way (with low outcomes).&lt;br&gt;
+x. Are highly curious (question everything) and have the ability to connect the dots.&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Don&#39;t get me wrong, one person can&#39;t actually change the world; you are going to work together with intelligent humans and people who think alike to actually make a mark.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>New resolution</title>
+    <published>2020-03-01T00:00:00+00:00</published>
+    <updated>2020-03-01T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/new-resolution/"/>
+    <id>https://daveads.github.io/writing/new-resolution/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/new-resolution/">&lt;h2 id=&quot;my-new-resolution-covid-19&quot;&gt;my new resolution (covid-19)&lt;/h2&gt;
+&lt;p&gt;To be honest right now i feel down because i am unable to do anything meaningful to help during critical moment, makes me feel stupid but i have a very strong feeling this is the last time this is going to happen to me.&lt;/p&gt;
+&lt;p&gt;Don&#39;t get me wrong staying at home actually helps but to me it does not, should be able to help by working together with health professional or providing finical asistance... Still can&#39;t shake that feeling of my head that there is still alot i have to do and am not fully commited to it..&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;My resolution&lt;/strong&gt; is to write one article once a week or probably everyday if possible, this is going to be really hard for me but i feel optimistic about it.&lt;/p&gt;
+&lt;div&gt;
+	&lt;li&gt;I know am currently the world worst writer and i hope this changes soon&lt;/li&gt;
+	&lt;/div&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Tech blogs i find interesting</title>
+    <published>2020-01-29T00:00:00+00:00</published>
+    <updated>2022-09-22T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/interesting-tech-blogs/"/>
+    <id>https://daveads.github.io/writing/interesting-tech-blogs/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/interesting-tech-blogs/">&lt;h3 id=&quot;a-list-of-cs-programmers-blogs-i-find-interesting&quot;&gt;&lt;strong&gt;A list of Cs/Programmers blogs i find interesting&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://matt.might.net/&quot;&gt;Matt Might&lt;/a&gt; Professor of Internal Medicine and Computer Science&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://lambda-the-ultimate.org/&quot;&gt;Lambda the Ultimate&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://lemire.me/blog/&quot;&gt;Daniel Lemire&#39;s blog&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://jeremykun.com/&quot;&gt;Math ∩ Programming&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://flaviocopes.com/&quot;&gt;flavio copes&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.nayuki.io/&quot;&gt;Project Nayuki&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://www.paulgraham.com/index.html&quot;&gt;paul-graham&lt;/a&gt; -Startup&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://overreacted.io/&quot;&gt;Overreacted&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://norvig.com/&quot;&gt;Peter Norvig&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://eli.thegreenplace.net/&quot;&gt;Eli Bendersky&#39;s website&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://blog.jessfraz.com/&quot;&gt;Ramblings from Jessie&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://jvns.ca/&quot;&gt;Julia Evans&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://cliffle.com/&quot;&gt;cliffle&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://blog.samaltman.com/&quot;&gt;Sam Altman&lt;/a&gt; - Startup&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://journal.stuffwithstuff.com/&quot;&gt;Bob Nystrom&lt;/a&gt; -language&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://steveklabnik.com/&quot;&gt;steve&lt;/a&gt; -rust&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://coertvonk.com/&quot;&gt;coertvonk&lt;/a&gt; - Embedded Software Engineer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://zserge.com/&quot;&gt;Serge Zaitsev&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&quot;related-list&quot;&gt;Related list&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://daveads.github.io/note/programming-blogs/&quot;&gt;programming blogs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Computer science research papers</title>
+    <published>2020-01-29T00:00:00+00:00</published>
+    <updated>2020-01-29T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/computer-science-research-papers/"/>
+    <id>https://daveads.github.io/writing/computer-science-research-papers/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/computer-science-research-papers/">&lt;p&gt;&lt;strong&gt;Easy access for my personal use&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://paperswelove.org/&quot;&gt;papers we over&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Respostiory on github &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/papers-we-love/papers-we-love&quot;&gt;papers-we-love&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://dl.acm.org/search/advanced&quot;&gt;ACM Digital Library&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ieeexplore.ieee.org/Xplore/home.jsp&quot;&gt;IEEE Xplore Digital Library&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://dblp.uni-trier.de/&quot;&gt;dblp computer science bibliography&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://academic.microsoft.com/home&quot;&gt;Microsoft Academic&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://link.springer.com/search?facet-series=%22558%22&quot;&gt;Springer Lecture Notes in Computer Science (LNCS)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;check-out-this-also&quot;&gt;Check out this also&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://citeseerx.ist.psu.edu/index&quot;&gt;citeseerx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.m.wikipedia.org/wiki/List_of_important_publications_in_computer_science&quot;&gt;wiki (list of important publications in computer science)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://scholar.google.com/&quot;&gt;google-scholar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.academia.edu/&quot;&gt;academia&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.researchgate.net/&quot;&gt;reasearchgate #microsoft&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://arxiv.org/archive/cs&quot;&gt;arXiv.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.semanticscholar.org/&quot;&gt;semantic scholar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.acm.org/media-center/2019/march/sigcse-top-10-papers&quot;&gt;Ten Computer Science Education Research Papers of the Last&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.aresearchguide.com/30-computer-science-research-paper-topics.html&quot;&gt;30 great research pappers&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;mit&quot;&gt;MIT&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://news.mit.edu/topic/computers&quot;&gt;MIT News&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.csail.mit.edu/research&quot;&gt;MIT Computer Science &amp;amp; Artificial Intelligence Lab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.eecs.mit.edu/research&quot;&gt;research mit eecs&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Indentation in Python</title>
+    <published>2020-01-17T00:00:00+00:00</published>
+    <updated>2020-01-17T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/indentation-in-python/"/>
+    <id>https://daveads.github.io/writing/indentation-in-python/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/indentation-in-python/">&lt;h2 id=&quot;what-is-indentation&quot;&gt;what is indentation:&lt;/h2&gt;
+&lt;p&gt;According to &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Indentation_(typesetting)&quot;&gt;wikipedia - indentation&lt;/a&gt; indent is an empty space at the beginning of a line to signal the start of a new paragraph.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/indent.png&quot; alt=&quot;indent&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;In Python indentation refers to the (spaces and tabs) that are used at the beginning of a statement, it is a way of telling the interpreter this part of the code belongs to the same group,in programming language like c, c++, java, kotlin.. curly braces {} are use to indicate the start and end of a block of code..&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;indentation in java&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;public class&lt;/span&gt;&lt;span style=&quot;color: #F9E2AF;font-style: italic;&quot;&gt; indentation&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;{&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;	public static void&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; main&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;String&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;[]&lt;/span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt; args&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;		{&lt;/span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt; // shows this is the body of the main method&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;		&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;		Scanner&lt;/span&gt;&lt;span&gt; input&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;/span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; new&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; Scanner&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span&gt;System&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;/span&gt;&lt;span&gt;in&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;		out&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;println&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;input a valid password&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;		String&lt;/span&gt;&lt;span&gt; user_input&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;/span&gt;&lt;span&gt; input&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;next&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;		if&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; (&lt;/span&gt;&lt;span&gt;user_input&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;equals&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;evad&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)){&lt;/span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt; // if statement body     &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;			out&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;println&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;logged in &lt;/span&gt;&lt;span style=&quot;color: #F5C2E7;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;		}&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;		else&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;			out&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;println&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;incorrect password&lt;/span&gt;&lt;span style=&quot;color: #F5C2E7;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;		}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;	}&lt;/span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt; //end of the main method&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt; //end of the of the porgramm &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt; what&#39;s the whole point of indentation ?&lt;br&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt; glance through the example below and tell me what you think about it.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The coherence theory states that a proposition is true if and only if that proposition coheres with the other propositions that one believes. . . . The problem with the coherence theory is that a belief could be consistent with my other beliefs and yet the whole lot could be false. —Colin McGinn (2015a, p. 148) According to the coherence theory of truth (see Young 2018), a set of propositions (or beliefs, or sentences) is true iff:they are mutually consistent, and 2.they are supported by, or consistent with, all available evidence; that is, they “cohere” with each other and with all evidence. Note that observation statements (that is, descriptions of what we observe in the world around us) are among the claims that must be mutually consistent, so this is
+not (necessarily) a “pie-in-the-sky” theory that doesn’t have to relate to the way things
+really are. It just says that we don’t have to have independent access to “reality” in
+order to determine truth.
+2.4.3Correspondence vs. Coherence Which theory is correct? Well, for one thing, there are more than two theories: There
+are several versions of each kind of theory, and there are other theories of truth that
+don’t fall under either category. The most important of the other theories is the “prag-
+matic” theory of truth (see Glanzberg 2016, §3; Misak and Talisse 2019). Here is one
+version: [T]he pragmatic theory of truth . . . is that a proposition is true if and only
+[if] it is useful [that is, “pragmatic”, or practical] to believe that proposi-
+tion. (McGinn, 2015a, p. 148, my interpolated brackets)
+Another version states that a belief, proposition, or sentence is true iff it continues to
+be accepted at the limit of inquiry:
+Truth is that to which a belief would tend were it to tend indefinitely to a fixed
+belief. (Edwin Martin, Jr., paraphrasing C.S. Peirce; lectures on the theory of
+knowledge,Spring 1973; for more on Peirce, see §2.6.1.3,below.)46&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Indentation in python is very important because with out proper indenting you will end up seeing &lt;strong&gt;IndentationError:&lt;/strong&gt; examples as seen below&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; True&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;print&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;yea true&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;else&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;print&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;not true&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In python when defining statement for functions and loops you do this using four white spaces or a single tab according to python indentation rules&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; print_statement&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;():&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;    print&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;indented under print_statement&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;    print&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;same&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;    print&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;same&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;a&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 0&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;b&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 10&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;while&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; &amp;lt;=&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 10&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;    print_statement&lt;/span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;()&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    a&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;/span&gt;&lt;span&gt; a&lt;/span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; +&lt;/span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Importants of indentation:&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;
+	&lt;li&gt;helps to properly structure the code&lt;/li&gt;
+	&lt;li&gt;makes the code beautiful (human readable)&lt;/li&gt;
+&lt;/div&gt;
+&lt;p&gt;Python&#39;s Style guide &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.python.org/dev/peps/pep-0008/#indentation&quot;&gt;pep8&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/Daveads/indentation&quot;&gt;source code&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Letter to my Older self</title>
+    <published>2019-08-10T00:00:00+00:00</published>
+    <updated>2019-08-10T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/letter-to-my-older-self/"/>
+    <id>https://daveads.github.io/writing/letter-to-my-older-self/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/letter-to-my-older-self/">&lt;h3 id=&quot;do-not-read-this&quot;&gt;Do Not Read This&lt;/h3&gt;
+&lt;p&gt;I think it&#39;s important to write this up as a letter or reminder to myself.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Don&#39;t ever give up.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Always remember your goals.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;You don&#39;t need to know everything, but you can #cs_math.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Read a lot of books and read widely.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Learn to read scientific papers and also contribute.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Code every day.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Learn not to give a f*ck about what people say or think when they don&#39;t actually know where you are headed.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Languages are just tools.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Be yourself.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Don&#39;t be a perfectionist. // I think I am already.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Remember you are awesome and special.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Listen to what everyone processes it and see which is useful to you.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;I know you are already curious; I don&#39;t have to tell you to be.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Remember the WORD.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Practice, practice, practice.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It&#39;s &quot;OK&quot; not to follow the crowd; don&#39;t feel left out.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Respect your parents.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Always check this out (LOOP_THIS IF POSSIBLE).&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.entrepreneur.com/article/253737&quot;&gt;The Gift of Obsession&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.entrepreneur.com/article/244198&quot;&gt;A True Goal Needs to Become an Obsession&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Interesting programming and cs books</title>
+    <published>2019-07-07T00:00:00+00:00</published>
+    <updated>2020-10-25T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/interesting-programming-and-cs-books/"/>
+    <id>https://daveads.github.io/writing/interesting-programming-and-cs-books/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/interesting-programming-and-cs-books/">&lt;p&gt;// Books i find interesting.... Many of the textbooks are freely available online&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/gp/product/1848000693/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1848000693&amp;amp;linkCode=as2&amp;amp;tag=daveads-20&amp;amp;linkId=c915e2b83b5454a99aa5661d1c72bf7a&quot;&gt;The Algorithm Design Manual by Steven S. Skiena&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/3oqTpPp&quot;&gt;Algorithms by Robert Sedgewick and Kevin Wayne&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/35tICM0&quot;&gt;Introduction to algorithms Thomas H.cormen&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/34rrpmY&quot;&gt;Grokking Algorithms by Aditya Y.Bhargava&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/35woNUb&quot;&gt;Algorithms by Jeff Erickson&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/31Igpjj&quot;&gt;The art of computer programming DONALD E. KNUTH&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/3e2f7of&quot;&gt;Computer organization and architecture designing for performance by william stallings&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/37L1kS5&quot;&gt;Computer Systems:a programmer&#39;s perspective Bryant. O&#39;hallaron&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/3kug4rI&quot;&gt;Clean Code by Robert C. Martin&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/3mlYN4A&quot;&gt;Structure and interpretation of Computer programs (SICP)&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/2HCGKs4&quot;&gt;Types and Programming Languages by Benjamin C.Pierce&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/2HDuebq&quot;&gt;Language Implementation patterns by Terence parr&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/2J4rG7b&quot;&gt;Artificial Intelligence A Modern Approach by Stuart J.Russell and Peter Norvig&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/3jvHEDI&quot;&gt;Concrete mathematics by ronald l. Graham, Donald E. knuth&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/37zMKg2&quot;&gt;Hacker&#39;s Delight Henry S. Warren, jr.&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/35rxzTq&quot;&gt;The Annotated Turing by charles Petzold&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/3dTRKx0&quot;&gt;Algorithms to Live By: The Computer Science of Human Decisions Brian Christian and Tom Griffiths&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/31Fkepj&quot;&gt;Code: The Hidden Language of Computer Hardware and Software Charles Petzold&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/2TnI5p5&quot;&gt;The Mythical Man-Month by Fred Brooks&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/2J5LZkD&quot;&gt;Design Patterns: Elements of Reusable Object-Oriented Software Erich Gamma&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/35AGSAm&quot;&gt;Compilers: Principles, Techniques, and Tools by Alfred V.Aho, Ravi Sethi&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://amzn.to/35u8PtG&quot;&gt;Refactoring: Improving the Design of Existing Code by kent Beck and Martin Fowler&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Computer Science resources -curious</title>
+    <published>2019-07-07T00:00:00+00:00</published>
+    <updated>2020-01-21T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/computer-science-resources/"/>
+    <id>https://daveads.github.io/writing/computer-science-resources/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/computer-science-resources/">&lt;blockquote&gt;
+&lt;p&gt;I love this particual line made by &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Alan_Kay&quot;&gt;Alan kay&lt;/a&gt;
+&lt;cite&gt;At some age you need to take responsibility for your own education&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;CS Resources &amp;amp;&amp;amp; important articles&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;cs-curriculum&quot;&gt;CS Curriculum&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/&quot;&gt;MIT OPEN COURSE WARE EE &amp;amp; CS courses&lt;/a&gt; IMP 6-2&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://catalog.mit.edu/degree-charts/computer-science-engineering-course-6-3/&quot;&gt;For a more direct Cs majors&lt;/a&gt; chart 6-3&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/ossu/computer-science&quot;&gt;Open Source Society University&lt;/a&gt; self-taught education in Computer Science&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://functionalcs.github.io/curriculum/&quot;&gt;A Self-Learning, Modern Computer Science Curriculum&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mvillaloboz/open-source-cs-degree&quot;&gt;open-source-cs-degree&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://matt.might.net/articles/what-cs-majors-should-know/&quot;&gt;What CS Major Should Know&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;others&quot;&gt;OTHERS&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ocw.mit.edu/courses/mathematics/&quot;&gt;Mit math courses&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://ocw.mit.edu/courses/physics/&quot;&gt;Mit physcis Courses&lt;/a&gt; courses of interest&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.edx.org/&quot;&gt;Edx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.coursera.org/&quot;&gt;Coursera&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mtdvio/every-programmer-should-know&quot;&gt;Every Programmer Should Know&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/datasciencemasters/go&quot;&gt;The Open Source Date Science masters&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/humanwhocodes/computer-science-in-javascript&quot;&gt;computer science in javascript&lt;/a&gt; collection of classic computer science paradigms, algorithms, and approaches written in JavaScript&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://teachyourselfcs.com/&quot;&gt;Teach yourself computer science&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.nand2tetris.org/&quot;&gt;Nand to Tetris&lt;/a&gt; Building a Modern Computer From First Principles&lt;/p&gt;
+&lt;h2 id=&quot;cs-coursers&quot;&gt;CS COURSERS&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/Developer-Y/cs-video-courses&quot;&gt;List of Computer Science courses with video lectures&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/P1xt/p1xt-guides&quot;&gt;Programming curricula&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/prakhar1989/awesome-courses&quot;&gt;Awesome CS Courses&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://bootcamp.berkeley.edu/coding/&quot;&gt;Berkeley Coding Boot Camp&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;alogrithms&quot;&gt;Alogrithms&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/keon/algorithms&quot;&gt;algorithms&lt;/a&gt; algorithms using python&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/mandliya/algorithms_and_data_structures&quot;&gt;algorithms and data structures&lt;/a&gt; Algorithm &amp;amp; Data Structure Problems using C++&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/TheAlgorithms/C-Plus-Plus&quot;&gt;all algorithms implemented in c++&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/jeffgerickson/algorithms&quot;&gt;Algorithms by Jeff Erickson&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;important&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;http://norvig.com/21-days.html&quot;&gt;Teach Yourself Programming in Ten Years&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://daveads.github.io/writing/interesting-programming-and-cs-books/&quot;&gt;Books&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+</feed>

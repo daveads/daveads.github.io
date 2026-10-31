@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Daveads - misc</title>
+  <subtitle>Writings and notes by Adejumo David Adewale, Dive into the abyss of Daveads!</subtitle>
+  <link rel="self" type="application/atom+xml" href="https://daveads.github.io/tags/misc/atom.xml"/>
+  <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+  <generator uri="https://www.getzola.org/">Zola</generator>
+  <updated>2026-10-31T00:00:00+00:00</updated>
+  <id>https://daveads.github.io/tags/misc/atom.xml</id>
+  
+  <entry xml:lang="en">
+    <title>Restyling This Site With Codex</title>
+    <published>2026-10-31T00:00:00+00:00</published>
+    <updated>2026-10-31T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/restyling-this-site-with-codex/"/>
+    <id>https://daveads.github.io/writing/restyling-this-site-with-codex/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/restyling-this-site-with-codex/">&lt;p&gt;I am not really a frontend or UI person, but I do know how things work there.&lt;/p&gt;
+&lt;p&gt;I can tell when something feels wrong on a page, but that does not mean I always know the CSS responsible for it. This site is personal, though, so I care about how it feels. I want it to be simple, calm, and centred on the things I write.&lt;/p&gt;
+&lt;p&gt;I recently restyled it with Codex using &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://developers.openai.com/api/docs/models/gpt-5.6-sol&quot;&gt;GPT-5.6 Sol&lt;/a&gt; at high reasoning effort.&lt;/p&gt;
+&lt;p&gt;It started with a question about SEO. Then I noticed inconsistent spacing, duplicated CSS, mobile problems, and pages that did not feel related. What began as a review slowly became a restyling of almost the entire site.&lt;/p&gt;
+&lt;p&gt;I did not begin with a finished design or a detailed reconstruction plan. I moved through the site one page at a time. I questioned new files, asked why styles were duplicated, compared mobile screenshots, and sometimes reversed changes that felt like too much. The design emerged through those small decisions rather than from one large redesign.&lt;/p&gt;
+&lt;h2 id=&quot;trying-not-to-overdo-it&quot;&gt;Trying not to overdo it&lt;/h2&gt;
+&lt;p&gt;An AI coding agent makes it very easy to add things. A page can quickly gain cards, borders, gradients, animations, and another stylesheet.&lt;/p&gt;
+&lt;p&gt;That speed is useful, but it can also produce too much design.&lt;/p&gt;
+&lt;p&gt;Some early changes looked cool but stopped feeling like my website. The About page was one example. It had more personality, but it also felt over-designed. I kept giving the same feedback:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tone it down a bit.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Codex could produce and modify the interface quickly, while I decided what actually belonged. We would add something, look at it, and remove the parts that made the page feel busy.&lt;/p&gt;
+&lt;p&gt;The goal was never to turn the site into a modern landing page. I wanted a slightly better version of what was already here.&lt;/p&gt;
+&lt;h2 id=&quot;minimal-as-a-system&quot;&gt;Minimal as a system&lt;/h2&gt;
+&lt;p&gt;I started to think of minimalism as having fewer rules to remember, not just fewer things on the screen.&lt;/p&gt;
+&lt;p&gt;Links are blue and turn green when hovered. Writings, Notes, Paper, and their archives use the same visual language. Dates, tags, headings, lists, and the little &lt;code&gt;cd&lt;/code&gt; navigation should not look as if they came from unrelated websites.&lt;/p&gt;
+&lt;p&gt;This meant sharing templates, using the existing Sass structure, removing duplicated code, and checking the same layouts on desktop and mobile. A new page can now inherit an existing pattern instead of needing its own design and stylesheet.&lt;/p&gt;
+&lt;p&gt;That is more useful to me than making one page impressive on its own.&lt;/p&gt;
+&lt;h2 id=&quot;the-daveads-galaxy&quot;&gt;The Daveads Galaxy&lt;/h2&gt;
+&lt;p&gt;The biggest addition was the &lt;a href=&quot;https://daveads.github.io/galaxy/&quot;&gt;Daveads Galaxy&lt;/a&gt;: Daveads at the centre, categories as constellations, topics as planets, and articles inside them.&lt;/p&gt;
+&lt;p&gt;I did not want it to be a hardcoded visual that would break as I wrote more. It reads the categories and tags already used by Writings and Notes. When I publish something new, the Galaxy should understand where it belongs without me manually adding another planet.&lt;/p&gt;
+&lt;p&gt;Mobile made the feature more interesting. Planets needed useful touch targets. Tapping one had to reveal its articles. Zooming the Galaxy should not zoom the entire page, and the navigation still needed to work in full-screen mode. We also kept a list view for anyone who wants a simpler way to browse.&lt;/p&gt;
+&lt;p&gt;The Galaxy is more playful than the rest of the website, but it follows the same rule: content should drive the interface.&lt;/p&gt;
+&lt;h2 id=&quot;working-with-codex&quot;&gt;Working with Codex&lt;/h2&gt;
+&lt;p&gt;A lot of my feedback came through screenshots. I would notice too much empty space, an uncentred video, a heading disappearing on mobile, or two labels sitting too close together. I could point at the problem without knowing which template or Sass rule created it.&lt;/p&gt;
+&lt;p&gt;Codex could trace the element back to the code and make a focused change. I would look at the result and decide whether it felt right. That loop worked well for someone who is not a frontend person but still has an opinion about the result.&lt;/p&gt;
+&lt;p&gt;We also checked the less visible things: responsiveness, builds, internal links, test pages, the Atom feed, and whether Google Analytics remained untouched.&lt;/p&gt;
+&lt;p&gt;After experimenting, we refactored the Galaxy into smaller files and shared common code across other pages. Generated code can work while still being difficult for a human to own. I want to open the repository later, find the relevant file, and change it myself.&lt;/p&gt;
+&lt;p&gt;GPT-5.6 Sol at high reasoning effort was helpful when a small request crossed templates, Sass, JavaScript, content configuration, and mobile behaviour. The &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://developers.openai.com/api/docs/guides/reasoning&quot;&gt;official OpenAI documentation&lt;/a&gt; describes high effort as useful for complex planning, debugging, and agentic work, which matched this project.&lt;/p&gt;
+&lt;p&gt;But it did not replace taste. I still had to say when something was too much, protect the parts I liked, and ask whether a new file was really necessary.&lt;/p&gt;
+&lt;p&gt;Codex gave me implementation speed. I kept responsibility for what the website should feel like.&lt;/p&gt;
+&lt;p&gt;The site now has more capability, but its ordinary pages feel calmer and more consistent. More importantly, it still feels like mine.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Moved site from jekyll to zola</title>
+    <published>2022-06-29T00:00:00+00:00</published>
+    <updated>2022-06-29T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/moved-site-from-jekyll-to-zola/"/>
+    <id>https://daveads.github.io/writing/moved-site-from-jekyll-to-zola/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/moved-site-from-jekyll-to-zola/">&lt;p&gt;After transitioning from Jekyll to Zola, I have updated the website&#39;s styling by loosely adapting the &lt;code&gt;Jekyll Minima&lt;/code&gt; SCSS. Zola has proven to be an excellent choice as it seamlessly resolves many of the issues I faced with Jekyll. The fact that Zola is written in &lt;code&gt;Rust&lt;/code&gt; and utilizes the powerful &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/Keats/tera&quot;&gt;Tera&lt;/a&gt; template engine further enhances its appeal.&lt;/p&gt;
+&lt;p&gt;The current version of Zola that I am using is v0.15.3, and it has been performing admirably. For those interested in learning more about Zola and its capabilities, the repository can be found here: &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://github.com/getzola/zola&quot;&gt;zola-repo&lt;/a&gt;. Additionally, the documentation is available at &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.getzola.org/documentation/getting-started/overview/&quot;&gt;zola-doc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;With Zola, I feel confident in the future of my website, and I am excited about exploring its features and possibilities.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Knowledge worker</title>
+    <published>2020-10-25T00:00:00+00:00</published>
+    <updated>2020-10-25T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/knowledge-workers/"/>
+    <id>https://daveads.github.io/writing/knowledge-workers/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/knowledge-workers/">&lt;p&gt;Glancing through the book &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.amazon.com/gp/product/1455586692/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1455586692&amp;amp;linkCode=as2&amp;amp;tag=daveads-20&amp;amp;linkId=383da9e80b4b22401dcdef4c58418841&quot;&gt;Deep work&lt;/a&gt;, the term &quot;knowledge workers&quot; caught my attention, this is something i do without actually knowing what kind of work it is classified as.&lt;/p&gt;
+&lt;p&gt;Did some research on &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://corporatefinanceinstitute.com/resources/knowledge/other/knowledge-workers/&quot;&gt;knowledge worker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;According to that article, knowledge workers are said to think for a living, unlike manual labourers who are paid for performing a physical tasks, and according to wiki knowledge workers are workers whose main capital is knowledge.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Which got me thinking about the types of workers actually available........??&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&quot;back-to-the-article&quot;&gt;Back to the article:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&quot;knowledge worker&quot;&lt;/strong&gt; was first coined by peter drucker in
+his book &quot;The Land of Tomorrow&quot;...  the knowledge worker are differentiated by their ability to solve complex problems or to develop new products or services in their fields of expertise.. &quot;which his a clear definition of an actual computer programmer&#39;s job&quot;&lt;/p&gt;
+&lt;p&gt;knowledge workers can be programmers, architects, engineers, marketers, design thinkers, public accountants, lawyers, and academics, and essentially any other white-collar worker who uses judgement and critical thinking in their role.&lt;/p&gt;
+&lt;h2 id=&quot;important-facts&quot;&gt;Important facts :&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;To stay relevant learning process is continuous&lt;/li&gt;
+&lt;li&gt;They spend 38% of their time searching for information
+&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;more-info&quot;&gt;More info :&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Knowledge_worker&quot;&gt;wiki: knowledge worker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://corporatefinanceinstitute.com/resources/knowledge/other/knowledge-workers/&quot;&gt;corporate-finance-institute: knowledge workers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://medium.com/snipply/knowledge-workers-information-life-cycles-and-content-silos-oh-my-a4263eed427&quot;&gt;medium: knowledge workers&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+</feed>

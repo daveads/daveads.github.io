@@ -1,0 +1,111 @@
+.element-class {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #080808;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.78)),
+    url("../images/star-lord-marvels.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.element-class .page-content {
+  padding-top: 0;
+}
+
+.home-hero {
+  padding: clamp(1.5rem, 4vw, 2.25rem) 0 clamp(2rem, 5vw, 3rem);
+  color: #cfd4dd;
+  text-align: center;
+}
+
+.home-hero h1 {
+  margin: 0;
+  color: #e3e6eb;
+  font: 600 clamp(2.5rem, 9vw, 4.5rem)/1.05 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: -0.055em;
+}
+
+.home-intro {
+  max-width: 580px;
+  margin: 0.85rem auto 1.25rem;
+  color: #b3bac7;
+  font-size: clamp(1.1rem, 3vw, 1.22rem);
+  line-height: 1.7;
+}
+
+.home-hero a,
+.home-recent a {
+  color: #5fa4ff;
+}
+
+.home-hero a:visited,
+.home-recent a:visited {
+  color: #5fa4ff;
+}
+
+.home-hero a:hover,
+.home-hero a:focus-visible,
+.home-recent a:hover,
+.home-recent a:focus-visible {
+  color: #13df93;
+}
+
+.home-recent {
+  margin-bottom: 2rem;
+  padding: 1.1rem 1.5rem 0.25rem;
+  border: 1px solid rgba(139, 164, 199, 0.22);
+  border-radius: 10px;
+  background: rgba(3, 7, 12, 0.74);
+}
+
+.home-recent__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(139, 164, 199, 0.14);
+}
+
+.home-recent__header h2 {
+  margin: 0;
+  color: #d9dde5;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.home-recent__header > a {
+  flex: none;
+  font-size: 0.85rem;
+}
+
+.home-recent .archive-list li:last-child {
+  border-bottom: 0;
+}
+
+.home-copy {
+  margin-bottom: 2rem;
+  color: #b3bac7;
+}
+
+@media (max-width: 600px) {
+  .element-class {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  .home-hero {
+    padding-top: 1.5rem;
+  }
+
+  .home-recent {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .home-recent__header {
+    align-items: start;
+  }
+}
