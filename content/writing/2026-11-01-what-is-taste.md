@@ -1,7 +1,7 @@
 +++
 title = "What Is Taste in Software?"
 date = 2026-11-01
-description = "Taste, creativity, experience, and what we may lose when tools remove the practice that teaches us how to judge good work."
+description = "What shapes taste in software, whether AI can learn it, and why human judgment still matters."
 draft = false
 [taxonomies]
 categories = ["Startups", "Merdra", "AI"]
