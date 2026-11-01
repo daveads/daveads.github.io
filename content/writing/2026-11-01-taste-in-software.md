@@ -1,5 +1,5 @@
 +++
-title = "What Is Taste in Software?"
+title = "Taste in Software?"
 date = 2026-11-01
 description = "What shapes taste in software, whether AI can learn it, and why human judgment still matters."
 draft = false
