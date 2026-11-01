@@ -1,5 +1,5 @@
 +++
-title = "What Is Taste?"
+title = "What Is Taste in Software?"
 date = 2026-11-01
 description = "Taste, creativity, experience, and what we may lose when tools remove the practice that teaches us how to judge good work."
 draft = true
