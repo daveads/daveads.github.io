@@ -1,12 +1,12 @@
 {% component warning(header="") %}
-<blockquote class="callout warning">
+<aside class="callout warning"{% if header %} aria-label="{{ header }}"{% endif %}>
 {% set icon = load_data(path="static/icon/warning.svg") %}
-<div class="icon">
+<div class="icon" aria-hidden="true">
 {{ icon | safe }}
 </div>
 <div class="content">
-{% if header %}<p><strong>{{ header }}</strong></p>{% endif %}
+{% if header %}<p class="callout-title">{{ header }}</p>{% endif %}
 {{ body | markdown | safe }}
 </div>
-</blockquote>
+</aside>
 {% endcomponent warning %}

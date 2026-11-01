@@ -44,13 +44,25 @@ The recipe provides a path. The chef's taste guides the adjustments.
 
 A blender, thermometer, or automatic mixer does not make the chef less skilled. The danger begins when someone can produce meals without ever learning to taste what they are producing. That feels close to the question we now face with AI.
 
+## Can models learn taste?
+
+Fidel Etinosa, who reviewed an early draft of this article, challenged an assumption behind my question: if taste can be taught, why could a model not learn it too?
+
+I think that is possible. If taste can be developed through examples, comparison, criticism, and feedback, a model may also learn to recognise and reproduce some of those judgments. Reasoning models are still young, so it would be careless to treat their current limitations as permanent ones.
+
+But that does not remove the problem I am interested in. A model's taste must still be shaped by some signal: what is rewarded, whose preferences are represented, which contexts it has encountered, and what someone is trying to accomplish.
+
+Even if models develop excellent judgment, humans still need enough judgment to choose the goal, recognise when the model is wrong, and take responsibility for the result.
+
+Maybe the question is not whether AI can learn taste. It is what kind of taste it learns and what happens to ours while it does.
+
 ## The Uncle Bob question
 
 While thinking about this, I saw [a post from Robert C. Martin](https://x.com/unclebobmartin/status/2080257779395154409), the author of *Clean Code*. He described not reading the code written by his agents and instead surrounding them with strong constraints: tests, quality metrics, coverage requirements, and other forms of verification.
 
 What interested me was the experience behind the person choosing those constraints.
 
-A recent exchange between [John Carmack](https://x.com/id_aa_carmack/status/2115917666955497608) and [Chris Lattner](https://x.com/clattner_llvm/status/2116268356160667775) made this more concrete for me. Good building blocks and abstractions still matter, even when an agent writes the implementation. AI may explain the available trade-offs, but the remaining decision still belongs to someone. Perhaps recognising the important decision—and accepting responsibility for it—is part of technical taste.
+A recent exchange between [John Carmack](https://x.com/id_aa_carmack/status/2115917666955497608) and [Chris Lattner](https://x.com/clattner_llvm/status/2116268356160667775) made this more concrete for me. Good building blocks and abstractions still matter, even when an agent writes the implementation. AI may explain the available trade-offs, but the remaining decision still belongs to someone. Perhaps recognising the important decision and accepting responsibility for it—is part of technical taste.
 
 An [Anthropic team recently shared a practical example](https://x.com/somi_ai/status/2116050219989373170/video/1). They rewrote a Python API in Rust without having a Rust developer in the room. Claude wrote much of the implementation, while the humans designed the distributed system, planned the migration, and verified it by sending shadow traffic through both versions. Their expertise did not disappear; it moved from writing each line to defining the system and deciding what evidence would make it trustworthy.
 
@@ -91,4 +103,8 @@ That distinction matters. Security, patient data, clinical safety, and other cri
 Maybe that is another form of taste: knowing how much detail can be abstracted away without surrendering understanding or responsibility.
 
 These are questions without specific answers, at least for now.
+
+{% <note header="Reviewers"> %}
+Thanks to **Rtrvl (CTO)** and **Fidel Etinosa** for reviewing an early draft of this article.
+{% </note> %}
 

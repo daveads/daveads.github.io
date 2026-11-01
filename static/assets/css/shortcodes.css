@@ -1,112 +1,69 @@
 
 .callout {
-    border-left: 4px solid #3d5a63;
-    background-color: #269ad4;
-    padding: 15px;
-    margin-bottom: 20px;
+    --callout-accent: #5fa4ff;
+    --callout-border: rgba(95, 164, 255, 0.28);
+    --callout-surface: rgba(95, 164, 255, 0.06);
     display: flex;
     align-items: flex-start;
+    gap: 0.8rem;
+    margin: 2rem 0;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--callout-border);
+    border-left: 3px solid var(--callout-accent);
+    border-radius: 6px;
+    background: var(--callout-surface);
+    color: #bdbdc3;
+    font-size: 0.95em;
+    font-style: normal;
+    letter-spacing: normal;
+}
+
+.callout.tip {
+    --callout-accent: #13c985;
+    --callout-border: rgba(19, 201, 133, 0.25);
+    --callout-surface: rgba(19, 201, 133, 0.05);
+}
+
+.callout.warning {
+    --callout-accent: #e3a24b;
+    --callout-border: rgba(227, 162, 75, 0.28);
+    --callout-surface: rgba(227, 162, 75, 0.06);
 }
 
 .callout .icon {
-    margin-right: 15px;
+    flex: 0 0 auto;
+    margin: 0.15rem 0 0;
+    color: var(--callout-accent);
 }
 
 .callout .icon svg {
-    width: 24px;
-    height: 24px;
+    display: block;
+    width: 20px;
+    height: 20px;
 }
 
 .callout .content {
     flex: 1;
-    color: rgb(223, 215, 215);
+    min-width: 0;
+    color: inherit;
 }
 
-
-/** Tips **/
-.callout.tip {
-    border-color: #a5b7bd;
-    background-color: #2f353b;
+.callout .callout-title {
+    margin: 0 0 0.35rem;
+    color: #d2d2d6;
+    font-weight: 600;
 }
 
-
-/** Warning shortcodes **/
-.callout.warning {
-    border-left: 4px solid #ff0000;
-    border-top: 4px solid red;
-    border-right: 4px solid #ff0000;
-    border-bottom: 4px solid #ff0000;
-
-    background-color: #333231;
-    padding: 15px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: flex-start;
+.callout .content > :last-child {
+    margin-bottom: 0;
 }
 
-.callout.warning .icon {
-    margin-right: 15px;
+@media screen and (max-width: 600px) {
+    .callout {
+        gap: 0.65rem;
+        padding: 0.85rem 0.9rem;
+    }
 }
-
-.callout.warning .icon svg {
-    width: 24px;
-    height: 24px;
-    fill: #ee2c1e;
-}
-
-.callout.warning .content {
-    flex: 1;
-    color: aliceblue;
-}
-
-.callout.warning strong {
-    color: #f73434;
-}
-
-/** Notes **/
-.callout.note {
-    border-left: 4px solid #5bc0de;
-    border-right: 4px solid #5bc0de;
-    border-top: 4px solid #5bc0de;
-    border-bottom: 4px solid #5bc0de;
-    
-    background-color: #2e4855;
-    padding: 15px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: flex-start;
-}
-
-.callout.note .icon {
-    margin-right: 15px;
-}
-
-.callout.note .icon svg {
-    width: 24px;
-    height: 24px;
-    fill: #2e6b7e;
-}
-
-.callout.note .content {
-    flex: 1;
-}
-
-.callout.note strong {
-    color: #2cdce2;
-}
-
-
-
-
-
-/**
-* Warning (or Alert)
-* Tip
-* Note
-
-Table of Content
-Image
-**/
 
 /** Image **/
 .centered-image {
