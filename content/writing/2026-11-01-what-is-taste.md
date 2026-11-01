@@ -4,8 +4,8 @@ date = 2026-11-01
 description = "Taste, creativity, experience, and what we may lose when tools remove the practice that teaches us how to judge good work."
 draft = true
 [taxonomies]
-categories = ["General"]
-tags = ["misc"]
+categories = ["Startups", "Merdra", "AI"]
+tags = ["merdra", "startups", "llm"]
 +++
 
 While [restyling this site](@/writing/2026-10-31-restyling-this-site-with-codex.md), I kept using phrases like *this feels like too much*, *tone it down*, and *this does not look like my website anymore*.
@@ -48,7 +48,13 @@ A blender, thermometer, or automatic mixer does not make the chef less skilled. 
 
 Fidel Etinosa, who reviewed an early draft of this article, challenged an assumption behind my question: if taste can be taught, why could a model not learn it too?
 
-I think that is possible. If taste can be developed through examples, comparison, criticism, and feedback, a model may also learn to recognise and reproduce some of those judgments. Reasoning models are still young, so it would be careless to treat their current limitations as permanent ones.
+I think that is possible. Reasoning models are still young, so it would be careless to treat their current limitations as permanent ones.
+
+But if models can learn taste, why do they not already seem to have it? Their training data contains excellent code, design, writing, and criticism. It also contains mediocre work and conflicting ideas about what *good* means.
+
+The model's source code does not contain taste directly; it defines the process through which patterns are learned. A model may learn what experienced people call good without consistently choosing it. Learning a judgment is not the same as preferring it, more carefully, behaving consistently as though it prefers it. That may depend on the training objective.
+
+Maybe fragments of taste are already present. The question is whether training can turn those fragments into stable judgment, and whose definition of good that judgment will represent.
 
 But that does not remove the problem I am interested in. A model's taste must still be shaped by some signal: what is rewarded, whose preferences are represented, which contexts it has encountered, and what someone is trying to accomplish.
 
@@ -62,7 +68,7 @@ While thinking about this, I saw [a post from Robert C. Martin](https://x.com/un
 
 What interested me was the experience behind the person choosing those constraints.
 
-A recent exchange between [John Carmack](https://x.com/id_aa_carmack/status/2115917666955497608) and [Chris Lattner](https://x.com/clattner_llvm/status/2116268356160667775) made this more concrete for me. Good building blocks and abstractions still matter, even when an agent writes the implementation. AI may explain the available trade-offs, but the remaining decision still belongs to someone. Perhaps recognising the important decision and accepting responsibility for it—is part of technical taste.
+A recent exchange between [John Carmack](https://x.com/id_aa_carmack/status/2115917666955497608) and [Chris Lattner](https://x.com/clattner_llvm/status/2116268356160667775) made this more concrete for me. Good building blocks and abstractions still matter, even when an agent writes the implementation. AI may explain the available trade-offs, but the remaining decision still belongs to someone. Perhaps recognising the important decision—and accepting responsibility for it—is part of technical taste.
 
 An [Anthropic team recently shared a practical example](https://x.com/somi_ai/status/2116050219989373170/video/1). They rewrote a Python API in Rust without having a Rust developer in the room. Claude wrote much of the implementation, while the humans designed the distributed system, planned the migration, and verified it by sending shadow traffic through both versions. Their expertise did not disappear; it moved from writing each line to defining the system and deciding what evidence would make it trustworthy.
 

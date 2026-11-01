@@ -4,8 +4,8 @@ date = 2026-10-31
 description = "How I used Codex with GPT-5.6 Sol to restyle this website while keeping its simple, personal character."
 draft = false 
 [taxonomies]
-categories = ["General"]
-tags = ["misc"]
+categories = ["General", "AI"]
+tags = ["agents","llm"]
 +++
 
 I am not really a frontend or UI person, but I do know how things work there.
