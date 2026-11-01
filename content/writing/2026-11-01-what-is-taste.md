@@ -52,7 +52,7 @@ I think that is possible. Reasoning models are still young, so it would be carel
 
 But if models can learn taste, why do they not already seem to have it? Their training data contains excellent code, design, writing, and criticism. It also contains mediocre work and conflicting ideas about what *good* means.
 
-The model's source code does not contain taste directly; it defines the process through which patterns are learned. A model may learn what experienced people call good without consistently choosing it. Learning a judgment is not the same as preferring it, more carefully, behaving consistently as though it prefers it. That may depend on the training objective.
+The model's source code does not contain taste directly; it defines the process through which patterns are learned. A model may learn what experienced people call good without consistently choosing it. Learning a judgment is not the same as preferring it-or, more carefully, behaving consistently as though it prefers it. That may depend on the training objective.
 
 Maybe fragments of taste are already present. The question is whether training can turn those fragments into stable judgment, and whose definition of good that judgment will represent.
 
