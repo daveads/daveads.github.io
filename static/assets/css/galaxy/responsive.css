@@ -109,7 +109,7 @@
   }
 
   .galaxy-list-grid li + li {
-    border-top: 1px solid rgba(133, 154, 203, 0.13);
+    border-top: 1px solid var(--galaxy-line-soft);
   }
 
   .galaxy-list-grid a {
@@ -126,12 +126,12 @@
   .galaxy-list-grid a:hover,
   .galaxy-list-grid a:focus-visible {
     border-color: transparent;
-    background: rgba(255, 255, 255, 0.025);
+    background: var(--galaxy-surface-soft);
   }
 
   .galaxy-list-grid small {
     margin-top: 0.28rem;
-    color: #8490aa;
+    color: var(--galaxy-muted);
     font-size: 0.66rem;
     line-height: 1.4;
   }
@@ -140,9 +140,9 @@
     right: 8px;
     bottom: max(12px, env(safe-area-inset-bottom));
     width: 40px;
-    border: 1px solid rgba(133, 154, 203, 0.35);
+    border: 1px solid var(--theme-line-strong);
     border-radius: 50%;
-    background: rgba(8, 12, 24, 0.86);
+    background: var(--theme-header-bg);
     line-height: 40px;
     backdrop-filter: blur(8px);
   }

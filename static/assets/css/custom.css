@@ -5,10 +5,10 @@
     padding-bottom: 10px;
     padding-right: 10px;
     padding-left: 10px;
-    background-color: black;
+    background-color: var(--theme-surface);
     font-size: 110%;
     font-weight: bold;
-    color: #cccccc;
+    color: var(--theme-text);
 }
 
 
@@ -42,14 +42,14 @@
  
 #search {
 	
-    border: 1px solid grey;
+    border: 1px solid var(--theme-line-strong);
     border-radius: 5px;
     height: 30px;
     width: 70%;
     padding: 2px 23px 2px 30px;
     outline: 0;
-    background-color: black;
-    color: #dddee1;
+    background-color: var(--theme-control-bg);
+    color: var(--theme-text);
     margin-right: auto;
     margin-left: auto;
     font-size: 20px;
@@ -57,8 +57,8 @@
 }
 
 #search:hover, #search:focus {
-    border: 1.5px solid #dddee1;
-    background-color: black;
+    border: 1.5px solid var(--theme-text);
+    background-color: var(--theme-control-bg);
   }
   
   
@@ -88,7 +88,7 @@ li.Scontain {
 
 /** Scroll To Top Button **/
 .scrollToTopBtn {
-  background-color: #828282;
+  background-color: var(--theme-scroll-bg);
   border: none;
   border-radius: 45%;
   cursor: pointer;
@@ -126,53 +126,53 @@ li.Scontain {
 
 .card_api{
   padding: 10px;
-  border: 6px solid black; 
-  background-color: black; 
-  box-shadow: 15px 10px 15px rgba(0, 0, 0, 0.5);
+  border: 6px solid var(--theme-line);
+  background-color: var(--theme-surface);
+  box-shadow: 15px 10px 15px var(--theme-card-shadow);
 }
 
 #container{
   display: none;
 }
 
-.galaxy-home-link {
+.home-hero .galaxy-home-link {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
   margin-top: 0.35rem;
   padding: 0.55rem 0.9rem;
-  border: 1px solid rgba(95, 164, 255, 0.55);
+  border: 1px solid var(--theme-home-cta-border);
   border-radius: 999px;
-  background: rgba(2, 175, 255, 0.08);
-  color: #dffaff;
+  background: var(--theme-home-cta-bg);
+  color: var(--theme-home-cta-text);
+  box-shadow: var(--theme-home-cta-shadow);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 0.85rem;
   letter-spacing: 0.02em;
 }
 
-.galaxy-home-link:visited {
-  color: #dffaff;
+.home-hero .galaxy-home-link:visited {
+  color: var(--theme-home-cta-text);
 }
 
-.galaxy-home-link span {
-  color: #57e3a2;
+.home-hero .galaxy-home-link span {
+  color: var(--theme-home-cta-accent);
 }
 
-.galaxy-home-link:hover,
-.galaxy-home-link:focus-visible {
+.home-hero .galaxy-home-link:hover,
+.home-hero .galaxy-home-link:focus-visible {
   border-color: #13df93;
   background: rgba(19, 223, 147, 0.09);
-  color: #fff;
+  color: var(--theme-home-cta-text);
 }
 
 @media (max-width: 600px) {
-  .galaxy-home-link,
-  .galaxy-home-link:visited {
-    border-color: rgba(103, 232, 249, 0.85);
-    background: rgba(3, 8, 18, 0.9);
-    color: #f4fcff;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55), 0 0 18px rgba(103, 232, 249, 0.15);
-    text-shadow: 0 1px 2px #000;
+  .home-hero .galaxy-home-link,
+  .home-hero .galaxy-home-link:visited {
+    border-color: var(--theme-home-cta-border);
+    background: var(--theme-home-cta-bg);
+    color: var(--theme-home-cta-text);
+    box-shadow: var(--theme-home-cta-shadow);
   }
 }
 

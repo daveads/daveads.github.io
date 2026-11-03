@@ -2,7 +2,7 @@
 .archive-page {
   width: min(840px, 100%);
   margin: 0 auto;
-  color: #cbd2df;
+  color: var(--theme-copy);
 
   .search-results__items {
     margin: 0;
@@ -10,13 +10,13 @@
     list-style: none;
 
     li {
-      border-bottom: 1px solid rgba(139, 164, 199, 0.12);
+      border-bottom: 1px solid var(--theme-line-soft);
     }
   }
 
   .search-results__item {
     padding: 1rem 0.15rem;
-    color: #8994a7;
+    color: var(--theme-muted);
     font-size: 0.78rem;
     line-height: 1.55;
   }
@@ -28,11 +28,11 @@
   align-items: end;
   gap: 2rem;
   padding-bottom: 1.4rem;
-  border-bottom: 1px solid rgba(139, 164, 199, 0.18);
+  border-bottom: 1px solid var(--theme-line);
 
   h1 {
     margin: 0;
-    color: #f0f3f8;
+    color: var(--theme-heading);
     font-size: clamp(2.25rem, 7vw, 3.7rem);
     font-weight: 600;
     letter-spacing: -0.045em;
@@ -42,7 +42,7 @@
 
 .archive-kicker {
   margin: 0 0 0.45rem;
-  color: #78b99b;
+  color: var(--theme-kicker);
   font: 0.74rem/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   letter-spacing: 0.06em;
 }
@@ -50,13 +50,13 @@
 .archive-intro {
   max-width: 620px;
   margin: 0.85rem 0 0;
-  color: #909bad;
+  color: var(--theme-muted);
   line-height: 1.65;
 }
 
 .archive-count,
 .archive-list time {
-  color: #718096;
+  color: var(--theme-muted-soft);
   font: 0.7rem/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
@@ -70,16 +70,16 @@
   flex-wrap: wrap;
   gap: 0.5rem 1.1rem;
   padding: 0.9rem 0;
-  border-bottom: 1px solid rgba(139, 164, 199, 0.12);
+  border-bottom: 1px solid var(--theme-line-soft);
   font: 0.82rem/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   a {
-    color: $brand-color;
+    color: var(--theme-link);
 
     &:hover,
     &:focus-visible,
     &:active {
-      color: #13df93;
+      color: var(--theme-hover);
     }
   }
 }
@@ -87,14 +87,14 @@
 .archive-details {
   margin: 1rem 0 0;
   padding: 0.75rem 0.9rem;
-  border: 1px solid rgba(139, 164, 199, 0.16);
+  border: 1px solid var(--theme-line);
   border-radius: 8px;
-  color: #8f9bad;
+  color: var(--theme-muted);
   font-size: 0.82rem;
   line-height: 1.6;
 
   summary {
-    color: #aeb8c8;
+    color: var(--theme-copy);
     cursor: pointer;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   }
@@ -118,15 +118,15 @@
     height: 44px;
     margin: 0;
     padding: 0 0.9rem;
-    border: 1px solid rgba(139, 164, 199, 0.25);
+    border: 1px solid var(--theme-line-strong);
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.018);
-    color: #e4e9f2;
+    background: var(--theme-control-bg);
+    color: var(--theme-text);
     font: 0.86rem/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
     &:focus {
-      border-color: #78b99b;
-      outline: 2px solid rgba(120, 185, 155, 0.12);
+      border-color: var(--theme-kicker);
+      outline: 2px solid var(--theme-focus-ring);
     }
   }
 
@@ -141,7 +141,7 @@
   list-style: none;
 
   li {
-    border-bottom: 1px solid rgba(139, 164, 199, 0.12);
+    border-bottom: 1px solid var(--theme-line-soft);
   }
 
   a {
@@ -157,11 +157,11 @@
     &:focus-visible,
     &:active {
       strong {
-        color: #13df93;
+        color: var(--theme-hover);
       }
 
       .archive-arrow {
-        color: #13df93;
+        color: var(--theme-hover);
       }
     }
   }
@@ -176,7 +176,7 @@
   min-width: 0;
 
   strong {
-    color: $brand-color;
+    color: var(--theme-link);
     font-size: 1.125rem;
     font-weight: 550;
     line-height: 1.4;
@@ -184,7 +184,7 @@
 }
 
 .archive-arrow {
-  color: #68788f;
+  color: var(--theme-muted-soft);
 }
 
 .archive-years {
@@ -197,7 +197,7 @@
 
 .archive-year h2 {
   margin: 0 0 0.35rem;
-  color: #78b99b;
+  color: var(--theme-kicker);
   font: 600 0.82rem/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   letter-spacing: 0.08em;
 }
@@ -215,18 +215,18 @@
     align-items: center;
     gap: 0.55rem;
     padding: 0.48rem 0.65rem;
-    border: 1px solid rgba(95, 164, 255, 0.42);
+    border: 1px solid var(--theme-line-strong);
     border-radius: 6px;
-    background: rgba(95, 164, 255, 0.035);
-    color: $brand-color;
+    background: var(--theme-accent-faint);
+    color: var(--theme-link);
     font-size: 0.9rem;
 
     &:hover,
     &:focus-visible,
     &:active {
-      border-color: #13df93;
-      background: rgba(19, 223, 147, 0.06);
-      color: #13df93;
+      border-color: var(--theme-hover);
+      background: var(--theme-hover-soft);
+      color: var(--theme-hover);
     }
   }
 
@@ -234,8 +234,8 @@
     min-width: 1.2rem;
     padding: 0.08rem 0.28rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.06);
-    color: #8190a6;
+    background: var(--theme-surface-soft);
+    color: var(--theme-muted-soft);
     font: 0.64rem/1.35 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     text-align: center;
   }

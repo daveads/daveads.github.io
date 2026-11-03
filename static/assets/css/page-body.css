@@ -1,11 +1,16 @@
 .element-class {
   width: 100%;
   min-height: 100vh;
-  background-color: #080808;
+  background-color: var(--theme-bg);
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.78)),
+    linear-gradient(
+      to bottom,
+      var(--theme-home-overlay-start) 0%,
+      var(--theme-home-overlay-mid) 48%,
+      var(--theme-home-overlay-end) 100%
+    ),
     url("../images/star-lord-marvels.jpeg");
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -16,48 +21,69 @@
 
 .home-hero {
   padding: clamp(1.5rem, 4vw, 2.25rem) 0 clamp(2rem, 5vw, 3rem);
-  color: #cfd4dd;
+  color: var(--theme-text);
   text-align: center;
 }
 
 .home-hero h1 {
   margin: 0;
-  color: #e3e6eb;
+  color: var(--theme-home-title);
   font: 600 clamp(2.5rem, 9vw, 4.5rem)/1.05 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   letter-spacing: -0.055em;
+  text-shadow: var(--theme-home-text-shadow);
 }
 
 .home-intro {
+  display: table;
   max-width: 580px;
   margin: 0.85rem auto 1.25rem;
-  color: #b3bac7;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--theme-home-intro-border);
+  border-radius: 0.65rem;
+  background: var(--theme-home-intro-bg);
+  box-shadow: var(--theme-home-intro-shadow);
+  color: var(--theme-copy);
+  font-weight: 500;
   font-size: clamp(1.1rem, 3vw, 1.22rem);
   line-height: 1.7;
+  text-shadow: var(--theme-home-text-shadow);
+}
+
+.home-intro a,
+.home-intro a:visited {
+  font-weight: 700;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
 }
 
 .home-hero a,
 .home-recent a {
-  color: #5fa4ff;
+  color: var(--theme-link);
 }
 
 .home-hero a:visited,
 .home-recent a:visited {
-  color: #5fa4ff;
+  color: var(--theme-link);
 }
 
 .home-hero a:hover,
 .home-hero a:focus-visible,
 .home-recent a:hover,
 .home-recent a:focus-visible {
-  color: #13df93;
+  color: var(--theme-hover);
 }
 
 .home-recent {
+  max-width: 660px;
+  margin-right: auto;
   margin-bottom: 2rem;
+  margin-left: auto;
   padding: 1.1rem 1.5rem 0.25rem;
-  border: 1px solid rgba(139, 164, 199, 0.22);
-  border-radius: 10px;
-  background: rgba(3, 7, 12, 0.74);
+  border: 1px solid var(--theme-line);
+  border-radius: 14px;
+  background: var(--theme-home-panel);
+  box-shadow: var(--theme-home-panel-shadow);
+  backdrop-filter: blur(8px);
 }
 
 .home-recent__header {
@@ -66,12 +92,12 @@
   align-items: end;
   gap: 1rem;
   padding-bottom: 0.8rem;
-  border-bottom: 1px solid rgba(139, 164, 199, 0.14);
+  border-bottom: 1px solid var(--theme-line-soft);
 }
 
 .home-recent__header h2 {
   margin: 0;
-  color: #d9dde5;
+  color: var(--theme-heading);
   font-size: 1.35rem;
   font-weight: 600;
 }
@@ -85,9 +111,14 @@
   border-bottom: 0;
 }
 
+.home-recent .archive-list a {
+  padding-top: 0.82rem;
+  padding-bottom: 0.82rem;
+}
+
 .home-copy {
   margin-bottom: 2rem;
-  color: #b3bac7;
+  color: var(--theme-copy);
 }
 
 @media (max-width: 600px) {

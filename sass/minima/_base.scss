@@ -14,10 +14,8 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  //color: $text-color;
-  color: #dddee1; //#9197a5
-  //background-color: $background-color;
-  background-color: #080808; //#202124
+  color: var(--theme-text);
+  background-color: var(--theme-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -27,9 +25,8 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  //font-family: Courier New;
   font-family: 'Merriweather';
-
+  transition: color 160ms ease, background-color 160ms ease;
 }
 
 
@@ -107,17 +104,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
+  color: var(--theme-link);
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 20%);
+    color: var(--theme-link-visited);
   }
 
   &:hover {
-    //color: $text-color;
-	//color: #cccccc;
-	color: #13df93;
+	color: var(--theme-hover);
 	text-decoration: none;
   }
 
@@ -135,8 +130,8 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  color: var(--theme-muted);
+  border-left: 4px solid var(--theme-code-border);
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
   letter-spacing: -1px;
@@ -155,16 +150,15 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 2px solid $grey-color-light;
+  border: 2px solid var(--theme-code-border);
   border-radius: 3px;
-  //background-color: #eef;
-  color: #13b7ea;
+  color: var(--theme-code-text);
 
   @include media-query($on-palm) {
     @include relative-font-size(0.63);
-    border: 2px solid $grey-color-light;
+    border: 2px solid var(--theme-code-border);
     border-radius: 3px;
-    color: #13b7ea;
+    color: var(--theme-code-text);
   }
 
 }
@@ -227,7 +221,7 @@ pre {
     width: 16px;
     height: 16px;
     display: inline-block;
-    fill: #{$grey-color};
+    fill: var(--theme-muted);
     padding-right: 5px;
     vertical-align: text-top;
 }
@@ -247,23 +241,23 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  color: var(--theme-text);
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--theme-line);
   tr {
     &:nth-child(even) {
-      background-color: darken(#604732, 6%);
+      background-color: var(--theme-table-even);
     }
   }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    background-color: darken(#201c1c, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: var(--theme-table-head);
+    border: 1px solid var(--theme-table-border);
+    border-bottom-color: var(--theme-line-strong);
   }
   td {
-    border: 1px solid darken(#dbd5cf, 3%);
+    border: 1px solid var(--theme-table-border);
   }
 }

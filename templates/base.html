@@ -17,6 +17,32 @@
 	{% endblock %}
 	{% include "include/seo.html" %}
 
+<script>
+  (function () {
+    var fallbackTheme = "dark";
+    var savedTheme = null;
+
+    try {
+      savedTheme = localStorage.getItem("daveads-theme");
+    } catch (error) {
+      // Storage can be disabled; system preference still applies below.
+    }
+
+    var hasSystemPreference = typeof window.matchMedia === "function";
+    var systemTheme = hasSystemPreference && window.matchMedia("(prefers-color-scheme: light)").matches
+      ? "light"
+      : fallbackTheme;
+    var theme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : systemTheme;
+
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    document.querySelector("[data-theme-color]").setAttribute(
+      "content",
+      theme === "light" ? "#e5e1d9" : "#080808"
+    );
+  }());
+</script>
+
 <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 
 <link rel="alternate" type="application/atom+xml" title="Daveads feed" href="{{ get_url(path='atom.xml') }}">
@@ -40,6 +66,7 @@
 
 <!-- <script type="text/javascript" src="/assets/js/blink.js" defer></script> -->
 	<script type="text/javascript" src="/assets/js/navigation.js" defer></script>
+	<script type="text/javascript" src="/assets/js/theme.js" defer></script>
 <script type="text/javascript" src="/assets/js/scroll-top-button.js" defer></script>
 {% block page_scripts %}{% endblock page_scripts %}
 
