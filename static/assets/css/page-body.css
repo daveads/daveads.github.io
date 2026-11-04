@@ -2,51 +2,58 @@
   width: 100%;
   min-height: 100vh;
   background-color: var(--theme-bg);
-  background-image:
-    linear-gradient(
-      to bottom,
-      var(--theme-home-overlay-start) 0%,
-      var(--theme-home-overlay-mid) 48%,
-      var(--theme-home-overlay-end) 100%
-    ),
-    url("../images/star-lord-marvels.jpeg");
-  background-position: center top;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .element-class .page-content {
   padding-top: 0;
+  padding-bottom: 0;
+}
+
+.element-class .page-content > .section > .wrapper {
+  max-width: none;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .home-hero {
-  padding: clamp(1.5rem, 4vw, 2.25rem) 0 clamp(2rem, 5vw, 3rem);
-  color: var(--theme-text);
+  box-sizing: border-box;
+  display: grid;
+  min-height: clamp(390px, 52vh, 520px);
+  padding: clamp(2rem, 4vw, 2.75rem) 1.5rem 3rem;
+  place-items: start center;
+  background-color: #070a0e;
+  background-image:
+    linear-gradient(to bottom, rgba(4, 7, 11, 0.34), rgba(4, 7, 11, 0.78)),
+    url("../images/star-lord-marvels.jpeg");
+  background-position: center 22%;
+  background-size: cover;
+  color: #e5edf3;
   text-align: center;
+}
+
+.home-hero__inner {
+  width: min(100%, 760px);
 }
 
 .home-hero h1 {
   margin: 0;
-  color: var(--theme-home-title);
+  color: #f7f9fb;
   font: 600 clamp(2.5rem, 9vw, 4.5rem)/1.05 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   letter-spacing: -0.055em;
-  text-shadow: var(--theme-home-text-shadow);
+  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.7);
 }
 
 .home-intro {
-  display: table;
+  box-sizing: border-box;
+  width: 100%;
   max-width: 580px;
   margin: 0.85rem auto 1.25rem;
-  padding: 0.45rem 0.85rem;
-  border: 1px solid var(--theme-home-intro-border);
-  border-radius: 0.65rem;
-  background: var(--theme-home-intro-bg);
-  box-shadow: var(--theme-home-intro-shadow);
-  color: var(--theme-copy);
+  color: #e1e8ee;
   font-weight: 500;
   font-size: clamp(1.1rem, 3vw, 1.22rem);
   line-height: 1.7;
-  text-shadow: var(--theme-home-text-shadow);
+  overflow-wrap: anywhere;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.88);
 }
 
 .home-intro a,
@@ -56,34 +63,81 @@
   text-underline-offset: 0.14em;
 }
 
-.home-hero a,
-.home-recent a {
+.home-hero a:not(.galaxy-home-link) {
+  color: #78cfff;
+}
+
+.home-hero a:not(.galaxy-home-link):visited {
+  color: #78cfff;
+}
+
+.home-hero a:not(.galaxy-home-link):hover,
+.home-hero a:not(.galaxy-home-link):focus-visible {
+  color: #78efbd;
+}
+
+.home-hero .galaxy-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.35rem;
+  padding: 0.62rem 1rem;
+  border: 1px solid #3f9cda;
+  border-radius: 999px;
+  background: #1769aa;
+  color: #f7fafc;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+}
+
+.home-hero .galaxy-home-link:visited {
+  color: #f7fafc;
+}
+
+.home-hero .galaxy-home-link span {
+  color: #9be9c9;
+}
+
+.home-hero .galaxy-home-link:hover,
+.home-hero .galaxy-home-link:focus-visible {
+  border-color: #78efbd;
+  background: #0c7c64;
+  color: #ffffff;
+}
+
+.home-latest {
+  padding: 0 1.5rem clamp(3.5rem, 8vw, 5.5rem);
+  border-top: 1px solid var(--theme-line-soft);
+  background: var(--theme-bg);
+}
+
+.home-latest a {
   color: var(--theme-link);
 }
 
-.home-hero a:visited,
-.home-recent a:visited {
+.home-latest a:visited {
   color: var(--theme-link);
 }
 
-.home-hero a:hover,
-.home-hero a:focus-visible,
-.home-recent a:hover,
-.home-recent a:focus-visible {
+.home-latest a:hover,
+.home-latest a:focus-visible {
   color: var(--theme-hover);
 }
 
 .home-recent {
-  max-width: 660px;
-  margin-right: auto;
-  margin-bottom: 2rem;
-  margin-left: auto;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 760px;
+  margin: clamp(-14.5rem, calc(1.5rem - 23.3vh), -8.5rem) auto 0;
   padding: 1.1rem 1.5rem 0.25rem;
-  border: 1px solid var(--theme-line);
+  border: 1px solid var(--theme-home-card-line);
   border-radius: 14px;
-  background: var(--theme-home-panel);
-  box-shadow: var(--theme-home-panel-shadow);
-  backdrop-filter: blur(8px);
+  background: var(--theme-surface);
+  box-shadow: var(--theme-home-card-shadow);
 }
 
 .home-recent__header {
@@ -92,7 +146,7 @@
   align-items: end;
   gap: 1rem;
   padding-bottom: 0.8rem;
-  border-bottom: 1px solid var(--theme-line-soft);
+  border-bottom: 1px solid var(--theme-home-card-line);
 }
 
 .home-recent__header h2 {
@@ -111,27 +165,36 @@
   border-bottom: 0;
 }
 
+.home-recent .archive-list li {
+  border-color: var(--theme-home-card-line);
+}
+
 .home-recent .archive-list a {
   padding-top: 0.82rem;
   padding-bottom: 0.82rem;
 }
 
 .home-copy {
-  margin-bottom: 2rem;
+  max-width: 760px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
   color: var(--theme-copy);
 }
 
 @media (max-width: 600px) {
-  .element-class {
-    background-attachment: scroll;
-    background-position: center top;
+  .home-hero {
+    min-height: 430px;
+    padding: 2rem 1rem 2.5rem;
+    background-position: 58% center;
   }
 
-  .home-hero {
-    padding-top: 1.5rem;
+  .home-latest {
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   .home-recent {
+    margin-top: -11rem;
     padding-right: 1rem;
     padding-left: 1rem;
   }

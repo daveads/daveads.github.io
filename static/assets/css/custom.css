@@ -135,47 +135,6 @@ li.Scontain {
   display: none;
 }
 
-.home-hero .galaxy-home-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-top: 0.35rem;
-  padding: 0.55rem 0.9rem;
-  border: 1px solid var(--theme-home-cta-border);
-  border-radius: 999px;
-  background: var(--theme-home-cta-bg);
-  color: var(--theme-home-cta-text);
-  box-shadow: var(--theme-home-cta-shadow);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-}
-
-.home-hero .galaxy-home-link:visited {
-  color: var(--theme-home-cta-text);
-}
-
-.home-hero .galaxy-home-link span {
-  color: var(--theme-home-cta-accent);
-}
-
-.home-hero .galaxy-home-link:hover,
-.home-hero .galaxy-home-link:focus-visible {
-  border-color: #13df93;
-  background: rgba(19, 223, 147, 0.09);
-  color: var(--theme-home-cta-text);
-}
-
-@media (max-width: 600px) {
-  .home-hero .galaxy-home-link,
-  .home-hero .galaxy-home-link:visited {
-    border-color: var(--theme-home-cta-border);
-    background: var(--theme-home-cta-bg);
-    color: var(--theme-home-cta-text);
-    box-shadow: var(--theme-home-cta-shadow);
-  }
-}
-
 /* Keep article content inside the reading column at every viewport size. */
 .post,
 .post-content {

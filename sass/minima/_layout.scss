@@ -687,6 +687,24 @@
   text-align: left;
 }
 
+.content-page__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.25rem;
+  margin: 0.85rem 0 0;
+  color: var(--theme-muted);
+  font: 0.82rem/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  time {
+    color: var(--theme-strong);
+  }
+}
+
+.content-page--left .content-page__meta {
+  justify-content: flex-start;
+}
+
 .not-found {
   max-width: 620px;
   margin: clamp(3rem, 12vh, 7rem) auto;

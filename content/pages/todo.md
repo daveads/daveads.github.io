@@ -2,6 +2,8 @@
 title = "Todo list"
 template = "page.html"
 path = "todo"
+date = 2022-06-11
+updated = 2023-08-08
 
 [extra]
 page_style = "left"

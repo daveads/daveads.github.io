@@ -8,6 +8,12 @@
 		{% if content_page_kicker %}<p class="content-page__kicker">{{ content_page_kicker }}</p>{% endif %}
 		<h1 class="post-title">{{ page.title }}</h1>
 		{% if page.description %}<p class="content-page__intro">{{ page.description }}</p>{% endif %}
+		{% if page.date %}
+		<p class="content-page__meta">
+			<span>Created <time datetime="{{ page.date }}">{{ page.date | date(format="%B %-d, %Y") }}</time></span>
+			{% if page.updated %}<span>Last updated <time datetime="{{ page.updated }}">{{ page.updated | date(format="%B %-d, %Y") }}</time></span>{% endif %}
+		</p>
+		{% endif %}
 	</header>
 
 	<div class="post-content">
