@@ -21,6 +21,8 @@ A small example is a note I was making for someone in real estate. It was basic:
 
 I needed to write it because I was still trying to think through the idea. Putting the pieces on the page gave me something I could rearrange and question.
 
+<br>
+
 ![Thinking with AI](/assets/images/thinking-with-ai.png)
 
 That sketch was not yet a testable hypothesis, but it helped me move towards one. Perhaps people would choose the platform because it takes responsibility for verification. What would make them trust those checks? Who would be accountable when something goes wrong? What evidence would show that this matters to them?
