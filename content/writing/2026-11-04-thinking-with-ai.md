@@ -6,7 +6,7 @@ draft = true
 
 [taxonomies]
 categories = ["AI"]
-tags = []
+tags = ["llm"]
 +++
 
 After publishing [Taste in Software](https://daveads.github.io/writing/taste-in-software/), I read Addy Osmani's [Critical thinking when agents do the work](https://x.com/addyosmani/status/2117512471930167377).
