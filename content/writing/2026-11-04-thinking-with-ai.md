@@ -2,7 +2,7 @@
 title = "Thinking with AI"
 date = 2026-11-04
 description = "AI lets us delegate more of the work. How do we preserve the experiences that teach us to judge the result?"
-draft = true
+draft = false
 
 [taxonomies]
 categories = ["AI"]
