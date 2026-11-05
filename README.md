@@ -1,6 +1,6 @@
 # Daveads.github.io 
 
-ported jekyll's [minima](https://github.com/jekyll/minima) theme to zola //edited
+ported jekyll's [minima](https://github.com/jekyll/minima) theme to zola **//highly modified**
 
 ## To Run
 
@@ -18,7 +18,7 @@ zola --config config.dev.toml serve --drafts
 ```
 
 
-### src/
+### src
 ```
 // to bundle esm code in src folder 
 npx webpack
