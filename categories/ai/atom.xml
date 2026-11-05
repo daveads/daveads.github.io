@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Daveads - AI</title>
+  <subtitle>Writings and notes by Adejumo David Adewale, Dive into the abyss of Daveads!</subtitle>
+  <link rel="self" type="application/atom+xml" href="https://daveads.github.io/categories/ai/atom.xml"/>
+  <link rel="alternate" type="text/html" href="https://daveads.github.io"/>
+  <generator uri="https://www.getzola.org/">Zola</generator>
+  <updated>2026-11-04T00:00:00+00:00</updated>
+  <id>https://daveads.github.io/categories/ai/atom.xml</id>
+  
+  <entry xml:lang="en">
+    <title>Thinking with AI</title>
+    <published>2026-11-04T00:00:00+00:00</published>
+    <updated>2026-11-04T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/thinking-with-ai/"/>
+    <id>https://daveads.github.io/writing/thinking-with-ai/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/thinking-with-ai/">&lt;p&gt;After publishing &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://daveads.github.io/writing/taste-in-software/&quot;&gt;Taste in Software&lt;/a&gt;, I read Addy Osmani&#39;s &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://x.com/addyosmani/status/2117512471930167377&quot;&gt;Critical thinking when agents do the work&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;He describes how delegating a task can gradually become accepting an answer without examining it. Two of his suggestions felt familiar: form an initial hypothesis before asking, and seek counterarguments from different models.&lt;/p&gt;
+&lt;p&gt;Those are things I already find myself doing. His article helped me understand why I want to keep doing them. It also left me with a question: if we increasingly ask humans to direct agents and judge their work, how do those humans learn to judge?&lt;/p&gt;
+&lt;h2 id=&quot;writing-gives-me-something-to-question&quot;&gt;Writing gives me something to question&lt;/h2&gt;
+&lt;p&gt;A small example is a note I was making for someone in real estate. It was basic: a list of the people a property platform would connect, including agents, renters, buyers, and owners. I wrote down responsibilities such as verification, trust, accountability, and management.&lt;/p&gt;
+&lt;p&gt;I needed to write it because I was still trying to think through the idea. Putting the pieces on the page gave me something I could rearrange and question.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/thinking-with-ai.png&quot; alt=&quot;Thinking with AI&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;That sketch was not yet a testable hypothesis, but it helped me move towards one. Perhaps people would choose the platform because it takes responsibility for verification. What would make them trust those checks? Who would be accountable when something goes wrong? What evidence would show that this matters to them?&lt;/p&gt;
+&lt;p&gt;I can explore those questions with a model, then test the assumptions with people in the market. Writing first gives me an initial position that can change. Otherwise, I may spend the whole exchange reacting to a polished proposal without making my own assumptions explicit.&lt;/p&gt;
+&lt;h2 id=&quot;thinking-with-different-models&quot;&gt;Thinking with different models&lt;/h2&gt;
+&lt;p&gt;Addy also describes asking more than one model to argue the opposite side of an open-ended question, then reviewing the arguments and forming his own opinion.&lt;/p&gt;
+&lt;p&gt;I recognise that in my conversations with Grok, Codex, and Claude. Moving an idea between them gives me opportunities to encounter an objection or framing I had not considered.&lt;/p&gt;
+&lt;p&gt;For the real estate idea, I could ask why owners and agents might avoid the platform, or how its incentives could undermine the trust it promises to provide.&lt;/p&gt;
+&lt;p&gt;Several models can still share the same weak assumption. Their agreement does not establish that an idea will work, and a persuasive objection still needs examination. I have to decide which arguments matter and what evidence would change my position.&lt;/p&gt;
+&lt;p&gt;The useful part is leaving the exchange better able to explain what I think and why.&lt;/p&gt;
+&lt;h2 id=&quot;the-experience-behind-the-workflow&quot;&gt;The experience behind the workflow&lt;/h2&gt;
+&lt;p&gt;An experienced engineer might delegate an implementation, choose a few important checks, and approve the result. Someone watching can copy those steps without understanding why those checks were chosen.&lt;/p&gt;
+&lt;p&gt;In my earlier article, I wrote:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We see what an experienced person can stop doing but ignore what they had to do before they could stop.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Consider a background job that sends an email. A request times out, so an agent adds a retry and a test showing that a failed attempt is followed by a successful one. Everything passes.&lt;/p&gt;
+&lt;p&gt;But the service may have accepted the first email before its response was lost. Retrying could send it twice. The test checked the behaviour we requested while leaving that possibility unexamined.&lt;/p&gt;
+&lt;p&gt;Someone has to notice the assumption. They might learn to recognise it through a mentor, documentation, an experiment, or a previous failure. Copying a workflow does not automatically transfer that experience.&lt;/p&gt;
+&lt;h2 id=&quot;keeping-room-for-practice&quot;&gt;Keeping room for practice&lt;/h2&gt;
+&lt;p&gt;Practice can change as the tools improve. I do not think everyone needs to repeat the exact path taken by earlier generations of programmers. I want to know which lessons still matter and how a new workflow can teach them.&lt;/p&gt;
+&lt;p&gt;Before running generated code, I could predict its behaviour for a few inputs. After reading an explanation, I could close it and apply the idea to a different case. When an agent fixes a bug, I could reproduce the failure and work through why the change addresses it.&lt;/p&gt;
+&lt;p&gt;An agent can help with these exercises and suggest assumptions I missed. I still need opportunities to discover where my understanding falls short.&lt;/p&gt;
+&lt;p&gt;Teams need to make time for that learning too. If every task rewards the quickest delivery, investigating an unfamiliar part of a system becomes difficult to justify. Yet we may later expect the same person to diagnose failures and review important changes.&lt;/p&gt;
+&lt;p&gt;For me, writing before asking is one way to stay involved. Taking an idea to different models is another, provided I examine their arguments and seek evidence beyond their responses.&lt;/p&gt;
+&lt;p&gt;I want to leave an exchange able to say what changed in my understanding, and why. If human judgment is going to remain part of the workflow, people need room to develop it while the work is getting done.&lt;/p&gt;
+&lt;aside class=&quot;callout note&quot; aria-label=&quot;November reads&quot;&gt;
+&lt;div class=&quot;icon&quot; aria-hidden=&quot;true&quot;&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;p class=&quot;callout-title&quot;&gt;November reads&lt;/p&gt;
+&lt;p&gt;While writing this, I also read a few of Addy’s other articles. See &lt;a href=&quot;https://daveads.github.io/note/nov-reads/&quot;&gt;November Reads&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/aside&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Taste in Software</title>
+    <published>2026-11-01T00:00:00+00:00</published>
+    <updated>2026-11-01T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/taste-in-software/"/>
+    <id>https://daveads.github.io/writing/taste-in-software/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/taste-in-software/">&lt;p&gt;While &lt;a href=&quot;https://daveads.github.io/writing/restyling-this-site-with-codex/&quot;&gt;restyling this site&lt;/a&gt;, I kept using phrases like &lt;em&gt;this feels like too much&lt;/em&gt;, &lt;em&gt;tone it down&lt;/em&gt;, and &lt;em&gt;this does not look like my website anymore&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Those were not technical instructions. I could not always name the CSS responsible, but I could look at the result and decide that it was wrong for what I wanted. It made me ask: What is taste? What drives it? Is it technical or personal? Where do experience and creativity enter?&lt;/p&gt;
+&lt;h2 id=&quot;what-is-taste&quot;&gt;What is taste?&lt;/h2&gt;
+&lt;p&gt;Taste is often described as knowing what is good, but that feels incomplete. Good according to whom, and good for what?&lt;/p&gt;
+&lt;p&gt;I think taste is the ability to notice differences, understand why they matter, and choose what fits a purpose. It is more than liking one colour, meal, design, or programming style over another.&lt;/p&gt;
+&lt;p&gt;A minimal website is not automatically tasteful. Removing everything is easy; knowing what must remain is harder. The same is true in software: fewer lines are not always better, and a clever abstraction is not always useful.&lt;/p&gt;
+&lt;p&gt;Taste is partly personal, but it is not random. It can be discussed, criticised, practised, and improved.&lt;/p&gt;
+&lt;h2 id=&quot;what-drives-taste&quot;&gt;What drives taste?&lt;/h2&gt;
+&lt;p&gt;Experience probably plays a large part, but experience is more than the number of years spent doing something. It is exposure, comparison, failure, feedback, and attention. You try something, see what happens, compare it with other work, and learn what you missed.&lt;/p&gt;
+&lt;p&gt;What looks like instinct from the outside may be compressed experience.&lt;/p&gt;
+&lt;p&gt;This is where taste becomes technical. A programmer may sense that an interface will become difficult to maintain. A designer may notice that a page has no hierarchy. A mechanic may hear that an engine is not behaving normally. Their judgment is supported by things they have seen, broken, and repaired before.&lt;/p&gt;
+&lt;p&gt;Technical knowledge gives taste something to work with. Taste helps decide how and when to use it.&lt;/p&gt;
+&lt;h2 id=&quot;the-chef-and-the-recipe&quot;&gt;The chef and the recipe&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/writing/taste.webp&quot; alt=&quot;A chef tasting a dish while cooking&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;A recipe gives a chef ingredients, measurements, temperature, and cooking time. An experienced chef still tastes while cooking. They notice that an ingredient is stronger today, the pan is behaving differently, or the food needs acidity rather than more salt.&lt;/p&gt;
+&lt;p&gt;The chef does not even need to be the person who cooked the meal. By tasting it, they may be able to tell how it was prepared, where the process went wrong, or what is missing. They can judge the result because experience has given them a mental library of ingredients, techniques, and outcomes.&lt;/p&gt;
+&lt;p&gt;The recipe provides a path. The chef&#39;s taste guides the adjustments.&lt;/p&gt;
+&lt;p&gt;A blender, thermometer, or automatic mixer does not make the chef less skilled. The danger begins when someone can produce meals without ever learning to taste what they are producing. That feels close to the question we now face with AI.&lt;/p&gt;
+&lt;h2 id=&quot;can-models-learn-taste&quot;&gt;Can models learn taste?&lt;/h2&gt;
+&lt;p&gt;Fidel Etinosa, who reviewed an early draft of this article, challenged an assumption behind my question: if taste can be taught, why could a model not learn it too?&lt;/p&gt;
+&lt;p&gt;I think that is possible. Reasoning models are still young, so it would be careless to treat their current limitations as permanent ones.&lt;/p&gt;
+&lt;p&gt;But if models can learn taste, why do they not already seem to have it? Their training data contains excellent code, design, writing, and criticism. It also contains mediocre work and conflicting ideas about what &lt;em&gt;good&lt;/em&gt; means.&lt;/p&gt;
+&lt;p&gt;The model&#39;s source code does not contain taste directly; it defines the process through which patterns are learned. A model may learn what experienced people call good without consistently choosing it. Learning a judgment is not the same as preferring it-or, more carefully, behaving consistently as though it prefers it. That may depend on the training objective.&lt;/p&gt;
+&lt;p&gt;Maybe fragments of taste are already present. The question is whether training can turn those fragments into stable judgment, and whose definition of good that judgment will represent.&lt;/p&gt;
+&lt;p&gt;But that does not remove the problem I am interested in. A model&#39;s taste must still be shaped by some signal: what is rewarded, whose preferences are represented, which contexts it has encountered, and what someone is trying to accomplish.&lt;/p&gt;
+&lt;p&gt;Even if models develop excellent judgment, humans still need enough judgment to choose the goal, recognise when the model is wrong, and take responsibility for the result.&lt;/p&gt;
+&lt;p&gt;Maybe the question is not whether AI can learn taste. It is what kind of taste it learns and what happens to ours while it does.&lt;/p&gt;
+&lt;h2 id=&quot;the-uncle-bob-question&quot;&gt;The Uncle Bob question&lt;/h2&gt;
+&lt;p&gt;While thinking about this, I saw &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://x.com/unclebobmartin/status/2080257779395154409&quot;&gt;a post from Robert C. Martin&lt;/a&gt;, the author of &lt;em&gt;Clean Code&lt;/em&gt;. He described not reading the code written by his agents and instead surrounding them with strong constraints: tests, quality metrics, coverage requirements, and other forms of verification.&lt;/p&gt;
+&lt;p&gt;What interested me was the experience behind the person choosing those constraints.&lt;/p&gt;
+&lt;p&gt;A recent exchange between &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://x.com/id_aa_carmack/status/2115917666955497608&quot;&gt;John Carmack&lt;/a&gt; and &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://x.com/clattner_llvm/status/2116268356160667775&quot;&gt;Chris Lattner&lt;/a&gt; made this more concrete for me. Good building blocks and abstractions still matter, even when an agent writes the implementation. AI may explain the available trade-offs, but the remaining decision still belongs to someone. Perhaps recognising the important decision—and accepting responsibility for it—is part of technical taste.&lt;/p&gt;
+&lt;p&gt;An &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://youtu.be/MRQTlwcW-aQ?si=L4pE_4Yu1gXbiBle&quot;&gt;Anthropic team recently shared a practical example&lt;/a&gt;. They rewrote a Python API in Rust without having a Rust developer in the room. Claude wrote much of the implementation, while the humans designed the distributed system, planned the migration, and verified it by sending shadow traffic through both versions. Their expertise did not disappear; it moved from writing each line to defining the system and deciding what evidence would make it trustworthy.&lt;/p&gt;
+&lt;p&gt;That leaves the same question: if experience helps produce taste, can someone without it safely copy the workflow of someone who already has it?&lt;/p&gt;
+&lt;p&gt;Making work easier is not the problem. Removing the feedback loops through which people learn might be. We see what an experienced person can stop doing but ignore what they had to do before they could stop. We should automate repetition without automatically removing practice.&lt;/p&gt;
+&lt;h2 id=&quot;manual-and-automatic-cars&quot;&gt;Manual and automatic cars&lt;/h2&gt;
+&lt;p&gt;You do not need to drive a manual car to be a good driver. An automatic transmission removes work and makes driving accessible to more people.&lt;/p&gt;
+&lt;p&gt;But a manual car exposes part of the machine&#39;s behaviour. You feel the relationship between the engine, gears, speed, and movement. That does not make every manual driver a mechanic, but it provides feedback that an automatic system normally hides.&lt;/p&gt;
+&lt;p&gt;The lesson is not that everyone must suffer through the old way. It is that an abstraction may remove information along with effort. We need to know which information still matters and find another way to teach it.&lt;/p&gt;
+&lt;h2 id=&quot;where-creativity-enters&quot;&gt;Where creativity enters&lt;/h2&gt;
+&lt;p&gt;Creativity and taste are related, but they are not the same.&lt;/p&gt;
+&lt;p&gt;Creativity generates possibilities. Taste chooses among them, combines them, and knows when to stop. Creativity asks, &lt;em&gt;what else could this be?&lt;/em&gt; Taste asks, &lt;em&gt;which version belongs here?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Problem-solving needs both. We frame the problem, generate possible solutions, test them, and refine what survives. Technical knowledge tells us what is possible. Creativity helps us escape the obvious answer. Taste helps us recognise the answer that fits.&lt;/p&gt;
+&lt;p&gt;Without creativity, taste can only criticise. Without taste, creativity can produce endlessly without knowing what deserves to remain.&lt;/p&gt;
+&lt;h2 id=&quot;what-are-we-building-towards&quot;&gt;What are we building towards?&lt;/h2&gt;
+&lt;p&gt;I do not think anyone can confidently predict what the future will look like. We are building towards what we think it should be, and our tools will shape the people using them.&lt;/p&gt;
+&lt;p&gt;I do not think &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.anthropic.com/&quot;&gt;Anthropic&lt;/a&gt;, &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://openai.com/&quot;&gt;OpenAI&lt;/a&gt;, &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://deepmind.google/&quot;&gt;Google DeepMind&lt;/a&gt;, or anyone else building in this space can confidently predict that future either, even if their work is helping to usher in and shape a particular version of it.&lt;/p&gt;
+&lt;p&gt;The question may not be whether AI can do more of the work. It clearly can. The question is whether people will still develop the judgment needed to direct, evaluate, and take responsibility for that work.&lt;/p&gt;
+&lt;p&gt;I have a similar feeling when dealing with some non-critical, well-contained parts of &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://www.merdra.com/&quot;&gt;Merdra&lt;/a&gt;. I do not need to hold every line in my head, but I need to understand what the system is doing and keep a mental map of it: how the parts relate, what assumptions they depend on, and where to look when something changes.&lt;/p&gt;
+&lt;p&gt;That distinction matters. Security, patient data, clinical safety, and other critical paths require much closer understanding and stronger verification. Abstraction may reduce how much code I read directly; it cannot remove my responsibility for knowing how those parts behave.&lt;/p&gt;
+&lt;p&gt;Maybe that is another form of taste: knowing how much detail can be abstracted away without surrendering understanding or responsibility.&lt;/p&gt;
+&lt;p&gt;These are questions without specific answers, at least for now.&lt;/p&gt;
+&lt;aside class=&quot;callout note&quot; aria-label=&quot;Reviewers&quot;&gt;
+&lt;div class=&quot;icon&quot; aria-hidden=&quot;true&quot;&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;p class=&quot;callout-title&quot;&gt;Reviewers&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;strong&gt;Rtrvl (CTO)&lt;/strong&gt; and &lt;strong&gt;Fidel Etinosa&lt;/strong&gt; for reviewing an early draft of this article.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/aside&gt;
+</content>
+    
+  </entry>
+  
+  <entry xml:lang="en">
+    <title>Restyling This Site With Codex</title>
+    <published>2026-10-31T00:00:00+00:00</published>
+    <updated>2026-10-31T00:00:00+00:00</updated>
+    
+    <author><name>Adejumo David Adewale</name></author>
+    
+    <link rel="alternate" type="text/html" href="https://daveads.github.io/writing/restyling-this-site-with-codex/"/>
+    <id>https://daveads.github.io/writing/restyling-this-site-with-codex/</id>
+    
+    <content type="html" xml:base="https://daveads.github.io/writing/restyling-this-site-with-codex/">&lt;p&gt;I am not really a frontend or UI person, but I do know how things work there.&lt;/p&gt;
+&lt;p&gt;I can tell when something feels wrong on a page, but that does not mean I always know the CSS responsible for it. This site is personal, though, so I care about how it feels. I want it to be simple, calm, and centred on the things I write.&lt;/p&gt;
+&lt;p&gt;I recently restyled it with Codex using &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://developers.openai.com/api/docs/models/gpt-5.6-sol&quot;&gt;GPT-5.6 Sol&lt;/a&gt; at high reasoning effort.&lt;/p&gt;
+&lt;p&gt;It started with a question about SEO. Then I noticed inconsistent spacing, duplicated CSS, mobile problems, and pages that did not feel related. What began as a review slowly became a restyling of almost the entire site.&lt;/p&gt;
+&lt;p&gt;I did not begin with a finished design or a detailed reconstruction plan. I moved through the site one page at a time. I questioned new files, asked why styles were duplicated, compared mobile screenshots, and sometimes reversed changes that felt like too much. The design emerged through those small decisions rather than from one large redesign.&lt;/p&gt;
+&lt;h2 id=&quot;trying-not-to-overdo-it&quot;&gt;Trying not to overdo it&lt;/h2&gt;
+&lt;p&gt;An AI coding agent makes it very easy to add things. A page can quickly gain cards, borders, gradients, animations, and another stylesheet.&lt;/p&gt;
+&lt;p&gt;That speed is useful, but it can also produce too much design.&lt;/p&gt;
+&lt;p&gt;Some early changes looked cool but stopped feeling like my website. The About page was one example. It had more personality, but it also felt over-designed. I kept giving the same feedback:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tone it down a bit.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Codex could produce and modify the interface quickly, while I decided what actually belonged. We would add something, look at it, and remove the parts that made the page feel busy.&lt;/p&gt;
+&lt;p&gt;The goal was never to turn the site into a modern landing page. I wanted a slightly better version of what was already here.&lt;/p&gt;
+&lt;h2 id=&quot;minimal-as-a-system&quot;&gt;Minimal as a system&lt;/h2&gt;
+&lt;p&gt;I started to think of minimalism as having fewer rules to remember, not just fewer things on the screen.&lt;/p&gt;
+&lt;p&gt;Links are blue and turn green when hovered. Writings, Notes, Paper, and their archives use the same visual language. Dates, tags, headings, lists, and the little &lt;code&gt;cd&lt;/code&gt; navigation should not look as if they came from unrelated websites.&lt;/p&gt;
+&lt;p&gt;This meant sharing templates, using the existing Sass structure, removing duplicated code, and checking the same layouts on desktop and mobile. A new page can now inherit an existing pattern instead of needing its own design and stylesheet.&lt;/p&gt;
+&lt;p&gt;That is more useful to me than making one page impressive on its own.&lt;/p&gt;
+&lt;h2 id=&quot;the-daveads-galaxy&quot;&gt;The Daveads Galaxy&lt;/h2&gt;
+&lt;p&gt;The biggest addition was the &lt;a href=&quot;https://daveads.github.io/galaxy/&quot;&gt;Daveads Galaxy&lt;/a&gt;: Daveads at the centre, categories as constellations, topics as planets, and articles inside them.&lt;/p&gt;
+&lt;p&gt;I did not want it to be a hardcoded visual that would break as I wrote more. It reads the categories and tags already used by Writings and Notes. When I publish something new, the Galaxy should understand where it belongs without me manually adding another planet.&lt;/p&gt;
+&lt;p&gt;Mobile made the feature more interesting. Planets needed useful touch targets. Tapping one had to reveal its articles. Zooming the Galaxy should not zoom the entire page, and the navigation still needed to work in full-screen mode. We also kept a list view for anyone who wants a simpler way to browse.&lt;/p&gt;
+&lt;p&gt;The Galaxy is more playful than the rest of the website, but it follows the same rule: content should drive the interface.&lt;/p&gt;
+&lt;h2 id=&quot;working-with-codex&quot;&gt;Working with Codex&lt;/h2&gt;
+&lt;p&gt;A lot of my feedback came through screenshots. I would notice too much empty space, an uncentred video, a heading disappearing on mobile, or two labels sitting too close together. I could point at the problem without knowing which template or Sass rule created it.&lt;/p&gt;
+&lt;p&gt;Codex could trace the element back to the code and make a focused change. I would look at the result and decide whether it felt right. That loop worked well for someone who is not a frontend person but still has an opinion about the result.&lt;/p&gt;
+&lt;p&gt;We also checked the less visible things: responsiveness, builds, internal links, test pages, the Atom feed, and whether Google Analytics remained untouched.&lt;/p&gt;
+&lt;p&gt;After experimenting, we refactored the Galaxy into smaller files and shared common code across other pages. Generated code can work while still being difficult for a human to own. I want to open the repository later, find the relevant file, and change it myself.&lt;/p&gt;
+&lt;p&gt;GPT-5.6 Sol at high reasoning effort was helpful when a small request crossed templates, Sass, JavaScript, content configuration, and mobile behaviour. The &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https://developers.openai.com/api/docs/guides/reasoning&quot;&gt;official OpenAI documentation&lt;/a&gt; describes high effort as useful for complex planning, debugging, and agentic work, which matched this project.&lt;/p&gt;
+&lt;p&gt;But it did not replace taste. I still had to say when something was too much, protect the parts I liked, and ask whether a new file was really necessary.&lt;/p&gt;
+&lt;p&gt;Codex gave me implementation speed. I kept responsibility for what the website should feel like.&lt;/p&gt;
+&lt;p&gt;The site now has more capability, but its ordinary pages feel calmer and more consistent. More importantly, it still feels like mine.&lt;/p&gt;
+</content>
+    
+  </entry>
+  
+</feed>

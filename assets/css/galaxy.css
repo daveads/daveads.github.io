@@ -1,0 +1,5 @@
+/* Galaxy styles are grouped by responsibility for easier maintenance. */
+@import url("./galaxy/base.css");
+@import url("./galaxy/map.css");
+@import url("./galaxy/list.css");
+@import url("./galaxy/responsive.css");
