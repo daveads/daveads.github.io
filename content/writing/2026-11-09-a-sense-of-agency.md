@@ -9,7 +9,7 @@ categories = ["General", "Startups"]
 
 Growing up, I started noticing a difference in how people respond to problems. Some spend a lot of time complaining. Others begin trying to figure out what they can do about it.
 
-I recognise that second impulse in myself. I think of it as *a sense of agency*. You believe that what you do can change something about a situation.
+I recognise that second impulse in myself. I think of it as <b>*a sense of agency*</b>. You believe that what you do can change something about a situation.
 
 Sometimes you have a few skills, an idea, and almost nothing else. You’re exhausted and your mind is still asking, *What else can I try?* Sometimes the answer is to start from scratch.
 
