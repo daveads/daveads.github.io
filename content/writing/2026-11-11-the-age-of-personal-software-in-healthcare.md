@@ -1,8 +1,7 @@
 +++
 title = "The Age of Personal Software in Healthcare"
 date = 2026-11-11
-description = "What happens when patients can build their own software, but their medical history is still scattered across institutions?"
-draft = true
+description = "a possible future"
 
 [taxonomies]
 categories = ["Merdra", "Startups", "AI"]
@@ -83,6 +82,6 @@ A useful early test would be whether an independently built application can conn
 
 That is a smaller problem than supporting every imaginable medical agent, but it would tell us something real about the foundation we are building.
 
-I don't know how much of our future software people will create for themselves. Some will keep choosing established products. Others may want tools built around their own routines.
+How much of this becomes part of everyday healthcare remains to be seen. Some people will keep choosing established products. Others may want tools built around their own routines.
 
 For now, I'm just imagining what that future might look like.
