@@ -4,8 +4,7 @@ date = 2026-11-21
 description = "My lifting numbers by date."
 
 [taxonomies]
-categories = ["General"]
-tags = ["fitness", "strength", "gym"]
+categories = ["Workout"]
 +++
 
 ### 2026-11-21
