@@ -1,0 +1,86 @@
+
+.callout {
+    --callout-accent: var(--theme-link);
+    --callout-border: rgba(95, 164, 255, 0.28);
+    --callout-surface: rgba(95, 164, 255, 0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin: 2rem 0;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--callout-border);
+    border-left: 3px solid var(--callout-accent);
+    border-radius: 6px;
+    background: var(--callout-surface);
+    color: var(--theme-copy);
+    font-size: 0.95em;
+    font-style: normal;
+    letter-spacing: normal;
+}
+
+.callout.tip {
+    --callout-accent: #13c985;
+    --callout-border: rgba(19, 201, 133, 0.25);
+    --callout-surface: rgba(19, 201, 133, 0.05);
+}
+
+.callout.warning {
+    --callout-accent: #e3a24b;
+    --callout-border: rgba(227, 162, 75, 0.28);
+    --callout-surface: rgba(227, 162, 75, 0.06);
+}
+
+.callout .icon {
+    flex: 0 0 auto;
+    margin: 0.15rem 0 0;
+    color: var(--callout-accent);
+}
+
+.callout .icon svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.callout .content {
+    flex: 1;
+    min-width: 0;
+    color: inherit;
+}
+
+.callout .callout-title {
+    margin: 0 0 0.35rem;
+    color: var(--theme-heading);
+    font-weight: 600;
+}
+
+.callout .content > :last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .callout {
+        gap: 0.65rem;
+        padding: 0.85rem 0.9rem;
+    }
+}
+
+/** Image **/
+.centered-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.centered-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.centered-image figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--theme-muted);
+}

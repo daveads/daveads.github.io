@@ -1,0 +1,196 @@
+.category {
+    display: inline-block;
+    width: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: var(--theme-surface);
+    font-size: 110%;
+    font-weight: bold;
+    color: var(--theme-text);
+}
+
+
+
+
+
+/** 	
+	search input @ "/blog" 
+**/
+
+.inputT{
+
+    /** position: relative; **/
+    display: flex;
+    min-width: 100px;
+
+}
+
+  
+/** 
+.clear-icon {
+    position: absolute;
+    top: 11px;
+    right: 100px;
+    width: 13px;
+    cursor: pointer;
+    background-color: white;
+  }
+**/
+
+ 
+#search {
+	
+    border: 1px solid var(--theme-line-strong);
+    border-radius: 5px;
+    height: 30px;
+    width: 70%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: var(--theme-control-bg);
+    color: var(--theme-text);
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    
+}
+
+#search:hover, #search:focus {
+    border: 1.5px solid var(--theme-text);
+    background-color: var(--theme-control-bg);
+  }
+  
+  
+/** 	
+	End of search input @ "/blog" 
+**/
+
+
+
+
+
+/** SEARCH RESULT **/
+
+li.Scontain {
+	
+	list-style: none;
+	margin: 12px;
+  	padding: 0;
+  	font-size: 22px;
+}
+
+.time{
+
+	font-size: 15px;
+}
+
+
+/** Scroll To Top Button **/
+.scrollToTopBtn {
+  background-color: var(--theme-scroll-bg);
+  border: none;
+  border-radius: 45%;
+  cursor: pointer;
+  line-height: 48px;
+  width: 48px;
+
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all 0.5s ease;
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* tags categories and links */
+.tag-link{
+    background-color: #80b7d926;
+    border-radius: 8px;
+    padding: 0.2rem 0.5rem;
+}
+
+#more {display: none;}
+
+.card_api{
+  padding: 10px;
+  border: 6px solid var(--theme-line);
+  background-color: var(--theme-surface);
+  box-shadow: 15px 10px 15px var(--theme-card-shadow);
+}
+
+#container{
+  display: none;
+}
+
+/* Keep article content inside the reading column at every viewport size. */
+.post,
+.post-content {
+  min-width: 0;
+}
+
+.post-content {
+  overflow-wrap: anywhere;
+}
+
+.post-content img,
+.post-content video,
+.post-content canvas,
+.post-content svg,
+.post-content iframe,
+.post-content embed,
+.post-content object {
+  max-width: 100%;
+}
+
+.post-content video,
+.post-content iframe,
+.post-content embed,
+.post-content object {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.post-content video {
+  height: auto;
+}
+
+.post-content .article-video {
+  width: 100%;
+}
+
+.post-content iframe[src*="youtube.com"],
+.post-content iframe[src*="youtube-nocookie.com"],
+.post-content iframe[src*="vimeo.com"] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.post-content pre,
+.post-content table {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.post-content table {
+  width: 100%;
+}
+
+.post-content th,
+.post-content td {
+  overflow-wrap: anywhere;
+}

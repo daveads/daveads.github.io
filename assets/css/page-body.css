@@ -1,0 +1,205 @@
+.element-class {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--theme-bg);
+}
+
+.element-class .page-content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.element-class .page-content > .section > .wrapper {
+  max-width: none;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.home-hero {
+  box-sizing: border-box;
+  display: grid;
+  min-height: clamp(390px, 52vh, 520px);
+  padding: clamp(2rem, 4vw, 2.75rem) 1.5rem 3rem;
+  place-items: start center;
+  background-color: #070a0e;
+  background-image:
+    linear-gradient(to bottom, rgba(4, 7, 11, 0.34), rgba(4, 7, 11, 0.78)),
+    url("../images/star-lord-marvels.jpeg");
+  background-position: center 22%;
+  background-size: cover;
+  color: #e5edf3;
+  text-align: center;
+}
+
+.home-hero__inner {
+  width: min(100%, 760px);
+}
+
+.home-hero h1 {
+  margin: 0;
+  color: #f7f9fb;
+  font: 600 clamp(2.5rem, 9vw, 4.5rem)/1.05 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: -0.055em;
+  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.7);
+}
+
+.home-intro {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 580px;
+  margin: 0.85rem auto 1.25rem;
+  color: #e1e8ee;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 3vw, 1.22rem);
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.88);
+}
+
+.home-intro a,
+.home-intro a:visited {
+  font-weight: 700;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+}
+
+.home-hero a:not(.galaxy-home-link) {
+  color: #78cfff;
+}
+
+.home-hero a:not(.galaxy-home-link):visited {
+  color: #78cfff;
+}
+
+.home-hero a:not(.galaxy-home-link):hover,
+.home-hero a:not(.galaxy-home-link):focus-visible {
+  color: #78efbd;
+}
+
+.home-hero .galaxy-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.35rem;
+  padding: 0.62rem 1rem;
+  border: 1px solid #3f9cda;
+  border-radius: 999px;
+  background: #1769aa;
+  color: #f7fafc;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+}
+
+.home-hero .galaxy-home-link:visited {
+  color: #f7fafc;
+}
+
+.home-hero .galaxy-home-link span {
+  color: #9be9c9;
+}
+
+.home-hero .galaxy-home-link:hover,
+.home-hero .galaxy-home-link:focus-visible {
+  border-color: #78efbd;
+  background: #0c7c64;
+  color: #ffffff;
+}
+
+.home-latest {
+  padding: 0 1.5rem clamp(3.5rem, 8vw, 5.5rem);
+  border-top: 1px solid var(--theme-line-soft);
+  background: var(--theme-bg);
+}
+
+.home-latest a {
+  color: var(--theme-link);
+}
+
+.home-latest a:visited {
+  color: var(--theme-link);
+}
+
+.home-latest a:hover,
+.home-latest a:focus-visible {
+  color: var(--theme-hover);
+}
+
+.home-recent {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 760px;
+  margin: clamp(-14.5rem, calc(1.5rem - 23.3vh), -8.5rem) auto 0;
+  padding: 1.1rem 1.5rem 0.25rem;
+  border: 1px solid var(--theme-home-card-line);
+  border-radius: 14px;
+  background: var(--theme-surface);
+  box-shadow: var(--theme-home-card-shadow);
+}
+
+.home-recent__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--theme-home-card-line);
+}
+
+.home-recent__header h2 {
+  margin: 0;
+  color: var(--theme-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.home-recent__header > a {
+  flex: none;
+  font-size: 0.85rem;
+}
+
+.home-recent .archive-list li:last-child {
+  border-bottom: 0;
+}
+
+.home-recent .archive-list li {
+  border-color: var(--theme-home-card-line);
+}
+
+.home-recent .archive-list a {
+  padding-top: 0.82rem;
+  padding-bottom: 0.82rem;
+}
+
+.home-copy {
+  max-width: 760px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  color: var(--theme-copy);
+}
+
+@media (max-width: 600px) {
+  .home-hero {
+    min-height: 430px;
+    padding: 2rem 1rem 2.5rem;
+    background-position: 58% center;
+  }
+
+  .home-latest {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .home-recent {
+    margin-top: -11rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .home-recent__header {
+    align-items: start;
+  }
+}
